@@ -31,12 +31,12 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, ".modal_modal-content_vp9Mi {\n  background-color: var(--ui-modal-background);\n  color: var(--ui-modal-foreground);\n}\n", ""]);
+exports.push([module.i, ".modal_modal-content_fN1pD {\n  background-color: var(--ui-modal-background);\n  color: var(--ui-modal-foreground);\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"modal-content": "modal_modal-content_vp9Mi",
-	"modalContent": "modal_modal-content_vp9Mi"
+	"modal-content": "modal_modal-content_fN1pD",
+	"modalContent": "modal_modal-content_fN1pD"
 };
 
 /***/ }),

@@ -34,35 +34,35 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.action-menu_menu-container_2bnPG {\n    display: flex;\n    flex-direction: column-reverse;\n    transition: 0.2s;\n    position: relative;\n}\n\n.action-menu_button_31je5 {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    cursor: pointer;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    background: var(--looks-secondary);\n    outline: none;\n    border: none;\n    transition: background-color 0.2s;\n}\n\nbutton::-moz-focus-inner {\n    border: 0;\n}\n\n.action-menu_button_31je5:hover {\n    background: var(--extensions-primary);\n}\n\n.action-menu_button_31je5:active {\n    padding: inherit;\n}\n\n.action-menu_button_31je5.action-menu_coming-soon_ljJAN:hover {\n    background: var(--data-primary);\n}\n\n.action-menu_main-button_2m3TE {\n    border-radius: 100%;\n    width: 2.75rem;\n    height: 2.75rem;\n    box-shadow: 0 0 0 4px var(--looks-transparent);\n    z-index: 46;\n    transition: transform, box-shadow 0.5s;\n}\n\n.action-menu_main-button_2m3TE:hover {\n  transform: scale(1.1);\n  box-shadow: 0 0 0 6px var(--looks-transparent);\n}\n\n.action-menu_main-icon_A7K5D {\n    width: calc(2.75rem - 1rem);\n    height: calc(2.75rem - 1rem);\n}\n\n[dir=\"rtl\"] .action-menu_main-icon_A7K5D {\n    transform: scaleX(-1);\n}\n\n.action-menu_more-buttons-outer_1tVn_ {\n    /*\n        Need to use two divs to set different overflow x/y\n        which is needed to get animation to look right while\n        allowing the tooltips to be visible.\n    */\n    overflow-y: hidden;\n\n    background: var(--looks-secondary-dark);\n    border-top-left-radius: 2.25rem;\n    border-top-right-radius: 2.25rem;\n    width: 2.25rem;\n    margin-left: calc((2.75rem - 2.25rem) / 2);\n    margin-right: calc((2.75rem - 2.25rem) / 2);\n\n    position: absolute;\n    bottom: calc(2.75rem);\n\n    margin-bottom: calc(2.75rem / -2);\n    padding-bottom: calc(2.75rem / 2);\n}\n\n.action-menu_more-buttons_39RLQ {\n    max-height: 0;\n    transition: max-height 1s;\n    overflow-x: visible;\n    display: flex;\n    flex-direction: column;\n    z-index: 10; /* @todo justify */\n}\n\n.action-menu_file-input_rJdU0 {\n    display: none;\n}\n\n.action-menu_expanded_SjWya .action-menu_more-buttons_39RLQ {\n    max-height: 1000px; /* Arbitrary, needs to be a value in order for animation to run */\n}\n\n.action-menu_force-hidden_2bzzZ .action-menu_more-buttons_39RLQ {\n    display: none; /* This property does not animate */\n}\n\n.action-menu_more-buttons_39RLQ:first-child { /* Round off top button */\n    border-top-right-radius: 2.25rem;\n    border-top-left-radius: 2.25rem;\n}\n\n.action-menu_more-button_FdlvY {\n    width: 2.25rem;\n    height: 2.25rem;\n    background: var(--looks-secondary-dark);\n}\n\n.action-menu_more-icon_3wj6o {\n    width: calc(2.25rem - 1rem);\n    height: calc(2.25rem - 1rem);\n}\n\n.action-menu_coming-soon_ljJAN .action-menu_more-icon_3wj6o {\n    opacity: 0.5;\n}\n\n/*\n    @todo needs to be refactored with coming soon tooltip overrides.\n    The \"!important\"s are for the same reason as with coming soon, the library\n    is not very easy to style.\n*/\n\n.action-menu_tooltip_1YpkD {\n    background-color: var(--extensions-primary) !important;\n    opacity: 1 !important;\n    border: 1px solid hsla(0, 0%, 0%, .1) !important;\n    box-shadow: 0 0 .5rem hsla(0, 0%, 0%, .25) !important;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif !important;\n}\n\n.action-menu_tooltip_1YpkD:after {\n    background-color: var(--extensions-primary);\n}\n\n.action-menu_coming-soon-tooltip_1Hk4Q {\n    background-color: var(--data-primary) !important;\n}\n\n.action-menu_coming-soon-tooltip_1Hk4Q:after {\n    background-color: var(--data-primary) !important;\n}\n\n.action-menu_tooltip_1YpkD {\n    border: 1px solid hsla(0, 0%, 0%, .1) !important;\n    border-radius: calc(0.5rem / 2) !important;\n    box-shadow: 0 0 .5rem hsla(0, 0%, 0%, .25) !important;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif !important;\n    z-index: 47 !important;\n}\n\n.action-menu_tooltip_1YpkD:after {\n    content: \"\";\n    border-top: 1px solid hsla(0, 0%, 0%, .1) !important;\n    border-left: 0 !important;\n    border-bottom: 0 !important;\n    border-right: 1px solid hsla(0, 0%, 0%, .1) !important;\n    border-radius: 0.125rem;\n    height: 0.5rem !important;\n    width: 0.5rem !important;\n}\n\n.action-menu_tooltip_1YpkD.place-left:after {\n    margin-top: -0.25rem !important;\n    right: -0.25rem !important;\n    transform: rotate(45deg) !important;\n}\n\n.action-menu_tooltip_1YpkD.place-right:after {\n    margin-top: -0.25rem !important;\n    left: -0.25rem !important;\n    transform: rotate(-135deg) !important;\n}\n\n.action-menu_tooltip_1YpkD.place-top:after {\n    margin-right: -0.25rem !important;\n    bottom: -0.25rem !important;\n    transform: rotate(135deg) !important;\n}\n\n.action-menu_tooltip_1YpkD.place-bottom:after {\n    margin-left: -0.25rem !important;\n    top: -0.25rem !important;\n    transform: rotate(-45deg) !important;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.action-menu_menu-container_3a6da {\n    display: flex;\n    flex-direction: column-reverse;\n    transition: 0.2s;\n    position: relative;\n}\n\n.action-menu_button_1qbot {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    cursor: pointer;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    background: var(--looks-secondary);\n    outline: none;\n    border: none;\n    transition: background-color 0.2s;\n}\n\nbutton::-moz-focus-inner {\n    border: 0;\n}\n\n.action-menu_button_1qbot:hover {\n    background: var(--extensions-primary);\n}\n\n.action-menu_button_1qbot:active {\n    padding: inherit;\n}\n\n.action-menu_button_1qbot.action-menu_coming-soon_2URvV:hover {\n    background: var(--data-primary);\n}\n\n.action-menu_main-button_3ccfy {\n    border-radius: 100%;\n    width: 2.75rem;\n    height: 2.75rem;\n    box-shadow: 0 0 0 4px var(--looks-transparent);\n    z-index: 46;\n    transition: transform, box-shadow 0.5s;\n}\n\n.action-menu_main-button_3ccfy:hover {\n  transform: scale(1.1);\n  box-shadow: 0 0 0 6px var(--looks-transparent);\n}\n\n.action-menu_main-icon_1ktMc {\n    width: calc(2.75rem - 1rem);\n    height: calc(2.75rem - 1rem);\n}\n\n[dir=\"rtl\"] .action-menu_main-icon_1ktMc {\n    transform: scaleX(-1);\n}\n\n.action-menu_more-buttons-outer_3J9yZ {\n    /*\n        Need to use two divs to set different overflow x/y\n        which is needed to get animation to look right while\n        allowing the tooltips to be visible.\n    */\n    overflow-y: hidden;\n\n    background: var(--looks-secondary-dark);\n    border-top-left-radius: 2.25rem;\n    border-top-right-radius: 2.25rem;\n    width: 2.25rem;\n    margin-left: calc((2.75rem - 2.25rem) / 2);\n    margin-right: calc((2.75rem - 2.25rem) / 2);\n\n    position: absolute;\n    bottom: calc(2.75rem);\n\n    margin-bottom: calc(2.75rem / -2);\n    padding-bottom: calc(2.75rem / 2);\n}\n\n.action-menu_more-buttons_3Bjkq {\n    max-height: 0;\n    transition: max-height 1s;\n    overflow-x: visible;\n    display: flex;\n    flex-direction: column;\n    z-index: 10; /* @todo justify */\n}\n\n.action-menu_file-input_2nOL7 {\n    display: none;\n}\n\n.action-menu_expanded_JcMKp .action-menu_more-buttons_3Bjkq {\n    max-height: 1000px; /* Arbitrary, needs to be a value in order for animation to run */\n}\n\n.action-menu_force-hidden_3SRnx .action-menu_more-buttons_3Bjkq {\n    display: none; /* This property does not animate */\n}\n\n.action-menu_more-buttons_3Bjkq:first-child { /* Round off top button */\n    border-top-right-radius: 2.25rem;\n    border-top-left-radius: 2.25rem;\n}\n\n.action-menu_more-button_1fMGZ {\n    width: 2.25rem;\n    height: 2.25rem;\n    background: var(--looks-secondary-dark);\n}\n\n.action-menu_more-icon_TJUQ7 {\n    width: calc(2.25rem - 1rem);\n    height: calc(2.25rem - 1rem);\n}\n\n.action-menu_coming-soon_2URvV .action-menu_more-icon_TJUQ7 {\n    opacity: 0.5;\n}\n\n/*\n    @todo needs to be refactored with coming soon tooltip overrides.\n    The \"!important\"s are for the same reason as with coming soon, the library\n    is not very easy to style.\n*/\n\n.action-menu_tooltip_3Bkh5 {\n    background-color: var(--extensions-primary) !important;\n    opacity: 1 !important;\n    border: 1px solid hsla(0, 0%, 0%, .1) !important;\n    box-shadow: 0 0 .5rem hsla(0, 0%, 0%, .25) !important;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif !important;\n}\n\n.action-menu_tooltip_3Bkh5:after {\n    background-color: var(--extensions-primary);\n}\n\n.action-menu_coming-soon-tooltip_3jthM {\n    background-color: var(--data-primary) !important;\n}\n\n.action-menu_coming-soon-tooltip_3jthM:after {\n    background-color: var(--data-primary) !important;\n}\n\n.action-menu_tooltip_3Bkh5 {\n    border: 1px solid hsla(0, 0%, 0%, .1) !important;\n    border-radius: calc(0.5rem / 2) !important;\n    box-shadow: 0 0 .5rem hsla(0, 0%, 0%, .25) !important;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif !important;\n    z-index: 47 !important;\n}\n\n.action-menu_tooltip_3Bkh5:after {\n    content: \"\";\n    border-top: 1px solid hsla(0, 0%, 0%, .1) !important;\n    border-left: 0 !important;\n    border-bottom: 0 !important;\n    border-right: 1px solid hsla(0, 0%, 0%, .1) !important;\n    border-radius: 0.125rem;\n    height: 0.5rem !important;\n    width: 0.5rem !important;\n}\n\n.action-menu_tooltip_3Bkh5.place-left:after {\n    margin-top: -0.25rem !important;\n    right: -0.25rem !important;\n    transform: rotate(45deg) !important;\n}\n\n.action-menu_tooltip_3Bkh5.place-right:after {\n    margin-top: -0.25rem !important;\n    left: -0.25rem !important;\n    transform: rotate(-135deg) !important;\n}\n\n.action-menu_tooltip_3Bkh5.place-top:after {\n    margin-right: -0.25rem !important;\n    bottom: -0.25rem !important;\n    transform: rotate(135deg) !important;\n}\n\n.action-menu_tooltip_3Bkh5.place-bottom:after {\n    margin-left: -0.25rem !important;\n    top: -0.25rem !important;\n    transform: rotate(-45deg) !important;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"menu-container": "action-menu_menu-container_2bnPG",
-	"menuContainer": "action-menu_menu-container_2bnPG",
-	"button": "action-menu_button_31je5",
-	"coming-soon": "action-menu_coming-soon_ljJAN",
-	"comingSoon": "action-menu_coming-soon_ljJAN",
-	"main-button": "action-menu_main-button_2m3TE",
-	"mainButton": "action-menu_main-button_2m3TE",
-	"main-icon": "action-menu_main-icon_A7K5D",
-	"mainIcon": "action-menu_main-icon_A7K5D",
-	"more-buttons-outer": "action-menu_more-buttons-outer_1tVn_",
-	"moreButtonsOuter": "action-menu_more-buttons-outer_1tVn_",
-	"more-buttons": "action-menu_more-buttons_39RLQ",
-	"moreButtons": "action-menu_more-buttons_39RLQ",
-	"file-input": "action-menu_file-input_rJdU0",
-	"fileInput": "action-menu_file-input_rJdU0",
-	"expanded": "action-menu_expanded_SjWya",
-	"force-hidden": "action-menu_force-hidden_2bzzZ",
-	"forceHidden": "action-menu_force-hidden_2bzzZ",
-	"more-button": "action-menu_more-button_FdlvY",
-	"moreButton": "action-menu_more-button_FdlvY",
-	"more-icon": "action-menu_more-icon_3wj6o",
-	"moreIcon": "action-menu_more-icon_3wj6o",
-	"tooltip": "action-menu_tooltip_1YpkD",
-	"coming-soon-tooltip": "action-menu_coming-soon-tooltip_1Hk4Q",
-	"comingSoonTooltip": "action-menu_coming-soon-tooltip_1Hk4Q"
+	"menu-container": "action-menu_menu-container_3a6da",
+	"menuContainer": "action-menu_menu-container_3a6da",
+	"button": "action-menu_button_1qbot",
+	"coming-soon": "action-menu_coming-soon_2URvV",
+	"comingSoon": "action-menu_coming-soon_2URvV",
+	"main-button": "action-menu_main-button_3ccfy",
+	"mainButton": "action-menu_main-button_3ccfy",
+	"main-icon": "action-menu_main-icon_1ktMc",
+	"mainIcon": "action-menu_main-icon_1ktMc",
+	"more-buttons-outer": "action-menu_more-buttons-outer_3J9yZ",
+	"moreButtonsOuter": "action-menu_more-buttons-outer_3J9yZ",
+	"more-buttons": "action-menu_more-buttons_3Bjkq",
+	"moreButtons": "action-menu_more-buttons_3Bjkq",
+	"file-input": "action-menu_file-input_2nOL7",
+	"fileInput": "action-menu_file-input_2nOL7",
+	"expanded": "action-menu_expanded_JcMKp",
+	"force-hidden": "action-menu_force-hidden_3SRnx",
+	"forceHidden": "action-menu_force-hidden_3SRnx",
+	"more-button": "action-menu_more-button_1fMGZ",
+	"moreButton": "action-menu_more-button_1fMGZ",
+	"more-icon": "action-menu_more-icon_TJUQ7",
+	"moreIcon": "action-menu_more-icon_TJUQ7",
+	"tooltip": "action-menu_tooltip_3Bkh5",
+	"coming-soon-tooltip": "action-menu_coming-soon-tooltip_3jthM",
+	"comingSoonTooltip": "action-menu_coming-soon-tooltip_3jthM"
 };
 
 /***/ }),
@@ -79,29 +79,29 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.alert_alert_2I8f0 {\n    width: 100%;\n    display: flex;\n    flex-direction: row;\n    overflow: hidden;\n    justify-content: flex-start;\n    border-radius: 0.5rem;\n    padding-top: .875rem;\n    padding-bottom: .875rem;\n    padding-left: 1rem;\n    padding-right: 1rem;\n    margin-bottom: 7px;\n    min-height: 1.5rem;\n    pointer-events: all;\n}\n\n.alert_alert_2I8f0.alert_warn_3EqUn {\n    background: #FFF0DF;\n    border: 1px solid #FF8C1A;\n    box-shadow: 0px 0px 0px 2px rgba(255, 140, 26, 0.25);\n}\n\n.alert_alert_2I8f0.alert_success_1bP9- {\n    background: var(--extensions-light);\n    border: 1px solid var(--extensions-tertiary);\n    box-shadow: 0px 0px 0px 2px var(--extensions-light);\n}\n\n.alert_alert-spinner_1VBcO {\n    self-align: center;\n}\n\n.alert_icon-section_NZU2D {\n    min-width: 1.25rem;\n    min-height: 1.25rem;\n    display: flex;\n    padding-right: 1rem;\n}\n\n.alert_alert-icon_Vk3t4 {\n    vertical-align: middle;\n}\n\n.alert_alert-message_1UEAd {\n    color: #555;\n    font-weight: bold;\n    font-size: .8125rem;\n    line-height: .875rem;\n    display: flex;\n    align-items: center;\n    padding-right: .5rem;\n}\n\n.alert_alert-buttons_13goQ {\n    display: flex;\n    flex-direction: row;\n}\n\n.alert_alert-close-button_3XYnj {\n    outline-style:none;\n}\n\n.alert_alert-close-button-container_4C-UN {\n    outline-style: none;\n    width: 30px;\n    height: 30px;\n    align-self: center;\n}\n\n.alert_alert-connection-button_2zcTP {\n    min-height: 2rem;\n    width: 6.5rem;\n    padding: 0.55rem 0.9rem;\n    border-radius: 0.35rem;\n    background: #FF8C1A;\n    color: white;\n    font-weight: 700;\n    font-size: 0.77rem;\n    border: none;\n    cursor: pointer;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    align-self: stretch;\n    outline-style:none;\n}\n\n[dir=\"ltr\"] .alert_alert-connection-button_2zcTP {\n    margin-right: 13px;\n}\n\n[dir=\"rtl\"] .alert_alert-connection-button_2zcTP {\n    margin-left: 13px;\n}\n\n/* prevent last button in list from too much margin to edge of alert */\n\n.alert_alert-buttons_13goQ > :last-child {\n    margin-left: 0;\n    margin-right: 0;\n}\n", ""]);
+exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.alert_alert_2Ou-m {\n    width: 100%;\n    display: flex;\n    flex-direction: row;\n    overflow: hidden;\n    justify-content: flex-start;\n    border-radius: 0.5rem;\n    padding-top: .875rem;\n    padding-bottom: .875rem;\n    padding-left: 1rem;\n    padding-right: 1rem;\n    margin-bottom: 7px;\n    min-height: 1.5rem;\n    pointer-events: all;\n}\n\n.alert_alert_2Ou-m.alert_warn_2441l {\n    background: #FFF0DF;\n    border: 1px solid #FF8C1A;\n    box-shadow: 0px 0px 0px 2px rgba(255, 140, 26, 0.25);\n}\n\n.alert_alert_2Ou-m.alert_success_1TbgT {\n    background: var(--extensions-light);\n    border: 1px solid var(--extensions-tertiary);\n    box-shadow: 0px 0px 0px 2px var(--extensions-light);\n}\n\n.alert_alert-spinner_2JcbE {\n    self-align: center;\n}\n\n.alert_icon-section_2DC1x {\n    min-width: 1.25rem;\n    min-height: 1.25rem;\n    display: flex;\n    padding-right: 1rem;\n}\n\n.alert_alert-icon_3-jQB {\n    vertical-align: middle;\n}\n\n.alert_alert-message_3dEDJ {\n    color: #555;\n    font-weight: bold;\n    font-size: .8125rem;\n    line-height: .875rem;\n    display: flex;\n    align-items: center;\n    padding-right: .5rem;\n}\n\n.alert_alert-buttons_CZbh6 {\n    display: flex;\n    flex-direction: row;\n}\n\n.alert_alert-close-button_2ci8S {\n    outline-style:none;\n}\n\n.alert_alert-close-button-container_2m64w {\n    outline-style: none;\n    width: 30px;\n    height: 30px;\n    align-self: center;\n}\n\n.alert_alert-connection-button_ETbfk {\n    min-height: 2rem;\n    width: 6.5rem;\n    padding: 0.55rem 0.9rem;\n    border-radius: 0.35rem;\n    background: #FF8C1A;\n    color: white;\n    font-weight: 700;\n    font-size: 0.77rem;\n    border: none;\n    cursor: pointer;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    align-self: stretch;\n    outline-style:none;\n}\n\n[dir=\"ltr\"] .alert_alert-connection-button_ETbfk {\n    margin-right: 13px;\n}\n\n[dir=\"rtl\"] .alert_alert-connection-button_ETbfk {\n    margin-left: 13px;\n}\n\n/* prevent last button in list from too much margin to edge of alert */\n\n.alert_alert-buttons_CZbh6 > :last-child {\n    margin-left: 0;\n    margin-right: 0;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"alert": "alert_alert_2I8f0",
-	"warn": "alert_warn_3EqUn",
-	"success": "alert_success_1bP9-",
-	"alert-spinner": "alert_alert-spinner_1VBcO",
-	"alertSpinner": "alert_alert-spinner_1VBcO",
-	"icon-section": "alert_icon-section_NZU2D",
-	"iconSection": "alert_icon-section_NZU2D",
-	"alert-icon": "alert_alert-icon_Vk3t4",
-	"alertIcon": "alert_alert-icon_Vk3t4",
-	"alert-message": "alert_alert-message_1UEAd",
-	"alertMessage": "alert_alert-message_1UEAd",
-	"alert-buttons": "alert_alert-buttons_13goQ",
-	"alertButtons": "alert_alert-buttons_13goQ",
-	"alert-close-button": "alert_alert-close-button_3XYnj",
-	"alertCloseButton": "alert_alert-close-button_3XYnj",
-	"alert-close-button-container": "alert_alert-close-button-container_4C-UN",
-	"alertCloseButtonContainer": "alert_alert-close-button-container_4C-UN",
-	"alert-connection-button": "alert_alert-connection-button_2zcTP",
-	"alertConnectionButton": "alert_alert-connection-button_2zcTP"
+	"alert": "alert_alert_2Ou-m",
+	"warn": "alert_warn_2441l",
+	"success": "alert_success_1TbgT",
+	"alert-spinner": "alert_alert-spinner_2JcbE",
+	"alertSpinner": "alert_alert-spinner_2JcbE",
+	"icon-section": "alert_icon-section_2DC1x",
+	"iconSection": "alert_icon-section_2DC1x",
+	"alert-icon": "alert_alert-icon_3-jQB",
+	"alertIcon": "alert_alert-icon_3-jQB",
+	"alert-message": "alert_alert-message_3dEDJ",
+	"alertMessage": "alert_alert-message_3dEDJ",
+	"alert-buttons": "alert_alert-buttons_CZbh6",
+	"alertButtons": "alert_alert-buttons_CZbh6",
+	"alert-close-button": "alert_alert-close-button_2ci8S",
+	"alertCloseButton": "alert_alert-close-button_2ci8S",
+	"alert-close-button-container": "alert_alert-close-button-container_2m64w",
+	"alertCloseButtonContainer": "alert_alert-close-button-container_2m64w",
+	"alert-connection-button": "alert_alert-connection-button_ETbfk",
+	"alertConnectionButton": "alert_alert-connection-button_ETbfk"
 };
 
 /***/ }),
@@ -118,12 +118,12 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".alerts_alerts-inner-container_h6dBI {\n    min-width: 200px;\n    max-width: 548px;\n}\n", ""]);
+exports.push([module.i, ".alerts_alerts-inner-container_1KTuF {\n    min-width: 200px;\n    max-width: 548px;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"alerts-inner-container": "alerts_alerts-inner-container_h6dBI",
-	"alertsInnerContainer": "alerts_alerts-inner-container_h6dBI"
+	"alerts-inner-container": "alerts_alerts-inner-container_1KTuF",
+	"alertsInnerContainer": "alerts_alerts-inner-container_1KTuF"
 };
 
 /***/ }),
@@ -140,16 +140,16 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.inline-message_inline-message_3EzKK {\n    color: var(--menu-bar-foreground);\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    display: flex;\n    justify-content: flex-end;\n    align-items: center;\n    font-size: .8125rem;\n    padding: 0 0.5rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n}\n\n.inline-message_success_1HE_O {\n    color: var(--ui-white-dim);\n}\n\n.inline-message_info_8Giql {\n    color: var(--menu-bar-foreground);\n}\n\n.inline-message_warn_3ryT7 {\n    color: var(--error-light);\n}\n\n.inline-message_spinner_H-tr3 {\n    margin-right: 0.5rem;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.inline-message_inline-message_2feS3 {\n    color: var(--menu-bar-foreground);\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    display: flex;\n    justify-content: flex-end;\n    align-items: center;\n    font-size: .8125rem;\n    padding: 0 0.5rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n}\n\n.inline-message_success_1jfE0 {\n    color: var(--ui-white-dim);\n}\n\n.inline-message_info_E7dNO {\n    color: var(--menu-bar-foreground);\n}\n\n.inline-message_warn_3DS5G {\n    color: var(--error-light);\n}\n\n.inline-message_spinner_1vybW {\n    margin-right: 0.5rem;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"inline-message": "inline-message_inline-message_3EzKK",
-	"inlineMessage": "inline-message_inline-message_3EzKK",
-	"success": "inline-message_success_1HE_O",
-	"info": "inline-message_info_8Giql",
-	"warn": "inline-message_warn_3ryT7",
-	"spinner": "inline-message_spinner_H-tr3"
+	"inline-message": "inline-message_inline-message_2feS3",
+	"inlineMessage": "inline-message_inline-message_2feS3",
+	"success": "inline-message_success_1jfE0",
+	"info": "inline-message_info_E7dNO",
+	"warn": "inline-message_warn_3DS5G",
+	"spinner": "inline-message_spinner_1vybW"
 };
 
 /***/ }),
@@ -166,13 +166,13 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n.asset-panel_wrapper_26zMp {\n    display: flex;\n    flex-grow: 1;\n    border: 1px solid var(--ui-black-transparent);\n    background: var(--assets-background);\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    font-size: 0.85rem;\n}\n\n[dir=\"ltr\"] .asset-panel_wrapper_26zMp {\n    border-top-right-radius: 0.5rem;\n    border-bottom-right-radius: 0.5rem;\n}\n\n[dir=\"rtl\"] .asset-panel_wrapper_26zMp {\n    border-top-left-radius: 0.5rem;\n    border-bottom-left-radius: 0.5rem;\n}\n\n.asset-panel_detail-area_3eEbw {\n    display: flex;\n    flex-grow: 1;\n    flex-shrink: 1;\n    overflow: visible;\n}\n\n[dir=\"ltr\"] .asset-panel_detail-area_3eEbw {\n    border-left: 1px solid var(--ui-black-transparent);\n}\n\n[dir=\"rtl\"] .asset-panel_detail-area_3eEbw {\n    border-right: 1px solid var(--ui-black-transparent);\n}\n", ""]);
+exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n.asset-panel_wrapper_366X0 {\n    display: flex;\n    flex-grow: 1;\n    border: 1px solid var(--ui-black-transparent);\n    background: var(--assets-background);\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    font-size: 0.85rem;\n}\n\n[dir=\"ltr\"] .asset-panel_wrapper_366X0 {\n    border-top-right-radius: 0.5rem;\n    border-bottom-right-radius: 0.5rem;\n}\n\n[dir=\"rtl\"] .asset-panel_wrapper_366X0 {\n    border-top-left-radius: 0.5rem;\n    border-bottom-left-radius: 0.5rem;\n}\n\n.asset-panel_detail-area_2KQhH {\n    display: flex;\n    flex-grow: 1;\n    flex-shrink: 1;\n    overflow: visible;\n}\n\n[dir=\"ltr\"] .asset-panel_detail-area_2KQhH {\n    border-left: 1px solid var(--ui-black-transparent);\n}\n\n[dir=\"rtl\"] .asset-panel_detail-area_2KQhH {\n    border-right: 1px solid var(--ui-black-transparent);\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"wrapper": "asset-panel_wrapper_26zMp",
-	"detail-area": "asset-panel_detail-area_3eEbw",
-	"detailArea": "asset-panel_detail-area_3eEbw"
+	"wrapper": "asset-panel_wrapper_366X0",
+	"detail-area": "asset-panel_detail-area_2KQhH",
+	"detailArea": "asset-panel_detail-area_2KQhH"
 };
 
 /***/ }),
@@ -189,18 +189,18 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.selector_wrapper_1v6kq {\n    width: 150px;\n    position: relative;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    background: var(--ui-tertiary);\n}\n\n.selector_new-buttons_2iXR0 {\n    position: absolute;\n    bottom: 0;\n    width: 100%;\n\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: space-around;\n    padding: 0.75rem 0;\n    color: var(--looks-secondary);\n    text-align: center;\n    background: none;\n}\n\n.selector_new-buttons_2iXR0:before {\n    content: \"\";\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    right:0;\n    width: 100%;\n    pointer-events: none;\n}\n\n.selector_new-buttons_2iXR0 > button + button {\n    margin-top: 0.75rem;\n}\n\n.selector_list-area_2Lh0T {\n    /* Must have some height (recalculated by flex-grow) in order to scroll */\n    height: 0;\n    flex-grow: 1;\n    overflow-y: auto;\n    overflow-x: hidden;\n    display: flex;\n    flex-direction: column;\n}\n\n.selector_list-area_2Lh0T:after {\n    /* Make sure there is room to scroll beyond the last tile */\n    content: '';\n    display: block;\n    height: 70px;\n    width: 100%;\n    flex-shrink: 0;\n    order: 99999999;\n}\n\n.selector_list-item_2s63_ {\n    width: 5rem;\n    height: 5rem;\n    margin: 0.5rem auto;\n}\n\n@media only screen and (max-width: 1249px) {\n    .selector_wrapper_1v6kq {\n        width: 80px;\n    }\n\n    .selector_list-item_2s63_ {\n        width: 4rem;\n    }\n}\n\n.selector_list-item_2s63_.selector_placeholder_1MsBA {\n    background: white;\n    filter: opacity(15%) brightness(0%);\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.selector_wrapper_8_BHs {\n    width: 150px;\n    position: relative;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    background: var(--ui-tertiary);\n}\n\n.selector_new-buttons_2qHDd {\n    position: absolute;\n    bottom: 0;\n    width: 100%;\n\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: space-around;\n    padding: 0.75rem 0;\n    color: var(--looks-secondary);\n    text-align: center;\n    background: none;\n}\n\n.selector_new-buttons_2qHDd:before {\n    content: \"\";\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    right:0;\n    width: 100%;\n    pointer-events: none;\n}\n\n.selector_new-buttons_2qHDd > button + button {\n    margin-top: 0.75rem;\n}\n\n.selector_list-area_1Xbj_ {\n    /* Must have some height (recalculated by flex-grow) in order to scroll */\n    height: 0;\n    flex-grow: 1;\n    overflow-y: auto;\n    overflow-x: hidden;\n    display: flex;\n    flex-direction: column;\n}\n\n.selector_list-area_1Xbj_:after {\n    /* Make sure there is room to scroll beyond the last tile */\n    content: '';\n    display: block;\n    height: 70px;\n    width: 100%;\n    flex-shrink: 0;\n    order: 99999999;\n}\n\n.selector_list-item_3N_u7 {\n    width: 5rem;\n    height: 5rem;\n    margin: 0.5rem auto;\n}\n\n@media only screen and (max-width: 1249px) {\n    .selector_wrapper_8_BHs {\n        width: 80px;\n    }\n\n    .selector_list-item_3N_u7 {\n        width: 4rem;\n    }\n}\n\n.selector_list-item_3N_u7.selector_placeholder_2pqWG {\n    background: white;\n    filter: opacity(15%) brightness(0%);\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"wrapper": "selector_wrapper_1v6kq",
-	"new-buttons": "selector_new-buttons_2iXR0",
-	"newButtons": "selector_new-buttons_2iXR0",
-	"list-area": "selector_list-area_2Lh0T",
-	"listArea": "selector_list-area_2Lh0T",
-	"list-item": "selector_list-item_2s63_",
-	"listItem": "selector_list-item_2s63_",
-	"placeholder": "selector_placeholder_1MsBA"
+	"wrapper": "selector_wrapper_8_BHs",
+	"new-buttons": "selector_new-buttons_2qHDd",
+	"newButtons": "selector_new-buttons_2qHDd",
+	"list-area": "selector_list-area_1Xbj_",
+	"listArea": "selector_list-area_1Xbj_",
+	"list-item": "selector_list-item_3N_u7",
+	"listItem": "selector_list-item_3N_u7",
+	"placeholder": "selector_placeholder_2pqWG"
 };
 
 /***/ }),
@@ -217,15 +217,15 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.asset-viewer_viewer-container_wUKv_ {\n    display: flex;\n    flex-direction: column;\n    flex-grow: 1;\n    padding: calc(2 * 0.5rem);\n    align-items: center;\n    justify-items: center\n}\n\n.asset-viewer_attribute_3PuR3 {\n    margin: 0.5rem;\n}\n\n.asset-viewer_attribute_3PuR3 span {\n    font-size: 0.75rem;\n}\n\n.asset-viewer_media-preview_2uA92 {\n    max-height: calc(50 * 0.5rem);\n    border-radius: 0.25rem;\n    margin: 1rem\n}", ""]);
+exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.asset-viewer_viewer-container_3gjqK {\n    display: flex;\n    flex-direction: column;\n    flex-grow: 1;\n    padding: calc(2 * 0.5rem);\n    align-items: center;\n    justify-items: center\n}\n\n.asset-viewer_attribute_X_nag {\n    margin: 0.5rem;\n}\n\n.asset-viewer_attribute_X_nag span {\n    font-size: 0.75rem;\n}\n\n.asset-viewer_media-preview_3e8H0 {\n    max-height: calc(50 * 0.5rem);\n    border-radius: 0.25rem;\n    margin: 1rem\n}", ""]);
 
 // exports
 exports.locals = {
-	"viewer-container": "asset-viewer_viewer-container_wUKv_",
-	"viewerContainer": "asset-viewer_viewer-container_wUKv_",
-	"attribute": "asset-viewer_attribute_3PuR3",
-	"media-preview": "asset-viewer_media-preview_2uA92",
-	"mediaPreview": "asset-viewer_media-preview_2uA92"
+	"viewer-container": "asset-viewer_viewer-container_3gjqK",
+	"viewerContainer": "asset-viewer_viewer-container_3gjqK",
+	"attribute": "asset-viewer_attribute_X_nag",
+	"media-preview": "asset-viewer_media-preview_3e8H0",
+	"mediaPreview": "asset-viewer_media-preview_3e8H0"
 };
 
 /***/ }),
@@ -242,38 +242,38 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.audio-trimmer_absolute_1slrG {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n\n    /* Force the browser to paint separately to avoid composite cost with waveform */\n    transform: translateZ(0);\n}\n\n.audio-trimmer_selector_UDd9z {\n    cursor: pointer;\n}\n\n.audio-trimmer_trim-background_MidSN {\n    cursor: pointer;\n    touch-action: none;\n}\n\n.audio-trimmer_trim-background-mask_1AUPs {\n    border: 1px solid var(--red-tertiary);\n    opacity: 0.5;\n\n    background: repeating-linear-gradient(\n        45deg,\n        var(--red-primary),\n        var(--red-primary) 10px,\n        var(--red-tertiary) 10px,\n        var(--red-tertiary) calc(2 * 10px)\n    );\n}\n\n.audio-trimmer_selection-background_28rcO {\n    background: var(--looks-secondary);\n    opacity: 0.5;\n}\n\n.audio-trimmer_start-trim-background_1AI_1 .audio-trimmer_trim-background-mask_1AUPs {\n    border-top-left-radius: 4px;\n    border-bottom-left-radius: 4px;\n}\n\n.audio-trimmer_end-trim-background_3P7V_ .audio-trimmer_trim-background-mask_1AUPs {\n    border-top-right-radius: 4px;\n    border-bottom-right-radius: 4px;\n}\n\n.audio-trimmer_trim-line_3PC6A {\n    position: absolute;\n    top: 0;\n    width: 0px;\n    height: 100%;\n    border: 1px solid var(--red-tertiary);\n}\n\n.audio-trimmer_selector_UDd9z .audio-trimmer_trim-line_3PC6A {\n    border: 1px solid var(--looks-secondary);\n}\n\n.audio-trimmer_playhead-container_Louu9 {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height: 100%;\n    width: 100%;\n    overflow: hidden;\n}\n\n.audio-trimmer_playhead_3CwOH {\n    /*\n        Even though playhead is just a line, it is 100% width (the width of the waveform)\n        so that we can use transform: translateX() using percentages.\n    */\n    width: 100%;\n    height: 100%;\n    border-left: 1px solid var(--looks-secondary);\n    border-top: none;\n    border-bottom: none;\n    border-right: none;\n}\n\n.audio-trimmer_right-handle_3gcG9 {\n    transform: scaleX(-1);\n}\n\n.audio-trimmer_selector_UDd9z .audio-trimmer_left-handle_1qrCu {\n    left: -1px\n}\n\n.audio-trimmer_selector_UDd9z .audio-trimmer_right-handle_3gcG9 {\n    right: -1px\n}\n\n.audio-trimmer_trimmer_3g1Ji .audio-trimmer_left-handle_1qrCu {\n    right: -1px\n}\n\n.audio-trimmer_trimmer_3g1Ji .audio-trimmer_right-handle_3gcG9 {\n    left: -1px\n}\n\n.audio-trimmer_trim-handle_2yTDR {\n    position: absolute;\n    width: 30px;\n    height: 30px;\n    right: 0;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n}\n\n.audio-trimmer_trimmer_3g1Ji .audio-trimmer_trim-handle_2yTDR {\n    filter: hue-rotate(-240deg) brightness(1.35);\n}\n\n.audio-trimmer_trim-handle_2yTDR img {\n    position: absolute;\n    width: 30px;\n    height: 30px;\n    left: calc(3px * 1.5);\n\n    /* Make sure image dragging isn't triggered */\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    user-drag: none;\n    -webkit-user-drag: none; /* Autoprefixer doesn't seem to work for this */\n\n    transition: 0.2s;\n}\n\n.audio-trimmer_top-trim-handle_1CMHx {\n    top: calc(-30px + 3px);\n}\n\n.audio-trimmer_bottom-trim-handle_3ZW0o {\n    bottom: calc(-30px + 3px);\n}\n\n.audio-trimmer_top-trim-handle_1CMHx img {\n    transform: scaleY(-1);\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.audio-trimmer_absolute_1x_Jq {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n\n    /* Force the browser to paint separately to avoid composite cost with waveform */\n    transform: translateZ(0);\n}\n\n.audio-trimmer_selector_DDQ2- {\n    cursor: pointer;\n}\n\n.audio-trimmer_trim-background_2VYXk {\n    cursor: pointer;\n    touch-action: none;\n}\n\n.audio-trimmer_trim-background-mask_mmZgf {\n    border: 1px solid var(--red-tertiary);\n    opacity: 0.5;\n\n    background: repeating-linear-gradient(\n        45deg,\n        var(--red-primary),\n        var(--red-primary) 10px,\n        var(--red-tertiary) 10px,\n        var(--red-tertiary) calc(2 * 10px)\n    );\n}\n\n.audio-trimmer_selection-background_3LBuB {\n    background: var(--looks-secondary);\n    opacity: 0.5;\n}\n\n.audio-trimmer_start-trim-background_26IJ6 .audio-trimmer_trim-background-mask_mmZgf {\n    border-top-left-radius: 4px;\n    border-bottom-left-radius: 4px;\n}\n\n.audio-trimmer_end-trim-background_1QrZm .audio-trimmer_trim-background-mask_mmZgf {\n    border-top-right-radius: 4px;\n    border-bottom-right-radius: 4px;\n}\n\n.audio-trimmer_trim-line_2cpoE {\n    position: absolute;\n    top: 0;\n    width: 0px;\n    height: 100%;\n    border: 1px solid var(--red-tertiary);\n}\n\n.audio-trimmer_selector_DDQ2- .audio-trimmer_trim-line_2cpoE {\n    border: 1px solid var(--looks-secondary);\n}\n\n.audio-trimmer_playhead-container_3l7Ve {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height: 100%;\n    width: 100%;\n    overflow: hidden;\n}\n\n.audio-trimmer_playhead_3A0k9 {\n    /*\n        Even though playhead is just a line, it is 100% width (the width of the waveform)\n        so that we can use transform: translateX() using percentages.\n    */\n    width: 100%;\n    height: 100%;\n    border-left: 1px solid var(--looks-secondary);\n    border-top: none;\n    border-bottom: none;\n    border-right: none;\n}\n\n.audio-trimmer_right-handle_jMGnD {\n    transform: scaleX(-1);\n}\n\n.audio-trimmer_selector_DDQ2- .audio-trimmer_left-handle_1Ure2 {\n    left: -1px\n}\n\n.audio-trimmer_selector_DDQ2- .audio-trimmer_right-handle_jMGnD {\n    right: -1px\n}\n\n.audio-trimmer_trimmer_3T33n .audio-trimmer_left-handle_1Ure2 {\n    right: -1px\n}\n\n.audio-trimmer_trimmer_3T33n .audio-trimmer_right-handle_jMGnD {\n    left: -1px\n}\n\n.audio-trimmer_trim-handle_1Obhp {\n    position: absolute;\n    width: 30px;\n    height: 30px;\n    right: 0;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n}\n\n.audio-trimmer_trimmer_3T33n .audio-trimmer_trim-handle_1Obhp {\n    filter: hue-rotate(-240deg) brightness(1.35);\n}\n\n.audio-trimmer_trim-handle_1Obhp img {\n    position: absolute;\n    width: 30px;\n    height: 30px;\n    left: calc(3px * 1.5);\n\n    /* Make sure image dragging isn't triggered */\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    user-drag: none;\n    -webkit-user-drag: none; /* Autoprefixer doesn't seem to work for this */\n\n    transition: 0.2s;\n}\n\n.audio-trimmer_top-trim-handle_1oF2r {\n    top: calc(-30px + 3px);\n}\n\n.audio-trimmer_bottom-trim-handle_2FNda {\n    bottom: calc(-30px + 3px);\n}\n\n.audio-trimmer_top-trim-handle_1oF2r img {\n    transform: scaleY(-1);\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"absolute": "audio-trimmer_absolute_1slrG",
-	"selector": "audio-trimmer_selector_UDd9z",
-	"trim-background": "audio-trimmer_trim-background_MidSN",
-	"trimBackground": "audio-trimmer_trim-background_MidSN",
-	"trim-background-mask": "audio-trimmer_trim-background-mask_1AUPs",
-	"trimBackgroundMask": "audio-trimmer_trim-background-mask_1AUPs",
-	"selection-background": "audio-trimmer_selection-background_28rcO",
-	"selectionBackground": "audio-trimmer_selection-background_28rcO",
-	"start-trim-background": "audio-trimmer_start-trim-background_1AI_1",
-	"startTrimBackground": "audio-trimmer_start-trim-background_1AI_1",
-	"end-trim-background": "audio-trimmer_end-trim-background_3P7V_",
-	"endTrimBackground": "audio-trimmer_end-trim-background_3P7V_",
-	"trim-line": "audio-trimmer_trim-line_3PC6A",
-	"trimLine": "audio-trimmer_trim-line_3PC6A",
-	"playhead-container": "audio-trimmer_playhead-container_Louu9",
-	"playheadContainer": "audio-trimmer_playhead-container_Louu9",
-	"playhead": "audio-trimmer_playhead_3CwOH",
-	"right-handle": "audio-trimmer_right-handle_3gcG9",
-	"rightHandle": "audio-trimmer_right-handle_3gcG9",
-	"left-handle": "audio-trimmer_left-handle_1qrCu",
-	"leftHandle": "audio-trimmer_left-handle_1qrCu",
-	"trimmer": "audio-trimmer_trimmer_3g1Ji",
-	"trim-handle": "audio-trimmer_trim-handle_2yTDR",
-	"trimHandle": "audio-trimmer_trim-handle_2yTDR",
-	"top-trim-handle": "audio-trimmer_top-trim-handle_1CMHx",
-	"topTrimHandle": "audio-trimmer_top-trim-handle_1CMHx",
-	"bottom-trim-handle": "audio-trimmer_bottom-trim-handle_3ZW0o",
-	"bottomTrimHandle": "audio-trimmer_bottom-trim-handle_3ZW0o"
+	"absolute": "audio-trimmer_absolute_1x_Jq",
+	"selector": "audio-trimmer_selector_DDQ2-",
+	"trim-background": "audio-trimmer_trim-background_2VYXk",
+	"trimBackground": "audio-trimmer_trim-background_2VYXk",
+	"trim-background-mask": "audio-trimmer_trim-background-mask_mmZgf",
+	"trimBackgroundMask": "audio-trimmer_trim-background-mask_mmZgf",
+	"selection-background": "audio-trimmer_selection-background_3LBuB",
+	"selectionBackground": "audio-trimmer_selection-background_3LBuB",
+	"start-trim-background": "audio-trimmer_start-trim-background_26IJ6",
+	"startTrimBackground": "audio-trimmer_start-trim-background_26IJ6",
+	"end-trim-background": "audio-trimmer_end-trim-background_1QrZm",
+	"endTrimBackground": "audio-trimmer_end-trim-background_1QrZm",
+	"trim-line": "audio-trimmer_trim-line_2cpoE",
+	"trimLine": "audio-trimmer_trim-line_2cpoE",
+	"playhead-container": "audio-trimmer_playhead-container_3l7Ve",
+	"playheadContainer": "audio-trimmer_playhead-container_3l7Ve",
+	"playhead": "audio-trimmer_playhead_3A0k9",
+	"right-handle": "audio-trimmer_right-handle_jMGnD",
+	"rightHandle": "audio-trimmer_right-handle_jMGnD",
+	"left-handle": "audio-trimmer_left-handle_1Ure2",
+	"leftHandle": "audio-trimmer_left-handle_1Ure2",
+	"trimmer": "audio-trimmer_trimmer_3T33n",
+	"trim-handle": "audio-trimmer_trim-handle_1Obhp",
+	"trimHandle": "audio-trimmer_trim-handle_1Obhp",
+	"top-trim-handle": "audio-trimmer_top-trim-handle_1oF2r",
+	"topTrimHandle": "audio-trimmer_top-trim-handle_1oF2r",
+	"bottom-trim-handle": "audio-trimmer_bottom-trim-handle_2FNda",
+	"bottomTrimHandle": "audio-trimmer_bottom-trim-handle_2FNda"
 };
 
 /***/ }),
@@ -290,27 +290,27 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n.backpack_backpack-container_2HPPV {\n    flex-shrink: 1;\n    position: relative;\n}\n\n.backpack_backpack-header_Vteeu {\n    margin-top: 0.5rem;\n    border: 1px solid var(--ui-black-transparent);\n    background: var(--ui-white);\n    padding: 0.25rem;\n    text-align: center;\n    font-size: 0.85rem;\n    color: var(--text-primary);\n    transition: 0.2s;\n    cursor: pointer;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n}\n\n[dir=\"ltr\"] .backpack_backpack-header_Vteeu {\n    border-top-right-radius: 0.5rem;\n}\n\n[dir=\"rtl\"] .backpack_backpack-header_Vteeu {\n    border-top-left-radius: 0.5rem;\n}\n\n.backpack_backpack-list_17cX_ {\n    position: relative;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    border-right: 1px solid var(--ui-black-transparent);\n    min-height: 5.5rem;\n}\n\n/* Absolute position the inner list to allow scrolling inside flex sized container */\n\n.backpack_backpack-list-inner_1OOGg {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    overflow-x: auto;\n}\n\n.backpack_drag-over_3ptWa:after {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    opacity: 0.75;\n    background-color: var(--drop-highlight);\n    transition: all 0.25s ease;\n}\n\n.backpack_status-message_1RNp6 {\n    width: 100%;\n    text-align: center;\n    font-size: 0.85rem;\n    color: var(--text-primary);\n}\n\n.backpack_error-message_1WKvR {\n    font-family: monospace;\n}\n\n.backpack_backpack-item_2qZLR {\n    width: 4rem;\n    height: 4.5rem;\n    margin: 0 0.25rem;\n    flex-shrink: 0;\n\n    /* Need to hide overflow because of background setting below */\n    overflow: hidden;\n}\n\n.backpack_backpack-item_2qZLR > div {\n    /* Need to set the background to get blend-mode below to work */\n    background: var(--ui-primary);\n}\n\n.backpack_more_2MpF0 {\n    background: var(--looks-secondary);\n    color: var(--ui-white);\n    border: none;\n    outline: none;\n    font-weight: bold;\n    border-radius: 0.5rem;\n    font-size: 0.85rem;\n    padding: 0.5rem;\n    margin: 0.5rem;\n    cursor: pointer;\n}\n", ""]);
+exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n.backpack_backpack-container_2_wGr {\n    flex-shrink: 1;\n    position: relative;\n}\n\n.backpack_backpack-header_6ltCS {\n    margin-top: 0.5rem;\n    border: 1px solid var(--ui-black-transparent);\n    background: var(--ui-white);\n    padding: 0.25rem;\n    text-align: center;\n    font-size: 0.85rem;\n    color: var(--text-primary);\n    transition: 0.2s;\n    cursor: pointer;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n}\n\n[dir=\"ltr\"] .backpack_backpack-header_6ltCS {\n    border-top-right-radius: 0.5rem;\n}\n\n[dir=\"rtl\"] .backpack_backpack-header_6ltCS {\n    border-top-left-radius: 0.5rem;\n}\n\n.backpack_backpack-list_MOp5X {\n    position: relative;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    border-right: 1px solid var(--ui-black-transparent);\n    min-height: 5.5rem;\n}\n\n/* Absolute position the inner list to allow scrolling inside flex sized container */\n\n.backpack_backpack-list-inner_10a2A {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    overflow-x: auto;\n}\n\n.backpack_drag-over_3bBKD:after {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    opacity: 0.75;\n    background-color: var(--drop-highlight);\n    transition: all 0.25s ease;\n}\n\n.backpack_status-message_3kt5s {\n    width: 100%;\n    text-align: center;\n    font-size: 0.85rem;\n    color: var(--text-primary);\n}\n\n.backpack_error-message_2JoTP {\n    font-family: monospace;\n}\n\n.backpack_backpack-item_hwqzQ {\n    width: 4rem;\n    height: 4.5rem;\n    margin: 0 0.25rem;\n    flex-shrink: 0;\n\n    /* Need to hide overflow because of background setting below */\n    overflow: hidden;\n}\n\n.backpack_backpack-item_hwqzQ > div {\n    /* Need to set the background to get blend-mode below to work */\n    background: var(--ui-primary);\n}\n\n.backpack_more_j3LFZ {\n    background: var(--looks-secondary);\n    color: var(--ui-white);\n    border: none;\n    outline: none;\n    font-weight: bold;\n    border-radius: 0.5rem;\n    font-size: 0.85rem;\n    padding: 0.5rem;\n    margin: 0.5rem;\n    cursor: pointer;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"backpack-container": "backpack_backpack-container_2HPPV",
-	"backpackContainer": "backpack_backpack-container_2HPPV",
-	"backpack-header": "backpack_backpack-header_Vteeu",
-	"backpackHeader": "backpack_backpack-header_Vteeu",
-	"backpack-list": "backpack_backpack-list_17cX_",
-	"backpackList": "backpack_backpack-list_17cX_",
-	"backpack-list-inner": "backpack_backpack-list-inner_1OOGg",
-	"backpackListInner": "backpack_backpack-list-inner_1OOGg",
-	"drag-over": "backpack_drag-over_3ptWa",
-	"dragOver": "backpack_drag-over_3ptWa",
-	"status-message": "backpack_status-message_1RNp6",
-	"statusMessage": "backpack_status-message_1RNp6",
-	"error-message": "backpack_error-message_1WKvR",
-	"errorMessage": "backpack_error-message_1WKvR",
-	"backpack-item": "backpack_backpack-item_2qZLR",
-	"backpackItem": "backpack_backpack-item_2qZLR",
-	"more": "backpack_more_2MpF0"
+	"backpack-container": "backpack_backpack-container_2_wGr",
+	"backpackContainer": "backpack_backpack-container_2_wGr",
+	"backpack-header": "backpack_backpack-header_6ltCS",
+	"backpackHeader": "backpack_backpack-header_6ltCS",
+	"backpack-list": "backpack_backpack-list_MOp5X",
+	"backpackList": "backpack_backpack-list_MOp5X",
+	"backpack-list-inner": "backpack_backpack-list-inner_10a2A",
+	"backpackListInner": "backpack_backpack-list-inner_10a2A",
+	"drag-over": "backpack_drag-over_3bBKD",
+	"dragOver": "backpack_drag-over_3bBKD",
+	"status-message": "backpack_status-message_3kt5s",
+	"statusMessage": "backpack_status-message_3kt5s",
+	"error-message": "backpack_error-message_2JoTP",
+	"errorMessage": "backpack_error-message_2JoTP",
+	"backpack-item": "backpack_backpack-item_hwqzQ",
+	"backpackItem": "backpack_backpack-item_hwqzQ",
+	"more": "backpack_more_j3LFZ"
 };
 
 /***/ }),
@@ -327,13 +327,13 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.blocks_blocks_2LOZ2 {\n    height: 100%;\n}\n\n.blocks_drag-over_QI1Mw:after {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    opacity: 0.75;\n    background-color: var(--drop-highlight);\n    transition: all 0.25s ease;\n}\n\n.blocks_blocks_2LOZ2 .injectionDiv{\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    border: 1px solid var(--ui-black-transparent);\n    border-top-right-radius: 0.5rem;\n    border-bottom-right-radius: 0.5rem;\n}\n\n[dir=\"rtl\"] .blocks_blocks_2LOZ2 .injectionDiv {\n    border-top-right-radius: 0;\n    border-bottom-right-radius: 0;\n    border-top-left-radius: 0.5rem;\n    border-bottom-left-radius: 0.5rem;\n}\n\n.blocks_blocks_2LOZ2 .blocklyMainBackground {\n    stroke: none;\n}\n\n.blocks_blocks_2LOZ2 .blocklyToolboxDiv {\n    border-right: 1px solid var(--ui-black-transparent);\n    border-bottom: 1px solid var(--ui-black-transparent);\n    box-sizing: content-box;\n    height: calc(100% - 3.25rem) !important;\n\n    /*\n        For now, the layout cannot support scrollbars in the category menu.\n        The line below works for Edge, the `::-webkit-scrollbar` line\n        below that is for webkit browsers. It isn't possible to do the\n        same for Firefox, so a different solution may be needed for them.\n    */\n    -ms-overflow-style: none;\n}\n\n[dir=\"rtl\"] .blocks_blocks_2LOZ2 .blocklyToolboxDiv {\n    border-right: none;\n    border-left: 1px solid var(--ui-black-transparent);\n}\n\n.blocks_blocks_2LOZ2 .blocklyToolboxDiv::-webkit-scrollbar {\n    display: none;\n}\n\n.blocks_blocks_2LOZ2 .blocklyFlyout {\n    border-right: 1px solid var(--ui-black-transparent);\n    box-sizing: content-box;\n}\n\n[dir=\"rtl\"] .blocks_blocks_2LOZ2 .blocklyFlyout {\n    border-right: none;\n    border-left: 1px solid var(--ui-black-transparent);\n}\n\n.blocks_blocks_2LOZ2 .blocklyBlockDragSurface {\n    /*\n        Fix an issue where the drag surface was preventing hover events for sharing blocks.\n        This does not prevent user interaction on the blocks themselves.\n    */\n    pointer-events: none;\n    z-index: 1000; /* make blocks match gui drag layer */\n}\n\n/*\n    Shrink category font to fit \"My Blocks\" for now.\n    Probably will need different solutions for language support later, so\n    make the change here instead of in scratch-blocks.\n*/\n\n.blocks_blocks_2LOZ2 .scratchCategoryMenuItemLabel {\n    font-size: 0.65rem;\n}\n\n.blocks_blocks_2LOZ2 .blocklyMinimalBody {\n    min-width: auto;\n    min-height: auto;\n}\n", ""]);
+exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.blocks_blocks_C530M {\n    height: 100%;\n}\n\n.blocks_drag-over_2btTP:after {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    opacity: 0.75;\n    background-color: var(--drop-highlight);\n    transition: all 0.25s ease;\n}\n\n.blocks_blocks_C530M .injectionDiv{\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    border: 1px solid var(--ui-black-transparent);\n    border-top-right-radius: 0.5rem;\n    border-bottom-right-radius: 0.5rem;\n}\n\n[dir=\"rtl\"] .blocks_blocks_C530M .injectionDiv {\n    border-top-right-radius: 0;\n    border-bottom-right-radius: 0;\n    border-top-left-radius: 0.5rem;\n    border-bottom-left-radius: 0.5rem;\n}\n\n.blocks_blocks_C530M .blocklyMainBackground {\n    stroke: none;\n}\n\n.blocks_blocks_C530M .blocklyToolboxDiv {\n    border-right: 1px solid var(--ui-black-transparent);\n    border-bottom: 1px solid var(--ui-black-transparent);\n    box-sizing: content-box;\n    height: calc(100% - 3.25rem) !important;\n\n    /*\n        For now, the layout cannot support scrollbars in the category menu.\n        The line below works for Edge, the `::-webkit-scrollbar` line\n        below that is for webkit browsers. It isn't possible to do the\n        same for Firefox, so a different solution may be needed for them.\n    */\n    -ms-overflow-style: none;\n}\n\n[dir=\"rtl\"] .blocks_blocks_C530M .blocklyToolboxDiv {\n    border-right: none;\n    border-left: 1px solid var(--ui-black-transparent);\n}\n\n.blocks_blocks_C530M .blocklyToolboxDiv::-webkit-scrollbar {\n    display: none;\n}\n\n.blocks_blocks_C530M .blocklyFlyout {\n    border-right: 1px solid var(--ui-black-transparent);\n    box-sizing: content-box;\n}\n\n[dir=\"rtl\"] .blocks_blocks_C530M .blocklyFlyout {\n    border-right: none;\n    border-left: 1px solid var(--ui-black-transparent);\n}\n\n.blocks_blocks_C530M .blocklyBlockDragSurface {\n    /*\n        Fix an issue where the drag surface was preventing hover events for sharing blocks.\n        This does not prevent user interaction on the blocks themselves.\n    */\n    pointer-events: none;\n    z-index: 1000; /* make blocks match gui drag layer */\n}\n\n/*\n    Shrink category font to fit \"My Blocks\" for now.\n    Probably will need different solutions for language support later, so\n    make the change here instead of in scratch-blocks.\n*/\n\n.blocks_blocks_C530M .scratchCategoryMenuItemLabel {\n    font-size: 0.65rem;\n}\n\n.blocks_blocks_C530M .blocklyMinimalBody {\n    min-width: auto;\n    min-height: auto;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"blocks": "blocks_blocks_2LOZ2",
-	"drag-over": "blocks_drag-over_QI1Mw",
-	"dragOver": "blocks_drag-over_QI1Mw"
+	"blocks": "blocks_blocks_C530M",
+	"drag-over": "blocks_drag-over_2btTP",
+	"dragOver": "blocks_drag-over_2btTP"
 };
 
 /***/ }),
@@ -350,11 +350,11 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".box_box_tWy-0 {\n}\n", ""]);
+exports.push([module.i, ".box_box_2jjDp {\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"box": "box_box_tWy-0"
+	"box": "box_box_2jjDp"
 };
 
 /***/ }),
@@ -371,21 +371,21 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\nbody {\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n}\n\nh2 {\n    font-size: 1.5rem;\n    font-weight: bold;\n}\n\np {\n    font-size: 1rem;\n    line-height: 1.5em;\n}\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.browser-modal_modal-overlay_3n1Lc {\n    position: fixed;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    z-index: 510;\n    background-color: var(--ui-modal-overlay);\n}\n\n.browser-modal_modal-content_3udAD {\n    margin: 100px auto;\n    outline: none;\n    border: .25rem solid var(--ui-white-transparent);\n    padding: 0;\n    border-radius: 0.5rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    width: 500px;\n\n    color: var(--text-primary);\n    overflow: hidden;\n}\n\n.browser-modal_illustration_ZJXEu {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 100%;\n    height: 100px;\n    background-color: var(--control-primary);\n}\n\n[dir=\"rtl\"] .browser-modal_illustration_ZJXEu {\n    transform: scaleX(-1);\n}\n\n.browser-modal_illustration_ZJXEu img {\n    height: 80%;\n    width: auto;\n}\n\n.browser-modal_body_3XY4U {\n    background: var(--ui-modal-background);\n    padding: 1.5rem 2.25rem;\n    display: flex;\n    flex-direction: column;\n    gap: 0.25rem;\n}\n\n.browser-modal_title_28E0- {\n    text-align: center;\n}\n\n.browser-modal_desktop-settings-outer_qyuL1 {\n    display: flex;\n    justify-content: center;\n}\n\n.browser-modal_desktop-settings-inner_26CQT {\n    font: inherit;\n    font-weight: bold;\n    padding: 0.75rem 1rem;\n    border-radius: 0.25rem;\n    border: 1px solid var(--ui-black-transparent);\n    background-color: var(--looks-secondary);\n    color: white;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\nbody {\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n}\n\nh2 {\n    font-size: 1.5rem;\n    font-weight: bold;\n}\n\np {\n    font-size: 1rem;\n    line-height: 1.5em;\n}\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.browser-modal_modal-overlay_3TDyF {\n    position: fixed;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    z-index: 510;\n    background-color: var(--ui-modal-overlay);\n}\n\n.browser-modal_modal-content_3iHow {\n    margin: 100px auto;\n    outline: none;\n    border: .25rem solid var(--ui-white-transparent);\n    padding: 0;\n    border-radius: 0.5rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    width: 500px;\n\n    color: var(--text-primary);\n    overflow: hidden;\n}\n\n.browser-modal_illustration_1qhRy {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 100%;\n    height: 100px;\n    background-color: var(--control-primary);\n}\n\n[dir=\"rtl\"] .browser-modal_illustration_1qhRy {\n    transform: scaleX(-1);\n}\n\n.browser-modal_illustration_1qhRy img {\n    height: 80%;\n    width: auto;\n}\n\n.browser-modal_body_1pvBQ {\n    background: var(--ui-modal-background);\n    padding: 1.5rem 2.25rem;\n    display: flex;\n    flex-direction: column;\n    gap: 0.25rem;\n}\n\n.browser-modal_title_3o0Zx {\n    text-align: center;\n}\n\n.browser-modal_desktop-settings-outer_Vjs5R {\n    display: flex;\n    justify-content: center;\n}\n\n.browser-modal_desktop-settings-inner_3PQKR {\n    font: inherit;\n    font-weight: bold;\n    padding: 0.75rem 1rem;\n    border-radius: 0.25rem;\n    border: 1px solid var(--ui-black-transparent);\n    background-color: var(--looks-secondary);\n    color: white;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"modal-overlay": "browser-modal_modal-overlay_3n1Lc",
-	"modalOverlay": "browser-modal_modal-overlay_3n1Lc",
-	"modal-content": "browser-modal_modal-content_3udAD",
-	"modalContent": "browser-modal_modal-content_3udAD",
-	"illustration": "browser-modal_illustration_ZJXEu",
-	"body": "browser-modal_body_3XY4U",
-	"title": "browser-modal_title_28E0-",
-	"desktop-settings-outer": "browser-modal_desktop-settings-outer_qyuL1",
-	"desktopSettingsOuter": "browser-modal_desktop-settings-outer_qyuL1",
-	"desktop-settings-inner": "browser-modal_desktop-settings-inner_26CQT",
-	"desktopSettingsInner": "browser-modal_desktop-settings-inner_26CQT"
+	"modal-overlay": "browser-modal_modal-overlay_3TDyF",
+	"modalOverlay": "browser-modal_modal-overlay_3TDyF",
+	"modal-content": "browser-modal_modal-content_3iHow",
+	"modalContent": "browser-modal_modal-content_3iHow",
+	"illustration": "browser-modal_illustration_1qhRy",
+	"body": "browser-modal_body_1pvBQ",
+	"title": "browser-modal_title_3o0Zx",
+	"desktop-settings-outer": "browser-modal_desktop-settings-outer_Vjs5R",
+	"desktopSettingsOuter": "browser-modal_desktop-settings-outer_Vjs5R",
+	"desktop-settings-inner": "browser-modal_desktop-settings-inner_3PQKR",
+	"desktopSettingsInner": "browser-modal_desktop-settings-inner_3PQKR"
 };
 
 /***/ }),
@@ -402,14 +402,14 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.button_outlined-button_2f510 {\n    cursor: pointer;\n    border-radius: calc(0.5rem / 2);\n    font-weight: bold;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    padding-left: .75rem;\n    padding-right: .75rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n}\n\n.button_icon_JhCuM {\n    height: 1.5rem;\n}\n\n[dir=\"ltr\"] .button_icon_JhCuM {\n    margin-right: .5rem;\n}\n\n[dir=\"rtl\"] .button_icon_JhCuM {\n    margin-left: .5rem;\n}\n\n.button_content_3y79K {\n    white-space: nowrap;\n}\n", ""]);
+exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.button_outlined-button_1bS__ {\n    cursor: pointer;\n    border-radius: calc(0.5rem / 2);\n    font-weight: bold;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    padding-left: .75rem;\n    padding-right: .75rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n}\n\n.button_icon_77d8G {\n    height: 1.5rem;\n}\n\n[dir=\"ltr\"] .button_icon_77d8G {\n    margin-right: .5rem;\n}\n\n[dir=\"rtl\"] .button_icon_77d8G {\n    margin-left: .5rem;\n}\n\n.button_content_3jdgj {\n    white-space: nowrap;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"outlined-button": "button_outlined-button_2f510",
-	"outlinedButton": "button_outlined-button_2f510",
-	"icon": "button_icon_JhCuM",
-	"content": "button_content_3y79K"
+	"outlined-button": "button_outlined-button_1bS__",
+	"outlinedButton": "button_outlined-button_1bS__",
+	"icon": "button_icon_77d8G",
+	"content": "button_content_3jdgj"
 };
 
 /***/ }),
@@ -426,63 +426,63 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.card_card-container-overlay_2QacE {\n    position: fixed;\n    pointer-events: none;\n    z-index: 480;\n}\n\n.card_card-container_3CTj3 {\n    position:absolute;\n    pointer-events: auto;\n    z-index: 480;\n    margin: 0.5rem 2rem;\n    min-width: 468px;\n}\n\n.card_left-card_37wEj, .card_right-card_IuwCX {\n    height: 90%;\n    position: absolute;\n    top: 5%;\n    background: var(--ui-white);\n    border: 1px solid var(--ui-tertiary);\n    width: .75rem;\n    z-index: 10;\n    opacity: 0.9;\n    overflow: hidden;\n}\n\n.card_left-card_37wEj {\n    left: -.75rem;\n    border-right: 0;\n    border-top-left-radius: 0.75rem;\n    border-bottom-left-radius: 0.75rem;\n}\n\n.card_right-card_IuwCX {\n    right: -.75rem;\n    border-left: 0;\n    border-top-right-radius: 0.75rem;\n    border-bottom-right-radius: 0.75rem;\n}\n\n.card_left-card_37wEj::after, .card_right-card_IuwCX::after {\n    content: \"\";\n    position: absolute;\n    top: 0;\n    left: 0;\n    height: 2.5rem;\n    width: 100%;\n    background: var(--extensions-primary);\n}\n\n.card_left-button_qn4Sw, .card_right-button_1SJvV {\n    position: absolute;\n    top: 50%;\n    margin-top: -15px;\n    z-index: 20;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    cursor: pointer;\n    background: var(--extensions-primary);\n    box-shadow: 0 0 0 4px var(--extensions-transparent);\n    height: 44px;\n    width: 44px;\n    border-radius: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    transition: all 0.25s ease;\n}\n\n.card_left-button_qn4Sw:hover, .card_right-button_1SJvV:hover {\n    box-shadow: 0 0 0 6px var(--extensions-transparent);\n    transform: scale(1.125);\n}\n\n.card_left-button_qn4Sw img, .card_right-button_1SJvV img{\n    width: 1.75rem;\n}\n\n.card_left-button_qn4Sw {\n    left: -27px;\n}\n\n.card_right-button_1SJvV {\n    right: -27px;\n}\n\n.card_card_2Y01J {\n    border: 1px solid var(--ui-tertiary);\n    border-radius: 0.75rem;\n    display: flex;\n    flex-direction: column;\n    cursor: move;\n    z-index: 20;\n    overflow: hidden;\n    box-shadow: 0px 5px 25px 5px var(--shadow);\n    align-items: center;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n}\n\n.card_header-buttons_po2iq {\n    width: 100%;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: center;\n    background: var(--extensions-primary);\n    border-bottom: 1px solid var(--extensions-tertiary);\n    font-size: 0.625rem;\n    font-weight: bold;\n}\n\n.card_header-buttons-hidden_3djQN {\n    border-bottom: 0px;\n}\n\n.card_header-buttons-right_2gg8P {\n    display: flex;\n    flex-direction: row;\n}\n\n.card_header-buttons_po2iq img {\n    margin-bottom: 2px;\n}\n\n.card_shrink-expand-button_1ptQQ {\n    cursor: pointer;\n    color: white;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    padding: 0.75rem;\n}\n\n.card_shrink-expand-button_1ptQQ:hover, .card_all-button_lbA2Z:hover {\n    background-color: var(--ui-black-transparent);\n}\n\n.card_remove-button_3_tlz, .card_all-button_lbA2Z {\n    cursor: pointer;\n    color: white;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    padding: 0.75rem;\n}\n\n.card_remove-button_3_tlz:hover, .card_all-button_lbA2Z:hover {\n    background-color: var(--ui-black-transparent);\n}\n\n.card_step-title_1okGu {\n    font-size: 0.9rem;\n    margin: 0.9rem;\n    text-align: center;\n    font-weight: bold;\n    color: var(--text-primary);\n}\n\n.card_step-body_2bEry {\n    width: 100%;\n    background: var(--ui-white);\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    position: relative;\n    text-align: center;\n\n    /* Min height prevents layout changing when images change */\n    min-height: 256px;\n}\n\n.card_step-video_3htRC {\n    height: 256px;\n}\n\n.card_step-image_3A9ui {\n    max-width: 450px;\n    max-height: 200px;\n    object-fit: contain;\n    background: #F9F9F9;\n    border: 1px solid #ddd;\n    border-radius: 0.5rem;\n    overflow: hidden;\n    margin: 0 0.5rem 0.5rem;\n}\n\n.card_decks_122D_ {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-around;\n    padding: 0 1rem 0.5rem;\n}\n\n.card_deck_3W7vN {\n    display: flex;\n    flex-direction: column;\n    margin: 0 8px 8px;\n    cursor: pointer;\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 0.25rem;\n    overflow: hidden;\n}\n\n.card_deck-image_k0nPx {\n    width: 200px;\n    height: 100px;\n    object-fit: cover;\n}\n\n.card_deck-name_1qY_0 {\n    color: var(--looks-secondary);\n    font-weight: bold;\n    font-size: 0.85rem;\n    margin: .625rem 0px;\n    text-align: center;\n    font-weight: bold;\n    text-align: center;\n    max-width: 200px;\n}\n\n.card_help-icon_MqDLJ {\n    height: 1.25rem;\n}\n\n.card_close-icon_1qu7W {\n    height: 1.25rem;\n    margin: .125rem 0; /* To offset the .25rem difference in icon size */\n}\n\n[dir=\"ltr\"] .card_help-icon_MqDLJ {\n    margin-right: 0.25rem;\n}\n\n[dir=\"rtl\"] .card_help-icon_MqDLJ {\n    margin-left: 0.25rem;\n}\n\n[dir=\"ltr\"] .card_close-icon_1qu7W {\n    margin-left: 0.25rem;\n}\n\n[dir=\"rtl\"] .card_close-icon_1qu7W {\n    margin-right: 0.25rem;\n}\n\n.card_see-all_3a1cU {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    width: 100%;\n    padding: 0.5rem;\n}\n\n.card_see-all-button_3is7d {\n    cursor: pointer;\n    padding: 0.5rem 1rem;\n    background-color: var(--looks-secondary);\n    color: white;\n    font-weight: bold;\n    border-radius: 0.25rem;\n    display: flex;\n    align-items: center;\n    color: var(--ui-white);\n    font-size: .75rem;\n    font-weight: bold;\n    line-height: 1rem;\n    text-align: center;\n}\n\n[dir=\"ltr\"] .card_see-all-button_3is7d img {\n    margin-left: 0.5rem;\n}\n\n[dir=\"rtl\"] .card_see-all-button_3is7d img {\n    margin-right: 0.5rem;\n}\n\n.card_steps-list_3djjp {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n}\n\n.card_active-step-pip_3R5x2, .card_inactiveStepPip_2yqeE {\n    width: 0.5rem;\n    height: 0.5rem;\n    margin: 0 0.25rem;\n    border-radius: 100%;\n    background: var(--ui-white-transparent);\n}\n\n.card_active-step-pip_3R5x2 {\n    background: var(--ui-white);\n    box-shadow: 0px 0px 0px 2px var(--shadow);\n}\n\n.card_hidden_10Vrd {\n    display: none;\n}\n", ""]);
+exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.card_card-container-overlay_gnjBL {\n    position: fixed;\n    pointer-events: none;\n    z-index: 480;\n}\n\n.card_card-container_3_Sbc {\n    position:absolute;\n    pointer-events: auto;\n    z-index: 480;\n    margin: 0.5rem 2rem;\n    min-width: 468px;\n}\n\n.card_left-card_1KpEh, .card_right-card_3IrbD {\n    height: 90%;\n    position: absolute;\n    top: 5%;\n    background: var(--ui-white);\n    border: 1px solid var(--ui-tertiary);\n    width: .75rem;\n    z-index: 10;\n    opacity: 0.9;\n    overflow: hidden;\n}\n\n.card_left-card_1KpEh {\n    left: -.75rem;\n    border-right: 0;\n    border-top-left-radius: 0.75rem;\n    border-bottom-left-radius: 0.75rem;\n}\n\n.card_right-card_3IrbD {\n    right: -.75rem;\n    border-left: 0;\n    border-top-right-radius: 0.75rem;\n    border-bottom-right-radius: 0.75rem;\n}\n\n.card_left-card_1KpEh::after, .card_right-card_3IrbD::after {\n    content: \"\";\n    position: absolute;\n    top: 0;\n    left: 0;\n    height: 2.5rem;\n    width: 100%;\n    background: var(--extensions-primary);\n}\n\n.card_left-button_2IXDY, .card_right-button_3Py4m {\n    position: absolute;\n    top: 50%;\n    margin-top: -15px;\n    z-index: 20;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    cursor: pointer;\n    background: var(--extensions-primary);\n    box-shadow: 0 0 0 4px var(--extensions-transparent);\n    height: 44px;\n    width: 44px;\n    border-radius: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    transition: all 0.25s ease;\n}\n\n.card_left-button_2IXDY:hover, .card_right-button_3Py4m:hover {\n    box-shadow: 0 0 0 6px var(--extensions-transparent);\n    transform: scale(1.125);\n}\n\n.card_left-button_2IXDY img, .card_right-button_3Py4m img{\n    width: 1.75rem;\n}\n\n.card_left-button_2IXDY {\n    left: -27px;\n}\n\n.card_right-button_3Py4m {\n    right: -27px;\n}\n\n.card_card_3GG7C {\n    border: 1px solid var(--ui-tertiary);\n    border-radius: 0.75rem;\n    display: flex;\n    flex-direction: column;\n    cursor: move;\n    z-index: 20;\n    overflow: hidden;\n    box-shadow: 0px 5px 25px 5px var(--shadow);\n    align-items: center;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n}\n\n.card_header-buttons_3Yq16 {\n    width: 100%;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: center;\n    background: var(--extensions-primary);\n    border-bottom: 1px solid var(--extensions-tertiary);\n    font-size: 0.625rem;\n    font-weight: bold;\n}\n\n.card_header-buttons-hidden_3y5Bd {\n    border-bottom: 0px;\n}\n\n.card_header-buttons-right_2bzRm {\n    display: flex;\n    flex-direction: row;\n}\n\n.card_header-buttons_3Yq16 img {\n    margin-bottom: 2px;\n}\n\n.card_shrink-expand-button_vbegz {\n    cursor: pointer;\n    color: white;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    padding: 0.75rem;\n}\n\n.card_shrink-expand-button_vbegz:hover, .card_all-button_15rrQ:hover {\n    background-color: var(--ui-black-transparent);\n}\n\n.card_remove-button_1F8SI, .card_all-button_15rrQ {\n    cursor: pointer;\n    color: white;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    padding: 0.75rem;\n}\n\n.card_remove-button_1F8SI:hover, .card_all-button_15rrQ:hover {\n    background-color: var(--ui-black-transparent);\n}\n\n.card_step-title_13--3 {\n    font-size: 0.9rem;\n    margin: 0.9rem;\n    text-align: center;\n    font-weight: bold;\n    color: var(--text-primary);\n}\n\n.card_step-body_2bFkf {\n    width: 100%;\n    background: var(--ui-white);\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    position: relative;\n    text-align: center;\n\n    /* Min height prevents layout changing when images change */\n    min-height: 256px;\n}\n\n.card_step-video_3qH9J {\n    height: 256px;\n}\n\n.card_step-image_2_jUv {\n    max-width: 450px;\n    max-height: 200px;\n    object-fit: contain;\n    background: #F9F9F9;\n    border: 1px solid #ddd;\n    border-radius: 0.5rem;\n    overflow: hidden;\n    margin: 0 0.5rem 0.5rem;\n}\n\n.card_decks_1oD6G {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-around;\n    padding: 0 1rem 0.5rem;\n}\n\n.card_deck_2NtVa {\n    display: flex;\n    flex-direction: column;\n    margin: 0 8px 8px;\n    cursor: pointer;\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 0.25rem;\n    overflow: hidden;\n}\n\n.card_deck-image_1V3q9 {\n    width: 200px;\n    height: 100px;\n    object-fit: cover;\n}\n\n.card_deck-name_1SJhM {\n    color: var(--looks-secondary);\n    font-weight: bold;\n    font-size: 0.85rem;\n    margin: .625rem 0px;\n    text-align: center;\n    font-weight: bold;\n    text-align: center;\n    max-width: 200px;\n}\n\n.card_help-icon_1iyk7 {\n    height: 1.25rem;\n}\n\n.card_close-icon_1FYf5 {\n    height: 1.25rem;\n    margin: .125rem 0; /* To offset the .25rem difference in icon size */\n}\n\n[dir=\"ltr\"] .card_help-icon_1iyk7 {\n    margin-right: 0.25rem;\n}\n\n[dir=\"rtl\"] .card_help-icon_1iyk7 {\n    margin-left: 0.25rem;\n}\n\n[dir=\"ltr\"] .card_close-icon_1FYf5 {\n    margin-left: 0.25rem;\n}\n\n[dir=\"rtl\"] .card_close-icon_1FYf5 {\n    margin-right: 0.25rem;\n}\n\n.card_see-all_1_E8D {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    width: 100%;\n    padding: 0.5rem;\n}\n\n.card_see-all-button_3o4U8 {\n    cursor: pointer;\n    padding: 0.5rem 1rem;\n    background-color: var(--looks-secondary);\n    color: white;\n    font-weight: bold;\n    border-radius: 0.25rem;\n    display: flex;\n    align-items: center;\n    color: var(--ui-white);\n    font-size: .75rem;\n    font-weight: bold;\n    line-height: 1rem;\n    text-align: center;\n}\n\n[dir=\"ltr\"] .card_see-all-button_3o4U8 img {\n    margin-left: 0.5rem;\n}\n\n[dir=\"rtl\"] .card_see-all-button_3o4U8 img {\n    margin-right: 0.5rem;\n}\n\n.card_steps-list_22Q1P {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n}\n\n.card_active-step-pip_I0bxo, .card_inactiveStepPip_2lVp2 {\n    width: 0.5rem;\n    height: 0.5rem;\n    margin: 0 0.25rem;\n    border-radius: 100%;\n    background: var(--ui-white-transparent);\n}\n\n.card_active-step-pip_I0bxo {\n    background: var(--ui-white);\n    box-shadow: 0px 0px 0px 2px var(--shadow);\n}\n\n.card_hidden_Jk77J {\n    display: none;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"card-container-overlay": "card_card-container-overlay_2QacE",
-	"cardContainerOverlay": "card_card-container-overlay_2QacE",
-	"card-container": "card_card-container_3CTj3",
-	"cardContainer": "card_card-container_3CTj3",
-	"left-card": "card_left-card_37wEj",
-	"leftCard": "card_left-card_37wEj",
-	"right-card": "card_right-card_IuwCX",
-	"rightCard": "card_right-card_IuwCX",
-	"left-button": "card_left-button_qn4Sw",
-	"leftButton": "card_left-button_qn4Sw",
-	"right-button": "card_right-button_1SJvV",
-	"rightButton": "card_right-button_1SJvV",
-	"card": "card_card_2Y01J",
-	"header-buttons": "card_header-buttons_po2iq",
-	"headerButtons": "card_header-buttons_po2iq",
-	"header-buttons-hidden": "card_header-buttons-hidden_3djQN",
-	"headerButtonsHidden": "card_header-buttons-hidden_3djQN",
-	"header-buttons-right": "card_header-buttons-right_2gg8P",
-	"headerButtonsRight": "card_header-buttons-right_2gg8P",
-	"shrink-expand-button": "card_shrink-expand-button_1ptQQ",
-	"shrinkExpandButton": "card_shrink-expand-button_1ptQQ",
-	"all-button": "card_all-button_lbA2Z",
-	"allButton": "card_all-button_lbA2Z",
-	"remove-button": "card_remove-button_3_tlz",
-	"removeButton": "card_remove-button_3_tlz",
-	"step-title": "card_step-title_1okGu",
-	"stepTitle": "card_step-title_1okGu",
-	"step-body": "card_step-body_2bEry",
-	"stepBody": "card_step-body_2bEry",
-	"step-video": "card_step-video_3htRC",
-	"stepVideo": "card_step-video_3htRC",
-	"step-image": "card_step-image_3A9ui",
-	"stepImage": "card_step-image_3A9ui",
-	"decks": "card_decks_122D_",
-	"deck": "card_deck_3W7vN",
-	"deck-image": "card_deck-image_k0nPx",
-	"deckImage": "card_deck-image_k0nPx",
-	"deck-name": "card_deck-name_1qY_0",
-	"deckName": "card_deck-name_1qY_0",
-	"help-icon": "card_help-icon_MqDLJ",
-	"helpIcon": "card_help-icon_MqDLJ",
-	"close-icon": "card_close-icon_1qu7W",
-	"closeIcon": "card_close-icon_1qu7W",
-	"see-all": "card_see-all_3a1cU",
-	"seeAll": "card_see-all_3a1cU",
-	"see-all-button": "card_see-all-button_3is7d",
-	"seeAllButton": "card_see-all-button_3is7d",
-	"steps-list": "card_steps-list_3djjp",
-	"stepsList": "card_steps-list_3djjp",
-	"active-step-pip": "card_active-step-pip_3R5x2",
-	"activeStepPip": "card_active-step-pip_3R5x2",
-	"inactiveStepPip": "card_inactiveStepPip_2yqeE",
-	"hidden": "card_hidden_10Vrd"
+	"card-container-overlay": "card_card-container-overlay_gnjBL",
+	"cardContainerOverlay": "card_card-container-overlay_gnjBL",
+	"card-container": "card_card-container_3_Sbc",
+	"cardContainer": "card_card-container_3_Sbc",
+	"left-card": "card_left-card_1KpEh",
+	"leftCard": "card_left-card_1KpEh",
+	"right-card": "card_right-card_3IrbD",
+	"rightCard": "card_right-card_3IrbD",
+	"left-button": "card_left-button_2IXDY",
+	"leftButton": "card_left-button_2IXDY",
+	"right-button": "card_right-button_3Py4m",
+	"rightButton": "card_right-button_3Py4m",
+	"card": "card_card_3GG7C",
+	"header-buttons": "card_header-buttons_3Yq16",
+	"headerButtons": "card_header-buttons_3Yq16",
+	"header-buttons-hidden": "card_header-buttons-hidden_3y5Bd",
+	"headerButtonsHidden": "card_header-buttons-hidden_3y5Bd",
+	"header-buttons-right": "card_header-buttons-right_2bzRm",
+	"headerButtonsRight": "card_header-buttons-right_2bzRm",
+	"shrink-expand-button": "card_shrink-expand-button_vbegz",
+	"shrinkExpandButton": "card_shrink-expand-button_vbegz",
+	"all-button": "card_all-button_15rrQ",
+	"allButton": "card_all-button_15rrQ",
+	"remove-button": "card_remove-button_1F8SI",
+	"removeButton": "card_remove-button_1F8SI",
+	"step-title": "card_step-title_13--3",
+	"stepTitle": "card_step-title_13--3",
+	"step-body": "card_step-body_2bFkf",
+	"stepBody": "card_step-body_2bFkf",
+	"step-video": "card_step-video_3qH9J",
+	"stepVideo": "card_step-video_3qH9J",
+	"step-image": "card_step-image_2_jUv",
+	"stepImage": "card_step-image_2_jUv",
+	"decks": "card_decks_1oD6G",
+	"deck": "card_deck_2NtVa",
+	"deck-image": "card_deck-image_1V3q9",
+	"deckImage": "card_deck-image_1V3q9",
+	"deck-name": "card_deck-name_1SJhM",
+	"deckName": "card_deck-name_1SJhM",
+	"help-icon": "card_help-icon_1iyk7",
+	"helpIcon": "card_help-icon_1iyk7",
+	"close-icon": "card_close-icon_1FYf5",
+	"closeIcon": "card_close-icon_1FYf5",
+	"see-all": "card_see-all_1_E8D",
+	"seeAll": "card_see-all_1_E8D",
+	"see-all-button": "card_see-all-button_3o4U8",
+	"seeAllButton": "card_see-all-button_3o4U8",
+	"steps-list": "card_steps-list_22Q1P",
+	"stepsList": "card_steps-list_22Q1P",
+	"active-step-pip": "card_active-step-pip_I0bxo",
+	"activeStepPip": "card_active-step-pip_I0bxo",
+	"inactiveStepPip": "card_inactiveStepPip_2lVp2",
+	"hidden": "card_hidden_Jk77J"
 };
 
 /***/ }),
@@ -499,19 +499,19 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.close-button_close-button_t5jqt {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n\n    overflow: hidden;  /* Mask the icon animation */\n    background-color: var(--ui-black-transparent);\n    border-radius: 50%;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    cursor: pointer;\n    transition: all 0.15s ease-out;\n}\n\n.close-button_close-button_t5jqt.close-button_large_2cCrv:hover {\n    transform: scale(1.1, 1.1);\n    box-shadow: 0 0 0 4px var(--ui-black-transparent);\n}\n\n.close-button_close-button_t5jqt.close-button_large_2cCrv.close-button_orange_1V-p9:hover {\n    transform: scale(1.1, 1.1);\n    box-shadow: 0px 0px 0px 4px hsla(29, 100%, 54%, 0.2);\n}\n\n.close-button_small_1L9aM {\n    width: 0.825rem;\n    height: 0.825rem;\n    background-color: var(--looks-secondary);\n    color: var(--ui-white);\n}\n\n.close-button_large_2cCrv {\n    width: 1.75rem;\n    height: 1.75rem;\n    box-shadow: 0 0 0 2px var(--ui-black-transparent);\n}\n\n.close-button_large_2cCrv.close-button_orange_1V-p9 {\n    background-color: hsla(29, 100%, 54%, 0.2);\n    box-shadow: 0px 0px 0px 2px hsla(29, 100%, 54%, 0.2);\n}\n\n.close-button_close-icon_ywCI5 {\n    position: relative;\n    margin: 0.25rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    transform-origin: 50%;\n    transform: rotate(45deg);\n}\n\n.close-button_close-icon_ywCI5.close-button_orange_1V-p9 {\n    transform: rotate(45deg);\n    transform: scale(1.4);\n}\n\n.close-button_small_1L9aM .close-button_close-icon_ywCI5 {\n    width: 50%;\n}\n\n.close-button_large_2cCrv .close-button_close-icon_ywCI5 {\n    width: 0.75rem;\n    height: 0.75rem;\n}\n\n.close-button_back-icon_1J1uF {\n  position: relative;\n  margin: 0.25rem;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n\n.close-button_small_1L9aM .close-button_back-icon_1J1uF {\n    width: 50%;\n}\n\n.close-button_large_2cCrv .close-button_back-icon_1J1uF {\n    width: 2rem;\n    height: 2rem;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.close-button_close-button_lOp2G {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n\n    overflow: hidden;  /* Mask the icon animation */\n    background-color: var(--ui-black-transparent);\n    border-radius: 50%;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    cursor: pointer;\n    transition: all 0.15s ease-out;\n}\n\n.close-button_close-button_lOp2G.close-button_large_2oadS:hover {\n    transform: scale(1.1, 1.1);\n    box-shadow: 0 0 0 4px var(--ui-black-transparent);\n}\n\n.close-button_close-button_lOp2G.close-button_large_2oadS.close-button_orange_3I0rs:hover {\n    transform: scale(1.1, 1.1);\n    box-shadow: 0px 0px 0px 4px hsla(29, 100%, 54%, 0.2);\n}\n\n.close-button_small_3BsRW {\n    width: 0.825rem;\n    height: 0.825rem;\n    background-color: var(--looks-secondary);\n    color: var(--ui-white);\n}\n\n.close-button_large_2oadS {\n    width: 1.75rem;\n    height: 1.75rem;\n    box-shadow: 0 0 0 2px var(--ui-black-transparent);\n}\n\n.close-button_large_2oadS.close-button_orange_3I0rs {\n    background-color: hsla(29, 100%, 54%, 0.2);\n    box-shadow: 0px 0px 0px 2px hsla(29, 100%, 54%, 0.2);\n}\n\n.close-button_close-icon_HBCuO {\n    position: relative;\n    margin: 0.25rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    transform-origin: 50%;\n    transform: rotate(45deg);\n}\n\n.close-button_close-icon_HBCuO.close-button_orange_3I0rs {\n    transform: rotate(45deg);\n    transform: scale(1.4);\n}\n\n.close-button_small_3BsRW .close-button_close-icon_HBCuO {\n    width: 50%;\n}\n\n.close-button_large_2oadS .close-button_close-icon_HBCuO {\n    width: 0.75rem;\n    height: 0.75rem;\n}\n\n.close-button_back-icon_tlcJm {\n  position: relative;\n  margin: 0.25rem;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n\n.close-button_small_3BsRW .close-button_back-icon_tlcJm {\n    width: 50%;\n}\n\n.close-button_large_2oadS .close-button_back-icon_tlcJm {\n    width: 2rem;\n    height: 2rem;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"close-button": "close-button_close-button_t5jqt",
-	"closeButton": "close-button_close-button_t5jqt",
-	"large": "close-button_large_2cCrv",
-	"orange": "close-button_orange_1V-p9",
-	"small": "close-button_small_1L9aM",
-	"close-icon": "close-button_close-icon_ywCI5",
-	"closeIcon": "close-button_close-icon_ywCI5",
-	"back-icon": "close-button_back-icon_1J1uF",
-	"backIcon": "close-button_back-icon_1J1uF"
+	"close-button": "close-button_close-button_lOp2G",
+	"closeButton": "close-button_close-button_lOp2G",
+	"large": "close-button_large_2oadS",
+	"orange": "close-button_orange_3I0rs",
+	"small": "close-button_small_3BsRW",
+	"close-icon": "close-button_close-icon_HBCuO",
+	"closeIcon": "close-button_close-icon_HBCuO",
+	"back-icon": "close-button_back-icon_tlcJm",
+	"backIcon": "close-button_back-icon_tlcJm"
 };
 
 /***/ }),
@@ -528,19 +528,19 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/*\n * NOTE: the copious use of `important` is needed to overwrite\n * the default tooltip styling, and is required by the 3rd party\n * library being used, `react-tooltip`\n */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.coming-soon_coming-soon_1vQL2 {\n    background-color: var(--data-primary) !important;\n    border: 1px solid var(--ui-black-transparent) !important;\n    border-radius: calc(0.5rem / 2) !important;\n    box-shadow: 0 0 .5rem var(--ui-black-transparent) !important;\n    padding: .75rem 1rem !important;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif !important;\n    font-size: 1rem !important;\n    line-height: 1.25rem !important;\n    z-index: 47 !important;\n}\n\n.coming-soon_coming-soon_1vQL2:after {\n    content: \"\";\n    border-top: 1px solid var(--ui-black-transparent) !important;\n    border-left: 0 !important;\n    border-bottom: 0 !important;\n    border-right: 1px solid var(--ui-black-transparent) !important;\n    border-radius: calc(0.5rem / 2);\n    background-color: var(--data-primary) !important;\n    height: 1rem !important;\n    width: 1rem !important;\n}\n\n.coming-soon_show_1nq_9,\n.coming-soon_show_1nq_9:before,\n.coming-soon_show_1nq_9:after {\n    opacity: 1 !important;\n}\n\n.coming-soon_left_1GGpa:after {\n    margin-top: -.5rem !important;\n    right: -.5rem !important;\n    transform: rotate(45deg) !important;\n}\n\n.coming-soon_right_1V8UL:after {\n    margin-top: -.5rem !important;\n    left: -.5rem !important;\n    transform: rotate(-135deg) !important;\n}\n\n.coming-soon_top_16kkJ:after {\n    margin-right: -.5rem !important;\n    bottom: -.5rem !important;\n    transform: rotate(135deg) !important;\n}\n\n.coming-soon_bottom_1hhH7:after {\n    margin-left: -.5rem !important;\n    top: -.5rem !important;\n    transform: rotate(-45deg) !important;\n}\n\n.coming-soon_coming-soon-image_2YdWF {\n    width: 1.25rem;\n    height: 1.25rem;\n    vertical-align: middle;\n}\n\n[dir=\"ltr\"] .coming-soon_coming-soon-image_2YdWF {\n    margin-left: .125rem;\n}\n\n[dir=\"rtl\"] .coming-soon_coming-soon-image_2YdWF {\n    margin-right: .125rem;\n}\n", ""]);
+exports.push([module.i, "/*\n * NOTE: the copious use of `important` is needed to overwrite\n * the default tooltip styling, and is required by the 3rd party\n * library being used, `react-tooltip`\n */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.coming-soon_coming-soon_3x7RD {\n    background-color: var(--data-primary) !important;\n    border: 1px solid var(--ui-black-transparent) !important;\n    border-radius: calc(0.5rem / 2) !important;\n    box-shadow: 0 0 .5rem var(--ui-black-transparent) !important;\n    padding: .75rem 1rem !important;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif !important;\n    font-size: 1rem !important;\n    line-height: 1.25rem !important;\n    z-index: 47 !important;\n}\n\n.coming-soon_coming-soon_3x7RD:after {\n    content: \"\";\n    border-top: 1px solid var(--ui-black-transparent) !important;\n    border-left: 0 !important;\n    border-bottom: 0 !important;\n    border-right: 1px solid var(--ui-black-transparent) !important;\n    border-radius: calc(0.5rem / 2);\n    background-color: var(--data-primary) !important;\n    height: 1rem !important;\n    width: 1rem !important;\n}\n\n.coming-soon_show_1Kszm,\n.coming-soon_show_1Kszm:before,\n.coming-soon_show_1Kszm:after {\n    opacity: 1 !important;\n}\n\n.coming-soon_left_O4X9A:after {\n    margin-top: -.5rem !important;\n    right: -.5rem !important;\n    transform: rotate(45deg) !important;\n}\n\n.coming-soon_right_1PkI6:after {\n    margin-top: -.5rem !important;\n    left: -.5rem !important;\n    transform: rotate(-135deg) !important;\n}\n\n.coming-soon_top_13j8p:after {\n    margin-right: -.5rem !important;\n    bottom: -.5rem !important;\n    transform: rotate(135deg) !important;\n}\n\n.coming-soon_bottom_2raz4:after {\n    margin-left: -.5rem !important;\n    top: -.5rem !important;\n    transform: rotate(-45deg) !important;\n}\n\n.coming-soon_coming-soon-image_255bz {\n    width: 1.25rem;\n    height: 1.25rem;\n    vertical-align: middle;\n}\n\n[dir=\"ltr\"] .coming-soon_coming-soon-image_255bz {\n    margin-left: .125rem;\n}\n\n[dir=\"rtl\"] .coming-soon_coming-soon-image_255bz {\n    margin-right: .125rem;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"coming-soon": "coming-soon_coming-soon_1vQL2",
-	"comingSoon": "coming-soon_coming-soon_1vQL2",
-	"show": "coming-soon_show_1nq_9",
-	"left": "coming-soon_left_1GGpa",
-	"right": "coming-soon_right_1V8UL",
-	"top": "coming-soon_top_16kkJ",
-	"bottom": "coming-soon_bottom_1hhH7",
-	"coming-soon-image": "coming-soon_coming-soon-image_2YdWF",
-	"comingSoonImage": "coming-soon_coming-soon-image_2YdWF"
+	"coming-soon": "coming-soon_coming-soon_3x7RD",
+	"comingSoon": "coming-soon_coming-soon_3x7RD",
+	"show": "coming-soon_show_1Kszm",
+	"left": "coming-soon_left_O4X9A",
+	"right": "coming-soon_right_1PkI6",
+	"top": "coming-soon_top_13j8p",
+	"bottom": "coming-soon_bottom_2raz4",
+	"coming-soon-image": "coming-soon_coming-soon-image_255bz",
+	"comingSoonImage": "coming-soon_coming-soon-image_255bz"
 };
 
 /***/ }),
@@ -557,117 +557,117 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.connection-modal_modal-content_znApD {\n    width: 480px;\n    line-height: 1.75;\n}\n\n.connection-modal_header_12IsA {\n    background-color: var(--pen-tertiary);\n}\n\n.connection-modal_body_2K6g8 {\n    background: var(--ui-modal-background);\n}\n\n.connection-modal_label_1aIgw {\n    font-weight: 500;\n    margin: 0 0 0.75rem;\n}\n\n.connection-modal_centered-row_1aluq {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n}\n\n.connection-modal_peripheral-tile-pane_1Yvvr {\n    overflow-y: auto;\n    width: 100%;\n    height: 100%;\n}\n\n.connection-modal_peripheral-tile_1uEjE {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: center;\n\n    background-color: var(--ui-white);\n    border-radius: 0.25rem;\n    padding: 10px;\n    width: 100%;\n    height: 55px;\n    margin-bottom: 0.5rem;\n}\n\n.connection-modal_peripheral-tile-name_FWRcO {\n    display: flex;\n    align-items: center;\n}\n\n[dir=\"ltr\"] .connection-modal_peripheral-tile-image_fsr_J {\n    margin-right: 0.5rem;\n}\n\n[dir=\"rtl\"] .connection-modal_peripheral-tile-image_fsr_J {\n    margin-left: 0.5rem;\n}\n\n.connection-modal_peripheral-tile-name-wrapper_2xNWg {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: flex-start;\n}\n\n.connection-modal_peripheral-tile-name-label_1tXxJ {\n    font-weight: bold;\n    font-size: 0.625rem;\n}\n\n.connection-modal_peripheral-tile-name-text_1GANU {\n    font-size: 0.875rem;\n}\n\n.connection-modal_peripheral-tile_1uEjE button {\n    padding: 0.6rem 0.75rem;\n    border: none;\n    border-radius: 0.25rem;\n    font-weight: 600;\n    font-size: 0.85rem;\n    background: var(--looks-secondary);\n    border: var(--looks-secondary);\n    color: white;\n    cursor: pointer;\n}\n\n.connection-modal_signal-strength-meter_2gsno {\n    display: flex;\n    justify-content: space-between;\n    align-items: flex-end;\n    width: 22px;\n    height: 16px;\n}\n\n[dir=\"ltr\"] .connection-modal_signal-strength-meter_2gsno {\n    margin-right: 1rem;\n}\n\n[dir=\"rtl\"] .connection-modal_signal-strength-meter_2gsno {\n    margin-left: 1rem;\n}\n\n.connection-modal_signal-bar_2tjmP {\n    width: 4px;\n    border-radius: 4px;\n    background-color: #DBDBDB;\n}\n\n.connection-modal_signal-bar_2tjmP:nth-of-type(1) { height: 25%; }\n\n.connection-modal_signal-bar_2tjmP:nth-of-type(2) { height: 50%; }\n\n.connection-modal_signal-bar_2tjmP:nth-of-type(3) { height: 75%; }\n\n.connection-modal_signal-bar_2tjmP:nth-of-type(4) { height: 100%; }\n\n.connection-modal_green-bar_1aoqx {\n    background-color: var(--pen-primary);\n}\n\n.connection-modal_radar-small_3aU1r {\n    width: 40px;\n    height: 40px;\n}\n\n[dir=\"ltr\"] .connection-modal_radar-small_3aU1r {\n    margin-right: 0.5rem;\n}\n\n[dir=\"rtl\"] .connection-modal_radar-small_3aU1r {\n    margin-left: 0.5rem;\n}\n\n.connection-modal_radar-big_2N6j7 {\n    width: 120px;\n    height: 120px;\n}\n\n.connection-modal_radar-spin_3EJdF {\n    animation: connection-modal_spin_1PyQc 4s linear infinite;\n}\n\n[dir=\"ltr\"] .connection-modal_radar_1rdrv {\n    margin-right: .5rem;\n}\n\n[dir=\"rtl\"] .connection-modal_radar_1rdrv {\n    margin-left: .5rem;\n}\n\n@keyframes connection-modal_spin_1PyQc {\n    100% {\n        transform: rotate(360deg);\n    }\n}\n\n.connection-modal_peripheral-activity_2cL0Z {\n    position: relative;\n}\n\n.connection-modal_peripheral-activity-icon_2OJ-L {\n    /* width: 80px;\n    height: 80px; */\n}\n\n.connection-modal_connection-tip-icon_1HcJH {\n    position: absolute;\n}\n\n.connection-modal_bluetooth-connecting-icon_2OEDp {\n    position: absolute;\n    top: -5px;\n    right: -15px;\n    left: -15px;\n    padding: 5px 5px;\n    background-color: var(--looks-secondary);\n    border-radius: 100%;\n    box-shadow: 0px 0px 0px 4px var(--looks-transparent);\n    /* animation: pulse-blue-ring 1s infinite ease-in-out alternate; */\n    animation: connection-modal_wiggle_27ALc 0.5s infinite ease-in-out alternate;\n\n}\n\n@keyframes connection-modal_pulse-blue-ring_3LY8c {\n    100% {\n        box-shadow: 0px 0px 0px 8px var(--looks-light-transparent);\n    }\n}\n\n.connection-modal_bluetooth-connected-icon_2zqfa {\n    position: absolute;\n    top: -5px;\n    right: -15px;\n    left: -15px;\n    padding: 5px 5px;\n    background-color: var(--pen-primary);\n    border-radius: 100%;\n    box-shadow: 0px 0px 0px 4px var(--pen-transparent);\n}\n\n@keyframes connection-modal_wiggle_27ALc {\n    0% {transform: rotate(3deg) scale(1.05);}\n    25% {transform: rotate(-3deg) scale(1.05);}\n    50% {transform: rotate(5deg) scale(1.05);}\n    75% {transform: rotate(-2deg) scale(1.05);}\n    100% {transform: rotate(0deg) scale(1.05);}\n}\n\n.connection-modal_bluetooth-centered-icon_1ewY1 {\n    position: absolute;\n    padding: 5px 5px;\n    background-color: var(--looks-secondary);\n    border-radius: 100%;\n    box-shadow: 0px 0px 0px 2px var(--looks-transparent);\n}\n\n.connection-modal_peripheral-tile-widgets_29jGg {\n    display: flex;\n    align-items: center;\n}\n\n.connection-modal_activityArea_PqYoO {\n    height: 165px;\n    background-color: var(--looks-light-transparent);\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: .5rem;\n}\n\n.connection-modal_scratch-link-help_THXi8 {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    height: 100%;\n    padding-top: .5rem;\n    padding-bottom: .5rem;\n}\n\n.connection-modal_scratch-link-help-step_3T_WN {\n    display: flex;\n    flex-direction: row;\n    justify-content: flex-start;\n    align-items: center;\n}\n\n[dir=\"ltr\"] .connection-modal_scratch-link-help-step_3T_WN {\n    margin-left: 2.5rem;\n}\n\n[dir=\"rtl\"] .connection-modal_scratch-link-help-step_3T_WN {\n    margin-right: 2.5rem;\n}\n\n.connection-modal_scratch-link-icon_2-yyq {\n    max-width: 50px;\n}\n\n.connection-modal_help-step-image_3AZcE {\n    max-width: 40px;\n}\n\n[dir=\"ltr\"] .connection-modal_help-step-image_3AZcE {\n    margin-right: 0.5rem;\n}\n\n[dir=\"rtl\"] .connection-modal_help-step-image_3AZcE {\n    margin-left: 0.5rem;\n}\n\n.connection-modal_help-step-number_20y3d {\n    background: var(--pen-tertiary);\n    border-radius: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    color: var(--ui-white);\n    font-weight: bold;\n    min-width: 2rem;\n    height: 2rem;\n}\n\n[dir=\"ltr\"] .connection-modal_help-step-number_20y3d {\n    margin-right: 0.5rem;\n}\n\n[dir=\"rtl\"] .connection-modal_help-step-number_20y3d {\n    margin-left: 0.5rem;\n}\n\n.connection-modal_button-row_xsdb5 {\n    font-weight: bolder;\n    text-align: center;\n    display: flex;\n}\n\n.connection-modal_abort-connecting-icon_2LN4n {\n    width: 10px;\n    transform: rotate(45deg);\n}\n\n.connection-modal_connection-button_QekSE {\n    padding: 0.6rem 0.75rem;\n    border-radius: 0.5rem;\n    background: var(--looks-secondary);\n    color: white;\n    font-weight: 600;\n    font-size: 0.85rem;\n    margin: 0.25rem;\n    border: none;\n    cursor: pointer;\n    display: flex;\n    align-items: center;\n}\n\n.connection-modal_connection-button_QekSE:disabled {\n    background: var(--looks-transparent);\n}\n\n.connection-modal_segmented-button_3aETV {\n    display: flex;\n}\n\n.connection-modal_segmented-button_3aETV .connection-modal_connection-button_QekSE:first-of-type {\n    border-top-right-radius: 0;\n    border-bottom-right-radius: 0;\n    margin-right: 0;\n}\n\n.connection-modal_segmented-button_3aETV .connection-modal_connection-button_QekSE:last-of-type {\n    margin-left: 1px;\n    border-top-left-radius: 0;\n    border-bottom-left-radius: 0;\n}\n\n[dir=\"ltr\"] .connection-modal_button-icon-right_1mnlx {\n    margin-left: 0.5rem;\n}\n\n[dir=\"rtl\"] .connection-modal_button-icon-right_1mnlx {\n    margin-right: 0.5rem;\n}\n\n[dir=\"ltr\"] .connection-modal_button-icon-left_19wwl {\n    margin-right: 0.5rem;\n}\n\n[dir=\"rtl\"] .connection-modal_button-icon-left_19wwl {\n    margin-left: 0.5rem;\n}\n\n/* reverse back arrow icon for RTL, don't reverse other connection icons */\n\n[dir=\"rtl\"] .connection-modal_button-icon-back_1Y3FL {\n    transform: scaleX(-1);\n}\n\n.connection-modal_red-button_343CG {\n    background: var(--red-primary);\n}\n\n.connection-modal_corner-buttons_W5WN5 {\n    display: flex;\n    justify-content: space-between;\n    width: 100%;\n    padding: 0 1rem;\n}\n\n.connection-modal_bottom-area_2LH2k {\n    background-color: var(--ui-modal-background);\n    text-align: center;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    padding-top: 1rem;\n    padding-bottom: .75rem;\n    padding-left: .75rem;\n    padding-right: .75rem;\n}\n\n.connection-modal_bottom-area_2LH2k .connection-modal_bottom-area-item_2LoAa+.connection-modal_bottom-area-item_2LoAa {\n    margin-top: 1rem;\n}\n\n.connection-modal_instructions_1Y3Rz {\n    text-align: center;\n}\n\n.connection-modal_dots-row_dl-ID {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n}\n\n.connection-modal_dots-holder_1Cysu {\n    display: flex;\n    padding: 0.25rem 0.1rem;\n    border-radius: 1rem;\n    background: var(--looks-light-transparent);\n}\n\n.connection-modal_dots-holder-success_33Q32 {\n    background: var(--pen-transparent);\n}\n\n.connection-modal_dots-holder-error_3iTvC {\n    background: var(--error-transparent);\n}\n\n.connection-modal_dot_x_s6W {\n    width: 0.5rem;\n    height: 0.5rem;\n    margin: 0 0.3rem;\n    border-radius: 100%;\n}\n\n.connection-modal_inactive-step-dot_1MAPP {\n    background: var(--looks-transparent);\n}\n\n.connection-modal_active-step-dot_18wW5 {\n    background: var(--looks-secondary);\n}\n\n.connection-modal_success-dot_ecbdV {\n    background: var(--pen-primary);\n}\n\n.connection-modal_error-dot_3e9VW {\n    background: var(--error-primary);\n}\n\n.connection-modal_scratch-link-error_1NHj8 {\n    align-items: center;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    height: 100%;\n    padding-top: .5rem;\n    padding-bottom: .5rem;\n    width: 90%;\n}\n\n.connection-modal_scratch-link-error-details_9I6TU {\n    display: flex;\n    resize: none;\n    height: 60%;\n    width: inherit;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.connection-modal_modal-content_2Xr41 {\n    width: 480px;\n    line-height: 1.75;\n}\n\n.connection-modal_header_3Sf5c {\n    background-color: var(--pen-tertiary);\n}\n\n.connection-modal_body_3YO9j {\n    background: var(--ui-modal-background);\n}\n\n.connection-modal_label_2ci_1 {\n    font-weight: 500;\n    margin: 0 0 0.75rem;\n}\n\n.connection-modal_centered-row_LqTYH {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n}\n\n.connection-modal_peripheral-tile-pane_2pquH {\n    overflow-y: auto;\n    width: 100%;\n    height: 100%;\n}\n\n.connection-modal_peripheral-tile_3IZvY {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: center;\n\n    background-color: var(--ui-white);\n    border-radius: 0.25rem;\n    padding: 10px;\n    width: 100%;\n    height: 55px;\n    margin-bottom: 0.5rem;\n}\n\n.connection-modal_peripheral-tile-name_3-1ov {\n    display: flex;\n    align-items: center;\n}\n\n[dir=\"ltr\"] .connection-modal_peripheral-tile-image_2HAYt {\n    margin-right: 0.5rem;\n}\n\n[dir=\"rtl\"] .connection-modal_peripheral-tile-image_2HAYt {\n    margin-left: 0.5rem;\n}\n\n.connection-modal_peripheral-tile-name-wrapper_LIgB5 {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: flex-start;\n}\n\n.connection-modal_peripheral-tile-name-label_Mhn3z {\n    font-weight: bold;\n    font-size: 0.625rem;\n}\n\n.connection-modal_peripheral-tile-name-text_3Gqj9 {\n    font-size: 0.875rem;\n}\n\n.connection-modal_peripheral-tile_3IZvY button {\n    padding: 0.6rem 0.75rem;\n    border: none;\n    border-radius: 0.25rem;\n    font-weight: 600;\n    font-size: 0.85rem;\n    background: var(--looks-secondary);\n    border: var(--looks-secondary);\n    color: white;\n    cursor: pointer;\n}\n\n.connection-modal_signal-strength-meter_17QSz {\n    display: flex;\n    justify-content: space-between;\n    align-items: flex-end;\n    width: 22px;\n    height: 16px;\n}\n\n[dir=\"ltr\"] .connection-modal_signal-strength-meter_17QSz {\n    margin-right: 1rem;\n}\n\n[dir=\"rtl\"] .connection-modal_signal-strength-meter_17QSz {\n    margin-left: 1rem;\n}\n\n.connection-modal_signal-bar_3KRPL {\n    width: 4px;\n    border-radius: 4px;\n    background-color: #DBDBDB;\n}\n\n.connection-modal_signal-bar_3KRPL:nth-of-type(1) { height: 25%; }\n\n.connection-modal_signal-bar_3KRPL:nth-of-type(2) { height: 50%; }\n\n.connection-modal_signal-bar_3KRPL:nth-of-type(3) { height: 75%; }\n\n.connection-modal_signal-bar_3KRPL:nth-of-type(4) { height: 100%; }\n\n.connection-modal_green-bar_2DtgQ {\n    background-color: var(--pen-primary);\n}\n\n.connection-modal_radar-small_2Zlc3 {\n    width: 40px;\n    height: 40px;\n}\n\n[dir=\"ltr\"] .connection-modal_radar-small_2Zlc3 {\n    margin-right: 0.5rem;\n}\n\n[dir=\"rtl\"] .connection-modal_radar-small_2Zlc3 {\n    margin-left: 0.5rem;\n}\n\n.connection-modal_radar-big_1ZqZR {\n    width: 120px;\n    height: 120px;\n}\n\n.connection-modal_radar-spin_XTY3A {\n    animation: connection-modal_spin_2AmoW 4s linear infinite;\n}\n\n[dir=\"ltr\"] .connection-modal_radar_1q6t4 {\n    margin-right: .5rem;\n}\n\n[dir=\"rtl\"] .connection-modal_radar_1q6t4 {\n    margin-left: .5rem;\n}\n\n@keyframes connection-modal_spin_2AmoW {\n    100% {\n        transform: rotate(360deg);\n    }\n}\n\n.connection-modal_peripheral-activity_1iEPn {\n    position: relative;\n}\n\n.connection-modal_peripheral-activity-icon_2yzrQ {\n    /* width: 80px;\n    height: 80px; */\n}\n\n.connection-modal_connection-tip-icon_1OYH1 {\n    position: absolute;\n}\n\n.connection-modal_bluetooth-connecting-icon_2WC-p {\n    position: absolute;\n    top: -5px;\n    right: -15px;\n    left: -15px;\n    padding: 5px 5px;\n    background-color: var(--looks-secondary);\n    border-radius: 100%;\n    box-shadow: 0px 0px 0px 4px var(--looks-transparent);\n    /* animation: pulse-blue-ring 1s infinite ease-in-out alternate; */\n    animation: connection-modal_wiggle_3PIQs 0.5s infinite ease-in-out alternate;\n\n}\n\n@keyframes connection-modal_pulse-blue-ring_Bst8a {\n    100% {\n        box-shadow: 0px 0px 0px 8px var(--looks-light-transparent);\n    }\n}\n\n.connection-modal_bluetooth-connected-icon_2z3Cp {\n    position: absolute;\n    top: -5px;\n    right: -15px;\n    left: -15px;\n    padding: 5px 5px;\n    background-color: var(--pen-primary);\n    border-radius: 100%;\n    box-shadow: 0px 0px 0px 4px var(--pen-transparent);\n}\n\n@keyframes connection-modal_wiggle_3PIQs {\n    0% {transform: rotate(3deg) scale(1.05);}\n    25% {transform: rotate(-3deg) scale(1.05);}\n    50% {transform: rotate(5deg) scale(1.05);}\n    75% {transform: rotate(-2deg) scale(1.05);}\n    100% {transform: rotate(0deg) scale(1.05);}\n}\n\n.connection-modal_bluetooth-centered-icon_2sUnm {\n    position: absolute;\n    padding: 5px 5px;\n    background-color: var(--looks-secondary);\n    border-radius: 100%;\n    box-shadow: 0px 0px 0px 2px var(--looks-transparent);\n}\n\n.connection-modal_peripheral-tile-widgets_2czb9 {\n    display: flex;\n    align-items: center;\n}\n\n.connection-modal_activityArea_2nx-Z {\n    height: 165px;\n    background-color: var(--looks-light-transparent);\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: .5rem;\n}\n\n.connection-modal_scratch-link-help_1v8tL {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    height: 100%;\n    padding-top: .5rem;\n    padding-bottom: .5rem;\n}\n\n.connection-modal_scratch-link-help-step_bWMuI {\n    display: flex;\n    flex-direction: row;\n    justify-content: flex-start;\n    align-items: center;\n}\n\n[dir=\"ltr\"] .connection-modal_scratch-link-help-step_bWMuI {\n    margin-left: 2.5rem;\n}\n\n[dir=\"rtl\"] .connection-modal_scratch-link-help-step_bWMuI {\n    margin-right: 2.5rem;\n}\n\n.connection-modal_scratch-link-icon_dnIoA {\n    max-width: 50px;\n}\n\n.connection-modal_help-step-image_h76rv {\n    max-width: 40px;\n}\n\n[dir=\"ltr\"] .connection-modal_help-step-image_h76rv {\n    margin-right: 0.5rem;\n}\n\n[dir=\"rtl\"] .connection-modal_help-step-image_h76rv {\n    margin-left: 0.5rem;\n}\n\n.connection-modal_help-step-number_2tyWJ {\n    background: var(--pen-tertiary);\n    border-radius: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    color: var(--ui-white);\n    font-weight: bold;\n    min-width: 2rem;\n    height: 2rem;\n}\n\n[dir=\"ltr\"] .connection-modal_help-step-number_2tyWJ {\n    margin-right: 0.5rem;\n}\n\n[dir=\"rtl\"] .connection-modal_help-step-number_2tyWJ {\n    margin-left: 0.5rem;\n}\n\n.connection-modal_button-row_2RA0A {\n    font-weight: bolder;\n    text-align: center;\n    display: flex;\n}\n\n.connection-modal_abort-connecting-icon_1KMRE {\n    width: 10px;\n    transform: rotate(45deg);\n}\n\n.connection-modal_connection-button_1paxF {\n    padding: 0.6rem 0.75rem;\n    border-radius: 0.5rem;\n    background: var(--looks-secondary);\n    color: white;\n    font-weight: 600;\n    font-size: 0.85rem;\n    margin: 0.25rem;\n    border: none;\n    cursor: pointer;\n    display: flex;\n    align-items: center;\n}\n\n.connection-modal_connection-button_1paxF:disabled {\n    background: var(--looks-transparent);\n}\n\n.connection-modal_segmented-button_XNf80 {\n    display: flex;\n}\n\n.connection-modal_segmented-button_XNf80 .connection-modal_connection-button_1paxF:first-of-type {\n    border-top-right-radius: 0;\n    border-bottom-right-radius: 0;\n    margin-right: 0;\n}\n\n.connection-modal_segmented-button_XNf80 .connection-modal_connection-button_1paxF:last-of-type {\n    margin-left: 1px;\n    border-top-left-radius: 0;\n    border-bottom-left-radius: 0;\n}\n\n[dir=\"ltr\"] .connection-modal_button-icon-right_1CANn {\n    margin-left: 0.5rem;\n}\n\n[dir=\"rtl\"] .connection-modal_button-icon-right_1CANn {\n    margin-right: 0.5rem;\n}\n\n[dir=\"ltr\"] .connection-modal_button-icon-left_2Ys4V {\n    margin-right: 0.5rem;\n}\n\n[dir=\"rtl\"] .connection-modal_button-icon-left_2Ys4V {\n    margin-left: 0.5rem;\n}\n\n/* reverse back arrow icon for RTL, don't reverse other connection icons */\n\n[dir=\"rtl\"] .connection-modal_button-icon-back_3voGy {\n    transform: scaleX(-1);\n}\n\n.connection-modal_red-button_MpXr- {\n    background: var(--red-primary);\n}\n\n.connection-modal_corner-buttons_2ciJI {\n    display: flex;\n    justify-content: space-between;\n    width: 100%;\n    padding: 0 1rem;\n}\n\n.connection-modal_bottom-area_AHeQ3 {\n    background-color: var(--ui-modal-background);\n    text-align: center;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    padding-top: 1rem;\n    padding-bottom: .75rem;\n    padding-left: .75rem;\n    padding-right: .75rem;\n}\n\n.connection-modal_bottom-area_AHeQ3 .connection-modal_bottom-area-item_YR2oh+.connection-modal_bottom-area-item_YR2oh {\n    margin-top: 1rem;\n}\n\n.connection-modal_instructions_1CxAa {\n    text-align: center;\n}\n\n.connection-modal_dots-row_39YWr {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n}\n\n.connection-modal_dots-holder_2kY6c {\n    display: flex;\n    padding: 0.25rem 0.1rem;\n    border-radius: 1rem;\n    background: var(--looks-light-transparent);\n}\n\n.connection-modal_dots-holder-success_20EtT {\n    background: var(--pen-transparent);\n}\n\n.connection-modal_dots-holder-error_3iK2w {\n    background: var(--error-transparent);\n}\n\n.connection-modal_dot_2GsnJ {\n    width: 0.5rem;\n    height: 0.5rem;\n    margin: 0 0.3rem;\n    border-radius: 100%;\n}\n\n.connection-modal_inactive-step-dot_1x6LP {\n    background: var(--looks-transparent);\n}\n\n.connection-modal_active-step-dot_yLC0o {\n    background: var(--looks-secondary);\n}\n\n.connection-modal_success-dot_30FlH {\n    background: var(--pen-primary);\n}\n\n.connection-modal_error-dot_1NdiS {\n    background: var(--error-primary);\n}\n\n.connection-modal_scratch-link-error_2-H1B {\n    align-items: center;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    height: 100%;\n    padding-top: .5rem;\n    padding-bottom: .5rem;\n    width: 90%;\n}\n\n.connection-modal_scratch-link-error-details_2UMNz {\n    display: flex;\n    resize: none;\n    height: 60%;\n    width: inherit;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"modal-content": "connection-modal_modal-content_znApD",
-	"modalContent": "connection-modal_modal-content_znApD",
-	"header": "connection-modal_header_12IsA",
-	"body": "connection-modal_body_2K6g8",
-	"label": "connection-modal_label_1aIgw",
-	"centered-row": "connection-modal_centered-row_1aluq",
-	"centeredRow": "connection-modal_centered-row_1aluq",
-	"peripheral-tile-pane": "connection-modal_peripheral-tile-pane_1Yvvr",
-	"peripheralTilePane": "connection-modal_peripheral-tile-pane_1Yvvr",
-	"peripheral-tile": "connection-modal_peripheral-tile_1uEjE",
-	"peripheralTile": "connection-modal_peripheral-tile_1uEjE",
-	"peripheral-tile-name": "connection-modal_peripheral-tile-name_FWRcO",
-	"peripheralTileName": "connection-modal_peripheral-tile-name_FWRcO",
-	"peripheral-tile-image": "connection-modal_peripheral-tile-image_fsr_J",
-	"peripheralTileImage": "connection-modal_peripheral-tile-image_fsr_J",
-	"peripheral-tile-name-wrapper": "connection-modal_peripheral-tile-name-wrapper_2xNWg",
-	"peripheralTileNameWrapper": "connection-modal_peripheral-tile-name-wrapper_2xNWg",
-	"peripheral-tile-name-label": "connection-modal_peripheral-tile-name-label_1tXxJ",
-	"peripheralTileNameLabel": "connection-modal_peripheral-tile-name-label_1tXxJ",
-	"peripheral-tile-name-text": "connection-modal_peripheral-tile-name-text_1GANU",
-	"peripheralTileNameText": "connection-modal_peripheral-tile-name-text_1GANU",
-	"signal-strength-meter": "connection-modal_signal-strength-meter_2gsno",
-	"signalStrengthMeter": "connection-modal_signal-strength-meter_2gsno",
-	"signal-bar": "connection-modal_signal-bar_2tjmP",
-	"signalBar": "connection-modal_signal-bar_2tjmP",
-	"green-bar": "connection-modal_green-bar_1aoqx",
-	"greenBar": "connection-modal_green-bar_1aoqx",
-	"radar-small": "connection-modal_radar-small_3aU1r",
-	"radarSmall": "connection-modal_radar-small_3aU1r",
-	"radar-big": "connection-modal_radar-big_2N6j7",
-	"radarBig": "connection-modal_radar-big_2N6j7",
-	"radar-spin": "connection-modal_radar-spin_3EJdF",
-	"radarSpin": "connection-modal_radar-spin_3EJdF",
-	"spin": "connection-modal_spin_1PyQc",
-	"radar": "connection-modal_radar_1rdrv",
-	"peripheral-activity": "connection-modal_peripheral-activity_2cL0Z",
-	"peripheralActivity": "connection-modal_peripheral-activity_2cL0Z",
-	"peripheral-activity-icon": "connection-modal_peripheral-activity-icon_2OJ-L",
-	"peripheralActivityIcon": "connection-modal_peripheral-activity-icon_2OJ-L",
-	"connection-tip-icon": "connection-modal_connection-tip-icon_1HcJH",
-	"connectionTipIcon": "connection-modal_connection-tip-icon_1HcJH",
-	"bluetooth-connecting-icon": "connection-modal_bluetooth-connecting-icon_2OEDp",
-	"bluetoothConnectingIcon": "connection-modal_bluetooth-connecting-icon_2OEDp",
-	"wiggle": "connection-modal_wiggle_27ALc",
-	"bluetooth-connected-icon": "connection-modal_bluetooth-connected-icon_2zqfa",
-	"bluetoothConnectedIcon": "connection-modal_bluetooth-connected-icon_2zqfa",
-	"bluetooth-centered-icon": "connection-modal_bluetooth-centered-icon_1ewY1",
-	"bluetoothCenteredIcon": "connection-modal_bluetooth-centered-icon_1ewY1",
-	"peripheral-tile-widgets": "connection-modal_peripheral-tile-widgets_29jGg",
-	"peripheralTileWidgets": "connection-modal_peripheral-tile-widgets_29jGg",
-	"activityArea": "connection-modal_activityArea_PqYoO",
-	"scratch-link-help": "connection-modal_scratch-link-help_THXi8",
-	"scratchLinkHelp": "connection-modal_scratch-link-help_THXi8",
-	"scratch-link-help-step": "connection-modal_scratch-link-help-step_3T_WN",
-	"scratchLinkHelpStep": "connection-modal_scratch-link-help-step_3T_WN",
-	"scratch-link-icon": "connection-modal_scratch-link-icon_2-yyq",
-	"scratchLinkIcon": "connection-modal_scratch-link-icon_2-yyq",
-	"help-step-image": "connection-modal_help-step-image_3AZcE",
-	"helpStepImage": "connection-modal_help-step-image_3AZcE",
-	"help-step-number": "connection-modal_help-step-number_20y3d",
-	"helpStepNumber": "connection-modal_help-step-number_20y3d",
-	"button-row": "connection-modal_button-row_xsdb5",
-	"buttonRow": "connection-modal_button-row_xsdb5",
-	"abort-connecting-icon": "connection-modal_abort-connecting-icon_2LN4n",
-	"abortConnectingIcon": "connection-modal_abort-connecting-icon_2LN4n",
-	"connection-button": "connection-modal_connection-button_QekSE",
-	"connectionButton": "connection-modal_connection-button_QekSE",
-	"segmented-button": "connection-modal_segmented-button_3aETV",
-	"segmentedButton": "connection-modal_segmented-button_3aETV",
-	"button-icon-right": "connection-modal_button-icon-right_1mnlx",
-	"buttonIconRight": "connection-modal_button-icon-right_1mnlx",
-	"button-icon-left": "connection-modal_button-icon-left_19wwl",
-	"buttonIconLeft": "connection-modal_button-icon-left_19wwl",
-	"button-icon-back": "connection-modal_button-icon-back_1Y3FL",
-	"buttonIconBack": "connection-modal_button-icon-back_1Y3FL",
-	"red-button": "connection-modal_red-button_343CG",
-	"redButton": "connection-modal_red-button_343CG",
-	"corner-buttons": "connection-modal_corner-buttons_W5WN5",
-	"cornerButtons": "connection-modal_corner-buttons_W5WN5",
-	"bottom-area": "connection-modal_bottom-area_2LH2k",
-	"bottomArea": "connection-modal_bottom-area_2LH2k",
-	"bottom-area-item": "connection-modal_bottom-area-item_2LoAa",
-	"bottomAreaItem": "connection-modal_bottom-area-item_2LoAa",
-	"instructions": "connection-modal_instructions_1Y3Rz",
-	"dots-row": "connection-modal_dots-row_dl-ID",
-	"dotsRow": "connection-modal_dots-row_dl-ID",
-	"dots-holder": "connection-modal_dots-holder_1Cysu",
-	"dotsHolder": "connection-modal_dots-holder_1Cysu",
-	"dots-holder-success": "connection-modal_dots-holder-success_33Q32",
-	"dotsHolderSuccess": "connection-modal_dots-holder-success_33Q32",
-	"dots-holder-error": "connection-modal_dots-holder-error_3iTvC",
-	"dotsHolderError": "connection-modal_dots-holder-error_3iTvC",
-	"dot": "connection-modal_dot_x_s6W",
-	"inactive-step-dot": "connection-modal_inactive-step-dot_1MAPP",
-	"inactiveStepDot": "connection-modal_inactive-step-dot_1MAPP",
-	"active-step-dot": "connection-modal_active-step-dot_18wW5",
-	"activeStepDot": "connection-modal_active-step-dot_18wW5",
-	"success-dot": "connection-modal_success-dot_ecbdV",
-	"successDot": "connection-modal_success-dot_ecbdV",
-	"error-dot": "connection-modal_error-dot_3e9VW",
-	"errorDot": "connection-modal_error-dot_3e9VW",
-	"scratch-link-error": "connection-modal_scratch-link-error_1NHj8",
-	"scratchLinkError": "connection-modal_scratch-link-error_1NHj8",
-	"scratch-link-error-details": "connection-modal_scratch-link-error-details_9I6TU",
-	"scratchLinkErrorDetails": "connection-modal_scratch-link-error-details_9I6TU",
-	"pulse-blue-ring": "connection-modal_pulse-blue-ring_3LY8c",
-	"pulseBlueRing": "connection-modal_pulse-blue-ring_3LY8c"
+	"modal-content": "connection-modal_modal-content_2Xr41",
+	"modalContent": "connection-modal_modal-content_2Xr41",
+	"header": "connection-modal_header_3Sf5c",
+	"body": "connection-modal_body_3YO9j",
+	"label": "connection-modal_label_2ci_1",
+	"centered-row": "connection-modal_centered-row_LqTYH",
+	"centeredRow": "connection-modal_centered-row_LqTYH",
+	"peripheral-tile-pane": "connection-modal_peripheral-tile-pane_2pquH",
+	"peripheralTilePane": "connection-modal_peripheral-tile-pane_2pquH",
+	"peripheral-tile": "connection-modal_peripheral-tile_3IZvY",
+	"peripheralTile": "connection-modal_peripheral-tile_3IZvY",
+	"peripheral-tile-name": "connection-modal_peripheral-tile-name_3-1ov",
+	"peripheralTileName": "connection-modal_peripheral-tile-name_3-1ov",
+	"peripheral-tile-image": "connection-modal_peripheral-tile-image_2HAYt",
+	"peripheralTileImage": "connection-modal_peripheral-tile-image_2HAYt",
+	"peripheral-tile-name-wrapper": "connection-modal_peripheral-tile-name-wrapper_LIgB5",
+	"peripheralTileNameWrapper": "connection-modal_peripheral-tile-name-wrapper_LIgB5",
+	"peripheral-tile-name-label": "connection-modal_peripheral-tile-name-label_Mhn3z",
+	"peripheralTileNameLabel": "connection-modal_peripheral-tile-name-label_Mhn3z",
+	"peripheral-tile-name-text": "connection-modal_peripheral-tile-name-text_3Gqj9",
+	"peripheralTileNameText": "connection-modal_peripheral-tile-name-text_3Gqj9",
+	"signal-strength-meter": "connection-modal_signal-strength-meter_17QSz",
+	"signalStrengthMeter": "connection-modal_signal-strength-meter_17QSz",
+	"signal-bar": "connection-modal_signal-bar_3KRPL",
+	"signalBar": "connection-modal_signal-bar_3KRPL",
+	"green-bar": "connection-modal_green-bar_2DtgQ",
+	"greenBar": "connection-modal_green-bar_2DtgQ",
+	"radar-small": "connection-modal_radar-small_2Zlc3",
+	"radarSmall": "connection-modal_radar-small_2Zlc3",
+	"radar-big": "connection-modal_radar-big_1ZqZR",
+	"radarBig": "connection-modal_radar-big_1ZqZR",
+	"radar-spin": "connection-modal_radar-spin_XTY3A",
+	"radarSpin": "connection-modal_radar-spin_XTY3A",
+	"spin": "connection-modal_spin_2AmoW",
+	"radar": "connection-modal_radar_1q6t4",
+	"peripheral-activity": "connection-modal_peripheral-activity_1iEPn",
+	"peripheralActivity": "connection-modal_peripheral-activity_1iEPn",
+	"peripheral-activity-icon": "connection-modal_peripheral-activity-icon_2yzrQ",
+	"peripheralActivityIcon": "connection-modal_peripheral-activity-icon_2yzrQ",
+	"connection-tip-icon": "connection-modal_connection-tip-icon_1OYH1",
+	"connectionTipIcon": "connection-modal_connection-tip-icon_1OYH1",
+	"bluetooth-connecting-icon": "connection-modal_bluetooth-connecting-icon_2WC-p",
+	"bluetoothConnectingIcon": "connection-modal_bluetooth-connecting-icon_2WC-p",
+	"wiggle": "connection-modal_wiggle_3PIQs",
+	"bluetooth-connected-icon": "connection-modal_bluetooth-connected-icon_2z3Cp",
+	"bluetoothConnectedIcon": "connection-modal_bluetooth-connected-icon_2z3Cp",
+	"bluetooth-centered-icon": "connection-modal_bluetooth-centered-icon_2sUnm",
+	"bluetoothCenteredIcon": "connection-modal_bluetooth-centered-icon_2sUnm",
+	"peripheral-tile-widgets": "connection-modal_peripheral-tile-widgets_2czb9",
+	"peripheralTileWidgets": "connection-modal_peripheral-tile-widgets_2czb9",
+	"activityArea": "connection-modal_activityArea_2nx-Z",
+	"scratch-link-help": "connection-modal_scratch-link-help_1v8tL",
+	"scratchLinkHelp": "connection-modal_scratch-link-help_1v8tL",
+	"scratch-link-help-step": "connection-modal_scratch-link-help-step_bWMuI",
+	"scratchLinkHelpStep": "connection-modal_scratch-link-help-step_bWMuI",
+	"scratch-link-icon": "connection-modal_scratch-link-icon_dnIoA",
+	"scratchLinkIcon": "connection-modal_scratch-link-icon_dnIoA",
+	"help-step-image": "connection-modal_help-step-image_h76rv",
+	"helpStepImage": "connection-modal_help-step-image_h76rv",
+	"help-step-number": "connection-modal_help-step-number_2tyWJ",
+	"helpStepNumber": "connection-modal_help-step-number_2tyWJ",
+	"button-row": "connection-modal_button-row_2RA0A",
+	"buttonRow": "connection-modal_button-row_2RA0A",
+	"abort-connecting-icon": "connection-modal_abort-connecting-icon_1KMRE",
+	"abortConnectingIcon": "connection-modal_abort-connecting-icon_1KMRE",
+	"connection-button": "connection-modal_connection-button_1paxF",
+	"connectionButton": "connection-modal_connection-button_1paxF",
+	"segmented-button": "connection-modal_segmented-button_XNf80",
+	"segmentedButton": "connection-modal_segmented-button_XNf80",
+	"button-icon-right": "connection-modal_button-icon-right_1CANn",
+	"buttonIconRight": "connection-modal_button-icon-right_1CANn",
+	"button-icon-left": "connection-modal_button-icon-left_2Ys4V",
+	"buttonIconLeft": "connection-modal_button-icon-left_2Ys4V",
+	"button-icon-back": "connection-modal_button-icon-back_3voGy",
+	"buttonIconBack": "connection-modal_button-icon-back_3voGy",
+	"red-button": "connection-modal_red-button_MpXr-",
+	"redButton": "connection-modal_red-button_MpXr-",
+	"corner-buttons": "connection-modal_corner-buttons_2ciJI",
+	"cornerButtons": "connection-modal_corner-buttons_2ciJI",
+	"bottom-area": "connection-modal_bottom-area_AHeQ3",
+	"bottomArea": "connection-modal_bottom-area_AHeQ3",
+	"bottom-area-item": "connection-modal_bottom-area-item_YR2oh",
+	"bottomAreaItem": "connection-modal_bottom-area-item_YR2oh",
+	"instructions": "connection-modal_instructions_1CxAa",
+	"dots-row": "connection-modal_dots-row_39YWr",
+	"dotsRow": "connection-modal_dots-row_39YWr",
+	"dots-holder": "connection-modal_dots-holder_2kY6c",
+	"dotsHolder": "connection-modal_dots-holder_2kY6c",
+	"dots-holder-success": "connection-modal_dots-holder-success_20EtT",
+	"dotsHolderSuccess": "connection-modal_dots-holder-success_20EtT",
+	"dots-holder-error": "connection-modal_dots-holder-error_3iK2w",
+	"dotsHolderError": "connection-modal_dots-holder-error_3iK2w",
+	"dot": "connection-modal_dot_2GsnJ",
+	"inactive-step-dot": "connection-modal_inactive-step-dot_1x6LP",
+	"inactiveStepDot": "connection-modal_inactive-step-dot_1x6LP",
+	"active-step-dot": "connection-modal_active-step-dot_yLC0o",
+	"activeStepDot": "connection-modal_active-step-dot_yLC0o",
+	"success-dot": "connection-modal_success-dot_30FlH",
+	"successDot": "connection-modal_success-dot_30FlH",
+	"error-dot": "connection-modal_error-dot_1NdiS",
+	"errorDot": "connection-modal_error-dot_1NdiS",
+	"scratch-link-error": "connection-modal_scratch-link-error_2-H1B",
+	"scratchLinkError": "connection-modal_scratch-link-error_2-H1B",
+	"scratch-link-error-details": "connection-modal_scratch-link-error-details_2UMNz",
+	"scratchLinkErrorDetails": "connection-modal_scratch-link-error-details_2UMNz",
+	"pulse-blue-ring": "connection-modal_pulse-blue-ring_Bst8a",
+	"pulseBlueRing": "connection-modal_pulse-blue-ring_Bst8a"
 };
 
 /***/ }),
@@ -684,18 +684,18 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.context-menu_context-menu_3Ahoz {\n    min-width: 130px;\n    padding: 5px 0; /* The white strip at the top and bottom of the menu */\n    margin: 2px 0 0; /* To keep the menu below the cursor comfortably */\n    font-size: 0.85rem;\n    text-align: left;\n    background-color: var(--ui-white);\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: calc(0.5rem / 2);\n    box-shadow: 0px 0px 5px 1px var(--shadow);\n    pointer-events: none;\n    transition: opacity 0.2s ease;\n    z-index: 10000;\n}\n\n.context-menu_menu-item_2ReLI {\n    padding: 8px 12px;\n    white-space: nowrap;\n    cursor: pointer;\n    transition: 0.1s ease;\n}\n\n.context-menu_menu-item_2ReLI:hover {\n    background: var(--looks-secondary);\n    color: white;\n}\n\n.context-menu_menu-item-bordered_13kR6 {\n    border-top: 1px solid var(--ui-black-transparent);\n}\n\n.context-menu_menu-item-danger_mMyy6:hover {\n    background: var(--error-primary);\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.context-menu_context-menu_2SJM- {\n    min-width: 130px;\n    padding: 5px 0; /* The white strip at the top and bottom of the menu */\n    margin: 2px 0 0; /* To keep the menu below the cursor comfortably */\n    font-size: 0.85rem;\n    text-align: left;\n    background-color: var(--ui-white);\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: calc(0.5rem / 2);\n    box-shadow: 0px 0px 5px 1px var(--shadow);\n    pointer-events: none;\n    transition: opacity 0.2s ease;\n    z-index: 10000;\n}\n\n.context-menu_menu-item_3cioN {\n    padding: 8px 12px;\n    white-space: nowrap;\n    cursor: pointer;\n    transition: 0.1s ease;\n}\n\n.context-menu_menu-item_3cioN:hover {\n    background: var(--looks-secondary);\n    color: white;\n}\n\n.context-menu_menu-item-bordered_29CJG {\n    border-top: 1px solid var(--ui-black-transparent);\n}\n\n.context-menu_menu-item-danger_1tJg0:hover {\n    background: var(--error-primary);\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"context-menu": "context-menu_context-menu_3Ahoz",
-	"contextMenu": "context-menu_context-menu_3Ahoz",
-	"menu-item": "context-menu_menu-item_2ReLI",
-	"menuItem": "context-menu_menu-item_2ReLI",
-	"menu-item-bordered": "context-menu_menu-item-bordered_13kR6",
-	"menuItemBordered": "context-menu_menu-item-bordered_13kR6",
-	"menu-item-danger": "context-menu_menu-item-danger_mMyy6",
-	"menuItemDanger": "context-menu_menu-item-danger_mMyy6"
+	"context-menu": "context-menu_context-menu_2SJM-",
+	"contextMenu": "context-menu_context-menu_2SJM-",
+	"menu-item": "context-menu_menu-item_3cioN",
+	"menuItem": "context-menu_menu-item_3cioN",
+	"menu-item-bordered": "context-menu_menu-item-bordered_29CJG",
+	"menuItemBordered": "context-menu_menu-item-bordered_29CJG",
+	"menu-item-danger": "context-menu_menu-item-danger_1tJg0",
+	"menuItemDanger": "context-menu_menu-item-danger_1tJg0"
 };
 
 /***/ }),
@@ -712,12 +712,12 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".controls_controls-container_3ZRI_ {\n    display: flex;\n}\n", ""]);
+exports.push([module.i, ".controls_controls-container_2xinB {\n    display: flex;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"controls-container": "controls_controls-container_3ZRI_",
-	"controlsContainer": "controls_controls-container_3ZRI_"
+	"controls-container": "controls_controls-container_2xinB",
+	"controlsContainer": "controls_controls-container_2xinB"
 };
 
 /***/ }),
@@ -734,17 +734,17 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\nbody {\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n}\n\nh2 {\n    font-size: 1.5rem;\n    font-weight: bold;\n}\n\np {\n    font-size: 1rem;\n    line-height: 1.5em;\n}\n\n.crash-message_crash-wrapper_15SLi {\n    background-color: var(--menu-bar-background);\n    width: 100%;\n    height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.crash-message_body_3OO__ {\n    width: 50%;\n    color: white;\n    text-align: center;\n}\n\n/* scratch-www was overriding the colors */\n\n.crash-message_body_3OO__ p, .crash-message_body_3OO__ h2 {\n    color: inherit;\n}\n\n.crash-message_reloadButton_35TdL {\n    border: 1px solid var(--motion-primary);\n    border-radius: 0.25rem;\n    padding: 0.5rem 2rem;\n    background: white;\n    color: var(--motion-primary);\n    font-weight: bold;\n    font-size: 0.875rem;\n    cursor: pointer;\n}\n\n.crash-message_header_CnM8i {\n    font-size: 1.5em;\n    font-weight: bold;\n}\n\n.crash-message_error-message_2oNef {\n    white-space: pre-wrap;\n    font-family: monospace;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\nbody {\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n}\n\nh2 {\n    font-size: 1.5rem;\n    font-weight: bold;\n}\n\np {\n    font-size: 1rem;\n    line-height: 1.5em;\n}\n\n.crash-message_crash-wrapper_25B61 {\n    background-color: var(--menu-bar-background);\n    width: 100%;\n    height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.crash-message_body_1q0lu {\n    width: 50%;\n    color: white;\n    text-align: center;\n}\n\n/* scratch-www was overriding the colors */\n\n.crash-message_body_1q0lu p, .crash-message_body_1q0lu h2 {\n    color: inherit;\n}\n\n.crash-message_reloadButton_FoS7x {\n    border: 1px solid var(--motion-primary);\n    border-radius: 0.25rem;\n    padding: 0.5rem 2rem;\n    background: white;\n    color: var(--motion-primary);\n    font-weight: bold;\n    font-size: 0.875rem;\n    cursor: pointer;\n}\n\n.crash-message_header_1tEXc {\n    font-size: 1.5em;\n    font-weight: bold;\n}\n\n.crash-message_error-message_1pX4X {\n    white-space: pre-wrap;\n    font-family: monospace;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"crash-wrapper": "crash-message_crash-wrapper_15SLi",
-	"crashWrapper": "crash-message_crash-wrapper_15SLi",
-	"body": "crash-message_body_3OO__",
-	"reloadButton": "crash-message_reloadButton_35TdL",
-	"header": "crash-message_header_CnM8i",
-	"error-message": "crash-message_error-message_2oNef",
-	"errorMessage": "crash-message_error-message_2oNef"
+	"crash-wrapper": "crash-message_crash-wrapper_25B61",
+	"crashWrapper": "crash-message_crash-wrapper_25B61",
+	"body": "crash-message_body_1q0lu",
+	"reloadButton": "crash-message_reloadButton_FoS7x",
+	"header": "crash-message_header_1tEXc",
+	"error-message": "crash-message_error-message_1pX4X",
+	"errorMessage": "crash-message_error-message_1pX4X"
 };
 
 /***/ }),
@@ -762,38 +762,38 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.custom-procedures_modal-content_1wJuI {\n    width: 700px;\n    margin: 50px auto; /* This modal is taller than most, reduce top margin */\n}\n\n.custom-procedures_body_1H7Iq {\n    background: var(--ui-modal-background);\n    padding: 1.5rem 2.25rem;\n}\n\n.custom-procedures_body_1H7Iq input[type=\"checkbox\"],\n.custom-procedures_body_1H7Iq input[type=\"radio\"] {\n    margin: 3px;\n}\n\n.custom-procedures_section-title_2_THE {\n    top: 0;\n    font-weight: bold;\n    font-size: larger;\n    padding: calc(0.5rem * 1);\n}\n\n/* Blocks workspace for custom procedure declaration editor */\n\n.custom-procedures_workspace_2fBw7 {\n    min-height: 200px;\n    position: relative;\n}\n\n.custom-procedures_workspace_2fBw7 .injectionDiv{\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n}\n\n.custom-procedures_workspace_2fBw7 .blocklySvg {\n    background-color: var(--ui-primary);\n}\n\n/* Row of \"card\" buttons for modifying custom procedures */\n\n.custom-procedures_options-row_2qj-y {\n    display: flex;\n    justify-content: space-between;\n}\n\n.custom-procedures_option-card_1Gtvt {\n    background: var(--ui-white);\n    border: 2px solid var(--ui-black-transparent);\n    border-radius: 0.5rem;\n    padding: calc(0.5rem * 2);\n    text-align: center;\n    flex-grow: 1;\n    cursor: pointer;\n    transition: all 0.2s;\n    flex-basis: 100px;\n}\n\n.custom-procedures_option-card_1Gtvt:hover {\n    border: 2px solid var(--looks-secondary);\n    box-shadow: 0px 0px 0px 4px var(--looks-transparent);\n}\n\n.custom-procedures_option-card_1Gtvt + .custom-procedures_option-card_1Gtvt {\n    margin-left: 1rem;\n}\n\n.custom-procedures_option-icon_1q0dQ {\n    max-height: 48px;\n    margin-bottom: 0.5rem;\n}\n\n.custom-procedures_option-menu_2lYAg {\n    text-align: center;\n}\n\n.custom-procedures_option-title_21_2M {\n    font-weight: bold;\n}\n\n/* Color options row */\n\n.custom-procedures_color-row_BnspR {\n    display: flex;\n    justify-content: space-between;\n    text-align: center;\n    border: 2px solid var(--ui-black-transparent);\n    border-radius: 0.5rem;\n    padding: calc(0.5rem * 1);\n    flex-grow: 1;\n    flex-basis: 100px;\n    transition: all 0.2s;\n    background: var(--ui-white);\n}\n\n.custom-procedures_color-option_1mFti {\n    cursor: pointer;\n    height: 35px;\n    width: 35px;\n    border: 2px solid var(--ui-black-transparent);\n    border-radius: 50%;\n    padding: calc(0.5rem * 1);\n    transition: all 0.2s;\n}\n\n.custom-procedures_color-option_1mFti:hover {\n    border: 2px solid var(--looks-secondary);\n    box-shadow: 0px 0px 0px 4px var(--looks-transparent);\n}\n\n.custom-procedures_color-option_1mFti + .custom-procedures_color-option_1mFti {\n    margin-left: 0.5rem;\n}\n\n.custom-procedures_color-picker_kjxQy {\n    appearance: none;\n    -moz-appearance: none;\n    -webkit-appearance: none;\n    cursor: pointer;\n    padding: calc(0.5rem * 1);\n    border: 2px solid var(--ui-black-transparent);\n    border-radius: 50%;\n    width: 35px;\n    height: 35px;\n}\n\n.custom-procedures_color-picker_kjxQy::-moz-color-swatch {\n    border: none;\n    border-radius: 50%;\n    padding: 0;\n}\n\n.custom-procedures_color-picker_kjxQy::-webkit-color-swatch {\n    border: none;\n    border-radius: 50%;\n    padding: 0;\n}\n\n.custom-procedures_color-picker_kjxQy::-webkit-color-swatch-wrapper {\n    border: none;\n    border-radius: 50%;\n    padding: 0;\n}\n\n.custom-procedures_color-picker_kjxQy::after {\n    content: url(" + escape(__webpack_require__(/*! ./icon--palette.svg */ "./src/components/custom-procedures/icon--palette.svg")) + ");\n    position: absolute;\n    transform: translate(-22%, -95%);\n    height: 20px;\n    width: 20px;\n}\n\n.custom-procedures_color-picker_kjxQy:hover {\n    border: 2px solid var(--looks-secondary);\n    box-shadow: 0px 0px 0px 4px var(--looks-transparent);\n}\n\n.custom-procedures_color-option_1mFti + .custom-procedures_color-picker_kjxQy {\n    margin-left: 0.5rem;\n}\n\n/* \"Run without screen refresh\" row */\n\n.custom-procedures_checkbox-row_x0PwF {\n    margin-top: 1rem;\n}\n\n/* Confirmation buttons at the bottom of the modal */\n\n.custom-procedures_button-row_3EJDk {\n    margin-top: 1rem;\n    font-weight: bolder;\n    text-align: right;\n}\n\n.custom-procedures_button-row_3EJDk button {\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 0.25rem;\n    padding: 0.75rem 1rem;\n    background: white;\n    color: black;\n    font-weight: bold;\n    font-size: 0.85rem;\n}\n\n.custom-procedures_button-row_3EJDk button.custom-procedures_ok-button_3XcwO {\n    background: var(--looks-secondary);\n    border: var(--looks-secondary);\n    color: white;\n}\n\n[dir=\"ltr\"] .custom-procedures_button-row_3EJDk button + button {\n    margin-left: 0.5rem;\n}\n\n[dir=\"rtl\"] .custom-procedures_button-row_3EJDk button + button {\n    margin-right: 0.5rem;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.custom-procedures_modal-content_Zjko5 {\n    width: 700px;\n    margin: 50px auto; /* This modal is taller than most, reduce top margin */\n}\n\n.custom-procedures_body_SQBv6 {\n    background: var(--ui-modal-background);\n    padding: 1.5rem 2.25rem;\n}\n\n.custom-procedures_body_SQBv6 input[type=\"checkbox\"],\n.custom-procedures_body_SQBv6 input[type=\"radio\"] {\n    margin: 3px;\n}\n\n.custom-procedures_section-title_8QEtz {\n    top: 0;\n    font-weight: bold;\n    font-size: larger;\n    padding: calc(0.5rem * 1);\n}\n\n/* Blocks workspace for custom procedure declaration editor */\n\n.custom-procedures_workspace_1d2uW {\n    min-height: 200px;\n    position: relative;\n}\n\n.custom-procedures_workspace_1d2uW .injectionDiv{\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n}\n\n.custom-procedures_workspace_1d2uW .blocklySvg {\n    background-color: var(--ui-primary);\n}\n\n/* Row of \"card\" buttons for modifying custom procedures */\n\n.custom-procedures_options-row_1PqLE {\n    display: flex;\n    justify-content: space-between;\n}\n\n.custom-procedures_option-card_BtHt3 {\n    background: var(--ui-white);\n    border: 2px solid var(--ui-black-transparent);\n    border-radius: 0.5rem;\n    padding: calc(0.5rem * 2);\n    text-align: center;\n    flex-grow: 1;\n    cursor: pointer;\n    transition: all 0.2s;\n    flex-basis: 100px;\n}\n\n.custom-procedures_option-card_BtHt3:hover {\n    border: 2px solid var(--looks-secondary);\n    box-shadow: 0px 0px 0px 4px var(--looks-transparent);\n}\n\n.custom-procedures_option-card_BtHt3 + .custom-procedures_option-card_BtHt3 {\n    margin-left: 1rem;\n}\n\n.custom-procedures_option-icon_2y7hh {\n    max-height: 48px;\n    margin-bottom: 0.5rem;\n}\n\n.custom-procedures_option-menu_2oBCh {\n    text-align: center;\n}\n\n.custom-procedures_option-title_3v6va {\n    font-weight: bold;\n}\n\n/* Color options row */\n\n.custom-procedures_color-row_1yo9K {\n    display: flex;\n    justify-content: space-between;\n    text-align: center;\n    border: 2px solid var(--ui-black-transparent);\n    border-radius: 0.5rem;\n    padding: calc(0.5rem * 1);\n    flex-grow: 1;\n    flex-basis: 100px;\n    transition: all 0.2s;\n    background: var(--ui-white);\n}\n\n.custom-procedures_color-option_2quGN {\n    cursor: pointer;\n    height: 35px;\n    width: 35px;\n    border: 2px solid var(--ui-black-transparent);\n    border-radius: 50%;\n    padding: calc(0.5rem * 1);\n    transition: all 0.2s;\n}\n\n.custom-procedures_color-option_2quGN:hover {\n    border: 2px solid var(--looks-secondary);\n    box-shadow: 0px 0px 0px 4px var(--looks-transparent);\n}\n\n.custom-procedures_color-option_2quGN + .custom-procedures_color-option_2quGN {\n    margin-left: 0.5rem;\n}\n\n.custom-procedures_color-picker_2PKZR {\n    appearance: none;\n    -moz-appearance: none;\n    -webkit-appearance: none;\n    cursor: pointer;\n    padding: calc(0.5rem * 1);\n    border: 2px solid var(--ui-black-transparent);\n    border-radius: 50%;\n    width: 35px;\n    height: 35px;\n}\n\n.custom-procedures_color-picker_2PKZR::-moz-color-swatch {\n    border: none;\n    border-radius: 50%;\n    padding: 0;\n}\n\n.custom-procedures_color-picker_2PKZR::-webkit-color-swatch {\n    border: none;\n    border-radius: 50%;\n    padding: 0;\n}\n\n.custom-procedures_color-picker_2PKZR::-webkit-color-swatch-wrapper {\n    border: none;\n    border-radius: 50%;\n    padding: 0;\n}\n\n.custom-procedures_color-picker_2PKZR::after {\n    content: url(" + escape(__webpack_require__(/*! ./icon--palette.svg */ "./src/components/custom-procedures/icon--palette.svg")) + ");\n    position: absolute;\n    transform: translate(-22%, -95%);\n    height: 20px;\n    width: 20px;\n}\n\n.custom-procedures_color-picker_2PKZR:hover {\n    border: 2px solid var(--looks-secondary);\n    box-shadow: 0px 0px 0px 4px var(--looks-transparent);\n}\n\n.custom-procedures_color-option_2quGN + .custom-procedures_color-picker_2PKZR {\n    margin-left: 0.5rem;\n}\n\n/* \"Run without screen refresh\" row */\n\n.custom-procedures_checkbox-row_rPP8j {\n    margin-top: 1rem;\n}\n\n/* Confirmation buttons at the bottom of the modal */\n\n.custom-procedures_button-row_2jBu3 {\n    margin-top: 1rem;\n    font-weight: bolder;\n    text-align: right;\n}\n\n.custom-procedures_button-row_2jBu3 button {\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 0.25rem;\n    padding: 0.75rem 1rem;\n    background: white;\n    color: black;\n    font-weight: bold;\n    font-size: 0.85rem;\n}\n\n.custom-procedures_button-row_2jBu3 button.custom-procedures_ok-button_2X0Vj {\n    background: var(--looks-secondary);\n    border: var(--looks-secondary);\n    color: white;\n}\n\n[dir=\"ltr\"] .custom-procedures_button-row_2jBu3 button + button {\n    margin-left: 0.5rem;\n}\n\n[dir=\"rtl\"] .custom-procedures_button-row_2jBu3 button + button {\n    margin-right: 0.5rem;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"modal-content": "custom-procedures_modal-content_1wJuI",
-	"modalContent": "custom-procedures_modal-content_1wJuI",
-	"body": "custom-procedures_body_1H7Iq",
-	"section-title": "custom-procedures_section-title_2_THE",
-	"sectionTitle": "custom-procedures_section-title_2_THE",
-	"workspace": "custom-procedures_workspace_2fBw7",
-	"options-row": "custom-procedures_options-row_2qj-y",
-	"optionsRow": "custom-procedures_options-row_2qj-y",
-	"option-card": "custom-procedures_option-card_1Gtvt",
-	"optionCard": "custom-procedures_option-card_1Gtvt",
-	"option-icon": "custom-procedures_option-icon_1q0dQ",
-	"optionIcon": "custom-procedures_option-icon_1q0dQ",
-	"option-menu": "custom-procedures_option-menu_2lYAg",
-	"optionMenu": "custom-procedures_option-menu_2lYAg",
-	"option-title": "custom-procedures_option-title_21_2M",
-	"optionTitle": "custom-procedures_option-title_21_2M",
-	"color-row": "custom-procedures_color-row_BnspR",
-	"colorRow": "custom-procedures_color-row_BnspR",
-	"color-option": "custom-procedures_color-option_1mFti",
-	"colorOption": "custom-procedures_color-option_1mFti",
-	"color-picker": "custom-procedures_color-picker_kjxQy",
-	"colorPicker": "custom-procedures_color-picker_kjxQy",
-	"checkbox-row": "custom-procedures_checkbox-row_x0PwF",
-	"checkboxRow": "custom-procedures_checkbox-row_x0PwF",
-	"button-row": "custom-procedures_button-row_3EJDk",
-	"buttonRow": "custom-procedures_button-row_3EJDk",
-	"ok-button": "custom-procedures_ok-button_3XcwO",
-	"okButton": "custom-procedures_ok-button_3XcwO"
+	"modal-content": "custom-procedures_modal-content_Zjko5",
+	"modalContent": "custom-procedures_modal-content_Zjko5",
+	"body": "custom-procedures_body_SQBv6",
+	"section-title": "custom-procedures_section-title_8QEtz",
+	"sectionTitle": "custom-procedures_section-title_8QEtz",
+	"workspace": "custom-procedures_workspace_1d2uW",
+	"options-row": "custom-procedures_options-row_1PqLE",
+	"optionsRow": "custom-procedures_options-row_1PqLE",
+	"option-card": "custom-procedures_option-card_BtHt3",
+	"optionCard": "custom-procedures_option-card_BtHt3",
+	"option-icon": "custom-procedures_option-icon_2y7hh",
+	"optionIcon": "custom-procedures_option-icon_2y7hh",
+	"option-menu": "custom-procedures_option-menu_2oBCh",
+	"optionMenu": "custom-procedures_option-menu_2oBCh",
+	"option-title": "custom-procedures_option-title_3v6va",
+	"optionTitle": "custom-procedures_option-title_3v6va",
+	"color-row": "custom-procedures_color-row_1yo9K",
+	"colorRow": "custom-procedures_color-row_1yo9K",
+	"color-option": "custom-procedures_color-option_2quGN",
+	"colorOption": "custom-procedures_color-option_2quGN",
+	"color-picker": "custom-procedures_color-picker_2PKZR",
+	"colorPicker": "custom-procedures_color-picker_2PKZR",
+	"checkbox-row": "custom-procedures_checkbox-row_rPP8j",
+	"checkboxRow": "custom-procedures_checkbox-row_rPP8j",
+	"button-row": "custom-procedures_button-row_2jBu3",
+	"buttonRow": "custom-procedures_button-row_2jBu3",
+	"ok-button": "custom-procedures_ok-button_2X0Vj",
+	"okButton": "custom-procedures_ok-button_2X0Vj"
 };
 
 /***/ }),
@@ -810,16 +810,16 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* wrapper to allow for touch slop if we decide to add it */\n\n.delete-button_delete-button_JjOIx {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    cursor: pointer;\n    transition: all 0.15s ease-out;\n}\n\n.delete-button_delete-button-visible_mAZdj {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  overflow: hidden;  /* Mask the icon animation */\n  width: 1.75rem;\n  height: 1.75rem;\n  box-shadow: 0px 0px 0px 2px var(--looks-transparent);\n  background-color: var(--looks-secondary);\n  color: var(--ui-white);\n  border-radius: 50%;\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  cursor: pointer;\n  transition: all 0.15s ease-out;\n}\n\n.delete-button_delete-icon_2tDWR {\n    position: relative;\n    margin: 0.25rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    transform-origin: 50%;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* wrapper to allow for touch slop if we decide to add it */\n\n.delete-button_delete-button_2Nzko {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    cursor: pointer;\n    transition: all 0.15s ease-out;\n}\n\n.delete-button_delete-button-visible_kym6v {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  overflow: hidden;  /* Mask the icon animation */\n  width: 1.75rem;\n  height: 1.75rem;\n  box-shadow: 0px 0px 0px 2px var(--looks-transparent);\n  background-color: var(--looks-secondary);\n  color: var(--ui-white);\n  border-radius: 50%;\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  cursor: pointer;\n  transition: all 0.15s ease-out;\n}\n\n.delete-button_delete-icon_3b8wH {\n    position: relative;\n    margin: 0.25rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    transform-origin: 50%;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"delete-button": "delete-button_delete-button_JjOIx",
-	"deleteButton": "delete-button_delete-button_JjOIx",
-	"delete-button-visible": "delete-button_delete-button-visible_mAZdj",
-	"deleteButtonVisible": "delete-button_delete-button-visible_mAZdj",
-	"delete-icon": "delete-button_delete-icon_2tDWR",
-	"deleteIcon": "delete-button_delete-icon_2tDWR"
+	"delete-button": "delete-button_delete-button_2Nzko",
+	"deleteButton": "delete-button_delete-button_2Nzko",
+	"delete-button-visible": "delete-button_delete-button-visible_kym6v",
+	"deleteButtonVisible": "delete-button_delete-button-visible_kym6v",
+	"delete-icon": "delete-button_delete-icon_3b8wH",
+	"deleteIcon": "delete-button_delete-icon_3b8wH"
 };
 
 /***/ }),
@@ -836,20 +836,20 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.dial_container_1JhHX {\n    padding: 1rem;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n}\n\n.dial_dial-container_33mkQ {\n    position: relative;\n}\n\n.dial_dial-face_2aWlr, .dial_dial-handle_1OHhg, .dial_gauge_3bwaY {\n    position: absolute;\n    top: 0;\n    left: 0;\n    overflow: visible;\n}\n\n.dial_dial-face_2aWlr {\n    width: 100%;\n}\n\n.dial_dial-handle_1OHhg {\n    cursor: pointer;\n    width: 40px;\n    height: 40px;\n    /* Use margin to make positioning via top/left easier */\n    margin-left: calc(40px / -2);\n    margin-top: calc(40px / -2);\n}\n\n.dial_gauge-path_VQesE {\n    fill: var(--looks-transparent);\n    stroke: var(--looks-secondary);\n    stroke-width: 1px;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.dial_container_3hox- {\n    padding: 1rem;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n}\n\n.dial_dial-container_ktOnA {\n    position: relative;\n}\n\n.dial_dial-face_3NuSA, .dial_dial-handle_1tfZT, .dial_gauge_3g5NZ {\n    position: absolute;\n    top: 0;\n    left: 0;\n    overflow: visible;\n}\n\n.dial_dial-face_3NuSA {\n    width: 100%;\n}\n\n.dial_dial-handle_1tfZT {\n    cursor: pointer;\n    width: 40px;\n    height: 40px;\n    /* Use margin to make positioning via top/left easier */\n    margin-left: calc(40px / -2);\n    margin-top: calc(40px / -2);\n}\n\n.dial_gauge-path_1WoJ6 {\n    fill: var(--looks-transparent);\n    stroke: var(--looks-secondary);\n    stroke-width: 1px;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"container": "dial_container_1JhHX",
-	"dial-container": "dial_dial-container_33mkQ",
-	"dialContainer": "dial_dial-container_33mkQ",
-	"dial-face": "dial_dial-face_2aWlr",
-	"dialFace": "dial_dial-face_2aWlr",
-	"dial-handle": "dial_dial-handle_1OHhg",
-	"dialHandle": "dial_dial-handle_1OHhg",
-	"gauge": "dial_gauge_3bwaY",
-	"gauge-path": "dial_gauge-path_VQesE",
-	"gaugePath": "dial_gauge-path_VQesE"
+	"container": "dial_container_3hox-",
+	"dial-container": "dial_dial-container_ktOnA",
+	"dialContainer": "dial_dial-container_ktOnA",
+	"dial-face": "dial_dial-face_3NuSA",
+	"dialFace": "dial_dial-face_3NuSA",
+	"dial-handle": "dial_dial-handle_1tfZT",
+	"dialHandle": "dial_dial-handle_1tfZT",
+	"gauge": "dial_gauge_3g5NZ",
+	"gauge-path": "dial_gauge-path_1WoJ6",
+	"gaugePath": "dial_gauge-path_1WoJ6"
 };
 
 /***/ }),
@@ -866,12 +866,12 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".direction-picker_button-row_33xQd {\n    justify-content: center;\n    margin-bottom: 1rem;\n}\n", ""]);
+exports.push([module.i, ".direction-picker_button-row_1DF8U {\n    justify-content: center;\n    margin-bottom: 1rem;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"button-row": "direction-picker_button-row_33xQd",
-	"buttonRow": "direction-picker_button-row_33xQd"
+	"button-row": "direction-picker_button-row_1DF8U",
+	"buttonRow": "direction-picker_button-row_1DF8U"
 };
 
 /***/ }),
@@ -888,11 +888,11 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.divider_divider_2uUWW {\n    border-right: 1px dashed var(--ui-black-transparent);\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.divider_divider_1_Adi {\n    border-right: 1px dashed var(--ui-black-transparent);\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"divider": "divider_divider_2uUWW"
+	"divider": "divider_divider_1_Adi"
 };
 
 /***/ }),
@@ -909,15 +909,15 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.drag-layer_drag-layer_3RGNn {\n    position: fixed;\n    pointer-events: none;\n    z-index: 1000;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: 100%;\n    direction: ltr;\n}\n\n.drag-layer_image-wrapper_3G0af {\n    /* Absolute allows wrapper to snuggly fit image */\n    position: absolute;\n}\n\n.drag-layer_image_2PHUm {\n    max-width: 80px;\n    max-height: 80px;\n    min-width: 50px;\n    min-height: 50px;\n\n    /* Center the dragging image on the given position */\n    margin-left: -50%;\n    margin-top: -50%;\n\n    padding: 0.25rem;\n    border: 2px solid var(--looks-secondary);\n    background: var(--ui-white);\n    border-radius: 0.5rem;\n\n    /* Use the same drop shadow as stage dragging */\n    box-shadow: 5px 5px 5px var(--shadow);\n}\n", ""]);
+exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.drag-layer_drag-layer_3Xec- {\n    position: fixed;\n    pointer-events: none;\n    z-index: 1000;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: 100%;\n    direction: ltr;\n}\n\n.drag-layer_image-wrapper_2iRP3 {\n    /* Absolute allows wrapper to snuggly fit image */\n    position: absolute;\n}\n\n.drag-layer_image_1inbS {\n    max-width: 80px;\n    max-height: 80px;\n    min-width: 50px;\n    min-height: 50px;\n\n    /* Center the dragging image on the given position */\n    margin-left: -50%;\n    margin-top: -50%;\n\n    padding: 0.25rem;\n    border: 2px solid var(--looks-secondary);\n    background: var(--ui-white);\n    border-radius: 0.5rem;\n\n    /* Use the same drop shadow as stage dragging */\n    box-shadow: 5px 5px 5px var(--shadow);\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"drag-layer": "drag-layer_drag-layer_3RGNn",
-	"dragLayer": "drag-layer_drag-layer_3RGNn",
-	"image-wrapper": "drag-layer_image-wrapper_3G0af",
-	"imageWrapper": "drag-layer_image-wrapper_3G0af",
-	"image": "drag-layer_image_2PHUm"
+	"drag-layer": "drag-layer_drag-layer_3Xec-",
+	"dragLayer": "drag-layer_drag-layer_3Xec-",
+	"image-wrapper": "drag-layer_image-wrapper_2iRP3",
+	"imageWrapper": "drag-layer_image-wrapper_2iRP3",
+	"image": "drag-layer_image_1inbS"
 };
 
 /***/ }),
@@ -934,21 +934,21 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n.filter_filter_3ERdM {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    flex-grow: 1;\n\n    background: var(--ui-white);\n    border-radius: 10rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    height: 2.5rem;\n\n    position: relative;\n}\n\n.filter_filter-icon_2b5SH {\n    position: absolute;\n    top: 0;\n\n    height: 1rem;\n    width: 1rem;\n}\n\n[dir=\"ltr\"] .filter_filter-icon_2b5SH {\n    left: 0;\n    margin: 0.75rem 0.75rem 0.75rem 1rem;\n}\n\n[dir=\"rtl\"] .filter_filter-icon_2b5SH {\n    right: 0;\n    margin: 0.75rem 1rem 0.75rem 0.75rem;\n    transform: scaleX(-1);\n}\n\n.filter_filter_3ERdM:focus-within {\n    box-shadow: 0 0 0 .25rem var(--looks-transparent);\n}\n\n/*\n    Hidden state\n*/\n\n.filter_x-icon-wrapper_3u3wB {\n    opacity: 0;\n    position: absolute;\n    top: 0;\n\n    display: flex;\n    justify-content: center;\n    align-items: center;\n\n    overflow: hidden;  /* Mask the icon animation */\n    height: 1.25rem;\n    width: 1.25rem;\n    margin: 0.625rem;\n\n    border-radius: 50%;\n    pointer-events: none;\n    cursor: default;\n    transition: opacity 0.05s linear;\n}\n\n[dir=\"ltr\"] .filter_x-icon-wrapper_3u3wB {\n    right: 0;\n}\n\n[dir=\"rtl\"] .filter_x-icon-wrapper_3u3wB {\n    left: 0;\n}\n\n/*\n    Shown state\n*/\n\n.filter_filter_3ERdM.filter_is-active_2vZjc .filter_x-icon-wrapper_3u3wB {\n    pointer-events: auto;\n    cursor: pointer;\n    opacity: 1;\n    transition: opacity 0.05s linear;\n}\n\n.filter_filter_3ERdM.filter_is-active_2vZjc .filter_x-icon-wrapper_3u3wB:hover {\n    transform: scale(1.2, 1.2);\n}\n\n/*\n    Hidden state\n*/\n\n.filter_x-icon_P0M2o {\n    position: relative;\n    margin: 0.25rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    transform: translateX(0.5rem);\n    transition: transform 0.085s cubic-bezier(0.78, 1, 1, 1);\n}\n\n/*\n    Shown state\n*/\n\n.filter_filter_3ERdM.filter_is-active_2vZjc .filter_x-icon-wrapper_3u3wB .filter_x-icon_P0M2o {\n    transform: translateX(0);\n}\n\n.filter_filter-input_3aL2D {\n    flex-grow: 1;\n    height: 2.5rem;\n    background-color: transparent;\n    -webkit-appearance: none;\n    outline: none;\n    border: 0;\n    color: var(--text-primary);\n    font-size: 0.75rem;\n    letter-spacing: 0.15px;\n    cursor: text;\n}\n\n[dir=\"ltr\"] .filter_filter-input_3aL2D {\n    padding: .625rem 2rem .625rem 3rem;\n}\n\n[dir=\"rtl\"] .filter_filter-input_3aL2D {\n    padding: .625rem 3rem .625rem 2rem;\n}\n\n.filter_filter-input_3aL2D::-ms-input-placeholder {\n    opacity: .5;\n    color: var(--text-primary);\n    font-size: 0.875rem;\n    letter-spacing: 0.15px;\n}\n\n.filter_filter-input_3aL2D::placeholder {\n    opacity: .5;\n    color: var(--text-primary);\n    font-size: 0.875rem;\n    letter-spacing: 0.15px;\n}\n\n[dir=\"ltr\"] .filter_filter-input_3aL2D::-ms-input-placeholder {\n    padding: 0 0 0 0.25rem;\n}\n\n[dir=\"ltr\"] .filter_filter-input_3aL2D::placeholder {\n    padding: 0 0 0 0.25rem;\n}\n\n[dir=\"rtl\"] .filter_filter-input_3aL2D::-ms-input-placeholder {\n    padding: 0 0.25rem 0 0;\n}\n\n[dir=\"rtl\"] .filter_filter-input_3aL2D::placeholder {\n    padding: 0 0.25rem 0 0;\n}\n", ""]);
+exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n.filter_filter_1JFal {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    flex-grow: 1;\n\n    background: var(--ui-white);\n    border-radius: 10rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    height: 2.5rem;\n\n    position: relative;\n}\n\n.filter_filter-icon_3Pfaw {\n    position: absolute;\n    top: 0;\n\n    height: 1rem;\n    width: 1rem;\n}\n\n[dir=\"ltr\"] .filter_filter-icon_3Pfaw {\n    left: 0;\n    margin: 0.75rem 0.75rem 0.75rem 1rem;\n}\n\n[dir=\"rtl\"] .filter_filter-icon_3Pfaw {\n    right: 0;\n    margin: 0.75rem 1rem 0.75rem 0.75rem;\n    transform: scaleX(-1);\n}\n\n.filter_filter_1JFal:focus-within {\n    box-shadow: 0 0 0 .25rem var(--looks-transparent);\n}\n\n/*\n    Hidden state\n*/\n\n.filter_x-icon-wrapper_1rP2w {\n    opacity: 0;\n    position: absolute;\n    top: 0;\n\n    display: flex;\n    justify-content: center;\n    align-items: center;\n\n    overflow: hidden;  /* Mask the icon animation */\n    height: 1.25rem;\n    width: 1.25rem;\n    margin: 0.625rem;\n\n    border-radius: 50%;\n    pointer-events: none;\n    cursor: default;\n    transition: opacity 0.05s linear;\n}\n\n[dir=\"ltr\"] .filter_x-icon-wrapper_1rP2w {\n    right: 0;\n}\n\n[dir=\"rtl\"] .filter_x-icon-wrapper_1rP2w {\n    left: 0;\n}\n\n/*\n    Shown state\n*/\n\n.filter_filter_1JFal.filter_is-active_3PvfA .filter_x-icon-wrapper_1rP2w {\n    pointer-events: auto;\n    cursor: pointer;\n    opacity: 1;\n    transition: opacity 0.05s linear;\n}\n\n.filter_filter_1JFal.filter_is-active_3PvfA .filter_x-icon-wrapper_1rP2w:hover {\n    transform: scale(1.2, 1.2);\n}\n\n/*\n    Hidden state\n*/\n\n.filter_x-icon_zjpOg {\n    position: relative;\n    margin: 0.25rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    transform: translateX(0.5rem);\n    transition: transform 0.085s cubic-bezier(0.78, 1, 1, 1);\n}\n\n/*\n    Shown state\n*/\n\n.filter_filter_1JFal.filter_is-active_3PvfA .filter_x-icon-wrapper_1rP2w .filter_x-icon_zjpOg {\n    transform: translateX(0);\n}\n\n.filter_filter-input_1iiEt {\n    flex-grow: 1;\n    height: 2.5rem;\n    background-color: transparent;\n    -webkit-appearance: none;\n    outline: none;\n    border: 0;\n    color: var(--text-primary);\n    font-size: 0.75rem;\n    letter-spacing: 0.15px;\n    cursor: text;\n}\n\n[dir=\"ltr\"] .filter_filter-input_1iiEt {\n    padding: .625rem 2rem .625rem 3rem;\n}\n\n[dir=\"rtl\"] .filter_filter-input_1iiEt {\n    padding: .625rem 3rem .625rem 2rem;\n}\n\n.filter_filter-input_1iiEt::-ms-input-placeholder {\n    opacity: .5;\n    color: var(--text-primary);\n    font-size: 0.875rem;\n    letter-spacing: 0.15px;\n}\n\n.filter_filter-input_1iiEt::placeholder {\n    opacity: .5;\n    color: var(--text-primary);\n    font-size: 0.875rem;\n    letter-spacing: 0.15px;\n}\n\n[dir=\"ltr\"] .filter_filter-input_1iiEt::-ms-input-placeholder {\n    padding: 0 0 0 0.25rem;\n}\n\n[dir=\"ltr\"] .filter_filter-input_1iiEt::placeholder {\n    padding: 0 0 0 0.25rem;\n}\n\n[dir=\"rtl\"] .filter_filter-input_1iiEt::-ms-input-placeholder {\n    padding: 0 0.25rem 0 0;\n}\n\n[dir=\"rtl\"] .filter_filter-input_1iiEt::placeholder {\n    padding: 0 0.25rem 0 0;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"filter": "filter_filter_3ERdM",
-	"filter-icon": "filter_filter-icon_2b5SH",
-	"filterIcon": "filter_filter-icon_2b5SH",
-	"x-icon-wrapper": "filter_x-icon-wrapper_3u3wB",
-	"xIconWrapper": "filter_x-icon-wrapper_3u3wB",
-	"is-active": "filter_is-active_2vZjc",
-	"isActive": "filter_is-active_2vZjc",
-	"x-icon": "filter_x-icon_P0M2o",
-	"xIcon": "filter_x-icon_P0M2o",
-	"filter-input": "filter_filter-input_3aL2D",
-	"filterInput": "filter_filter-input_3aL2D"
+	"filter": "filter_filter_1JFal",
+	"filter-icon": "filter_filter-icon_3Pfaw",
+	"filterIcon": "filter_filter-icon_3Pfaw",
+	"x-icon-wrapper": "filter_x-icon-wrapper_1rP2w",
+	"xIconWrapper": "filter_x-icon-wrapper_1rP2w",
+	"is-active": "filter_is-active_3PvfA",
+	"isActive": "filter_is-active_3PvfA",
+	"x-icon": "filter_x-icon_zjpOg",
+	"xIcon": "filter_x-icon_zjpOg",
+	"filter-input": "filter_filter-input_1iiEt",
+	"filterInput": "filter_filter-input_1iiEt"
 };
 
 /***/ }),
@@ -965,14 +965,14 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n.input_input-form_2EIqD {\n    height: 2rem;\n    padding: 0 0.75rem;\n\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    font-size: 0.625rem;\n    font-weight: bold;\n    color: var(--text-primary);\n    background-color: var(--input-background);\n\n    border-width: 1px;\n    border-style: solid;\n    border-color: var(--ui-black-transparent);\n    border-radius: 2rem;\n\n    outline: none;\n    cursor: text;\n    transition: 0.25s ease-out; /* @todo: standardize with var */\n    box-shadow: none;\n\n    /*\n        For truncating overflowing text gracefully\n        Min-width is for a bug: https://css-tricks.com/flexbox-truncated-text\n        @todo: move this out into a mixin or a helper component\n    */\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    min-width: 0;\n}\n\n.input_input-form_2EIqD:hover {\n    border-color: var(--looks-secondary);\n}\n\n.input_input-form_2EIqD:focus {\n    border-color: var(--looks-secondary);\n    box-shadow: 0 0 0 0.25rem var(--looks-transparent);\n}\n\n.input_input-small_1bkbs {\n    width: 3rem;\n    padding: 0 0.5rem;\n    text-overflow: clip;\n    text-align: center;\n}\n\n/* Chrome, Safari, Edge, Opera */\n\n.input_input-form_2EIqD::-webkit-outer-spin-button,\n.input_input-form_2EIqD::-webkit-inner-spin-button {\n    -webkit-appearance: none;\n    margin: 0;\n}\n\n/* Firefox */\n\n.input_input-form_2EIqD[type=number] {\n    -moz-appearance: textfield;\n}\n", ""]);
+exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n.input_input-form_l9eYg {\n    height: 2rem;\n    padding: 0 0.75rem;\n\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    font-size: 0.625rem;\n    font-weight: bold;\n    color: var(--text-primary);\n    background-color: var(--input-background);\n\n    border-width: 1px;\n    border-style: solid;\n    border-color: var(--ui-black-transparent);\n    border-radius: 2rem;\n\n    outline: none;\n    cursor: text;\n    transition: 0.25s ease-out; /* @todo: standardize with var */\n    box-shadow: none;\n\n    /*\n        For truncating overflowing text gracefully\n        Min-width is for a bug: https://css-tricks.com/flexbox-truncated-text\n        @todo: move this out into a mixin or a helper component\n    */\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    min-width: 0;\n}\n\n.input_input-form_l9eYg:hover {\n    border-color: var(--looks-secondary);\n}\n\n.input_input-form_l9eYg:focus {\n    border-color: var(--looks-secondary);\n    box-shadow: 0 0 0 0.25rem var(--looks-transparent);\n}\n\n.input_input-small_2qj1C {\n    width: 3rem;\n    padding: 0 0.5rem;\n    text-overflow: clip;\n    text-align: center;\n}\n\n/* Chrome, Safari, Edge, Opera */\n\n.input_input-form_l9eYg::-webkit-outer-spin-button,\n.input_input-form_l9eYg::-webkit-inner-spin-button {\n    -webkit-appearance: none;\n    margin: 0;\n}\n\n/* Firefox */\n\n.input_input-form_l9eYg[type=number] {\n    -moz-appearance: textfield;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"input-form": "input_input-form_2EIqD",
-	"inputForm": "input_input-form_2EIqD",
-	"input-small": "input_input-small_1bkbs",
-	"inputSmall": "input_input-small_1bkbs"
+	"input-form": "input_input-form_l9eYg",
+	"inputForm": "input_input-form_l9eYg",
+	"input-small": "input_input-small_2qj1C",
+	"inputSmall": "input_input-small_2qj1C"
 };
 
 /***/ }),
@@ -989,18 +989,18 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n.label_input-group_3U1bG {\n    display: inline-flex;\n    flex-direction: row;\n    align-items: center;\n}\n\n.label_input-group-column_UfEsB {\n    display: inline-flex;\n    flex-direction: column;\n    align-items: flex-start;\n}\n\n.label_input-group-column_UfEsB span {\n    margin-bottom: .25rem;\n}\n\n.label_input-label_3WQec, .label_input-label-secondary_2TwJI {\n    font-size: 0.625rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    cursor: default;\n\n    white-space: nowrap;\n}\n\n[dir=\"ltr\"] .label_input-label_3WQec, [dir=\"ltr\"] .label_input-label-secondary_2TwJI {\n    margin-right: .5rem;\n}\n\n[dir=\"rtl\"] .label_input-label_3WQec, [dir=\"rtl\"] .label_input-label-secondary_2TwJI {\n    margin-left: .5rem;\n}\n\n.label_input-label_3WQec {\n    font-weight: bold;\n}\n", ""]);
+exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n.label_input-group_2vTky {\n    display: inline-flex;\n    flex-direction: row;\n    align-items: center;\n}\n\n.label_input-group-column_22FuU {\n    display: inline-flex;\n    flex-direction: column;\n    align-items: flex-start;\n}\n\n.label_input-group-column_22FuU span {\n    margin-bottom: .25rem;\n}\n\n.label_input-label_3KjCa, .label_input-label-secondary_3QDNV {\n    font-size: 0.625rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    cursor: default;\n\n    white-space: nowrap;\n}\n\n[dir=\"ltr\"] .label_input-label_3KjCa, [dir=\"ltr\"] .label_input-label-secondary_3QDNV {\n    margin-right: .5rem;\n}\n\n[dir=\"rtl\"] .label_input-label_3KjCa, [dir=\"rtl\"] .label_input-label-secondary_3QDNV {\n    margin-left: .5rem;\n}\n\n.label_input-label_3KjCa {\n    font-weight: bold;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"input-group": "label_input-group_3U1bG",
-	"inputGroup": "label_input-group_3U1bG",
-	"input-group-column": "label_input-group-column_UfEsB",
-	"inputGroupColumn": "label_input-group-column_UfEsB",
-	"input-label": "label_input-label_3WQec",
-	"inputLabel": "label_input-label_3WQec",
-	"input-label-secondary": "label_input-label-secondary_2TwJI",
-	"inputLabelSecondary": "label_input-label-secondary_2TwJI"
+	"input-group": "label_input-group_2vTky",
+	"inputGroup": "label_input-group_2vTky",
+	"input-group-column": "label_input-group-column_22FuU",
+	"inputGroupColumn": "label_input-group-column_22FuU",
+	"input-label": "label_input-label_3KjCa",
+	"inputLabel": "label_input-label_3KjCa",
+	"input-label-secondary": "label_input-label-secondary_3QDNV",
+	"inputLabelSecondary": "label_input-label-secondary_3QDNV"
 };
 
 /***/ }),
@@ -1017,14 +1017,14 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.green-flag_green-flag_mk1Vo {\n    width: 2rem;\n    height: 2rem;\n    padding: 0.375rem;\n    border-radius: 0.25rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    user-drag: none;\n    cursor: pointer;\n}\n\n.green-flag_green-flag_mk1Vo:hover {\n    background-color: var(--looks-light-transparent);\n}\n\n.green-flag_green-flag_mk1Vo.green-flag_is-active_17xP9 {\n    background-color: var(--looks-transparent);\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.green-flag_green-flag_1kiAo {\n    width: 2rem;\n    height: 2rem;\n    padding: 0.375rem;\n    border-radius: 0.25rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    user-drag: none;\n    cursor: pointer;\n}\n\n.green-flag_green-flag_1kiAo:hover {\n    background-color: var(--looks-light-transparent);\n}\n\n.green-flag_green-flag_1kiAo.green-flag_is-active_2oExT {\n    background-color: var(--looks-transparent);\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"green-flag": "green-flag_green-flag_mk1Vo",
-	"greenFlag": "green-flag_green-flag_mk1Vo",
-	"is-active": "green-flag_is-active_17xP9",
-	"isActive": "green-flag_is-active_17xP9"
+	"green-flag": "green-flag_green-flag_1kiAo",
+	"greenFlag": "green-flag_green-flag_1kiAo",
+	"is-active": "green-flag_is-active_2oExT",
+	"isActive": "green-flag_is-active_2oExT"
 };
 
 /***/ }),
@@ -1041,46 +1041,46 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.gui_page-wrapper_r7IhT {\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n}\n\n.gui_body-wrapper_1T2l7 {\n    flex-grow: 1;\n    background-color: var(--ui-primary);\n}\n\n.gui_body-wrapper_1T2l7 * {\n    box-sizing: border-box;\n}\n\n.gui_flex-wrapper_2AgdD {\n    display: flex;\n\n    /*\n        Make 2 columns:\n        a) for the blocks + workspace panes, and\n        b) for combined stage menu + stage + sprite/stage selectors\n    */\n    flex-direction: row;\n    height: 100%;\n\n    /*\n        Stop scrollbar popping in and out from scratch-blocks border issue\n        https://github.com/LLK/scratch-gui/issues/318\n        TW: and also fix double horizontal scrollbar at some screen sizes in paint editor\n    */\n    overflow: hidden;\n}\n\n.gui_editor-wrapper_WspaC {\n    /*\n        This is carefully balanced--  the minimum width at which the GUI will be displayed is 1024px.\n        At that size, the stage pane is 408px wide, with $space of padding to each side.\n        However, we must also add the border width to the stage pane. All-in-all, the stage pane's final width is\n        408px + ($space + $stage-standard-border-width * 2) (one border & padding per left/right side).\n\n        @todo This is in place to prevent \"doubling up\" of horizontal scrollbars in narrow windows, but there are likely\n        much better ways to solve that (e.g. undo #2124, remove this flex-basis entirely). However, they run their own\n        risks of breaking things, so let's just leave this as-is for the time being.\n    */\n    flex-basis: calc(1024px - 408px - ((0.5rem + 0.0625rem) * 2));\n    flex-grow: 1;\n    flex-shrink: 0;\n    position: relative;\n\n    display: flex;\n    flex-direction: column;\n}\n\n.gui_tab-list_3r8RB {\n    height: 2.75rem;\n    width: 250px; /* Match width of the toolbox */\n    display: flex;\n    align-items: flex-end;\n    flex-shrink: 0;\n\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    font-weight: 500;\n    font-size: 0.80rem;\n\n    /* Overrides for react-tabs styling */\n    margin: 0 !important;\n    border-bottom: 0 !important;\n\n    color: var(--text-primary);\n}\n\n.gui_tab_3k_DV {\n    flex-grow: 1;\n    height: 80%;\n    margin-bottom: 0;\n\n    border-radius: 1rem 1rem 0 0;\n    border: 1px solid var(--ui-black-transparent);\n\n    padding: 0.125rem 1.25rem 0;\n    font-size: 0.75rem;\n\n    background-color: var(--ui-tertiary);\n    color: var(--ui-text-primary-transparent);\n\n    display: flex;\n    justify-content: center;\n    align-items: center;\n\n    -webkit-user-select: none;\n\n       -moz-user-select: none;\n\n        -ms-user-select: none;\n\n            user-select: none;\n    white-space: nowrap;\n}\n\n[dir=\"ltr\"] .gui_tab_3k_DV {\n    margin-left: -0.5rem;\n}\n\n[dir=\"rtl\"] .gui_tab_3k_DV {\n    margin-right: -0.5rem;\n}\n\n[dir=\"ltr\"] .gui_tab_3k_DV:nth-of-type(1) {\n    margin-left: 0;\n}\n\n[dir=\"rtl\"] .gui_tab_3k_DV:nth-of-type(1) {\n    margin-right: 0;\n}\n\n/* Use z-indices to force left-on-top for tabs */\n\n.gui_tab_3k_DV:nth-of-type(1) {\n    z-index: 5;\n}\n\n.gui_tab_3k_DV:nth-of-type(2) {\n    z-index: 4;\n}\n\n.gui_tab_3k_DV:nth-of-type(3) {\n    z-index: 3;\n}\n\n.gui_tab_3k_DV:nth-of-type(4) {\n    z-index: 2;\n}\n\n.gui_tab_3k_DV:nth-of-type(5) {\n    z-index: 1;\n}\n\n.gui_tab_3k_DV:hover {\n  background-color: var(--ui-primary);\n}\n\n.gui_tab_3k_DV.gui_is-selected_3nXL3 {\n    height: 90%;\n    color: var(--looks-secondary);\n    background-color: var(--ui-white);\n    z-index: 5; /* Make sure selected is always above */\n}\n\n.gui_tab_3k_DV img {\n    width: 1.375rem;\n    filter: grayscale(100%);\n}\n\n.gui_compact_1rJFq {}\n\n.gui_compact_1rJFq .gui_tab_3k_DV span {\n    display: none;\n}\n\n[dir=\"ltr\"] :not(.gui_compact_1rJFq) > .gui_tab_3k_DV img {\n    margin-right: 0.125rem;\n}\n\n[dir=\"rtl\"] :not(.gui_compact_1rJFq) >  .gui_tab_3k_DV img {\n    margin-left: 0.125rem;\n}\n\n/* mirror blocks and sound tab icons */\n\n[dir=\"rtl\"] .gui_tab_3k_DV:nth-of-type(1) img {\n    transform: scaleX(-1);\n}\n\n[dir=\"rtl\"] .gui_tab_3k_DV:nth-of-type(3) img {\n    transform: scaleX(-1);\n}\n\n.gui_tab_3k_DV.gui_is-selected_3nXL3 img {\n    filter: none;\n}\n\n/* Tab style overrides from react-tabs */\n\n.gui_tab_3k_DV.gui_is-selected_3nXL3:after {\n    display: none;\n}\n\n.gui_tab_3k_DV.gui_is-selected_3nXL3:focus {\n    outline: none;\n    box-shadow: none;\n    border-color: var(--ui-black-transparent);\n}\n\n.gui_tab_3k_DV.gui_is-selected_3nXL3:focus:after {\n    display: none;\n}\n\n/* Body of the tabs */\n\n.gui_tabs_3Cns4 {\n    position: relative;\n    flex-grow: 1;\n    display: flex;\n    flex-direction: column;\n}\n\n.gui_tab-panel_12yVw {\n    position: relative;\n    flex-grow: 1;\n    display: none;\n}\n\n.gui_tab-panel_12yVw.gui_is-selected_3nXL3 {\n    display: flex;\n}\n\n.gui_blocks-wrapper_oRY_r {\n    flex-grow: 1;\n    position: relative;\n}\n\n.gui_stage-and-target-wrapper_2TUbW {\n    /*\n        Makes rows for children:\n          1) stage menu\n          2) stage\n          3) sprite/stage selectors\n        Only reason we need this, is so .targetWrapper, which holds the selectors,\n        goes to full vertical height of the window\n    */\n    display: flex;\n    flex-direction: column;\n    /* pad entire wrapper to the left and right; allow children to fill width */\n    padding-left: 0.5rem;\n    padding-right: 0.5rem;\n\n    /* this will only ever be as wide as the stage */\n    flex-basis: 0;\n}\n\n.gui_target-wrapper_2YpM2 {\n    display: flex;\n    flex-grow: 1;\n    flex-basis: 0;\n\n    padding-top: 0.5rem;\n    min-height: 0; /* this makes it work in Firefox */\n\n    /*\n        For making the sprite-selector a scrollable pane\n        @todo: Not working in Safari\n    */\n    /* TODO this also breaks the thermometer menu */\n    /* overflow: hidden; */\n}\n\n.gui_extension-button-container_sM98M {\n    width: 3.75rem;\n    height: 3.25rem;\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    z-index: 42;\n    background: var(--looks-secondary);\n\n    border: 1px solid var(--looks-secondary);\n    box-sizing: content-box; /* To match scratch-block vertical toolbox borders */\n}\n\n.gui_extension-button-container_sM98M:before {\n    content: \"\";\n    position: absolute;\n    top: calc(calc(-1 * 15px) - 1px);\n    left: -1px;\n    background: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.15));\n    height: 15px;\n    width: calc(100% + 0.5px);\n}\n\n.gui_extension-button_3Z58M {\n    background: none;\n    border: none;\n    outline: none;\n    width: 100%;\n    height: 100%;\n    cursor: pointer;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n}\n\n.gui_extension-button-icon_3lDFf {\n    width: 1.75rem;\n    height: 1.75rem;\n}\n\n[dir=\"rtl\"] .gui_extension-button-icon_3lDFf {\n    transform: scaleX(-1);\n}\n\n.gui_extension-button_3Z58M > div {\n    margin-top: 0;\n}\n\n/* Sprite Selection Watermark */\n\n.gui_watermark_3oGgV {\n    position: absolute;\n    top: 1.25rem;\n    pointer-events: none;\n}\n\n[dir=\"ltr\"] .gui_watermark_3oGgV {\n    right: 1.25rem;\n}\n\n[dir=\"rtl\"] .gui_watermark_3oGgV {\n    left: 1.25rem;\n}\n\n/* Menu */\n\n.gui_menu-bar-position_6ejza {\n    position: relative;\n    z-index: 491;\n}\n\n/* Alerts */\n\n.gui_alerts-container_2cnr7 {\n    display: flex;\n    justify-content: center;\n    width: 100%;\n    z-index: 490;\n    position: absolute;\n    margin-top: 53px;\n    pointer-events: none;\n}\n\n/*\n    Make the (background) page not scrollable when modals are open\n    This CSS class is automatically added to the body when react-modal is open\n*/\n\n.ReactModal__Body--open {\n    overflow: hidden;\n}\n\n/* when in the browser's fullscreen mode, we need to put our own background to avoid just having black */\n\n.gui_fullscreen-background_2RW_a {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    /* overridden by JS; this will be used if the browser can't understand that color */\n    background-color: white;\n}\n", ""]);
+exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.gui_page-wrapper_1cgy0 {\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n}\n\n.gui_body-wrapper_-N0sA {\n    flex-grow: 1;\n    background-color: var(--ui-primary);\n}\n\n.gui_body-wrapper_-N0sA * {\n    box-sizing: border-box;\n}\n\n.gui_flex-wrapper_uXHkj {\n    display: flex;\n\n    /*\n        Make 2 columns:\n        a) for the blocks + workspace panes, and\n        b) for combined stage menu + stage + sprite/stage selectors\n    */\n    flex-direction: row;\n    height: 100%;\n\n    /*\n        Stop scrollbar popping in and out from scratch-blocks border issue\n        https://github.com/LLK/scratch-gui/issues/318\n        TW: and also fix double horizontal scrollbar at some screen sizes in paint editor\n    */\n    overflow: hidden;\n}\n\n.gui_editor-wrapper_2DYcj {\n    /*\n        This is carefully balanced--  the minimum width at which the GUI will be displayed is 1024px.\n        At that size, the stage pane is 408px wide, with $space of padding to each side.\n        However, we must also add the border width to the stage pane. All-in-all, the stage pane's final width is\n        408px + ($space + $stage-standard-border-width * 2) (one border & padding per left/right side).\n\n        @todo This is in place to prevent \"doubling up\" of horizontal scrollbars in narrow windows, but there are likely\n        much better ways to solve that (e.g. undo #2124, remove this flex-basis entirely). However, they run their own\n        risks of breaking things, so let's just leave this as-is for the time being.\n    */\n    flex-basis: calc(1024px - 408px - ((0.5rem + 0.0625rem) * 2));\n    flex-grow: 1;\n    flex-shrink: 0;\n    position: relative;\n\n    display: flex;\n    flex-direction: column;\n}\n\n.gui_tab-list_87TYM {\n    height: 2.75rem;\n    width: 250px; /* Match width of the toolbox */\n    display: flex;\n    align-items: flex-end;\n    flex-shrink: 0;\n\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    font-weight: 500;\n    font-size: 0.80rem;\n\n    /* Overrides for react-tabs styling */\n    margin: 0 !important;\n    border-bottom: 0 !important;\n\n    color: var(--text-primary);\n}\n\n.gui_tab_27Unf {\n    flex-grow: 1;\n    height: 80%;\n    margin-bottom: 0;\n\n    border-radius: 1rem 1rem 0 0;\n    border: 1px solid var(--ui-black-transparent);\n\n    padding: 0.125rem 1.25rem 0;\n    font-size: 0.75rem;\n\n    background-color: var(--ui-tertiary);\n    color: var(--ui-text-primary-transparent);\n\n    display: flex;\n    justify-content: center;\n    align-items: center;\n\n    -webkit-user-select: none;\n\n       -moz-user-select: none;\n\n        -ms-user-select: none;\n\n            user-select: none;\n    white-space: nowrap;\n}\n\n[dir=\"ltr\"] .gui_tab_27Unf {\n    margin-left: -0.5rem;\n}\n\n[dir=\"rtl\"] .gui_tab_27Unf {\n    margin-right: -0.5rem;\n}\n\n[dir=\"ltr\"] .gui_tab_27Unf:nth-of-type(1) {\n    margin-left: 0;\n}\n\n[dir=\"rtl\"] .gui_tab_27Unf:nth-of-type(1) {\n    margin-right: 0;\n}\n\n/* Use z-indices to force left-on-top for tabs */\n\n.gui_tab_27Unf:nth-of-type(1) {\n    z-index: 5;\n}\n\n.gui_tab_27Unf:nth-of-type(2) {\n    z-index: 4;\n}\n\n.gui_tab_27Unf:nth-of-type(3) {\n    z-index: 3;\n}\n\n.gui_tab_27Unf:nth-of-type(4) {\n    z-index: 2;\n}\n\n.gui_tab_27Unf:nth-of-type(5) {\n    z-index: 1;\n}\n\n.gui_tab_27Unf:hover {\n  background-color: var(--ui-primary);\n}\n\n.gui_tab_27Unf.gui_is-selected_sHAiu {\n    height: 90%;\n    color: var(--looks-secondary);\n    background-color: var(--ui-white);\n    z-index: 5; /* Make sure selected is always above */\n}\n\n.gui_tab_27Unf img {\n    width: 1.375rem;\n    filter: grayscale(100%);\n}\n\n.gui_compact_1fM6D {}\n\n.gui_compact_1fM6D .gui_tab_27Unf span {\n    display: none;\n}\n\n[dir=\"ltr\"] :not(.gui_compact_1fM6D) > .gui_tab_27Unf img {\n    margin-right: 0.125rem;\n}\n\n[dir=\"rtl\"] :not(.gui_compact_1fM6D) >  .gui_tab_27Unf img {\n    margin-left: 0.125rem;\n}\n\n/* mirror blocks and sound tab icons */\n\n[dir=\"rtl\"] .gui_tab_27Unf:nth-of-type(1) img {\n    transform: scaleX(-1);\n}\n\n[dir=\"rtl\"] .gui_tab_27Unf:nth-of-type(3) img {\n    transform: scaleX(-1);\n}\n\n.gui_tab_27Unf.gui_is-selected_sHAiu img {\n    filter: none;\n}\n\n/* Tab style overrides from react-tabs */\n\n.gui_tab_27Unf.gui_is-selected_sHAiu:after {\n    display: none;\n}\n\n.gui_tab_27Unf.gui_is-selected_sHAiu:focus {\n    outline: none;\n    box-shadow: none;\n    border-color: var(--ui-black-transparent);\n}\n\n.gui_tab_27Unf.gui_is-selected_sHAiu:focus:after {\n    display: none;\n}\n\n/* Body of the tabs */\n\n.gui_tabs_AgmuP {\n    position: relative;\n    flex-grow: 1;\n    display: flex;\n    flex-direction: column;\n}\n\n.gui_tab-panel_22sLx {\n    position: relative;\n    flex-grow: 1;\n    display: none;\n}\n\n.gui_tab-panel_22sLx.gui_is-selected_sHAiu {\n    display: flex;\n}\n\n.gui_blocks-wrapper_1ccgf {\n    flex-grow: 1;\n    position: relative;\n}\n\n.gui_stage-and-target-wrapper_69KBf {\n    /*\n        Makes rows for children:\n          1) stage menu\n          2) stage\n          3) sprite/stage selectors\n        Only reason we need this, is so .targetWrapper, which holds the selectors,\n        goes to full vertical height of the window\n    */\n    display: flex;\n    flex-direction: column;\n    /* pad entire wrapper to the left and right; allow children to fill width */\n    padding-left: 0.5rem;\n    padding-right: 0.5rem;\n\n    /* this will only ever be as wide as the stage */\n    flex-basis: 0;\n}\n\n.gui_target-wrapper_36Gbz {\n    display: flex;\n    flex-grow: 1;\n    flex-basis: 0;\n\n    padding-top: 0.5rem;\n    min-height: 0; /* this makes it work in Firefox */\n\n    /*\n        For making the sprite-selector a scrollable pane\n        @todo: Not working in Safari\n    */\n    /* TODO this also breaks the thermometer menu */\n    /* overflow: hidden; */\n}\n\n.gui_extension-button-container_b4rCs {\n    width: 3.75rem;\n    height: 3.25rem;\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    z-index: 42;\n    background: var(--looks-secondary);\n\n    border: 1px solid var(--looks-secondary);\n    box-sizing: content-box; /* To match scratch-block vertical toolbox borders */\n}\n\n.gui_extension-button-container_b4rCs:before {\n    content: \"\";\n    position: absolute;\n    top: calc(calc(-1 * 15px) - 1px);\n    left: -1px;\n    background: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.15));\n    height: 15px;\n    width: calc(100% + 0.5px);\n}\n\n.gui_extension-button_2T7PA {\n    background: none;\n    border: none;\n    outline: none;\n    width: 100%;\n    height: 100%;\n    cursor: pointer;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n}\n\n.gui_extension-button-icon_S4gDk {\n    width: 1.75rem;\n    height: 1.75rem;\n}\n\n[dir=\"rtl\"] .gui_extension-button-icon_S4gDk {\n    transform: scaleX(-1);\n}\n\n.gui_extension-button_2T7PA > div {\n    margin-top: 0;\n}\n\n/* Sprite Selection Watermark */\n\n.gui_watermark_3vBYb {\n    position: absolute;\n    top: 1.25rem;\n    pointer-events: none;\n}\n\n[dir=\"ltr\"] .gui_watermark_3vBYb {\n    right: 1.25rem;\n}\n\n[dir=\"rtl\"] .gui_watermark_3vBYb {\n    left: 1.25rem;\n}\n\n/* Menu */\n\n.gui_menu-bar-position_3U1T0 {\n    position: relative;\n    z-index: 491;\n}\n\n/* Alerts */\n\n.gui_alerts-container_15BWp {\n    display: flex;\n    justify-content: center;\n    width: 100%;\n    z-index: 490;\n    position: absolute;\n    margin-top: 53px;\n    pointer-events: none;\n}\n\n/*\n    Make the (background) page not scrollable when modals are open\n    This CSS class is automatically added to the body when react-modal is open\n*/\n\n.ReactModal__Body--open {\n    overflow: hidden;\n}\n\n/* when in the browser's fullscreen mode, we need to put our own background to avoid just having black */\n\n.gui_fullscreen-background_3g8mV {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    /* overridden by JS; this will be used if the browser can't understand that color */\n    background-color: white;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"page-wrapper": "gui_page-wrapper_r7IhT",
-	"pageWrapper": "gui_page-wrapper_r7IhT",
-	"body-wrapper": "gui_body-wrapper_1T2l7",
-	"bodyWrapper": "gui_body-wrapper_1T2l7",
-	"flex-wrapper": "gui_flex-wrapper_2AgdD",
-	"flexWrapper": "gui_flex-wrapper_2AgdD",
-	"editor-wrapper": "gui_editor-wrapper_WspaC",
-	"editorWrapper": "gui_editor-wrapper_WspaC",
-	"tab-list": "gui_tab-list_3r8RB",
-	"tabList": "gui_tab-list_3r8RB",
-	"tab": "gui_tab_3k_DV",
-	"is-selected": "gui_is-selected_3nXL3",
-	"isSelected": "gui_is-selected_3nXL3",
-	"compact": "gui_compact_1rJFq",
-	"tabs": "gui_tabs_3Cns4",
-	"tab-panel": "gui_tab-panel_12yVw",
-	"tabPanel": "gui_tab-panel_12yVw",
-	"blocks-wrapper": "gui_blocks-wrapper_oRY_r",
-	"blocksWrapper": "gui_blocks-wrapper_oRY_r",
-	"stage-and-target-wrapper": "gui_stage-and-target-wrapper_2TUbW",
-	"stageAndTargetWrapper": "gui_stage-and-target-wrapper_2TUbW",
-	"target-wrapper": "gui_target-wrapper_2YpM2",
-	"targetWrapper": "gui_target-wrapper_2YpM2",
-	"extension-button-container": "gui_extension-button-container_sM98M",
-	"extensionButtonContainer": "gui_extension-button-container_sM98M",
-	"extension-button": "gui_extension-button_3Z58M",
-	"extensionButton": "gui_extension-button_3Z58M",
-	"extension-button-icon": "gui_extension-button-icon_3lDFf",
-	"extensionButtonIcon": "gui_extension-button-icon_3lDFf",
-	"watermark": "gui_watermark_3oGgV",
-	"menu-bar-position": "gui_menu-bar-position_6ejza",
-	"menuBarPosition": "gui_menu-bar-position_6ejza",
-	"alerts-container": "gui_alerts-container_2cnr7",
-	"alertsContainer": "gui_alerts-container_2cnr7",
-	"fullscreen-background": "gui_fullscreen-background_2RW_a",
-	"fullscreenBackground": "gui_fullscreen-background_2RW_a"
+	"page-wrapper": "gui_page-wrapper_1cgy0",
+	"pageWrapper": "gui_page-wrapper_1cgy0",
+	"body-wrapper": "gui_body-wrapper_-N0sA",
+	"bodyWrapper": "gui_body-wrapper_-N0sA",
+	"flex-wrapper": "gui_flex-wrapper_uXHkj",
+	"flexWrapper": "gui_flex-wrapper_uXHkj",
+	"editor-wrapper": "gui_editor-wrapper_2DYcj",
+	"editorWrapper": "gui_editor-wrapper_2DYcj",
+	"tab-list": "gui_tab-list_87TYM",
+	"tabList": "gui_tab-list_87TYM",
+	"tab": "gui_tab_27Unf",
+	"is-selected": "gui_is-selected_sHAiu",
+	"isSelected": "gui_is-selected_sHAiu",
+	"compact": "gui_compact_1fM6D",
+	"tabs": "gui_tabs_AgmuP",
+	"tab-panel": "gui_tab-panel_22sLx",
+	"tabPanel": "gui_tab-panel_22sLx",
+	"blocks-wrapper": "gui_blocks-wrapper_1ccgf",
+	"blocksWrapper": "gui_blocks-wrapper_1ccgf",
+	"stage-and-target-wrapper": "gui_stage-and-target-wrapper_69KBf",
+	"stageAndTargetWrapper": "gui_stage-and-target-wrapper_69KBf",
+	"target-wrapper": "gui_target-wrapper_36Gbz",
+	"targetWrapper": "gui_target-wrapper_36Gbz",
+	"extension-button-container": "gui_extension-button-container_b4rCs",
+	"extensionButtonContainer": "gui_extension-button-container_b4rCs",
+	"extension-button": "gui_extension-button_2T7PA",
+	"extensionButton": "gui_extension-button_2T7PA",
+	"extension-button-icon": "gui_extension-button-icon_S4gDk",
+	"extensionButtonIcon": "gui_extension-button-icon_S4gDk",
+	"watermark": "gui_watermark_3vBYb",
+	"menu-bar-position": "gui_menu-bar-position_3U1T0",
+	"menuBarPosition": "gui_menu-bar-position_3U1T0",
+	"alerts-container": "gui_alerts-container_15BWp",
+	"alertsContainer": "gui_alerts-container_15BWp",
+	"fullscreen-background": "gui_fullscreen-background_3g8mV",
+	"fullscreenBackground": "gui_fullscreen-background_3g8mV"
 };
 
 /***/ }),
@@ -1097,13 +1097,13 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.icon-button_container_Vz-T6 {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    cursor: pointer;\n    font-size: 0.75rem;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    color: var(--looks-secondary);\n    border-radius: 0.5rem;\n}\n\n.icon-button_container_Vz-T6 + .icon-button_container_Vz-T6 {\n    margin-top: 1.25rem;\n}\n\n.icon-button_title_3_47t {\n    margin-top: 0.5rem;\n    text-align: center;\n}\n\n.icon-button_disabled_14mfd {\n    opacity: 0.5;\n    pointer-events: none;\n}\n\n.icon-button_container_Vz-T6:active {\n    background-color: var(--looks-light-transparent);\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.icon-button_container_278u5 {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    cursor: pointer;\n    font-size: 0.75rem;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    color: var(--looks-secondary);\n    border-radius: 0.5rem;\n}\n\n.icon-button_container_278u5 + .icon-button_container_278u5 {\n    margin-top: 1.25rem;\n}\n\n.icon-button_title_36ChS {\n    margin-top: 0.5rem;\n    text-align: center;\n}\n\n.icon-button_disabled_2HD_J {\n    opacity: 0.5;\n    pointer-events: none;\n}\n\n.icon-button_container_278u5:active {\n    background-color: var(--looks-light-transparent);\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"container": "icon-button_container_Vz-T6",
-	"title": "icon-button_title_3_47t",
-	"disabled": "icon-button_disabled_14mfd"
+	"container": "icon-button_container_278u5",
+	"title": "icon-button_title_36ChS",
+	"disabled": "icon-button_disabled_2HD_J"
 };
 
 /***/ }),
@@ -1120,57 +1120,57 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.library-item_library-item_1nZBu {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: flex-start;\n    flex-basis: 160px;\n    position: relative;\n    height: 160px;\n    max-width: 160px;\n    margin: 0.5rem;\n    padding: 1rem 1rem 0 1rem;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    color: var(--text-primary);\n    background: var(--ui-white);\n    border-width: 2px;\n    border-style: solid;\n    border-color: var(--ui-black-transparent);\n    border-radius: 0.5rem;\n    text-align: center;\n    cursor: pointer;\n}\n\n.library-item_library-item-extension_wHgEE {\n    align-self: stretch;\n}\n\n.library-item_library-item_1nZBu:hover {\n    border-width: 2px;\n    border-color: var(--looks-secondary);\n}\n\n.library-item_hidden_qWfvV {\n    display: none;\n}\n\n.library-item_disabled_udvIX {\n    opacity: .5;\n    cursor: auto;\n}\n\n.library-item_disabled_udvIX:hover {\n    border-color: var(--ui-black-transparent);\n}\n\n.library-item_library-item-image-container-wrapper_3TFcU {\n    height: 100px;\n    width: 100%;\n    position: relative;\n}\n\n.library-item_library-item-image-container_1VgKJ {\n    position: absolute;\n    height: 100px;\n    width: 100%;\n}\n\n.library-item_library-item-inset-image-container_2oGku {\n    position: relative;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    margin-top: -2.5rem;\n    align-self: flex-start;\n    background-color: var(--pen-primary);\n    width: 3.5rem;\n    height: 3.5rem;\n    border-radius: 0.5rem;\n    border: 0.25rem solid var(--ui-white);\n}\n\n[dir=\"ltr\"] .library-item_library-item-inset-image-container_2oGku {\n    margin-left: 1rem;\n}\n\n[dir=\"rtl\"] .library-item_library-item-inset-image-container_2oGku {\n    margin-right: 1rem;\n}\n\n.library-item_library-item-image_3G7nd {\n    max-width: 100%;\n    max-height: 100%;\n}\n\n.library-item_library-item-inset-image_qk3QS {\n    width: 2.5rem;\n}\n\n.library-item_library-item-name_35ftf {\n    width: 80%;\n    margin: 0.25rem 0;\n    text-align: center;\n\n    /*\n        For truncating overflowing text gracefully\n        Min-width is for a bug: https://css-tricks.com/flexbox-truncated-text\n    */\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    min-width: 0;\n}\n\n.library-item_featured-item_3dHDW {\n    flex-basis: 300px;\n    max-width: 300px;\n    height: auto;\n    overflow: hidden;\n    padding: 0;\n}\n\n.library-item_featured-image-container_2x7jE {\n    position: relative;\n    width: 100%;\n}\n\n.library-item_featured-image_1rsDU {\n    width: 100%;\n    aspect-ratio: 2;\n}\n\n.library-item_featured-text_xD5Ve {\n    font-weight: bold;\n    padding: 10px;\n    /* height: 140px; */\n    width: 300px;\n}\n\n[dir=\"ltr\"] .library-item_featured-extension-text_2sSn4 {\n    text-align: left;\n    padding-left: 1.25rem;\n}\n\n[dir=\"rtl\"] .library-item_featured-extension-text_2sSn4 {\n    text-align: right;\n    padding-right: 1.25rem;\n}\n\n.library-item_featured-description_1hGaH {\n    display: block;\n    font-weight: normal;\n    line-height: 1.375rem;\n    padding-top: .3125rem;\n    padding-bottom: .25rem;\n}\n\n.library-item_featured-extension-metadata_24DYi {\n    width: 100%;\n    padding: 0 1.25rem 1rem 1.25rem;\n    display: flex;\n    flex-direction: row;\n    align-items: flex-start;\n    font-size: 12px;\n    color: var(--text-primary);\n    opacity: 0.75;\n}\n\n[dir=\"ltr\"] .library-item_featured-extension-metadata_24DYi {\n    text-align: left;\n}\n\n[dir=\"rtl\"] .library-item_featured-extension-metadata_24DYi {\n    text-align: right;\n}\n\n.library-item_featured-extension-requirement_30Ghz {\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n}\n\n.library-item_featured-extension-collaboration_13t7u {\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n}\n\n.library-item_featured-extension-metadata-detail_2kvJn {\n    height: 100%;\n    padding-top: 0.4rem;\n    font-weight: bold;\n}\n\n.library-item_featured-extension-metadata-detail_2kvJn img {\n    margin-right: 0.25rem;\n    width: 20px;\n    height: 20px;\n}\n\n.library-item_extension-links_ndWNb {\n    width: 300px;\n    padding: 0 1.25rem 1rem 1.25rem;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    opacity: 0.75;\n    text-align: left;\n}\n\n.library-item_extension-links_ndWNb a {\n    color: inherit !important;\n    text-decoration: underline;\n}\n\n.library-item_coming-soon-text_ZcFGD {\n    position: absolute;\n    background-color: var(--data-primary);\n    border-radius: 1rem;\n    box-shadow: 0 0 .5rem hsla(0, 0%, 0%, .25);\n    padding: .5rem 1rem;\n    font-size: .875rem;\n    font-weight: bold;\n    color: var(--ui-white);\n}\n\n[dir=\"ltr\"] .library-item_coming-soon-text_ZcFGD {\n    transform: translate(calc(2 * 0.5rem), calc(2 * 0.5rem));\n}\n\n[dir=\"rtl\"] .library-item_coming-soon-text_ZcFGD {\n    transform: translate(calc(-2 * 0.5rem), calc(2 * 0.5rem));\n}\n\n.library-item_favorite-container_3ebO5 {\n    display: none;\n    background: none;\n    border: none;\n    padding: 0;\n    margin: 0;\n    position: absolute;\n    top: 0.5rem;\n    left: 0.5rem;\n}\n\n.library-item_favorite-icon_20B_7 {\n    width: 32px;\n    height: 32px;\n}\n\n.library-item_favorite-container_3ebO5.library-item_active_3pQCM,\n.library-item_library-item_1nZBu:hover .library-item_favorite-container_3ebO5 {\n    display: block;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.library-item_library-item_1DcMO {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: flex-start;\n    flex-basis: 160px;\n    position: relative;\n    height: 160px;\n    max-width: 160px;\n    margin: 0.5rem;\n    padding: 1rem 1rem 0 1rem;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    color: var(--text-primary);\n    background: var(--ui-white);\n    border-width: 2px;\n    border-style: solid;\n    border-color: var(--ui-black-transparent);\n    border-radius: 0.5rem;\n    text-align: center;\n    cursor: pointer;\n}\n\n.library-item_library-item-extension_3xus9 {\n    align-self: stretch;\n}\n\n.library-item_library-item_1DcMO:hover {\n    border-width: 2px;\n    border-color: var(--looks-secondary);\n}\n\n.library-item_hidden_1ILc7 {\n    display: none;\n}\n\n.library-item_disabled_1-aDH {\n    opacity: .5;\n    cursor: auto;\n}\n\n.library-item_disabled_1-aDH:hover {\n    border-color: var(--ui-black-transparent);\n}\n\n.library-item_library-item-image-container-wrapper_x4EWB {\n    height: 100px;\n    width: 100%;\n    position: relative;\n}\n\n.library-item_library-item-image-container_3dqjX {\n    position: absolute;\n    height: 100px;\n    width: 100%;\n}\n\n.library-item_library-item-inset-image-container_3PLJ1 {\n    position: relative;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    margin-top: -2.5rem;\n    align-self: flex-start;\n    background-color: var(--pen-primary);\n    width: 3.5rem;\n    height: 3.5rem;\n    border-radius: 0.5rem;\n    border: 0.25rem solid var(--ui-white);\n}\n\n[dir=\"ltr\"] .library-item_library-item-inset-image-container_3PLJ1 {\n    margin-left: 1rem;\n}\n\n[dir=\"rtl\"] .library-item_library-item-inset-image-container_3PLJ1 {\n    margin-right: 1rem;\n}\n\n.library-item_library-item-image_2bORn {\n    max-width: 100%;\n    max-height: 100%;\n}\n\n.library-item_library-item-inset-image_17Tmt {\n    width: 2.5rem;\n}\n\n.library-item_library-item-name_2qMXu {\n    width: 80%;\n    margin: 0.25rem 0;\n    text-align: center;\n\n    /*\n        For truncating overflowing text gracefully\n        Min-width is for a bug: https://css-tricks.com/flexbox-truncated-text\n    */\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    min-width: 0;\n}\n\n.library-item_featured-item_3V2-t {\n    flex-basis: 300px;\n    max-width: 300px;\n    height: auto;\n    overflow: hidden;\n    padding: 0;\n}\n\n.library-item_featured-image-container_1KIHG {\n    position: relative;\n    width: 100%;\n}\n\n.library-item_featured-image_2gwZ6 {\n    width: 100%;\n    aspect-ratio: 2;\n}\n\n.library-item_featured-text_2KFel {\n    font-weight: bold;\n    padding: 10px;\n    /* height: 140px; */\n    width: 300px;\n}\n\n[dir=\"ltr\"] .library-item_featured-extension-text_22A1k {\n    text-align: left;\n    padding-left: 1.25rem;\n}\n\n[dir=\"rtl\"] .library-item_featured-extension-text_22A1k {\n    text-align: right;\n    padding-right: 1.25rem;\n}\n\n.library-item_featured-description_MjIJw {\n    display: block;\n    font-weight: normal;\n    line-height: 1.375rem;\n    padding-top: .3125rem;\n    padding-bottom: .25rem;\n}\n\n.library-item_featured-extension-metadata_3D8E8 {\n    width: 100%;\n    padding: 0 1.25rem 1rem 1.25rem;\n    display: flex;\n    flex-direction: row;\n    align-items: flex-start;\n    font-size: 12px;\n    color: var(--text-primary);\n    opacity: 0.75;\n}\n\n[dir=\"ltr\"] .library-item_featured-extension-metadata_3D8E8 {\n    text-align: left;\n}\n\n[dir=\"rtl\"] .library-item_featured-extension-metadata_3D8E8 {\n    text-align: right;\n}\n\n.library-item_featured-extension-requirement_2u2IO {\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n}\n\n.library-item_featured-extension-collaboration_2dGS9 {\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n}\n\n.library-item_featured-extension-metadata-detail_1M9BV {\n    height: 100%;\n    padding-top: 0.4rem;\n    font-weight: bold;\n}\n\n.library-item_featured-extension-metadata-detail_1M9BV img {\n    margin-right: 0.25rem;\n    width: 20px;\n    height: 20px;\n}\n\n.library-item_extension-links_3wgib {\n    width: 300px;\n    padding: 0 1.25rem 1rem 1.25rem;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    opacity: 0.75;\n    text-align: left;\n}\n\n.library-item_extension-links_3wgib a {\n    color: inherit !important;\n    text-decoration: underline;\n}\n\n.library-item_coming-soon-text_30OPh {\n    position: absolute;\n    background-color: var(--data-primary);\n    border-radius: 1rem;\n    box-shadow: 0 0 .5rem hsla(0, 0%, 0%, .25);\n    padding: .5rem 1rem;\n    font-size: .875rem;\n    font-weight: bold;\n    color: var(--ui-white);\n}\n\n[dir=\"ltr\"] .library-item_coming-soon-text_30OPh {\n    transform: translate(calc(2 * 0.5rem), calc(2 * 0.5rem));\n}\n\n[dir=\"rtl\"] .library-item_coming-soon-text_30OPh {\n    transform: translate(calc(-2 * 0.5rem), calc(2 * 0.5rem));\n}\n\n.library-item_favorite-container_2M2ay {\n    display: none;\n    background: none;\n    border: none;\n    padding: 0;\n    margin: 0;\n    position: absolute;\n    top: 0.5rem;\n    left: 0.5rem;\n}\n\n.library-item_favorite-icon_1ENdX {\n    width: 32px;\n    height: 32px;\n}\n\n.library-item_favorite-container_2M2ay.library-item_active_2mL0e,\n.library-item_library-item_1DcMO:hover .library-item_favorite-container_2M2ay {\n    display: block;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"library-item": "library-item_library-item_1nZBu",
-	"libraryItem": "library-item_library-item_1nZBu",
-	"library-item-extension": "library-item_library-item-extension_wHgEE",
-	"libraryItemExtension": "library-item_library-item-extension_wHgEE",
-	"hidden": "library-item_hidden_qWfvV",
-	"disabled": "library-item_disabled_udvIX",
-	"library-item-image-container-wrapper": "library-item_library-item-image-container-wrapper_3TFcU",
-	"libraryItemImageContainerWrapper": "library-item_library-item-image-container-wrapper_3TFcU",
-	"library-item-image-container": "library-item_library-item-image-container_1VgKJ",
-	"libraryItemImageContainer": "library-item_library-item-image-container_1VgKJ",
-	"library-item-inset-image-container": "library-item_library-item-inset-image-container_2oGku",
-	"libraryItemInsetImageContainer": "library-item_library-item-inset-image-container_2oGku",
-	"library-item-image": "library-item_library-item-image_3G7nd",
-	"libraryItemImage": "library-item_library-item-image_3G7nd",
-	"library-item-inset-image": "library-item_library-item-inset-image_qk3QS",
-	"libraryItemInsetImage": "library-item_library-item-inset-image_qk3QS",
-	"library-item-name": "library-item_library-item-name_35ftf",
-	"libraryItemName": "library-item_library-item-name_35ftf",
-	"featured-item": "library-item_featured-item_3dHDW",
-	"featuredItem": "library-item_featured-item_3dHDW",
-	"featured-image-container": "library-item_featured-image-container_2x7jE",
-	"featuredImageContainer": "library-item_featured-image-container_2x7jE",
-	"featured-image": "library-item_featured-image_1rsDU",
-	"featuredImage": "library-item_featured-image_1rsDU",
-	"featured-text": "library-item_featured-text_xD5Ve",
-	"featuredText": "library-item_featured-text_xD5Ve",
-	"featured-extension-text": "library-item_featured-extension-text_2sSn4",
-	"featuredExtensionText": "library-item_featured-extension-text_2sSn4",
-	"featured-description": "library-item_featured-description_1hGaH",
-	"featuredDescription": "library-item_featured-description_1hGaH",
-	"featured-extension-metadata": "library-item_featured-extension-metadata_24DYi",
-	"featuredExtensionMetadata": "library-item_featured-extension-metadata_24DYi",
-	"featured-extension-requirement": "library-item_featured-extension-requirement_30Ghz",
-	"featuredExtensionRequirement": "library-item_featured-extension-requirement_30Ghz",
-	"featured-extension-collaboration": "library-item_featured-extension-collaboration_13t7u",
-	"featuredExtensionCollaboration": "library-item_featured-extension-collaboration_13t7u",
-	"featured-extension-metadata-detail": "library-item_featured-extension-metadata-detail_2kvJn",
-	"featuredExtensionMetadataDetail": "library-item_featured-extension-metadata-detail_2kvJn",
-	"extension-links": "library-item_extension-links_ndWNb",
-	"extensionLinks": "library-item_extension-links_ndWNb",
-	"coming-soon-text": "library-item_coming-soon-text_ZcFGD",
-	"comingSoonText": "library-item_coming-soon-text_ZcFGD",
-	"favorite-container": "library-item_favorite-container_3ebO5",
-	"favoriteContainer": "library-item_favorite-container_3ebO5",
-	"favorite-icon": "library-item_favorite-icon_20B_7",
-	"favoriteIcon": "library-item_favorite-icon_20B_7",
-	"active": "library-item_active_3pQCM"
+	"library-item": "library-item_library-item_1DcMO",
+	"libraryItem": "library-item_library-item_1DcMO",
+	"library-item-extension": "library-item_library-item-extension_3xus9",
+	"libraryItemExtension": "library-item_library-item-extension_3xus9",
+	"hidden": "library-item_hidden_1ILc7",
+	"disabled": "library-item_disabled_1-aDH",
+	"library-item-image-container-wrapper": "library-item_library-item-image-container-wrapper_x4EWB",
+	"libraryItemImageContainerWrapper": "library-item_library-item-image-container-wrapper_x4EWB",
+	"library-item-image-container": "library-item_library-item-image-container_3dqjX",
+	"libraryItemImageContainer": "library-item_library-item-image-container_3dqjX",
+	"library-item-inset-image-container": "library-item_library-item-inset-image-container_3PLJ1",
+	"libraryItemInsetImageContainer": "library-item_library-item-inset-image-container_3PLJ1",
+	"library-item-image": "library-item_library-item-image_2bORn",
+	"libraryItemImage": "library-item_library-item-image_2bORn",
+	"library-item-inset-image": "library-item_library-item-inset-image_17Tmt",
+	"libraryItemInsetImage": "library-item_library-item-inset-image_17Tmt",
+	"library-item-name": "library-item_library-item-name_2qMXu",
+	"libraryItemName": "library-item_library-item-name_2qMXu",
+	"featured-item": "library-item_featured-item_3V2-t",
+	"featuredItem": "library-item_featured-item_3V2-t",
+	"featured-image-container": "library-item_featured-image-container_1KIHG",
+	"featuredImageContainer": "library-item_featured-image-container_1KIHG",
+	"featured-image": "library-item_featured-image_2gwZ6",
+	"featuredImage": "library-item_featured-image_2gwZ6",
+	"featured-text": "library-item_featured-text_2KFel",
+	"featuredText": "library-item_featured-text_2KFel",
+	"featured-extension-text": "library-item_featured-extension-text_22A1k",
+	"featuredExtensionText": "library-item_featured-extension-text_22A1k",
+	"featured-description": "library-item_featured-description_MjIJw",
+	"featuredDescription": "library-item_featured-description_MjIJw",
+	"featured-extension-metadata": "library-item_featured-extension-metadata_3D8E8",
+	"featuredExtensionMetadata": "library-item_featured-extension-metadata_3D8E8",
+	"featured-extension-requirement": "library-item_featured-extension-requirement_2u2IO",
+	"featuredExtensionRequirement": "library-item_featured-extension-requirement_2u2IO",
+	"featured-extension-collaboration": "library-item_featured-extension-collaboration_2dGS9",
+	"featuredExtensionCollaboration": "library-item_featured-extension-collaboration_2dGS9",
+	"featured-extension-metadata-detail": "library-item_featured-extension-metadata-detail_1M9BV",
+	"featuredExtensionMetadataDetail": "library-item_featured-extension-metadata-detail_1M9BV",
+	"extension-links": "library-item_extension-links_3wgib",
+	"extensionLinks": "library-item_extension-links_3wgib",
+	"coming-soon-text": "library-item_coming-soon-text_30OPh",
+	"comingSoonText": "library-item_coming-soon-text_30OPh",
+	"favorite-container": "library-item_favorite-container_2M2ay",
+	"favoriteContainer": "library-item_favorite-container_2M2ay",
+	"favorite-icon": "library-item_favorite-icon_1ENdX",
+	"favoriteIcon": "library-item_favorite-icon_1ENdX",
+	"active": "library-item_active_2mL0e"
 };
 
 /***/ }),
@@ -1187,25 +1187,25 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n.library_library-scroll-grid_7xk1I {\n    display: flex;\n    justify-content: flex-start;\n    align-content: flex-start;\n    align-items: flex-start;\n    background: var(--ui-secondary);\n    flex-grow: 1;\n    flex-wrap: wrap;\n    overflow-y: auto;\n    height: auto;\n    padding: 0.5rem;\n    height: calc(100% - 3.125rem);\n}\n\n.library_library-scroll-grid_7xk1I.library_withFilterBar_G4Jc2 {\n    height: calc(100% - 3.125rem - 2.5rem - 2rem);\n}\n\n.library_filter-bar_8xrjd {\n    display: flex;\n    flex-direction: row;\n    justify-content: flex-start;\n    align-items: center;\n    height: calc(2.5rem + 2rem); /* padding */\n    background-color: var(--looks-transparent);\n    padding: 0 1rem;\n    font-size: .875rem;\n}\n\n.library_filter-bar-item_1eoVo {\n    margin-right: .75rem;\n}\n\n.library_filter_1E2FK {\n    flex-grow: 0;\n}\n\n.library_filter-input_3U79K {\n    width: 11.5rem;\n    transition: .2s;\n}\n\n.library_filter-input_3U79K:focus,\n.library_filter-input_3U79K:not([value=\"\"]) {\n    width: 18.75rem;\n}\n\n.library_divider_3gNN2 {\n    transform: scaleY(1.39);\n    height: 2.5rem;\n}\n\n.library_tag-wrapper_3hrLl {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    height: 2.5rem;\n    overflow: hidden;\n}\n\n.library_spinner-wrapper_zSF8e {\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n", ""]);
+exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n.library_library-scroll-grid_1jyXm {\n    display: flex;\n    justify-content: flex-start;\n    align-content: flex-start;\n    align-items: flex-start;\n    background: var(--ui-secondary);\n    flex-grow: 1;\n    flex-wrap: wrap;\n    overflow-y: auto;\n    height: auto;\n    padding: 0.5rem;\n    height: calc(100% - 3.125rem);\n}\n\n.library_library-scroll-grid_1jyXm.library_withFilterBar_26Opm {\n    height: calc(100% - 3.125rem - 2.5rem - 2rem);\n}\n\n.library_filter-bar_1W0DW {\n    display: flex;\n    flex-direction: row;\n    justify-content: flex-start;\n    align-items: center;\n    height: calc(2.5rem + 2rem); /* padding */\n    background-color: var(--looks-transparent);\n    padding: 0 1rem;\n    font-size: .875rem;\n}\n\n.library_filter-bar-item_99aoX {\n    margin-right: .75rem;\n}\n\n.library_filter_2k-oj {\n    flex-grow: 0;\n}\n\n.library_filter-input_6w2X2 {\n    width: 11.5rem;\n    transition: .2s;\n}\n\n.library_filter-input_6w2X2:focus,\n.library_filter-input_6w2X2:not([value=\"\"]) {\n    width: 18.75rem;\n}\n\n.library_divider_2xD3D {\n    transform: scaleY(1.39);\n    height: 2.5rem;\n}\n\n.library_tag-wrapper_2-QEQ {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    height: 2.5rem;\n    overflow: hidden;\n}\n\n.library_spinner-wrapper_1C8Ew {\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"library-scroll-grid": "library_library-scroll-grid_7xk1I",
-	"libraryScrollGrid": "library_library-scroll-grid_7xk1I",
-	"withFilterBar": "library_withFilterBar_G4Jc2",
-	"filter-bar": "library_filter-bar_8xrjd",
-	"filterBar": "library_filter-bar_8xrjd",
-	"filter-bar-item": "library_filter-bar-item_1eoVo",
-	"filterBarItem": "library_filter-bar-item_1eoVo",
-	"filter": "library_filter_1E2FK",
-	"filter-input": "library_filter-input_3U79K",
-	"filterInput": "library_filter-input_3U79K",
-	"divider": "library_divider_3gNN2",
-	"tag-wrapper": "library_tag-wrapper_3hrLl",
-	"tagWrapper": "library_tag-wrapper_3hrLl",
-	"spinner-wrapper": "library_spinner-wrapper_zSF8e",
-	"spinnerWrapper": "library_spinner-wrapper_zSF8e"
+	"library-scroll-grid": "library_library-scroll-grid_1jyXm",
+	"libraryScrollGrid": "library_library-scroll-grid_1jyXm",
+	"withFilterBar": "library_withFilterBar_26Opm",
+	"filter-bar": "library_filter-bar_1W0DW",
+	"filterBar": "library_filter-bar_1W0DW",
+	"filter-bar-item": "library_filter-bar-item_99aoX",
+	"filterBarItem": "library_filter-bar-item_99aoX",
+	"filter": "library_filter_2k-oj",
+	"filter-input": "library_filter-input_6w2X2",
+	"filterInput": "library_filter-input_6w2X2",
+	"divider": "library_divider_2xD3D",
+	"tag-wrapper": "library_tag-wrapper_2-QEQ",
+	"tagWrapper": "library_tag-wrapper_2-QEQ",
+	"spinner-wrapper": "library_spinner-wrapper_1C8Ew",
+	"spinnerWrapper": "library_spinner-wrapper_1C8Ew"
 };
 
 /***/ }),
@@ -1222,38 +1222,38 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.loader_background_1-Rwn {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    z-index: 490;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    background-color: var(--menu-bar-background);\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    text-align: center;\n    color: white;\n}\n\n.loader_fullscreen_tNbvL {\n    /* Break out of the layout using position: fixed to cover the whole screen */\n    position: fixed;\n    /* Use the fullscreen stage z-index to allow covering full-screen mode */\n    z-index: 500;\n}\n\n.loader_block-animation_2EgCQ {\n    width: 125px;\n    height: 150px;\n    margin: 50px auto 0px;\n}\n\n.loader_block-animation_2EgCQ img {\n    display: block;\n    position: relative;\n    height: 30%;\n    margin-top: -4px;\n}\n\n.loader_top-block_1-yuR {\n    animation: loader_top-slide-in_3hScI 1.5s ease infinite;\n}\n\n.loader_middle-block_2ma0T {\n    animation: loader_middle-slide-in_3GSy9 1.5s ease infinite;\n}\n\n.loader_bottom-block_ABwSu {\n    animation: loader_bottom-slide-in_8euy_ 1.5s ease infinite;\n}\n\n[dir=\"rtl\"] .loader_top-block_1-yuR {\n    animation: loader_top-slide-in-rtl_1iaUP 1.5s ease infinite;\n}\n\n[dir=\"rtl\"] .loader_middle-block_2ma0T {\n    animation: loader_middle-slide-in-rtl_1Ve0h 1.5s ease infinite;\n}\n\n[dir=\"rtl\"] .loader_bottom-block_ABwSu {\n    animation: loader_bottom-slide-in-rtl_2hnAN 1.5s ease infinite;\n}\n\n@keyframes loader_top-slide-in_3hScI {\n  0% {\n    transform: translateY(50px);\n    opacity: 0;\n  }\n\n  33% {\n    transform: translateY(0px);\n    opacity: 1;\n  }\n}\n\n@keyframes loader_middle-slide-in_3GSy9 {\n  0% {\n    transform: translateY(50px);\n    opacity: 0;\n  }\n\n  33% {\n    transform: translateY(50px);\n    opacity: 0;\n  }\n\n  66% {\n    transform: translateY(0px);\n    opacity: 1;\n  }\n}\n\n@keyframes loader_bottom-slide-in_8euy_ {\n  0% {\n    transform: translateY(50px);\n    opacity: 0;\n  }\n\n  66% {\n    transform: translateY(50px);\n    opacity: 0;\n  }\n\n  100% {\n    transform: translateY(0px);\n    opacity: 1;\n  }\n}\n\n@keyframes loader_top-slide-in-rtl_1iaUP {\n  0% {\n    transform: translateY(50px) scaleX(-1);\n    opacity: 0;\n  }\n\n  33% {\n    transform: translateY(0px) scaleX(-1);\n    opacity: 1;\n  }\n  100% {\n    transform: translateY(0px) scaleX(-1);\n    opacity: 1;\n  }\n}\n\n@keyframes loader_middle-slide-in-rtl_1Ve0h {\n  0% {\n    transform: translateY(50px) scaleX(-1);\n    opacity: 0;\n  }\n\n  33% {\n    transform: translateY(50px) scaleX(-1);\n    opacity: 0;\n  }\n\n  66% {\n    transform: translateY(0px) scaleX(-1);\n    opacity: 1;\n  }\n  100% {\n    transform: translateY(0px) scaleX(-1);\n    opacity: 1;\n  }\n}\n\n@keyframes loader_bottom-slide-in-rtl_2hnAN {\n  0% {\n    transform: translateY(50px) scaleX(-1);\n    opacity: 0;\n  }\n\n  66% {\n    transform: translateY(50px) scaleX(-1);\n    opacity: 0;\n  }\n\n  100% {\n    transform: translateY(0px) scaleX(-1);\n    opacity: 1;\n  }\n}\n\n.loader_title_28GDz {\n    font-size: 2rem;\n    font-weight: bold;\n    margin: 0.75rem 0;\n}\n\n.loader_message_rvm_w {\n    height: 20px;\n    margin: 5px 0;\n}\n\n.loader_bar-outer_3B82p {\n    width: 250px;\n    height: 8px;\n    border-radius: 8px;\n    background-color: var(--ui-white-transparent-default);\n    overflow: hidden;\n    position: relative;\n    margin: auto;\n}\n\n.loader_bar-inner_GYGdI {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 0;\n    height: 100%;\n    background-color: var(--ui-white-default);\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.loader_background_2DPrW {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    z-index: 490;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    background-color: var(--menu-bar-background);\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    text-align: center;\n    color: white;\n}\n\n.loader_fullscreen_29EhP {\n    /* Break out of the layout using position: fixed to cover the whole screen */\n    position: fixed;\n    /* Use the fullscreen stage z-index to allow covering full-screen mode */\n    z-index: 500;\n}\n\n.loader_block-animation_12MqO {\n    width: 125px;\n    height: 150px;\n    margin: 50px auto 0px;\n}\n\n.loader_block-animation_12MqO img {\n    display: block;\n    position: relative;\n    height: 30%;\n    margin-top: -4px;\n}\n\n.loader_top-block_3P7pK {\n    animation: loader_top-slide-in_8ngR8 1.5s ease infinite;\n}\n\n.loader_middle-block_CKcTg {\n    animation: loader_middle-slide-in_In2DU 1.5s ease infinite;\n}\n\n.loader_bottom-block_1-3rO {\n    animation: loader_bottom-slide-in_2DZ1B 1.5s ease infinite;\n}\n\n[dir=\"rtl\"] .loader_top-block_3P7pK {\n    animation: loader_top-slide-in-rtl_1vHi4 1.5s ease infinite;\n}\n\n[dir=\"rtl\"] .loader_middle-block_CKcTg {\n    animation: loader_middle-slide-in-rtl_21ALw 1.5s ease infinite;\n}\n\n[dir=\"rtl\"] .loader_bottom-block_1-3rO {\n    animation: loader_bottom-slide-in-rtl_3kdB0 1.5s ease infinite;\n}\n\n@keyframes loader_top-slide-in_8ngR8 {\n  0% {\n    transform: translateY(50px);\n    opacity: 0;\n  }\n\n  33% {\n    transform: translateY(0px);\n    opacity: 1;\n  }\n}\n\n@keyframes loader_middle-slide-in_In2DU {\n  0% {\n    transform: translateY(50px);\n    opacity: 0;\n  }\n\n  33% {\n    transform: translateY(50px);\n    opacity: 0;\n  }\n\n  66% {\n    transform: translateY(0px);\n    opacity: 1;\n  }\n}\n\n@keyframes loader_bottom-slide-in_2DZ1B {\n  0% {\n    transform: translateY(50px);\n    opacity: 0;\n  }\n\n  66% {\n    transform: translateY(50px);\n    opacity: 0;\n  }\n\n  100% {\n    transform: translateY(0px);\n    opacity: 1;\n  }\n}\n\n@keyframes loader_top-slide-in-rtl_1vHi4 {\n  0% {\n    transform: translateY(50px) scaleX(-1);\n    opacity: 0;\n  }\n\n  33% {\n    transform: translateY(0px) scaleX(-1);\n    opacity: 1;\n  }\n  100% {\n    transform: translateY(0px) scaleX(-1);\n    opacity: 1;\n  }\n}\n\n@keyframes loader_middle-slide-in-rtl_21ALw {\n  0% {\n    transform: translateY(50px) scaleX(-1);\n    opacity: 0;\n  }\n\n  33% {\n    transform: translateY(50px) scaleX(-1);\n    opacity: 0;\n  }\n\n  66% {\n    transform: translateY(0px) scaleX(-1);\n    opacity: 1;\n  }\n  100% {\n    transform: translateY(0px) scaleX(-1);\n    opacity: 1;\n  }\n}\n\n@keyframes loader_bottom-slide-in-rtl_3kdB0 {\n  0% {\n    transform: translateY(50px) scaleX(-1);\n    opacity: 0;\n  }\n\n  66% {\n    transform: translateY(50px) scaleX(-1);\n    opacity: 0;\n  }\n\n  100% {\n    transform: translateY(0px) scaleX(-1);\n    opacity: 1;\n  }\n}\n\n.loader_title_1tlje {\n    font-size: 2rem;\n    font-weight: bold;\n    margin: 0.75rem 0;\n}\n\n.loader_message_3yQvj {\n    height: 20px;\n    margin: 5px 0;\n}\n\n.loader_bar-outer_11Y-7 {\n    width: 250px;\n    height: 8px;\n    border-radius: 8px;\n    background-color: var(--ui-white-transparent-default);\n    overflow: hidden;\n    position: relative;\n    margin: auto;\n}\n\n.loader_bar-inner_3GLRE {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 0;\n    height: 100%;\n    background-color: var(--ui-white-default);\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"background": "loader_background_1-Rwn",
-	"fullscreen": "loader_fullscreen_tNbvL",
-	"block-animation": "loader_block-animation_2EgCQ",
-	"blockAnimation": "loader_block-animation_2EgCQ",
-	"top-block": "loader_top-block_1-yuR",
-	"topBlock": "loader_top-block_1-yuR",
-	"top-slide-in": "loader_top-slide-in_3hScI",
-	"topSlideIn": "loader_top-slide-in_3hScI",
-	"middle-block": "loader_middle-block_2ma0T",
-	"middleBlock": "loader_middle-block_2ma0T",
-	"middle-slide-in": "loader_middle-slide-in_3GSy9",
-	"middleSlideIn": "loader_middle-slide-in_3GSy9",
-	"bottom-block": "loader_bottom-block_ABwSu",
-	"bottomBlock": "loader_bottom-block_ABwSu",
-	"bottom-slide-in": "loader_bottom-slide-in_8euy_",
-	"bottomSlideIn": "loader_bottom-slide-in_8euy_",
-	"top-slide-in-rtl": "loader_top-slide-in-rtl_1iaUP",
-	"topSlideInRtl": "loader_top-slide-in-rtl_1iaUP",
-	"middle-slide-in-rtl": "loader_middle-slide-in-rtl_1Ve0h",
-	"middleSlideInRtl": "loader_middle-slide-in-rtl_1Ve0h",
-	"bottom-slide-in-rtl": "loader_bottom-slide-in-rtl_2hnAN",
-	"bottomSlideInRtl": "loader_bottom-slide-in-rtl_2hnAN",
-	"title": "loader_title_28GDz",
-	"message": "loader_message_rvm_w",
-	"bar-outer": "loader_bar-outer_3B82p",
-	"barOuter": "loader_bar-outer_3B82p",
-	"bar-inner": "loader_bar-inner_GYGdI",
-	"barInner": "loader_bar-inner_GYGdI"
+	"background": "loader_background_2DPrW",
+	"fullscreen": "loader_fullscreen_29EhP",
+	"block-animation": "loader_block-animation_12MqO",
+	"blockAnimation": "loader_block-animation_12MqO",
+	"top-block": "loader_top-block_3P7pK",
+	"topBlock": "loader_top-block_3P7pK",
+	"top-slide-in": "loader_top-slide-in_8ngR8",
+	"topSlideIn": "loader_top-slide-in_8ngR8",
+	"middle-block": "loader_middle-block_CKcTg",
+	"middleBlock": "loader_middle-block_CKcTg",
+	"middle-slide-in": "loader_middle-slide-in_In2DU",
+	"middleSlideIn": "loader_middle-slide-in_In2DU",
+	"bottom-block": "loader_bottom-block_1-3rO",
+	"bottomBlock": "loader_bottom-block_1-3rO",
+	"bottom-slide-in": "loader_bottom-slide-in_2DZ1B",
+	"bottomSlideIn": "loader_bottom-slide-in_2DZ1B",
+	"top-slide-in-rtl": "loader_top-slide-in-rtl_1vHi4",
+	"topSlideInRtl": "loader_top-slide-in-rtl_1vHi4",
+	"middle-slide-in-rtl": "loader_middle-slide-in-rtl_21ALw",
+	"middleSlideInRtl": "loader_middle-slide-in-rtl_21ALw",
+	"bottom-slide-in-rtl": "loader_bottom-slide-in-rtl_3kdB0",
+	"bottomSlideInRtl": "loader_bottom-slide-in-rtl_3kdB0",
+	"title": "loader_title_1tlje",
+	"message": "loader_message_3yQvj",
+	"bar-outer": "loader_bar-outer_11Y-7",
+	"barOuter": "loader_bar-outer_11Y-7",
+	"bar-inner": "loader_bar-inner_3GLRE",
+	"barInner": "loader_bar-inner_3GLRE"
 };
 
 /***/ }),
@@ -1270,12 +1270,12 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.loupe_color-picker_1hE1x {\n    position: absolute;\n    top: 0;\n    left: 0;\n    border-radius: 100%;\n    border: 4px solid var(--ui-black-transparent);\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.loupe_color-picker_1OaU- {\n    position: absolute;\n    top: 0;\n    left: 0;\n    border-radius: 100%;\n    border: 4px solid var(--ui-black-transparent);\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"color-picker": "loupe_color-picker_1hE1x",
-	"colorPicker": "loupe_color-picker_1hE1x"
+	"color-picker": "loupe_color-picker_1OaU-",
+	"colorPicker": "loupe_color-picker_1OaU-"
 };
 
 /***/ }),
@@ -1292,19 +1292,19 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.author-info_author-info__Auzh {\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n    cursor: default;\n}\n\n.author-info_avatar_1EtPD {\n    margin-right: .5625rem;\n}\n\n.author-info_project-title_3abqH {\n    max-width: 12rem;\n    display: block;\n    overflow: hidden;\n    font-size: 0.875rem;\n    font-weight: bold;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    margin: 0;\n    padding: 0;\n}\n\n.author-info_username-line_30Olt {\n    max-width: 12rem;\n    font-size: 0.75rem;\n    display: block;\n    overflow: hidden;\n    font-weight: normal;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n}\n\n.author-info_username_3V5C- {\n    font-weight: bold;\n}\n\n.author-info_link_2G8-F {\n    text-decoration: none;\n    color: var(--menu-bar-foreground) !important;\n}\n\n.author-info_link_2G8-F:hover {\n    text-decoration: underline;\n}\n\n.author-info_link_2G8-F .author-info_author-info__Auzh {\n    cursor: pointer;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.author-info_author-info_2Pliw {\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n    cursor: default;\n}\n\n.author-info_avatar_31Mo8 {\n    margin-right: .5625rem;\n}\n\n.author-info_project-title_h7Gcj {\n    max-width: 12rem;\n    display: block;\n    overflow: hidden;\n    font-size: 0.875rem;\n    font-weight: bold;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    margin: 0;\n    padding: 0;\n}\n\n.author-info_username-line_18E8B {\n    max-width: 12rem;\n    font-size: 0.75rem;\n    display: block;\n    overflow: hidden;\n    font-weight: normal;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n}\n\n.author-info_username_2Ov2- {\n    font-weight: bold;\n}\n\n.author-info_link_3EUX3 {\n    text-decoration: none;\n    color: var(--menu-bar-foreground) !important;\n}\n\n.author-info_link_3EUX3:hover {\n    text-decoration: underline;\n}\n\n.author-info_link_3EUX3 .author-info_author-info_2Pliw {\n    cursor: pointer;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"author-info": "author-info_author-info__Auzh",
-	"authorInfo": "author-info_author-info__Auzh",
-	"avatar": "author-info_avatar_1EtPD",
-	"project-title": "author-info_project-title_3abqH",
-	"projectTitle": "author-info_project-title_3abqH",
-	"username-line": "author-info_username-line_30Olt",
-	"usernameLine": "author-info_username-line_30Olt",
-	"username": "author-info_username_3V5C-",
-	"link": "author-info_link_2G8-F"
+	"author-info": "author-info_author-info_2Pliw",
+	"authorInfo": "author-info_author-info_2Pliw",
+	"avatar": "author-info_avatar_31Mo8",
+	"project-title": "author-info_project-title_h7Gcj",
+	"projectTitle": "author-info_project-title_h7Gcj",
+	"username-line": "author-info_username-line_18E8B",
+	"usernameLine": "author-info_username-line_18E8B",
+	"username": "author-info_username_2Ov2-",
+	"link": "author-info_link_3EUX3"
 };
 
 /***/ }),
@@ -1321,14 +1321,14 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.community-button_community-button_20Q0O {\n    box-shadow: 0 0 0 1px var(--ui-black-transparent);\n}\n\n.community-button_community-button-icon_WReZ5 {\n    height: 1.25rem;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.community-button_community-button_2Lo_g {\n    box-shadow: 0 0 0 1px var(--ui-black-transparent);\n}\n\n.community-button_community-button-icon_1IFvv {\n    height: 1.25rem;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"community-button": "community-button_community-button_20Q0O",
-	"communityButton": "community-button_community-button_20Q0O",
-	"community-button-icon": "community-button_community-button-icon_WReZ5",
-	"communityButtonIcon": "community-button_community-button-icon_WReZ5"
+	"community-button": "community-button_community-button_2Lo_g",
+	"communityButton": "community-button_community-button_2Lo_g",
+	"community-button-icon": "community-button_community-button-icon_1IFvv",
+	"communityButtonIcon": "community-button_community-button-icon_1IFvv"
 };
 
 /***/ }),
@@ -1345,70 +1345,70 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.menu-bar_menu-bar_1gLUp {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    flex-wrap: nowrap;\n    gap: 0.5rem;\n\n    /*\n        For most things, we shouldn't explicitly set height, and let the\n        content push the element to whatever fits. Using a fixed height\n        instead, will help us subtract the value we assign from the body,\n        adding up to a perfect 100%. This means we don't need to set\n        overflow: hidden, which makes it hard to debug. border-box\n        simplifies by all of this by removing padding from the equation.\n    */\n    box-sizing: border-box;\n    height: 3rem;\n\n    /*\n        @todo: This adds ~20px in Chrome, when scrolling to the right,\n        but fixes [FFx + Safari] [resize window down + scroll to the right] bug.\n        width: 100%;\n    */\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    font-size: 0.75rem;\n    font-weight: bold;\n    background-color: var(--menu-bar-background);\n    background-image: var(--menu-bar-background-image);\n    color: var(--menu-bar-foreground);\n}\n\n.menu-bar_main-menu_EyCGw {\n    display: flex;\n    flex-direction: row;\n    justify-content: flex-start;\n    flex-wrap: nowrap;\n    align-items: center;\n    flex-grow: 1;\n    gap: 0.5rem;\n}\n\n.menu-bar_inactive_2nFUV {\n    opacity: 0;\n}\n\n.menu-bar_scratch-logo_7D20g {\n    height:  1.6rem;\n    vertical-align: middle;\n}\n\n.menu-bar_scratch-logo_7D20g.menu-bar_clickable_26k4z {\n    cursor: pointer;\n}\n\n.menu-bar_menu-bar-item_264qQ {\n    display: flex;\n    text-decoration: none;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    align-self: center;\n    position: relative;\n    align-items: center;\n    white-space: nowrap;\n    height: 3rem;\n}\n\n.menu-bar_menu-bar-item_264qQ.menu-bar_hoverable_2sbwj {\n    cursor: pointer;\n}\n\n.menu-bar_menu-bar-item_264qQ.menu-bar_active_qDap3,\n.menu-bar_menu-bar-item_264qQ.menu-bar_hoverable_2sbwj:hover {\n    background-color: var(--ui-black-transparent);\n}\n\n.menu-bar_menu-bar-item_264qQ.menu-bar_growable_gzAFf {\n    max-width: 12rem;\n    flex: 1;\n}\n\n.menu-bar_title-field-growable_2DAmE {\n    flex-grow: 1;\n    width: 2rem;\n}\n\n.menu-bar_file-group_Ofb7F {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    gap: 0.5rem;\n}\n\n.menu-bar_file-group_Ofb7F .menu-bar_menu-bar-item_264qQ {\n    padding: 0 0.5rem;\n}\n\n.menu-bar_menu-bar-menu_3M6v8 {\n    margin-top: 3rem;\n    z-index: 491;\n}\n\n.menu-bar_feedback-link_2Op70 {\n    color: var(--menu-bar-background);\n    text-decoration: none;\n}\n\n.menu-bar_feedback-button_2XhjA {\n    background-color: white;\n    color: inherit;\n    height: 34px;\n}\n\n.menu-bar_divider_2bLcv {\n    height: 34px;\n}\n\n.menu-bar_author-info_3H1M3 {\n    margin-left: .25rem;\n    margin-right: .6875rem;\n}\n\n.menu-bar_menu-bar-button_45YjE {\n    height: 2rem;\n}\n\n.menu-bar_remix-button_22R_5 {\n    background-color: var(--pen-primary)\n}\n\n.menu-bar_remix-button-icon_120Az {\n    height: 1.25rem;\n}\n\n.menu-bar_coming-soon_1mxZx >:not(.menu-bar_coming-soon-tooltip_3ikkK) {\n    opacity: 0.5;\n}\n\n.menu-bar_account-info-group_1CTpL {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n}\n\n.menu-bar_account-info-group_1CTpL .menu-bar_menu-bar-item_264qQ {\n    margin: 0 .25rem;\n    padding: 0 0.75rem;\n}\n\n.menu-bar_mystuff-icon_1f8Re {\n    margin: 0 .25rem;\n    height: 1rem;\n}\n\n.menu-bar_help-icon_ieE_q {\n    margin: 0 .25rem 0 0;\n}\n\n[dir=\"rtl\"] .menu-bar_help-icon_ieE_q {\n    margin: 0 0 0 .25rem;\n}\n\n.menu-bar_account-nav-menu_1ts18, .menu-bar_mystuff-button_3aa9D {\n    padding: 0 .25rem;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n}\n\n.menu-bar_profile-icon_9WA-H {\n    margin: 0 .25rem;\n    width: 2rem;\n    border-radius: calc(0.5rem / 2);\n}\n\n.menu-bar_dropdown-caret-icon_3aBkY {\n    width: 0.5rem;\n    height: 0.5rem;\n}\n\n[dir=\"ltr\"] .menu-bar_dropdown-caret-icon_3aBkY {\n    margin-left: .5rem;\n}\n\n[dir=\"rtl\"] .menu-bar_dropdown-caret-icon_3aBkY {\n    margin-right: .5rem;\n}\n\n.menu-bar_disabled_rGGrp {\n    opacity: 0.5;\n}\n\n.menu-bar_mystuff_gxcZo > a {\n  background-repeat: no-repeat;\n  background-position: center center;\n  background-size: 45%;\n  padding-right: 10px;\n  padding-left: 10px;\n  width: 30px;\n  overflow: hidden;\n  text-indent: 50px;\n  white-space: nowrap;\n}\n\n.menu-bar_mystuff_gxcZo > a:hover {\n  background-size: 50%;\n}\n\n.menu-bar_mystuff_gxcZo > a {\n  /* background-image: url(\"/images/mystuff.png\"); */\n}\n\n.menu-bar_about-icon_16Env {\n    height: 1.25rem;\n    margin: 0.5rem;\n    vertical-align: middle;\n}\n\n.menu-bar_collapsible-label_3ql7m {\n    margin: 0 .25rem;\n}\n\n@media only screen and (max-width: 1124px) {\n    .menu-bar_tutorials-label_23wK2, .menu-bar_collapsible-label_3ql7m {\n        display: none;\n    }\n\n    .menu-bar_help-icon_ieE_q {\n        margin-right: 0;\n    }\n}\n\n.menu-bar_menu-item-link_1-4xZ {\n    color: inherit;\n    text-decoration: none;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.menu-bar_menu-bar_JcuHF {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    flex-wrap: nowrap;\n    gap: 0.5rem;\n\n    /*\n        For most things, we shouldn't explicitly set height, and let the\n        content push the element to whatever fits. Using a fixed height\n        instead, will help us subtract the value we assign from the body,\n        adding up to a perfect 100%. This means we don't need to set\n        overflow: hidden, which makes it hard to debug. border-box\n        simplifies by all of this by removing padding from the equation.\n    */\n    box-sizing: border-box;\n    height: 3rem;\n\n    /*\n        @todo: This adds ~20px in Chrome, when scrolling to the right,\n        but fixes [FFx + Safari] [resize window down + scroll to the right] bug.\n        width: 100%;\n    */\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    font-size: 0.75rem;\n    font-weight: bold;\n    background-color: var(--menu-bar-background);\n    background-image: var(--menu-bar-background-image);\n    color: var(--menu-bar-foreground);\n}\n\n.menu-bar_main-menu_3wjWH {\n    display: flex;\n    flex-direction: row;\n    justify-content: flex-start;\n    flex-wrap: nowrap;\n    align-items: center;\n    flex-grow: 1;\n    gap: 0.5rem;\n}\n\n.menu-bar_inactive_2rk8q {\n    opacity: 0;\n}\n\n.menu-bar_scratch-logo_2uReV {\n    height:  1.6rem;\n    vertical-align: middle;\n}\n\n.menu-bar_scratch-logo_2uReV.menu-bar_clickable_1g3uo {\n    cursor: pointer;\n}\n\n.menu-bar_menu-bar-item_oLDa- {\n    display: flex;\n    text-decoration: none;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    align-self: center;\n    position: relative;\n    align-items: center;\n    white-space: nowrap;\n    height: 3rem;\n}\n\n.menu-bar_menu-bar-item_oLDa-.menu-bar_hoverable_c6WFB {\n    cursor: pointer;\n}\n\n.menu-bar_menu-bar-item_oLDa-.menu-bar_active_2Lfqh,\n.menu-bar_menu-bar-item_oLDa-.menu-bar_hoverable_c6WFB:hover {\n    background-color: var(--ui-black-transparent);\n}\n\n.menu-bar_menu-bar-item_oLDa-.menu-bar_growable_1sHWN {\n    max-width: 12rem;\n    flex: 1;\n}\n\n.menu-bar_title-field-growable_3qr4G {\n    flex-grow: 1;\n    width: 2rem;\n}\n\n.menu-bar_file-group_1_CHX {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    gap: 0.5rem;\n}\n\n.menu-bar_file-group_1_CHX .menu-bar_menu-bar-item_oLDa- {\n    padding: 0 0.5rem;\n}\n\n.menu-bar_menu-bar-menu_239MD {\n    margin-top: 3rem;\n    z-index: 491;\n}\n\n.menu-bar_feedback-link_1BnAR {\n    color: var(--menu-bar-background);\n    text-decoration: none;\n}\n\n.menu-bar_feedback-button_2rEcj {\n    background-color: white;\n    color: inherit;\n    height: 34px;\n}\n\n.menu-bar_divider_2VFCm {\n    height: 34px;\n}\n\n.menu-bar_author-info_22Nub {\n    margin-left: .25rem;\n    margin-right: .6875rem;\n}\n\n.menu-bar_menu-bar-button_3IDN0 {\n    height: 2rem;\n}\n\n.menu-bar_remix-button_2LQQc {\n    background-color: var(--pen-primary)\n}\n\n.menu-bar_remix-button-icon_2E93U {\n    height: 1.25rem;\n}\n\n.menu-bar_coming-soon_3yU1L >:not(.menu-bar_coming-soon-tooltip_20GhI) {\n    opacity: 0.5;\n}\n\n.menu-bar_account-info-group_MeJZP {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n}\n\n.menu-bar_account-info-group_MeJZP .menu-bar_menu-bar-item_oLDa- {\n    margin: 0 .25rem;\n    padding: 0 0.75rem;\n}\n\n.menu-bar_mystuff-icon_3DtcD {\n    margin: 0 .25rem;\n    height: 1rem;\n}\n\n.menu-bar_help-icon_3Xtrt {\n    margin: 0 .25rem 0 0;\n}\n\n[dir=\"rtl\"] .menu-bar_help-icon_3Xtrt {\n    margin: 0 0 0 .25rem;\n}\n\n.menu-bar_account-nav-menu_3uu9p, .menu-bar_mystuff-button_16jPf {\n    padding: 0 .25rem;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n}\n\n.menu-bar_profile-icon_2bJkI {\n    margin: 0 .25rem;\n    width: 2rem;\n    border-radius: calc(0.5rem / 2);\n}\n\n.menu-bar_dropdown-caret-icon_FkdUe {\n    width: 0.5rem;\n    height: 0.5rem;\n}\n\n[dir=\"ltr\"] .menu-bar_dropdown-caret-icon_FkdUe {\n    margin-left: .5rem;\n}\n\n[dir=\"rtl\"] .menu-bar_dropdown-caret-icon_FkdUe {\n    margin-right: .5rem;\n}\n\n.menu-bar_disabled_3x5sy {\n    opacity: 0.5;\n}\n\n.menu-bar_mystuff_3RiSb > a {\n  background-repeat: no-repeat;\n  background-position: center center;\n  background-size: 45%;\n  padding-right: 10px;\n  padding-left: 10px;\n  width: 30px;\n  overflow: hidden;\n  text-indent: 50px;\n  white-space: nowrap;\n}\n\n.menu-bar_mystuff_3RiSb > a:hover {\n  background-size: 50%;\n}\n\n.menu-bar_mystuff_3RiSb > a {\n  /* background-image: url(\"/images/mystuff.png\"); */\n}\n\n.menu-bar_about-icon_dZI7K {\n    height: 1.25rem;\n    margin: 0.5rem;\n    vertical-align: middle;\n}\n\n.menu-bar_collapsible-label_o2tym {\n    margin: 0 .25rem;\n}\n\n@media only screen and (max-width: 1124px) {\n    .menu-bar_tutorials-label_2tFBo, .menu-bar_collapsible-label_o2tym {\n        display: none;\n    }\n\n    .menu-bar_help-icon_3Xtrt {\n        margin-right: 0;\n    }\n}\n\n.menu-bar_menu-item-link_20T0- {\n    color: inherit;\n    text-decoration: none;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"menu-bar": "menu-bar_menu-bar_1gLUp",
-	"menuBar": "menu-bar_menu-bar_1gLUp",
-	"main-menu": "menu-bar_main-menu_EyCGw",
-	"mainMenu": "menu-bar_main-menu_EyCGw",
-	"inactive": "menu-bar_inactive_2nFUV",
-	"scratch-logo": "menu-bar_scratch-logo_7D20g",
-	"scratchLogo": "menu-bar_scratch-logo_7D20g",
-	"clickable": "menu-bar_clickable_26k4z",
-	"menu-bar-item": "menu-bar_menu-bar-item_264qQ",
-	"menuBarItem": "menu-bar_menu-bar-item_264qQ",
-	"hoverable": "menu-bar_hoverable_2sbwj",
-	"active": "menu-bar_active_qDap3",
-	"growable": "menu-bar_growable_gzAFf",
-	"title-field-growable": "menu-bar_title-field-growable_2DAmE",
-	"titleFieldGrowable": "menu-bar_title-field-growable_2DAmE",
-	"file-group": "menu-bar_file-group_Ofb7F",
-	"fileGroup": "menu-bar_file-group_Ofb7F",
-	"menu-bar-menu": "menu-bar_menu-bar-menu_3M6v8",
-	"menuBarMenu": "menu-bar_menu-bar-menu_3M6v8",
-	"feedback-link": "menu-bar_feedback-link_2Op70",
-	"feedbackLink": "menu-bar_feedback-link_2Op70",
-	"feedback-button": "menu-bar_feedback-button_2XhjA",
-	"feedbackButton": "menu-bar_feedback-button_2XhjA",
-	"divider": "menu-bar_divider_2bLcv",
-	"author-info": "menu-bar_author-info_3H1M3",
-	"authorInfo": "menu-bar_author-info_3H1M3",
-	"menu-bar-button": "menu-bar_menu-bar-button_45YjE",
-	"menuBarButton": "menu-bar_menu-bar-button_45YjE",
-	"remix-button": "menu-bar_remix-button_22R_5",
-	"remixButton": "menu-bar_remix-button_22R_5",
-	"remix-button-icon": "menu-bar_remix-button-icon_120Az",
-	"remixButtonIcon": "menu-bar_remix-button-icon_120Az",
-	"coming-soon": "menu-bar_coming-soon_1mxZx",
-	"comingSoon": "menu-bar_coming-soon_1mxZx",
-	"coming-soon-tooltip": "menu-bar_coming-soon-tooltip_3ikkK",
-	"comingSoonTooltip": "menu-bar_coming-soon-tooltip_3ikkK",
-	"account-info-group": "menu-bar_account-info-group_1CTpL",
-	"accountInfoGroup": "menu-bar_account-info-group_1CTpL",
-	"mystuff-icon": "menu-bar_mystuff-icon_1f8Re",
-	"mystuffIcon": "menu-bar_mystuff-icon_1f8Re",
-	"help-icon": "menu-bar_help-icon_ieE_q",
-	"helpIcon": "menu-bar_help-icon_ieE_q",
-	"account-nav-menu": "menu-bar_account-nav-menu_1ts18",
-	"accountNavMenu": "menu-bar_account-nav-menu_1ts18",
-	"mystuff-button": "menu-bar_mystuff-button_3aa9D",
-	"mystuffButton": "menu-bar_mystuff-button_3aa9D",
-	"profile-icon": "menu-bar_profile-icon_9WA-H",
-	"profileIcon": "menu-bar_profile-icon_9WA-H",
-	"dropdown-caret-icon": "menu-bar_dropdown-caret-icon_3aBkY",
-	"dropdownCaretIcon": "menu-bar_dropdown-caret-icon_3aBkY",
-	"disabled": "menu-bar_disabled_rGGrp",
-	"mystuff": "menu-bar_mystuff_gxcZo",
-	"about-icon": "menu-bar_about-icon_16Env",
-	"aboutIcon": "menu-bar_about-icon_16Env",
-	"collapsible-label": "menu-bar_collapsible-label_3ql7m",
-	"collapsibleLabel": "menu-bar_collapsible-label_3ql7m",
-	"tutorials-label": "menu-bar_tutorials-label_23wK2",
-	"tutorialsLabel": "menu-bar_tutorials-label_23wK2",
-	"menu-item-link": "menu-bar_menu-item-link_1-4xZ",
-	"menuItemLink": "menu-bar_menu-item-link_1-4xZ"
+	"menu-bar": "menu-bar_menu-bar_JcuHF",
+	"menuBar": "menu-bar_menu-bar_JcuHF",
+	"main-menu": "menu-bar_main-menu_3wjWH",
+	"mainMenu": "menu-bar_main-menu_3wjWH",
+	"inactive": "menu-bar_inactive_2rk8q",
+	"scratch-logo": "menu-bar_scratch-logo_2uReV",
+	"scratchLogo": "menu-bar_scratch-logo_2uReV",
+	"clickable": "menu-bar_clickable_1g3uo",
+	"menu-bar-item": "menu-bar_menu-bar-item_oLDa-",
+	"menuBarItem": "menu-bar_menu-bar-item_oLDa-",
+	"hoverable": "menu-bar_hoverable_c6WFB",
+	"active": "menu-bar_active_2Lfqh",
+	"growable": "menu-bar_growable_1sHWN",
+	"title-field-growable": "menu-bar_title-field-growable_3qr4G",
+	"titleFieldGrowable": "menu-bar_title-field-growable_3qr4G",
+	"file-group": "menu-bar_file-group_1_CHX",
+	"fileGroup": "menu-bar_file-group_1_CHX",
+	"menu-bar-menu": "menu-bar_menu-bar-menu_239MD",
+	"menuBarMenu": "menu-bar_menu-bar-menu_239MD",
+	"feedback-link": "menu-bar_feedback-link_1BnAR",
+	"feedbackLink": "menu-bar_feedback-link_1BnAR",
+	"feedback-button": "menu-bar_feedback-button_2rEcj",
+	"feedbackButton": "menu-bar_feedback-button_2rEcj",
+	"divider": "menu-bar_divider_2VFCm",
+	"author-info": "menu-bar_author-info_22Nub",
+	"authorInfo": "menu-bar_author-info_22Nub",
+	"menu-bar-button": "menu-bar_menu-bar-button_3IDN0",
+	"menuBarButton": "menu-bar_menu-bar-button_3IDN0",
+	"remix-button": "menu-bar_remix-button_2LQQc",
+	"remixButton": "menu-bar_remix-button_2LQQc",
+	"remix-button-icon": "menu-bar_remix-button-icon_2E93U",
+	"remixButtonIcon": "menu-bar_remix-button-icon_2E93U",
+	"coming-soon": "menu-bar_coming-soon_3yU1L",
+	"comingSoon": "menu-bar_coming-soon_3yU1L",
+	"coming-soon-tooltip": "menu-bar_coming-soon-tooltip_20GhI",
+	"comingSoonTooltip": "menu-bar_coming-soon-tooltip_20GhI",
+	"account-info-group": "menu-bar_account-info-group_MeJZP",
+	"accountInfoGroup": "menu-bar_account-info-group_MeJZP",
+	"mystuff-icon": "menu-bar_mystuff-icon_3DtcD",
+	"mystuffIcon": "menu-bar_mystuff-icon_3DtcD",
+	"help-icon": "menu-bar_help-icon_3Xtrt",
+	"helpIcon": "menu-bar_help-icon_3Xtrt",
+	"account-nav-menu": "menu-bar_account-nav-menu_3uu9p",
+	"accountNavMenu": "menu-bar_account-nav-menu_3uu9p",
+	"mystuff-button": "menu-bar_mystuff-button_16jPf",
+	"mystuffButton": "menu-bar_mystuff-button_16jPf",
+	"profile-icon": "menu-bar_profile-icon_2bJkI",
+	"profileIcon": "menu-bar_profile-icon_2bJkI",
+	"dropdown-caret-icon": "menu-bar_dropdown-caret-icon_FkdUe",
+	"dropdownCaretIcon": "menu-bar_dropdown-caret-icon_FkdUe",
+	"disabled": "menu-bar_disabled_3x5sy",
+	"mystuff": "menu-bar_mystuff_3RiSb",
+	"about-icon": "menu-bar_about-icon_dZI7K",
+	"aboutIcon": "menu-bar_about-icon_dZI7K",
+	"collapsible-label": "menu-bar_collapsible-label_o2tym",
+	"collapsibleLabel": "menu-bar_collapsible-label_o2tym",
+	"tutorials-label": "menu-bar_tutorials-label_2tFBo",
+	"tutorialsLabel": "menu-bar_tutorials-label_2tFBo",
+	"menu-item-link": "menu-bar_menu-item-link_20T0-",
+	"menuItemLink": "menu-bar_menu-item-link_20T0-"
 };
 
 /***/ }),
@@ -1425,12 +1425,12 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n/*\nIf project-title-input.jsx is part of a menu bar say menu-bar.jsx, it can have additional css classes that\ncan set a width for example or what it should do in a flex box (eg. grow).\n*/\n\n.project-title-input_title-field_13MIs {\n    border: 1px dashed var(--ui-black-transparent);\n    border-radius: calc(0.5rem / 2);\n    -webkit-border-radius: calc(0.5rem / 2);\n    -moz-border-radius: calc(0.5rem / 2);\n    background-color: var(--project-title-inactive);\n    background-clip: padding-box;\n    -webkit-background-clip: padding-box;\n    height: auto;\n    padding: .5rem;\n}\n\n.project-title-input_title-field_13MIs {\n    color: var(--menu-bar-foreground);\n    font-weight: bold;\n    font-size: .8rem;\n}\n\n.project-title-input_title-field_13MIs::-ms-input-placeholder {\n    color: var(--menu-bar-foreground);\n    opacity: 0.8;\n    font-weight: normal;\n    font-size: .8rem;\n    font-style: italic;\n}\n\n.project-title-input_title-field_13MIs::placeholder {\n    color: var(--menu-bar-foreground);\n    opacity: 0.8;\n    font-weight: normal;\n    font-size: .8rem;\n    font-style: italic;\n}\n\n.project-title-input_title-field_13MIs:hover {\n    background-color: var(--project-title-hover);\n    border-color: var(--ui-black-transparent); /* dont use hover border from custom input */\n}\n\n.project-title-input_title-field_13MIs:focus {\n    outline:none;\n    border: 1px solid var(--ui-transparent);\n    box-shadow: 0 0 0 calc(0.5rem * .5) var(--ui-white-transparent-default);\n    background-color: var(--ui-white);\n    color: var(--text-primary);\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n/*\nIf project-title-input.jsx is part of a menu bar say menu-bar.jsx, it can have additional css classes that\ncan set a width for example or what it should do in a flex box (eg. grow).\n*/\n\n.project-title-input_title-field_en5Gd {\n    border: 1px dashed var(--ui-black-transparent);\n    border-radius: calc(0.5rem / 2);\n    -webkit-border-radius: calc(0.5rem / 2);\n    -moz-border-radius: calc(0.5rem / 2);\n    background-color: var(--project-title-inactive);\n    background-clip: padding-box;\n    -webkit-background-clip: padding-box;\n    height: auto;\n    padding: .5rem;\n}\n\n.project-title-input_title-field_en5Gd {\n    color: var(--menu-bar-foreground);\n    font-weight: bold;\n    font-size: .8rem;\n}\n\n.project-title-input_title-field_en5Gd::-ms-input-placeholder {\n    color: var(--menu-bar-foreground);\n    opacity: 0.8;\n    font-weight: normal;\n    font-size: .8rem;\n    font-style: italic;\n}\n\n.project-title-input_title-field_en5Gd::placeholder {\n    color: var(--menu-bar-foreground);\n    opacity: 0.8;\n    font-weight: normal;\n    font-size: .8rem;\n    font-style: italic;\n}\n\n.project-title-input_title-field_en5Gd:hover {\n    background-color: var(--project-title-hover);\n    border-color: var(--ui-black-transparent); /* dont use hover border from custom input */\n}\n\n.project-title-input_title-field_en5Gd:focus {\n    outline:none;\n    border: 1px solid var(--ui-transparent);\n    box-shadow: 0 0 0 calc(0.5rem * .5) var(--ui-white-transparent-default);\n    background-color: var(--ui-white);\n    color: var(--text-primary);\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"title-field": "project-title-input_title-field_13MIs",
-	"titleField": "project-title-input_title-field_13MIs"
+	"title-field": "project-title-input_title-field_en5Gd",
+	"titleField": "project-title-input_title-field_en5Gd"
 };
 
 /***/ }),
@@ -1447,12 +1447,12 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.save-status_save-now_1Blzi {\n    cursor: pointer;\n    padding: 0 0.5rem;\n    height: 100%;\n    display: flex;\n    align-items: center;\n}\n\n.save-status_save-now_1Blzi:hover {\n    background-color: var(--ui-black-transparent);\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.save-status_save-now_2shdk {\n    cursor: pointer;\n    padding: 0 0.5rem;\n    height: 100%;\n    display: flex;\n    align-items: center;\n}\n\n.save-status_save-now_2shdk:hover {\n    background-color: var(--ui-black-transparent);\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"save-now": "save-status_save-now_1Blzi",
-	"saveNow": "save-status_save-now_1Blzi"
+	"save-now": "save-status_save-now_2shdk",
+	"saveNow": "save-status_save-now_2shdk"
 };
 
 /***/ }),
@@ -1469,31 +1469,31 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.settings-menu_icon_1kXwl {\n    width: 1.5rem;\n}\n\n.settings-menu_theme-label_1AHJT {\n    flex: 1;\n}\n\n.settings-menu_option_3Pqud {\n    display: flex;\n    align-items: center;\n    gap: .5rem;\n}\n\n.settings-menu_check_3urTz {\n    margin: 0 .25rem 0 0;\n    visibility: hidden;\n}\n\n[dir=\"rtl\"] .settings-menu_check_3urTz {\n    margin: 0 0 0 .25rem;\n}\n\n.settings-menu_selected_1h3PX {\n    visibility: visible;\n}\n\n.settings-menu_submenu-label_14Jrk {\n    flex: 1;\n}\n\n.settings-menu_dropdown-label_3OEOH {\n    margin: 0 0.5rem 0 0.25rem;\n}\n\n[dir=\"rtl\"] .settings-menu_dropdown-label_3OEOH {\n    margin: 0 0.25rem 0 0.5rem;\n}\n\n.settings-menu_expand-caret_1eVT8 {\n    transform: rotate(-90deg);\n}\n\n[dir=\"rtl\"] .settings-menu_expand-caret_1eVT8 {\n    transform: rotate(90deg);\n}\n\n/* Extra padding to deal with scrollbar overlapping options in Firefox */\n\n[dir=\"ltr\"] .settings-menu_language-menu-item_3MiEs {\n    padding-right: 1rem;\n}\n\n[dir=\"rtl\"] .settings-menu_language-menu-item_3MiEs {\n    padding-left: 1rem;\n}\n\n.settings-menu_language-submenu_2rhUy > ul {\n    max-height: calc(100vh - 5rem); /* Fallback if dvh not supported */\n    max-height: calc(100dvh - 5rem);\n}\n\n@media only screen and (max-width: 1124px) {\n    .settings-menu_dropdown-label_3OEOH {\n        display: none;\n    }\n}\n\n.settings-menu_accent-icon-outer_1RTK2 {\n    width: 24px;\n    height: 24px;\n    border: 3px solid var(--menu-bar-foreground);\n    border-radius: 100%;\n    box-sizing: border-box;\n    transform-origin: center;\n    transform: scale(90%);\n}\n\n.settings-menu_disabled_22CX_ {\n    opacity: 0.5;\n}\n\n.settings-menu_disabled_22CX_ img {\n    filter: grayscale(100%);\n}\n\n.settings-menu_open-link_yTV-x {\n    margin-left: 0.5rem;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.settings-menu_icon_3QaRk {\n    width: 1.5rem;\n}\n\n.settings-menu_theme-label_nv_1M {\n    flex: 1;\n}\n\n.settings-menu_option_3rMur {\n    display: flex;\n    align-items: center;\n    gap: .5rem;\n}\n\n.settings-menu_check_3ssaq {\n    margin: 0 .25rem 0 0;\n    visibility: hidden;\n}\n\n[dir=\"rtl\"] .settings-menu_check_3ssaq {\n    margin: 0 0 0 .25rem;\n}\n\n.settings-menu_selected_2pjxx {\n    visibility: visible;\n}\n\n.settings-menu_submenu-label_r-gA3 {\n    flex: 1;\n}\n\n.settings-menu_dropdown-label_3f68c {\n    margin: 0 0.5rem 0 0.25rem;\n}\n\n[dir=\"rtl\"] .settings-menu_dropdown-label_3f68c {\n    margin: 0 0.25rem 0 0.5rem;\n}\n\n.settings-menu_expand-caret_u2sS- {\n    transform: rotate(-90deg);\n}\n\n[dir=\"rtl\"] .settings-menu_expand-caret_u2sS- {\n    transform: rotate(90deg);\n}\n\n/* Extra padding to deal with scrollbar overlapping options in Firefox */\n\n[dir=\"ltr\"] .settings-menu_language-menu-item_3M-8n {\n    padding-right: 1rem;\n}\n\n[dir=\"rtl\"] .settings-menu_language-menu-item_3M-8n {\n    padding-left: 1rem;\n}\n\n.settings-menu_language-submenu_2LYn6 > ul {\n    max-height: calc(100vh - 5rem); /* Fallback if dvh not supported */\n    max-height: calc(100dvh - 5rem);\n}\n\n@media only screen and (max-width: 1124px) {\n    .settings-menu_dropdown-label_3f68c {\n        display: none;\n    }\n}\n\n.settings-menu_accent-icon-outer_3Yb2D {\n    width: 24px;\n    height: 24px;\n    border: 3px solid var(--menu-bar-foreground);\n    border-radius: 100%;\n    box-sizing: border-box;\n    transform-origin: center;\n    transform: scale(90%);\n}\n\n.settings-menu_disabled_1wLGe {\n    opacity: 0.5;\n}\n\n.settings-menu_disabled_1wLGe img {\n    filter: grayscale(100%);\n}\n\n.settings-menu_open-link_2hrY- {\n    margin-left: 0.5rem;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"icon": "settings-menu_icon_1kXwl",
-	"theme-label": "settings-menu_theme-label_1AHJT",
-	"themeLabel": "settings-menu_theme-label_1AHJT",
-	"option": "settings-menu_option_3Pqud",
-	"check": "settings-menu_check_3urTz",
-	"selected": "settings-menu_selected_1h3PX",
-	"submenu-label": "settings-menu_submenu-label_14Jrk",
-	"submenuLabel": "settings-menu_submenu-label_14Jrk",
-	"dropdown-label": "settings-menu_dropdown-label_3OEOH",
-	"dropdownLabel": "settings-menu_dropdown-label_3OEOH",
-	"expand-caret": "settings-menu_expand-caret_1eVT8",
-	"expandCaret": "settings-menu_expand-caret_1eVT8",
-	"language-menu-item": "settings-menu_language-menu-item_3MiEs",
-	"languageMenuItem": "settings-menu_language-menu-item_3MiEs",
-	"language-submenu": "settings-menu_language-submenu_2rhUy",
-	"languageSubmenu": "settings-menu_language-submenu_2rhUy",
-	"accent-icon-outer": "settings-menu_accent-icon-outer_1RTK2",
-	"accentIconOuter": "settings-menu_accent-icon-outer_1RTK2",
-	"disabled": "settings-menu_disabled_22CX_",
-	"open-link": "settings-menu_open-link_yTV-x",
-	"openLink": "settings-menu_open-link_yTV-x"
+	"icon": "settings-menu_icon_3QaRk",
+	"theme-label": "settings-menu_theme-label_nv_1M",
+	"themeLabel": "settings-menu_theme-label_nv_1M",
+	"option": "settings-menu_option_3rMur",
+	"check": "settings-menu_check_3ssaq",
+	"selected": "settings-menu_selected_2pjxx",
+	"submenu-label": "settings-menu_submenu-label_r-gA3",
+	"submenuLabel": "settings-menu_submenu-label_r-gA3",
+	"dropdown-label": "settings-menu_dropdown-label_3f68c",
+	"dropdownLabel": "settings-menu_dropdown-label_3f68c",
+	"expand-caret": "settings-menu_expand-caret_u2sS-",
+	"expandCaret": "settings-menu_expand-caret_u2sS-",
+	"language-menu-item": "settings-menu_language-menu-item_3M-8n",
+	"languageMenuItem": "settings-menu_language-menu-item_3M-8n",
+	"language-submenu": "settings-menu_language-submenu_2LYn6",
+	"languageSubmenu": "settings-menu_language-submenu_2LYn6",
+	"accent-icon-outer": "settings-menu_accent-icon-outer_3Yb2D",
+	"accentIconOuter": "settings-menu_accent-icon-outer_3Yb2D",
+	"disabled": "settings-menu_disabled_1wLGe",
+	"open-link": "settings-menu_open-link_2hrY-",
+	"openLink": "settings-menu_open-link_2hrY-"
 };
 
 /***/ }),
@@ -1510,14 +1510,14 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.share-button_share-button_36Wbh {\n    background: var(--data-primary);\n}\n\n.share-button_share-button-is-shared_2QzeZ {\n    background: var(--ui-black-transparent);\n    cursor: default;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.share-button_share-button_Nxxf0 {\n    background: var(--data-primary);\n}\n\n.share-button_share-button-is-shared_1tjKq {\n    background: var(--ui-black-transparent);\n    cursor: default;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"share-button": "share-button_share-button_36Wbh",
-	"shareButton": "share-button_share-button_36Wbh",
-	"share-button-is-shared": "share-button_share-button-is-shared_2QzeZ",
-	"shareButtonIsShared": "share-button_share-button-is-shared_2QzeZ"
+	"share-button": "share-button_share-button_Nxxf0",
+	"shareButton": "share-button_share-button_Nxxf0",
+	"share-button-is-shared": "share-button_share-button-is-shared_1tjKq",
+	"shareButtonIsShared": "share-button_share-button-is-shared_1tjKq"
 };
 
 /***/ }),
@@ -1534,13 +1534,13 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.tw-news_news_2xF72 {\n    background: var(--motion-tertiary);\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    justify-content: space-between;\n    padding: 0.375rem 0;\n    gap: 0.5rem;\n}\n\n.tw-news_text_1OE4I {\n    flex-grow: 1;\n    color: white;\n    text-align: center;\n}\n\n.tw-news_text_1OE4I a {\n    color: inherit;\n}\n\n.tw-news_close_3iAN3 {\n    flex-shrink: 0;\n    margin-right: 0.5rem;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.tw-news_news_uzo3T {\n    background: var(--motion-tertiary);\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    justify-content: space-between;\n    padding: 0.375rem 0;\n    gap: 0.5rem;\n}\n\n.tw-news_text_1P6mJ {\n    flex-grow: 1;\n    color: white;\n    text-align: center;\n}\n\n.tw-news_text_1P6mJ a {\n    color: inherit;\n}\n\n.tw-news_close_yCgKk {\n    flex-shrink: 0;\n    margin-right: 0.5rem;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"news": "tw-news_news_2xF72",
-	"text": "tw-news_text_1OE4I",
-	"close": "tw-news_close_3iAN3"
+	"news": "tw-news_news_uzo3T",
+	"text": "tw-news_text_1P6mJ",
+	"close": "tw-news_close_yCgKk"
 };
 
 /***/ }),
@@ -1557,14 +1557,14 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* this class must contain \"see-inside-button\" somewhere for the s3 dev tools to be able to reinject itself */\n\n/* https://github.com/griffpatch/Scratch3-Dev-Tools/blob/0.2.4/inject3.js#L1804-L1807 */\n\n.tw-see-inside_see-inside-button_1fSk6 {\n    box-shadow: 0 0 0 1px var(--ui-black-transparent);\n}\n\n.tw-see-inside_see-inside-button-icon_UKAVj {\n    height: 1.25rem;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* this class must contain \"see-inside-button\" somewhere for the s3 dev tools to be able to reinject itself */\n\n/* https://github.com/griffpatch/Scratch3-Dev-Tools/blob/0.2.4/inject3.js#L1804-L1807 */\n\n.tw-see-inside_see-inside-button_3ecsR {\n    box-shadow: 0 0 0 1px var(--ui-black-transparent);\n}\n\n.tw-see-inside_see-inside-button-icon_1fQvM {\n    height: 1.25rem;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"see-inside-button": "tw-see-inside_see-inside-button_1fSk6",
-	"seeInsideButton": "tw-see-inside_see-inside-button_1fSk6",
-	"see-inside-button-icon": "tw-see-inside_see-inside-button-icon_UKAVj",
-	"seeInsideButtonIcon": "tw-see-inside_see-inside-button-icon_UKAVj"
+	"see-inside-button": "tw-see-inside_see-inside-button_3ecsR",
+	"seeInsideButton": "tw-see-inside_see-inside-button_3ecsR",
+	"see-inside-button-icon": "tw-see-inside_see-inside-button-icon_1fQvM",
+	"seeInsideButtonIcon": "tw-see-inside_see-inside-button-icon_1fQvM"
 };
 
 /***/ }),
@@ -1581,12 +1581,12 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.user-avatar_user-thumbnail_IwOnc {\n    width: 2rem;\n    height: 2rem;\n    border-radius: calc(0.5rem / 2);\n    vertical-align: middle;\n    box-shadow: 0 0 0 1px var(--ui-black-transparent);\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.user-avatar_user-thumbnail_jSYS1 {\n    width: 2rem;\n    height: 2rem;\n    border-radius: calc(0.5rem / 2);\n    vertical-align: middle;\n    box-shadow: 0 0 0 1px var(--ui-black-transparent);\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"user-thumbnail": "user-avatar_user-thumbnail_IwOnc",
-	"userThumbnail": "user-avatar_user-thumbnail_IwOnc"
+	"user-thumbnail": "user-avatar_user-thumbnail_jSYS1",
+	"userThumbnail": "user-avatar_user-thumbnail_jSYS1"
 };
 
 /***/ }),
@@ -1603,21 +1603,21 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.menu_menu_1rWB9 {\n    position: absolute;\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 0 0 8px 8px;\n    background-color: var(--menu-bar-background);\n    padding: 0;\n    margin: 0;\n    min-width: 186px;\n    overflow: visible;\n    box-shadow: 0 8px 8px 0 var(--shadow);\n}\n\n.menu_menu_1rWB9.menu_left_1Zl7K {\n    right: 0;\n}\n\n.menu_menu_1rWB9.menu_right_12vPx {\n    left: 0;\n}\n\n.menu_menu-item_3ELPx {\n    display: block;\n    line-height: 34px;\n    white-space: nowrap;\n    padding: 0 10px;\n    font-size: .75rem;\n    margin: 0;\n    font-weight: bold;\n    position: relative;\n}\n\n.menu_menu-item_3ELPx.menu_active_7GxsI,\n.menu_menu-item_3ELPx:hover,\n.menu_menu-item_3ELPx.menu_expanded_2Jcf9 {\n    background-color: var(--ui-black-transparent);\n}\n\n.menu_menu-item_3ELPx.menu_hoverable_3mGWm {\n    cursor: pointer;\n}\n\n.menu_menu-section_1ai_E {\n    border-top: 1px solid var(--ui-black-transparent);\n}\n\n.menu_submenu_3SFWn {\n    display: none;\n    position: absolute;\n    top: -1px;\n    min-width: 186px;\n    height: -webkit-max-content;\n    height: max-content;\n    overflow: hidden;\n    border-radius: 8px;\n}\n\n.menu_submenu_3SFWn.menu_right_12vPx {\n    left: 100%;\n}\n\n.menu_submenu_3SFWn.menu_left_1Zl7K {\n    right: 100%;\n}\n\n.menu_submenu_3SFWn > .menu_menu_1rWB9 {\n    position: relative;\n    overflow-y: auto;\n    overflow-x: hidden;\n    scrollbar-color: var(--menu-bar-foreground) var(--menu-bar-background);\n    border-radius: 8px;\n}\n\n.menu_menu-item_3ELPx.menu_expanded_2Jcf9 > .menu_submenu_3SFWn {\n    display: block;\n}\n\n:not(:has(> .menu_menu-item_3ELPx.menu_expanded_2Jcf9)) > .menu_menu-item_3ELPx:hover > .menu_submenu_3SFWn {\n    display: block;\n}\n\n/* Fallback styling for webkit browsers that don't support scrollbar-color */\n\n.menu_submenu_3SFWn > .menu_menu_1rWB9::-webkit-scrollbar {\n    width: 12px;\n}\n\n.menu_submenu_3SFWn > .menu_menu_1rWB9::-webkit-scrollbar-track {\n    background: var(--menu-bar-background);\n}\n\n.menu_submenu_3SFWn > .menu_menu_1rWB9::-webkit-scrollbar-thumb {\n    background-color: var(--menu-bar-foreground);\n    border-radius: 12px;\n    border: 3px solid var(--menu-bar-background);\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.menu_menu_3k7QT {\n    position: absolute;\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 0 0 8px 8px;\n    background-color: var(--menu-bar-background);\n    padding: 0;\n    margin: 0;\n    min-width: 186px;\n    overflow: visible;\n    box-shadow: 0 8px 8px 0 var(--shadow);\n}\n\n.menu_menu_3k7QT.menu_left_dujsV {\n    right: 0;\n}\n\n.menu_menu_3k7QT.menu_right_3PQ4S {\n    left: 0;\n}\n\n.menu_menu-item_3EwYA {\n    display: block;\n    line-height: 34px;\n    white-space: nowrap;\n    padding: 0 10px;\n    font-size: .75rem;\n    margin: 0;\n    font-weight: bold;\n    position: relative;\n}\n\n.menu_menu-item_3EwYA.menu_active_ebXO6,\n.menu_menu-item_3EwYA:hover,\n.menu_menu-item_3EwYA.menu_expanded_1-Ozh {\n    background-color: var(--ui-black-transparent);\n}\n\n.menu_menu-item_3EwYA.menu_hoverable_3u9dt {\n    cursor: pointer;\n}\n\n.menu_menu-section_2U-v6 {\n    border-top: 1px solid var(--ui-black-transparent);\n}\n\n.menu_submenu_2Yzd1 {\n    display: none;\n    position: absolute;\n    top: -1px;\n    min-width: 186px;\n    height: -webkit-max-content;\n    height: max-content;\n    overflow: hidden;\n    border-radius: 8px;\n}\n\n.menu_submenu_2Yzd1.menu_right_3PQ4S {\n    left: 100%;\n}\n\n.menu_submenu_2Yzd1.menu_left_dujsV {\n    right: 100%;\n}\n\n.menu_submenu_2Yzd1 > .menu_menu_3k7QT {\n    position: relative;\n    overflow-y: auto;\n    overflow-x: hidden;\n    scrollbar-color: var(--menu-bar-foreground) var(--menu-bar-background);\n    border-radius: 8px;\n}\n\n.menu_menu-item_3EwYA.menu_expanded_1-Ozh > .menu_submenu_2Yzd1 {\n    display: block;\n}\n\n:not(:has(> .menu_menu-item_3EwYA.menu_expanded_1-Ozh)) > .menu_menu-item_3EwYA:hover > .menu_submenu_2Yzd1 {\n    display: block;\n}\n\n/* Fallback styling for webkit browsers that don't support scrollbar-color */\n\n.menu_submenu_2Yzd1 > .menu_menu_3k7QT::-webkit-scrollbar {\n    width: 12px;\n}\n\n.menu_submenu_2Yzd1 > .menu_menu_3k7QT::-webkit-scrollbar-track {\n    background: var(--menu-bar-background);\n}\n\n.menu_submenu_2Yzd1 > .menu_menu_3k7QT::-webkit-scrollbar-thumb {\n    background-color: var(--menu-bar-foreground);\n    border-radius: 12px;\n    border: 3px solid var(--menu-bar-background);\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"menu": "menu_menu_1rWB9",
-	"left": "menu_left_1Zl7K",
-	"right": "menu_right_12vPx",
-	"menu-item": "menu_menu-item_3ELPx",
-	"menuItem": "menu_menu-item_3ELPx",
-	"active": "menu_active_7GxsI",
-	"expanded": "menu_expanded_2Jcf9",
-	"hoverable": "menu_hoverable_3mGWm",
-	"menu-section": "menu_menu-section_1ai_E",
-	"menuSection": "menu_menu-section_1ai_E",
-	"submenu": "menu_submenu_3SFWn"
+	"menu": "menu_menu_3k7QT",
+	"left": "menu_left_dujsV",
+	"right": "menu_right_3PQ4S",
+	"menu-item": "menu_menu-item_3EwYA",
+	"menuItem": "menu_menu-item_3EwYA",
+	"active": "menu_active_ebXO6",
+	"expanded": "menu_expanded_1-Ozh",
+	"hoverable": "menu_hoverable_3u9dt",
+	"menu-section": "menu_menu-section_2U-v6",
+	"menuSection": "menu_menu-section_2U-v6",
+	"submenu": "menu_submenu_2Yzd1"
 };
 
 /***/ }),
@@ -1634,16 +1634,16 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.meter_green_1TDyl {\n    fill: rgb(171, 220, 170);\n    stroke: rgb(174, 211, 168);\n}\n\n.meter_yellow_YVGHr {\n    fill: rgb(251, 219, 130);\n    stroke: rgb(239, 212, 134);\n}\n\n.meter_red_S3fdX {\n    fill: rgb(251, 194, 142);\n    stroke: rgb(235, 189, 142);\n}\n\n.meter_mask-container_m3uVt {\n    position: relative;\n}\n\n.meter_mask_1s9vE {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height: 100%;\n    width: 100%;\n    transform-origin: top;\n    will-change: transform;\n    background: var(--ui-primary);\n    opacity: 0.75;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.meter_green_oUPv2 {\n    fill: rgb(171, 220, 170);\n    stroke: rgb(174, 211, 168);\n}\n\n.meter_yellow_3uz-j {\n    fill: rgb(251, 219, 130);\n    stroke: rgb(239, 212, 134);\n}\n\n.meter_red_1aMUm {\n    fill: rgb(251, 194, 142);\n    stroke: rgb(235, 189, 142);\n}\n\n.meter_mask-container_11m_n {\n    position: relative;\n}\n\n.meter_mask_B-cd7 {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height: 100%;\n    width: 100%;\n    transform-origin: top;\n    will-change: transform;\n    background: var(--ui-primary);\n    opacity: 0.75;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"green": "meter_green_1TDyl",
-	"yellow": "meter_yellow_YVGHr",
-	"red": "meter_red_S3fdX",
-	"mask-container": "meter_mask-container_m3uVt",
-	"maskContainer": "meter_mask-container_m3uVt",
-	"mask": "meter_mask_1s9vE"
+	"green": "meter_green_oUPv2",
+	"yellow": "meter_yellow_3uz-j",
+	"red": "meter_red_1aMUm",
+	"mask-container": "meter_mask-container_11m_n",
+	"maskContainer": "meter_mask-container_11m_n",
+	"mask": "meter_mask_B-cd7"
 };
 
 /***/ }),
@@ -1660,13 +1660,13 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "@keyframes mic-indicator_popIn_11qHK {\n    from {transform: scale(0.5)}\n    to {transform: scale(1)}\n}\n\n.mic-indicator_mic-img_3cs6_ {\n    margin: 10px;\n    transform-origin: center;\n    animation: mic-indicator_popIn_11qHK 0.1s ease-in-out;\n}\n", ""]);
+exports.push([module.i, "@keyframes mic-indicator_popIn_2A2Un {\n    from {transform: scale(0.5)}\n    to {transform: scale(1)}\n}\n\n.mic-indicator_mic-img_Su3yZ {\n    margin: 10px;\n    transform-origin: center;\n    animation: mic-indicator_popIn_2A2Un 0.1s ease-in-out;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"mic-img": "mic-indicator_mic-img_3cs6_",
-	"micImg": "mic-indicator_mic-img_3cs6_",
-	"popIn": "mic-indicator_popIn_11qHK"
+	"mic-img": "mic-indicator_mic-img_Su3yZ",
+	"micImg": "mic-indicator_mic-img_Su3yZ",
+	"popIn": "mic-indicator_popIn_2A2Un"
 };
 
 /***/ }),
@@ -1683,33 +1683,33 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.modal_modal-overlay_2_Dgx {\n    position: fixed;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    z-index: 510;\n    background-color: var(--ui-modal-overlay);\n    color: var(--ui-modal-foreground);\n}\n\n.modal_modal-content_3brCX * {\n    box-sizing: border-box;\n}\n\n.modal_modal-content_3brCX {\n    margin: 100px auto;\n    outline: none;\n    border: 4px solid var(--ui-white-transparent);\n    padding: 0;\n    border-radius: 0.5rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    overflow: hidden;\n}\n\n.modal_modal-content_3brCX.modal_full-screen_3yXCG {\n    position: absolute;\n\n    display: flex;\n    height: 100%;\n    width: 100%;\n\n    overflow-y: auto;\n    -webkit-overflow-scrolling: 'touch';\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n\n    background-color: var(--ui-secondary);\n\n    /* Default modal resets */\n    margin: 0;\n    border: none;\n    border-radius: 0;\n}\n\n/*\n    Modal header has 3 items:\n    |filter     title       x|\n\n    Use the same width for both side item containers,\n    so that title remains centered\n*/\n\n.modal_header_1dNxf {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: nowrap;\n    justify-content: flex-start;\n    height: 3.125rem;\n\n    box-sizing: border-box;\n    width: 100%;\n    background-color: var(--ui-modal-header-background);\n    color: var(--ui-modal-header-foreground);\n\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    font-size: 1rem;\n    font-weight: normal;\n}\n\n.modal_header-item_1WbOm {\n    display: flex;\n    align-items: center;\n    padding: 1rem;\n    text-decoration: none;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n}\n\n[dir=\"ltr\"] .modal_header-image_2c-LK {\n    margin-right: 0.5rem;\n}\n\n[dir=\"rtl\"] .modal_header-image_2c-LK {\n    margin-left: 0.5rem;\n}\n\n.modal_header-item-filter_slKwM {\n    display: flex;\n    flex-basis: 20rem;\n    justify-content: flex-start;\n}\n\n.modal_header-item-title_1N2BE {\n    flex-grow: 1;\n    flex-shrink: 0;\n    justify-content: center;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    letter-spacing: 0.4px;\n    cursor: default;\n}\n\n[dir=\"ltr\"] .modal_header-item-title_1N2BE {\n    margin: 0 -20rem 0 0;\n}\n\n[dir=\"rtl\"] .modal_header-item-title_1N2BE {\n    margin: 0 0 0 -20rem;\n}\n\n.modal_full-screen_3yXCG [dir=\"ltr\"] .modal_header-item-title_1N2BE {\n    margin: 0 0 0 -20rem;\n}\n\n.modal_full-screen_3yXCG [dir=\"rtl\"] .modal_header-item-title_1N2BE {\n    margin: 0 -20rem 0 0;\n}\n\n.modal_header-item-close_4akWi {\n    flex-basis: 20rem;\n    justify-content: flex-end;\n    z-index: 1;\n}\n\n.modal_full-screen_3yXCG .modal_header-item-close_4akWi {\n    order: -1;\n    justify-content: flex-start;\n}\n\n.modal_back-button_3HvWm {\n    font-weight: normal;\n    padding-right: 0;\n    padding-left: 0;\n}\n\n[dir=\"rtl\"] .modal_back-button_3HvWm img {\n    transform: scaleX(-1);\n}\n\n.modal_header-item-help_2F4to {\n    padding: 0;\n    z-index: 1;\n}\n\n[dir=\"ltr\"] .modal_header-item-help_2F4to {\n    margin-right: -4.75rem;\n}\n\n[dir=\"rtl\"] .modal_header-item-help_2F4to {\n    margin-left: -4.75rem;\n}\n\n.modal_help-button_1F4rs {\n    font-weight: normal;\n    font-size: 0.75rem;\n}\n\n[dir=\"ltr\"] .modal_help-button_1F4rs {\n    padding-right: 0;\n}\n\n[dir=\"rtl\"] .modal_help-button_1F4rs {\n    padding-left: 0;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.modal_modal-overlay_1Lcbx {\n    position: fixed;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    z-index: 510;\n    background-color: var(--ui-modal-overlay);\n    color: var(--ui-modal-foreground);\n}\n\n.modal_modal-content_1h3ll * {\n    box-sizing: border-box;\n}\n\n.modal_modal-content_1h3ll {\n    margin: 100px auto;\n    outline: none;\n    border: 4px solid var(--ui-white-transparent);\n    padding: 0;\n    border-radius: 0.5rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    overflow: hidden;\n}\n\n.modal_modal-content_1h3ll.modal_full-screen_FA4cr {\n    position: absolute;\n\n    display: flex;\n    height: 100%;\n    width: 100%;\n\n    overflow-y: auto;\n    -webkit-overflow-scrolling: 'touch';\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n\n    background-color: var(--ui-secondary);\n\n    /* Default modal resets */\n    margin: 0;\n    border: none;\n    border-radius: 0;\n}\n\n/*\n    Modal header has 3 items:\n    |filter     title       x|\n\n    Use the same width for both side item containers,\n    so that title remains centered\n*/\n\n.modal_header_1h7ps {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: nowrap;\n    justify-content: flex-start;\n    height: 3.125rem;\n\n    box-sizing: border-box;\n    width: 100%;\n    background-color: var(--ui-modal-header-background);\n    color: var(--ui-modal-header-foreground);\n\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    font-size: 1rem;\n    font-weight: normal;\n}\n\n.modal_header-item_2zQTd {\n    display: flex;\n    align-items: center;\n    padding: 1rem;\n    text-decoration: none;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n}\n\n[dir=\"ltr\"] .modal_header-image_2KMDd {\n    margin-right: 0.5rem;\n}\n\n[dir=\"rtl\"] .modal_header-image_2KMDd {\n    margin-left: 0.5rem;\n}\n\n.modal_header-item-filter_3W-ah {\n    display: flex;\n    flex-basis: 20rem;\n    justify-content: flex-start;\n}\n\n.modal_header-item-title_tLOU5 {\n    flex-grow: 1;\n    flex-shrink: 0;\n    justify-content: center;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    letter-spacing: 0.4px;\n    cursor: default;\n}\n\n[dir=\"ltr\"] .modal_header-item-title_tLOU5 {\n    margin: 0 -20rem 0 0;\n}\n\n[dir=\"rtl\"] .modal_header-item-title_tLOU5 {\n    margin: 0 0 0 -20rem;\n}\n\n.modal_full-screen_FA4cr [dir=\"ltr\"] .modal_header-item-title_tLOU5 {\n    margin: 0 0 0 -20rem;\n}\n\n.modal_full-screen_FA4cr [dir=\"rtl\"] .modal_header-item-title_tLOU5 {\n    margin: 0 -20rem 0 0;\n}\n\n.modal_header-item-close_2XDeL {\n    flex-basis: 20rem;\n    justify-content: flex-end;\n    z-index: 1;\n}\n\n.modal_full-screen_FA4cr .modal_header-item-close_2XDeL {\n    order: -1;\n    justify-content: flex-start;\n}\n\n.modal_back-button_2ej6v {\n    font-weight: normal;\n    padding-right: 0;\n    padding-left: 0;\n}\n\n[dir=\"rtl\"] .modal_back-button_2ej6v img {\n    transform: scaleX(-1);\n}\n\n.modal_header-item-help_UZFrJ {\n    padding: 0;\n    z-index: 1;\n}\n\n[dir=\"ltr\"] .modal_header-item-help_UZFrJ {\n    margin-right: -4.75rem;\n}\n\n[dir=\"rtl\"] .modal_header-item-help_UZFrJ {\n    margin-left: -4.75rem;\n}\n\n.modal_help-button_dLhZu {\n    font-weight: normal;\n    font-size: 0.75rem;\n}\n\n[dir=\"ltr\"] .modal_help-button_dLhZu {\n    padding-right: 0;\n}\n\n[dir=\"rtl\"] .modal_help-button_dLhZu {\n    padding-left: 0;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"modal-overlay": "modal_modal-overlay_2_Dgx",
-	"modalOverlay": "modal_modal-overlay_2_Dgx",
-	"modal-content": "modal_modal-content_3brCX",
-	"modalContent": "modal_modal-content_3brCX",
-	"full-screen": "modal_full-screen_3yXCG",
-	"fullScreen": "modal_full-screen_3yXCG",
-	"header": "modal_header_1dNxf",
-	"header-item": "modal_header-item_1WbOm",
-	"headerItem": "modal_header-item_1WbOm",
-	"header-image": "modal_header-image_2c-LK",
-	"headerImage": "modal_header-image_2c-LK",
-	"header-item-filter": "modal_header-item-filter_slKwM",
-	"headerItemFilter": "modal_header-item-filter_slKwM",
-	"header-item-title": "modal_header-item-title_1N2BE",
-	"headerItemTitle": "modal_header-item-title_1N2BE",
-	"header-item-close": "modal_header-item-close_4akWi",
-	"headerItemClose": "modal_header-item-close_4akWi",
-	"back-button": "modal_back-button_3HvWm",
-	"backButton": "modal_back-button_3HvWm",
-	"header-item-help": "modal_header-item-help_2F4to",
-	"headerItemHelp": "modal_header-item-help_2F4to",
-	"help-button": "modal_help-button_1F4rs",
-	"helpButton": "modal_help-button_1F4rs"
+	"modal-overlay": "modal_modal-overlay_1Lcbx",
+	"modalOverlay": "modal_modal-overlay_1Lcbx",
+	"modal-content": "modal_modal-content_1h3ll",
+	"modalContent": "modal_modal-content_1h3ll",
+	"full-screen": "modal_full-screen_FA4cr",
+	"fullScreen": "modal_full-screen_FA4cr",
+	"header": "modal_header_1h7ps",
+	"header-item": "modal_header-item_2zQTd",
+	"headerItem": "modal_header-item_2zQTd",
+	"header-image": "modal_header-image_2KMDd",
+	"headerImage": "modal_header-image_2KMDd",
+	"header-item-filter": "modal_header-item-filter_3W-ah",
+	"headerItemFilter": "modal_header-item-filter_3W-ah",
+	"header-item-title": "modal_header-item-title_tLOU5",
+	"headerItemTitle": "modal_header-item-title_tLOU5",
+	"header-item-close": "modal_header-item-close_2XDeL",
+	"headerItemClose": "modal_header-item-close_2XDeL",
+	"back-button": "modal_back-button_2ej6v",
+	"backButton": "modal_back-button_2ej6v",
+	"header-item-help": "modal_header-item-help_UZFrJ",
+	"headerItemHelp": "modal_header-item-help_UZFrJ",
+	"help-button": "modal_help-button_dLhZu",
+	"helpButton": "modal_help-button_dLhZu"
 };
 
 /***/ }),
@@ -1726,14 +1726,14 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".monitor-list_monitor-list_aXinQ {\n    /* Width/height are set by the component, margin: auto centers in fullscreen */\n    margin: auto;\n    pointer-events: none;\n    overflow: hidden;\n}\n\n.monitor-list_monitor-list-scaler_1jxP7 {\n    /* Scaling for monitors should happen from the top left */\n    transform-origin: left top;\n}\n\n::-ms-clear { display: none; }\n", ""]);
+exports.push([module.i, ".monitor-list_monitor-list_20k-y {\n    /* Width/height are set by the component, margin: auto centers in fullscreen */\n    margin: auto;\n    pointer-events: none;\n    overflow: hidden;\n}\n\n.monitor-list_monitor-list-scaler_143tA {\n    /* Scaling for monitors should happen from the top left */\n    transform-origin: left top;\n}\n\n::-ms-clear { display: none; }\n", ""]);
 
 // exports
 exports.locals = {
-	"monitor-list": "monitor-list_monitor-list_aXinQ",
-	"monitorList": "monitor-list_monitor-list_aXinQ",
-	"monitor-list-scaler": "monitor-list_monitor-list-scaler_1jxP7",
-	"monitorListScaler": "monitor-list_monitor-list-scaler_1jxP7"
+	"monitor-list": "monitor-list_monitor-list_20k-y",
+	"monitorList": "monitor-list_monitor-list_20k-y",
+	"monitor-list-scaler": "monitor-list_monitor-list-scaler_143tA",
+	"monitorListScaler": "monitor-list_monitor-list-scaler_143tA"
 };
 
 /***/ }),
@@ -1750,61 +1750,61 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.monitor_monitor-container_BKHcx {\n    position: absolute;\n    background: var(--ui-primary-default);\n    z-index: 48;\n    border: 1px solid var(--ui-black-transparent-default);\n    border-radius: calc(0.5rem / 2);\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    font-size: 0.75rem;\n    transition: box-shadow 0.2s;\n    pointer-events: all;\n    overflow: hidden;\n}\n\n.monitor_monitor_1DS0_:hover {\n    cursor: pointer;\n}\n\n.monitor_dragging_1m_Kt {\n    z-index: 1010;\n    box-shadow: 3px 3px 5px #888888;\n}\n\n.monitor_default-monitor_2KHFc {\n    display: flex;\n    flex-direction: column;\n    padding: 3px;\n}\n\n.monitor_label_1Jx1h {\n    font-weight: bold;\n    text-align: center;\n    margin: 0 5px;\n}\n\n.monitor_value_2DN5C {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    min-width: 40px;\n    text-align: center;\n    margin: 0 5px;\n    border-radius: calc(0.5rem / 2);\n    padding: 0 2px;\n    white-space: pre-wrap;\n    transform: translateZ(0); /* Fixes flickering in Safari */\n}\n\n.monitor_large-value_3DIcK {\n    min-height: 1.4rem;\n    min-width: 3rem;\n    padding: 0.1rem 0.25rem;\n    text-align: center;\n    font-size: 1rem;\n    white-space: pre-wrap;\n    transform: translateZ(0); /* Fixes flickering in Safari */\n}\n\n.monitor_row_3kEbv {\n    display: flex;\n    flex-direction: row;\n}\n\n.monitor_slider_18owZ {\n    width: 100%;\n    transform: translateZ(0); /* Fixes flickering in Safari */\n}\n\n.monitor_list-monitor_2sZXc {\n    display: flex;\n    flex-direction: column;\n}\n\n.monitor_list-header_2fGXP {\n    background: var(--ui-white-default);\n    border-bottom: 1px solid var(--ui-black-transparent-default);\n    text-align: center;\n    padding: 3px;\n    font-size: 0.75rem;\n    font-weight: bold;\n    color: var(--text-primary-default);\n    width: 100%;\n}\n\n.monitor_list-body_3Yq5K {\n    background: var(--ui-primary-default);\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n    overflow-x: hidden;\n    flex-grow: 1;\n}\n\n.monitor_list-row_1nPeY {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-around;\n    align-items: center;\n    padding: 2px;\n    flex-shrink: 0;\n    transform: translateZ(0); /* Keep sharp when scaled */\n}\n\n.monitor_list-index_1h6b3 {\n    font-weight: bold;\n    color: var(--text-primary-default);\n    margin: 0 3px;\n}\n\n.monitor_list-value_2Ui8b {\n    min-width: 40px;\n    text-align: left;\n    margin: 0 3px;\n    border-radius: calc(0.5rem / 2);\n    border: 1px solid var(--ui-black-transparent-default);\n    flex-grow: 1;\n    height: 22px;\n}\n\n.monitor_list-footer_28WLY {\n    background: var(--ui-white-default);\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    padding: 3px;\n    font-size: 0.75rem;\n    font-weight: bold;\n    border-top: 1px solid var(--ui-black-transparent-default);\n    color: var(--text-primary-default);\n}\n\n.monitor_list-empty_kM_Oc {\n    text-align: center;\n    width: 100%;\n    padding: 5px;\n}\n\n.monitor_input-wrapper_22rQF {\n    position: relative;\n    overflow: hidden;\n    display: flex;\n    align-items: center;\n    background: rgba(0, 0, 0, 0.1);\n}\n\n.monitor_value-inner_2B2eT {\n    padding: 3px 5px;\n    min-height: 22px;\n    overflow: hidden; /* Don't let long values escape container */\n    text-overflow: ellipsis;\n    -webkit-user-select: text;\n       -moz-user-select: text;\n        -ms-user-select: text;\n            user-select: text; /* Allow selecting list values for 2.0 compatibility, only relevant in player */\n    white-space: pre;\n}\n\n.monitor_list-input_NzzdG {\n    padding: 3px 5px;\n    border: 0;\n    background: none;\n    outline: none;\n    font-size: 0.75rem;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    /* Workaround for Firefox */\n    width: 0;\n    flex: 1 1 auto;\n}\n\n.monitor_remove-button_2PY5T {\n    padding: 0;\n    padding-right: 5px;\n    cursor: pointer;\n}\n\n.monitor_add-button_3djmW {\n    cursor: pointer;\n    margin-right: 3px;\n}\n\n.monitor_resize-handle_1DCXV {\n    cursor: nwse-resize;\n    margin-left: 3px;\n}\n\n.monitor_footer-length_1SD4W {\n    text-align: center;\n}\n\n.monitor_table-column-tag_2hSpI {\n    font-weight: bold;\n    color: var(--text-primary-default);\n    margin: 0 1px;\n    height: 20px;\n    line-height: 20px;\n    min-width: 32px;\n}\n\n.monitor_table-row_2qHZZ {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    padding: 1px 0;\n    flex-shrink: 0;\n    transform: translateZ(0); /* Keep sharp when scaled */\n}\n\n.monitor_table-row_2qHZZ .monitor_list-index_1h6b3 {\n    display: flex;\n    align-items: center;\n    justify-content: flex-end;\n    margin: 0;\n    padding: 0 2px 0 4px;\n    height: 22px;\n    line-height: 22px;\n    width: 100%;\n    box-sizing: border-box;\n}\n\n.monitor_table-value_1uIMc {\n    min-width: 64px;\n    text-align: left;\n    margin: 0 1px;\n    border-radius: calc(0.5rem / 2);\n    border: 1px solid var(--ui-black-transparent-default);\n    height: 22px;\n}\n\n.monitor_footer-hidden_vhMZJ {\n    visibility: hidden;\n}\n\n.monitor_overflowx_ixE1Q {\n    overflow-x: auto;\n}", ""]);
+exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.monitor_monitor-container_2J9gl {\n    position: absolute;\n    background: var(--ui-primary-default);\n    z-index: 48;\n    border: 1px solid var(--ui-black-transparent-default);\n    border-radius: calc(0.5rem / 2);\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    font-size: 0.75rem;\n    transition: box-shadow 0.2s;\n    pointer-events: all;\n    overflow: hidden;\n}\n\n.monitor_monitor_11Vhm:hover {\n    cursor: pointer;\n}\n\n.monitor_dragging_2ZN-P {\n    z-index: 1010;\n    box-shadow: 3px 3px 5px #888888;\n}\n\n.monitor_default-monitor_2vCcZ {\n    display: flex;\n    flex-direction: column;\n    padding: 3px;\n}\n\n.monitor_label_ci1ok {\n    font-weight: bold;\n    text-align: center;\n    margin: 0 5px;\n}\n\n.monitor_value_3Yexa {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    min-width: 40px;\n    text-align: center;\n    margin: 0 5px;\n    border-radius: calc(0.5rem / 2);\n    padding: 0 2px;\n    white-space: pre-wrap;\n    transform: translateZ(0); /* Fixes flickering in Safari */\n}\n\n.monitor_large-value_P-rAm {\n    min-height: 1.4rem;\n    min-width: 3rem;\n    padding: 0.1rem 0.25rem;\n    text-align: center;\n    font-size: 1rem;\n    white-space: pre-wrap;\n    transform: translateZ(0); /* Fixes flickering in Safari */\n}\n\n.monitor_row_2y_kM {\n    display: flex;\n    flex-direction: row;\n}\n\n.monitor_slider_1CHwk {\n    width: 100%;\n    transform: translateZ(0); /* Fixes flickering in Safari */\n}\n\n.monitor_list-monitor_1FdIj {\n    display: flex;\n    flex-direction: column;\n}\n\n.monitor_list-header_-cp0o {\n    background: var(--ui-white-default);\n    border-bottom: 1px solid var(--ui-black-transparent-default);\n    text-align: center;\n    padding: 3px;\n    font-size: 0.75rem;\n    font-weight: bold;\n    color: var(--text-primary-default);\n    width: 100%;\n}\n\n.monitor_list-body_2OFZ6 {\n    background: var(--ui-primary-default);\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n    overflow-x: hidden;\n    flex-grow: 1;\n}\n\n.monitor_list-row_okCNn {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-around;\n    align-items: center;\n    padding: 2px;\n    flex-shrink: 0;\n    transform: translateZ(0); /* Keep sharp when scaled */\n}\n\n.monitor_list-index_7tKdl {\n    font-weight: bold;\n    color: var(--text-primary-default);\n    margin: 0 3px;\n}\n\n.monitor_list-value_1zGfI {\n    min-width: 40px;\n    text-align: left;\n    margin: 0 3px;\n    border-radius: calc(0.5rem / 2);\n    border: 1px solid var(--ui-black-transparent-default);\n    flex-grow: 1;\n    height: 22px;\n}\n\n.monitor_list-footer_2HyG8 {\n    background: var(--ui-white-default);\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    padding: 3px;\n    font-size: 0.75rem;\n    font-weight: bold;\n    border-top: 1px solid var(--ui-black-transparent-default);\n    color: var(--text-primary-default);\n}\n\n.monitor_list-empty_1UKsB {\n    text-align: center;\n    width: 100%;\n    padding: 5px;\n}\n\n.monitor_input-wrapper_2yExa {\n    position: relative;\n    overflow: hidden;\n    display: flex;\n    align-items: center;\n    background: rgba(0, 0, 0, 0.1);\n}\n\n.monitor_value-inner_3E9Ou {\n    padding: 3px 5px;\n    min-height: 22px;\n    overflow: hidden; /* Don't let long values escape container */\n    text-overflow: ellipsis;\n    -webkit-user-select: text;\n       -moz-user-select: text;\n        -ms-user-select: text;\n            user-select: text; /* Allow selecting list values for 2.0 compatibility, only relevant in player */\n    white-space: pre;\n}\n\n.monitor_list-input_3kw5o {\n    padding: 3px 5px;\n    border: 0;\n    background: none;\n    outline: none;\n    font-size: 0.75rem;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    /* Workaround for Firefox */\n    width: 0;\n    flex: 1 1 auto;\n}\n\n.monitor_remove-button_AhlwG {\n    padding: 0;\n    padding-right: 5px;\n    cursor: pointer;\n}\n\n.monitor_add-button_2lmvI {\n    cursor: pointer;\n    margin-right: 3px;\n}\n\n.monitor_resize-handle_3WWBV {\n    cursor: nwse-resize;\n    margin-left: 3px;\n}\n\n.monitor_footer-length_2_QAb {\n    text-align: center;\n}\n\n.monitor_table-column-tag_19y-Y {\n    font-weight: bold;\n    color: var(--text-primary-default);\n    margin: 0 1px;\n    height: 20px;\n    line-height: 20px;\n    min-width: 32px;\n}\n\n.monitor_table-row_xtLHv {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    padding: 1px 0;\n    flex-shrink: 0;\n    transform: translateZ(0); /* Keep sharp when scaled */\n}\n\n.monitor_table-row_xtLHv .monitor_list-index_7tKdl {\n    display: flex;\n    align-items: center;\n    justify-content: flex-end;\n    margin: 0;\n    padding: 0 2px 0 4px;\n    height: 22px;\n    line-height: 22px;\n    width: 100%;\n    box-sizing: border-box;\n}\n\n.monitor_table-value_23bYU {\n    min-width: 64px;\n    text-align: left;\n    margin: 0 1px;\n    border-radius: calc(0.5rem / 2);\n    border: 1px solid var(--ui-black-transparent-default);\n    height: 22px;\n}\n\n.monitor_footer-hidden_1AZ2o {\n    visibility: hidden;\n}\n\n.monitor_overflowx_1ZXhp {\n    overflow-x: auto;\n}", ""]);
 
 // exports
 exports.locals = {
-	"monitor-container": "monitor_monitor-container_BKHcx",
-	"monitorContainer": "monitor_monitor-container_BKHcx",
-	"monitor": "monitor_monitor_1DS0_",
-	"dragging": "monitor_dragging_1m_Kt",
-	"default-monitor": "monitor_default-monitor_2KHFc",
-	"defaultMonitor": "monitor_default-monitor_2KHFc",
-	"label": "monitor_label_1Jx1h",
-	"value": "monitor_value_2DN5C",
-	"large-value": "monitor_large-value_3DIcK",
-	"largeValue": "monitor_large-value_3DIcK",
-	"row": "monitor_row_3kEbv",
-	"slider": "monitor_slider_18owZ",
-	"list-monitor": "monitor_list-monitor_2sZXc",
-	"listMonitor": "monitor_list-monitor_2sZXc",
-	"list-header": "monitor_list-header_2fGXP",
-	"listHeader": "monitor_list-header_2fGXP",
-	"list-body": "monitor_list-body_3Yq5K",
-	"listBody": "monitor_list-body_3Yq5K",
-	"list-row": "monitor_list-row_1nPeY",
-	"listRow": "monitor_list-row_1nPeY",
-	"list-index": "monitor_list-index_1h6b3",
-	"listIndex": "monitor_list-index_1h6b3",
-	"list-value": "monitor_list-value_2Ui8b",
-	"listValue": "monitor_list-value_2Ui8b",
-	"list-footer": "monitor_list-footer_28WLY",
-	"listFooter": "monitor_list-footer_28WLY",
-	"list-empty": "monitor_list-empty_kM_Oc",
-	"listEmpty": "monitor_list-empty_kM_Oc",
-	"input-wrapper": "monitor_input-wrapper_22rQF",
-	"inputWrapper": "monitor_input-wrapper_22rQF",
-	"value-inner": "monitor_value-inner_2B2eT",
-	"valueInner": "monitor_value-inner_2B2eT",
-	"list-input": "monitor_list-input_NzzdG",
-	"listInput": "monitor_list-input_NzzdG",
-	"remove-button": "monitor_remove-button_2PY5T",
-	"removeButton": "monitor_remove-button_2PY5T",
-	"add-button": "monitor_add-button_3djmW",
-	"addButton": "monitor_add-button_3djmW",
-	"resize-handle": "monitor_resize-handle_1DCXV",
-	"resizeHandle": "monitor_resize-handle_1DCXV",
-	"footer-length": "monitor_footer-length_1SD4W",
-	"footerLength": "monitor_footer-length_1SD4W",
-	"table-column-tag": "monitor_table-column-tag_2hSpI",
-	"tableColumnTag": "monitor_table-column-tag_2hSpI",
-	"table-row": "monitor_table-row_2qHZZ",
-	"tableRow": "monitor_table-row_2qHZZ",
-	"table-value": "monitor_table-value_1uIMc",
-	"tableValue": "monitor_table-value_1uIMc",
-	"footer-hidden": "monitor_footer-hidden_vhMZJ",
-	"footerHidden": "monitor_footer-hidden_vhMZJ",
-	"overflowx": "monitor_overflowx_ixE1Q"
+	"monitor-container": "monitor_monitor-container_2J9gl",
+	"monitorContainer": "monitor_monitor-container_2J9gl",
+	"monitor": "monitor_monitor_11Vhm",
+	"dragging": "monitor_dragging_2ZN-P",
+	"default-monitor": "monitor_default-monitor_2vCcZ",
+	"defaultMonitor": "monitor_default-monitor_2vCcZ",
+	"label": "monitor_label_ci1ok",
+	"value": "monitor_value_3Yexa",
+	"large-value": "monitor_large-value_P-rAm",
+	"largeValue": "monitor_large-value_P-rAm",
+	"row": "monitor_row_2y_kM",
+	"slider": "monitor_slider_1CHwk",
+	"list-monitor": "monitor_list-monitor_1FdIj",
+	"listMonitor": "monitor_list-monitor_1FdIj",
+	"list-header": "monitor_list-header_-cp0o",
+	"listHeader": "monitor_list-header_-cp0o",
+	"list-body": "monitor_list-body_2OFZ6",
+	"listBody": "monitor_list-body_2OFZ6",
+	"list-row": "monitor_list-row_okCNn",
+	"listRow": "monitor_list-row_okCNn",
+	"list-index": "monitor_list-index_7tKdl",
+	"listIndex": "monitor_list-index_7tKdl",
+	"list-value": "monitor_list-value_1zGfI",
+	"listValue": "monitor_list-value_1zGfI",
+	"list-footer": "monitor_list-footer_2HyG8",
+	"listFooter": "monitor_list-footer_2HyG8",
+	"list-empty": "monitor_list-empty_1UKsB",
+	"listEmpty": "monitor_list-empty_1UKsB",
+	"input-wrapper": "monitor_input-wrapper_2yExa",
+	"inputWrapper": "monitor_input-wrapper_2yExa",
+	"value-inner": "monitor_value-inner_3E9Ou",
+	"valueInner": "monitor_value-inner_3E9Ou",
+	"list-input": "monitor_list-input_3kw5o",
+	"listInput": "monitor_list-input_3kw5o",
+	"remove-button": "monitor_remove-button_AhlwG",
+	"removeButton": "monitor_remove-button_AhlwG",
+	"add-button": "monitor_add-button_2lmvI",
+	"addButton": "monitor_add-button_2lmvI",
+	"resize-handle": "monitor_resize-handle_3WWBV",
+	"resizeHandle": "monitor_resize-handle_3WWBV",
+	"footer-length": "monitor_footer-length_2_QAb",
+	"footerLength": "monitor_footer-length_2_QAb",
+	"table-column-tag": "monitor_table-column-tag_19y-Y",
+	"tableColumnTag": "monitor_table-column-tag_19y-Y",
+	"table-row": "monitor_table-row_xtLHv",
+	"tableRow": "monitor_table-row_xtLHv",
+	"table-value": "monitor_table-value_23bYU",
+	"tableValue": "monitor_table-value_23bYU",
+	"footer-hidden": "monitor_footer-hidden_1AZ2o",
+	"footerHidden": "monitor_footer-hidden_1AZ2o",
+	"overflowx": "monitor_overflowx_1ZXhp"
 };
 
 /***/ }),
@@ -1822,48 +1822,48 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.custom-accent-modal_modal-content_1ZoBg {\n    max-width: 550px;\n    margin-top: 50px;\n}\n\n.custom-accent-modal_body_294zz {\n    background: var(--ui-white);\n    padding: 1.5rem 2.25rem;\n    max-height: calc(100vh - 100px - 3.125rem);\n    overflow: auto;\n}\n\n.custom-accent-modal_body_294zz p,\n.custom-accent-modal_input_3XrHb,\n.custom-accent-modal_text-code-input_AR1bm {\n    margin: 1rem 0;\n    display: block;\n}\n\n.custom-accent-modal_type-selector-container_3LS7W {\n    display: flex;\n    justify-content: space-around;\n    margin-bottom: 1rem;\n}\n\n.custom-accent-modal_type-selector-button_7tkLM {\n    width: 100%;\n    cursor: pointer;\n    border-bottom: 0.25rem solid var(--ui-tertiary);\n    margin: 0 1rem;\n    padding: 0.5rem 0;\n    text-align: center;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n.custom-accent-modal_type-selector-button_7tkLM[data-active=\"true\"] {\n    border-color: var(--looks-secondary);\n}\n\n.custom-accent-modal_type-selector-button_7tkLM:active {\n    border-color: var(--looks-transparent);\n}\n\n.custom-accent-modal_input_3XrHb {\n    width: 100%;\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 0.25rem;\n    padding: 0.5rem;\n    font-size: inherit;\n    height: 3rem;\n}\n\n.custom-accent-modal_button-row_18cVN {\n    display: flex;\n    justify-content: flex-end;\n}\n\n/* Confirmation buttons at the bottom of the modal */\n\n.custom-accent-modal_button-row_18cVN {\n    margin-top: 1rem;\n    font-weight: bolder;\n    text-align: right;\n}\n\n.custom-accent-modal_button-row_18cVN button {\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 0.25rem;\n    padding: 0.75rem 1rem;\n    background: white;\n    color: black;\n    font-weight: bold;\n    font-size: 0.85rem;\n}\n\n.custom-accent-modal_button-row_18cVN button.custom-accent-modal_ok-button_Nh8_O {\n    background: var(--looks-secondary);\n    border: var(--looks-secondary);\n    color: white;\n}\n\n[dir=\"ltr\"] .custom-accent-modal_button-row_18cVN button + button {\n    margin-left: 0.5rem;\n}\n\n[dir=\"rtl\"] .custom-accent-modal_button-row_18cVN button + button {\n    margin-right: 0.5rem;\n}\n\nlabel.custom-accent-modal_setting_3bEGf {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    gap: 0.5rem;\n}\n\n.custom-accent-modal_color-option_3E-h6 {\n    cursor: pointer;\n    height: 35px;\n    width: 35px;\n    border: 2px solid var(--ui-black-transparent);\n    border-radius: 50%;\n    padding: calc(0.5rem * 1);\n    transition: all 0.2s;\n}\n\n.custom-accent-modal_color-option_3E-h6:hover {\n    border: 2px solid var(--looks-secondary);\n    box-shadow: 0px 0px 0px 4px var(--looks-transparent);\n}\n\n.custom-accent-modal_color-option_3E-h6 + .custom-accent-modal_color-option_3E-h6 {\n    margin-left: 0.5rem;\n}\n\n.custom-accent-modal_color-picker_27Yus {\n    appearance: none;\n    -moz-appearance: none;\n    -webkit-appearance: none;\n    cursor: pointer;\n    padding: calc(0.5rem * 1);\n    border: 2px solid var(--ui-black-transparent);\n    border-radius: 50%;\n    width: 35px;\n    height: 35px;\n}\n\n.custom-accent-modal_color-picker_27Yus::-moz-color-swatch {\n    border: none;\n    border-radius: 50%;\n    padding: 0;\n}\n\n.custom-accent-modal_color-picker_27Yus::-webkit-color-swatch {\n    border: none;\n    border-radius: 50%;\n    padding: 0;\n}\n\n.custom-accent-modal_color-picker_27Yus::-webkit-color-swatch-wrapper {\n    border: none;\n    border-radius: 50%;\n    padding: 0;\n}\n\n.custom-accent-modal_color-picker_27Yus:hover {\n    border: 2px solid var(--looks-secondary);\n    box-shadow: 0px 0px 0px 4px var(--looks-transparent);\n}\n\n.custom-accent-modal_option-card_1T8-2 {\n    background: var(--ui-white);\n    border: 2px solid var(--ui-black-transparent);\n    border-radius: 0.5rem;\n    padding: calc(0.5rem * 2);\n    text-align: center;\n    flex-grow: 1;\n    transition: all 0.2s;\n    flex-basis: 100px;\n}\n\n.custom-accent-modal_option-title_2-nag {\n    font-weight: bold;\n    margin-bottom: 8px;\n}\n\n.custom-accent-modal_options-row_1Hj90 {\n    display: flex;\n    gap: 1rem;\n}\n\n.custom-accent-modal_options-row_1Hj90 > span {\n    flex-grow: 1;\n    gap: 1rem;\n}\n\n.custom-accent-modal_card-box_2Lv1D {\n    display: flex;\n    flex-direction: column;\n    gap: 1rem;\n}\n\n.custom-accent-modal_card_2iZPb {\n    background: var(--ui-white);\n    border: 2px solid var(--ui-black-transparent);\n    border-radius: 0.5rem;\n    padding: calc(0.5rem * 1.5);\n    display: flex;\n    gap: 1rem;\n}\n\n.custom-accent-modal_color-preview_3T7o2 {\n    border-radius: 50% !important;\n}\n\n.custom-accent-modal_card_2iZPb > div > *:not(input) {\n    -webkit-appearance: none;\n       -moz-appearance: none;\n            appearance: none;\n    width: 20px;\n    height: 20px;\n    background-color: var(--looks-secondary);\n    background-size: 100%;\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 4px;\n    outline: none;\n    transition: all 0.2s;\n    margin: auto;\n}\n\n.custom-accent-modal_card_2iZPb > div[dir=\"rtl\"] > * {\n    margin-left: 0;\n}\n\n.custom-accent-modal_card_2iZPb > div[dir=\"ltr\"] > * {\n    margin-right: 0;\n}\n\n.custom-accent-modal_card_2iZPb > div > button:hover {\n    border: 1px solid var(--looks-secondary);\n    box-shadow: 0px 0px 0px 4px var(--looks-transparent);\n}\n\n.custom-accent-modal_card_2iZPb > div {\n    display: flex;\n    gap: 0.5rem;\n}\n\n.custom-accent-modal_download-option_H1WGO {\n    background-image: url(" + escape(__webpack_require__(/*! ./icon--file-download.svg */ "./src/components/nb-custom-accent-modal/icon--file-download.svg")) + ");\n    background-size: 90%;\n}\n\n.custom-accent-modal_edit-option_3vOy_ {\n    background-image: url(" + escape(__webpack_require__(/*! ../menu-bar/icon--settings.svg */ "./src/components/menu-bar/icon--settings.svg")) + ");\n}\n\n.custom-accent-modal_delete-option_TPYWM {\n    background-image: url(" + escape(__webpack_require__(/*! ../delete-button/icon--delete.svg */ "./src/components/delete-button/icon--delete.svg")) + ");\n}\n\n.custom-accent-modal_name_Z7kQn {\n    flex-grow: 1;\n}\n\n.custom-accent-modal_button_g78bG {\n    font-family: inherit;\n    font-size: 14px;\n    background-color: var(--looks-secondary);\n    color: white;\n    border: none;\n    padding: 0.5rem 1rem;\n    margin: 0;\n    border-radius: 4px;\n    cursor: pointer;\n    font-family: inherit;\n    font-weight: bold;\n}\n\n.custom-accent-modal_button_g78bG:active, .custom-accent-modal_button_g78bG:focus-within {\n    box-shadow: 0 0 0 3px var(--looks-transparent);\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.custom-accent-modal_modal-content_1TGG2 {\n    max-width: 550px;\n    margin-top: 50px;\n}\n\n.custom-accent-modal_body_V5Ptw {\n    background: var(--ui-white);\n    padding: 1.5rem 2.25rem;\n    max-height: calc(100vh - 100px - 3.125rem);\n    overflow: auto;\n}\n\n.custom-accent-modal_body_V5Ptw p,\n.custom-accent-modal_input_1ScSm,\n.custom-accent-modal_text-code-input_2uYrg {\n    margin: 1rem 0;\n    display: block;\n}\n\n.custom-accent-modal_type-selector-container_3d6kn {\n    display: flex;\n    justify-content: space-around;\n    margin-bottom: 1rem;\n}\n\n.custom-accent-modal_type-selector-button_33LSt {\n    width: 100%;\n    cursor: pointer;\n    border-bottom: 0.25rem solid var(--ui-tertiary);\n    margin: 0 1rem;\n    padding: 0.5rem 0;\n    text-align: center;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n.custom-accent-modal_type-selector-button_33LSt[data-active=\"true\"] {\n    border-color: var(--looks-secondary);\n}\n\n.custom-accent-modal_type-selector-button_33LSt:active {\n    border-color: var(--looks-transparent);\n}\n\n.custom-accent-modal_input_1ScSm {\n    width: 100%;\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 0.25rem;\n    padding: 0.5rem;\n    font-size: inherit;\n    height: 3rem;\n}\n\n.custom-accent-modal_button-row_2jVa5 {\n    display: flex;\n    justify-content: flex-end;\n}\n\n/* Confirmation buttons at the bottom of the modal */\n\n.custom-accent-modal_button-row_2jVa5 {\n    margin-top: 1rem;\n    font-weight: bolder;\n    text-align: right;\n}\n\n.custom-accent-modal_button-row_2jVa5 button {\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 0.25rem;\n    padding: 0.75rem 1rem;\n    background: white;\n    color: black;\n    font-weight: bold;\n    font-size: 0.85rem;\n}\n\n.custom-accent-modal_button-row_2jVa5 button.custom-accent-modal_ok-button_25_1J {\n    background: var(--looks-secondary);\n    border: var(--looks-secondary);\n    color: white;\n}\n\n[dir=\"ltr\"] .custom-accent-modal_button-row_2jVa5 button + button {\n    margin-left: 0.5rem;\n}\n\n[dir=\"rtl\"] .custom-accent-modal_button-row_2jVa5 button + button {\n    margin-right: 0.5rem;\n}\n\nlabel.custom-accent-modal_setting_2SaDo {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    gap: 0.5rem;\n}\n\n.custom-accent-modal_color-option_yoM26 {\n    cursor: pointer;\n    height: 35px;\n    width: 35px;\n    border: 2px solid var(--ui-black-transparent);\n    border-radius: 50%;\n    padding: calc(0.5rem * 1);\n    transition: all 0.2s;\n}\n\n.custom-accent-modal_color-option_yoM26:hover {\n    border: 2px solid var(--looks-secondary);\n    box-shadow: 0px 0px 0px 4px var(--looks-transparent);\n}\n\n.custom-accent-modal_color-option_yoM26 + .custom-accent-modal_color-option_yoM26 {\n    margin-left: 0.5rem;\n}\n\n.custom-accent-modal_color-picker_U49h2 {\n    appearance: none;\n    -moz-appearance: none;\n    -webkit-appearance: none;\n    cursor: pointer;\n    padding: calc(0.5rem * 1);\n    border: 2px solid var(--ui-black-transparent);\n    border-radius: 50%;\n    width: 35px;\n    height: 35px;\n}\n\n.custom-accent-modal_color-picker_U49h2::-moz-color-swatch {\n    border: none;\n    border-radius: 50%;\n    padding: 0;\n}\n\n.custom-accent-modal_color-picker_U49h2::-webkit-color-swatch {\n    border: none;\n    border-radius: 50%;\n    padding: 0;\n}\n\n.custom-accent-modal_color-picker_U49h2::-webkit-color-swatch-wrapper {\n    border: none;\n    border-radius: 50%;\n    padding: 0;\n}\n\n.custom-accent-modal_color-picker_U49h2:hover {\n    border: 2px solid var(--looks-secondary);\n    box-shadow: 0px 0px 0px 4px var(--looks-transparent);\n}\n\n.custom-accent-modal_option-card_2GY0o {\n    background: var(--ui-white);\n    border: 2px solid var(--ui-black-transparent);\n    border-radius: 0.5rem;\n    padding: calc(0.5rem * 2);\n    text-align: center;\n    flex-grow: 1;\n    transition: all 0.2s;\n    flex-basis: 100px;\n}\n\n.custom-accent-modal_option-title_34XhQ {\n    font-weight: bold;\n    margin-bottom: 8px;\n}\n\n.custom-accent-modal_options-row_m-0EV {\n    display: flex;\n    gap: 1rem;\n}\n\n.custom-accent-modal_options-row_m-0EV > span {\n    flex-grow: 1;\n    gap: 1rem;\n}\n\n.custom-accent-modal_card-box_3Ws30 {\n    display: flex;\n    flex-direction: column;\n    gap: 1rem;\n}\n\n.custom-accent-modal_card_2qDDp {\n    background: var(--ui-white);\n    border: 2px solid var(--ui-black-transparent);\n    border-radius: 0.5rem;\n    padding: calc(0.5rem * 1.5);\n    display: flex;\n    gap: 1rem;\n}\n\n.custom-accent-modal_color-preview_3_Q9n {\n    border-radius: 50% !important;\n}\n\n.custom-accent-modal_card_2qDDp > div > *:not(input) {\n    -webkit-appearance: none;\n       -moz-appearance: none;\n            appearance: none;\n    width: 20px;\n    height: 20px;\n    background-color: var(--looks-secondary);\n    background-size: 100%;\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 4px;\n    outline: none;\n    transition: all 0.2s;\n    margin: auto;\n}\n\n.custom-accent-modal_card_2qDDp > div[dir=\"rtl\"] > * {\n    margin-left: 0;\n}\n\n.custom-accent-modal_card_2qDDp > div[dir=\"ltr\"] > * {\n    margin-right: 0;\n}\n\n.custom-accent-modal_card_2qDDp > div > button:hover {\n    border: 1px solid var(--looks-secondary);\n    box-shadow: 0px 0px 0px 4px var(--looks-transparent);\n}\n\n.custom-accent-modal_card_2qDDp > div {\n    display: flex;\n    gap: 0.5rem;\n}\n\n.custom-accent-modal_download-option_1aYff {\n    background-image: url(" + escape(__webpack_require__(/*! ./icon--file-download.svg */ "./src/components/nb-custom-accent-modal/icon--file-download.svg")) + ");\n    background-size: 90%;\n}\n\n.custom-accent-modal_edit-option_v7U26 {\n    background-image: url(" + escape(__webpack_require__(/*! ../menu-bar/icon--settings.svg */ "./src/components/menu-bar/icon--settings.svg")) + ");\n}\n\n.custom-accent-modal_delete-option_78Gli {\n    background-image: url(" + escape(__webpack_require__(/*! ../delete-button/icon--delete.svg */ "./src/components/delete-button/icon--delete.svg")) + ");\n}\n\n.custom-accent-modal_name_1Iiqb {\n    flex-grow: 1;\n}\n\n.custom-accent-modal_button_1kwug {\n    font-family: inherit;\n    font-size: 14px;\n    background-color: var(--looks-secondary);\n    color: white;\n    border: none;\n    padding: 0.5rem 1rem;\n    margin: 0;\n    border-radius: 4px;\n    cursor: pointer;\n    font-family: inherit;\n    font-weight: bold;\n}\n\n.custom-accent-modal_button_1kwug:active, .custom-accent-modal_button_1kwug:focus-within {\n    box-shadow: 0 0 0 3px var(--looks-transparent);\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"modal-content": "custom-accent-modal_modal-content_1ZoBg",
-	"modalContent": "custom-accent-modal_modal-content_1ZoBg",
-	"body": "custom-accent-modal_body_294zz",
-	"input": "custom-accent-modal_input_3XrHb",
-	"text-code-input": "custom-accent-modal_text-code-input_AR1bm",
-	"textCodeInput": "custom-accent-modal_text-code-input_AR1bm",
-	"type-selector-container": "custom-accent-modal_type-selector-container_3LS7W",
-	"typeSelectorContainer": "custom-accent-modal_type-selector-container_3LS7W",
-	"type-selector-button": "custom-accent-modal_type-selector-button_7tkLM",
-	"typeSelectorButton": "custom-accent-modal_type-selector-button_7tkLM",
-	"button-row": "custom-accent-modal_button-row_18cVN",
-	"buttonRow": "custom-accent-modal_button-row_18cVN",
-	"ok-button": "custom-accent-modal_ok-button_Nh8_O",
-	"okButton": "custom-accent-modal_ok-button_Nh8_O",
-	"setting": "custom-accent-modal_setting_3bEGf",
-	"color-option": "custom-accent-modal_color-option_3E-h6",
-	"colorOption": "custom-accent-modal_color-option_3E-h6",
-	"color-picker": "custom-accent-modal_color-picker_27Yus",
-	"colorPicker": "custom-accent-modal_color-picker_27Yus",
-	"option-card": "custom-accent-modal_option-card_1T8-2",
-	"optionCard": "custom-accent-modal_option-card_1T8-2",
-	"option-title": "custom-accent-modal_option-title_2-nag",
-	"optionTitle": "custom-accent-modal_option-title_2-nag",
-	"options-row": "custom-accent-modal_options-row_1Hj90",
-	"optionsRow": "custom-accent-modal_options-row_1Hj90",
-	"card-box": "custom-accent-modal_card-box_2Lv1D",
-	"cardBox": "custom-accent-modal_card-box_2Lv1D",
-	"card": "custom-accent-modal_card_2iZPb",
-	"color-preview": "custom-accent-modal_color-preview_3T7o2",
-	"colorPreview": "custom-accent-modal_color-preview_3T7o2",
-	"download-option": "custom-accent-modal_download-option_H1WGO",
-	"downloadOption": "custom-accent-modal_download-option_H1WGO",
-	"edit-option": "custom-accent-modal_edit-option_3vOy_",
-	"editOption": "custom-accent-modal_edit-option_3vOy_",
-	"delete-option": "custom-accent-modal_delete-option_TPYWM",
-	"deleteOption": "custom-accent-modal_delete-option_TPYWM",
-	"name": "custom-accent-modal_name_Z7kQn",
-	"button": "custom-accent-modal_button_g78bG"
+	"modal-content": "custom-accent-modal_modal-content_1TGG2",
+	"modalContent": "custom-accent-modal_modal-content_1TGG2",
+	"body": "custom-accent-modal_body_V5Ptw",
+	"input": "custom-accent-modal_input_1ScSm",
+	"text-code-input": "custom-accent-modal_text-code-input_2uYrg",
+	"textCodeInput": "custom-accent-modal_text-code-input_2uYrg",
+	"type-selector-container": "custom-accent-modal_type-selector-container_3d6kn",
+	"typeSelectorContainer": "custom-accent-modal_type-selector-container_3d6kn",
+	"type-selector-button": "custom-accent-modal_type-selector-button_33LSt",
+	"typeSelectorButton": "custom-accent-modal_type-selector-button_33LSt",
+	"button-row": "custom-accent-modal_button-row_2jVa5",
+	"buttonRow": "custom-accent-modal_button-row_2jVa5",
+	"ok-button": "custom-accent-modal_ok-button_25_1J",
+	"okButton": "custom-accent-modal_ok-button_25_1J",
+	"setting": "custom-accent-modal_setting_2SaDo",
+	"color-option": "custom-accent-modal_color-option_yoM26",
+	"colorOption": "custom-accent-modal_color-option_yoM26",
+	"color-picker": "custom-accent-modal_color-picker_U49h2",
+	"colorPicker": "custom-accent-modal_color-picker_U49h2",
+	"option-card": "custom-accent-modal_option-card_2GY0o",
+	"optionCard": "custom-accent-modal_option-card_2GY0o",
+	"option-title": "custom-accent-modal_option-title_34XhQ",
+	"optionTitle": "custom-accent-modal_option-title_34XhQ",
+	"options-row": "custom-accent-modal_options-row_m-0EV",
+	"optionsRow": "custom-accent-modal_options-row_m-0EV",
+	"card-box": "custom-accent-modal_card-box_3Ws30",
+	"cardBox": "custom-accent-modal_card-box_3Ws30",
+	"card": "custom-accent-modal_card_2qDDp",
+	"color-preview": "custom-accent-modal_color-preview_3_Q9n",
+	"colorPreview": "custom-accent-modal_color-preview_3_Q9n",
+	"download-option": "custom-accent-modal_download-option_1aYff",
+	"downloadOption": "custom-accent-modal_download-option_1aYff",
+	"edit-option": "custom-accent-modal_edit-option_v7U26",
+	"editOption": "custom-accent-modal_edit-option_v7U26",
+	"delete-option": "custom-accent-modal_delete-option_78Gli",
+	"deleteOption": "custom-accent-modal_delete-option_78Gli",
+	"name": "custom-accent-modal_name_1Iiqb",
+	"button": "custom-accent-modal_button_1kwug"
 };
 
 /***/ }),
@@ -1880,11 +1880,11 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.file-input_container_G4Tny {\n    display: block;\n    position: relative;\n    padding: 1rem;\n    text-align: center;\n    border: 4px dashed var(--ui-tertiary);\n    border-radius: 5px;\n    cursor: pointer;\n    background: none;\n    width: 100%;\n}\n\n.file-input_container_G4Tny:focus-within {\n    border-color: var(--looks-secondary);\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.file-input_container_2Tt96 {\n    display: block;\n    position: relative;\n    padding: 1rem;\n    text-align: center;\n    border: 4px dashed var(--ui-tertiary);\n    border-radius: 5px;\n    cursor: pointer;\n    background: none;\n    width: 100%;\n}\n\n.file-input_container_2Tt96:focus-within {\n    border-color: var(--looks-secondary);\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"container": "file-input_container_G4Tny"
+	"container": "file-input_container_2Tt96"
 };
 
 /***/ }),
@@ -1902,72 +1902,72 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.editor-settings-modal_modal-content_2mgcb {\n    max-width: 900px;\n    margin-top: 50px;\n}\n\n.editor-settings-modal_body_2CW_9 {\n    background: var(--ui-white);\n    height: 550px;\n    max-height: calc(100vh - 100px - 3.125rem);\n    overflow: auto;\n    display: flex;\n}\n\n.editor-settings-modal_body_2CW_9 p,\n.editor-settings-modal_input_6R7GE,\n.editor-settings-modal_text-code-input_3rErw {\n    margin: 1rem 0;\n    display: block;\n}\n\n.editor-settings-modal_type-selector-container_2O56C {\n    display: flex;\n    justify-content: space-around;\n    margin-bottom: 1rem;\n}\n\n.editor-settings-modal_type-selector-button_3-RsS {\n    width: 100%;\n    cursor: pointer;\n    border-bottom: 0.25rem solid var(--ui-tertiary);\n    margin: 0 1rem;\n    padding: 0.5rem 0;\n    text-align: center;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n.editor-settings-modal_type-selector-button_3-RsS[data-active=\"true\"] {\n    border-color: var(--looks-secondary);\n}\n\n.editor-settings-modal_type-selector-button_3-RsS:active {\n    border-color: var(--looks-transparent);\n}\n\n.editor-settings-modal_input_6R7GE {\n    width: 100%;\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 0.25rem;\n    padding: 0.5rem;\n    font-size: inherit;\n    height: 3rem;\n}\n\n.editor-settings-modal_button-row_1KFyx {\n    display: flex;\n    justify-content: flex-end;\n}\n\n/* Confirmation buttons at the bottom of the modal */\n\n.editor-settings-modal_button-row_1KFyx {\n    margin-top: 1rem;\n    font-weight: bolder;\n    text-align: right;\n}\n\n.editor-settings-modal_button-row_1KFyx button {\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 0.25rem;\n    padding: 0.75rem 1rem;\n    background: white;\n    color: black;\n    font-weight: bold;\n    font-size: 0.85rem;\n}\n\n.editor-settings-modal_button-row_1KFyx button.editor-settings-modal_ok-button_H2Ifc {\n    background: var(--looks-secondary);\n    border: var(--looks-secondary);\n    color: white;\n}\n\n[dir=\"ltr\"] .editor-settings-modal_button-row_1KFyx button + button {\n    margin-left: 0.5rem;\n}\n\n[dir=\"rtl\"] .editor-settings-modal_button-row_1KFyx button + button {\n    margin-right: 0.5rem;\n}\n\n.editor-settings-modal_color-option_2dvX7 {\n    cursor: pointer;\n    height: 35px;\n    width: 35px;\n    border: 2px solid var(--ui-black-transparent);\n    border-radius: 50%;\n    padding: calc(0.5rem * 1);\n    transition: all 0.2s;\n}\n\n.editor-settings-modal_color-option_2dvX7:hover {\n    border: 2px solid var(--looks-secondary);\n    box-shadow: 0px 0px 0px 4px var(--looks-transparent);\n}\n\n.editor-settings-modal_color-option_2dvX7 + .editor-settings-modal_color-option_2dvX7 {\n    margin-left: 0.5rem;\n}\n\n.editor-settings-modal_color-picker_3N3Qd {\n    appearance: none;\n    -moz-appearance: none;\n    -webkit-appearance: none;\n    cursor: pointer;\n    padding: calc(0.5rem * 1);\n    border: 2px solid var(--ui-black-transparent);\n    border-radius: 50%;\n    width: 35px;\n    height: 35px;\n}\n\n.editor-settings-modal_color-picker_3N3Qd::-moz-color-swatch {\n    border: none;\n    border-radius: 50%;\n    padding: 0;\n}\n\n.editor-settings-modal_color-picker_3N3Qd::-webkit-color-swatch {\n    border: none;\n    border-radius: 50%;\n    padding: 0;\n}\n\n.editor-settings-modal_color-picker_3N3Qd::-webkit-color-swatch-wrapper {\n    border: none;\n    border-radius: 50%;\n    padding: 0;\n}\n\n.editor-settings-modal_color-picker_3N3Qd:hover {\n    border: 2px solid var(--looks-secondary);\n    box-shadow: 0px 0px 0px 4px var(--looks-transparent);\n}\n\n.editor-settings-modal_option-card_3rkJW {\n    background: var(--ui-white);\n    border: 2px solid var(--ui-black-transparent);\n    border-radius: 0.5rem;\n    padding: calc(0.5rem * 2);\n    text-align: center;\n    flex-grow: 1;\n    transition: all 0.2s;\n    flex-basis: 100px;\n}\n\n.editor-settings-modal_option-title_Itxl8 {\n    font-weight: bold;\n    margin-bottom: 8px;\n}\n\n.editor-settings-modal_options-row_D4CV_ {\n    display: flex;\n    gap: 1rem;\n}\n\n.editor-settings-modal_options-row_D4CV_ > span {\n    flex-grow: 1;\n    gap: 1rem;\n}\n\n.editor-settings-modal_card-box_Vng8i {\n    display: flex;\n    flex-direction: column;\n    gap: 1rem;\n}\n\n.editor-settings-modal_card_1PhYp {\n    background: var(--ui-white);\n    border: 2px solid var(--ui-black-transparent);\n    border-radius: 0.5rem;\n    padding: calc(0.5rem * 1.5);\n    display: flex;\n    gap: 1rem;\n}\n\n.editor-settings-modal_color-preview_20luX {\n    border-radius: 50% !important;\n}\n\n.editor-settings-modal_card_1PhYp > div > *:not(input) {\n    -webkit-appearance: none;\n       -moz-appearance: none;\n            appearance: none;\n    width: 20px;\n    height: 20px;\n    background-color: var(--looks-secondary);\n    background-size: 100%;\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 4px;\n    outline: none;\n    transition: all 0.2s;\n    margin: auto;\n}\n\n.editor-settings-modal_card_1PhYp > div[dir=\"rtl\"] > * {\n    margin-left: 0;\n}\n\n.editor-settings-modal_card_1PhYp > div[dir=\"ltr\"] > * {\n    margin-right: 0;\n}\n\n.editor-settings-modal_card_1PhYp > div > button:hover {\n    border: 1px solid var(--looks-secondary);\n    box-shadow: 0px 0px 0px 4px var(--looks-transparent);\n}\n\n.editor-settings-modal_card_1PhYp > div {\n    display: flex;\n    gap: 0.5rem;\n}\n\n.editor-settings-modal_download-option_1CbKj {\n    background-image: url(" + escape(__webpack_require__(/*! ./icon--file-download.svg */ "./src/components/nb-editor-settings-modal/icon--file-download.svg")) + ");\n    background-size: 90%;\n}\n\n.editor-settings-modal_edit-option_1t9WW {\n    background-image: url(" + escape(__webpack_require__(/*! ../menu-bar/icon--settings.svg */ "./src/components/menu-bar/icon--settings.svg")) + ");\n}\n\n.editor-settings-modal_delete-option_1QFt5 {\n    background-image: url(" + escape(__webpack_require__(/*! ../delete-button/icon--delete.svg */ "./src/components/delete-button/icon--delete.svg")) + ");\n}\n\n.editor-settings-modal_name_aTeoh {\n    flex-grow: 1;\n}\n\n.editor-settings-modal_button_j-2pX {\n    font-family: inherit;\n    font-size: 14px;\n    background-color: var(--looks-secondary);\n    color: white;\n    border: none;\n    padding: 0.5rem 1rem;\n    margin: 0;\n    border-radius: 4px;\n    cursor: pointer;\n    font-family: inherit;\n    font-weight: bold;\n}\n\n.editor-settings-modal_button_j-2pX:active, .editor-settings-modal_button_j-2pX:focus-within {\n    box-shadow: 0 0 0 3px var(--looks-transparent);\n}\n\n.editor-settings-modal_topic-list_3pLTb {\n    width: 25%;\n    flex-shrink: 0;\n    border-right: 1px solid var(--ui-black-transparent);\n    height: 100%;\n    position: relative;\n    overflow-y: auto;\n    display: flex;\n    flex-direction: column;\n}\n\n.editor-settings-modal_navigation_1i_YI {\n    flex-grow: 1;\n}\n\n.editor-settings-modal_topic-item_XfmCI {\n    display: flex;\n    gap: 8px;\n    align-items: center;\n    padding: 8px;\n    padding-left: 12px;\n    font-size: 1rem;\n    line-height: 1.5rem;\n    cursor: pointer;\n}\n\n.editor-settings-modal_topic-item_XfmCI.editor-settings-modal_active_2Nnrd {\n    background-color: var(--looks-light-transparent);\n    color: var(--looks-secondary);\n    font-weight: bold;\n}\n\n.editor-settings-modal_content_dK3qH {\n    height: 100%;\n    overflow: auto;\n    flex-grow: 1;\n    position: relative;\n}\n\n.editor-settings-modal_content_dK3qH:not(.editor-settings-modal_escaped_29Gwd) {\n    padding: 1.5rem 2.25rem;\n}\n\n.editor-settings-modal_content_dK3qH iframe {\n    width: 100%;\n    height: 100%;\n    display: block;\n    border: none;\n}\n\n.editor-settings-modal_setting_1nU6_ {\n    display: flex;\n    flex-direction: column;\n    padding: 0.5rem 1rem;\n    margin: 0.25rem 0;\n    border-radius: 4px;\n}\n\n.editor-settings-modal_setting_1nU6_.editor-settings-modal_active_2Nnrd {\n    background: var(--badge-background);\n}\n\n.editor-settings-modal_setting_1nU6_:hover,\n.editor-settings-modal_setting_1nU6_:focus-within {\n    background: var(--badge-border);\n}\n\n.editor-settings-modal_label_1TZS- {\n    height: 32px;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n}\n\n.editor-settings-modal_setting_1nU6_ table {\n    border-collapse: collapse;\n}\n\n.editor-settings-modal_setting_1nU6_ tr,\n.editor-settings-modal_setting_1nU6_ td,\n.editor-settings-modal_setting_1nU6_ th {\n    padding: 0;\n    margin: 0;\n    border: 1px solid var(--ui-tertiary);\n}\n\n.editor-settings-modal_checkbox_2PwaA {\n    margin-right: 0.5rem;\n}\n\n.editor-settings-modal_help-icon_2C8c6 {\n    position: relative;\n    border: 0;\n    background-color: transparent;\n    width: 20px;\n    height: 20px;\n    background-size: 100%;\n    margin-left: 0.5rem;\n    cursor: pointer;\n}\n\n.editor-settings-modal_help-icon_2C8c6 img {\n    display: block;\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    filter: var(--filter-icon-black);\n}\n\n.editor-settings-modal_custom-stage-size_31Ki9 > * {\n    margin-right: 0.5rem;\n}\n\n.editor-settings-modal_custom-stage-size-input_1StwA {\n    width: 80px;\n}\n\n.editor-settings-modal_info_1vkfE {\n    margin-bottom: 0.25rem;\n}\n\n.editor-settings-modal_header_3VVlD {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    margin: 0.5rem 0 0 0;\n    font-weight: bold;\n}\n\n.editor-settings-modal_divider_3GIQn {\n    flex-grow: 1;\n    margin-left: 1rem;\n    border-top: 1px dashed var(--ui-tertiary);\n}\n\n.editor-settings-modal_button_j-2pX {\n    font-family: inherit;\n    font-size: 14px;\n    background-color: var(--looks-secondary);\n    color: white;\n    border: none;\n    padding: 0.5rem 1rem;\n    margin: 0;\n    border-radius: 4px;\n    cursor: pointer;\n    font-family: inherit;\n    font-weight: bold;\n}\n\n.editor-settings-modal_button_j-2pX:active, .editor-settings-modal_button_j-2pX:focus-within {\n    box-shadow: 0 0 0 3px var(--looks-transparent);\n}\n\n.editor-settings-modal_dirty-button_Snmaz {\n    width: calc(100% - 20px);\n    margin: 10px;\n    justify-content: flex-end;\n}\n\n.editor-settings-modal_warning_tDL-v {\n    padding: 0.5rem 1rem;\n    margin: 0.25rem 0;\n    border-radius: 4px;\n    background: rgb(233, 233, 53);\n    color: var(--text-primary-default);\n}\n\n.editor-settings-modal_key-setting_1vVZu {\n    display: flex;\n    flex-direction: row;\n    gap: 16px;\n    align-items: center;\n    margin-bottom: 16px;\n}\n\n.editor-settings-modal_key-setting_1vVZu > * {\n    flex: 1 0;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.editor-settings-modal_modal-content_1eY_M {\n    max-width: 900px;\n    margin-top: 50px;\n}\n\n.editor-settings-modal_body_2b8yj {\n    background: var(--ui-white);\n    height: 550px;\n    max-height: calc(100vh - 100px - 3.125rem);\n    overflow: auto;\n    display: flex;\n}\n\n.editor-settings-modal_body_2b8yj p,\n.editor-settings-modal_input_1qVf6,\n.editor-settings-modal_text-code-input_1oF01 {\n    margin: 1rem 0;\n    display: block;\n}\n\n.editor-settings-modal_type-selector-container_2gAPE {\n    display: flex;\n    justify-content: space-around;\n    margin-bottom: 1rem;\n}\n\n.editor-settings-modal_type-selector-button_5KPTH {\n    width: 100%;\n    cursor: pointer;\n    border-bottom: 0.25rem solid var(--ui-tertiary);\n    margin: 0 1rem;\n    padding: 0.5rem 0;\n    text-align: center;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n.editor-settings-modal_type-selector-button_5KPTH[data-active=\"true\"] {\n    border-color: var(--looks-secondary);\n}\n\n.editor-settings-modal_type-selector-button_5KPTH:active {\n    border-color: var(--looks-transparent);\n}\n\n.editor-settings-modal_input_1qVf6 {\n    width: 100%;\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 0.25rem;\n    padding: 0.5rem;\n    font-size: inherit;\n    height: 3rem;\n}\n\n.editor-settings-modal_button-row_26TDL {\n    display: flex;\n    justify-content: flex-end;\n}\n\n/* Confirmation buttons at the bottom of the modal */\n\n.editor-settings-modal_button-row_26TDL {\n    margin-top: 1rem;\n    font-weight: bolder;\n    text-align: right;\n}\n\n.editor-settings-modal_button-row_26TDL button {\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 0.25rem;\n    padding: 0.75rem 1rem;\n    background: white;\n    color: black;\n    font-weight: bold;\n    font-size: 0.85rem;\n}\n\n.editor-settings-modal_button-row_26TDL button.editor-settings-modal_ok-button_3aoUo {\n    background: var(--looks-secondary);\n    border: var(--looks-secondary);\n    color: white;\n}\n\n[dir=\"ltr\"] .editor-settings-modal_button-row_26TDL button + button {\n    margin-left: 0.5rem;\n}\n\n[dir=\"rtl\"] .editor-settings-modal_button-row_26TDL button + button {\n    margin-right: 0.5rem;\n}\n\n.editor-settings-modal_color-option_3lAvq {\n    cursor: pointer;\n    height: 35px;\n    width: 35px;\n    border: 2px solid var(--ui-black-transparent);\n    border-radius: 50%;\n    padding: calc(0.5rem * 1);\n    transition: all 0.2s;\n}\n\n.editor-settings-modal_color-option_3lAvq:hover {\n    border: 2px solid var(--looks-secondary);\n    box-shadow: 0px 0px 0px 4px var(--looks-transparent);\n}\n\n.editor-settings-modal_color-option_3lAvq + .editor-settings-modal_color-option_3lAvq {\n    margin-left: 0.5rem;\n}\n\n.editor-settings-modal_color-picker_3IwfD {\n    appearance: none;\n    -moz-appearance: none;\n    -webkit-appearance: none;\n    cursor: pointer;\n    padding: calc(0.5rem * 1);\n    border: 2px solid var(--ui-black-transparent);\n    border-radius: 50%;\n    width: 35px;\n    height: 35px;\n}\n\n.editor-settings-modal_color-picker_3IwfD::-moz-color-swatch {\n    border: none;\n    border-radius: 50%;\n    padding: 0;\n}\n\n.editor-settings-modal_color-picker_3IwfD::-webkit-color-swatch {\n    border: none;\n    border-radius: 50%;\n    padding: 0;\n}\n\n.editor-settings-modal_color-picker_3IwfD::-webkit-color-swatch-wrapper {\n    border: none;\n    border-radius: 50%;\n    padding: 0;\n}\n\n.editor-settings-modal_color-picker_3IwfD:hover {\n    border: 2px solid var(--looks-secondary);\n    box-shadow: 0px 0px 0px 4px var(--looks-transparent);\n}\n\n.editor-settings-modal_option-card_1Q0q3 {\n    background: var(--ui-white);\n    border: 2px solid var(--ui-black-transparent);\n    border-radius: 0.5rem;\n    padding: calc(0.5rem * 2);\n    text-align: center;\n    flex-grow: 1;\n    transition: all 0.2s;\n    flex-basis: 100px;\n}\n\n.editor-settings-modal_option-title_1bbBt {\n    font-weight: bold;\n    margin-bottom: 8px;\n}\n\n.editor-settings-modal_options-row_vDi-l {\n    display: flex;\n    gap: 1rem;\n}\n\n.editor-settings-modal_options-row_vDi-l > span {\n    flex-grow: 1;\n    gap: 1rem;\n}\n\n.editor-settings-modal_card-box_6Ckze {\n    display: flex;\n    flex-direction: column;\n    gap: 1rem;\n}\n\n.editor-settings-modal_card_yIc81 {\n    background: var(--ui-white);\n    border: 2px solid var(--ui-black-transparent);\n    border-radius: 0.5rem;\n    padding: calc(0.5rem * 1.5);\n    display: flex;\n    gap: 1rem;\n}\n\n.editor-settings-modal_color-preview_38j2e {\n    border-radius: 50% !important;\n}\n\n.editor-settings-modal_card_yIc81 > div > *:not(input) {\n    -webkit-appearance: none;\n       -moz-appearance: none;\n            appearance: none;\n    width: 20px;\n    height: 20px;\n    background-color: var(--looks-secondary);\n    background-size: 100%;\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 4px;\n    outline: none;\n    transition: all 0.2s;\n    margin: auto;\n}\n\n.editor-settings-modal_card_yIc81 > div[dir=\"rtl\"] > * {\n    margin-left: 0;\n}\n\n.editor-settings-modal_card_yIc81 > div[dir=\"ltr\"] > * {\n    margin-right: 0;\n}\n\n.editor-settings-modal_card_yIc81 > div > button:hover {\n    border: 1px solid var(--looks-secondary);\n    box-shadow: 0px 0px 0px 4px var(--looks-transparent);\n}\n\n.editor-settings-modal_card_yIc81 > div {\n    display: flex;\n    gap: 0.5rem;\n}\n\n.editor-settings-modal_download-option_1w-Tp {\n    background-image: url(" + escape(__webpack_require__(/*! ./icon--file-download.svg */ "./src/components/nb-editor-settings-modal/icon--file-download.svg")) + ");\n    background-size: 90%;\n}\n\n.editor-settings-modal_edit-option_vFNjg {\n    background-image: url(" + escape(__webpack_require__(/*! ../menu-bar/icon--settings.svg */ "./src/components/menu-bar/icon--settings.svg")) + ");\n}\n\n.editor-settings-modal_delete-option_1Dc0V {\n    background-image: url(" + escape(__webpack_require__(/*! ../delete-button/icon--delete.svg */ "./src/components/delete-button/icon--delete.svg")) + ");\n}\n\n.editor-settings-modal_name_2yF3w {\n    flex-grow: 1;\n}\n\n.editor-settings-modal_button_32S-b {\n    font-family: inherit;\n    font-size: 14px;\n    background-color: var(--looks-secondary);\n    color: white;\n    border: none;\n    padding: 0.5rem 1rem;\n    margin: 0;\n    border-radius: 4px;\n    cursor: pointer;\n    font-family: inherit;\n    font-weight: bold;\n}\n\n.editor-settings-modal_button_32S-b:active, .editor-settings-modal_button_32S-b:focus-within {\n    box-shadow: 0 0 0 3px var(--looks-transparent);\n}\n\n.editor-settings-modal_topic-list_SUzG_ {\n    width: 25%;\n    flex-shrink: 0;\n    border-right: 1px solid var(--ui-black-transparent);\n    height: 100%;\n    position: relative;\n    overflow-y: auto;\n    display: flex;\n    flex-direction: column;\n}\n\n.editor-settings-modal_navigation_3LRmK {\n    flex-grow: 1;\n}\n\n.editor-settings-modal_topic-item_1A1q2 {\n    display: flex;\n    gap: 8px;\n    align-items: center;\n    padding: 8px;\n    padding-left: 12px;\n    font-size: 1rem;\n    line-height: 1.5rem;\n    cursor: pointer;\n}\n\n.editor-settings-modal_topic-item_1A1q2.editor-settings-modal_active_2CZ_X {\n    background-color: var(--looks-light-transparent);\n    color: var(--looks-secondary);\n    font-weight: bold;\n}\n\n.editor-settings-modal_content_1l9Iy {\n    height: 100%;\n    overflow: auto;\n    flex-grow: 1;\n    position: relative;\n}\n\n.editor-settings-modal_content_1l9Iy:not(.editor-settings-modal_escaped_-48YB) {\n    padding: 1.5rem 2.25rem;\n}\n\n.editor-settings-modal_content_1l9Iy iframe {\n    width: 100%;\n    height: 100%;\n    display: block;\n    border: none;\n}\n\n.editor-settings-modal_setting_1jmZo {\n    display: flex;\n    flex-direction: column;\n    padding: 0.5rem 1rem;\n    margin: 0.25rem 0;\n    border-radius: 4px;\n}\n\n.editor-settings-modal_setting_1jmZo.editor-settings-modal_active_2CZ_X {\n    background: var(--badge-background);\n}\n\n.editor-settings-modal_setting_1jmZo:hover,\n.editor-settings-modal_setting_1jmZo:focus-within {\n    background: var(--badge-border);\n}\n\n.editor-settings-modal_label_1dm6W {\n    height: 32px;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n}\n\n.editor-settings-modal_setting_1jmZo table {\n    border-collapse: collapse;\n}\n\n.editor-settings-modal_setting_1jmZo tr,\n.editor-settings-modal_setting_1jmZo td,\n.editor-settings-modal_setting_1jmZo th {\n    padding: 0;\n    margin: 0;\n    border: 1px solid var(--ui-tertiary);\n}\n\n.editor-settings-modal_checkbox_-quPr {\n    margin-right: 0.5rem;\n}\n\n.editor-settings-modal_help-icon_3oxzU {\n    position: relative;\n    border: 0;\n    background-color: transparent;\n    width: 20px;\n    height: 20px;\n    background-size: 100%;\n    margin-left: 0.5rem;\n    cursor: pointer;\n}\n\n.editor-settings-modal_help-icon_3oxzU img {\n    display: block;\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    filter: var(--filter-icon-black);\n}\n\n.editor-settings-modal_custom-stage-size_PEWPD > * {\n    margin-right: 0.5rem;\n}\n\n.editor-settings-modal_custom-stage-size-input_3JmW3 {\n    width: 80px;\n}\n\n.editor-settings-modal_info_3wdGw {\n    margin-bottom: 0.25rem;\n}\n\n.editor-settings-modal_header_35Cjw {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    margin: 0.5rem 0 0 0;\n    font-weight: bold;\n}\n\n.editor-settings-modal_divider_GFjnR {\n    flex-grow: 1;\n    margin-left: 1rem;\n    border-top: 1px dashed var(--ui-tertiary);\n}\n\n.editor-settings-modal_button_32S-b {\n    font-family: inherit;\n    font-size: 14px;\n    background-color: var(--looks-secondary);\n    color: white;\n    border: none;\n    padding: 0.5rem 1rem;\n    margin: 0;\n    border-radius: 4px;\n    cursor: pointer;\n    font-family: inherit;\n    font-weight: bold;\n}\n\n.editor-settings-modal_button_32S-b:active, .editor-settings-modal_button_32S-b:focus-within {\n    box-shadow: 0 0 0 3px var(--looks-transparent);\n}\n\n.editor-settings-modal_dirty-button_3-y9D {\n    width: calc(100% - 20px);\n    margin: 10px;\n    justify-content: flex-end;\n}\n\n.editor-settings-modal_warning_3d4l3 {\n    padding: 0.5rem 1rem;\n    margin: 0.25rem 0;\n    border-radius: 4px;\n    background: rgb(233, 233, 53);\n    color: var(--text-primary-default);\n}\n\n.editor-settings-modal_key-setting_3lC4c {\n    display: flex;\n    flex-direction: row;\n    gap: 16px;\n    align-items: center;\n    margin-bottom: 16px;\n}\n\n.editor-settings-modal_key-setting_3lC4c > * {\n    flex: 1 0;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"modal-content": "editor-settings-modal_modal-content_2mgcb",
-	"modalContent": "editor-settings-modal_modal-content_2mgcb",
-	"body": "editor-settings-modal_body_2CW_9",
-	"input": "editor-settings-modal_input_6R7GE",
-	"text-code-input": "editor-settings-modal_text-code-input_3rErw",
-	"textCodeInput": "editor-settings-modal_text-code-input_3rErw",
-	"type-selector-container": "editor-settings-modal_type-selector-container_2O56C",
-	"typeSelectorContainer": "editor-settings-modal_type-selector-container_2O56C",
-	"type-selector-button": "editor-settings-modal_type-selector-button_3-RsS",
-	"typeSelectorButton": "editor-settings-modal_type-selector-button_3-RsS",
-	"button-row": "editor-settings-modal_button-row_1KFyx",
-	"buttonRow": "editor-settings-modal_button-row_1KFyx",
-	"ok-button": "editor-settings-modal_ok-button_H2Ifc",
-	"okButton": "editor-settings-modal_ok-button_H2Ifc",
-	"color-option": "editor-settings-modal_color-option_2dvX7",
-	"colorOption": "editor-settings-modal_color-option_2dvX7",
-	"color-picker": "editor-settings-modal_color-picker_3N3Qd",
-	"colorPicker": "editor-settings-modal_color-picker_3N3Qd",
-	"option-card": "editor-settings-modal_option-card_3rkJW",
-	"optionCard": "editor-settings-modal_option-card_3rkJW",
-	"option-title": "editor-settings-modal_option-title_Itxl8",
-	"optionTitle": "editor-settings-modal_option-title_Itxl8",
-	"options-row": "editor-settings-modal_options-row_D4CV_",
-	"optionsRow": "editor-settings-modal_options-row_D4CV_",
-	"card-box": "editor-settings-modal_card-box_Vng8i",
-	"cardBox": "editor-settings-modal_card-box_Vng8i",
-	"card": "editor-settings-modal_card_1PhYp",
-	"color-preview": "editor-settings-modal_color-preview_20luX",
-	"colorPreview": "editor-settings-modal_color-preview_20luX",
-	"download-option": "editor-settings-modal_download-option_1CbKj",
-	"downloadOption": "editor-settings-modal_download-option_1CbKj",
-	"edit-option": "editor-settings-modal_edit-option_1t9WW",
-	"editOption": "editor-settings-modal_edit-option_1t9WW",
-	"delete-option": "editor-settings-modal_delete-option_1QFt5",
-	"deleteOption": "editor-settings-modal_delete-option_1QFt5",
-	"name": "editor-settings-modal_name_aTeoh",
-	"button": "editor-settings-modal_button_j-2pX",
-	"topic-list": "editor-settings-modal_topic-list_3pLTb",
-	"topicList": "editor-settings-modal_topic-list_3pLTb",
-	"navigation": "editor-settings-modal_navigation_1i_YI",
-	"topic-item": "editor-settings-modal_topic-item_XfmCI",
-	"topicItem": "editor-settings-modal_topic-item_XfmCI",
-	"active": "editor-settings-modal_active_2Nnrd",
-	"content": "editor-settings-modal_content_dK3qH",
-	"escaped": "editor-settings-modal_escaped_29Gwd",
-	"setting": "editor-settings-modal_setting_1nU6_",
-	"label": "editor-settings-modal_label_1TZS-",
-	"checkbox": "editor-settings-modal_checkbox_2PwaA",
-	"help-icon": "editor-settings-modal_help-icon_2C8c6",
-	"helpIcon": "editor-settings-modal_help-icon_2C8c6",
-	"custom-stage-size": "editor-settings-modal_custom-stage-size_31Ki9",
-	"customStageSize": "editor-settings-modal_custom-stage-size_31Ki9",
-	"custom-stage-size-input": "editor-settings-modal_custom-stage-size-input_1StwA",
-	"customStageSizeInput": "editor-settings-modal_custom-stage-size-input_1StwA",
-	"info": "editor-settings-modal_info_1vkfE",
-	"header": "editor-settings-modal_header_3VVlD",
-	"divider": "editor-settings-modal_divider_3GIQn",
-	"dirty-button": "editor-settings-modal_dirty-button_Snmaz",
-	"dirtyButton": "editor-settings-modal_dirty-button_Snmaz",
-	"warning": "editor-settings-modal_warning_tDL-v",
-	"key-setting": "editor-settings-modal_key-setting_1vVZu",
-	"keySetting": "editor-settings-modal_key-setting_1vVZu"
+	"modal-content": "editor-settings-modal_modal-content_1eY_M",
+	"modalContent": "editor-settings-modal_modal-content_1eY_M",
+	"body": "editor-settings-modal_body_2b8yj",
+	"input": "editor-settings-modal_input_1qVf6",
+	"text-code-input": "editor-settings-modal_text-code-input_1oF01",
+	"textCodeInput": "editor-settings-modal_text-code-input_1oF01",
+	"type-selector-container": "editor-settings-modal_type-selector-container_2gAPE",
+	"typeSelectorContainer": "editor-settings-modal_type-selector-container_2gAPE",
+	"type-selector-button": "editor-settings-modal_type-selector-button_5KPTH",
+	"typeSelectorButton": "editor-settings-modal_type-selector-button_5KPTH",
+	"button-row": "editor-settings-modal_button-row_26TDL",
+	"buttonRow": "editor-settings-modal_button-row_26TDL",
+	"ok-button": "editor-settings-modal_ok-button_3aoUo",
+	"okButton": "editor-settings-modal_ok-button_3aoUo",
+	"color-option": "editor-settings-modal_color-option_3lAvq",
+	"colorOption": "editor-settings-modal_color-option_3lAvq",
+	"color-picker": "editor-settings-modal_color-picker_3IwfD",
+	"colorPicker": "editor-settings-modal_color-picker_3IwfD",
+	"option-card": "editor-settings-modal_option-card_1Q0q3",
+	"optionCard": "editor-settings-modal_option-card_1Q0q3",
+	"option-title": "editor-settings-modal_option-title_1bbBt",
+	"optionTitle": "editor-settings-modal_option-title_1bbBt",
+	"options-row": "editor-settings-modal_options-row_vDi-l",
+	"optionsRow": "editor-settings-modal_options-row_vDi-l",
+	"card-box": "editor-settings-modal_card-box_6Ckze",
+	"cardBox": "editor-settings-modal_card-box_6Ckze",
+	"card": "editor-settings-modal_card_yIc81",
+	"color-preview": "editor-settings-modal_color-preview_38j2e",
+	"colorPreview": "editor-settings-modal_color-preview_38j2e",
+	"download-option": "editor-settings-modal_download-option_1w-Tp",
+	"downloadOption": "editor-settings-modal_download-option_1w-Tp",
+	"edit-option": "editor-settings-modal_edit-option_vFNjg",
+	"editOption": "editor-settings-modal_edit-option_vFNjg",
+	"delete-option": "editor-settings-modal_delete-option_1Dc0V",
+	"deleteOption": "editor-settings-modal_delete-option_1Dc0V",
+	"name": "editor-settings-modal_name_2yF3w",
+	"button": "editor-settings-modal_button_32S-b",
+	"topic-list": "editor-settings-modal_topic-list_SUzG_",
+	"topicList": "editor-settings-modal_topic-list_SUzG_",
+	"navigation": "editor-settings-modal_navigation_3LRmK",
+	"topic-item": "editor-settings-modal_topic-item_1A1q2",
+	"topicItem": "editor-settings-modal_topic-item_1A1q2",
+	"active": "editor-settings-modal_active_2CZ_X",
+	"content": "editor-settings-modal_content_1l9Iy",
+	"escaped": "editor-settings-modal_escaped_-48YB",
+	"setting": "editor-settings-modal_setting_1jmZo",
+	"label": "editor-settings-modal_label_1dm6W",
+	"checkbox": "editor-settings-modal_checkbox_-quPr",
+	"help-icon": "editor-settings-modal_help-icon_3oxzU",
+	"helpIcon": "editor-settings-modal_help-icon_3oxzU",
+	"custom-stage-size": "editor-settings-modal_custom-stage-size_PEWPD",
+	"customStageSize": "editor-settings-modal_custom-stage-size_PEWPD",
+	"custom-stage-size-input": "editor-settings-modal_custom-stage-size-input_3JmW3",
+	"customStageSizeInput": "editor-settings-modal_custom-stage-size-input_3JmW3",
+	"info": "editor-settings-modal_info_3wdGw",
+	"header": "editor-settings-modal_header_35Cjw",
+	"divider": "editor-settings-modal_divider_GFjnR",
+	"dirty-button": "editor-settings-modal_dirty-button_3-y9D",
+	"dirtyButton": "editor-settings-modal_dirty-button_3-y9D",
+	"warning": "editor-settings-modal_warning_3d4l3",
+	"key-setting": "editor-settings-modal_key-setting_3lC4c",
+	"keySetting": "editor-settings-modal_key-setting_3lC4c"
 };
 
 /***/ }),
@@ -1984,11 +1984,11 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.key-input_container_1pAgz {\n    display: block;\n    position: relative;\n    padding: 1rem;\n    text-align: center;\n    border: 4px dashed var(--ui-tertiary);\n    border-radius: 5px;\n    cursor: pointer;\n    background: none;\n    width: 100%;\n}\n\n.key-input_container_1pAgz:focus-within {\n    border-color: var(--looks-secondary);\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.key-input_container_1eaGa {\n    display: block;\n    position: relative;\n    padding: 1rem;\n    text-align: center;\n    border: 4px dashed var(--ui-tertiary);\n    border-radius: 5px;\n    cursor: pointer;\n    background: none;\n    width: 100%;\n}\n\n.key-input_container_1eaGa:focus-within {\n    border-color: var(--looks-secondary);\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"container": "key-input_container_1pAgz"
+	"container": "key-input_container_1eaGa"
 };
 
 /***/ }),
@@ -2006,25 +2006,25 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.extension-manager-modal_modal-content_3jvxC {\r\n    max-width: 480px;\r\n    margin-top: 50px;\r\n}\n\n.extension-manager-modal_body_1e5Bb {\r\n    background: var(--ui-modal-background);\r\n    padding: 1.5rem 2.25rem;\r\n    max-height: calc(100vh - 150px);\r\n    overflow: auto;\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 1rem;\r\n}\n\n.extension-manager-modal_extension-card_1jBm8 {\r\n    background: var(--ui-white);\r\n    border: 2px solid var(--ui-black-transparent);\r\n    border-radius: 0.5rem;\r\n    padding: calc(0.5rem * 1.5);\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n}\n\n.extension-manager-modal_delete-option_1GUM3 {\r\n    background-image: url(" + escape(__webpack_require__(/*! ../delete-button/icon--delete.svg */ "./src/components/delete-button/icon--delete.svg")) + ");\r\n    -webkit-appearance: none;\r\n       -moz-appearance: none;\r\n            appearance: none;\r\n    width: 20px;\r\n    height: 20px;\r\n    background-color: var(--looks-secondary);\r\n    background-size: 100%;\r\n    border: 1px solid var(--ui-black-transparent);\r\n    border-radius: 4px;\r\n    outline: none;\r\n    transition: all 0.2s;\r\n}\n\n.extension-manager-modal_delete-option_1GUM3:hover {\r\n    border: 1px solid var(--looks-secondary);\r\n    box-shadow: 0px 0px 0px 4px var(--looks-transparent);\r\n}\n\n.extension-manager-modal_checkbox-option_1NAC7 {\r\n    width: 20px;\r\n    height: 20px;\r\n    transition: all 0.2s;\r\n}\n\n.extension-manager-modal_checkbox-option_1NAC7:hover {\r\n    border: 1px solid var(--looks-secondary);\r\n    box-shadow: 0px 0px 0px 4px var(--looks-transparent);\r\n}\n\n.extension-manager-modal_multi-select-row_1RkIj {\r\n    margin-top: 1rem;\r\n    font-weight: bolder;\r\n    text-align: right;\r\n}\n\n.extension-manager-modal_multi-select-normal_1JZpI {\r\n    border: 1px solid var(--ui-black-transparent);\r\n    border-radius: 0.25rem;\r\n    padding: 0.75rem 1rem;\r\n    background: white;\r\n    color: black;\r\n    font-weight: bold;\r\n    font-size: 0.85rem;\r\n}\n\n.extension-manager-modal_multi-select-delete_2m5_Q {\r\n    border: var(--looks-secondary);\r\n    border-radius: 0.25rem;\r\n    padding: 0.75rem 1rem;\r\n    background: var(--looks-secondary);\r\n    color: white;\r\n    font-weight: bold;\r\n    font-size: 0.85rem;\r\n}\n\n[dir=\"ltr\"] .extension-manager-modal_multi-select-normal_1JZpI + .extension-manager-modal_multi-select-delete_2m5_Q {\r\n    margin-left: 0.5rem;\r\n}\n\n[dir=\"rtl\"] .extension-manager-modal_multi-select-normal_1JZpI + .extension-manager-modal_multi-select-delete_2m5_Q {\r\n    margin-right: 0.5rem;\r\n}", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.extension-manager-modal_modal-content_13PKR {\n    max-width: 480px;\n    margin-top: 50px;\n}\n\n.extension-manager-modal_body_3tlKl {\n    background: var(--ui-modal-background);\n    padding: 1.5rem 2.25rem;\n    max-height: calc(100vh - 150px);\n    overflow: auto;\n    display: flex;\n    flex-direction: column;\n    gap: 1rem;\n}\n\n.extension-manager-modal_extension-card_1AUpJ {\n    background: var(--ui-white);\n    border: 2px solid var(--ui-black-transparent);\n    border-radius: 0.5rem;\n    padding: calc(0.5rem * 1.5);\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n}\n\n.extension-manager-modal_delete-option_2Sb0p {\n    background-image: url(" + escape(__webpack_require__(/*! ../delete-button/icon--delete.svg */ "./src/components/delete-button/icon--delete.svg")) + ");\n    -webkit-appearance: none;\n       -moz-appearance: none;\n            appearance: none;\n    width: 20px;\n    height: 20px;\n    background-color: var(--looks-secondary);\n    background-size: 100%;\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 4px;\n    outline: none;\n    transition: all 0.2s;\n}\n\n.extension-manager-modal_delete-option_2Sb0p:hover {\n    border: 1px solid var(--looks-secondary);\n    box-shadow: 0px 0px 0px 4px var(--looks-transparent);\n}\n\n.extension-manager-modal_checkbox-option_36mlZ {\n    width: 20px;\n    height: 20px;\n    transition: all 0.2s;\n}\n\n.extension-manager-modal_checkbox-option_36mlZ:hover {\n    border: 1px solid var(--looks-secondary);\n    box-shadow: 0px 0px 0px 4px var(--looks-transparent);\n}\n\n.extension-manager-modal_multi-select-row_3Zdln {\n    margin-top: 1rem;\n    font-weight: bolder;\n    text-align: right;\n}\n\n.extension-manager-modal_multi-select-normal_3TyZh {\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 0.25rem;\n    padding: 0.75rem 1rem;\n    background: white;\n    color: black;\n    font-weight: bold;\n    font-size: 0.85rem;\n}\n\n.extension-manager-modal_multi-select-delete_HwdH9 {\n    border: var(--looks-secondary);\n    border-radius: 0.25rem;\n    padding: 0.75rem 1rem;\n    background: var(--looks-secondary);\n    color: white;\n    font-weight: bold;\n    font-size: 0.85rem;\n}\n\n[dir=\"ltr\"] .extension-manager-modal_multi-select-normal_3TyZh + .extension-manager-modal_multi-select-delete_HwdH9 {\n    margin-left: 0.5rem;\n}\n\n[dir=\"rtl\"] .extension-manager-modal_multi-select-normal_3TyZh + .extension-manager-modal_multi-select-delete_HwdH9 {\n    margin-right: 0.5rem;\n}", ""]);
 
 // exports
 exports.locals = {
-	"modal-content": "extension-manager-modal_modal-content_3jvxC",
-	"modalContent": "extension-manager-modal_modal-content_3jvxC",
-	"body": "extension-manager-modal_body_1e5Bb",
-	"extension-card": "extension-manager-modal_extension-card_1jBm8",
-	"extensionCard": "extension-manager-modal_extension-card_1jBm8",
-	"delete-option": "extension-manager-modal_delete-option_1GUM3",
-	"deleteOption": "extension-manager-modal_delete-option_1GUM3",
-	"checkbox-option": "extension-manager-modal_checkbox-option_1NAC7",
-	"checkboxOption": "extension-manager-modal_checkbox-option_1NAC7",
-	"multi-select-row": "extension-manager-modal_multi-select-row_1RkIj",
-	"multiSelectRow": "extension-manager-modal_multi-select-row_1RkIj",
-	"multi-select-normal": "extension-manager-modal_multi-select-normal_1JZpI",
-	"multiSelectNormal": "extension-manager-modal_multi-select-normal_1JZpI",
-	"multi-select-delete": "extension-manager-modal_multi-select-delete_2m5_Q",
-	"multiSelectDelete": "extension-manager-modal_multi-select-delete_2m5_Q"
+	"modal-content": "extension-manager-modal_modal-content_13PKR",
+	"modalContent": "extension-manager-modal_modal-content_13PKR",
+	"body": "extension-manager-modal_body_3tlKl",
+	"extension-card": "extension-manager-modal_extension-card_1AUpJ",
+	"extensionCard": "extension-manager-modal_extension-card_1AUpJ",
+	"delete-option": "extension-manager-modal_delete-option_2Sb0p",
+	"deleteOption": "extension-manager-modal_delete-option_2Sb0p",
+	"checkbox-option": "extension-manager-modal_checkbox-option_36mlZ",
+	"checkboxOption": "extension-manager-modal_checkbox-option_36mlZ",
+	"multi-select-row": "extension-manager-modal_multi-select-row_3Zdln",
+	"multiSelectRow": "extension-manager-modal_multi-select-row_3Zdln",
+	"multi-select-normal": "extension-manager-modal_multi-select-normal_3TyZh",
+	"multiSelectNormal": "extension-manager-modal_multi-select-normal_3TyZh",
+	"multi-select-delete": "extension-manager-modal_multi-select-delete_HwdH9",
+	"multiSelectDelete": "extension-manager-modal_multi-select-delete_HwdH9"
 };
 
 /***/ }),
@@ -2041,14 +2041,14 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.play-button_play-button_cXELI {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n\n    overflow: hidden;  /* Mask the icon animation */\n    width: 2.5rem;\n    height: 2.5rem;\n    background-color: var(--sound-primary);\n    color: var(--ui-white);\n    border-radius: 50%;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    cursor: pointer;\n    transition: all 0.15s ease-out;\n}\n\n.play-button_play-button_cXELI {\n    position: absolute;\n    top: .5rem;\n    z-index: auto;\n}\n\n.play-button_play-button_cXELI:focus {\n    outline: none;\n}\n\n.play-button_play-icon_33XpJ {\n  width: 50%;\n}\n\n[dir=\"ltr\"] .play-button_play-button_cXELI {\n    right: .5rem;\n}\n\n[dir=\"rtl\"] .play-button_play-button_cXELI {\n    left: .5rem;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.play-button_play-button_3MkN- {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n\n    overflow: hidden;  /* Mask the icon animation */\n    width: 2.5rem;\n    height: 2.5rem;\n    background-color: var(--sound-primary);\n    color: var(--ui-white);\n    border-radius: 50%;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    cursor: pointer;\n    transition: all 0.15s ease-out;\n}\n\n.play-button_play-button_3MkN- {\n    position: absolute;\n    top: .5rem;\n    z-index: auto;\n}\n\n.play-button_play-button_3MkN-:focus {\n    outline: none;\n}\n\n.play-button_play-icon_CX5nH {\n  width: 50%;\n}\n\n[dir=\"ltr\"] .play-button_play-button_3MkN- {\n    right: .5rem;\n}\n\n[dir=\"rtl\"] .play-button_play-button_3MkN- {\n    left: .5rem;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"play-button": "play-button_play-button_cXELI",
-	"playButton": "play-button_play-button_cXELI",
-	"play-icon": "play-button_play-icon_33XpJ",
-	"playIcon": "play-button_play-icon_33XpJ"
+	"play-button": "play-button_play-button_3MkN-",
+	"playButton": "play-button_play-button_3MkN-",
+	"play-icon": "play-button_play-icon_CX5nH",
+	"playIcon": "play-button_play-icon_CX5nH"
 };
 
 /***/ }),
@@ -2065,18 +2065,18 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.progress-ring_progress-ring_2ah6I {\n    margin: 0.5rem;\n}\n\n.progress-ring_progress-ring-svg_2y_x6 {\n    fill: transparent;\n}\n\n.progress-ring_progress-ring_2ah6I .progress-ring_progress-ring-ring_2wHxN {\n    stroke: var(--looks-light-transparent);\n}\n\n.progress-ring_progress-ring_2ah6I .progress-ring_progress-ring-value_2c1U2 {\n    stroke: var(--looks-secondary);\n    stroke-linecap: round;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.progress-ring_progress-ring_P_His {\n    margin: 0.5rem;\n}\n\n.progress-ring_progress-ring-svg_17Srp {\n    fill: transparent;\n}\n\n.progress-ring_progress-ring_P_His .progress-ring_progress-ring-ring_2NyUq {\n    stroke: var(--looks-light-transparent);\n}\n\n.progress-ring_progress-ring_P_His .progress-ring_progress-ring-value_1SVN5 {\n    stroke: var(--looks-secondary);\n    stroke-linecap: round;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"progress-ring": "progress-ring_progress-ring_2ah6I",
-	"progressRing": "progress-ring_progress-ring_2ah6I",
-	"progress-ring-svg": "progress-ring_progress-ring-svg_2y_x6",
-	"progressRingSvg": "progress-ring_progress-ring-svg_2y_x6",
-	"progress-ring-ring": "progress-ring_progress-ring-ring_2wHxN",
-	"progressRingRing": "progress-ring_progress-ring-ring_2wHxN",
-	"progress-ring-value": "progress-ring_progress-ring-value_2c1U2",
-	"progressRingValue": "progress-ring_progress-ring-value_2c1U2"
+	"progress-ring": "progress-ring_progress-ring_P_His",
+	"progressRing": "progress-ring_progress-ring_P_His",
+	"progress-ring-svg": "progress-ring_progress-ring-svg_17Srp",
+	"progressRingSvg": "progress-ring_progress-ring-svg_17Srp",
+	"progress-ring-ring": "progress-ring_progress-ring-ring_2NyUq",
+	"progressRingRing": "progress-ring_progress-ring-ring_2NyUq",
+	"progress-ring-value": "progress-ring_progress-ring-value_1SVN5",
+	"progressRingValue": "progress-ring_progress-ring-value_1SVN5"
 };
 
 /***/ }),
@@ -2093,30 +2093,30 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.prompt_modal-content_35gRS {\n    width: 360px;\n}\n\n.prompt_body_Vgt8G {\n    background: var(--ui-modal-background);\n    padding: 1.5rem 2.25rem;\n}\n\n.prompt_body_Vgt8G input[type=\"checkbox\"],\n.prompt_body_Vgt8G input[type=\"radio\"] {\n    margin: 3px;\n}\n\n.prompt_label_3jR00 {\n    font-weight: 500;\n    margin: 0 0 0.75rem;\n}\n\n.prompt_disabled-label_fduJB {\n    opacity: 0.5;\n}\n\n.prompt_variable-name-text-input_36E65 {\n    margin-bottom: 1.5rem;\n    width: 100%;\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 5px;\n    padding: 0 1rem;\n    height: 3rem;\n    color: var(--ui-text-primary-transparent);\n    background-color: var(--input-background);\n    font-size: .875rem;\n}\n\n.prompt_info-message_370zD {\n    font-weight: normal;\n    font-size: .875rem;\n    margin-bottom: 1.5rem;\n    text-align: center;\n}\n\n.prompt_options-row_33OgT {\n    display: flex;\n    font-weight: normal;\n    justify-content: space-between;\n    margin-bottom: 1.5rem;\n}\n\n.prompt_button-row_34Zss {\n    font-weight: bolder;\n    text-align: right;\n}\n\n.prompt_button-row_34Zss button {\n    padding: 0.75rem 1rem;\n    border-radius: 0.25rem;\n    background: white;\n    color: black;\n    border: 1px solid var(--ui-black-transparent);\n    font-weight: 600;\n    font-size: 0.85rem;\n}\n\n.prompt_button-row_34Zss button.prompt_ok-button_1xjNu {\n    background: var(--looks-secondary);\n    border: var(--looks-secondary);\n    color: white;\n}\n\n[dir=\"ltr\"] .prompt_button-row_34Zss button + button {\n    margin-left: 0.5rem;\n}\n\n[dir=\"rtl\"] .prompt_button-row_34Zss button + button {\n    margin-right: 0.5rem;\n}\n\n.prompt_cloud-option_1Fo4I {\n    display:flex;\n    border-top: 1px dashed var(--ui-black-transparent);\n    overflow: visible;\n    padding: 1rem 0;\n    text-align: center;\n    width: 100%;\n    margin: 0 auto;\n}\n\n.prompt_cloud-option-text_2I5zG {\n    opacity: .5;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.prompt_modal-content_1BfWj {\n    width: 360px;\n}\n\n.prompt_body_18Z-I {\n    background: var(--ui-modal-background);\n    padding: 1.5rem 2.25rem;\n}\n\n.prompt_body_18Z-I input[type=\"checkbox\"],\n.prompt_body_18Z-I input[type=\"radio\"] {\n    margin: 3px;\n}\n\n.prompt_label_tWjYZ {\n    font-weight: 500;\n    margin: 0 0 0.75rem;\n}\n\n.prompt_disabled-label_3Y-7h {\n    opacity: 0.5;\n}\n\n.prompt_variable-name-text-input_1iu8- {\n    margin-bottom: 1.5rem;\n    width: 100%;\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 5px;\n    padding: 0 1rem;\n    height: 3rem;\n    color: var(--ui-text-primary-transparent);\n    background-color: var(--input-background);\n    font-size: .875rem;\n}\n\n.prompt_info-message_-WcQL {\n    font-weight: normal;\n    font-size: .875rem;\n    margin-bottom: 1.5rem;\n    text-align: center;\n}\n\n.prompt_options-row_36JmB {\n    display: flex;\n    font-weight: normal;\n    justify-content: space-between;\n    margin-bottom: 1.5rem;\n}\n\n.prompt_button-row_3Wc5Z {\n    font-weight: bolder;\n    text-align: right;\n}\n\n.prompt_button-row_3Wc5Z button {\n    padding: 0.75rem 1rem;\n    border-radius: 0.25rem;\n    background: white;\n    color: black;\n    border: 1px solid var(--ui-black-transparent);\n    font-weight: 600;\n    font-size: 0.85rem;\n}\n\n.prompt_button-row_3Wc5Z button.prompt_ok-button_3QFdD {\n    background: var(--looks-secondary);\n    border: var(--looks-secondary);\n    color: white;\n}\n\n[dir=\"ltr\"] .prompt_button-row_3Wc5Z button + button {\n    margin-left: 0.5rem;\n}\n\n[dir=\"rtl\"] .prompt_button-row_3Wc5Z button + button {\n    margin-right: 0.5rem;\n}\n\n.prompt_cloud-option_1jjSa {\n    display:flex;\n    border-top: 1px dashed var(--ui-black-transparent);\n    overflow: visible;\n    padding: 1rem 0;\n    text-align: center;\n    width: 100%;\n    margin: 0 auto;\n}\n\n.prompt_cloud-option-text_P1r8J {\n    opacity: .5;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"modal-content": "prompt_modal-content_35gRS",
-	"modalContent": "prompt_modal-content_35gRS",
-	"body": "prompt_body_Vgt8G",
-	"label": "prompt_label_3jR00",
-	"disabled-label": "prompt_disabled-label_fduJB",
-	"disabledLabel": "prompt_disabled-label_fduJB",
-	"variable-name-text-input": "prompt_variable-name-text-input_36E65",
-	"variableNameTextInput": "prompt_variable-name-text-input_36E65",
-	"info-message": "prompt_info-message_370zD",
-	"infoMessage": "prompt_info-message_370zD",
-	"options-row": "prompt_options-row_33OgT",
-	"optionsRow": "prompt_options-row_33OgT",
-	"button-row": "prompt_button-row_34Zss",
-	"buttonRow": "prompt_button-row_34Zss",
-	"ok-button": "prompt_ok-button_1xjNu",
-	"okButton": "prompt_ok-button_1xjNu",
-	"cloud-option": "prompt_cloud-option_1Fo4I",
-	"cloudOption": "prompt_cloud-option_1Fo4I",
-	"cloud-option-text": "prompt_cloud-option-text_2I5zG",
-	"cloudOptionText": "prompt_cloud-option-text_2I5zG"
+	"modal-content": "prompt_modal-content_1BfWj",
+	"modalContent": "prompt_modal-content_1BfWj",
+	"body": "prompt_body_18Z-I",
+	"label": "prompt_label_tWjYZ",
+	"disabled-label": "prompt_disabled-label_3Y-7h",
+	"disabledLabel": "prompt_disabled-label_3Y-7h",
+	"variable-name-text-input": "prompt_variable-name-text-input_1iu8-",
+	"variableNameTextInput": "prompt_variable-name-text-input_1iu8-",
+	"info-message": "prompt_info-message_-WcQL",
+	"infoMessage": "prompt_info-message_-WcQL",
+	"options-row": "prompt_options-row_36JmB",
+	"optionsRow": "prompt_options-row_36JmB",
+	"button-row": "prompt_button-row_3Wc5Z",
+	"buttonRow": "prompt_button-row_3Wc5Z",
+	"ok-button": "prompt_ok-button_3QFdD",
+	"okButton": "prompt_ok-button_3QFdD",
+	"cloud-option": "prompt_cloud-option_1jjSa",
+	"cloudOption": "prompt_cloud-option_1jjSa",
+	"cloud-option-text": "prompt_cloud-option-text_P1r8J",
+	"cloudOptionText": "prompt_cloud-option-text_P1r8J"
 };
 
 /***/ }),
@@ -2133,20 +2133,20 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n.question_question-container_26Z9Q {\n    margin: 0.5rem;\n    border: 1px solid var(--ui-black-transparent-default);\n    border-radius: 0.5rem;\n    border-width: 2px;\n    padding: 1rem;\n    background: white;\n}\n\n.question_question-label_1SgY7 {\n    font-size: 0.75rem;\n    font-weight: bold;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    color: var(--text-primary-default);\n    padding-bottom: 0.5rem;\n}\n\n.question_question-input_Bvy05 {\n    display: flex; /* Keeps the input from going outside this container */\n    position: relative;\n}\n\n.question_question-submit-button_1zp3B {\n    position: absolute;\n    top: calc(0.5rem / 2);\n\n    width: calc(2rem - 0.5rem);\n    height: calc(2rem - 0.5rem);\n\n    border: none;\n    border-radius: 100%;\n\n    color: white;\n    background: var(--looks-secondary);\n}\n\n[dir=\"ltr\"] .question_question-submit-button_1zp3B {\n    right: calc(0.5rem / 2);\n}\n\n[dir=\"rtl\"] .question_question-submit-button_1zp3B {\n    left: calc(0.5rem / 2);\n}\n\n/* Input overrides: width, font-weight, focus outline and padding */\n\n.question_question-input_Bvy05 > input {\n    width: 100%;\n    font-weight: normal;\n\n    /* override dark mode */\n    background-color: var(--input-background-default);\n    color: var(--text-primary-default);\n    border-color: var(--ui-black-transparent-default);\n}\n\n[dir=\"ltr\"] .question_question-input_Bvy05 > input {\n    padding: 0 2rem 0 .75rem; /* To make room for the submit button */\n}\n\n[dir=\"rtl\"] .question_question-input_Bvy05 > input {\n    padding: 0 .75rem 0 2rem; /* To make room for the submit button */\n}\n\n.question_question-input_Bvy05 > input:focus {\n    box-shadow: 0px 0px 0px 3px var(--looks-transparent);\n}\n\n.question_question-submit-button-icon_3E4g- {\n    width: calc(2rem - 0.5rem);\n    height: calc(2rem - 0.5rem);\n    position: relative;\n    right: -7px;\n    left: -7px;\n}\n", ""]);
+exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n.question_question-container_OuJwy {\n    margin: 0.5rem;\n    border: 1px solid var(--ui-black-transparent-default);\n    border-radius: 0.5rem;\n    border-width: 2px;\n    padding: 1rem;\n    background: white;\n}\n\n.question_question-label_1tRo2 {\n    font-size: 0.75rem;\n    font-weight: bold;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    color: var(--text-primary-default);\n    padding-bottom: 0.5rem;\n}\n\n.question_question-input_1oAB7 {\n    display: flex; /* Keeps the input from going outside this container */\n    position: relative;\n}\n\n.question_question-submit-button_3nYah {\n    position: absolute;\n    top: calc(0.5rem / 2);\n\n    width: calc(2rem - 0.5rem);\n    height: calc(2rem - 0.5rem);\n\n    border: none;\n    border-radius: 100%;\n\n    color: white;\n    background: var(--looks-secondary);\n}\n\n[dir=\"ltr\"] .question_question-submit-button_3nYah {\n    right: calc(0.5rem / 2);\n}\n\n[dir=\"rtl\"] .question_question-submit-button_3nYah {\n    left: calc(0.5rem / 2);\n}\n\n/* Input overrides: width, font-weight, focus outline and padding */\n\n.question_question-input_1oAB7 > input {\n    width: 100%;\n    font-weight: normal;\n\n    /* override dark mode */\n    background-color: var(--input-background-default);\n    color: var(--text-primary-default);\n    border-color: var(--ui-black-transparent-default);\n}\n\n[dir=\"ltr\"] .question_question-input_1oAB7 > input {\n    padding: 0 2rem 0 .75rem; /* To make room for the submit button */\n}\n\n[dir=\"rtl\"] .question_question-input_1oAB7 > input {\n    padding: 0 .75rem 0 2rem; /* To make room for the submit button */\n}\n\n.question_question-input_1oAB7 > input:focus {\n    box-shadow: 0px 0px 0px 3px var(--looks-transparent);\n}\n\n.question_question-submit-button-icon_upm57 {\n    width: calc(2rem - 0.5rem);\n    height: calc(2rem - 0.5rem);\n    position: relative;\n    right: -7px;\n    left: -7px;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"question-container": "question_question-container_26Z9Q",
-	"questionContainer": "question_question-container_26Z9Q",
-	"question-label": "question_question-label_1SgY7",
-	"questionLabel": "question_question-label_1SgY7",
-	"question-input": "question_question-input_Bvy05",
-	"questionInput": "question_question-input_Bvy05",
-	"question-submit-button": "question_question-submit-button_1zp3B",
-	"questionSubmitButton": "question_question-submit-button_1zp3B",
-	"question-submit-button-icon": "question_question-submit-button-icon_3E4g-",
-	"questionSubmitButtonIcon": "question_question-submit-button-icon_3E4g-"
+	"question-container": "question_question-container_OuJwy",
+	"questionContainer": "question_question-container_OuJwy",
+	"question-label": "question_question-label_1tRo2",
+	"questionLabel": "question_question-label_1tRo2",
+	"question-input": "question_question-input_1oAB7",
+	"questionInput": "question_question-input_1oAB7",
+	"question-submit-button": "question_question-submit-button_3nYah",
+	"questionSubmitButton": "question_question-submit-button_3nYah",
+	"question-submit-button-icon": "question_question-submit-button-icon_upm57",
+	"questionSubmitButtonIcon": "question_question-submit-button-icon_upm57"
 };
 
 /***/ }),
@@ -2163,41 +2163,41 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.record-modal_modal-content_2_5Zs {\n    width: 600px;\n}\n\n.record-modal_body_3oKwC {\n    background: var(--ui-modal-background);\n    padding: 1.5rem 2.25rem;\n}\n\n.record-modal_visualization-container_1QsU5 {\n    display: flex;\n    justify-content: space-around;\n}\n\n.record-modal_meter-container_3vpbL, .record-modal_waveform-container_1d_a5 {\n    background: var(--ui-primary);\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 5px;\n    padding: 3px;\n    /* Force these to be on their own render layer because they update often */\n    transform: translateZ(0);\n}\n\n.record-modal_meter-container_3vpbL {\n    margin-right: 5px;\n    height: 180px;\n}\n\n.record-modal_waveform-container_1d_a5 {\n    display: flex;\n    justify-content: space-around;\n    align-items: center;\n    width: 100%;\n    height: 180px;\n    position: relative;\n}\n\n.record-modal_help-text_hQoTW {\n    margin: 10px auto 0;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    color: rgb(167, 170, 181);\n    font-size: 0.95rem;\n    font-weight: 500;\n}\n\n.record-modal_playing-text_20o4n {\n    color: var(--looks-secondary);\n}\n\n.record-modal_recording-text_3AD3U {\n    color: var(--red-primary);\n}\n\n.record-modal_main-button-row_3Vifq {\n    display: flex;\n    justify-content: space-around;\n    margin-top: 15px;\n}\n\n.record-modal_main-button-row_3Vifq button {\n    padding: 0.5rem 0.75rem;\n    border-radius: 0.25rem;\n    background: transparent;\n    border: none;\n}\n\n.record-modal_main-button-row_3Vifq button:disabled {\n    opacity: 0.25;\n}\n\n.record-modal_main-button-row_3Vifq button:active, .record-modal_main-button-row_3Vifq button:focus {\n    outline: none;\n}\n\n.record-modal_button-row_3qJ_b {\n    font-weight: bolder;\n    text-align: right;\n    display: flex;\n    justify-content: space-between;\n}\n\n.record-modal_button-row_3qJ_b button {\n    padding: 0.75rem 1rem;\n    border-radius: 0.25rem;\n    background: white;\n    border: 1px solid var(--ui-black-transparent);\n    font-weight: 600;\n    font-size: 0.85rem;\n    color: var(--looks-secondary);\n}\n\n.record-modal_button-row_3qJ_b button.record-modal_ok-button_CoeuZ {\n    background: var(--looks-secondary);\n    border: var(--looks-secondary);\n    color: white;\n}\n\n.record-modal_button-row_3qJ_b button + button {\n    margin-left: 0.5rem;\n}\n\n.record-modal_main-button_3eLhw {\n    text-align: center;\n}\n\n/* Increase specificity to make sure this wins out over normalize.css */\n\nsvg.record-modal_record-button_1Lapz {\n    overflow: visible;\n}\n\n.record-modal_record-button-circle_Cr04k {\n    fill: var(--red-primary);\n    stroke: var(--red-tertiary);\n}\n\n.record-modal_record-button-circle-outline_2nUeJ {\n    fill: var(--red-primary);\n    opacity: 0.2;\n    transition: 0.1s;\n}\n\n[dir=\"rtl\"] .record-modal_rerecord-button_3JZP1 img {\n    transform: scaleX(-1);\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.record-modal_modal-content_2N7lD {\n    width: 600px;\n}\n\n.record-modal_body_2VO4l {\n    background: var(--ui-modal-background);\n    padding: 1.5rem 2.25rem;\n}\n\n.record-modal_visualization-container_1joZn {\n    display: flex;\n    justify-content: space-around;\n}\n\n.record-modal_meter-container_3OqCJ, .record-modal_waveform-container__ay3Q {\n    background: var(--ui-primary);\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 5px;\n    padding: 3px;\n    /* Force these to be on their own render layer because they update often */\n    transform: translateZ(0);\n}\n\n.record-modal_meter-container_3OqCJ {\n    margin-right: 5px;\n    height: 180px;\n}\n\n.record-modal_waveform-container__ay3Q {\n    display: flex;\n    justify-content: space-around;\n    align-items: center;\n    width: 100%;\n    height: 180px;\n    position: relative;\n}\n\n.record-modal_help-text_Jevsk {\n    margin: 10px auto 0;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    color: rgb(167, 170, 181);\n    font-size: 0.95rem;\n    font-weight: 500;\n}\n\n.record-modal_playing-text_1tknI {\n    color: var(--looks-secondary);\n}\n\n.record-modal_recording-text_2LS7_ {\n    color: var(--red-primary);\n}\n\n.record-modal_main-button-row_37Zjz {\n    display: flex;\n    justify-content: space-around;\n    margin-top: 15px;\n}\n\n.record-modal_main-button-row_37Zjz button {\n    padding: 0.5rem 0.75rem;\n    border-radius: 0.25rem;\n    background: transparent;\n    border: none;\n}\n\n.record-modal_main-button-row_37Zjz button:disabled {\n    opacity: 0.25;\n}\n\n.record-modal_main-button-row_37Zjz button:active, .record-modal_main-button-row_37Zjz button:focus {\n    outline: none;\n}\n\n.record-modal_button-row_1hdGe {\n    font-weight: bolder;\n    text-align: right;\n    display: flex;\n    justify-content: space-between;\n}\n\n.record-modal_button-row_1hdGe button {\n    padding: 0.75rem 1rem;\n    border-radius: 0.25rem;\n    background: white;\n    border: 1px solid var(--ui-black-transparent);\n    font-weight: 600;\n    font-size: 0.85rem;\n    color: var(--looks-secondary);\n}\n\n.record-modal_button-row_1hdGe button.record-modal_ok-button_3pudV {\n    background: var(--looks-secondary);\n    border: var(--looks-secondary);\n    color: white;\n}\n\n.record-modal_button-row_1hdGe button + button {\n    margin-left: 0.5rem;\n}\n\n.record-modal_main-button_36gPw {\n    text-align: center;\n}\n\n/* Increase specificity to make sure this wins out over normalize.css */\n\nsvg.record-modal_record-button_3mcC8 {\n    overflow: visible;\n}\n\n.record-modal_record-button-circle_kXioI {\n    fill: var(--red-primary);\n    stroke: var(--red-tertiary);\n}\n\n.record-modal_record-button-circle-outline_1ycFu {\n    fill: var(--red-primary);\n    opacity: 0.2;\n    transition: 0.1s;\n}\n\n[dir=\"rtl\"] .record-modal_rerecord-button_jgsi_ img {\n    transform: scaleX(-1);\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"modal-content": "record-modal_modal-content_2_5Zs",
-	"modalContent": "record-modal_modal-content_2_5Zs",
-	"body": "record-modal_body_3oKwC",
-	"visualization-container": "record-modal_visualization-container_1QsU5",
-	"visualizationContainer": "record-modal_visualization-container_1QsU5",
-	"meter-container": "record-modal_meter-container_3vpbL",
-	"meterContainer": "record-modal_meter-container_3vpbL",
-	"waveform-container": "record-modal_waveform-container_1d_a5",
-	"waveformContainer": "record-modal_waveform-container_1d_a5",
-	"help-text": "record-modal_help-text_hQoTW",
-	"helpText": "record-modal_help-text_hQoTW",
-	"playing-text": "record-modal_playing-text_20o4n",
-	"playingText": "record-modal_playing-text_20o4n",
-	"recording-text": "record-modal_recording-text_3AD3U",
-	"recordingText": "record-modal_recording-text_3AD3U",
-	"main-button-row": "record-modal_main-button-row_3Vifq",
-	"mainButtonRow": "record-modal_main-button-row_3Vifq",
-	"button-row": "record-modal_button-row_3qJ_b",
-	"buttonRow": "record-modal_button-row_3qJ_b",
-	"ok-button": "record-modal_ok-button_CoeuZ",
-	"okButton": "record-modal_ok-button_CoeuZ",
-	"main-button": "record-modal_main-button_3eLhw",
-	"mainButton": "record-modal_main-button_3eLhw",
-	"record-button": "record-modal_record-button_1Lapz",
-	"recordButton": "record-modal_record-button_1Lapz",
-	"record-button-circle": "record-modal_record-button-circle_Cr04k",
-	"recordButtonCircle": "record-modal_record-button-circle_Cr04k",
-	"record-button-circle-outline": "record-modal_record-button-circle-outline_2nUeJ",
-	"recordButtonCircleOutline": "record-modal_record-button-circle-outline_2nUeJ",
-	"rerecord-button": "record-modal_rerecord-button_3JZP1",
-	"rerecordButton": "record-modal_rerecord-button_3JZP1"
+	"modal-content": "record-modal_modal-content_2N7lD",
+	"modalContent": "record-modal_modal-content_2N7lD",
+	"body": "record-modal_body_2VO4l",
+	"visualization-container": "record-modal_visualization-container_1joZn",
+	"visualizationContainer": "record-modal_visualization-container_1joZn",
+	"meter-container": "record-modal_meter-container_3OqCJ",
+	"meterContainer": "record-modal_meter-container_3OqCJ",
+	"waveform-container": "record-modal_waveform-container__ay3Q",
+	"waveformContainer": "record-modal_waveform-container__ay3Q",
+	"help-text": "record-modal_help-text_Jevsk",
+	"helpText": "record-modal_help-text_Jevsk",
+	"playing-text": "record-modal_playing-text_1tknI",
+	"playingText": "record-modal_playing-text_1tknI",
+	"recording-text": "record-modal_recording-text_2LS7_",
+	"recordingText": "record-modal_recording-text_2LS7_",
+	"main-button-row": "record-modal_main-button-row_37Zjz",
+	"mainButtonRow": "record-modal_main-button-row_37Zjz",
+	"button-row": "record-modal_button-row_1hdGe",
+	"buttonRow": "record-modal_button-row_1hdGe",
+	"ok-button": "record-modal_ok-button_3pudV",
+	"okButton": "record-modal_ok-button_3pudV",
+	"main-button": "record-modal_main-button_36gPw",
+	"mainButton": "record-modal_main-button_36gPw",
+	"record-button": "record-modal_record-button_3mcC8",
+	"recordButton": "record-modal_record-button_3mcC8",
+	"record-button-circle": "record-modal_record-button-circle_kXioI",
+	"recordButtonCircle": "record-modal_record-button-circle_kXioI",
+	"record-button-circle-outline": "record-modal_record-button-circle-outline_1ycFu",
+	"recordButtonCircleOutline": "record-modal_record-button-circle-outline_1ycFu",
+	"rerecord-button": "record-modal_rerecord-button_jgsi_",
+	"rerecordButton": "record-modal_rerecord-button_jgsi_"
 };
 
 /***/ }),
@@ -2214,22 +2214,22 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.slider-prompt_modal-content_m3ASz {\n    width: 360px;\n}\n\n.slider-prompt_body_fslhG {\n    background: var(--ui-modal-background);\n    padding: 1.5rem 2.25rem;\n}\n\n.slider-prompt_label_YNsvF {\n    font-weight: 500;\n    margin: 0 0 0.75rem;\n}\n\n.slider-prompt_min-input_2KCOC, .slider-prompt_max-input_2iIHC {\n    margin-bottom: 1.5rem;\n    width: 100%;\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 5px;\n    padding: 0 1rem;\n    height: 3rem;\n    color: var(--ui-text-primary-transparent);\n    font-size: .875rem;\n    background-color: var(--input-background);\n}\n\n.slider-prompt_button-row_-JDyB {\n    font-weight: bolder;\n    text-align: right;\n}\n\n.slider-prompt_button-row_-JDyB button {\n    padding: 0.75rem 1rem;\n    border-radius: 0.25rem;\n    background: white;\n    color: black;\n    border: 1px solid var(--ui-black-transparent);\n    font-weight: 600;\n    font-size: 0.85rem;\n}\n\n.slider-prompt_button-row_-JDyB button.slider-prompt_ok-button_1Ptk- {\n    background: var(--looks-secondary);\n    border: var(--looks-secondary);\n    color: white;\n}\n\n[dir=\"ltr\"] .slider-prompt_button-row_-JDyB button + button {\n    margin-left: 0.5rem;\n}\n\n[dir=\"rtl\"] .slider-prompt_button-row_-JDyB button + button {\n    margin-right: 0.5rem;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.slider-prompt_modal-content_2vVm4 {\n    width: 360px;\n}\n\n.slider-prompt_body_2ZkXL {\n    background: var(--ui-modal-background);\n    padding: 1.5rem 2.25rem;\n}\n\n.slider-prompt_label_cYsiu {\n    font-weight: 500;\n    margin: 0 0 0.75rem;\n}\n\n.slider-prompt_min-input_1IxXX, .slider-prompt_max-input_1Nwbv {\n    margin-bottom: 1.5rem;\n    width: 100%;\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 5px;\n    padding: 0 1rem;\n    height: 3rem;\n    color: var(--ui-text-primary-transparent);\n    font-size: .875rem;\n    background-color: var(--input-background);\n}\n\n.slider-prompt_button-row_32aCX {\n    font-weight: bolder;\n    text-align: right;\n}\n\n.slider-prompt_button-row_32aCX button {\n    padding: 0.75rem 1rem;\n    border-radius: 0.25rem;\n    background: white;\n    color: black;\n    border: 1px solid var(--ui-black-transparent);\n    font-weight: 600;\n    font-size: 0.85rem;\n}\n\n.slider-prompt_button-row_32aCX button.slider-prompt_ok-button_vLj7c {\n    background: var(--looks-secondary);\n    border: var(--looks-secondary);\n    color: white;\n}\n\n[dir=\"ltr\"] .slider-prompt_button-row_32aCX button + button {\n    margin-left: 0.5rem;\n}\n\n[dir=\"rtl\"] .slider-prompt_button-row_32aCX button + button {\n    margin-right: 0.5rem;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"modal-content": "slider-prompt_modal-content_m3ASz",
-	"modalContent": "slider-prompt_modal-content_m3ASz",
-	"body": "slider-prompt_body_fslhG",
-	"label": "slider-prompt_label_YNsvF",
-	"min-input": "slider-prompt_min-input_2KCOC",
-	"minInput": "slider-prompt_min-input_2KCOC",
-	"max-input": "slider-prompt_max-input_2iIHC",
-	"maxInput": "slider-prompt_max-input_2iIHC",
-	"button-row": "slider-prompt_button-row_-JDyB",
-	"buttonRow": "slider-prompt_button-row_-JDyB",
-	"ok-button": "slider-prompt_ok-button_1Ptk-",
-	"okButton": "slider-prompt_ok-button_1Ptk-"
+	"modal-content": "slider-prompt_modal-content_2vVm4",
+	"modalContent": "slider-prompt_modal-content_2vVm4",
+	"body": "slider-prompt_body_2ZkXL",
+	"label": "slider-prompt_label_cYsiu",
+	"min-input": "slider-prompt_min-input_1IxXX",
+	"minInput": "slider-prompt_min-input_1IxXX",
+	"max-input": "slider-prompt_max-input_1Nwbv",
+	"maxInput": "slider-prompt_max-input_1Nwbv",
+	"button-row": "slider-prompt_button-row_32aCX",
+	"buttonRow": "slider-prompt_button-row_32aCX",
+	"ok-button": "slider-prompt_ok-button_vLj7c",
+	"okButton": "slider-prompt_ok-button_vLj7c"
 };
 
 /***/ }),
@@ -2246,50 +2246,50 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.sound-editor_editor-container_3jiU9 {\n    display: flex;\n    flex-direction: column;\n    flex-grow: 1;\n    padding: calc(2 * 0.5rem);\n}\n\n.sound-editor_row_1WmTk {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n}\n\n[dir=\"rtl\"] .sound-editor_row-reverse_28RND {\n    flex-direction: row-reverse;\n}\n\n.sound-editor_row_1WmTk + .sound-editor_row_1WmTk {\n    margin-top: calc(2 * 0.5rem);\n}\n\n.sound-editor_input-group_2pRFc {\n    display: flex;\n    flex-direction: row;\n}\n\n[dir=\"ltr\"] .sound-editor_input-group_2pRFc + .sound-editor_input-group_2pRFc {\n    margin-left: calc(2 * 0.5rem);\n}\n\n[dir=\"rtl\"] .sound-editor_input-group_2pRFc + .sound-editor_input-group_2pRFc {\n    margin-right: calc(2 * 0.5rem);\n}\n\n[dir=\"ltr\"] .sound-editor_input-group_2pRFc {\n    padding-right: calc(2 * 0.5rem);\n    border-right: 1px dashed var(--ui-black-transparent);\n}\n\n[dir=\"rtl\"] .sound-editor_input-group_2pRFc {\n    padding-left: calc(2 * 0.5rem);\n    border-left: 1px dashed var(--ui-black-transparent);\n}\n\n[dir=\"rtl\"] .sound-editor_row-reverse_28RND > .sound-editor_input-group_2pRFc {\n    padding-left: 0;\n    padding-right: calc(2 * 0.5rem);\n    border-left: none;\n    border-right: 1px dashed var(--ui-black-transparent);\n}\n\n.sound-editor_name-input_2eET8 {\n    width: 100%;\n}\n\n.sound-editor_waveform-container_18kSV {\n    display: flex;\n    justify-content: space-around;\n    align-items: center;\n    width: 100%;\n\n    position: relative;\n\n    background: hsla(300, 53%, 60%, 0.15);\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 5px;\n\n    margin-top: 20px;\n    margin-bottom: 20px;\n}\n\n.sound-editor_button_28oLj {\n    height: 2rem;\n    padding: 0.35rem;\n    outline: none;\n    background: var(--ui-white);\n    border-radius: 0.25rem;\n    border: 1px solid var(--ui-black-transparent);\n    cursor: pointer;\n    font-size: 0.85rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    margin: 0px;\n    position: relative;\n}\n\n.sound-editor_button_28oLj:active {\n    background: var(--looks-transparent);\n}\n\n.sound-editor_button_28oLj:focus::before {\n    content: \"\";\n    position: absolute;\n    top: -1px;\n    right: -1px;\n    bottom: -1px;\n    left: -1px;\n    border: 1px solid var(--looks-secondary);\n    z-index: 1;\n}\n\n.sound-editor_button_28oLj > img {\n    flex-grow: 1;\n    max-width: 100%;\n    max-height: 100%;\n    min-width: 1.25rem;\n}\n\n.sound-editor_round-button-outer_VC2nB {\n    display: flex;\n    align-items: center;\n    height: 100%;\n}\n\n.sound-editor_round-button_3rlXm {\n    height: 3rem;\n    width: 3rem;\n    outline: none;\n    background: var(--looks-secondary);\n    border-radius: 100%;\n    border: none;\n    cursor: pointer;\n    padding: 0.75rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n}\n\n.sound-editor_round-button_3rlXm > img {\n    flex-grow: 1;\n    max-width: 100%;\n    max-height: 100%;\n    /*min-width: 1.5rem;*/\n}\n\n[dir=\"rtl\"] .sound-editor_undo-icon_3EU8L, [dir=\"rtl\"] .sound-editor_redo-icon_38hFn {\n    transform: scaleX(-1);\n}\n\n.sound-editor_trim-button_ZHKTA {\n    display: flex;\n    align-items: center;\n    color: var(--text-primary);\n    font-size: 0.625rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n\n}\n\n[dir=\"ltr\"] .sound-editor_trim-button_ZHKTA {\n    margin-left: 1rem;\n}\n\n[dir=\"rtl\"] .sound-editor_trim-button_ZHKTA {\n    margin-right: 1rem;\n}\n\n.sound-editor_trim-button_ZHKTA > img {\n    width: 1.25rem;\n}\n\n.sound-editor_effects_3n1kV {\n    display: flex;\n    flex-wrap: wrap;\n    width: 100%;\n}\n\n.sound-editor_effect-button_2rpzQ {\n    flex-basis: 60px;\n    color: var(--text-primary);\n    font-size: 0.625rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    padding: 0.25rem 0;\n}\n\n.sound-editor_effect-button_2rpzQ + .sound-editor_effect-button_2rpzQ {\n    margin: 0;\n}\n\n.sound-editor_effect-button_2rpzQ img {\n    width: 1.25rem;\n    height: 1.25rem;\n    margin-bottom: -0.375rem;\n}\n\n.sound-editor_tool-button_2WOCS {\n    flex-basis: 60px;\n    color: var(--text-primary);\n    font-size: 0.625rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    padding: 0.25rem 0;\n}\n\n.sound-editor_tool-button_2WOCS + .sound-editor_tool-button_2WOCS {\n    margin: 0;\n}\n\n.sound-editor_tool-button_2WOCS img {\n    width: 4rem;\n    height: 1.5rem;\n    margin-bottom: -0.375rem;\n}\n\n[dir=\"rtl\"] .sound-editor_flip-in-rtl_2pijE img {\n    transform: scaleX(-1);\n}\n\n[dir=\"ltr\"] .sound-editor_button-group_3TC6- {\n    margin-left: 1rem;\n}\n\n[dir=\"rtl\"] .sound-editor_button-group_3TC6- {\n    margin-right: 1rem;\n}\n\n.sound-editor_button-group_3TC6- {\n    display: flex;\n}\n\n.sound-editor_button-group_3TC6- .sound-editor_button_28oLj {\n    border-radius: 0;\n}\n\n.sound-editor_button_28oLj:not(:last-child) {\n    border-right: none;\n}\n\n[dir=\"rtl\"] .sound-editor_button_28oLj:not(:last-child) {\n    border-left: none;\n    border-right: 1px solid var(--ui-black-transparent);\n}\n\n.sound-editor_button-group_3TC6- .sound-editor_button_28oLj:first-child,\n[dir=\"rtl\"] .sound-editor_button-group_3TC6- .sound-editor_button_28oLj:last-child,\n.sound-editor_button-group_3TC6- .sound-editor_button_28oLj:first-child:focus::before,\n[dir=\"rtl\"] .sound-editor_button-group_3TC6- .sound-editor_button_28oLj:last-child:focus::before {\n    border-radius: calc(0.5rem / 2) 0 0 calc(0.5rem / 2);\n}\n\n.sound-editor_button-group_3TC6- .sound-editor_button_28oLj:last-child,\n[dir=\"rtl\"] .sound-editor_button-group_3TC6- .sound-editor_button_28oLj:first-child,\n.sound-editor_button-group_3TC6- .sound-editor_button_28oLj:last-child:focus::before,\n[dir=\"rtl\"] .sound-editor_button-group_3TC6- .sound-editor_button_28oLj:first-child:focus::before {\n    border-radius: 0 calc(0.5rem / 2) calc(0.5rem / 2) 0;\n}\n\n.sound-editor_button_28oLj:disabled > img {\n    opacity: 0.25;\n}\n\n.sound-editor_info-row_1n0C6 {\n    display: flex;\n    justify-content: space-between;\n    margin-top: calc(2 * 0.5rem);\n}\n\n.sound-editor_duration_1Kz-h {\n    font-weight: bold;\n}\n\n.sound-editor_advanced-info_1_0Bb {\n\n}\n\n.sound-editor_alert_vTKxi {\n    margin-top: calc(2 * 0.5rem);\n    border-radius: 5px;\n    padding: 0.5rem;\n    display: flex;\n    align-items: center;\n    border-width: 1px;\n    border-style: solid;\n}\n\n.sound-editor_stereo_xnbN5 {\n    background-color: rgba(145, 145, 255, 0.3);\n    border-color: rgb(145, 145, 255)\n}\n\n.sound-editor_too-large_F2uJd {\n    background-color: rgba(255, 119, 0, 0.3);\n    border-color: rgb(255, 119, 0);\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.sound-editor_editor-container_iUSW- {\n    display: flex;\n    flex-direction: column;\n    flex-grow: 1;\n    padding: calc(2 * 0.5rem);\n}\n\n.sound-editor_row_3iFzH {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n}\n\n[dir=\"rtl\"] .sound-editor_row-reverse_1qAAx {\n    flex-direction: row-reverse;\n}\n\n.sound-editor_row_3iFzH + .sound-editor_row_3iFzH {\n    margin-top: calc(2 * 0.5rem);\n}\n\n.sound-editor_input-group_2hWiH {\n    display: flex;\n    flex-direction: row;\n}\n\n[dir=\"ltr\"] .sound-editor_input-group_2hWiH + .sound-editor_input-group_2hWiH {\n    margin-left: calc(2 * 0.5rem);\n}\n\n[dir=\"rtl\"] .sound-editor_input-group_2hWiH + .sound-editor_input-group_2hWiH {\n    margin-right: calc(2 * 0.5rem);\n}\n\n[dir=\"ltr\"] .sound-editor_input-group_2hWiH {\n    padding-right: calc(2 * 0.5rem);\n    border-right: 1px dashed var(--ui-black-transparent);\n}\n\n[dir=\"rtl\"] .sound-editor_input-group_2hWiH {\n    padding-left: calc(2 * 0.5rem);\n    border-left: 1px dashed var(--ui-black-transparent);\n}\n\n[dir=\"rtl\"] .sound-editor_row-reverse_1qAAx > .sound-editor_input-group_2hWiH {\n    padding-left: 0;\n    padding-right: calc(2 * 0.5rem);\n    border-left: none;\n    border-right: 1px dashed var(--ui-black-transparent);\n}\n\n.sound-editor_name-input_2Msmq {\n    width: 100%;\n}\n\n.sound-editor_waveform-container_1x_b1 {\n    display: flex;\n    justify-content: space-around;\n    align-items: center;\n    width: 100%;\n\n    position: relative;\n\n    background: hsla(300, 53%, 60%, 0.15);\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 5px;\n\n    margin-top: 20px;\n    margin-bottom: 20px;\n}\n\n.sound-editor_button_1_6Li {\n    height: 2rem;\n    padding: 0.35rem;\n    outline: none;\n    background: var(--ui-white);\n    border-radius: 0.25rem;\n    border: 1px solid var(--ui-black-transparent);\n    cursor: pointer;\n    font-size: 0.85rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    margin: 0px;\n    position: relative;\n}\n\n.sound-editor_button_1_6Li:active {\n    background: var(--looks-transparent);\n}\n\n.sound-editor_button_1_6Li:focus::before {\n    content: \"\";\n    position: absolute;\n    top: -1px;\n    right: -1px;\n    bottom: -1px;\n    left: -1px;\n    border: 1px solid var(--looks-secondary);\n    z-index: 1;\n}\n\n.sound-editor_button_1_6Li > img {\n    flex-grow: 1;\n    max-width: 100%;\n    max-height: 100%;\n    min-width: 1.25rem;\n}\n\n.sound-editor_round-button-outer_2hM-8 {\n    display: flex;\n    align-items: center;\n    height: 100%;\n}\n\n.sound-editor_round-button_3NLcW {\n    height: 3rem;\n    width: 3rem;\n    outline: none;\n    background: var(--looks-secondary);\n    border-radius: 100%;\n    border: none;\n    cursor: pointer;\n    padding: 0.75rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n}\n\n.sound-editor_round-button_3NLcW > img {\n    flex-grow: 1;\n    max-width: 100%;\n    max-height: 100%;\n    /*min-width: 1.5rem;*/\n}\n\n[dir=\"rtl\"] .sound-editor_undo-icon_So0sO, [dir=\"rtl\"] .sound-editor_redo-icon_XGcr5 {\n    transform: scaleX(-1);\n}\n\n.sound-editor_trim-button_lSENI {\n    display: flex;\n    align-items: center;\n    color: var(--text-primary);\n    font-size: 0.625rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n\n}\n\n[dir=\"ltr\"] .sound-editor_trim-button_lSENI {\n    margin-left: 1rem;\n}\n\n[dir=\"rtl\"] .sound-editor_trim-button_lSENI {\n    margin-right: 1rem;\n}\n\n.sound-editor_trim-button_lSENI > img {\n    width: 1.25rem;\n}\n\n.sound-editor_effects_ywFdO {\n    display: flex;\n    flex-wrap: wrap;\n    width: 100%;\n}\n\n.sound-editor_effect-button_2zuzT {\n    flex-basis: 60px;\n    color: var(--text-primary);\n    font-size: 0.625rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    padding: 0.25rem 0;\n}\n\n.sound-editor_effect-button_2zuzT + .sound-editor_effect-button_2zuzT {\n    margin: 0;\n}\n\n.sound-editor_effect-button_2zuzT img {\n    width: 1.25rem;\n    height: 1.25rem;\n    margin-bottom: -0.375rem;\n}\n\n.sound-editor_tool-button_2iNn9 {\n    flex-basis: 60px;\n    color: var(--text-primary);\n    font-size: 0.625rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    padding: 0.25rem 0;\n}\n\n.sound-editor_tool-button_2iNn9 + .sound-editor_tool-button_2iNn9 {\n    margin: 0;\n}\n\n.sound-editor_tool-button_2iNn9 img {\n    width: 4rem;\n    height: 1.5rem;\n    margin-bottom: -0.375rem;\n}\n\n[dir=\"rtl\"] .sound-editor_flip-in-rtl_3eOfH img {\n    transform: scaleX(-1);\n}\n\n[dir=\"ltr\"] .sound-editor_button-group_SFPoV {\n    margin-left: 1rem;\n}\n\n[dir=\"rtl\"] .sound-editor_button-group_SFPoV {\n    margin-right: 1rem;\n}\n\n.sound-editor_button-group_SFPoV {\n    display: flex;\n}\n\n.sound-editor_button-group_SFPoV .sound-editor_button_1_6Li {\n    border-radius: 0;\n}\n\n.sound-editor_button_1_6Li:not(:last-child) {\n    border-right: none;\n}\n\n[dir=\"rtl\"] .sound-editor_button_1_6Li:not(:last-child) {\n    border-left: none;\n    border-right: 1px solid var(--ui-black-transparent);\n}\n\n.sound-editor_button-group_SFPoV .sound-editor_button_1_6Li:first-child,\n[dir=\"rtl\"] .sound-editor_button-group_SFPoV .sound-editor_button_1_6Li:last-child,\n.sound-editor_button-group_SFPoV .sound-editor_button_1_6Li:first-child:focus::before,\n[dir=\"rtl\"] .sound-editor_button-group_SFPoV .sound-editor_button_1_6Li:last-child:focus::before {\n    border-radius: calc(0.5rem / 2) 0 0 calc(0.5rem / 2);\n}\n\n.sound-editor_button-group_SFPoV .sound-editor_button_1_6Li:last-child,\n[dir=\"rtl\"] .sound-editor_button-group_SFPoV .sound-editor_button_1_6Li:first-child,\n.sound-editor_button-group_SFPoV .sound-editor_button_1_6Li:last-child:focus::before,\n[dir=\"rtl\"] .sound-editor_button-group_SFPoV .sound-editor_button_1_6Li:first-child:focus::before {\n    border-radius: 0 calc(0.5rem / 2) calc(0.5rem / 2) 0;\n}\n\n.sound-editor_button_1_6Li:disabled > img {\n    opacity: 0.25;\n}\n\n.sound-editor_info-row_33dW3 {\n    display: flex;\n    justify-content: space-between;\n    margin-top: calc(2 * 0.5rem);\n}\n\n.sound-editor_duration_Iq75P {\n    font-weight: bold;\n}\n\n.sound-editor_advanced-info_IEJgw {\n\n}\n\n.sound-editor_alert_DhPBO {\n    margin-top: calc(2 * 0.5rem);\n    border-radius: 5px;\n    padding: 0.5rem;\n    display: flex;\n    align-items: center;\n    border-width: 1px;\n    border-style: solid;\n}\n\n.sound-editor_stereo_1cklI {\n    background-color: rgba(145, 145, 255, 0.3);\n    border-color: rgb(145, 145, 255)\n}\n\n.sound-editor_too-large_2e10L {\n    background-color: rgba(255, 119, 0, 0.3);\n    border-color: rgb(255, 119, 0);\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"editor-container": "sound-editor_editor-container_3jiU9",
-	"editorContainer": "sound-editor_editor-container_3jiU9",
-	"row": "sound-editor_row_1WmTk",
-	"row-reverse": "sound-editor_row-reverse_28RND",
-	"rowReverse": "sound-editor_row-reverse_28RND",
-	"input-group": "sound-editor_input-group_2pRFc",
-	"inputGroup": "sound-editor_input-group_2pRFc",
-	"name-input": "sound-editor_name-input_2eET8",
-	"nameInput": "sound-editor_name-input_2eET8",
-	"waveform-container": "sound-editor_waveform-container_18kSV",
-	"waveformContainer": "sound-editor_waveform-container_18kSV",
-	"button": "sound-editor_button_28oLj",
-	"round-button-outer": "sound-editor_round-button-outer_VC2nB",
-	"roundButtonOuter": "sound-editor_round-button-outer_VC2nB",
-	"round-button": "sound-editor_round-button_3rlXm",
-	"roundButton": "sound-editor_round-button_3rlXm",
-	"undo-icon": "sound-editor_undo-icon_3EU8L",
-	"undoIcon": "sound-editor_undo-icon_3EU8L",
-	"redo-icon": "sound-editor_redo-icon_38hFn",
-	"redoIcon": "sound-editor_redo-icon_38hFn",
-	"trim-button": "sound-editor_trim-button_ZHKTA",
-	"trimButton": "sound-editor_trim-button_ZHKTA",
-	"effects": "sound-editor_effects_3n1kV",
-	"effect-button": "sound-editor_effect-button_2rpzQ",
-	"effectButton": "sound-editor_effect-button_2rpzQ",
-	"tool-button": "sound-editor_tool-button_2WOCS",
-	"toolButton": "sound-editor_tool-button_2WOCS",
-	"flip-in-rtl": "sound-editor_flip-in-rtl_2pijE",
-	"flipInRtl": "sound-editor_flip-in-rtl_2pijE",
-	"button-group": "sound-editor_button-group_3TC6-",
-	"buttonGroup": "sound-editor_button-group_3TC6-",
-	"info-row": "sound-editor_info-row_1n0C6",
-	"infoRow": "sound-editor_info-row_1n0C6",
-	"duration": "sound-editor_duration_1Kz-h",
-	"advanced-info": "sound-editor_advanced-info_1_0Bb",
-	"advancedInfo": "sound-editor_advanced-info_1_0Bb",
-	"alert": "sound-editor_alert_vTKxi",
-	"stereo": "sound-editor_stereo_xnbN5",
-	"too-large": "sound-editor_too-large_F2uJd",
-	"tooLarge": "sound-editor_too-large_F2uJd"
+	"editor-container": "sound-editor_editor-container_iUSW-",
+	"editorContainer": "sound-editor_editor-container_iUSW-",
+	"row": "sound-editor_row_3iFzH",
+	"row-reverse": "sound-editor_row-reverse_1qAAx",
+	"rowReverse": "sound-editor_row-reverse_1qAAx",
+	"input-group": "sound-editor_input-group_2hWiH",
+	"inputGroup": "sound-editor_input-group_2hWiH",
+	"name-input": "sound-editor_name-input_2Msmq",
+	"nameInput": "sound-editor_name-input_2Msmq",
+	"waveform-container": "sound-editor_waveform-container_1x_b1",
+	"waveformContainer": "sound-editor_waveform-container_1x_b1",
+	"button": "sound-editor_button_1_6Li",
+	"round-button-outer": "sound-editor_round-button-outer_2hM-8",
+	"roundButtonOuter": "sound-editor_round-button-outer_2hM-8",
+	"round-button": "sound-editor_round-button_3NLcW",
+	"roundButton": "sound-editor_round-button_3NLcW",
+	"undo-icon": "sound-editor_undo-icon_So0sO",
+	"undoIcon": "sound-editor_undo-icon_So0sO",
+	"redo-icon": "sound-editor_redo-icon_XGcr5",
+	"redoIcon": "sound-editor_redo-icon_XGcr5",
+	"trim-button": "sound-editor_trim-button_lSENI",
+	"trimButton": "sound-editor_trim-button_lSENI",
+	"effects": "sound-editor_effects_ywFdO",
+	"effect-button": "sound-editor_effect-button_2zuzT",
+	"effectButton": "sound-editor_effect-button_2zuzT",
+	"tool-button": "sound-editor_tool-button_2iNn9",
+	"toolButton": "sound-editor_tool-button_2iNn9",
+	"flip-in-rtl": "sound-editor_flip-in-rtl_3eOfH",
+	"flipInRtl": "sound-editor_flip-in-rtl_3eOfH",
+	"button-group": "sound-editor_button-group_SFPoV",
+	"buttonGroup": "sound-editor_button-group_SFPoV",
+	"info-row": "sound-editor_info-row_33dW3",
+	"infoRow": "sound-editor_info-row_33dW3",
+	"duration": "sound-editor_duration_Iq75P",
+	"advanced-info": "sound-editor_advanced-info_IEJgw",
+	"advancedInfo": "sound-editor_advanced-info_IEJgw",
+	"alert": "sound-editor_alert_DhPBO",
+	"stereo": "sound-editor_stereo_1cklI",
+	"too-large": "sound-editor_too-large_2e10L",
+	"tooLarge": "sound-editor_too-large_2e10L"
 };
 
 /***/ }),
@@ -2306,18 +2306,18 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.spinner_spinner_2cI8K {\n    width: 1.25rem;\n    height: 1.25rem;\n    display: inline-block;\n    position: relative;\n    border-radius: 50%;\n    border-width: .1875rem;\n    border-style: solid;\n    border-color: var(--ui-white-transparent-default);\n    box-sizing: content-box;\n}\n\n.spinner_spinner_2cI8K::before, .spinner_spinner_2cI8K::after {\n    width: 1.25rem;\n    height: 1.25rem;\n    content: '';\n    border-radius: 50%;\n    display: block;\n}\n\n.spinner_spinner_2cI8K::after {\n    position: absolute;\n    top: -.1875rem;\n    left: -.1875rem;\n    border: .1875rem solid transparent;\n    border-top-color: var(--ui-white-default);\n    animation: spinner_spin_23oBt 1.5s cubic-bezier(0.4, 0.1, 0.4, 1) infinite;\n}\n\n.spinner_small_3zDcs {\n    width: .5rem;\n    height: .5rem;\n}\n\n.spinner_small_3zDcs::before, .spinner_small_3zDcs::after {\n    width: .5rem;\n    height: .5rem;\n}\n\n.spinner_large_HL-hN {\n    width: 2.5rem;\n    height: 2.5rem;\n}\n\n.spinner_large_HL-hN::before, .spinner_large_HL-hN::after {\n    width: 2.5rem;\n    height: 2.5rem;\n}\n\n@keyframes spinner_spin_23oBt {\n  0% {\n    transform: rotate(0deg);\n  }\n\n  100% {\n    transform: rotate(360deg);\n  }\n}\n\n.spinner_spinner_2cI8K.spinner_success_OfY7K {\n    border-color: var(--extensions-transparent);\n}\n\n.spinner_spinner_2cI8K.spinner_success_OfY7K::after {\n    border-top-color: var(--extensions-primary);\n}\n\n.spinner_spinner_2cI8K.spinner_warn_6cVNT {\n    border-color: var(--error-transparent);\n}\n\n.spinner_spinner_2cI8K.spinner_warn_6cVNT::after {\n    border-top-color: var(--error-primary);\n}\n\n.spinner_spinner_2cI8K.spinner_info_2Oc6P {\n    border-color: var(--ui-white-transparent-default);\n}\n\n.spinner_spinner_2cI8K.spinner_info_2Oc6P::after {\n    border-top-color: var(--ui-white-default);\n}\n\n.spinner_spinner_2cI8K.spinner_primary_2zFm4 {\n    border-color: var(--looks-transparent);\n}\n\n.spinner_spinner_2cI8K.spinner_primary_2zFm4::after {\n    border-top-color: var(--looks-secondary);\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.spinner_spinner_2Op8D {\n    width: 1.25rem;\n    height: 1.25rem;\n    display: inline-block;\n    position: relative;\n    border-radius: 50%;\n    border-width: .1875rem;\n    border-style: solid;\n    border-color: var(--ui-white-transparent-default);\n    box-sizing: content-box;\n}\n\n.spinner_spinner_2Op8D::before, .spinner_spinner_2Op8D::after {\n    width: 1.25rem;\n    height: 1.25rem;\n    content: '';\n    border-radius: 50%;\n    display: block;\n}\n\n.spinner_spinner_2Op8D::after {\n    position: absolute;\n    top: -.1875rem;\n    left: -.1875rem;\n    border: .1875rem solid transparent;\n    border-top-color: var(--ui-white-default);\n    animation: spinner_spin_1ge20 1.5s cubic-bezier(0.4, 0.1, 0.4, 1) infinite;\n}\n\n.spinner_small_1RsxO {\n    width: .5rem;\n    height: .5rem;\n}\n\n.spinner_small_1RsxO::before, .spinner_small_1RsxO::after {\n    width: .5rem;\n    height: .5rem;\n}\n\n.spinner_large_M0-Ov {\n    width: 2.5rem;\n    height: 2.5rem;\n}\n\n.spinner_large_M0-Ov::before, .spinner_large_M0-Ov::after {\n    width: 2.5rem;\n    height: 2.5rem;\n}\n\n@keyframes spinner_spin_1ge20 {\n  0% {\n    transform: rotate(0deg);\n  }\n\n  100% {\n    transform: rotate(360deg);\n  }\n}\n\n.spinner_spinner_2Op8D.spinner_success_2bEvy {\n    border-color: var(--extensions-transparent);\n}\n\n.spinner_spinner_2Op8D.spinner_success_2bEvy::after {\n    border-top-color: var(--extensions-primary);\n}\n\n.spinner_spinner_2Op8D.spinner_warn_3KZAv {\n    border-color: var(--error-transparent);\n}\n\n.spinner_spinner_2Op8D.spinner_warn_3KZAv::after {\n    border-top-color: var(--error-primary);\n}\n\n.spinner_spinner_2Op8D.spinner_info_2g2-l {\n    border-color: var(--ui-white-transparent-default);\n}\n\n.spinner_spinner_2Op8D.spinner_info_2g2-l::after {\n    border-top-color: var(--ui-white-default);\n}\n\n.spinner_spinner_2Op8D.spinner_primary_32PLs {\n    border-color: var(--looks-transparent);\n}\n\n.spinner_spinner_2Op8D.spinner_primary_32PLs::after {\n    border-top-color: var(--looks-secondary);\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"spinner": "spinner_spinner_2cI8K",
-	"spin": "spinner_spin_23oBt",
-	"small": "spinner_small_3zDcs",
-	"large": "spinner_large_HL-hN",
-	"success": "spinner_success_OfY7K",
-	"warn": "spinner_warn_6cVNT",
-	"info": "spinner_info_2Oc6P",
-	"primary": "spinner_primary_2zFm4"
+	"spinner": "spinner_spinner_2Op8D",
+	"spin": "spinner_spin_1ge20",
+	"small": "spinner_small_1RsxO",
+	"large": "spinner_large_M0-Ov",
+	"success": "spinner_success_2bEvy",
+	"warn": "spinner_warn_3KZAv",
+	"info": "spinner_info_2g2-l",
+	"primary": "spinner_primary_32PLs"
 };
 
 /***/ }),
@@ -2334,27 +2334,27 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n.sprite-info_sprite-info_2qOXw {\n    padding: 0.75rem;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    background-color: var(--ui-white);\n    color: var(--text-primary);\n    border-top-left-radius: 0.5rem;\n    border-top-right-radius: 0.5rem;\n    border-bottom: 1px solid var(--ui-black-transparent);\n}\n\n.sprite-info_row_1J2d3 {\n    display: flex;\n    justify-content: space-between;\n}\n\n.sprite-info_row-primary_2Sk7Q {\n    margin-bottom: 0.5rem;\n}\n\n.sprite-info_label_PWLUC { opacity: 0.8; }\n\n.sprite-info_group_-xfiq {\n    display: inline-flex;\n    flex-direction: row; /* makes columns, for each label/form group */\n    align-items: center;\n}\n\n.sprite-info_column_232AG {\n    display: inline-flex;\n    flex-direction: column; /* put label above input */\n    align-items: flex-start;\n}\n\n.sprite-info_column_232AG span {\n    margin-bottom: .25rem;\n}\n\n.sprite-info_icon-wrapper_1fbXG {\n    display: inline-block;\n    width: calc(2rem + 2px);\n    height: calc(2rem + 2px);\n    padding: 0.5rem;\n    outline: none;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    filter: var(--filter-icon-gray);\n}\n\n.sprite-info_icon_3o-TD {\n    width: 100%;\n    height: 100%;\n    pointer-events: none;\n}\n\n.sprite-info_rotation-select_2Fbo2 {\n    width: 100%;\n    height: 1.85rem;\n    border: 1px solid var(--ui-black-transparent);\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    outline: none;\n}\n\n.sprite-info_rotation-select_2Fbo2:focus {\n    border-color: var(--looks-secondary);\n    box-shadow: inset 0 0 0 1px var(--ui-black-transparent);\n}\n\n.sprite-info_larger-input_2sT6m input {\n    width: 4rem;\n}\n\n.sprite-info_sprite-input_IL2gd {\n    width: 8rem;\n}\n", ""]);
+exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n.sprite-info_sprite-info_3EyZh {\n    padding: 0.75rem;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    background-color: var(--ui-white);\n    color: var(--text-primary);\n    border-top-left-radius: 0.5rem;\n    border-top-right-radius: 0.5rem;\n    border-bottom: 1px solid var(--ui-black-transparent);\n}\n\n.sprite-info_row_1om5V {\n    display: flex;\n    justify-content: space-between;\n}\n\n.sprite-info_row-primary_10JrS {\n    margin-bottom: 0.5rem;\n}\n\n.sprite-info_label_258mm { opacity: 0.8; }\n\n.sprite-info_group_14-B_ {\n    display: inline-flex;\n    flex-direction: row; /* makes columns, for each label/form group */\n    align-items: center;\n}\n\n.sprite-info_column_EFIdF {\n    display: inline-flex;\n    flex-direction: column; /* put label above input */\n    align-items: flex-start;\n}\n\n.sprite-info_column_EFIdF span {\n    margin-bottom: .25rem;\n}\n\n.sprite-info_icon-wrapper_3Wbqq {\n    display: inline-block;\n    width: calc(2rem + 2px);\n    height: calc(2rem + 2px);\n    padding: 0.5rem;\n    outline: none;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    filter: var(--filter-icon-gray);\n}\n\n.sprite-info_icon_1iZ_9 {\n    width: 100%;\n    height: 100%;\n    pointer-events: none;\n}\n\n.sprite-info_rotation-select_17OlD {\n    width: 100%;\n    height: 1.85rem;\n    border: 1px solid var(--ui-black-transparent);\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    outline: none;\n}\n\n.sprite-info_rotation-select_17OlD:focus {\n    border-color: var(--looks-secondary);\n    box-shadow: inset 0 0 0 1px var(--ui-black-transparent);\n}\n\n.sprite-info_larger-input_1UEs0 input {\n    width: 4rem;\n}\n\n.sprite-info_sprite-input_17wjb {\n    width: 8rem;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"sprite-info": "sprite-info_sprite-info_2qOXw",
-	"spriteInfo": "sprite-info_sprite-info_2qOXw",
-	"row": "sprite-info_row_1J2d3",
-	"row-primary": "sprite-info_row-primary_2Sk7Q",
-	"rowPrimary": "sprite-info_row-primary_2Sk7Q",
-	"label": "sprite-info_label_PWLUC",
-	"group": "sprite-info_group_-xfiq",
-	"column": "sprite-info_column_232AG",
-	"icon-wrapper": "sprite-info_icon-wrapper_1fbXG",
-	"iconWrapper": "sprite-info_icon-wrapper_1fbXG",
-	"icon": "sprite-info_icon_3o-TD",
-	"rotation-select": "sprite-info_rotation-select_2Fbo2",
-	"rotationSelect": "sprite-info_rotation-select_2Fbo2",
-	"larger-input": "sprite-info_larger-input_2sT6m",
-	"largerInput": "sprite-info_larger-input_2sT6m",
-	"sprite-input": "sprite-info_sprite-input_IL2gd",
-	"spriteInput": "sprite-info_sprite-input_IL2gd"
+	"sprite-info": "sprite-info_sprite-info_3EyZh",
+	"spriteInfo": "sprite-info_sprite-info_3EyZh",
+	"row": "sprite-info_row_1om5V",
+	"row-primary": "sprite-info_row-primary_10JrS",
+	"rowPrimary": "sprite-info_row-primary_10JrS",
+	"label": "sprite-info_label_258mm",
+	"group": "sprite-info_group_14-B_",
+	"column": "sprite-info_column_EFIdF",
+	"icon-wrapper": "sprite-info_icon-wrapper_3Wbqq",
+	"iconWrapper": "sprite-info_icon-wrapper_3Wbqq",
+	"icon": "sprite-info_icon_1iZ_9",
+	"rotation-select": "sprite-info_rotation-select_17OlD",
+	"rotationSelect": "sprite-info_rotation-select_17OlD",
+	"larger-input": "sprite-info_larger-input_1UEs0",
+	"largerInput": "sprite-info_larger-input_1UEs0",
+	"sprite-input": "sprite-info_sprite-input_17wjb",
+	"spriteInput": "sprite-info_sprite-input_17wjb"
 };
 
 /***/ }),
@@ -2371,29 +2371,29 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n/* @todo: refactor this class name, and component: `sprite-selector` to `sprite` */\n\n.sprite-selector-item_sprite-selector-item_3c9Kl {\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-start;\n    position: relative;\n\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    font-size: 0.8rem;\n    color: var(--text-primary);\n    border-width: 2px;\n    border-style: solid;\n    border-color: var(--ui-black-transparent);\n    border-radius: 0.5rem;\n\n    text-align: center;\n    cursor: pointer;\n\n    -webkit-user-select: none;\n\n       -moz-user-select: none;\n\n        -ms-user-select: none;\n\n            user-select: none;\n}\n\n.sprite-selector-item_sprite-selector-item_3c9Kl.sprite-selector-item_is-selected_EE4jo {\n    box-shadow: 0px 0px 0px 4px var(--looks-transparent);\n    border: 2px solid var(--looks-secondary);\n    background: var(--ui-white);\n}\n\n.sprite-selector-item_sprite-selector-item_3c9Kl:hover {\n    border: 2px solid var(--looks-secondary);\n    background: var(--ui-white);\n}\n\n.sprite-selector-item_sprite-selector-item_3c9Kl:hover .sprite-selector-item_sprite-image_1uVIo, .sprite-selector-item_is-selected_EE4jo .sprite-selector-item_sprite-image_1uVIo {\n    filter: drop-shadow(0px 0px 2px  var(--ui-black-transparent));\n}\n\n/* Outer/Inner chicanery is to prevent layouts when sprite image changes */\n\n.sprite-selector-item_sprite-image-outer_1P6nT {\n    position: relative;\n    width: 100%;\n    height: 100%;\n    transform: translateZ(0);\n}\n\n.sprite-selector-item_sprite-image-inner_x0FPK {\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.sprite-selector-item_sprite-image_1uVIo {\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    pointer-events: none;\n    max-width: 32px;\n    max-height: 32px;\n}\n\n.sprite-selector-item_sprite-info_RsbR2 {\n    padding: 0.25rem;\n    border-bottom-left-radius: 0.25rem;\n    border-bottom-right-radius: 0.25rem;\n\n    font-size: 0.625rem;\n    color: var(--text-primary);\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n}\n\n.sprite-selector-item_sprite-name_3gG3r, .sprite-selector-item_sprite-details_XPpRw {\n    /*\n        For truncating overflowing text gracefully\n        Min-width is for a bug: https://css-tricks.com/flexbox-truncated-text\n    */\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    min-width: 0;\n}\n\n.sprite-selector-item_sprite-details_XPpRw {\n    margin-top: 0.125rem;\n    font-size: 0.5rem;\n}\n\n.sprite-selector-item_is-selected_EE4jo .sprite-selector-item_sprite-info_RsbR2 {\n    background: var(--looks-secondary);\n    color: #ffffff;\n}\n\n.sprite-selector-item_delete-button_1V2xC {\n    position: absolute;\n    top: -.625rem;\n    z-index: auto;\n}\n\n[dir=\"ltr\"] .sprite-selector-item_delete-button_1V2xC {\n    right: -.625rem;\n}\n\n[dir=\"rtl\"] .sprite-selector-item_delete-button_1V2xC {\n    left: -.625rem;\n}\n\n.sprite-selector-item_number_PKBcU {\n    position: absolute;\n    top: 0.15rem;\n    font-size: 0.625rem;\n    font-weight: bold;\n    z-index: 2;\n}\n\n[dir=\"ltr\"] .sprite-selector-item_number_PKBcU {\n    left: 0.15rem;\n}\n\n[dir=\"rtl\"] .sprite-selector-item_number_PKBcU {\n    right: 0.15rem;\n}\n", ""]);
+exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n/* @todo: refactor this class name, and component: `sprite-selector` to `sprite` */\n\n.sprite-selector-item_sprite-selector-item_kQm-i {\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-start;\n    position: relative;\n\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    font-size: 0.8rem;\n    color: var(--text-primary);\n    border-width: 2px;\n    border-style: solid;\n    border-color: var(--ui-black-transparent);\n    border-radius: 0.5rem;\n\n    text-align: center;\n    cursor: pointer;\n\n    -webkit-user-select: none;\n\n       -moz-user-select: none;\n\n        -ms-user-select: none;\n\n            user-select: none;\n}\n\n.sprite-selector-item_sprite-selector-item_kQm-i.sprite-selector-item_is-selected_24tQj {\n    box-shadow: 0px 0px 0px 4px var(--looks-transparent);\n    border: 2px solid var(--looks-secondary);\n    background: var(--ui-white);\n}\n\n.sprite-selector-item_sprite-selector-item_kQm-i:hover {\n    border: 2px solid var(--looks-secondary);\n    background: var(--ui-white);\n}\n\n.sprite-selector-item_sprite-selector-item_kQm-i:hover .sprite-selector-item_sprite-image_2QWuK, .sprite-selector-item_is-selected_24tQj .sprite-selector-item_sprite-image_2QWuK {\n    filter: drop-shadow(0px 0px 2px  var(--ui-black-transparent));\n}\n\n/* Outer/Inner chicanery is to prevent layouts when sprite image changes */\n\n.sprite-selector-item_sprite-image-outer_Xs0wN {\n    position: relative;\n    width: 100%;\n    height: 100%;\n    transform: translateZ(0);\n}\n\n.sprite-selector-item_sprite-image-inner_3oSwi {\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.sprite-selector-item_sprite-image_2QWuK {\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    pointer-events: none;\n    max-width: 32px;\n    max-height: 32px;\n}\n\n.sprite-selector-item_sprite-info_-I0i_ {\n    padding: 0.25rem;\n    border-bottom-left-radius: 0.25rem;\n    border-bottom-right-radius: 0.25rem;\n\n    font-size: 0.625rem;\n    color: var(--text-primary);\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n}\n\n.sprite-selector-item_sprite-name_1PXjh, .sprite-selector-item_sprite-details_2UVpA {\n    /*\n        For truncating overflowing text gracefully\n        Min-width is for a bug: https://css-tricks.com/flexbox-truncated-text\n    */\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    min-width: 0;\n}\n\n.sprite-selector-item_sprite-details_2UVpA {\n    margin-top: 0.125rem;\n    font-size: 0.5rem;\n}\n\n.sprite-selector-item_is-selected_24tQj .sprite-selector-item_sprite-info_-I0i_ {\n    background: var(--looks-secondary);\n    color: #ffffff;\n}\n\n.sprite-selector-item_delete-button_1rkFW {\n    position: absolute;\n    top: -.625rem;\n    z-index: auto;\n}\n\n[dir=\"ltr\"] .sprite-selector-item_delete-button_1rkFW {\n    right: -.625rem;\n}\n\n[dir=\"rtl\"] .sprite-selector-item_delete-button_1rkFW {\n    left: -.625rem;\n}\n\n.sprite-selector-item_number_AnXUk {\n    position: absolute;\n    top: 0.15rem;\n    font-size: 0.625rem;\n    font-weight: bold;\n    z-index: 2;\n}\n\n[dir=\"ltr\"] .sprite-selector-item_number_AnXUk {\n    left: 0.15rem;\n}\n\n[dir=\"rtl\"] .sprite-selector-item_number_AnXUk {\n    right: 0.15rem;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"sprite-selector-item": "sprite-selector-item_sprite-selector-item_3c9Kl",
-	"spriteSelectorItem": "sprite-selector-item_sprite-selector-item_3c9Kl",
-	"is-selected": "sprite-selector-item_is-selected_EE4jo",
-	"isSelected": "sprite-selector-item_is-selected_EE4jo",
-	"sprite-image": "sprite-selector-item_sprite-image_1uVIo",
-	"spriteImage": "sprite-selector-item_sprite-image_1uVIo",
-	"sprite-image-outer": "sprite-selector-item_sprite-image-outer_1P6nT",
-	"spriteImageOuter": "sprite-selector-item_sprite-image-outer_1P6nT",
-	"sprite-image-inner": "sprite-selector-item_sprite-image-inner_x0FPK",
-	"spriteImageInner": "sprite-selector-item_sprite-image-inner_x0FPK",
-	"sprite-info": "sprite-selector-item_sprite-info_RsbR2",
-	"spriteInfo": "sprite-selector-item_sprite-info_RsbR2",
-	"sprite-name": "sprite-selector-item_sprite-name_3gG3r",
-	"spriteName": "sprite-selector-item_sprite-name_3gG3r",
-	"sprite-details": "sprite-selector-item_sprite-details_XPpRw",
-	"spriteDetails": "sprite-selector-item_sprite-details_XPpRw",
-	"delete-button": "sprite-selector-item_delete-button_1V2xC",
-	"deleteButton": "sprite-selector-item_delete-button_1V2xC",
-	"number": "sprite-selector-item_number_PKBcU"
+	"sprite-selector-item": "sprite-selector-item_sprite-selector-item_kQm-i",
+	"spriteSelectorItem": "sprite-selector-item_sprite-selector-item_kQm-i",
+	"is-selected": "sprite-selector-item_is-selected_24tQj",
+	"isSelected": "sprite-selector-item_is-selected_24tQj",
+	"sprite-image": "sprite-selector-item_sprite-image_2QWuK",
+	"spriteImage": "sprite-selector-item_sprite-image_2QWuK",
+	"sprite-image-outer": "sprite-selector-item_sprite-image-outer_Xs0wN",
+	"spriteImageOuter": "sprite-selector-item_sprite-image-outer_Xs0wN",
+	"sprite-image-inner": "sprite-selector-item_sprite-image-inner_3oSwi",
+	"spriteImageInner": "sprite-selector-item_sprite-image-inner_3oSwi",
+	"sprite-info": "sprite-selector-item_sprite-info_-I0i_",
+	"spriteInfo": "sprite-selector-item_sprite-info_-I0i_",
+	"sprite-name": "sprite-selector-item_sprite-name_1PXjh",
+	"spriteName": "sprite-selector-item_sprite-name_1PXjh",
+	"sprite-details": "sprite-selector-item_sprite-details_2UVpA",
+	"spriteDetails": "sprite-selector-item_sprite-details_2UVpA",
+	"delete-button": "sprite-selector-item_delete-button_1rkFW",
+	"deleteButton": "sprite-selector-item_delete-button_1rkFW",
+	"number": "sprite-selector-item_number_AnXUk"
 };
 
 /***/ }),
@@ -2410,28 +2410,28 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.sprite-selector_sprite-selector_1s2N2 {\n    flex-grow: 1;\n    position: relative;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    margin-right: calc(0.5rem / 2);\n    background-color: var(--ui-secondary);\n    border-top-right-radius: 0.5rem;\n    border-top-left-radius: 0.5rem;\n    border-color: var(--ui-black-transparent);\n    border-width: 1px;\n    border-style: solid;\n    border-bottom: 0;\n}\n\n.sprite-selector_sprite-wrapper_1CrRS {\n    /*\n        Our goal is to fit sprites evenly in a row without leftover space.\n        Flexbox's `space between` property gets us close, but doesn't flow\n        well when the # of items per row > 1 and less than the max per row.\n\n        Solving by explicitly calc'ing the width of each sprite. Setting\n        `border-box` simplifies things, because content, padding and\n        border-width all are included in the width, leaving us only to subtract\n        the left + right margins.\n\n        @todo: make room for the scrollbar\n    */\n    box-sizing: border-box;\n    width: calc((100% / 5 ) - 0.5rem);\n    max-width: 6rem;\n    min-width: 4rem;\n    min-height: 4rem; /* @todo: calc height same as width */\n    margin: calc(0.5rem / 2);\n}\n\n.sprite-selector_sprite_uquo4 {\n    height: 100%;\n}\n\n.sprite-selector_scroll-wrapper_3qlZ7 {\n    /*\n       Sets the sprite-selector items as a scrollable pane\n\n        @todo: Safari: pane doesn't stretch to fill height;\n        @todo: Adding `position: relative` still doesn't fix Safari scrolling pane, and\n              also introduces a new bug in Chrome when vertically resizing window down,\n              then back up, introduces white space in the outside the page container.\n    */\n    height: calc(100% - 6rem);\n    overflow-y: auto;\n}\n\n.sprite-selector_scroll-wrapper-dragging_2tIRk {\n    background-color: var(--drop-highlight);\n}\n\n.sprite-selector_items-wrapper_17MEf {\n    display: flex;\n    flex-wrap: wrap;\n    flex-direction: row;\n\n    padding-top: calc(0.5rem / 2);\n    padding-left: calc(0.5rem / 2);\n    padding-right: calc(0.5rem / 2);\n    padding-bottom: 0.5rem;\n\n    overflow: hidden;\n}\n\n.sprite-selector_add-button_13cFJ {\n    position: absolute;\n    bottom: 0.75rem;\n}\n\n[dir=\"ltr\"] .sprite-selector_add-button_13cFJ {\n    right: 1rem;\n}\n\n[dir=\"rtl\"] .sprite-selector_add-button_13cFJ {\n    left: 1rem;\n}\n\n.sprite-selector_raised_hptEE {\n    background-color: var(--drop-highlight);\n    transition: all 0.25s ease;\n}\n\n.sprite-selector_raised_hptEE:hover {\n    background-color: var(--drop-highlight);\n    transform: scale(1.05);\n}\n\n.sprite-selector_raised_hptEE:hover {\n    animation-name: sprite-selector_wiggle_3VXHB;\n    animation-duration: 500ms;\n    animation-iteration-count: 1;\n    animation-timing-function: ease-in-out;\n    background-color: var(--drop-highlight);\n}\n\n@keyframes sprite-selector_wiggle_3VXHB {\n    0% {transform: rotate(3deg) scale(1.05);}\n    25% {transform: rotate(-3deg) scale(1.05);}\n    50% {transform: rotate(5deg) scale(1.05);}\n    75% {transform: rotate(-2deg) scale(1.05);}\n    100% {transform: rotate(0deg) scale(1.05);}\n}\n\n.sprite-selector_receivedBlocks_3hqzt {\n    animation: sprite-selector_glowing_1Uyz7 250ms;\n}\n\n@keyframes sprite-selector_glowing_1Uyz7 {\n    10% { box-shadow: 0 0 10px #7fff1e; }\n    90% { box-shadow: 0 0 10px #7fff1e; }\n    100% { box-shadow: none; }\n}\n\n.sprite-selector_placeholder_qVnyI > .sprite-selector_sprite_uquo4 {\n    background: black;\n    filter: opacity(15%) brightness(0%);\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.sprite-selector_sprite-selector_2KgCX {\n    flex-grow: 1;\n    position: relative;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    margin-right: calc(0.5rem / 2);\n    background-color: var(--ui-secondary);\n    border-top-right-radius: 0.5rem;\n    border-top-left-radius: 0.5rem;\n    border-color: var(--ui-black-transparent);\n    border-width: 1px;\n    border-style: solid;\n    border-bottom: 0;\n}\n\n.sprite-selector_sprite-wrapper_1C5Mq {\n    /*\n        Our goal is to fit sprites evenly in a row without leftover space.\n        Flexbox's `space between` property gets us close, but doesn't flow\n        well when the # of items per row > 1 and less than the max per row.\n\n        Solving by explicitly calc'ing the width of each sprite. Setting\n        `border-box` simplifies things, because content, padding and\n        border-width all are included in the width, leaving us only to subtract\n        the left + right margins.\n\n        @todo: make room for the scrollbar\n    */\n    box-sizing: border-box;\n    width: calc((100% / 5 ) - 0.5rem);\n    max-width: 6rem;\n    min-width: 4rem;\n    min-height: 4rem; /* @todo: calc height same as width */\n    margin: calc(0.5rem / 2);\n}\n\n.sprite-selector_sprite_21WnR {\n    height: 100%;\n}\n\n.sprite-selector_scroll-wrapper_3NNnc {\n    /*\n       Sets the sprite-selector items as a scrollable pane\n\n        @todo: Safari: pane doesn't stretch to fill height;\n        @todo: Adding `position: relative` still doesn't fix Safari scrolling pane, and\n              also introduces a new bug in Chrome when vertically resizing window down,\n              then back up, introduces white space in the outside the page container.\n    */\n    height: calc(100% - 6rem);\n    overflow-y: auto;\n}\n\n.sprite-selector_scroll-wrapper-dragging_2QZJG {\n    background-color: var(--drop-highlight);\n}\n\n.sprite-selector_items-wrapper_4bcOj {\n    display: flex;\n    flex-wrap: wrap;\n    flex-direction: row;\n\n    padding-top: calc(0.5rem / 2);\n    padding-left: calc(0.5rem / 2);\n    padding-right: calc(0.5rem / 2);\n    padding-bottom: 0.5rem;\n\n    overflow: hidden;\n}\n\n.sprite-selector_add-button_1XCwG {\n    position: absolute;\n    bottom: 0.75rem;\n}\n\n[dir=\"ltr\"] .sprite-selector_add-button_1XCwG {\n    right: 1rem;\n}\n\n[dir=\"rtl\"] .sprite-selector_add-button_1XCwG {\n    left: 1rem;\n}\n\n.sprite-selector_raised_1fkrL {\n    background-color: var(--drop-highlight);\n    transition: all 0.25s ease;\n}\n\n.sprite-selector_raised_1fkrL:hover {\n    background-color: var(--drop-highlight);\n    transform: scale(1.05);\n}\n\n.sprite-selector_raised_1fkrL:hover {\n    animation-name: sprite-selector_wiggle__tLSA;\n    animation-duration: 500ms;\n    animation-iteration-count: 1;\n    animation-timing-function: ease-in-out;\n    background-color: var(--drop-highlight);\n}\n\n@keyframes sprite-selector_wiggle__tLSA {\n    0% {transform: rotate(3deg) scale(1.05);}\n    25% {transform: rotate(-3deg) scale(1.05);}\n    50% {transform: rotate(5deg) scale(1.05);}\n    75% {transform: rotate(-2deg) scale(1.05);}\n    100% {transform: rotate(0deg) scale(1.05);}\n}\n\n.sprite-selector_receivedBlocks_24JkN {\n    animation: sprite-selector_glowing_3IS0u 250ms;\n}\n\n@keyframes sprite-selector_glowing_3IS0u {\n    10% { box-shadow: 0 0 10px #7fff1e; }\n    90% { box-shadow: 0 0 10px #7fff1e; }\n    100% { box-shadow: none; }\n}\n\n.sprite-selector_placeholder_2v7G4 > .sprite-selector_sprite_21WnR {\n    background: black;\n    filter: opacity(15%) brightness(0%);\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"sprite-selector": "sprite-selector_sprite-selector_1s2N2",
-	"spriteSelector": "sprite-selector_sprite-selector_1s2N2",
-	"sprite-wrapper": "sprite-selector_sprite-wrapper_1CrRS",
-	"spriteWrapper": "sprite-selector_sprite-wrapper_1CrRS",
-	"sprite": "sprite-selector_sprite_uquo4",
-	"scroll-wrapper": "sprite-selector_scroll-wrapper_3qlZ7",
-	"scrollWrapper": "sprite-selector_scroll-wrapper_3qlZ7",
-	"scroll-wrapper-dragging": "sprite-selector_scroll-wrapper-dragging_2tIRk",
-	"scrollWrapperDragging": "sprite-selector_scroll-wrapper-dragging_2tIRk",
-	"items-wrapper": "sprite-selector_items-wrapper_17MEf",
-	"itemsWrapper": "sprite-selector_items-wrapper_17MEf",
-	"add-button": "sprite-selector_add-button_13cFJ",
-	"addButton": "sprite-selector_add-button_13cFJ",
-	"raised": "sprite-selector_raised_hptEE",
-	"wiggle": "sprite-selector_wiggle_3VXHB",
-	"receivedBlocks": "sprite-selector_receivedBlocks_3hqzt",
-	"glowing": "sprite-selector_glowing_1Uyz7",
-	"placeholder": "sprite-selector_placeholder_qVnyI"
+	"sprite-selector": "sprite-selector_sprite-selector_2KgCX",
+	"spriteSelector": "sprite-selector_sprite-selector_2KgCX",
+	"sprite-wrapper": "sprite-selector_sprite-wrapper_1C5Mq",
+	"spriteWrapper": "sprite-selector_sprite-wrapper_1C5Mq",
+	"sprite": "sprite-selector_sprite_21WnR",
+	"scroll-wrapper": "sprite-selector_scroll-wrapper_3NNnc",
+	"scrollWrapper": "sprite-selector_scroll-wrapper_3NNnc",
+	"scroll-wrapper-dragging": "sprite-selector_scroll-wrapper-dragging_2QZJG",
+	"scrollWrapperDragging": "sprite-selector_scroll-wrapper-dragging_2QZJG",
+	"items-wrapper": "sprite-selector_items-wrapper_4bcOj",
+	"itemsWrapper": "sprite-selector_items-wrapper_4bcOj",
+	"add-button": "sprite-selector_add-button_1XCwG",
+	"addButton": "sprite-selector_add-button_1XCwG",
+	"raised": "sprite-selector_raised_1fkrL",
+	"wiggle": "sprite-selector_wiggle__tLSA",
+	"receivedBlocks": "sprite-selector_receivedBlocks_24JkN",
+	"glowing": "sprite-selector_glowing_3IS0u",
+	"placeholder": "sprite-selector_placeholder_2v7G4"
 };
 
 /***/ }),
@@ -2448,31 +2448,31 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.stage-header_stage-header-wrapper_8psPs {\n    position: absolute;\n    top: 0;\n}\n\n[dir=\"ltr\"] .stage-header_stage-header-wrapper_8psPs {\n    right: 0;\n}\n\n[dir=\"rtl\"] .stage-header_stage-header-wrapper_8psPs {\n    left: 0;\n}\n\n.stage-header_stage-header-wrapper-overlay_7uuff {\n    position: fixed;\n    background-color: var(--fullscreen-accent);\n    top: 0;\n    left: 0;\n    right: 0;\n    z-index: 500;\n}\n\n.stage-header_stage-header-wrapper-overlay_7uuff.stage-header_embedded_j6-4O {\n    background-color: transparent;\n}\n\n.stage-header_stage-menu-wrapper_28MSs {\n    display: flex;\n    margin: auto;\n    justify-content: space-between;\n    flex-shrink: 0;\n    align-items: center;\n    height: 2.75rem;\n    padding-top: 0.5rem;\n    padding-bottom: 0.5rem;\n}\n\n.stage-header_stage-size-row_1F3iv {\n    display: flex;\n}\n\n.stage-header_stage-size-toggle-group_np08Q {\n    display: flex;\n}\n\n.stage-header_stage-size-row_1F3iv > *, .stage-header_unselect-wrapper_3rRB- {\n    /* Use a white background so semi-transparent selection states look correct */\n    background-color: var(--ui-white);\n    border-radius: calc(0.5rem / 2);\n}\n\n[dir=\"ltr\"] .stage-header_stage-size-toggle-group_np08Q,\n[dir=\"ltr\"] .stage-header_settings-button_1c1vS {\n    margin-right: .2rem;\n}\n\n[dir=\"rtl\"] .stage-header_stage-size-toggle-group_np08Q,\n[dir=\"rtl\"] .stage-header_settings-button_1c1vS {\n    margin-left: .2rem;\n}\n\n.stage-header_stage-button_4qxON {\n    display: block;\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: calc(0.5rem / 2);\n    width: calc(2rem + 2px);\n    height: calc(2rem + 2px);\n    background: var(--ui-white);\n    padding: 0.375rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    cursor: pointer;\n}\n\n.stage-header_stage-button_4qxON:active {\n    background-color: var(--looks-transparent);\n}\n\n.stage-header_stage-button-icon_1SHv0 {\n    width: 100%;\n    height: 100%;\n    filter: var(--filter-icon-gray);\n}\n\n[dir=\"rtl\"] .stage-header_stage-button-icon_1SHv0 {\n    transform: scaleX(-1);\n}\n\n.stage-header_fullscreen-buttons-row_15tpO {\n    /* relied on by addons */\n    display: flex;\n}\n", ""]);
+exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.stage-header_stage-header-wrapper_1F4gT {\n    position: absolute;\n    top: 0;\n}\n\n[dir=\"ltr\"] .stage-header_stage-header-wrapper_1F4gT {\n    right: 0;\n}\n\n[dir=\"rtl\"] .stage-header_stage-header-wrapper_1F4gT {\n    left: 0;\n}\n\n.stage-header_stage-header-wrapper-overlay_5vfJa {\n    position: fixed;\n    background-color: var(--fullscreen-accent);\n    top: 0;\n    left: 0;\n    right: 0;\n    z-index: 500;\n}\n\n.stage-header_stage-header-wrapper-overlay_5vfJa.stage-header_embedded_nhDjw {\n    background-color: transparent;\n}\n\n.stage-header_stage-menu-wrapper_15JJt {\n    display: flex;\n    margin: auto;\n    justify-content: space-between;\n    flex-shrink: 0;\n    align-items: center;\n    height: 2.75rem;\n    padding-top: 0.5rem;\n    padding-bottom: 0.5rem;\n}\n\n.stage-header_stage-size-row_14N65 {\n    display: flex;\n}\n\n.stage-header_stage-size-toggle-group_17LtK {\n    display: flex;\n}\n\n.stage-header_stage-size-row_14N65 > *, .stage-header_unselect-wrapper_1leRy {\n    /* Use a white background so semi-transparent selection states look correct */\n    background-color: var(--ui-white);\n    border-radius: calc(0.5rem / 2);\n}\n\n[dir=\"ltr\"] .stage-header_stage-size-toggle-group_17LtK,\n[dir=\"ltr\"] .stage-header_settings-button_3t4e7 {\n    margin-right: .2rem;\n}\n\n[dir=\"rtl\"] .stage-header_stage-size-toggle-group_17LtK,\n[dir=\"rtl\"] .stage-header_settings-button_3t4e7 {\n    margin-left: .2rem;\n}\n\n.stage-header_stage-button_hkl9B {\n    display: block;\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: calc(0.5rem / 2);\n    width: calc(2rem + 2px);\n    height: calc(2rem + 2px);\n    background: var(--ui-white);\n    padding: 0.375rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    cursor: pointer;\n}\n\n.stage-header_stage-button_hkl9B:active {\n    background-color: var(--looks-transparent);\n}\n\n.stage-header_stage-button-icon_3zzFK {\n    width: 100%;\n    height: 100%;\n    filter: var(--filter-icon-gray);\n}\n\n[dir=\"rtl\"] .stage-header_stage-button-icon_3zzFK {\n    transform: scaleX(-1);\n}\n\n.stage-header_fullscreen-buttons-row_j3xTR {\n    /* relied on by addons */\n    display: flex;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"stage-header-wrapper": "stage-header_stage-header-wrapper_8psPs",
-	"stageHeaderWrapper": "stage-header_stage-header-wrapper_8psPs",
-	"stage-header-wrapper-overlay": "stage-header_stage-header-wrapper-overlay_7uuff",
-	"stageHeaderWrapperOverlay": "stage-header_stage-header-wrapper-overlay_7uuff",
-	"embedded": "stage-header_embedded_j6-4O",
-	"stage-menu-wrapper": "stage-header_stage-menu-wrapper_28MSs",
-	"stageMenuWrapper": "stage-header_stage-menu-wrapper_28MSs",
-	"stage-size-row": "stage-header_stage-size-row_1F3iv",
-	"stageSizeRow": "stage-header_stage-size-row_1F3iv",
-	"stage-size-toggle-group": "stage-header_stage-size-toggle-group_np08Q",
-	"stageSizeToggleGroup": "stage-header_stage-size-toggle-group_np08Q",
-	"unselect-wrapper": "stage-header_unselect-wrapper_3rRB-",
-	"unselectWrapper": "stage-header_unselect-wrapper_3rRB-",
-	"settings-button": "stage-header_settings-button_1c1vS",
-	"settingsButton": "stage-header_settings-button_1c1vS",
-	"stage-button": "stage-header_stage-button_4qxON",
-	"stageButton": "stage-header_stage-button_4qxON",
-	"stage-button-icon": "stage-header_stage-button-icon_1SHv0",
-	"stageButtonIcon": "stage-header_stage-button-icon_1SHv0",
-	"fullscreen-buttons-row": "stage-header_fullscreen-buttons-row_15tpO",
-	"fullscreenButtonsRow": "stage-header_fullscreen-buttons-row_15tpO"
+	"stage-header-wrapper": "stage-header_stage-header-wrapper_1F4gT",
+	"stageHeaderWrapper": "stage-header_stage-header-wrapper_1F4gT",
+	"stage-header-wrapper-overlay": "stage-header_stage-header-wrapper-overlay_5vfJa",
+	"stageHeaderWrapperOverlay": "stage-header_stage-header-wrapper-overlay_5vfJa",
+	"embedded": "stage-header_embedded_nhDjw",
+	"stage-menu-wrapper": "stage-header_stage-menu-wrapper_15JJt",
+	"stageMenuWrapper": "stage-header_stage-menu-wrapper_15JJt",
+	"stage-size-row": "stage-header_stage-size-row_14N65",
+	"stageSizeRow": "stage-header_stage-size-row_14N65",
+	"stage-size-toggle-group": "stage-header_stage-size-toggle-group_17LtK",
+	"stageSizeToggleGroup": "stage-header_stage-size-toggle-group_17LtK",
+	"unselect-wrapper": "stage-header_unselect-wrapper_1leRy",
+	"unselectWrapper": "stage-header_unselect-wrapper_1leRy",
+	"settings-button": "stage-header_settings-button_3t4e7",
+	"settingsButton": "stage-header_settings-button_3t4e7",
+	"stage-button": "stage-header_stage-button_hkl9B",
+	"stageButton": "stage-header_stage-button_hkl9B",
+	"stage-button-icon": "stage-header_stage-button-icon_3zzFK",
+	"stageButtonIcon": "stage-header_stage-button-icon_3zzFK",
+	"fullscreen-buttons-row": "stage-header_fullscreen-buttons-row_j3xTR",
+	"fullscreenButtonsRow": "stage-header_fullscreen-buttons-row_j3xTR"
 };
 
 /***/ }),
@@ -2489,26 +2489,26 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n.stage-selector_stage-selector_2gOfn {\n    background-clip: padding-box;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    position: relative; /* For the add backdrop button */\n    flex-grow: 1;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    background-color: var(--ui-white);\n    color: var(--text-primary);\n    border-top-left-radius: 0.5rem;\n    border-top-right-radius: 0.5rem;\n    border-color: var(--ui-black-transparent);\n    border-width: 1px;\n    border-style: solid;\n    border-bottom: 0;\n    cursor: pointer;\n    transition: all 0.25s ease;\n}\n\n.stage-selector_stage-selector_2gOfn.stage-selector_is-selected_1hK41 {\n    border-top-left-radius: .625rem;\n    border-top-right-radius: .625rem;\n    border-color: var(--looks-secondary);\n    box-shadow: 0px 0px 0px 4px var(--looks-transparent);\n}\n\n.stage-selector_stage-selector_2gOfn:hover {\n    border-color: var(--looks-secondary);\n}\n\n.stage-selector_header_Q8vgs {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    height: calc(2.75rem - 2px);\n    background-color: var(--ui-white);\n    color: var(--text-primary);\n    border-top-left-radius: 0.5rem;\n    border-top-right-radius: 0.5rem;\n    border-bottom: 1px solid var(--ui-black-transparent);\n    width: 100%;\n    transition: background-color 0.25s ease;\n}\n\n.stage-selector_header-title_31bX- {\n    font-size: 0.625rem;\n    font-weight: bold;\n    color: var(--text-primary);\n\n    /* @todo: make this a mixin for all UI text labels */\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    transition: color 0.25s ease;\n}\n\n.stage-selector_stage-selector_2gOfn.stage-selector_is-selected_1hK41 .stage-selector_header_Q8vgs {\n    background-color: var(--looks-secondary);\n}\n\n.stage-selector_stage-selector_2gOfn.stage-selector_is-selected_1hK41 .stage-selector_header-title_31bX- {\n    color: #ffffff;\n}\n\n.stage-selector_count_R71ju {\n    padding: 0.3rem 0.75rem;\n    font-size: 0.625rem;\n    color: var(--text-primary);\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n}\n\n.stage-selector_label_XZ-2e {\n    margin: 0.75rem 0 0.25rem;\n    font-size: 0.6rem;\n    color: var(--text-primary);\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    text-align: center;\n}\n\n.stage-selector_costume-canvas_2UktB {\n    display: block;\n    margin-top: .25rem;\n    width: 100%;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: .25rem;\n    box-shadow: inset 0 0 4px var(--shadow);\n    max-width: 64px;\n    max-height: 48px;\n}\n\n.stage-selector_add-button_oXPPX {\n    position: absolute;\n    bottom: 0.75rem;\n}\n\n.stage-selector_raised_3yRmS, .stage-selector_raised_3yRmS .stage-selector_header_Q8vgs {\n    background-color: var(--drop-highlight);\n    transition: all 0.25s ease;\n}\n\n.stage-selector_raised_3yRmS:hover {\n    transform: scale(1.05);\n}\n\n.stage-selector_receivedBlocks_27hDS {\n    animation: stage-selector_glowing_24P3U 250ms;\n}\n\n@keyframes stage-selector_glowing_24P3U {\n    10% { box-shadow: 0 0 10px #7fff1e; }\n    90% { box-shadow: 0 0 10px #7fff1e; }\n    100% { box-shadow: none; }\n}\n", ""]);
+exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n.stage-selector_stage-selector_3oWOr {\n    background-clip: padding-box;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    position: relative; /* For the add backdrop button */\n    flex-grow: 1;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    background-color: var(--ui-white);\n    color: var(--text-primary);\n    border-top-left-radius: 0.5rem;\n    border-top-right-radius: 0.5rem;\n    border-color: var(--ui-black-transparent);\n    border-width: 1px;\n    border-style: solid;\n    border-bottom: 0;\n    cursor: pointer;\n    transition: all 0.25s ease;\n}\n\n.stage-selector_stage-selector_3oWOr.stage-selector_is-selected_2x2r_ {\n    border-top-left-radius: .625rem;\n    border-top-right-radius: .625rem;\n    border-color: var(--looks-secondary);\n    box-shadow: 0px 0px 0px 4px var(--looks-transparent);\n}\n\n.stage-selector_stage-selector_3oWOr:hover {\n    border-color: var(--looks-secondary);\n}\n\n.stage-selector_header_2GVr1 {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    height: calc(2.75rem - 2px);\n    background-color: var(--ui-white);\n    color: var(--text-primary);\n    border-top-left-radius: 0.5rem;\n    border-top-right-radius: 0.5rem;\n    border-bottom: 1px solid var(--ui-black-transparent);\n    width: 100%;\n    transition: background-color 0.25s ease;\n}\n\n.stage-selector_header-title_33xCt {\n    font-size: 0.625rem;\n    font-weight: bold;\n    color: var(--text-primary);\n\n    /* @todo: make this a mixin for all UI text labels */\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    transition: color 0.25s ease;\n}\n\n.stage-selector_stage-selector_3oWOr.stage-selector_is-selected_2x2r_ .stage-selector_header_2GVr1 {\n    background-color: var(--looks-secondary);\n}\n\n.stage-selector_stage-selector_3oWOr.stage-selector_is-selected_2x2r_ .stage-selector_header-title_33xCt {\n    color: #ffffff;\n}\n\n.stage-selector_count_2QK7D {\n    padding: 0.3rem 0.75rem;\n    font-size: 0.625rem;\n    color: var(--text-primary);\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n}\n\n.stage-selector_label_1MCfr {\n    margin: 0.75rem 0 0.25rem;\n    font-size: 0.6rem;\n    color: var(--text-primary);\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    text-align: center;\n}\n\n.stage-selector_costume-canvas_2L_6h {\n    display: block;\n    margin-top: .25rem;\n    width: 100%;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: .25rem;\n    box-shadow: inset 0 0 4px var(--shadow);\n    max-width: 64px;\n    max-height: 48px;\n}\n\n.stage-selector_add-button_1sKuU {\n    position: absolute;\n    bottom: 0.75rem;\n}\n\n.stage-selector_raised_9i1gL, .stage-selector_raised_9i1gL .stage-selector_header_2GVr1 {\n    background-color: var(--drop-highlight);\n    transition: all 0.25s ease;\n}\n\n.stage-selector_raised_9i1gL:hover {\n    transform: scale(1.05);\n}\n\n.stage-selector_receivedBlocks_2zr7v {\n    animation: stage-selector_glowing_2YPqi 250ms;\n}\n\n@keyframes stage-selector_glowing_2YPqi {\n    10% { box-shadow: 0 0 10px #7fff1e; }\n    90% { box-shadow: 0 0 10px #7fff1e; }\n    100% { box-shadow: none; }\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"stage-selector": "stage-selector_stage-selector_2gOfn",
-	"stageSelector": "stage-selector_stage-selector_2gOfn",
-	"is-selected": "stage-selector_is-selected_1hK41",
-	"isSelected": "stage-selector_is-selected_1hK41",
-	"header": "stage-selector_header_Q8vgs",
-	"header-title": "stage-selector_header-title_31bX-",
-	"headerTitle": "stage-selector_header-title_31bX-",
-	"count": "stage-selector_count_R71ju",
-	"label": "stage-selector_label_XZ-2e",
-	"costume-canvas": "stage-selector_costume-canvas_2UktB",
-	"costumeCanvas": "stage-selector_costume-canvas_2UktB",
-	"add-button": "stage-selector_add-button_oXPPX",
-	"addButton": "stage-selector_add-button_oXPPX",
-	"raised": "stage-selector_raised_3yRmS",
-	"receivedBlocks": "stage-selector_receivedBlocks_27hDS",
-	"glowing": "stage-selector_glowing_24P3U"
+	"stage-selector": "stage-selector_stage-selector_3oWOr",
+	"stageSelector": "stage-selector_stage-selector_3oWOr",
+	"is-selected": "stage-selector_is-selected_2x2r_",
+	"isSelected": "stage-selector_is-selected_2x2r_",
+	"header": "stage-selector_header_2GVr1",
+	"header-title": "stage-selector_header-title_33xCt",
+	"headerTitle": "stage-selector_header-title_33xCt",
+	"count": "stage-selector_count_2QK7D",
+	"label": "stage-selector_label_1MCfr",
+	"costume-canvas": "stage-selector_costume-canvas_2L_6h",
+	"costumeCanvas": "stage-selector_costume-canvas_2L_6h",
+	"add-button": "stage-selector_add-button_1sKuU",
+	"addButton": "stage-selector_add-button_1sKuU",
+	"raised": "stage-selector_raised_9i1gL",
+	"receivedBlocks": "stage-selector_receivedBlocks_2zr7v",
+	"glowing": "stage-selector_glowing_2YPqi"
 };
 
 /***/ }),
@@ -2525,19 +2525,19 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.stage-wrapper_stage-wrapper_3k56F {\n    position: relative;\n}\n\n.stage-wrapper_stage-wrapper_3k56F * {\n    box-sizing: border-box;\n}\n\n.stage-wrapper_stage-canvas-wrapper_n2Q5r {\n    /* Hides negative space between edge of rounded corners + container, when selected */\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n}\n\n.stage-wrapper_offset-controls__gBga .stage-wrapper_stage-canvas-wrapper_n2Q5r {\n    padding-top: 44px;\n}\n\n.stage-wrapper_stage-wrapper_3k56F.stage-wrapper_full-screen_3WIKP {\n    position: fixed;\n    top: 2.75rem;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    z-index: 500;\n    background-color: var(--fullscreen-background);\n    /* spacing between stage and control bar (on the top), or between\n    stage and window edges (on left/right/bottom) */\n    padding: 0.1875rem;\n\n    /* this centers the stage */\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n\n.stage-wrapper_stage-wrapper_3k56F.stage-wrapper_embedded_qKq7D {\n    background-color: transparent;\n}\n", ""]);
+exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.stage-wrapper_stage-wrapper_2bejr {\n    position: relative;\n}\n\n.stage-wrapper_stage-wrapper_2bejr * {\n    box-sizing: border-box;\n}\n\n.stage-wrapper_stage-canvas-wrapper_3ewmd {\n    /* Hides negative space between edge of rounded corners + container, when selected */\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n}\n\n.stage-wrapper_offset-controls_1TSoY .stage-wrapper_stage-canvas-wrapper_3ewmd {\n    padding-top: 44px;\n}\n\n.stage-wrapper_stage-wrapper_2bejr.stage-wrapper_full-screen_2hjMb {\n    position: fixed;\n    top: 2.75rem;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    z-index: 500;\n    background-color: var(--fullscreen-background);\n    /* spacing between stage and control bar (on the top), or between\n    stage and window edges (on left/right/bottom) */\n    padding: 0.1875rem;\n\n    /* this centers the stage */\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n\n.stage-wrapper_stage-wrapper_2bejr.stage-wrapper_embedded_10ZS6 {\n    background-color: transparent;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"stage-wrapper": "stage-wrapper_stage-wrapper_3k56F",
-	"stageWrapper": "stage-wrapper_stage-wrapper_3k56F",
-	"stage-canvas-wrapper": "stage-wrapper_stage-canvas-wrapper_n2Q5r",
-	"stageCanvasWrapper": "stage-wrapper_stage-canvas-wrapper_n2Q5r",
-	"offset-controls": "stage-wrapper_offset-controls__gBga",
-	"offsetControls": "stage-wrapper_offset-controls__gBga",
-	"full-screen": "stage-wrapper_full-screen_3WIKP",
-	"fullScreen": "stage-wrapper_full-screen_3WIKP",
-	"embedded": "stage-wrapper_embedded_qKq7D"
+	"stage-wrapper": "stage-wrapper_stage-wrapper_2bejr",
+	"stageWrapper": "stage-wrapper_stage-wrapper_2bejr",
+	"stage-canvas-wrapper": "stage-wrapper_stage-canvas-wrapper_3ewmd",
+	"stageCanvasWrapper": "stage-wrapper_stage-canvas-wrapper_3ewmd",
+	"offset-controls": "stage-wrapper_offset-controls_1TSoY",
+	"offsetControls": "stage-wrapper_offset-controls_1TSoY",
+	"full-screen": "stage-wrapper_full-screen_2hjMb",
+	"fullScreen": "stage-wrapper_full-screen_2hjMb",
+	"embedded": "stage-wrapper_embedded_10ZS6"
 };
 
 /***/ }),
@@ -2554,39 +2554,39 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.stage_stage_DTWo5 {\n    /*\n        Fixes a few extra pixels of margin/padding, that adds on to the bottom\n        of the element, which messes up the chrome padding consistency\n    */\n    display: block;\n\n    border-radius: 0.5rem;\n    border: 0.0625rem solid var(--ui-black-transparent);\n    overflow: hidden;\n\n    /* @todo: This is for overriding the value being set somewhere. Where is it being set? */\n    background-color: transparent;\n\n    /* Allow custom touch handling to prevent scrolling on Edge */\n    touch-action: none;\n\n    /* Make sure border is not included in size calculation */\n    box-sizing: content-box !important;\n\n    /* enforce overflow + reset position of absolutely-positioned children */\n    position: relative;\n\n    /* reset dark styles inherited from dark mode */\n    color-scheme: light;\n    color: var(--text-primary-default);\n}\n\n.stage_stage_DTWo5.stage_full-screen_aqa2I {\n    border: 0.0625rem solid var(--ui-black-transparent);\n}\n\n.stage_with-color-picker_27XHm {\n    cursor: none;\n    z-index: 2010;\n}\n\n.stage_color-picker-background_2HBlI {\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    background-color: rgba(0, 0, 0, 0.55);\n    display: block;\n    z-index: 2000;\n    top: 0;\n    left: 0;\n}\n\n.stage_stage-wrapper_35Uar {\n    position: relative;\n}\n\n/* we want stage overlays to all be positioned in the same spot as the stage, but can't put them inside the border\nbecause we want their overflow to be visible, and the bordered element must have overflow: hidden set so that the\nstage doesn't \"spill\" out from under its rounded corners. instead, shift these over by the border width. */\n\n.stage_stage-overlays_295lE {\n    position: absolute;\n    top: 0.0625rem;\n    left: 0.0625rem;\n\n    /* the overlay itself should not capture pointer events; only its child elements can do that */\n    pointer-events: none;\n}\n\n.stage_stage-overlays_295lE.stage_full-screen_aqa2I {\n    top: 0.0625rem;\n    left: 0.0625rem;\n}\n\n.stage_monitor-wrapper_2hZ-i,\n.stage_frame-wrapper_iYJos,\n.stage_green-flag-overlay-wrapper_3bCO- {\n    position: absolute;\n    top: 0;\n    left: 0;\n    pointer-events: none;\n}\n\n.stage_dragging-sprite_2rRMx {\n    position: absolute;\n    top: 0;\n    left: 0;\n    z-index: 1020;\n    filter: drop-shadow(5px 5px 5px var(--ui-black-transparent-default));\n}\n\n.stage_stage-bottom-wrapper_fnczd {\n    position: absolute;\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-end;\n    top: 0;\n    left: 0;\n    overflow: hidden;\n    pointer-events: none;\n}\n\n.stage_mic-indicator_2hH2H {\n    transform-origin: bottom right;\n    z-index: 45;\n    pointer-events: none;\n    align-self: flex-end;\n}\n\n.stage_question-wrapper_3Sii9 {\n    z-index: 49;\n    pointer-events: auto;\n}\n\n.stage_frame_1-hsB {\n    background: var(--looks-transparent);\n    border: 2px solid var(--looks-secondary);\n    border-radius: 0.5rem;\n    animation-name: stage_flash_3LJh5;\n    animation-duration: 0.75s;\n    animation-fill-mode: forwards; /* Leave at 0 opacity after animation */\n}\n\n.stage_green-flag-overlay-wrapper_3bCO- {\n    width: 100%;\n    height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    background: rgba(0,0,0,0.25);\n    border-radius: 0.5rem;\n    pointer-events: all;\n    cursor: pointer;\n}\n\n.stage_green-flag-overlay_219KT {\n    padding: 1rem;\n    border-radius: 100%;\n    background: rgba(255,255,255,0.75);\n    border: 3px solid var(--ui-white-default);\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    box-sizing: border-box;\n    width: 5rem;\n    height: 5rem;\n}\n\n.stage_green-flag-overlay_219KT > img {\n    width: 100%;\n    object-fit: contain;\n}\n\n@keyframes stage_flash_3LJh5 {\n    0% { opacity: 1; }\n    100% { opacity: 0; }\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.stage_stage_1fD7k {\n    /*\n        Fixes a few extra pixels of margin/padding, that adds on to the bottom\n        of the element, which messes up the chrome padding consistency\n    */\n    display: block;\n\n    border-radius: 0.5rem;\n    border: 0.0625rem solid var(--ui-black-transparent);\n    overflow: hidden;\n\n    /* @todo: This is for overriding the value being set somewhere. Where is it being set? */\n    background-color: transparent;\n\n    /* Allow custom touch handling to prevent scrolling on Edge */\n    touch-action: none;\n\n    /* Make sure border is not included in size calculation */\n    box-sizing: content-box !important;\n\n    /* enforce overflow + reset position of absolutely-positioned children */\n    position: relative;\n\n    /* reset dark styles inherited from dark mode */\n    color-scheme: light;\n    color: var(--text-primary-default);\n}\n\n.stage_stage_1fD7k.stage_full-screen_ZO7xi {\n    border: 0.0625rem solid var(--ui-black-transparent);\n}\n\n.stage_with-color-picker_1lNd5 {\n    cursor: none;\n    z-index: 2010;\n}\n\n.stage_color-picker-background_2wCVq {\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    background-color: rgba(0, 0, 0, 0.55);\n    display: block;\n    z-index: 2000;\n    top: 0;\n    left: 0;\n}\n\n.stage_stage-wrapper_eRRuk {\n    position: relative;\n}\n\n/* we want stage overlays to all be positioned in the same spot as the stage, but can't put them inside the border\nbecause we want their overflow to be visible, and the bordered element must have overflow: hidden set so that the\nstage doesn't \"spill\" out from under its rounded corners. instead, shift these over by the border width. */\n\n.stage_stage-overlays_eE14L {\n    position: absolute;\n    top: 0.0625rem;\n    left: 0.0625rem;\n\n    /* the overlay itself should not capture pointer events; only its child elements can do that */\n    pointer-events: none;\n}\n\n.stage_stage-overlays_eE14L.stage_full-screen_ZO7xi {\n    top: 0.0625rem;\n    left: 0.0625rem;\n}\n\n.stage_monitor-wrapper_2w6m8,\n.stage_frame-wrapper_1JaS_,\n.stage_green-flag-overlay-wrapper_2hUi_ {\n    position: absolute;\n    top: 0;\n    left: 0;\n    pointer-events: none;\n}\n\n.stage_dragging-sprite_pxcJj {\n    position: absolute;\n    top: 0;\n    left: 0;\n    z-index: 1020;\n    filter: drop-shadow(5px 5px 5px var(--ui-black-transparent-default));\n}\n\n.stage_stage-bottom-wrapper_KIBfo {\n    position: absolute;\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-end;\n    top: 0;\n    left: 0;\n    overflow: hidden;\n    pointer-events: none;\n}\n\n.stage_mic-indicator_3AvN8 {\n    transform-origin: bottom right;\n    z-index: 45;\n    pointer-events: none;\n    align-self: flex-end;\n}\n\n.stage_question-wrapper_3ukB4 {\n    z-index: 49;\n    pointer-events: auto;\n}\n\n.stage_frame_OVq5G {\n    background: var(--looks-transparent);\n    border: 2px solid var(--looks-secondary);\n    border-radius: 0.5rem;\n    animation-name: stage_flash_iuAnU;\n    animation-duration: 0.75s;\n    animation-fill-mode: forwards; /* Leave at 0 opacity after animation */\n}\n\n.stage_green-flag-overlay-wrapper_2hUi_ {\n    width: 100%;\n    height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    background: rgba(0,0,0,0.25);\n    border-radius: 0.5rem;\n    pointer-events: all;\n    cursor: pointer;\n}\n\n.stage_green-flag-overlay_gNXnv {\n    padding: 1rem;\n    border-radius: 100%;\n    background: rgba(255,255,255,0.75);\n    border: 3px solid var(--ui-white-default);\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    box-sizing: border-box;\n    width: 5rem;\n    height: 5rem;\n}\n\n.stage_green-flag-overlay_gNXnv > img {\n    width: 100%;\n    object-fit: contain;\n}\n\n@keyframes stage_flash_iuAnU {\n    0% { opacity: 1; }\n    100% { opacity: 0; }\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"stage": "stage_stage_DTWo5",
-	"full-screen": "stage_full-screen_aqa2I",
-	"fullScreen": "stage_full-screen_aqa2I",
-	"with-color-picker": "stage_with-color-picker_27XHm",
-	"withColorPicker": "stage_with-color-picker_27XHm",
-	"color-picker-background": "stage_color-picker-background_2HBlI",
-	"colorPickerBackground": "stage_color-picker-background_2HBlI",
-	"stage-wrapper": "stage_stage-wrapper_35Uar",
-	"stageWrapper": "stage_stage-wrapper_35Uar",
-	"stage-overlays": "stage_stage-overlays_295lE",
-	"stageOverlays": "stage_stage-overlays_295lE",
-	"monitor-wrapper": "stage_monitor-wrapper_2hZ-i",
-	"monitorWrapper": "stage_monitor-wrapper_2hZ-i",
-	"frame-wrapper": "stage_frame-wrapper_iYJos",
-	"frameWrapper": "stage_frame-wrapper_iYJos",
-	"green-flag-overlay-wrapper": "stage_green-flag-overlay-wrapper_3bCO-",
-	"greenFlagOverlayWrapper": "stage_green-flag-overlay-wrapper_3bCO-",
-	"dragging-sprite": "stage_dragging-sprite_2rRMx",
-	"draggingSprite": "stage_dragging-sprite_2rRMx",
-	"stage-bottom-wrapper": "stage_stage-bottom-wrapper_fnczd",
-	"stageBottomWrapper": "stage_stage-bottom-wrapper_fnczd",
-	"mic-indicator": "stage_mic-indicator_2hH2H",
-	"micIndicator": "stage_mic-indicator_2hH2H",
-	"question-wrapper": "stage_question-wrapper_3Sii9",
-	"questionWrapper": "stage_question-wrapper_3Sii9",
-	"frame": "stage_frame_1-hsB",
-	"flash": "stage_flash_3LJh5",
-	"green-flag-overlay": "stage_green-flag-overlay_219KT",
-	"greenFlagOverlay": "stage_green-flag-overlay_219KT"
+	"stage": "stage_stage_1fD7k",
+	"full-screen": "stage_full-screen_ZO7xi",
+	"fullScreen": "stage_full-screen_ZO7xi",
+	"with-color-picker": "stage_with-color-picker_1lNd5",
+	"withColorPicker": "stage_with-color-picker_1lNd5",
+	"color-picker-background": "stage_color-picker-background_2wCVq",
+	"colorPickerBackground": "stage_color-picker-background_2wCVq",
+	"stage-wrapper": "stage_stage-wrapper_eRRuk",
+	"stageWrapper": "stage_stage-wrapper_eRRuk",
+	"stage-overlays": "stage_stage-overlays_eE14L",
+	"stageOverlays": "stage_stage-overlays_eE14L",
+	"monitor-wrapper": "stage_monitor-wrapper_2w6m8",
+	"monitorWrapper": "stage_monitor-wrapper_2w6m8",
+	"frame-wrapper": "stage_frame-wrapper_1JaS_",
+	"frameWrapper": "stage_frame-wrapper_1JaS_",
+	"green-flag-overlay-wrapper": "stage_green-flag-overlay-wrapper_2hUi_",
+	"greenFlagOverlayWrapper": "stage_green-flag-overlay-wrapper_2hUi_",
+	"dragging-sprite": "stage_dragging-sprite_pxcJj",
+	"draggingSprite": "stage_dragging-sprite_pxcJj",
+	"stage-bottom-wrapper": "stage_stage-bottom-wrapper_KIBfo",
+	"stageBottomWrapper": "stage_stage-bottom-wrapper_KIBfo",
+	"mic-indicator": "stage_mic-indicator_3AvN8",
+	"micIndicator": "stage_mic-indicator_3AvN8",
+	"question-wrapper": "stage_question-wrapper_3ukB4",
+	"questionWrapper": "stage_question-wrapper_3ukB4",
+	"frame": "stage_frame_OVq5G",
+	"flash": "stage_flash_iuAnU",
+	"green-flag-overlay": "stage_green-flag-overlay_gNXnv",
+	"greenFlagOverlay": "stage_green-flag-overlay_gNXnv"
 };
 
 /***/ }),
@@ -2603,14 +2603,14 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.stop-all_stop-all_15h2t {\n    width: 2rem;\n    height: 2rem;\n    padding: 0.375rem;\n    border-radius: 0.25rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    cursor: pointer;\n}\n\n.stop-all_stop-all_15h2t:hover {\n    background-color: var(--looks-light-transparent);\n}\n\n.stop-all_stop-all_15h2t {\n    opacity: 0.5;\n}\n\n.stop-all_stop-all_15h2t.stop-all_is-active_PEgCP {\n    opacity: 1;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.stop-all_stop-all_1Y8P9 {\n    width: 2rem;\n    height: 2rem;\n    padding: 0.375rem;\n    border-radius: 0.25rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    cursor: pointer;\n}\n\n.stop-all_stop-all_1Y8P9:hover {\n    background-color: var(--looks-light-transparent);\n}\n\n.stop-all_stop-all_1Y8P9 {\n    opacity: 0.5;\n}\n\n.stop-all_stop-all_1Y8P9.stop-all_is-active_3nog0 {\n    opacity: 1;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"stop-all": "stop-all_stop-all_15h2t",
-	"stopAll": "stop-all_stop-all_15h2t",
-	"is-active": "stop-all_is-active_PEgCP",
-	"isActive": "stop-all_is-active_PEgCP"
+	"stop-all": "stop-all_stop-all_1Y8P9",
+	"stopAll": "stop-all_stop-all_1Y8P9",
+	"is-active": "stop-all_is-active_3nog0",
+	"isActive": "stop-all_is-active_3nog0"
 };
 
 /***/ }),
@@ -2627,15 +2627,15 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.tag-button_tag-button_3MxU5 {\n    padding: .625rem 1rem;\n    background: var(--looks-secondary);\n    border-radius: 1.375rem;\n    color: white;\n    height: 2.5rem;\n}\n\n.tag-button_tag-button-icon_3VB4Q {\n    max-width: 1rem;\n    max-height: 1rem;\n}\n\n.tag-button_active_1IIH9 {\n    background: var(--data-primary);\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.tag-button_tag-button_nBLRM {\n    padding: .625rem 1rem;\n    background: var(--looks-secondary);\n    border-radius: 1.375rem;\n    color: white;\n    height: 2.5rem;\n}\n\n.tag-button_tag-button-icon_26hvC {\n    max-width: 1rem;\n    max-height: 1rem;\n}\n\n.tag-button_active_2stEz {\n    background: var(--data-primary);\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"tag-button": "tag-button_tag-button_3MxU5",
-	"tagButton": "tag-button_tag-button_3MxU5",
-	"tag-button-icon": "tag-button_tag-button-icon_3VB4Q",
-	"tagButtonIcon": "tag-button_tag-button-icon_3VB4Q",
-	"active": "tag-button_active_1IIH9"
+	"tag-button": "tag-button_tag-button_nBLRM",
+	"tagButton": "tag-button_tag-button_nBLRM",
+	"tag-button-icon": "tag-button_tag-button-icon_26hvC",
+	"tagButtonIcon": "tag-button_tag-button-icon_26hvC",
+	"active": "tag-button_active_2stEz"
 };
 
 /***/ }),
@@ -2652,14 +2652,14 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.target-pane_target-pane_2ZTsJ {\n    /* Makes columns for the sprite library selector + and the stage selector */\n    display: flex;\n    flex-direction: row;\n    flex-grow: 1;\n}\n\n.target-pane_stage-selector-wrapper_2LIOy {\n    display: flex;\n    flex-basis: 72px;\n    flex-shrink: 0;\n}\n\n[dir=\"ltr\"] .target-pane_stage-selector-wrapper_2LIOy {\n    margin-left: calc(0.5rem / 2);\n}\n\n[dir=\"rtl\"] .target-pane_stage-selector-wrapper_2LIOy {\n    margin-right: calc(0.5rem / 2);\n}\n", ""]);
+exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.target-pane_target-pane_3S5E6 {\n    /* Makes columns for the sprite library selector + and the stage selector */\n    display: flex;\n    flex-direction: row;\n    flex-grow: 1;\n}\n\n.target-pane_stage-selector-wrapper_qekSW {\n    display: flex;\n    flex-basis: 72px;\n    flex-shrink: 0;\n}\n\n[dir=\"ltr\"] .target-pane_stage-selector-wrapper_qekSW {\n    margin-left: calc(0.5rem / 2);\n}\n\n[dir=\"rtl\"] .target-pane_stage-selector-wrapper_qekSW {\n    margin-right: calc(0.5rem / 2);\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"target-pane": "target-pane_target-pane_2ZTsJ",
-	"targetPane": "target-pane_target-pane_2ZTsJ",
-	"stage-selector-wrapper": "target-pane_stage-selector-wrapper_2LIOy",
-	"stageSelectorWrapper": "target-pane_stage-selector-wrapper_2LIOy"
+	"target-pane": "target-pane_target-pane_3S5E6",
+	"targetPane": "target-pane_target-pane_3S5E6",
+	"stage-selector-wrapper": "target-pane_stage-selector-wrapper_qekSW",
+	"stageSelectorWrapper": "target-pane_stage-selector-wrapper_qekSW"
 };
 
 /***/ }),
@@ -2677,28 +2677,28 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\nbody {\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n}\n\nh2 {\n    font-size: 1.5rem;\n    font-weight: bold;\n}\n\np {\n    font-size: 1rem;\n    line-height: 1.5em;\n}\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n/* from scratch-www */\n\n.telemetry-modal_modal-overlay_SDoFR {\n    position: fixed;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    z-index: 510;\n    background-color: var(--ui-modal-overlay);\n}\n\n.telemetry-modal_modal-content_16B4g {\n    margin: 100px auto;\n    outline: none;\n    border: .25rem solid var(--ui-white-transparent);\n    padding: 0;\n    border-radius: 0.5rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    width: 640px;\n\n    color: var(--text-primary);\n    overflow: hidden;\n}\n\n.telemetry-modal_illustration_1Xxcy {\n    width: 100%;\n    height: 123px;\n    background-color: var(--looks-secondary);\n    background-image: url(" + escape(__webpack_require__(/*! ./telemetry-modal-header.png */ "./src/components/telemetry-modal/telemetry-modal-header.png")) + ");\n    background-size: cover;\n}\n\n.telemetry-modal_body_2Gocn {\n    background: var(--ui-white);\n    padding: 1.5rem 2.25rem;\n}\n\n.telemetry-modal_privacy-policy-link_18tcE {\n    color: var(--looks-secondary);\n    text-decoration: none;\n}\n\n/* stack the radio buttons vertically, not horizontally */\n\n.telemetry-modal_radio-buttons_1Tkl7 label {\n    display: block;\n    margin: 0.5rem;\n    transition: all .125s ease;\n    background-color: hsla(0, 0%, 95%, 1);\n    border-radius: .5rem;\n    margin: 0 auto 0.375rem;\n    align-items: center;\n    padding: 1rem 0;\n    vertical-align: middle;\n}\n\n.telemetry-modal_radio-buttons_1Tkl7 label:hover {\n    background-color: hsla(215, 100%, 65%, .1);\n}\n\n.telemetry-modal_radio-buttons_1Tkl7 label.telemetry-modal_label-selected_NsTZr,\n.telemetry-modal_radio-buttons_1Tkl7 label.telemetry-modal_label-selected_NsTZr:hover {\n    background-color: hsla(215, 100%, 65%, .25);\n}\n\n.telemetry-modal_radio-buttons_1Tkl7 input[type=\"radio\"] {\n    margin: -1px 0.75rem 1px;\n    border: 1px solid hsla(0, 0%, 0%, .1);\n    border-radius: 50%;\n    width: 1rem;\n    height: 1rem;\n    -webkit-appearance: none;\n       -moz-appearance: none;\n            appearance: none;\n    background-color: var(--ui-white);\n    vertical-align: middle;\n}\n\n.telemetry-modal_radio-buttons_1Tkl7 input[type=\"radio\"]:checked,\n.telemetry-modal_radio-buttons_1Tkl7 input[type=\"radio\"]:focus {\n    box-shadow: 0 0 0 2px hsla(215, 100%, 65%, .25);\n    outline: none;\n}\n\n.telemetry-modal_radio-buttons_1Tkl7 input[type=\"radio\"]:checked {\n    transition: all .25s ease;\n    background-color: var(--ui-white);\n    border: 1px solid var(--looks-secondary);\n}\n\n.telemetry-modal_radio-buttons_1Tkl7 input[type=\"radio\"]:checked::after {\n    display: block;\n    margin: 0.125rem;\n    border-radius: 50%;\n    background-color: var(--looks-secondary);\n    width: .625rem;\n    height: .625rem;\n    content: \"\";\n}\n\n/* Confirmation buttons at the bottom of the modal */\n\n.telemetry-modal_button-row_1DOWD {\n    display: flex;\n    flex-flow: row nowrap;\n    justify-content: space-between;\n    align-items: baseline;\n\n    margin: 1.5rem 0;\n    font-weight: bolder;\n}\n\n@keyframes telemetry-modal_fade-out_5Xhoq {\n    0% {opacity: 1}\n    100% {opacity: 0}\n}\n\n.telemetry-modal_setting-was-updated_3U6oM {\n    animation: telemetry-modal_fade-out_5Xhoq 3s ease-out;\n    color: var(--extensions-primary);\n}\n\n.telemetry-modal_button-row_1DOWD button {\n    border: 1px solid var(--looks-secondary);\n    border-radius: 0.25rem;\n    padding: 0.5rem 1.5rem;\n    color: white;\n    background: var(--looks-secondary);\n    font-weight: bold;\n    font-size: .875rem;\n    cursor: pointer;\n}\n\n.telemetry-modal_button-row_1DOWD button:hover {\n    background: var(--extensions-primary);\n    box-shadow: 0 0 0 6px var(--looks-transparent);\n}\n\n.telemetry-modal_button-row_1DOWD button:disabled {\n    background: var(--text-primary);\n    border-color: var(--ui-black-transparent);\n    box-shadow: none;\n    opacity: 0.25;\n}\n\n@media screen and (max-height: 660px) {\n    .telemetry-modal_modal-content_16B4g {\n        margin: 5vh auto;\n        width: 90%;\n    }\n}\n\n@media screen and (max-height: 540px) {\n    .telemetry-modal_illustration_1Xxcy {\n        display: none;\n    }\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\nbody {\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n}\n\nh2 {\n    font-size: 1.5rem;\n    font-weight: bold;\n}\n\np {\n    font-size: 1rem;\n    line-height: 1.5em;\n}\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n/* from scratch-www */\n\n.telemetry-modal_modal-overlay_3R9Qg {\n    position: fixed;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    z-index: 510;\n    background-color: var(--ui-modal-overlay);\n}\n\n.telemetry-modal_modal-content_nALrs {\n    margin: 100px auto;\n    outline: none;\n    border: .25rem solid var(--ui-white-transparent);\n    padding: 0;\n    border-radius: 0.5rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    width: 640px;\n\n    color: var(--text-primary);\n    overflow: hidden;\n}\n\n.telemetry-modal_illustration_2xM6I {\n    width: 100%;\n    height: 123px;\n    background-color: var(--looks-secondary);\n    background-image: url(" + escape(__webpack_require__(/*! ./telemetry-modal-header.png */ "./src/components/telemetry-modal/telemetry-modal-header.png")) + ");\n    background-size: cover;\n}\n\n.telemetry-modal_body_1ZKWV {\n    background: var(--ui-white);\n    padding: 1.5rem 2.25rem;\n}\n\n.telemetry-modal_privacy-policy-link_3wFww {\n    color: var(--looks-secondary);\n    text-decoration: none;\n}\n\n/* stack the radio buttons vertically, not horizontally */\n\n.telemetry-modal_radio-buttons_8ArWg label {\n    display: block;\n    margin: 0.5rem;\n    transition: all .125s ease;\n    background-color: hsla(0, 0%, 95%, 1);\n    border-radius: .5rem;\n    margin: 0 auto 0.375rem;\n    align-items: center;\n    padding: 1rem 0;\n    vertical-align: middle;\n}\n\n.telemetry-modal_radio-buttons_8ArWg label:hover {\n    background-color: hsla(215, 100%, 65%, .1);\n}\n\n.telemetry-modal_radio-buttons_8ArWg label.telemetry-modal_label-selected_2jFaa,\n.telemetry-modal_radio-buttons_8ArWg label.telemetry-modal_label-selected_2jFaa:hover {\n    background-color: hsla(215, 100%, 65%, .25);\n}\n\n.telemetry-modal_radio-buttons_8ArWg input[type=\"radio\"] {\n    margin: -1px 0.75rem 1px;\n    border: 1px solid hsla(0, 0%, 0%, .1);\n    border-radius: 50%;\n    width: 1rem;\n    height: 1rem;\n    -webkit-appearance: none;\n       -moz-appearance: none;\n            appearance: none;\n    background-color: var(--ui-white);\n    vertical-align: middle;\n}\n\n.telemetry-modal_radio-buttons_8ArWg input[type=\"radio\"]:checked,\n.telemetry-modal_radio-buttons_8ArWg input[type=\"radio\"]:focus {\n    box-shadow: 0 0 0 2px hsla(215, 100%, 65%, .25);\n    outline: none;\n}\n\n.telemetry-modal_radio-buttons_8ArWg input[type=\"radio\"]:checked {\n    transition: all .25s ease;\n    background-color: var(--ui-white);\n    border: 1px solid var(--looks-secondary);\n}\n\n.telemetry-modal_radio-buttons_8ArWg input[type=\"radio\"]:checked::after {\n    display: block;\n    margin: 0.125rem;\n    border-radius: 50%;\n    background-color: var(--looks-secondary);\n    width: .625rem;\n    height: .625rem;\n    content: \"\";\n}\n\n/* Confirmation buttons at the bottom of the modal */\n\n.telemetry-modal_button-row_2rE_o {\n    display: flex;\n    flex-flow: row nowrap;\n    justify-content: space-between;\n    align-items: baseline;\n\n    margin: 1.5rem 0;\n    font-weight: bolder;\n}\n\n@keyframes telemetry-modal_fade-out_36Osg {\n    0% {opacity: 1}\n    100% {opacity: 0}\n}\n\n.telemetry-modal_setting-was-updated_1l6nc {\n    animation: telemetry-modal_fade-out_36Osg 3s ease-out;\n    color: var(--extensions-primary);\n}\n\n.telemetry-modal_button-row_2rE_o button {\n    border: 1px solid var(--looks-secondary);\n    border-radius: 0.25rem;\n    padding: 0.5rem 1.5rem;\n    color: white;\n    background: var(--looks-secondary);\n    font-weight: bold;\n    font-size: .875rem;\n    cursor: pointer;\n}\n\n.telemetry-modal_button-row_2rE_o button:hover {\n    background: var(--extensions-primary);\n    box-shadow: 0 0 0 6px var(--looks-transparent);\n}\n\n.telemetry-modal_button-row_2rE_o button:disabled {\n    background: var(--text-primary);\n    border-color: var(--ui-black-transparent);\n    box-shadow: none;\n    opacity: 0.25;\n}\n\n@media screen and (max-height: 660px) {\n    .telemetry-modal_modal-content_nALrs {\n        margin: 5vh auto;\n        width: 90%;\n    }\n}\n\n@media screen and (max-height: 540px) {\n    .telemetry-modal_illustration_2xM6I {\n        display: none;\n    }\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"modal-overlay": "telemetry-modal_modal-overlay_SDoFR",
-	"modalOverlay": "telemetry-modal_modal-overlay_SDoFR",
-	"modal-content": "telemetry-modal_modal-content_16B4g",
-	"modalContent": "telemetry-modal_modal-content_16B4g",
-	"illustration": "telemetry-modal_illustration_1Xxcy",
-	"body": "telemetry-modal_body_2Gocn",
-	"privacy-policy-link": "telemetry-modal_privacy-policy-link_18tcE",
-	"privacyPolicyLink": "telemetry-modal_privacy-policy-link_18tcE",
-	"radio-buttons": "telemetry-modal_radio-buttons_1Tkl7",
-	"radioButtons": "telemetry-modal_radio-buttons_1Tkl7",
-	"label-selected": "telemetry-modal_label-selected_NsTZr",
-	"labelSelected": "telemetry-modal_label-selected_NsTZr",
-	"button-row": "telemetry-modal_button-row_1DOWD",
-	"buttonRow": "telemetry-modal_button-row_1DOWD",
-	"setting-was-updated": "telemetry-modal_setting-was-updated_3U6oM",
-	"settingWasUpdated": "telemetry-modal_setting-was-updated_3U6oM",
-	"fade-out": "telemetry-modal_fade-out_5Xhoq",
-	"fadeOut": "telemetry-modal_fade-out_5Xhoq"
+	"modal-overlay": "telemetry-modal_modal-overlay_3R9Qg",
+	"modalOverlay": "telemetry-modal_modal-overlay_3R9Qg",
+	"modal-content": "telemetry-modal_modal-content_nALrs",
+	"modalContent": "telemetry-modal_modal-content_nALrs",
+	"illustration": "telemetry-modal_illustration_2xM6I",
+	"body": "telemetry-modal_body_1ZKWV",
+	"privacy-policy-link": "telemetry-modal_privacy-policy-link_3wFww",
+	"privacyPolicyLink": "telemetry-modal_privacy-policy-link_3wFww",
+	"radio-buttons": "telemetry-modal_radio-buttons_8ArWg",
+	"radioButtons": "telemetry-modal_radio-buttons_8ArWg",
+	"label-selected": "telemetry-modal_label-selected_2jFaa",
+	"labelSelected": "telemetry-modal_label-selected_2jFaa",
+	"button-row": "telemetry-modal_button-row_2rE_o",
+	"buttonRow": "telemetry-modal_button-row_2rE_o",
+	"setting-was-updated": "telemetry-modal_setting-was-updated_1l6nc",
+	"settingWasUpdated": "telemetry-modal_setting-was-updated_1l6nc",
+	"fade-out": "telemetry-modal_fade-out_36Osg",
+	"fadeOut": "telemetry-modal_fade-out_36Osg"
 };
 
 /***/ }),
@@ -2715,13 +2715,13 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n.toggle-buttons_row_27DUF {\n    display: flex;\n    flex-direction: row;\n}\n\n.toggle-buttons_button_uta83 {\n    margin: 0;\n    padding: 0.25rem;\n    border: 1px solid var(--ui-black-transparent);\n    background: none;\n    outline: none;\n    cursor: pointer;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    position: relative;\n    width: 34px;\n    height: 34px;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.toggle-buttons_button_uta83 > img {\n    display: block;\n    transition: transform 0.1s;\n    filter: var(--filter-icon-gray);\n}\n\n.toggle-buttons_button_uta83:not(:last-child) {\n    border-right: none;\n}\n\n[dir=\"rtl\"] .toggle-buttons_button_uta83:not(:last-child) {\n    border-left: none;\n    border-right: 1px solid var(--ui-black-transparent);\n}\n\n.toggle-buttons_button_uta83:focus::before {\n    content: \"\";\n    position: absolute;\n    top: -1px;\n    right: -1px;\n    bottom: -1px;\n    left: -1px;\n    border: 1px solid var(--looks-secondary);\n}\n\n/* round corners for first and last buttons */\n\n.toggle-buttons_button_uta83:first-child,\n[dir=\"rtl\"] .toggle-buttons_button_uta83:last-child,\n.toggle-buttons_button_uta83:first-child:focus::before,\n[dir=\"rtl\"] .toggle-buttons_button_uta83:last-child:focus::before {\n    border-radius: calc(0.5rem / 2) 0 0 calc(0.5rem / 2);\n}\n\n.toggle-buttons_button_uta83:last-child,\n[dir=\"rtl\"] .toggle-buttons_button_uta83:first-child,\n.toggle-buttons_button_uta83:last-child:focus::before,\n[dir=\"rtl\"] .toggle-buttons_button_uta83:first-child:focus::before {\n    border-radius: 0 calc(0.5rem / 2) calc(0.5rem / 2) 0;\n}\n\n/* selected button styling */\n\n.toggle-buttons_button_uta83[aria-pressed='true'] {\n    background-color: var(--looks-light-transparent);\n}\n\n.toggle-buttons_button_uta83[aria-pressed='true'] > img {\n    filter: none;\n}\n\n/* pressed button styling */\n\n.toggle-buttons_button_uta83:active {\n    background-color: var(--looks-transparent);\n}\n\n/* disabled styling */\n\n.toggle-buttons_disabled_YZksg .toggle-buttons_button_uta83 {\n    cursor: default;\n}\n", ""]);
+exports.push([module.i, "/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n/* overridden by src/lib/themes/guiHelpers.js */\n\n.toggle-buttons_row_2j-Rm {\n    display: flex;\n    flex-direction: row;\n}\n\n.toggle-buttons_button_1ZBU8 {\n    margin: 0;\n    padding: 0.25rem;\n    border: 1px solid var(--ui-black-transparent);\n    background: none;\n    outline: none;\n    cursor: pointer;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    position: relative;\n    width: 34px;\n    height: 34px;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.toggle-buttons_button_1ZBU8 > img {\n    display: block;\n    transition: transform 0.1s;\n    filter: var(--filter-icon-gray);\n}\n\n.toggle-buttons_button_1ZBU8:not(:last-child) {\n    border-right: none;\n}\n\n[dir=\"rtl\"] .toggle-buttons_button_1ZBU8:not(:last-child) {\n    border-left: none;\n    border-right: 1px solid var(--ui-black-transparent);\n}\n\n.toggle-buttons_button_1ZBU8:focus::before {\n    content: \"\";\n    position: absolute;\n    top: -1px;\n    right: -1px;\n    bottom: -1px;\n    left: -1px;\n    border: 1px solid var(--looks-secondary);\n}\n\n/* round corners for first and last buttons */\n\n.toggle-buttons_button_1ZBU8:first-child,\n[dir=\"rtl\"] .toggle-buttons_button_1ZBU8:last-child,\n.toggle-buttons_button_1ZBU8:first-child:focus::before,\n[dir=\"rtl\"] .toggle-buttons_button_1ZBU8:last-child:focus::before {\n    border-radius: calc(0.5rem / 2) 0 0 calc(0.5rem / 2);\n}\n\n.toggle-buttons_button_1ZBU8:last-child,\n[dir=\"rtl\"] .toggle-buttons_button_1ZBU8:first-child,\n.toggle-buttons_button_1ZBU8:last-child:focus::before,\n[dir=\"rtl\"] .toggle-buttons_button_1ZBU8:first-child:focus::before {\n    border-radius: 0 calc(0.5rem / 2) calc(0.5rem / 2) 0;\n}\n\n/* selected button styling */\n\n.toggle-buttons_button_1ZBU8[aria-pressed='true'] {\n    background-color: var(--looks-light-transparent);\n}\n\n.toggle-buttons_button_1ZBU8[aria-pressed='true'] > img {\n    filter: none;\n}\n\n/* pressed button styling */\n\n.toggle-buttons_button_1ZBU8:active {\n    background-color: var(--looks-transparent);\n}\n\n/* disabled styling */\n\n.toggle-buttons_disabled_2teyj .toggle-buttons_button_1ZBU8 {\n    cursor: default;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"row": "toggle-buttons_row_27DUF",
-	"button": "toggle-buttons_button_uta83",
-	"disabled": "toggle-buttons_disabled_YZksg"
+	"row": "toggle-buttons_row_2j-Rm",
+	"button": "toggle-buttons_button_1ZBU8",
+	"disabled": "toggle-buttons_disabled_2teyj"
 };
 
 /***/ }),
@@ -2738,16 +2738,16 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.turbo-mode_turbo-container_1qQFO {\n    display: flex;\n    align-items: center;\n    padding: 0.25rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n}\n\n.turbo-mode_turbo-icon_A_vJA {\n    margin: 0.25rem;\n}\n\n.turbo-mode_turbo-label_1v23d {\n    font-size: 0.625rem;\n    font-weight: bold;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    color: var(--control-primary);\n    white-space: nowrap;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.turbo-mode_turbo-container_2ZNcq {\n    display: flex;\n    align-items: center;\n    padding: 0.25rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n}\n\n.turbo-mode_turbo-icon_fjr8U {\n    margin: 0.25rem;\n}\n\n.turbo-mode_turbo-label_-1oMs {\n    font-size: 0.625rem;\n    font-weight: bold;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    color: var(--control-primary);\n    white-space: nowrap;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"turbo-container": "turbo-mode_turbo-container_1qQFO",
-	"turboContainer": "turbo-mode_turbo-container_1qQFO",
-	"turbo-icon": "turbo-mode_turbo-icon_A_vJA",
-	"turboIcon": "turbo-mode_turbo-icon_A_vJA",
-	"turbo-label": "turbo-mode_turbo-label_1v23d",
-	"turboLabel": "turbo-mode_turbo-label_1v23d"
+	"turbo-container": "turbo-mode_turbo-container_2ZNcq",
+	"turboContainer": "turbo-mode_turbo-container_2ZNcq",
+	"turbo-icon": "turbo-mode_turbo-icon_fjr8U",
+	"turboIcon": "turbo-mode_turbo-icon_fjr8U",
+	"turbo-label": "turbo-mode_turbo-label_-1oMs",
+	"turboLabel": "turbo-mode_turbo-label_-1oMs"
 };
 
 /***/ }),
@@ -2764,33 +2764,33 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.custom-extension-modal_modal-content_3xW36 {\n    max-width: 550px;\n    margin-top: 50px;\n}\n\n.custom-extension-modal_body_1Ckhr {\n    background: var(--ui-white);\n    padding: 1.5rem 2.25rem;\n}\n\n.custom-extension-modal_body_1Ckhr p,\n.custom-extension-modal_unsandboxed-container_1odK4,\n.custom-extension-modal_url-input_17a_x,\n.custom-extension-modal_text-code-input_aggNo {\n    margin: 1rem 0;\n    display: block;\n}\n\n.custom-extension-modal_type-selector-container_37RY2 {\n    display: flex;\n    justify-content: space-around;\n}\n\n.custom-extension-modal_type-selector-button_3Ow2Y {\n    width: 100%;\n    cursor: pointer;\n    border-bottom: 0.25rem solid var(--ui-tertiary);\n    margin: 0 1rem;\n    padding: 0.5rem 0;\n    text-align: center;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n.custom-extension-modal_type-selector-button_3Ow2Y[data-active=\"true\"] {\n    border-color: var(--looks-secondary);\n}\n\n.custom-extension-modal_type-selector-button_3Ow2Y:active {\n    border-color: var(--looks-transparent);\n}\n\n.custom-extension-modal_url-input_17a_x,\n.custom-extension-modal_text-code-input_aggNo {\n    width: 100%;\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 0.25rem;\n    padding: 0.5rem;\n    font-size: inherit;\n}\n\n.custom-extension-modal_url-input_17a_x {\n    height: 3rem;\n}\n\n.custom-extension-modal_text-code-input_aggNo {\n    min-height: 3rem;\n    height: 8rem;\n    min-width: 100%;\n    max-width: 100%;\n    font-family: monospace;\n}\n\n.custom-extension-modal_unsandboxed-container_1odK4 {\n    display: flex;\n    align-items: center;\n}\n\n.custom-extension-modal_unsandboxed-checkbox_tsBMn {\n    margin-right: 0.5rem;\n}\n\n.custom-extension-modal_trusted-extension_3s2FM,\n.custom-extension-modal_unsandboxed-warning_1BisM {\n    padding: 0.5rem;\n    border-radius: 0.25rem;\n}\n\n.custom-extension-modal_trusted-extension_3s2FM {\n    background-color: rgba(94, 255, 94, 0.25);\n    border: 1px solid green;\n}\n\n.custom-extension-modal_unsandboxed-warning_1BisM {\n    background-color: rgba(255, 81, 81, 0.25);\n    border: 1px solid red;\n}\n\n.custom-extension-modal_unsandboxed-warning_1BisM > *:not(:last-child) {\n    display: block;\n    margin-bottom: 4px;\n}\n\n.custom-extension-modal_button-row_38P_C {\n    display: flex;\n    justify-content: flex-end;\n}\n\n.custom-extension-modal_load-button_1rBmy {\n    font: inherit;\n    color: inherit;\n    padding: 0.75rem 1rem;\n    border-radius: 0.25rem;\n    border: 1px solid var(--ui-black-transparent);\n    font-weight: 600;\n    font-size: 0.85rem;\n    color: white;\n    background: var(--looks-secondary);\n}\n\n.custom-extension-modal_load-button_1rBmy:disabled {\n    opacity: 0.8;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.custom-extension-modal_modal-content_3DjW0 {\n    max-width: 550px;\n    margin-top: 50px;\n}\n\n.custom-extension-modal_body_2iQF3 {\n    background: var(--ui-white);\n    padding: 1.5rem 2.25rem;\n}\n\n.custom-extension-modal_body_2iQF3 p,\n.custom-extension-modal_unsandboxed-container_8juVd,\n.custom-extension-modal_url-input_3NAsR,\n.custom-extension-modal_text-code-input_2xKjS {\n    margin: 1rem 0;\n    display: block;\n}\n\n.custom-extension-modal_type-selector-container_2Fag3 {\n    display: flex;\n    justify-content: space-around;\n}\n\n.custom-extension-modal_type-selector-button_1r2YN {\n    width: 100%;\n    cursor: pointer;\n    border-bottom: 0.25rem solid var(--ui-tertiary);\n    margin: 0 1rem;\n    padding: 0.5rem 0;\n    text-align: center;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n.custom-extension-modal_type-selector-button_1r2YN[data-active=\"true\"] {\n    border-color: var(--looks-secondary);\n}\n\n.custom-extension-modal_type-selector-button_1r2YN:active {\n    border-color: var(--looks-transparent);\n}\n\n.custom-extension-modal_url-input_3NAsR,\n.custom-extension-modal_text-code-input_2xKjS {\n    width: 100%;\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 0.25rem;\n    padding: 0.5rem;\n    font-size: inherit;\n}\n\n.custom-extension-modal_url-input_3NAsR {\n    height: 3rem;\n}\n\n.custom-extension-modal_text-code-input_2xKjS {\n    min-height: 3rem;\n    height: 8rem;\n    min-width: 100%;\n    max-width: 100%;\n    font-family: monospace;\n}\n\n.custom-extension-modal_unsandboxed-container_8juVd {\n    display: flex;\n    align-items: center;\n}\n\n.custom-extension-modal_unsandboxed-checkbox_HkBFl {\n    margin-right: 0.5rem;\n}\n\n.custom-extension-modal_trusted-extension_1WNO9,\n.custom-extension-modal_unsandboxed-warning_1BmMu {\n    padding: 0.5rem;\n    border-radius: 0.25rem;\n}\n\n.custom-extension-modal_trusted-extension_1WNO9 {\n    background-color: rgba(94, 255, 94, 0.25);\n    border: 1px solid green;\n}\n\n.custom-extension-modal_unsandboxed-warning_1BmMu {\n    background-color: rgba(255, 81, 81, 0.25);\n    border: 1px solid red;\n}\n\n.custom-extension-modal_unsandboxed-warning_1BmMu > *:not(:last-child) {\n    display: block;\n    margin-bottom: 4px;\n}\n\n.custom-extension-modal_button-row_3dv8g {\n    display: flex;\n    justify-content: flex-end;\n}\n\n.custom-extension-modal_load-button_WGJAt {\n    font: inherit;\n    color: inherit;\n    padding: 0.75rem 1rem;\n    border-radius: 0.25rem;\n    border: 1px solid var(--ui-black-transparent);\n    font-weight: 600;\n    font-size: 0.85rem;\n    color: white;\n    background: var(--looks-secondary);\n}\n\n.custom-extension-modal_load-button_WGJAt:disabled {\n    opacity: 0.8;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"modal-content": "custom-extension-modal_modal-content_3xW36",
-	"modalContent": "custom-extension-modal_modal-content_3xW36",
-	"body": "custom-extension-modal_body_1Ckhr",
-	"unsandboxed-container": "custom-extension-modal_unsandboxed-container_1odK4",
-	"unsandboxedContainer": "custom-extension-modal_unsandboxed-container_1odK4",
-	"url-input": "custom-extension-modal_url-input_17a_x",
-	"urlInput": "custom-extension-modal_url-input_17a_x",
-	"text-code-input": "custom-extension-modal_text-code-input_aggNo",
-	"textCodeInput": "custom-extension-modal_text-code-input_aggNo",
-	"type-selector-container": "custom-extension-modal_type-selector-container_37RY2",
-	"typeSelectorContainer": "custom-extension-modal_type-selector-container_37RY2",
-	"type-selector-button": "custom-extension-modal_type-selector-button_3Ow2Y",
-	"typeSelectorButton": "custom-extension-modal_type-selector-button_3Ow2Y",
-	"unsandboxed-checkbox": "custom-extension-modal_unsandboxed-checkbox_tsBMn",
-	"unsandboxedCheckbox": "custom-extension-modal_unsandboxed-checkbox_tsBMn",
-	"trusted-extension": "custom-extension-modal_trusted-extension_3s2FM",
-	"trustedExtension": "custom-extension-modal_trusted-extension_3s2FM",
-	"unsandboxed-warning": "custom-extension-modal_unsandboxed-warning_1BisM",
-	"unsandboxedWarning": "custom-extension-modal_unsandboxed-warning_1BisM",
-	"button-row": "custom-extension-modal_button-row_38P_C",
-	"buttonRow": "custom-extension-modal_button-row_38P_C",
-	"load-button": "custom-extension-modal_load-button_1rBmy",
-	"loadButton": "custom-extension-modal_load-button_1rBmy"
+	"modal-content": "custom-extension-modal_modal-content_3DjW0",
+	"modalContent": "custom-extension-modal_modal-content_3DjW0",
+	"body": "custom-extension-modal_body_2iQF3",
+	"unsandboxed-container": "custom-extension-modal_unsandboxed-container_8juVd",
+	"unsandboxedContainer": "custom-extension-modal_unsandboxed-container_8juVd",
+	"url-input": "custom-extension-modal_url-input_3NAsR",
+	"urlInput": "custom-extension-modal_url-input_3NAsR",
+	"text-code-input": "custom-extension-modal_text-code-input_2xKjS",
+	"textCodeInput": "custom-extension-modal_text-code-input_2xKjS",
+	"type-selector-container": "custom-extension-modal_type-selector-container_2Fag3",
+	"typeSelectorContainer": "custom-extension-modal_type-selector-container_2Fag3",
+	"type-selector-button": "custom-extension-modal_type-selector-button_1r2YN",
+	"typeSelectorButton": "custom-extension-modal_type-selector-button_1r2YN",
+	"unsandboxed-checkbox": "custom-extension-modal_unsandboxed-checkbox_HkBFl",
+	"unsandboxedCheckbox": "custom-extension-modal_unsandboxed-checkbox_HkBFl",
+	"trusted-extension": "custom-extension-modal_trusted-extension_1WNO9",
+	"trustedExtension": "custom-extension-modal_trusted-extension_1WNO9",
+	"unsandboxed-warning": "custom-extension-modal_unsandboxed-warning_1BmMu",
+	"unsandboxedWarning": "custom-extension-modal_unsandboxed-warning_1BmMu",
+	"button-row": "custom-extension-modal_button-row_3dv8g",
+	"buttonRow": "custom-extension-modal_button-row_3dv8g",
+	"load-button": "custom-extension-modal_load-button_WGJAt",
+	"loadButton": "custom-extension-modal_load-button_WGJAt"
 };
 
 /***/ }),
@@ -2807,11 +2807,11 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.file-input_container_3QJO5 {\n    display: block;\n    position: relative;\n    padding: 1rem;\n    margin: 1rem 0;\n    text-align: center;\n    border: 4px dashed var(--ui-tertiary);\n    border-radius: 5px;\n    cursor: pointer;\n    background: none;\n    width: 100%;\n}\n\n.file-input_container_3QJO5:focus-within {\n    border-color: var(--looks-secondary);\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.file-input_container_1c4jE {\n    display: block;\n    position: relative;\n    padding: 1rem;\n    margin: 1rem 0;\n    text-align: center;\n    border: 4px dashed var(--ui-tertiary);\n    border-radius: 5px;\n    cursor: pointer;\n    background: none;\n    width: 100%;\n}\n\n.file-input_container_1c4jE:focus-within {\n    border-color: var(--looks-secondary);\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"container": "file-input_container_3QJO5"
+	"container": "file-input_container_1c4jE"
 };
 
 /***/ }),
@@ -2828,11 +2828,11 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.separator_separator_1jjpt {\n  width: 100%;\n  border: none;\n  border-top: 2px solid var(--ui-black-transparent);\n  margin: 0.5rem 0;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.separator_separator_2qoYo {\n  width: 100%;\n  border: none;\n  border-top: 2px solid var(--ui-black-transparent);\n  margin: 0.5rem 0;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"separator": "separator_separator_1jjpt"
+	"separator": "separator_separator_2qoYo"
 };
 
 /***/ }),
@@ -2850,61 +2850,61 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.fonts-modal_modal-content_18OL8 {\n    max-width: 550px;\n    margin-top: 50px;\n}\n\n.fonts-modal_body_2iQc- {\n    background: var(--ui-modal-background);\n    padding: 1.5rem 2.25rem;\n    max-height: calc(100vh - 150px);\n    overflow: auto;\n    display: flex;\n    flex-direction: column;\n    gap: 1rem;\n}\n\n.fonts-modal_open-buttons_Ibv_M {\n    display: flex;\n    gap: 1rem;\n}\n\n.fonts-modal_open-button_tXG-L {\n    display: flex;\n    flex-direction: column;\n    gap: 0.5rem;\n    width: 100%;\n    align-items: center;\n    background: none;\n    padding: 0.5rem;\n    margin: 0;\n    border: 2px solid var(--ui-black-transparent);\n    border-radius: 0.5rem;\n}\n\n.fonts-modal_open-button_tXG-L:hover {\n    color: var(--looks-secondary);\n    border-color: var(--looks-secondary);\n}\n\n.fonts-modal_open-button-image_3Yvmx {\n    width: 64px;\n    height: 64px;\n    background-color: currentColor;\n    -webkit-mask-size: cover;\n            mask-size: cover;\n    -webkit-mask-repeat: no-repeat;\n            mask-repeat: no-repeat;\n}\n\n.fonts-modal_system-image_1FMIX {\n    -webkit-mask-image: url(" + escape(__webpack_require__(/*! ./system.svg */ "./src/components/tw-fonts-modal/system.svg")) + ");\n            mask-image: url(" + escape(__webpack_require__(/*! ./system.svg */ "./src/components/tw-fonts-modal/system.svg")) + ");\n}\n\n.fonts-modal_custom-image_3UlWl {\n    -webkit-mask-image: url(" + escape(__webpack_require__(/*! ./custom.svg */ "./src/components/tw-fonts-modal/custom.svg")) + ");\n            mask-image: url(" + escape(__webpack_require__(/*! ./custom.svg */ "./src/components/tw-fonts-modal/custom.svg")) + ");\n}\n\n.fonts-modal_open-button-text_2zjAq {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    width: 100%;\n}\n\n.fonts-modal_open-button-text-main_2u3P1 {\n    font-weight: bold;\n}\n\n.fonts-modal_open-button-text-sub_1635p {\n\n}\n\n.fonts-modal_font-input-outer__UCqK {\n\n}\n\n.fonts-modal_font-input_10TgQ {\n    width: 100%;\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 0.25rem;\n    padding: 0 1rem;\n    height: 3rem;\n    font: inherit;\n    color: var(--text-primary);\n    background-color: var(--input-background);\n}\n\n.fonts-modal_font-dropdown-outer_PYJoD {\n    position: absolute;\n    z-index: 510;\n    background-color: var(--ui-white);\n    color: var(--text-primary);\n    border-radius: 0.25rem;\n    overflow: auto;\n    max-height: 300px;\n    border: 1px solid var(--ui-black-transparent);\n    box-sizing: border-box;\n    box-shadow: 0px 0px 8px 1px var(--shadow);\n}\n\n.fonts-modal_font-dropdown-item_2hkHC {\n    display: flex;\n    align-items: center;\n    padding: 0.5rem 0.75rem;\n    height: 1.5rem;\n    cursor: pointer;\n    transition: .1s ease;\n}\n\n.fonts-modal_font-dropdown-item_2hkHC:hover {\n    background-color: var(--looks-secondary);\n    color: #ffffff;\n}\n\n.fonts-modal_font-playground_pRkK6 {\n    background: none;\n    border: none;\n    padding: 0.5rem;\n    margin: 0;\n    resize: none;\n    width: 100%;\n    height: 100px;\n    font-size: 1.5rem;\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 0.25rem;\n}\n\n.fonts-modal_button_1M3QC {\n    font: inherit;\n    font-weight: bold;\n    padding: 0.75rem 1rem;\n    border-radius: 0.25rem;\n    border: 1px solid var(--ui-black-transparent);\n    background-color: var(--looks-secondary);\n    color: white;\n}\n\n.fonts-modal_button_1M3QC:disabled {\n    opacity: 0.8;\n}\n\n.fonts-modal_fallback-container_3pRR4 {\n    display: flex;\n    flex-direction: column;\n}\n\n.fonts-modal_fallback-label_1O3KW {\n    margin-bottom: 0.5rem;\n}\n\n.fonts-modal_fallback-list_3UBoZ {\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr;\n    gap: 0.25rem\n}\n\n.fonts-modal_fallback-button_348ot {\n    background: none;\n    padding: 0;\n    border: 0;\n    border-radius: 0.25rem;\n    height: 30px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n.fonts-modal_fallback-button_348ot:hover {\n    color: var(--looks-secondary);\n}\n\n.fonts-modal_fallback-container_3pRR4 .fonts-modal_fallback-button-selected_3tSlW {\n    background-color: var(--looks-secondary);\n    color: white;\n}\n\n.fonts-modal_fonts-outer_3vCx7 {\n    border-top: 2px solid var(--ui-black-transparent);\n    padding-top: 1rem;\n}\n\n.fonts-modal_fonts-outer_3vCx7 p {\n    margin-bottom: 0.5rem;\n}\n\n.fonts-modal_fonts_2LnvP {\n    display: flex;\n    flex-direction: column;\n    gap: 0.5rem;\n}\n\n.fonts-modal_manage-font_AA1bK {\n    width: 100%;\n    display: flex;\n    align-items: center;\n    border: 2px solid var(--ui-black-transparent);\n    border-radius: 0.5rem;\n    padding: 0.5rem;\n    gap: 0.5rem;\n}\n\n.fonts-modal_manage-font-name_2SxDI {\n    font-size: 2rem;\n    margin-bottom: 0.5rem;\n    overflow-wrap: anywhere;\n}\n\n.fonts-modal_manage-font-buttons_2JqqJ {\n    margin-left: auto;\n    flex-shrink: 0;\n    display: flex;\n    flex-direction: row;\n    gap: 0.5rem;\n}\n\n.fonts-modal_manage-font-button_3V2ru {\n    background: none;\n    border: none;\n    border-radius: 100%;\n    width: 2rem;\n    height: 2rem;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n.fonts-modal_manage-font-button_3V2ru:hover {\n    background-color: var(--ui-black-transparent);\n}\n\n.fonts-modal_manage-font-button_3V2ru img {\n    display: block;\n    width: 100%;\n    height: 100%;\n    filter: var(--filter-icon-black);\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.fonts-modal_modal-content_36LbI {\n    max-width: 550px;\n    margin-top: 50px;\n}\n\n.fonts-modal_body_yf5mP {\n    background: var(--ui-modal-background);\n    padding: 1.5rem 2.25rem;\n    max-height: calc(100vh - 150px);\n    overflow: auto;\n    display: flex;\n    flex-direction: column;\n    gap: 1rem;\n}\n\n.fonts-modal_open-buttons_OdA4k {\n    display: flex;\n    gap: 1rem;\n}\n\n.fonts-modal_open-button_3skjP {\n    display: flex;\n    flex-direction: column;\n    gap: 0.5rem;\n    width: 100%;\n    align-items: center;\n    background: none;\n    padding: 0.5rem;\n    margin: 0;\n    border: 2px solid var(--ui-black-transparent);\n    border-radius: 0.5rem;\n}\n\n.fonts-modal_open-button_3skjP:hover {\n    color: var(--looks-secondary);\n    border-color: var(--looks-secondary);\n}\n\n.fonts-modal_open-button-image_19kgq {\n    width: 64px;\n    height: 64px;\n    background-color: currentColor;\n    -webkit-mask-size: cover;\n            mask-size: cover;\n    -webkit-mask-repeat: no-repeat;\n            mask-repeat: no-repeat;\n}\n\n.fonts-modal_system-image_p0UST {\n    -webkit-mask-image: url(" + escape(__webpack_require__(/*! ./system.svg */ "./src/components/tw-fonts-modal/system.svg")) + ");\n            mask-image: url(" + escape(__webpack_require__(/*! ./system.svg */ "./src/components/tw-fonts-modal/system.svg")) + ");\n}\n\n.fonts-modal_custom-image_3B90x {\n    -webkit-mask-image: url(" + escape(__webpack_require__(/*! ./custom.svg */ "./src/components/tw-fonts-modal/custom.svg")) + ");\n            mask-image: url(" + escape(__webpack_require__(/*! ./custom.svg */ "./src/components/tw-fonts-modal/custom.svg")) + ");\n}\n\n.fonts-modal_open-button-text_1JUnw {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    width: 100%;\n}\n\n.fonts-modal_open-button-text-main_1QWic {\n    font-weight: bold;\n}\n\n.fonts-modal_open-button-text-sub_2yVxF {\n\n}\n\n.fonts-modal_font-input-outer_OtzL0 {\n\n}\n\n.fonts-modal_font-input_jygEL {\n    width: 100%;\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 0.25rem;\n    padding: 0 1rem;\n    height: 3rem;\n    font: inherit;\n    color: var(--text-primary);\n    background-color: var(--input-background);\n}\n\n.fonts-modal_font-dropdown-outer_2kOi5 {\n    position: absolute;\n    z-index: 510;\n    background-color: var(--ui-white);\n    color: var(--text-primary);\n    border-radius: 0.25rem;\n    overflow: auto;\n    max-height: 300px;\n    border: 1px solid var(--ui-black-transparent);\n    box-sizing: border-box;\n    box-shadow: 0px 0px 8px 1px var(--shadow);\n}\n\n.fonts-modal_font-dropdown-item_1NsNq {\n    display: flex;\n    align-items: center;\n    padding: 0.5rem 0.75rem;\n    height: 1.5rem;\n    cursor: pointer;\n    transition: .1s ease;\n}\n\n.fonts-modal_font-dropdown-item_1NsNq:hover {\n    background-color: var(--looks-secondary);\n    color: #ffffff;\n}\n\n.fonts-modal_font-playground_3vAYw {\n    background: none;\n    border: none;\n    padding: 0.5rem;\n    margin: 0;\n    resize: none;\n    width: 100%;\n    height: 100px;\n    font-size: 1.5rem;\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 0.25rem;\n}\n\n.fonts-modal_button_1htQ- {\n    font: inherit;\n    font-weight: bold;\n    padding: 0.75rem 1rem;\n    border-radius: 0.25rem;\n    border: 1px solid var(--ui-black-transparent);\n    background-color: var(--looks-secondary);\n    color: white;\n}\n\n.fonts-modal_button_1htQ-:disabled {\n    opacity: 0.8;\n}\n\n.fonts-modal_fallback-container_3JsVp {\n    display: flex;\n    flex-direction: column;\n}\n\n.fonts-modal_fallback-label_3lhWz {\n    margin-bottom: 0.5rem;\n}\n\n.fonts-modal_fallback-list_dMIkJ {\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr;\n    gap: 0.25rem\n}\n\n.fonts-modal_fallback-button_11k4q {\n    background: none;\n    padding: 0;\n    border: 0;\n    border-radius: 0.25rem;\n    height: 30px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n.fonts-modal_fallback-button_11k4q:hover {\n    color: var(--looks-secondary);\n}\n\n.fonts-modal_fallback-container_3JsVp .fonts-modal_fallback-button-selected_8XTtQ {\n    background-color: var(--looks-secondary);\n    color: white;\n}\n\n.fonts-modal_fonts-outer_2gPPS {\n    border-top: 2px solid var(--ui-black-transparent);\n    padding-top: 1rem;\n}\n\n.fonts-modal_fonts-outer_2gPPS p {\n    margin-bottom: 0.5rem;\n}\n\n.fonts-modal_fonts_2IVM- {\n    display: flex;\n    flex-direction: column;\n    gap: 0.5rem;\n}\n\n.fonts-modal_manage-font_leTBp {\n    width: 100%;\n    display: flex;\n    align-items: center;\n    border: 2px solid var(--ui-black-transparent);\n    border-radius: 0.5rem;\n    padding: 0.5rem;\n    gap: 0.5rem;\n}\n\n.fonts-modal_manage-font-name_2FEQm {\n    font-size: 2rem;\n    margin-bottom: 0.5rem;\n    overflow-wrap: anywhere;\n}\n\n.fonts-modal_manage-font-buttons_1irfe {\n    margin-left: auto;\n    flex-shrink: 0;\n    display: flex;\n    flex-direction: row;\n    gap: 0.5rem;\n}\n\n.fonts-modal_manage-font-button_1Ezz0 {\n    background: none;\n    border: none;\n    border-radius: 100%;\n    width: 2rem;\n    height: 2rem;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n.fonts-modal_manage-font-button_1Ezz0:hover {\n    background-color: var(--ui-black-transparent);\n}\n\n.fonts-modal_manage-font-button_1Ezz0 img {\n    display: block;\n    width: 100%;\n    height: 100%;\n    filter: var(--filter-icon-black);\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"modal-content": "fonts-modal_modal-content_18OL8",
-	"modalContent": "fonts-modal_modal-content_18OL8",
-	"body": "fonts-modal_body_2iQc-",
-	"open-buttons": "fonts-modal_open-buttons_Ibv_M",
-	"openButtons": "fonts-modal_open-buttons_Ibv_M",
-	"open-button": "fonts-modal_open-button_tXG-L",
-	"openButton": "fonts-modal_open-button_tXG-L",
-	"open-button-image": "fonts-modal_open-button-image_3Yvmx",
-	"openButtonImage": "fonts-modal_open-button-image_3Yvmx",
-	"system-image": "fonts-modal_system-image_1FMIX",
-	"systemImage": "fonts-modal_system-image_1FMIX",
-	"custom-image": "fonts-modal_custom-image_3UlWl",
-	"customImage": "fonts-modal_custom-image_3UlWl",
-	"open-button-text": "fonts-modal_open-button-text_2zjAq",
-	"openButtonText": "fonts-modal_open-button-text_2zjAq",
-	"open-button-text-main": "fonts-modal_open-button-text-main_2u3P1",
-	"openButtonTextMain": "fonts-modal_open-button-text-main_2u3P1",
-	"open-button-text-sub": "fonts-modal_open-button-text-sub_1635p",
-	"openButtonTextSub": "fonts-modal_open-button-text-sub_1635p",
-	"font-input-outer": "fonts-modal_font-input-outer__UCqK",
-	"fontInputOuter": "fonts-modal_font-input-outer__UCqK",
-	"font-input": "fonts-modal_font-input_10TgQ",
-	"fontInput": "fonts-modal_font-input_10TgQ",
-	"font-dropdown-outer": "fonts-modal_font-dropdown-outer_PYJoD",
-	"fontDropdownOuter": "fonts-modal_font-dropdown-outer_PYJoD",
-	"font-dropdown-item": "fonts-modal_font-dropdown-item_2hkHC",
-	"fontDropdownItem": "fonts-modal_font-dropdown-item_2hkHC",
-	"font-playground": "fonts-modal_font-playground_pRkK6",
-	"fontPlayground": "fonts-modal_font-playground_pRkK6",
-	"button": "fonts-modal_button_1M3QC",
-	"fallback-container": "fonts-modal_fallback-container_3pRR4",
-	"fallbackContainer": "fonts-modal_fallback-container_3pRR4",
-	"fallback-label": "fonts-modal_fallback-label_1O3KW",
-	"fallbackLabel": "fonts-modal_fallback-label_1O3KW",
-	"fallback-list": "fonts-modal_fallback-list_3UBoZ",
-	"fallbackList": "fonts-modal_fallback-list_3UBoZ",
-	"fallback-button": "fonts-modal_fallback-button_348ot",
-	"fallbackButton": "fonts-modal_fallback-button_348ot",
-	"fallback-button-selected": "fonts-modal_fallback-button-selected_3tSlW",
-	"fallbackButtonSelected": "fonts-modal_fallback-button-selected_3tSlW",
-	"fonts-outer": "fonts-modal_fonts-outer_3vCx7",
-	"fontsOuter": "fonts-modal_fonts-outer_3vCx7",
-	"fonts": "fonts-modal_fonts_2LnvP",
-	"manage-font": "fonts-modal_manage-font_AA1bK",
-	"manageFont": "fonts-modal_manage-font_AA1bK",
-	"manage-font-name": "fonts-modal_manage-font-name_2SxDI",
-	"manageFontName": "fonts-modal_manage-font-name_2SxDI",
-	"manage-font-buttons": "fonts-modal_manage-font-buttons_2JqqJ",
-	"manageFontButtons": "fonts-modal_manage-font-buttons_2JqqJ",
-	"manage-font-button": "fonts-modal_manage-font-button_3V2ru",
-	"manageFontButton": "fonts-modal_manage-font-button_3V2ru"
+	"modal-content": "fonts-modal_modal-content_36LbI",
+	"modalContent": "fonts-modal_modal-content_36LbI",
+	"body": "fonts-modal_body_yf5mP",
+	"open-buttons": "fonts-modal_open-buttons_OdA4k",
+	"openButtons": "fonts-modal_open-buttons_OdA4k",
+	"open-button": "fonts-modal_open-button_3skjP",
+	"openButton": "fonts-modal_open-button_3skjP",
+	"open-button-image": "fonts-modal_open-button-image_19kgq",
+	"openButtonImage": "fonts-modal_open-button-image_19kgq",
+	"system-image": "fonts-modal_system-image_p0UST",
+	"systemImage": "fonts-modal_system-image_p0UST",
+	"custom-image": "fonts-modal_custom-image_3B90x",
+	"customImage": "fonts-modal_custom-image_3B90x",
+	"open-button-text": "fonts-modal_open-button-text_1JUnw",
+	"openButtonText": "fonts-modal_open-button-text_1JUnw",
+	"open-button-text-main": "fonts-modal_open-button-text-main_1QWic",
+	"openButtonTextMain": "fonts-modal_open-button-text-main_1QWic",
+	"open-button-text-sub": "fonts-modal_open-button-text-sub_2yVxF",
+	"openButtonTextSub": "fonts-modal_open-button-text-sub_2yVxF",
+	"font-input-outer": "fonts-modal_font-input-outer_OtzL0",
+	"fontInputOuter": "fonts-modal_font-input-outer_OtzL0",
+	"font-input": "fonts-modal_font-input_jygEL",
+	"fontInput": "fonts-modal_font-input_jygEL",
+	"font-dropdown-outer": "fonts-modal_font-dropdown-outer_2kOi5",
+	"fontDropdownOuter": "fonts-modal_font-dropdown-outer_2kOi5",
+	"font-dropdown-item": "fonts-modal_font-dropdown-item_1NsNq",
+	"fontDropdownItem": "fonts-modal_font-dropdown-item_1NsNq",
+	"font-playground": "fonts-modal_font-playground_3vAYw",
+	"fontPlayground": "fonts-modal_font-playground_3vAYw",
+	"button": "fonts-modal_button_1htQ-",
+	"fallback-container": "fonts-modal_fallback-container_3JsVp",
+	"fallbackContainer": "fonts-modal_fallback-container_3JsVp",
+	"fallback-label": "fonts-modal_fallback-label_3lhWz",
+	"fallbackLabel": "fonts-modal_fallback-label_3lhWz",
+	"fallback-list": "fonts-modal_fallback-list_dMIkJ",
+	"fallbackList": "fonts-modal_fallback-list_dMIkJ",
+	"fallback-button": "fonts-modal_fallback-button_11k4q",
+	"fallbackButton": "fonts-modal_fallback-button_11k4q",
+	"fallback-button-selected": "fonts-modal_fallback-button-selected_8XTtQ",
+	"fallbackButtonSelected": "fonts-modal_fallback-button-selected_8XTtQ",
+	"fonts-outer": "fonts-modal_fonts-outer_2gPPS",
+	"fontsOuter": "fonts-modal_fonts-outer_2gPPS",
+	"fonts": "fonts-modal_fonts_2IVM-",
+	"manage-font": "fonts-modal_manage-font_leTBp",
+	"manageFont": "fonts-modal_manage-font_leTBp",
+	"manage-font-name": "fonts-modal_manage-font-name_2FEQm",
+	"manageFontName": "fonts-modal_manage-font-name_2FEQm",
+	"manage-font-buttons": "fonts-modal_manage-font-buttons_1irfe",
+	"manageFontButtons": "fonts-modal_manage-font-buttons_1irfe",
+	"manage-font-button": "fonts-modal_manage-font-button_1Ezz0",
+	"manageFontButton": "fonts-modal_manage-font-button_1Ezz0"
 };
 
 /***/ }),
@@ -2921,14 +2921,14 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.framerate-indicator_framerate-container_3JPah {\n    display: flex;\n    align-items: center;\n    padding: 0.25rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n}\n\n.framerate-indicator_framerate-label_39miY {\n    font-size: 0.625rem;\n    font-weight: bold;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    color: var(--control-primary);\n    white-space: nowrap;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.framerate-indicator_framerate-container_NtFdv {\n    display: flex;\n    align-items: center;\n    padding: 0.25rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n}\n\n.framerate-indicator_framerate-label_2VeIK {\n    font-size: 0.625rem;\n    font-weight: bold;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    color: var(--control-primary);\n    white-space: nowrap;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"framerate-container": "framerate-indicator_framerate-container_3JPah",
-	"framerateContainer": "framerate-indicator_framerate-container_3JPah",
-	"framerate-label": "framerate-indicator_framerate-label_39miY",
-	"framerateLabel": "framerate-indicator_framerate-label_39miY"
+	"framerate-container": "framerate-indicator_framerate-container_NtFdv",
+	"framerateContainer": "framerate-indicator_framerate-container_NtFdv",
+	"framerate-label": "framerate-indicator_framerate-label_2VeIK",
+	"framerateLabel": "framerate-indicator_framerate-label_2VeIK"
 };
 
 /***/ }),
@@ -2945,15 +2945,15 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.invalid-project-modal_modal-content_gjo_N {\n    max-width: 480px;\n    margin-top: 50px;\n}\n\n.invalid-project-modal_body_2pc0v {\n    background: var(--ui-modal-background);\n    padding: 1.5rem 2.25rem;\n    max-height: calc(100vh - 150px);\n    overflow: auto;\n    display: flex;\n    flex-direction: column;\n    gap: 1rem;\n}\n\n.invalid-project-modal_error_15lTg {\n    font-family: monospace;\n    height: 125px;\n    width: 100%;\n    box-sizing: border-box;\n    resize: vertical;\n    padding: 0.5rem;\n    border-radius: 0.5rem;\n    border: 1px solid var(--ui-black-transparent);\n    background-color: var(--input-background);\n    color: inherit;\n}\n\n.invalid-project-modal_button_3w91i {\n    font: inherit;\n    font-weight: bold;\n    padding: 0.75rem 1rem;\n    border-radius: 0.25rem;\n    border: 1px solid var(--ui-black-transparent);\n    background-color: var(--looks-secondary);\n    color: white;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.invalid-project-modal_modal-content_AZ4Xt {\n    max-width: 480px;\n    margin-top: 50px;\n}\n\n.invalid-project-modal_body_3FIpH {\n    background: var(--ui-modal-background);\n    padding: 1.5rem 2.25rem;\n    max-height: calc(100vh - 150px);\n    overflow: auto;\n    display: flex;\n    flex-direction: column;\n    gap: 1rem;\n}\n\n.invalid-project-modal_error_ykzaO {\n    font-family: monospace;\n    height: 125px;\n    width: 100%;\n    box-sizing: border-box;\n    resize: vertical;\n    padding: 0.5rem;\n    border-radius: 0.5rem;\n    border: 1px solid var(--ui-black-transparent);\n    background-color: var(--input-background);\n    color: inherit;\n}\n\n.invalid-project-modal_button_1oppw {\n    font: inherit;\n    font-weight: bold;\n    padding: 0.75rem 1rem;\n    border-radius: 0.25rem;\n    border: 1px solid var(--ui-black-transparent);\n    background-color: var(--looks-secondary);\n    color: white;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"modal-content": "invalid-project-modal_modal-content_gjo_N",
-	"modalContent": "invalid-project-modal_modal-content_gjo_N",
-	"body": "invalid-project-modal_body_2pc0v",
-	"error": "invalid-project-modal_error_15lTg",
-	"button": "invalid-project-modal_button_3w91i"
+	"modal-content": "invalid-project-modal_modal-content_AZ4Xt",
+	"modalContent": "invalid-project-modal_modal-content_AZ4Xt",
+	"body": "invalid-project-modal_body_3FIpH",
+	"error": "invalid-project-modal_error_ykzaO",
+	"button": "invalid-project-modal_button_1oppw"
 };
 
 /***/ }),
@@ -2970,12 +2970,12 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.spinner_container_-o2Vc {\n    display: flex;\n    width: 100%;\n    height: 100%;\n    align-items: center;\n    justify-content: center;\n}\n\n.spinner_spinner_2EFkd {\n    width: 64px;\n    height: 64px;\n    border-radius: 50%;\n    border: 6px solid;\n    border-color: var(--looks-secondary) transparent var(--looks-secondary) transparent;\n    animation: spinner_spinner_2EFkd 1.2s linear infinite;\n}\n\n@keyframes spinner_spinner_2EFkd {\n    0% {\n        transform: rotate(0deg);\n    }\n    100% {\n        transform: rotate(360deg);\n    }\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.spinner_container_2gp3A {\n    display: flex;\n    width: 100%;\n    height: 100%;\n    align-items: center;\n    justify-content: center;\n}\n\n.spinner_spinner_3_DJ6 {\n    width: 64px;\n    height: 64px;\n    border-radius: 50%;\n    border: 6px solid;\n    border-color: var(--looks-secondary) transparent var(--looks-secondary) transparent;\n    animation: spinner_spinner_3_DJ6 1.2s linear infinite;\n}\n\n@keyframes spinner_spinner_3_DJ6 {\n    0% {\n        transform: rotate(0deg);\n    }\n    100% {\n        transform: rotate(360deg);\n    }\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"container": "spinner_container_-o2Vc",
-	"spinner": "spinner_spinner_2EFkd"
+	"container": "spinner_container_2gp3A",
+	"spinner": "spinner_spinner_3_DJ6"
 };
 
 /***/ }),
@@ -2992,12 +2992,12 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".removed-trademarks_removed-trademarks_3XRwc {\n    opacity: 0.75;\n}\n", ""]);
+exports.push([module.i, ".removed-trademarks_removed-trademarks_2gcSr {\n    opacity: 0.75;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"removed-trademarks": "removed-trademarks_removed-trademarks_3XRwc",
-	"removedTrademarks": "removed-trademarks_removed-trademarks_3XRwc"
+	"removed-trademarks": "removed-trademarks_removed-trademarks_2gcSr",
+	"removedTrademarks": "removed-trademarks_removed-trademarks_2gcSr"
 };
 
 /***/ }),
@@ -3014,41 +3014,41 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.restore-point-modal_modal-content_1cTB4 {\n    max-width: 600px;\n    margin-top: 50px;\n}\n\n.restore-point-modal_body_Ne9Vp {\n    background: var(--ui-modal-background);\n    padding: 1.5rem 2.25rem;\n    max-height: calc(100vh - 150px);\n    overflow: auto;\n    display: flex;\n    flex-direction: column;\n    gap: 1rem;\n}\n\n.restore-point-modal_extra-container_tMv36 {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n}\n\n.restore-point-modal_total-size_3gtWl {\n\n}\n\n.restore-point-modal_total-size-description_3Zmy6 {\n    font-size: small;\n}\n\n.restore-point-modal_button_cFvo3 {\n    font: inherit;\n    color: inherit;\n    padding: 0.75rem 1rem;\n    border-radius: 0.25rem;\n    border: 1px solid var(--ui-black-transparent);\n    font-weight: 600;\n    font-size: 0.85rem;\n    color: var(--ui-white);\n}\n\n.restore-point-modal_button_cFvo3:disabled {\n    opacity: 0.8;\n}\n\n.restore-point-modal_delete-all-button_9PWf0 {\n    margin-left: 1rem;\n    background-color: var(--data-primary);\n    color: white;\n    white-space: nowrap;\n}\n\n.restore-point-modal_error-message_19Pqn {\n    font-family: monospace;\n    -webkit-user-select: text;\n       -moz-user-select: text;\n        -ms-user-select: text;\n            user-select: text;\n}\n\n.restore-point-modal_restore-point-container_3KiD9 {\n    display: grid;\n    grid-template-columns: 1fr;\n    gap: 0.5rem;\n}\n\n.restore-point-modal_restore-point_11IHu {\n    width: 100%;\n    cursor: pointer;\n    display: flex;\n    align-items: center;\n    border: 2px solid var(--ui-black-transparent);\n    padding: 0.5rem;\n    border-radius: 0.5rem;\n    gap: 0.5rem;\n}\n\n.restore-point-modal_restore-point_11IHu:hover {\n    border-color: var(--looks-secondary);\n}\n\n.restore-point-modal_restore-point-title_k0U8V {\n    font-weight: bold;\n}\n\n.restore-point-modal_thumbnail-container_3RM7b {\n    flex-shrink: 0;\n    /* 4:3 */\n    width: 100px;\n    height: 75px;\n}\n\n.restore-point-modal_thumbnail-image_31By_ {\n    display: block;\n    border-radius: 0.25rem;\n    width: 100%;\n    height: 100%;\n}\n\n.restore-point-modal_thumbnail-placeholder_2Q3El {\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    font-size: 2em;\n}\n\n.restore-point-modal_restore-point-buttons_1mPFn {\n    margin-left: auto;\n    display: flex;\n    flex-direction: row;\n    gap: 0.5rem;\n}\n\n.restore-point-modal_restore-point-button_2eIR7 {\n    -webkit-appearance: none;\n       -moz-appearance: none;\n            appearance: none;\n    background: none;\n    border: none;\n    border-radius: 100%;\n    width: 2rem;\n    height: 2rem;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n.restore-point-modal_restore-point-button_2eIR7[disabled] {\n    opacity: 0.5;\n}\n\n.restore-point-modal_restore-point-button_2eIR7 img {\n    display: block;\n    width: 75%;\n    height: 75%;\n    filter: var(--filter-icon-gray);\n}\n\n.restore-point-modal_restore-point-button_2eIR7:not([disabled]):hover {\n    background-color: var(--ui-black-transparent);\n}\n\n.restore-point-modal_disabled_7w0zS {\n    padding: 0.5rem;\n    border-radius: 0.5rem;\n    background-color: rgba(255, 0, 0, 0.18);\n    border: 2px solid rgba(255, 0, 0, 0.568);\n    font-weight: bold;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.restore-point-modal_modal-content_MhWVL {\n    max-width: 600px;\n    margin-top: 50px;\n}\n\n.restore-point-modal_body_2MCxE {\n    background: var(--ui-modal-background);\n    padding: 1.5rem 2.25rem;\n    max-height: calc(100vh - 150px);\n    overflow: auto;\n    display: flex;\n    flex-direction: column;\n    gap: 1rem;\n}\n\n.restore-point-modal_extra-container_1h-QF {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n}\n\n.restore-point-modal_total-size_2aFad {\n\n}\n\n.restore-point-modal_total-size-description_2spx- {\n    font-size: small;\n}\n\n.restore-point-modal_button_3fhkL {\n    font: inherit;\n    color: inherit;\n    padding: 0.75rem 1rem;\n    border-radius: 0.25rem;\n    border: 1px solid var(--ui-black-transparent);\n    font-weight: 600;\n    font-size: 0.85rem;\n    color: var(--ui-white);\n}\n\n.restore-point-modal_button_3fhkL:disabled {\n    opacity: 0.8;\n}\n\n.restore-point-modal_delete-all-button_3uoFz {\n    margin-left: 1rem;\n    background-color: var(--data-primary);\n    color: white;\n    white-space: nowrap;\n}\n\n.restore-point-modal_error-message_2jcrY {\n    font-family: monospace;\n    -webkit-user-select: text;\n       -moz-user-select: text;\n        -ms-user-select: text;\n            user-select: text;\n}\n\n.restore-point-modal_restore-point-container_FtGHo {\n    display: grid;\n    grid-template-columns: 1fr;\n    gap: 0.5rem;\n}\n\n.restore-point-modal_restore-point_2yeHY {\n    width: 100%;\n    cursor: pointer;\n    display: flex;\n    align-items: center;\n    border: 2px solid var(--ui-black-transparent);\n    padding: 0.5rem;\n    border-radius: 0.5rem;\n    gap: 0.5rem;\n}\n\n.restore-point-modal_restore-point_2yeHY:hover {\n    border-color: var(--looks-secondary);\n}\n\n.restore-point-modal_restore-point-title_311jA {\n    font-weight: bold;\n}\n\n.restore-point-modal_thumbnail-container_2BRX1 {\n    flex-shrink: 0;\n    /* 4:3 */\n    width: 100px;\n    height: 75px;\n}\n\n.restore-point-modal_thumbnail-image_2HLfd {\n    display: block;\n    border-radius: 0.25rem;\n    width: 100%;\n    height: 100%;\n}\n\n.restore-point-modal_thumbnail-placeholder_3BxpD {\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    font-size: 2em;\n}\n\n.restore-point-modal_restore-point-buttons_-quKp {\n    margin-left: auto;\n    display: flex;\n    flex-direction: row;\n    gap: 0.5rem;\n}\n\n.restore-point-modal_restore-point-button_3qXS6 {\n    -webkit-appearance: none;\n       -moz-appearance: none;\n            appearance: none;\n    background: none;\n    border: none;\n    border-radius: 100%;\n    width: 2rem;\n    height: 2rem;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n.restore-point-modal_restore-point-button_3qXS6[disabled] {\n    opacity: 0.5;\n}\n\n.restore-point-modal_restore-point-button_3qXS6 img {\n    display: block;\n    width: 75%;\n    height: 75%;\n    filter: var(--filter-icon-gray);\n}\n\n.restore-point-modal_restore-point-button_3qXS6:not([disabled]):hover {\n    background-color: var(--ui-black-transparent);\n}\n\n.restore-point-modal_disabled_2fYZv {\n    padding: 0.5rem;\n    border-radius: 0.5rem;\n    background-color: rgba(255, 0, 0, 0.18);\n    border: 2px solid rgba(255, 0, 0, 0.568);\n    font-weight: bold;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"modal-content": "restore-point-modal_modal-content_1cTB4",
-	"modalContent": "restore-point-modal_modal-content_1cTB4",
-	"body": "restore-point-modal_body_Ne9Vp",
-	"extra-container": "restore-point-modal_extra-container_tMv36",
-	"extraContainer": "restore-point-modal_extra-container_tMv36",
-	"total-size": "restore-point-modal_total-size_3gtWl",
-	"totalSize": "restore-point-modal_total-size_3gtWl",
-	"total-size-description": "restore-point-modal_total-size-description_3Zmy6",
-	"totalSizeDescription": "restore-point-modal_total-size-description_3Zmy6",
-	"button": "restore-point-modal_button_cFvo3",
-	"delete-all-button": "restore-point-modal_delete-all-button_9PWf0",
-	"deleteAllButton": "restore-point-modal_delete-all-button_9PWf0",
-	"error-message": "restore-point-modal_error-message_19Pqn",
-	"errorMessage": "restore-point-modal_error-message_19Pqn",
-	"restore-point-container": "restore-point-modal_restore-point-container_3KiD9",
-	"restorePointContainer": "restore-point-modal_restore-point-container_3KiD9",
-	"restore-point": "restore-point-modal_restore-point_11IHu",
-	"restorePoint": "restore-point-modal_restore-point_11IHu",
-	"restore-point-title": "restore-point-modal_restore-point-title_k0U8V",
-	"restorePointTitle": "restore-point-modal_restore-point-title_k0U8V",
-	"thumbnail-container": "restore-point-modal_thumbnail-container_3RM7b",
-	"thumbnailContainer": "restore-point-modal_thumbnail-container_3RM7b",
-	"thumbnail-image": "restore-point-modal_thumbnail-image_31By_",
-	"thumbnailImage": "restore-point-modal_thumbnail-image_31By_",
-	"thumbnail-placeholder": "restore-point-modal_thumbnail-placeholder_2Q3El",
-	"thumbnailPlaceholder": "restore-point-modal_thumbnail-placeholder_2Q3El",
-	"restore-point-buttons": "restore-point-modal_restore-point-buttons_1mPFn",
-	"restorePointButtons": "restore-point-modal_restore-point-buttons_1mPFn",
-	"restore-point-button": "restore-point-modal_restore-point-button_2eIR7",
-	"restorePointButton": "restore-point-modal_restore-point-button_2eIR7",
-	"disabled": "restore-point-modal_disabled_7w0zS"
+	"modal-content": "restore-point-modal_modal-content_MhWVL",
+	"modalContent": "restore-point-modal_modal-content_MhWVL",
+	"body": "restore-point-modal_body_2MCxE",
+	"extra-container": "restore-point-modal_extra-container_1h-QF",
+	"extraContainer": "restore-point-modal_extra-container_1h-QF",
+	"total-size": "restore-point-modal_total-size_2aFad",
+	"totalSize": "restore-point-modal_total-size_2aFad",
+	"total-size-description": "restore-point-modal_total-size-description_2spx-",
+	"totalSizeDescription": "restore-point-modal_total-size-description_2spx-",
+	"button": "restore-point-modal_button_3fhkL",
+	"delete-all-button": "restore-point-modal_delete-all-button_3uoFz",
+	"deleteAllButton": "restore-point-modal_delete-all-button_3uoFz",
+	"error-message": "restore-point-modal_error-message_2jcrY",
+	"errorMessage": "restore-point-modal_error-message_2jcrY",
+	"restore-point-container": "restore-point-modal_restore-point-container_FtGHo",
+	"restorePointContainer": "restore-point-modal_restore-point-container_FtGHo",
+	"restore-point": "restore-point-modal_restore-point_2yeHY",
+	"restorePoint": "restore-point-modal_restore-point_2yeHY",
+	"restore-point-title": "restore-point-modal_restore-point-title_311jA",
+	"restorePointTitle": "restore-point-modal_restore-point-title_311jA",
+	"thumbnail-container": "restore-point-modal_thumbnail-container_2BRX1",
+	"thumbnailContainer": "restore-point-modal_thumbnail-container_2BRX1",
+	"thumbnail-image": "restore-point-modal_thumbnail-image_2HLfd",
+	"thumbnailImage": "restore-point-modal_thumbnail-image_2HLfd",
+	"thumbnail-placeholder": "restore-point-modal_thumbnail-placeholder_3BxpD",
+	"thumbnailPlaceholder": "restore-point-modal_thumbnail-placeholder_3BxpD",
+	"restore-point-buttons": "restore-point-modal_restore-point-buttons_-quKp",
+	"restorePointButtons": "restore-point-modal_restore-point-buttons_-quKp",
+	"restore-point-button": "restore-point-modal_restore-point-button_3qXS6",
+	"restorePointButton": "restore-point-modal_restore-point-button_3qXS6",
+	"disabled": "restore-point-modal_disabled_2fYZv"
 };
 
 /***/ }),
@@ -3065,11 +3065,11 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.data-url_code_fTTSN {\n    display: block;\n    width: 100%;\n    max-width: 100%;\n    min-width: 100%;\n    height: 5rem;\n    min-height: 3rem;\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 0.25rem;\n    padding: 0.25rem;\n    font-size: 0.875rem;\n    font-family: monospace;\n    margin: 0.5rem 0;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.data-url_code_1o8oS {\n    display: block;\n    width: 100%;\n    max-width: 100%;\n    min-width: 100%;\n    height: 5rem;\n    min-height: 3rem;\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 0.25rem;\n    padding: 0.25rem;\n    font-size: 0.875rem;\n    font-family: monospace;\n    margin: 0.5rem 0;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"code": "data-url_code_fTTSN"
+	"code": "data-url_code_1o8oS"
 };
 
 /***/ }),
@@ -3086,15 +3086,15 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".download_file-name_1ae0K {\n    font-family: monospace;\n    -webkit-user-select: text;\n       -moz-user-select: text;\n        -ms-user-select: text;\n            user-select: text;\n    word-wrap: break-word;\n}\n.download_file-name_1ae0K::before {\n    content: '\"';\n}\n.download_file-name_1ae0K::after {\n    content: '\"';\n}\n.download_name_1dXN3 {\n\n}\n.download_dot_1GvC1 {\n\n}\n.download_extension_15MbY {\n    text-decoration: underline;\n}\n", ""]);
+exports.push([module.i, ".download_file-name_1tb8X {\n    font-family: monospace;\n    -webkit-user-select: text;\n       -moz-user-select: text;\n        -ms-user-select: text;\n            user-select: text;\n    word-wrap: break-word;\n}\n.download_file-name_1tb8X::before {\n    content: '\"';\n}\n.download_file-name_1tb8X::after {\n    content: '\"';\n}\n.download_name_3QMMC {\n\n}\n.download_dot_Tzo59 {\n\n}\n.download_extension_359jK {\n    text-decoration: underline;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"file-name": "download_file-name_1ae0K",
-	"fileName": "download_file-name_1ae0K",
-	"name": "download_name_1dXN3",
-	"dot": "download_dot_1GvC1",
-	"extension": "download_extension_15MbY"
+	"file-name": "download_file-name_1tb8X",
+	"fileName": "download_file-name_1tb8X",
+	"name": "download_name_3QMMC",
+	"dot": "download_dot_Tzo59",
+	"extension": "download_extension_359jK"
 };
 
 /***/ }),
@@ -3111,18 +3111,18 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.load-extension_code_18JAZ,\n.load-extension_unsandboxed-container_3wUNS,\n.load-extension_unsandboxed-warning_3AXrs,\n.load-extension_sandboxed_2q4uS {\n    margin: 8px 0;\n}\n\n.load-extension_unsandboxed-container_3wUNS {\n    display: flex;\n    align-items: center;\n}\n\n.load-extension_unsandboxed-checkbox_3F7r1 {\n    margin-right: 8px;\n}\n\n.load-extension_unsandboxed-warning_3AXrs {\n    padding: 0.5rem;\n    border-radius: 0.25rem;\n    background-color: rgba(255, 81, 81, 0.25);\n    border: 1px solid red;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.load-extension_code_2UsqN,\n.load-extension_unsandboxed-container_3_M9P,\n.load-extension_unsandboxed-warning_2iFhK,\n.load-extension_sandboxed_3ynzH {\n    margin: 8px 0;\n}\n\n.load-extension_unsandboxed-container_3_M9P {\n    display: flex;\n    align-items: center;\n}\n\n.load-extension_unsandboxed-checkbox_1tSmf {\n    margin-right: 8px;\n}\n\n.load-extension_unsandboxed-warning_2iFhK {\n    padding: 0.5rem;\n    border-radius: 0.25rem;\n    background-color: rgba(255, 81, 81, 0.25);\n    border: 1px solid red;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"code": "load-extension_code_18JAZ",
-	"unsandboxed-container": "load-extension_unsandboxed-container_3wUNS",
-	"unsandboxedContainer": "load-extension_unsandboxed-container_3wUNS",
-	"unsandboxed-warning": "load-extension_unsandboxed-warning_3AXrs",
-	"unsandboxedWarning": "load-extension_unsandboxed-warning_3AXrs",
-	"sandboxed": "load-extension_sandboxed_2q4uS",
-	"unsandboxed-checkbox": "load-extension_unsandboxed-checkbox_3F7r1",
-	"unsandboxedCheckbox": "load-extension_unsandboxed-checkbox_3F7r1"
+	"code": "load-extension_code_2UsqN",
+	"unsandboxed-container": "load-extension_unsandboxed-container_3_M9P",
+	"unsandboxedContainer": "load-extension_unsandboxed-container_3_M9P",
+	"unsandboxed-warning": "load-extension_unsandboxed-warning_2iFhK",
+	"unsandboxedWarning": "load-extension_unsandboxed-warning_2iFhK",
+	"sandboxed": "load-extension_sandboxed_3ynzH",
+	"unsandboxed-checkbox": "load-extension_unsandboxed-checkbox_1tSmf",
+	"unsandboxedCheckbox": "load-extension_unsandboxed-checkbox_1tSmf"
 };
 
 /***/ }),
@@ -3139,18 +3139,18 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.security-manager-modal_modal-content_33sCQ {\n    width: 440px;\n    margin-top: 25px;\n}\n\n.security-manager-modal_body_1jZgz {\n    background: var(--ui-white);\n    padding: 1rem 1.5rem;\n}\n\n.security-manager-modal_body_1jZgz p {\n    margin: 8px 0;\n}\n\n.security-manager-modal_buttons_3qEck {\n    display: flex;\n}\n\n.security-manager-modal_buttons_3qEck :disabled {\n    opacity: 0.8;\n}\n\n.security-manager-modal_deny-button_dMRqK, .security-manager-modal_allow-button_3liNF {\n    flex-grow: 1;\n    font: inherit;\n    color: inherit;\n    padding: 0.75rem 1rem;\n    border-radius: 0.25rem;\n    border: 1px solid var(--ui-black-transparent);\n    font-weight: 600;\n    font-size: 0.85rem;\n}\n\n.security-manager-modal_deny-button_dMRqK {\n    background-color: rgb(255, 92, 92);\n    color: white;\n    margin-right: 8px;\n}\n\n.security-manager-modal_allow-button_3liNF {\n    background-color: #24cd11;\n    color: black;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.security-manager-modal_modal-content_3qWwH {\n    width: 440px;\n    margin-top: 25px;\n}\n\n.security-manager-modal_body_Pn7qy {\n    background: var(--ui-white);\n    padding: 1rem 1.5rem;\n}\n\n.security-manager-modal_body_Pn7qy p {\n    margin: 8px 0;\n}\n\n.security-manager-modal_buttons_1LSKA {\n    display: flex;\n}\n\n.security-manager-modal_buttons_1LSKA :disabled {\n    opacity: 0.8;\n}\n\n.security-manager-modal_deny-button_3Vd-R, .security-manager-modal_allow-button_3tcXk {\n    flex-grow: 1;\n    font: inherit;\n    color: inherit;\n    padding: 0.75rem 1rem;\n    border-radius: 0.25rem;\n    border: 1px solid var(--ui-black-transparent);\n    font-weight: 600;\n    font-size: 0.85rem;\n}\n\n.security-manager-modal_deny-button_3Vd-R {\n    background-color: rgb(255, 92, 92);\n    color: white;\n    margin-right: 8px;\n}\n\n.security-manager-modal_allow-button_3tcXk {\n    background-color: #24cd11;\n    color: black;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"modal-content": "security-manager-modal_modal-content_33sCQ",
-	"modalContent": "security-manager-modal_modal-content_33sCQ",
-	"body": "security-manager-modal_body_1jZgz",
-	"buttons": "security-manager-modal_buttons_3qEck",
-	"deny-button": "security-manager-modal_deny-button_dMRqK",
-	"denyButton": "security-manager-modal_deny-button_dMRqK",
-	"allow-button": "security-manager-modal_allow-button_3liNF",
-	"allowButton": "security-manager-modal_allow-button_3liNF"
+	"modal-content": "security-manager-modal_modal-content_3qWwH",
+	"modalContent": "security-manager-modal_modal-content_3qWwH",
+	"body": "security-manager-modal_body_Pn7qy",
+	"buttons": "security-manager-modal_buttons_1LSKA",
+	"deny-button": "security-manager-modal_deny-button_3Vd-R",
+	"denyButton": "security-manager-modal_deny-button_3Vd-R",
+	"allow-button": "security-manager-modal_allow-button_3tcXk",
+	"allowButton": "security-manager-modal_allow-button_3tcXk"
 };
 
 /***/ }),
@@ -3167,11 +3167,11 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".url_url_3I3v0 {\n    font-family: monospace;\n    -webkit-user-select: text;\n       -moz-user-select: text;\n        -ms-user-select: text;\n            user-select: text;\n    word-wrap: break-word;\n}\n.url_url_3I3v0::before {\n    content: '\"';\n}\n.url_url_3I3v0::after {\n    content: '\"';\n}\n", ""]);
+exports.push([module.i, ".url_url_3Y61f {\n    font-family: monospace;\n    -webkit-user-select: text;\n       -moz-user-select: text;\n        -ms-user-select: text;\n            user-select: text;\n    word-wrap: break-word;\n}\n.url_url_3Y61f::before {\n    content: '\"';\n}\n.url_url_3Y61f::after {\n    content: '\"';\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"url": "url_url_3I3v0"
+	"url": "url_url_3Y61f"
 };
 
 /***/ }),
@@ -3188,28 +3188,28 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.settings-modal_modal-content_14XGC {\n    max-width: 750px;\n}\n\n.settings-modal_body_2_OnB {\n    background: var(--ui-modal-background);\n    padding: 1.5rem 2.25rem;\n    min-height: 150px;\n    max-height: calc(100vh - 250px);\n    overflow-y: auto;\n}\n\n/* For small screens, such as in the embed */\n\n@media (max-height: 600px) {\n    .settings-modal_modal-content_14XGC {\n        margin: 50px auto;\n    }\n    .settings-modal_body_2_OnB {\n        max-height: calc(100vh - 150px);\n    }\n}\n\n.settings-modal_setting_3KFrK {\n    display: flex;\n    flex-direction: column;\n    padding: 0.5rem 1rem;\n    margin: 0.25rem 0;\n    border-radius: 4px;\n}\n\n.settings-modal_setting_3KFrK.settings-modal_active_1Tl18 {\n    background: var(--badge-background);\n}\n\n.settings-modal_setting_3KFrK:hover,\n.settings-modal_setting_3KFrK:focus-within {\n    background: var(--badge-border);\n}\n\n.settings-modal_label_21R3L {\n    height: 32px;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n}\n\n.settings-modal_setting_3KFrK table {\n    border-collapse: collapse;\n}\n\n.settings-modal_setting_3KFrK tr,\n.settings-modal_setting_3KFrK td,\n.settings-modal_setting_3KFrK th {\n    padding: 0;\n    margin: 0;\n    border: 1px solid var(--ui-tertiary);\n}\n\n.settings-modal_checkbox_3KZcV {\n    margin-right: 0.5rem;\n}\n\n.settings-modal_help-icon__QQqI {\n    position: relative;\n    border: 0;\n    background-color: transparent;\n    width: 20px;\n    height: 20px;\n    background-size: 100%;\n    margin-left: 0.5rem;\n    cursor: pointer;\n}\n\n.settings-modal_help-icon__QQqI img {\n    display: block;\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    filter: var(--filter-icon-black);\n}\n\n.settings-modal_custom-stage-size_dr_Qv > * {\n    margin-right: 0.5rem;\n}\n\n.settings-modal_custom-stage-size-input_1Pr3z {\n    width: 80px;\n}\n\n.settings-modal_info_Ce_iV {\n    margin-bottom: 0.25rem;\n}\n\n.settings-modal_header_112iQ {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    margin: 0.5rem 0 0 0;\n    font-weight: bold;\n}\n\n.settings-modal_divider_3K8K_ {\n    flex-grow: 1;\n    margin-left: 1rem;\n    border-top: 1px dashed var(--ui-tertiary);\n}\n\n.settings-modal_button_ACn0P {\n    font-family: inherit;\n    font-size: 14px;\n    background-color: var(--looks-secondary);\n    color: white;\n    border: none;\n    padding: 0.5rem 1rem;\n    margin: 0;\n    border-radius: 4px;\n    cursor: pointer;\n    font-family: inherit;\n    font-weight: bold;\n}\n\n.settings-modal_button_ACn0P:active, .settings-modal_button_ACn0P:focus-within {\n    box-shadow: 0 0 0 3px var(--looks-transparent);\n}\n\n.settings-modal_warning_3UmRm {\n    padding: 0.5rem 1rem;\n    margin: 0.25rem 0;\n    border-radius: 4px;\n    background: rgb(233, 233, 53);\n    color: var(--text-primary-default);\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.settings-modal_modal-content_2bE7f {\n    max-width: 750px;\n}\n\n.settings-modal_body_cAUJ0 {\n    background: var(--ui-modal-background);\n    padding: 1.5rem 2.25rem;\n    min-height: 150px;\n    max-height: calc(100vh - 250px);\n    overflow-y: auto;\n}\n\n/* For small screens, such as in the embed */\n\n@media (max-height: 600px) {\n    .settings-modal_modal-content_2bE7f {\n        margin: 50px auto;\n    }\n    .settings-modal_body_cAUJ0 {\n        max-height: calc(100vh - 150px);\n    }\n}\n\n.settings-modal_setting_PxhNM {\n    display: flex;\n    flex-direction: column;\n    padding: 0.5rem 1rem;\n    margin: 0.25rem 0;\n    border-radius: 4px;\n}\n\n.settings-modal_setting_PxhNM.settings-modal_active_1McfX {\n    background: var(--badge-background);\n}\n\n.settings-modal_setting_PxhNM:hover,\n.settings-modal_setting_PxhNM:focus-within {\n    background: var(--badge-border);\n}\n\n.settings-modal_label_2Phuq {\n    height: 32px;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n}\n\n.settings-modal_setting_PxhNM table {\n    border-collapse: collapse;\n}\n\n.settings-modal_setting_PxhNM tr,\n.settings-modal_setting_PxhNM td,\n.settings-modal_setting_PxhNM th {\n    padding: 0;\n    margin: 0;\n    border: 1px solid var(--ui-tertiary);\n}\n\n.settings-modal_checkbox_1dXwG {\n    margin-right: 0.5rem;\n}\n\n.settings-modal_help-icon_2FTix {\n    position: relative;\n    border: 0;\n    background-color: transparent;\n    width: 20px;\n    height: 20px;\n    background-size: 100%;\n    margin-left: 0.5rem;\n    cursor: pointer;\n}\n\n.settings-modal_help-icon_2FTix img {\n    display: block;\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    filter: var(--filter-icon-black);\n}\n\n.settings-modal_custom-stage-size_3I0AA > * {\n    margin-right: 0.5rem;\n}\n\n.settings-modal_custom-stage-size-input_2ivQT {\n    width: 80px;\n}\n\n.settings-modal_info_1a5yx {\n    margin-bottom: 0.25rem;\n}\n\n.settings-modal_header_3lDNd {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    margin: 0.5rem 0 0 0;\n    font-weight: bold;\n}\n\n.settings-modal_divider_7euKA {\n    flex-grow: 1;\n    margin-left: 1rem;\n    border-top: 1px dashed var(--ui-tertiary);\n}\n\n.settings-modal_button_15QCA {\n    font-family: inherit;\n    font-size: 14px;\n    background-color: var(--looks-secondary);\n    color: white;\n    border: none;\n    padding: 0.5rem 1rem;\n    margin: 0;\n    border-radius: 4px;\n    cursor: pointer;\n    font-family: inherit;\n    font-weight: bold;\n}\n\n.settings-modal_button_15QCA:active, .settings-modal_button_15QCA:focus-within {\n    box-shadow: 0 0 0 3px var(--looks-transparent);\n}\n\n.settings-modal_warning_2xSC8 {\n    padding: 0.5rem 1rem;\n    margin: 0.25rem 0;\n    border-radius: 4px;\n    background: rgb(233, 233, 53);\n    color: var(--text-primary-default);\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"modal-content": "settings-modal_modal-content_14XGC",
-	"modalContent": "settings-modal_modal-content_14XGC",
-	"body": "settings-modal_body_2_OnB",
-	"setting": "settings-modal_setting_3KFrK",
-	"active": "settings-modal_active_1Tl18",
-	"label": "settings-modal_label_21R3L",
-	"checkbox": "settings-modal_checkbox_3KZcV",
-	"help-icon": "settings-modal_help-icon__QQqI",
-	"helpIcon": "settings-modal_help-icon__QQqI",
-	"custom-stage-size": "settings-modal_custom-stage-size_dr_Qv",
-	"customStageSize": "settings-modal_custom-stage-size_dr_Qv",
-	"custom-stage-size-input": "settings-modal_custom-stage-size-input_1Pr3z",
-	"customStageSizeInput": "settings-modal_custom-stage-size-input_1Pr3z",
-	"info": "settings-modal_info_Ce_iV",
-	"header": "settings-modal_header_112iQ",
-	"divider": "settings-modal_divider_3K8K_",
-	"button": "settings-modal_button_ACn0P",
-	"warning": "settings-modal_warning_3UmRm"
+	"modal-content": "settings-modal_modal-content_2bE7f",
+	"modalContent": "settings-modal_modal-content_2bE7f",
+	"body": "settings-modal_body_cAUJ0",
+	"setting": "settings-modal_setting_PxhNM",
+	"active": "settings-modal_active_1McfX",
+	"label": "settings-modal_label_2Phuq",
+	"checkbox": "settings-modal_checkbox_1dXwG",
+	"help-icon": "settings-modal_help-icon_2FTix",
+	"helpIcon": "settings-modal_help-icon_2FTix",
+	"custom-stage-size": "settings-modal_custom-stage-size_3I0AA",
+	"customStageSize": "settings-modal_custom-stage-size_3I0AA",
+	"custom-stage-size-input": "settings-modal_custom-stage-size-input_2ivQT",
+	"customStageSizeInput": "settings-modal_custom-stage-size-input_2ivQT",
+	"info": "settings-modal_info_1a5yx",
+	"header": "settings-modal_header_3lDNd",
+	"divider": "settings-modal_divider_7euKA",
+	"button": "settings-modal_button_15QCA",
+	"warning": "settings-modal_warning_2xSC8"
 };
 
 /***/ }),
@@ -3226,11 +3226,11 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".sound-editor-not-supported_container_xaEf- {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    width: 100%;\n    height: 100%;\n    font-size: 1.5em;\n}\n", ""]);
+exports.push([module.i, ".sound-editor-not-supported_container_2WslL {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    width: 100%;\n    height: 100%;\n    font-size: 1.5em;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"container": "sound-editor-not-supported_container_xaEf-"
+	"container": "sound-editor-not-supported_container_2WslL"
 };
 
 /***/ }),
@@ -3247,15 +3247,15 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.unknown-platform-modal_modal-content_3mmhU {\n    max-width: 480px;\n    margin-top: 50px;\n}\n\n.unknown-platform-modal_body_3AaGs {\n    background: var(--ui-modal-background);\n    padding: 1.5rem 2.25rem;\n    max-height: calc(100vh - 150px);\n    overflow: auto;\n    display: flex;\n    flex-direction: column;\n    gap: 1rem;\n}\n\n.unknown-platform-modal_details_qZ8jy {\n    font-family: monospace;\n    -webkit-user-select: text;\n       -moz-user-select: text;\n        -ms-user-select: text;\n            user-select: text;\n    text-wrap: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n}\n\n.unknown-platform-modal_details_qZ8jy::before, .unknown-platform-modal_details_qZ8jy::after {\n    content: '\"';\n}\n\n.unknown-platform-modal_button_3kMtl {\n    font: inherit;\n    font-weight: bold;\n    padding: 0.75rem 1rem;\n    border-radius: 0.25rem;\n    border: 1px solid var(--ui-black-transparent);\n    background-color: var(--looks-secondary);\n    color: white;\n}\n\n.unknown-platform-modal_button_3kMtl:disabled {\n    opacity: 0.8;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.unknown-platform-modal_modal-content_1gCMC {\n    max-width: 480px;\n    margin-top: 50px;\n}\n\n.unknown-platform-modal_body_eC0lK {\n    background: var(--ui-modal-background);\n    padding: 1.5rem 2.25rem;\n    max-height: calc(100vh - 150px);\n    overflow: auto;\n    display: flex;\n    flex-direction: column;\n    gap: 1rem;\n}\n\n.unknown-platform-modal_details_2T9Z7 {\n    font-family: monospace;\n    -webkit-user-select: text;\n       -moz-user-select: text;\n        -ms-user-select: text;\n            user-select: text;\n    text-wrap: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n}\n\n.unknown-platform-modal_details_2T9Z7::before, .unknown-platform-modal_details_2T9Z7::after {\n    content: '\"';\n}\n\n.unknown-platform-modal_button_T3Y8o {\n    font: inherit;\n    font-weight: bold;\n    padding: 0.75rem 1rem;\n    border-radius: 0.25rem;\n    border: 1px solid var(--ui-black-transparent);\n    background-color: var(--looks-secondary);\n    color: white;\n}\n\n.unknown-platform-modal_button_T3Y8o:disabled {\n    opacity: 0.8;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"modal-content": "unknown-platform-modal_modal-content_3mmhU",
-	"modalContent": "unknown-platform-modal_modal-content_3mmhU",
-	"body": "unknown-platform-modal_body_3AaGs",
-	"details": "unknown-platform-modal_details_qZ8jy",
-	"button": "unknown-platform-modal_button_3kMtl"
+	"modal-content": "unknown-platform-modal_modal-content_1gCMC",
+	"modalContent": "unknown-platform-modal_modal-content_1gCMC",
+	"body": "unknown-platform-modal_body_eC0lK",
+	"details": "unknown-platform-modal_details_2T9Z7",
+	"button": "unknown-platform-modal_button_T3Y8o"
 };
 
 /***/ }),
@@ -3272,33 +3272,33 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.variables-tab_wrapper_p3CAp {\n    display: flex;\n    flex-grow: 1;\n    border: 1px solid var(--ui-black-transparent);\n    background: var(--assets-background);\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    font-size: 0.85rem;\n    color: var(--text-primary);\n    flex-direction: column;\n}\n\n[dir=\"ltr\"] .variables-tab_wrapper_p3CAp:not(.sa-stage-hidden *) {\n    border-top-right-radius: 0.5rem;\n    border-bottom-right-radius: 0.5rem;\n}\n\n[dir=\"rtl\"] .variables-tab_wrapper_p3CAp:not(.sa-stage-hidden *) {\n    border-top-left-radius: 0.5rem;\n    border-bottom-left-radius: 0.5rem;\n}\n\n.variables-tab_container_MlCgg {\n    height: 0;\n    flex-grow: 1;\n    overflow-y: hidden;\n    display: flex;\n    flex-direction: column;\n}\n\n.variables-tab_container_MlCgg:has(.variables-tab_variable-dropdown_rl1FO:not(.variables-tab_variable-dropdown-collapsed_3SzSp) + .variables-tab_variable-dropdown_rl1FO:not(.variables-tab_variable-dropdown-collapsed_3SzSp)) .variables-tab_variable-dropdown_rl1FO {\n    height: 50%;\n}\n\n.variables-tab_variable-dropdown_rl1FO {\n    overflow-y: hidden;\n    flex-grow: 1;\n    flex-shrink: 0;\n    transition: height 0.25s ease-out;\n}\n\n.variables-tab_variable-dropdown_rl1FO:not(:first-of-type) {\n    border-top: 1px solid var(--ui-black-transparent);\n}\n\n.variables-tab_variable-dropdown-collapsed_3SzSp {\n    flex-grow: 0;\n    min-height: auto;\n}\n\n.variables-tab_box_3EKqy {\n    background: var(--ui-white);\n    border-radius: inherit;\n    padding: calc(2 * 0.5rem);\n    width: 100%;\n    height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.variables-tab_variable-item_30fa0 {\n    display: grid;\n    gap: 0.5rem;\n    grid-template-columns: auto 1fr;\n    font-weight: bold;\n    font-size: calc(0.75rem / 1.2);\n    margin-bottom: 0.5rem;\n\n    & textarea {\n        resize: vertical;\n    }\n}\n\n.variables-tab_variable-item_30fa0 * {\n    word-break: break-word;\n    width: 100%;\n    padding: 0.5rem;\n    text-overflow: ellipsis;\n    transition: 0.25s ease-out;\n    border: none;\n    background: var(--input-background);\n    outline: 1px solid var(--ui-black-transparent);\n\n    &:focus {\n        box-shadow: 0px 0px 0px 4px var(--looks-transparent);\n        outline: 1px solid var(--looks-secondary);\n    }\n\n    &:hover {\n        outline: 1px solid var(--looks-secondary);\n    }\n}\n\n.variables-tab_variable-item_30fa0 input {\n    border-radius: 0.25rem;\n}\n\n[dir=\"ltr\"] .variables-tab_variable-item_30fa0 * {\n    text-align: left;\n}\n\n[dir=\"rtl\"] .variables-tab_variable-item_30fa0 * {\n    text-align: right;\n}\n\n.variables-tab_variable-item_30fa0 input:-moz-read-only {\n    background: var(--ui-white);\n    outline: none;\n    box-shadow: none;\n}\n\n.variables-tab_variable-item_30fa0 input:read-only {\n    background: var(--ui-white);\n    outline: none;\n    box-shadow: none;\n}\n\n.variables-tab_variable-dropdown-header_2n-36 {\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    cursor: pointer;\n    padding: 0.5rem;\n    font-size: 0.75rem;\n\n    & span {\n        margin: 0.25rem;\n        font-weight: bold;\n        letter-spacing: 0.4px;\n        line-height: 1rem;\n    }\n}\n\n.variables-tab_variable-dropdown-body_7yQmF {\n    height: calc(100% - 1rem - 2 * 0.5rem);\n    overflow-y: auto;\n    gap: 0.5rem;\n    border-top: 1px solid var(--ui-black-transparent);\n}\n\n.variables-tab_variable-dropdown-body_7yQmF:not(:has(.variables-tab_local-variables-selector_9diUu)) {\n    padding: 0.5rem;\n}\n\n.variables-tab_local-variables-selector_9diUu {\n    display: flex;\n    height: 100%;\n    overflow: hidden;\n}\n\n.variables-tab_clones-selector_items-wrapper_2G1jR {\n    padding: 0.5rem;\n    border-radius: inherit;\n    border-top-right-radius: 0;\n    width: 25%;\n    overflow-y: auto;\n    overflow-x: hidden;\n    background: var(--ui-secondary);\n    max-width: 7rem;\n}\n\n.variables-tab_clones-selector_item_3YOGx {\n    display: flex;\n    flex-direction: column;\n    border: 2px solid var(--ui-black-transparent);\n    border-radius: 0.5rem;\n    text-align: center;\n    cursor: pointer;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n    padding: 0.5rem;\n    padding-bottom: calc(2 * 0.5rem);\n    margin: 0.5rem 0 0.5rem 0;\n    max-width: 6rem;\n\n    & sub {\n        overflow-wrap: anywhere;\n    }\n\n    &:hover {\n        border: 2px solid var(--looks-secondary);\n        background: var(--ui-white);\n    }\n\n    &.variables-tab_is_selected_c8Yi3 {\n        box-shadow: 0px 0px 0px 4px var(--looks-transparent);\n        border: 2px solid var(--looks-secondary);\n        background: var(--ui-white);\n    }\n}\n\n.variables-tab_local-variables-list_TxLPR {\n    width: 100%;\n    outline: 1px solid var(--ui-black-transparent);\n    overflow-y: auto;\n    padding: 0.5rem;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.variables-tab_wrapper_1dun4 {\n    display: flex;\n    flex-grow: 1;\n    border: 1px solid var(--ui-black-transparent);\n    background: var(--assets-background);\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    font-size: 0.85rem;\n    color: var(--text-primary);\n    flex-direction: column;\n}\n\n[dir=\"ltr\"] .variables-tab_wrapper_1dun4:not(.sa-stage-hidden *) {\n    border-top-right-radius: 0.5rem;\n    border-bottom-right-radius: 0.5rem;\n}\n\n[dir=\"rtl\"] .variables-tab_wrapper_1dun4:not(.sa-stage-hidden *) {\n    border-top-left-radius: 0.5rem;\n    border-bottom-left-radius: 0.5rem;\n}\n\n.variables-tab_container_2YmiC {\n    height: 0;\n    flex-grow: 1;\n    overflow-y: hidden;\n    display: flex;\n    flex-direction: column;\n}\n\n.variables-tab_container_2YmiC:has(.variables-tab_variable-dropdown_1Clp8:not(.variables-tab_variable-dropdown-collapsed_17SZ8) + .variables-tab_variable-dropdown_1Clp8:not(.variables-tab_variable-dropdown-collapsed_17SZ8)) .variables-tab_variable-dropdown_1Clp8 {\n    height: 50%;\n}\n\n.variables-tab_variable-dropdown_1Clp8 {\n    overflow-y: hidden;\n    flex-grow: 1;\n    flex-shrink: 0;\n    transition: height 0.25s ease-out;\n}\n\n.variables-tab_variable-dropdown_1Clp8:not(:first-of-type) {\n    border-top: 1px solid var(--ui-black-transparent);\n}\n\n.variables-tab_variable-dropdown-collapsed_17SZ8 {\n    flex-grow: 0;\n    min-height: auto;\n}\n\n.variables-tab_box_1J_fR {\n    background: var(--ui-white);\n    border-radius: inherit;\n    padding: calc(2 * 0.5rem);\n    width: 100%;\n    height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.variables-tab_variable-item_1l5B0 {\n    display: grid;\n    gap: 0.5rem;\n    grid-template-columns: auto 1fr;\n    font-weight: bold;\n    font-size: calc(0.75rem / 1.2);\n    margin-bottom: 0.5rem;\n\n    & textarea {\n        resize: vertical;\n    }\n}\n\n.variables-tab_variable-item_1l5B0 * {\n    word-break: break-word;\n    width: 100%;\n    padding: 0.5rem;\n    text-overflow: ellipsis;\n    transition: 0.25s ease-out;\n    border: none;\n    background: var(--input-background);\n    outline: 1px solid var(--ui-black-transparent);\n\n    &:focus {\n        box-shadow: 0px 0px 0px 4px var(--looks-transparent);\n        outline: 1px solid var(--looks-secondary);\n    }\n\n    &:hover {\n        outline: 1px solid var(--looks-secondary);\n    }\n}\n\n.variables-tab_variable-item_1l5B0 input {\n    border-radius: 0.25rem;\n}\n\n[dir=\"ltr\"] .variables-tab_variable-item_1l5B0 * {\n    text-align: left;\n}\n\n[dir=\"rtl\"] .variables-tab_variable-item_1l5B0 * {\n    text-align: right;\n}\n\n.variables-tab_variable-item_1l5B0 input:-moz-read-only {\n    background: var(--ui-white);\n    outline: none;\n    box-shadow: none;\n}\n\n.variables-tab_variable-item_1l5B0 input:read-only {\n    background: var(--ui-white);\n    outline: none;\n    box-shadow: none;\n}\n\n.variables-tab_variable-dropdown-header_6UBkA {\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    cursor: pointer;\n    padding: 0.5rem;\n    font-size: 0.75rem;\n\n    & span {\n        margin: 0.25rem;\n        font-weight: bold;\n        letter-spacing: 0.4px;\n        line-height: 1rem;\n    }\n}\n\n.variables-tab_variable-dropdown-body_24sFL {\n    height: calc(100% - 1rem - 2 * 0.5rem);\n    overflow-y: auto;\n    gap: 0.5rem;\n    border-top: 1px solid var(--ui-black-transparent);\n}\n\n.variables-tab_variable-dropdown-body_24sFL:not(:has(.variables-tab_local-variables-selector_3NwEK)) {\n    padding: 0.5rem;\n}\n\n.variables-tab_local-variables-selector_3NwEK {\n    display: flex;\n    height: 100%;\n    overflow: hidden;\n}\n\n.variables-tab_clones-selector_items-wrapper_1Woch {\n    padding: 0.5rem;\n    border-radius: inherit;\n    border-top-right-radius: 0;\n    width: 25%;\n    overflow-y: auto;\n    overflow-x: hidden;\n    background: var(--ui-secondary);\n    max-width: 7rem;\n}\n\n.variables-tab_clones-selector_item_1fLuB {\n    display: flex;\n    flex-direction: column;\n    border: 2px solid var(--ui-black-transparent);\n    border-radius: 0.5rem;\n    text-align: center;\n    cursor: pointer;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n    padding: 0.5rem;\n    padding-bottom: calc(2 * 0.5rem);\n    margin: 0.5rem 0 0.5rem 0;\n    max-width: 6rem;\n\n    & sub {\n        overflow-wrap: anywhere;\n    }\n\n    &:hover {\n        border: 2px solid var(--looks-secondary);\n        background: var(--ui-white);\n    }\n\n    &.variables-tab_is_selected_3fjaW {\n        box-shadow: 0px 0px 0px 4px var(--looks-transparent);\n        border: 2px solid var(--looks-secondary);\n        background: var(--ui-white);\n    }\n}\n\n.variables-tab_local-variables-list_1v67L {\n    width: 100%;\n    outline: 1px solid var(--ui-black-transparent);\n    overflow-y: auto;\n    padding: 0.5rem;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"wrapper": "variables-tab_wrapper_p3CAp",
-	"container": "variables-tab_container_MlCgg",
-	"variable-dropdown": "variables-tab_variable-dropdown_rl1FO",
-	"variableDropdown": "variables-tab_variable-dropdown_rl1FO",
-	"variable-dropdown-collapsed": "variables-tab_variable-dropdown-collapsed_3SzSp",
-	"variableDropdownCollapsed": "variables-tab_variable-dropdown-collapsed_3SzSp",
-	"box": "variables-tab_box_3EKqy",
-	"variable-item": "variables-tab_variable-item_30fa0",
-	"variableItem": "variables-tab_variable-item_30fa0",
-	"variable-dropdown-header": "variables-tab_variable-dropdown-header_2n-36",
-	"variableDropdownHeader": "variables-tab_variable-dropdown-header_2n-36",
-	"variable-dropdown-body": "variables-tab_variable-dropdown-body_7yQmF",
-	"variableDropdownBody": "variables-tab_variable-dropdown-body_7yQmF",
-	"local-variables-selector": "variables-tab_local-variables-selector_9diUu",
-	"localVariablesSelector": "variables-tab_local-variables-selector_9diUu",
-	"clones-selector_items-wrapper": "variables-tab_clones-selector_items-wrapper_2G1jR",
-	"clonesSelectorItemsWrapper": "variables-tab_clones-selector_items-wrapper_2G1jR",
-	"clones-selector_item": "variables-tab_clones-selector_item_3YOGx",
-	"clonesSelectorItem": "variables-tab_clones-selector_item_3YOGx",
-	"is_selected": "variables-tab_is_selected_c8Yi3",
-	"isSelected": "variables-tab_is_selected_c8Yi3",
-	"local-variables-list": "variables-tab_local-variables-list_TxLPR",
-	"localVariablesList": "variables-tab_local-variables-list_TxLPR"
+	"wrapper": "variables-tab_wrapper_1dun4",
+	"container": "variables-tab_container_2YmiC",
+	"variable-dropdown": "variables-tab_variable-dropdown_1Clp8",
+	"variableDropdown": "variables-tab_variable-dropdown_1Clp8",
+	"variable-dropdown-collapsed": "variables-tab_variable-dropdown-collapsed_17SZ8",
+	"variableDropdownCollapsed": "variables-tab_variable-dropdown-collapsed_17SZ8",
+	"box": "variables-tab_box_1J_fR",
+	"variable-item": "variables-tab_variable-item_1l5B0",
+	"variableItem": "variables-tab_variable-item_1l5B0",
+	"variable-dropdown-header": "variables-tab_variable-dropdown-header_6UBkA",
+	"variableDropdownHeader": "variables-tab_variable-dropdown-header_6UBkA",
+	"variable-dropdown-body": "variables-tab_variable-dropdown-body_24sFL",
+	"variableDropdownBody": "variables-tab_variable-dropdown-body_24sFL",
+	"local-variables-selector": "variables-tab_local-variables-selector_3NwEK",
+	"localVariablesSelector": "variables-tab_local-variables-selector_3NwEK",
+	"clones-selector_items-wrapper": "variables-tab_clones-selector_items-wrapper_1Woch",
+	"clonesSelectorItemsWrapper": "variables-tab_clones-selector_items-wrapper_1Woch",
+	"clones-selector_item": "variables-tab_clones-selector_item_1fLuB",
+	"clonesSelectorItem": "variables-tab_clones-selector_item_1fLuB",
+	"is_selected": "variables-tab_is_selected_3fjaW",
+	"isSelected": "variables-tab_is_selected_3fjaW",
+	"local-variables-list": "variables-tab_local-variables-list_1v67L",
+	"localVariablesList": "variables-tab_local-variables-list_1v67L"
 };
 
 /***/ }),
@@ -3315,12 +3315,12 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.watermark_sprite-image_3vILs {\n    margin: auto;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    max-width: 48px;\n    max-height: 48px;\n    opacity: 0.35;\n}\n", ""]);
+exports.push([module.i, "\n.watermark_sprite-image_3ywoR {\n    margin: auto;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    max-width: 48px;\n    max-height: 48px;\n    opacity: 0.35;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"sprite-image": "watermark_sprite-image_3vILs",
-	"spriteImage": "watermark_sprite-image_3vILs"
+	"sprite-image": "watermark_sprite-image_3ywoR",
+	"spriteImage": "watermark_sprite-image_3ywoR"
 };
 
 /***/ }),
@@ -3337,14 +3337,14 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.waveform_container_243I7 {\n    width: 100%;\n}\n\n.waveform_waveform-path_2LeiM {\n    /*\n        This color is lighter than sound-primary, but\n        cannot use alpha because of overlapping elements.\n    */\n    fill: hsl(300, 54%, 72%);\n    stroke: var(--sound-tertiary);\n}\n\n.waveform_baseline_2hE-m {\n    stroke: var(--sound-tertiary);\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.waveform_container_2K9Om {\n    width: 100%;\n}\n\n.waveform_waveform-path_TskyB {\n    /*\n        This color is lighter than sound-primary, but\n        cannot use alpha because of overlapping elements.\n    */\n    fill: hsl(300, 54%, 72%);\n    stroke: var(--sound-tertiary);\n}\n\n.waveform_baseline_2J5dw {\n    stroke: var(--sound-tertiary);\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"container": "waveform_container_243I7",
-	"waveform-path": "waveform_waveform-path_2LeiM",
-	"waveformPath": "waveform_waveform-path_2LeiM",
-	"baseline": "waveform_baseline_2hE-m"
+	"container": "waveform_container_2K9Om",
+	"waveform-path": "waveform_waveform-path_TskyB",
+	"waveformPath": "waveform_waveform-path_TskyB",
+	"baseline": "waveform_baseline_2J5dw"
 };
 
 /***/ }),
@@ -25869,15 +25869,6 @@ const formatSize = bytes => {
   if (bytes < 1024 ** 3) return "".concat((bytes / 1024 ** 2).toFixed(2), " MB");
   return "".concat((bytes / 1024 ** 3).toFixed(2), " GB");
 };
-
-// A list of file extensions for scratch-based mods
-// Used for the blocks icon
-const projectFormats = ['sb3', 'sprite3', 'pmp',
-// PenguinMod
-'pms', 'snail',
-// Snail-IDE
-'.electra' // Electra-mod
-];
 class AssetTab extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
   constructor(props) {
     super(props);
@@ -25926,10 +25917,9 @@ class AssetTab extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
     const targetId = this.props.vm.editingTarget.id;
     this.props.onShowImporting();
     Object(_lib_file_uploader_js__WEBPACK_IMPORTED_MODULE_8__["handleFileUpload"])(e.target, (buffer, fileType, fileName, fileIndex, fileCount, fileExtension, lastModified) => {
-      console.log(fileType);
-      Object(_lib_file_uploader_js__WEBPACK_IMPORTED_MODULE_8__["assetUpload"])(buffer, fileType, fileExtension || '', storage, newAsset => {
+      Object(_lib_file_uploader_js__WEBPACK_IMPORTED_MODULE_8__["assetUpload"])(buffer, fileType, fileExtension || 'file', storage, newAsset => {
         newAsset.name = fileName;
-        newAsset.contentType = newAsset.asset.assetType.contentType.toLowerCase(); // Could be uppercase?
+        newAsset.contentType = newAsset.asset.assetType.contentType;
         newAsset.lastModified = lastModified;
         this.props.vm.addAsset(newAsset, targetId).then(() => {
           this.handleNewAsset();
@@ -25986,7 +25976,7 @@ class AssetTab extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
     const blob = new Blob([item.asset.data], {
       type: item.asset.assetType.contentType
     });
-    Object(_lib_download_blob__WEBPACK_IMPORTED_MODULE_9__["default"])("".concat(item.name, ".").concat(item.asset.dataFormat), blob);
+    Object(_lib_download_blob__WEBPACK_IMPORTED_MODULE_9__["default"])("".concat(item.name, ".").concat(item.dataFormat), blob);
   }
   setFileInput(input) {
     this.fileInput = input;
@@ -26032,7 +26022,6 @@ class AssetTab extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       onExportClick: this.handleExportAsset,
       onItemClick: this.handleSelectAsset
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
-      accept: "*",
       multiple: true,
       ref: this.setFileInput,
       style: {
@@ -26168,7 +26157,7 @@ class AssetViewer extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component
   }
   handleAssetRename(newName) {
     const [name, ...extensionParts] = newName.split('.');
-    const extension = extensionParts.join('.');
+    const extension = extensionParts.join('.') || 'file';
     this.props.vm.renameAsset(this.props.assetIndex, name, extension);
   }
   render() {
@@ -40311,7 +40300,7 @@ __webpack_require__.r(__webpack_exports__);
   };
   const assetsMenu = function assetsMenu() {
     if (vm.editingTarget && vm.editingTarget.getAssets().length > 0) {
-      return vm.editingTarget.getAssets().map(asset => [asset.name, asset.name]);
+      return vm.editingTarget.getAssets().map(asset => [asset.name + '.' + asset.dataFormat, asset.name]);
     }
     return [['', '']];
   };
@@ -54474,39 +54463,6 @@ module.exports = __webpack_require__.p + "static/assets/30d09ba32a17082ef820b57d
 /*!**********************************!*\
   !*** ./node/extend.js (ignored) ***!
   \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/* (ignored) */
-
-/***/ }),
-
-/***/ 7:
-/*!*****************************************!*\
-  !*** ../locale-data/index.js (ignored) ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/* (ignored) */
-
-/***/ }),
-
-/***/ 8:
-/*!*******************************!*\
-  !*** ./lib/locales (ignored) ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/* (ignored) */
-
-/***/ }),
-
-/***/ 9:
-/*!*******************************!*\
-  !*** ./lib/locales (ignored) ***!
-  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
