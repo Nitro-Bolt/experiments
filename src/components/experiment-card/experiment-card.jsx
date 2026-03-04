@@ -1,7 +1,7 @@
 import "./experiment-card.css";
 
 const ExperimentCard = ({ path, name, description, status }) => {
-  const href = path ? `/${path}` : "#";
+  const href = path ? `/${path}/` : "#";
   const statusClass = status.toLowerCase().replace(/\s+/g, "-");
 
   return (

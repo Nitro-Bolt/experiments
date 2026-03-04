@@ -48,14 +48,6 @@ module.exports = {
     new rspack.HtmlRspackPlugin({
       template: path.resolve(__dirname, "static/index.html"),
     }),
-    new rspack.CopyRspackPlugin({
-      patterns: [
-        {
-          from: path.resolve(__dirname, "static/favicon.ico"),
-          to: "favicon.ico",
-        },
-      ],
-    }),
   ],
   devServer: {
     port: 2142,

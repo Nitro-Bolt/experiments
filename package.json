@@ -4,7 +4,7 @@
   "description": "NitroBolt Experiments",
   "scripts": {
     "start": "rspack serve --config rspack.config.cjs",
-    "build": "rspack build --config rspack.config.cjs",
+    "build": "rspack build --config rspack.config.cjs && node scripts/copy-static-subfolders.cjs",
     "preview": "rspack serve --config rspack.config.cjs --mode production",
     "format": "prettier . --write"
   },
