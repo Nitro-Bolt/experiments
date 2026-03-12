@@ -69,7 +69,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "/* Imported by other addons */\n\n.sa-block-color {\n  --sa-block-colored-background: var(--sa-block-background-primary);\n  --sa-block-colored-background-secondary: var(--sa-block-field-background);\n  --sa-block-bright-background: var(--sa-block-background-primary);\n  --sa-block-text: var(--editorTheme3-blockText, white);\n  --sa-block-gray-text: white;\n  --sa-block-colored-text: var(--sa-block-background-primary);\n  --sa-block-text-on-bright-background: var(--editorTheme3-blockText, white);\n  --sa-block-input-color: var(--editorTheme3-inputColor, white);\n  --sa-block-input-text: var(--editorTheme3-inputColor-text, #575e75);\n}\n\n.sa-block-color-motion {\n  --sa-block-background-primary: var(--editorTheme3-motion-primary, #4c97ff);\n  --sa-block-background-secondary: var(--editorTheme3-motion-secondary, #4280d7);\n  --sa-block-background-tertiary: var(--editorTheme3-motion-tertiary, #3373cc);\n  --sa-block-field-background: var(--editorTheme3-motion-field, #3373cc);\n}\n\n.sa-block-color-looks {\n  --sa-block-background-primary: var(--editorTheme3-looks-primary, #9966ff);\n  --sa-block-background-secondary: var(--editorTheme3-looks-secondary, #855cd6);\n  --sa-block-background-tertiary: var(--editorTheme3-looks-tertiary, #774dcb);\n  --sa-block-field-background: var(--editorTheme3-looks-field, #774dcb);\n}\n\n.sa-block-color-sounds {\n  --sa-block-background-primary: var(--editorTheme3-sounds-primary, #cf63cf);\n  --sa-block-background-secondary: var(--editorTheme3-sounds-secondary, #c94fc9);\n  --sa-block-background-tertiary: var(--editorTheme3-sounds-tertiary, #bd42bd);\n  --sa-block-field-background: var(--editorTheme3-sounds-field, #bd42bd);\n}\n\n.sa-block-color-events {\n  --sa-block-background-primary: var(--editorTheme3-event-primary, #ffbf00);\n  --sa-block-background-secondary: var(--editorTheme3-event-secondary, #e6ac00);\n  --sa-block-background-tertiary: var(--editorTheme3-event-tertiary, #cc9900);\n  --sa-block-field-background: var(--editorTheme3-event-field, #cc9900);\n}\n\n.sa-block-color-control {\n  --sa-block-background-primary: var(--editorTheme3-control-primary, #ffab19);\n  --sa-block-background-secondary: var(--editorTheme3-control-secondary, #ec9c13);\n  --sa-block-background-tertiary: var(--editorTheme3-control-tertiary, #cf8b17);\n  --sa-block-field-background: var(--editorTheme3-control-field, #cf8b17);\n}\n\n.sa-block-color-sensing {\n  --sa-block-background-primary: var(--editorTheme3-sensing-primary, #5cb1d6);\n  --sa-block-background-secondary: var(--editorTheme3-sensing-secondary, #47a8d1);\n  --sa-block-background-tertiary: var(--editorTheme3-sensing-tertiary, #2e8eb8);\n  --sa-block-field-background: var(--editorTheme3-sensing-field, #2e8eb8);\n}\n\n.sa-block-color-operators {\n  --sa-block-background-primary: var(--editorTheme3-operators-primary, #59c059);\n  --sa-block-background-secondary: var(--editorTheme3-operators-secondary, #46b946);\n  --sa-block-background-tertiary: var(--editorTheme3-operators-tertiary, #389438);\n  --sa-block-field-background: var(--editorTheme3-operators-field, #389438);\n}\n\n.sa-block-color-data {\n  --sa-block-background-primary: var(--editorTheme3-data-primary, #ff8c1a);\n  --sa-block-background-secondary: var(--editorTheme3-data-secondary, #ff8000);\n  --sa-block-background-tertiary: var(--editorTheme3-data-tertiary, #db6e00);\n  --sa-block-field-background: var(--editorTheme3-data-field, #db6e00);\n}\n\n.sa-block-color-data-lists,\n.sa-block-color-list {\n  --sa-block-background-primary: var(--editorTheme3-data_lists-primary, #ff661a);\n  --sa-block-background-secondary: var(--editorTheme3-data_lists-secondary, #ff5500);\n  --sa-block-background-tertiary: var(--editorTheme3-data_lists-tertiary, #e64d00);\n  --sa-block-field-background: var(--editorTheme3-data_lists-field, #e64d00);\n}\n\n.sa-block-color-more,\n.sa-block-color-null {\n  --sa-block-background-primary: var(--editorTheme3-more-primary, #ff6680);\n  --sa-block-background-secondary: var(--editorTheme3-more-secondary, #ff4d6a);\n  --sa-block-background-tertiary: var(--editorTheme3-more-tertiary, #ff3355);\n  --sa-block-field-background: var(--editorTheme3-more-field, #ff3355);\n}\n\n.sa-block-color-pen {\n  --sa-block-background-primary: var(--editorTheme3-pen-primary, #0fbd8c);\n  --sa-block-background-secondary: var(--editorTheme3-pen-secondary, #0da57a);\n  --sa-block-background-tertiary: var(--editorTheme3-pen-tertiary, #0b8e69);\n  --sa-block-field-background: var(--editorTheme3-pen-field, #0b8e69);\n}\n\n.sa-block-color-addon-custom-block {\n  --sa-block-background-primary: var(--editorTheme3-addons-primary, #29beb8);\n  --sa-block-background-secondary: var(--editorTheme3-addons-secondary, #3aa8a4);\n  --sa-block-background-tertiary: var(--editorTheme3-addons-tertiary, #3aa8a4);\n  --sa-block-field-background: var(--editorTheme3-addons-field, #3aa8a4);\n}\n", ""]);
+exports.push([module.i, "/* Imported by other addons */\n\n.sa-block-color {\n  --sa-block-colored-background: var(--sa-block-background-primary);\n  --sa-block-colored-background-secondary: var(--sa-block-field-background);\n  --sa-block-bright-background: var(--sa-block-background-primary);\n  --sa-block-text: var(--editorTheme3-blockText, white);\n  --sa-block-gray-text: white;\n  --sa-block-colored-text: var(--sa-block-background-primary);\n  --sa-block-text-on-bright-background: var(--editorTheme3-blockText, white);\n  --sa-block-input-color: var(--editorTheme3-inputColor, white);\n  --sa-block-input-text: var(--editorTheme3-inputColor-text, #575e75);\n}\n\n.sa-block-color-motion {\n  --sa-block-background-primary: var(--editorTheme3-motion-primary, #4c97ff);\n  --sa-block-background-secondary: var(--editorTheme3-motion-secondary, #4280d7);\n  --sa-block-background-tertiary: var(--editorTheme3-motion-tertiary, #3373cc);\n  --sa-block-field-background: var(--editorTheme3-motion-field, #3373cc);\n}\n\n.sa-block-color-looks {\n  --sa-block-background-primary: var(--editorTheme3-looks-primary, #9966ff);\n  --sa-block-background-secondary: var(--editorTheme3-looks-secondary, #855cd6);\n  --sa-block-background-tertiary: var(--editorTheme3-looks-tertiary, #774dcb);\n  --sa-block-field-background: var(--editorTheme3-looks-field, #774dcb);\n}\n\n.sa-block-color-sounds {\n  --sa-block-background-primary: var(--editorTheme3-sounds-primary, #cf63cf);\n  --sa-block-background-secondary: var(--editorTheme3-sounds-secondary, #c94fc9);\n  --sa-block-background-tertiary: var(--editorTheme3-sounds-tertiary, #bd42bd);\n  --sa-block-field-background: var(--editorTheme3-sounds-field, #bd42bd);\n}\n\n.sa-block-color-assets {\n  --sa-block-background-primary: var(--editorTheme3-assets-primary, #FCB103);\n  --sa-block-background-secondary: var(--editorTheme3-assets-secondary, #DB9A37);\n  --sa-block-background-tertiary: var(--editorTheme3-assets-tertiary, #DB8937);\n  --sa-block-field-background: var(--editorTheme3-assets-field, #DB8937);\n}\n\n.sa-block-color-events {\n  --sa-block-background-primary: var(--editorTheme3-event-primary, #ffbf00);\n  --sa-block-background-secondary: var(--editorTheme3-event-secondary, #e6ac00);\n  --sa-block-background-tertiary: var(--editorTheme3-event-tertiary, #cc9900);\n  --sa-block-field-background: var(--editorTheme3-event-field, #cc9900);\n}\n\n.sa-block-color-control {\n  --sa-block-background-primary: var(--editorTheme3-control-primary, #ffab19);\n  --sa-block-background-secondary: var(--editorTheme3-control-secondary, #ec9c13);\n  --sa-block-background-tertiary: var(--editorTheme3-control-tertiary, #cf8b17);\n  --sa-block-field-background: var(--editorTheme3-control-field, #cf8b17);\n}\n\n.sa-block-color-sensing {\n  --sa-block-background-primary: var(--editorTheme3-sensing-primary, #5cb1d6);\n  --sa-block-background-secondary: var(--editorTheme3-sensing-secondary, #47a8d1);\n  --sa-block-background-tertiary: var(--editorTheme3-sensing-tertiary, #2e8eb8);\n  --sa-block-field-background: var(--editorTheme3-sensing-field, #2e8eb8);\n}\n\n.sa-block-color-operators {\n  --sa-block-background-primary: var(--editorTheme3-operators-primary, #59c059);\n  --sa-block-background-secondary: var(--editorTheme3-operators-secondary, #46b946);\n  --sa-block-background-tertiary: var(--editorTheme3-operators-tertiary, #389438);\n  --sa-block-field-background: var(--editorTheme3-operators-field, #389438);\n}\n\n.sa-block-color-data {\n  --sa-block-background-primary: var(--editorTheme3-data-primary, #ff8c1a);\n  --sa-block-background-secondary: var(--editorTheme3-data-secondary, #ff8000);\n  --sa-block-background-tertiary: var(--editorTheme3-data-tertiary, #db6e00);\n  --sa-block-field-background: var(--editorTheme3-data-field, #db6e00);\n}\n\n.sa-block-color-data-lists,\n.sa-block-color-list {\n  --sa-block-background-primary: var(--editorTheme3-data_lists-primary, #ff661a);\n  --sa-block-background-secondary: var(--editorTheme3-data_lists-secondary, #ff5500);\n  --sa-block-background-tertiary: var(--editorTheme3-data_lists-tertiary, #e64d00);\n  --sa-block-field-background: var(--editorTheme3-data_lists-field, #e64d00);\n}\n\n.sa-block-color-more,\n.sa-block-color-null {\n  --sa-block-background-primary: var(--editorTheme3-more-primary, #ff6680);\n  --sa-block-background-secondary: var(--editorTheme3-more-secondary, #ff4d6a);\n  --sa-block-background-tertiary: var(--editorTheme3-more-tertiary, #ff3355);\n  --sa-block-field-background: var(--editorTheme3-more-field, #ff3355);\n}\n\n.sa-block-color-pen {\n  --sa-block-background-primary: var(--editorTheme3-pen-primary, #0fbd8c);\n  --sa-block-background-secondary: var(--editorTheme3-pen-secondary, #0da57a);\n  --sa-block-background-tertiary: var(--editorTheme3-pen-tertiary, #0b8e69);\n  --sa-block-field-background: var(--editorTheme3-pen-field, #0b8e69);\n}\n\n.sa-block-color-addon-custom-block {\n  --sa-block-background-primary: var(--editorTheme3-addons-primary, #29beb8);\n  --sa-block-background-secondary: var(--editorTheme3-addons-secondary, #3aa8a4);\n  --sa-block-background-tertiary: var(--editorTheme3-addons-tertiary, #3aa8a4);\n  --sa-block-field-background: var(--editorTheme3-addons-field, #3aa8a4);\n}\n", ""]);
 
 // exports
 
@@ -3186,7 +3186,7 @@ __webpack_require__.r(__webpack_exports__);
       this.prevValue = focusID ? "" : null; // Clear the previous value of the input search
 
       this.dropdownOut.classList.add("visible");
-      let scratchBlocks = this.selectedTab === 0 ? this.getScratchBlocks() : this.selectedTab === 1 ? this.getScratchCostumes() : this.selectedTab === 2 ? this.getScratchSounds() : [];
+      let scratchBlocks = this.selectedTab === 0 ? this.getScratchBlocks() : this.selectedTab === 1 ? this.getScratchCostumes() : this.selectedTab === 2 ? this.getScratchSounds() : this.selectedTab === 3 ? this.getScratchAssets() : [];
       this.dropdown.empty();
       for (const proc of scratchBlocks) {
         let item = this.dropdown.addItem(proc);
@@ -3354,6 +3354,17 @@ __webpack_require__.r(__webpack_exports__);
       }
       return items;
     }
+    getScratchAssets() {
+      let assets = this.utils.getEditingTarget().getAssets();
+      let items = [];
+      let i = 0;
+      for (const asset of assets) {
+        let item = new _blockly_BlockItem_js__WEBPACK_IMPORTED_MODULE_0__["default"]("asset", asset.name, asset.assetId, i);
+        items.push(item);
+        i++;
+      }
+      return items;
+    }
     getCallsToEvents() {
       const uses = [];
       const alreadyFound = new Set();
@@ -3455,7 +3466,8 @@ __webpack_require__.r(__webpack_exports__);
         list: "data-lists",
         LIST: "data-lists",
         costume: "looks",
-        sound: "sounds"
+        sound: "sounds",
+        asset: "assets"
       };
       if (proc.cls === "flag") {
         item.className = "sa-find-flag";
@@ -3483,7 +3495,7 @@ __webpack_require__.r(__webpack_exports__);
         this.selected = item;
       }
       let cls = item.data.cls;
-      if (cls === "costume" || cls === "sound") {
+      if (cls === "costume" || cls === "sound" || cls === "asset") {
         // Viewing costumes/sounds - jump to selected costume/sound
         const assetPanel = document.querySelector("[class^=asset-panel_wrapper]");
         if (assetPanel) {
@@ -3946,10 +3958,6 @@ const addDefaultAssetFolderIfMissing = asset => {
       return addon.self.getResource("/folder.svg") /* rewritten by pull.js */;
     }
   };
-
-  // https://github.com/scratchfoundation/scratch-gui/blob/develop/src/components/asset-panel/icon--sound.svg
-  const imageIconSource = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<svg width=\"100px\" height=\"100px\" viewBox=\"0 0 20 20\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n    <g id=\"Sound\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n        <path d=\"M12.4785058,12.6666667 C12.3144947,12.6666667 12.1458852,12.6272044 11.9926038,12.5440517 C11.537358,12.2960031 11.3856094,11.7562156 11.6553847,11.3376335 C12.1688774,10.5371131 12.1688774,9.54491867 11.6553847,8.74580756 C11.3856094,8.32581618 11.537358,7.78602861 11.9926038,7.53798001 C12.452448,7.29275014 13.0379829,7.43086811 13.3046926,7.84804076 C14.1737981,9.20103311 14.1737981,10.8809986 13.3046926,12.233991 C13.1268862,12.5130457 12.806528,12.6666667 12.4785058,12.6666667 Z M15.3806784,13.8333333 C15.2408902,13.8333333 15.0958763,13.796281 14.9665396,13.7182064 C14.5785295,13.485306 14.4491928,12.9784829 14.6791247,12.5854634 C15.5949331,11.0160321 15.5949331,9.065491 14.6791247,7.49738299 C14.4491928,7.10436352 14.5785295,6.59621712 14.9665396,6.36331669 C15.3558562,6.13438616 15.8549129,6.26274605 16.0848448,6.65444223 C17.3050517,8.74260632 17.3050517,11.3389168 16.0848448,13.4270809 C15.9319924,13.6890939 15.6602547,13.8333333 15.3806784,13.8333333 Z M10.3043478,5.62501557 L10.3043478,13.873675 C10.3043478,14.850934 9.10969849,15.3625101 8.36478311,14.7038052 L6.7566013,13.2797607 C6.18712394,12.7762834 5.44499329,12.4968737 4.67362297,12.4968737 L4.3923652,12.4968737 C3.62377961,12.4968737 3,11.8935108 3,11.1470686 L3,8.36646989 C3,7.62137743 3.62377961,7.01666471 4.3923652,7.01666471 L4.65830695,7.01666471 C5.42967727,7.01666471 6.17180792,6.73725504 6.74128529,6.23377771 L8.36478311,4.79623519 C9.10969849,4.13753026 10.3043478,4.64910643 10.3043478,5.62501557 Z\" id=\"Combined-Shape\" fill=\"#575E75\"></path>\n    </g>\n</svg>";
-  const soundIconHref = "data:image/svg+xml;base64,".concat(btoa(imageIconSource));
   let folderColorStylesheet = null;
   const folderColors = Object.create(null);
   const getFolderColorClass = folderName => {
@@ -4059,6 +4067,17 @@ const addDefaultAssetFolderIfMissing = asset => {
       vm.emitTargetsUpdate();
     }
   };
+  const fixAssetOrder = function fixAssetOrder() {
+    let target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : vm.editingTarget;
+    const {
+      items,
+      changed
+    } = fixOrderOfItemsInFolders(target.sprite.assets);
+    if (changed) {
+      target.sprite.assets = items;
+      vm.emitTargetsUpdate();
+    }
+  };
   const verifySortableHOC = sortableHOCInstance => {
     const SortableHOC = sortableHOCInstance.constructor;
     if (Array.isArray(sortableHOCInstance.props.items) && (typeof sortableHOCInstance.props.selectedId === "string" || typeof sortableHOCInstance.props.selectedItemIndex === "number") && typeof sortableHOCInstance.containerBox !== "undefined" && typeof SortableHOC.prototype.componentDidMount === "undefined" && typeof SortableHOC.prototype.componentDidUpdate === "undefined" && typeof SortableHOC.prototype.handleAddSortable === "function" && typeof SortableHOC.prototype.handleRemoveSortable === "function" && typeof SortableHOC.prototype.setRef === "function") return;
@@ -4071,7 +4090,7 @@ const addDefaultAssetFolderIfMissing = asset => {
   };
   const verifyVM = vm => {
     const target = vm.runtime.targets[0];
-    if (typeof vm.installTargets === "function" && typeof vm.reorderTarget === "function" && typeof target.reorderCostume === "function" && typeof target.reorderSound === "function" && typeof target.addCostume === "function" && typeof target.addSound === "function") return;
+    if (typeof vm.installTargets === "function" && typeof vm.reorderTarget === "function" && typeof target.reorderCostume === "function" && typeof target.reorderSound === "function" && typeof target.addCostume === "function" && typeof target.addSound === "function" && typeof target.addAsset === "function") return;
     throw new Error("Can not comprehend VM");
   };
   const verifyBackpack = backpackInstance => {
@@ -4138,7 +4157,7 @@ const addDefaultAssetFolderIfMissing = asset => {
         } else if (item.costume && item.costume.asset) {
           src = item.costume.asset.encodeDataURI();
         } else if (item.url) {
-          src = soundIconHref;
+          src = item.url;
         }
         if (src) {
           result += "<image width=\"".concat(width, "\" height=\"").concat(height, "\" x=\"").concat(x, "\" y=\"").concat(y, "\" href=\"").concat(src, "\"/>");
@@ -4292,6 +4311,7 @@ const addDefaultAssetFolderIfMissing = asset => {
             folderItem.asset = folderAsset;
             if (!folderItem.dragPayload) folderItem.dragPayload = {};
             folderItem.dragPayload.sa_folder_items = folderItems;
+            folderItem.dragPayload.sa_folder_type = props.dragType;
           }
           items.push(folderItem);
           if (isOpen) {
@@ -4428,7 +4448,7 @@ const addDefaultAssetFolderIfMissing = asset => {
   };
   await addon.tab.scratchClassReady();
   addon.tab.createEditorContextMenu((ctxType, ctx) => {
-    if (ctxType !== "sprite" && ctxType !== "costume" && ctxType !== "sound") return;
+    if (ctxType !== "sprite" && ctxType !== "costume" && ctxType !== "sound" && ctxType !== "asset") return;
     const component = ctx.target[addon.tab.traps.getInternalKey(ctx.target)].return.return.return.stateNode;
     const data = getItemData(component.props);
     if (!data) return;
@@ -4466,6 +4486,14 @@ const addDefaultAssetFolderIfMissing = asset => {
             }
           }
           fixSoundOrder();
+        } else if (component.props.dragType === "ASSET") {
+          for (let i = 0; i < vm.editingTarget.sprite.assets.length; i++) {
+            const asset = vm.editingTarget.sprite.assets[i];
+            if (getFolderFromName(asset.name) === data.folder) {
+              vm.renameAsset(i, setFolderOfName(asset.name, newName, asset.dataFormat));
+            }
+          }
+          fixAssetOrder();
         }
       };
       const renameFolder = async () => {
@@ -4522,6 +4550,12 @@ const addDefaultAssetFolderIfMissing = asset => {
           const asset = vm.editingTarget.sprite.sounds[index];
           vm.renameSound(vm.editingTarget.sprite.sounds.indexOf(asset), setFolderOfName(asset.name, folder));
           fixSoundOrder();
+        } else if (component.props.dragType === "ASSET") {
+          const data = getItemData(component.props);
+          const index = data.realIndex;
+          const asset = vm.editingTarget.sprite.assets[index];
+          vm.renameAsset(vm.editingTarget.sprite.assets.indexOf(asset), setFolderOfName(asset.name, folder), asset.dataFormat);
+          fixAssetOrder();
         }
       };
       const createFolder = async () => {
@@ -4727,6 +4761,16 @@ const addDefaultAssetFolderIfMissing = asset => {
       fixSoundOrder(this);
       return r;
     };
+    const originalAddAsset = RenderedTarget.prototype.addAsset;
+    RenderedTarget.prototype.addAsset = function () {
+      for (var _len8 = arguments.length, args = new Array(_len8), _key8 = 0; _key8 < _len8; _key8++) {
+        args[_key8] = arguments[_key8];
+      }
+      addDefaultAssetFolderIfMissing(args[0]);
+      const r = originalAddAsset.call(this, ...args);
+      fixAssetOrder(this);
+      return r;
+    };
     const abstractReorder = (_ref2, itemIndex, newIndex) => {
       let {
         guiItems,
@@ -4901,12 +4945,31 @@ const addDefaultAssetFolderIfMissing = asset => {
         zeroIndexed: true
       }, soundIndex, newIndex);
     };
+    RenderedTarget.prototype.reorderAsset = function (assetIndex, newIndex) {
+      return abstractReorder({
+        getAll: () => {
+          return this.sprite.assets;
+        },
+        set: assets => {
+          this.sprite.assets = assets;
+        },
+        rename: (item, name) => {
+          this.renameAsset(this.sprite.assets.indexOf(item), name);
+        },
+        getVMItemFromGUIItem: (item, assets) => {
+          const itemData = getItemData(item);
+          return assets.find(c => c.name === itemData.realName);
+        },
+        guiItems: currentAssetItems,
+        zeroIndexed: true
+      }, assetIndex, newIndex);
+    };
 
     // Temporal bug fix for #5762
     const originalShareSoundToTarget = vm.shareSoundToTarget;
     vm.shareSoundToTarget = function () {
-      for (var _len8 = arguments.length, args = new Array(_len8), _key8 = 0; _key8 < _len8; _key8++) {
-        args[_key8] = arguments[_key8];
+      for (var _len9 = arguments.length, args = new Array(_len9), _key9 = 0; _key9 < _len9; _key9++) {
+        args[_key9] = arguments[_key9];
       }
       const target = this.runtime.getTargetById(args[1]);
       if (!target) {
@@ -4927,11 +4990,7 @@ const addDefaultAssetFolderIfMissing = asset => {
         let payload;
         let type;
         if (item.dragPayload) {
-          if (item.url) {
-            type = "SOUND";
-          } else {
-            type = "COSTUME";
-          }
+          type = this.sa_queuedType || (item.url ? "SOUND" : "COSTUME");
           payload = item.dragPayload;
         } else if (item.id) {
           type = "SPRITE";
@@ -4952,18 +5011,20 @@ const addDefaultAssetFolderIfMissing = asset => {
     };
     const originalHandleDrop = Backpack.prototype.handleDrop;
     Backpack.prototype.handleDrop = function () {
-      for (var _len9 = arguments.length, args = new Array(_len9), _key9 = 0; _key9 < _len9; _key9++) {
-        args[_key9] = arguments[_key9];
+      for (var _len0 = arguments.length, args = new Array(_len0), _key0 = 0; _key0 < _len0; _key0++) {
+        args[_key0] = arguments[_key0];
       }
       // When a folder is dropped into the backpack, upload all the items in the folder.
       const dragInfo = args[0];
       const folderItems = dragInfo && dragInfo.payload && dragInfo.payload.sa_folder_items;
+      const folderType = dragInfo && dragInfo.payload && dragInfo.payload.sa_folder_type;
       if (Array.isArray(folderItems)) {
         addon.tab.confirm("", msg("confirm-backpack-folder"), {
           useEditorClasses: true
         }).then(result => {
           if (!result) return;
           this.sa_queuedItems = folderItems;
+          this.sa_queuedType = folderType;
           this.sa_loadNextItem();
         });
         return;

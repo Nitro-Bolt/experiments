@@ -227,7 +227,7 @@ var GUI =
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/tw-cloud-variable-badge/cloud-variable-badge.css":
 /*!********************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--5-1!./node_modules/postcss-loader/src??postcss!./src/components/tw-cloud-variable-badge/cloud-variable-badge.css ***!
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??postcss!./src/components/tw-cloud-variable-badge/cloud-variable-badge.css ***!
   \********************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -237,24 +237,24 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.cloud-variable-badge_badge_2kZVK {\n    padding: 0.5rem;\n    margin: 5px 0 8px 0;\n    border: 1px solid var(--badge-border);\n    background-color: var(--badge-background);\n    display: flex;\n    flex-direction: column;\n    gap: 0.5rem;\n    border-radius: 0.5rem;\n}\n\n.cloud-variable-badge_title_2xJoL {\n    display: flex;\n    align-items: center;\n    gap: 0.5rem;\n    font-weight: bold;\n}\n\n.cloud-variable-badge_cloud-icon_1JP1e {\n    filter: var(--filter-icon-gray);\n}\n\n.cloud-variable-badge_servers_1fLAL {\n    display: flex;\n    gap: 0.5rem;\n    align-items: center;\n}\n\n.cloud-variable-badge_server_3s9y9 {\n    border: 1px solid var(--ui-black-transparent);\n    padding: 0.25rem 0.5rem;\n    margin: 0;\n    background: none;\n    border-radius: 1rem;\n}\n\n.cloud-variable-badge_server_3s9y9.cloud-variable-badge_selected_3ZyWW {\n    background-color: var(--looks-secondary);\n    color: white;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.cloud-variable-badge_badge_1n_s5 {\n    padding: 0.5rem;\n    margin: 5px 0 8px 0;\n    border: 1px solid var(--badge-border);\n    background-color: var(--badge-background);\n    display: flex;\n    flex-direction: column;\n    gap: 0.5rem;\n    border-radius: 0.5rem;\n}\n\n.cloud-variable-badge_title_4PmRN {\n    display: flex;\n    align-items: center;\n    gap: 0.5rem;\n    font-weight: bold;\n}\n\n.cloud-variable-badge_cloud-icon_H-B5L {\n    filter: var(--filter-icon-gray);\n}\n\n.cloud-variable-badge_servers_2foEa {\n    display: flex;\n    gap: 0.5rem;\n    align-items: center;\n}\n\n.cloud-variable-badge_server_PzfmO {\n    border: 1px solid var(--ui-black-transparent);\n    padding: 0.25rem 0.5rem;\n    margin: 0;\n    background: none;\n    border-radius: 1rem;\n}\n\n.cloud-variable-badge_server_PzfmO.cloud-variable-badge_selected_2WBlU {\n    background-color: var(--looks-secondary);\n    color: white;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"badge": "cloud-variable-badge_badge_2kZVK",
-	"title": "cloud-variable-badge_title_2xJoL",
-	"cloud-icon": "cloud-variable-badge_cloud-icon_1JP1e",
-	"cloudIcon": "cloud-variable-badge_cloud-icon_1JP1e",
-	"servers": "cloud-variable-badge_servers_1fLAL",
-	"server": "cloud-variable-badge_server_3s9y9",
-	"selected": "cloud-variable-badge_selected_3ZyWW"
+	"badge": "cloud-variable-badge_badge_1n_s5",
+	"title": "cloud-variable-badge_title_4PmRN",
+	"cloud-icon": "cloud-variable-badge_cloud-icon_H-B5L",
+	"cloudIcon": "cloud-variable-badge_cloud-icon_H-B5L",
+	"servers": "cloud-variable-badge_servers_2foEa",
+	"server": "cloud-variable-badge_server_PzfmO",
+	"selected": "cloud-variable-badge_selected_2WBlU"
 };
 
 /***/ }),
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/tw-description/description.css":
 /*!**************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--5-1!./node_modules/postcss-loader/src??postcss!./src/components/tw-description/description.css ***!
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??postcss!./src/components/tw-description/description.css ***!
   \**************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -264,22 +264,22 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.description_description_1iyDJ {\n    max-height: 250px;\n    overflow: auto;\n    white-space: pre-line;\n    overflow-wrap: break-word;\n    line-height: 1.5em;\n    padding: 0.5rem;\n    margin: 5px 0 8px 0;\n    border: 1px solid var(--badge-border);\n    background-color: var(--badge-background);\n    border-radius: 0.5rem;\n}\n\n.description_description_1iyDJ a {\n    font-weight: bold;\n    text-decoration: none;\n}\n\n.description_header_27V8b {\n    font-weight: bold;\n    font-size: 1em;\n    margin: 0;\n    padding: 0;\n}\n\n.description_divider_3z5W7 {\n    margin-top: 8px;\n}\n\n.description_project-link_2-Z1r {\n    margin-bottom: 2px;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.description_description_TJxeu {\n    max-height: 250px;\n    overflow: auto;\n    white-space: pre-line;\n    overflow-wrap: break-word;\n    line-height: 1.5em;\n    padding: 0.5rem;\n    margin: 5px 0 8px 0;\n    border: 1px solid var(--badge-border);\n    background-color: var(--badge-background);\n    border-radius: 0.5rem;\n}\n\n.description_description_TJxeu a {\n    font-weight: bold;\n    text-decoration: none;\n}\n\n.description_header_3Bv2V {\n    font-weight: bold;\n    font-size: 1em;\n    margin: 0;\n    padding: 0;\n}\n\n.description_divider_NGZle {\n    margin-top: 8px;\n}\n\n.description_project-link_2xt5_ {\n    margin-bottom: 2px;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"description": "description_description_1iyDJ",
-	"header": "description_header_27V8b",
-	"divider": "description_divider_3z5W7",
-	"project-link": "description_project-link_2-Z1r",
-	"projectLink": "description_project-link_2-Z1r"
+	"description": "description_description_TJxeu",
+	"header": "description_header_3Bv2V",
+	"divider": "description_divider_NGZle",
+	"project-link": "description_project-link_2xt5_",
+	"projectLink": "description_project-link_2xt5_"
 };
 
 /***/ }),
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/tw-featured-projects/featured-projects.css":
 /*!**************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--5-1!./node_modules/postcss-loader/src??postcss!./src/components/tw-featured-projects/featured-projects.css ***!
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??postcss!./src/components/tw-featured-projects/featured-projects.css ***!
   \**************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -289,26 +289,26 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.featured-projects_container_1--ew {\n    margin-bottom: 8px;\n}\n\n.featured-projects_opener-container_1c9_H {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    cursor: pointer;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    opacity: 0.8;\n}\n\n.featured-projects_opener-container_1c9_H:hover {\n    opacity: 1;\n}\n\n.featured-projects_opener-content_1kqev {\n    background-color: var(--ui-modal-background);\n    padding: 4px;\n    border: 1px solid var(--ui-black-transparent);\n    box-shadow: 0 0 8px 0 var(--shadow);\n}\n\n.featured-projects_projects_1piAv {\n    position: relative;\n    height: 155px;\n}\n\n.featured-projects_projects_1piAv.featured-projects_transition_3TsdC {\n    transition: .2s height;\n}\n\n.featured-projects_projects_1piAv.featured-projects_opened_eLMQu {\n    height: 310px;\n}\n\n.featured-projects_footer_2fw_5 {\n    \n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n.featured-projects_container_bte5t {\n    margin-bottom: 8px;\n}\n\n.featured-projects_opener-container_2VEwo {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    cursor: pointer;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    opacity: 0.8;\n}\n\n.featured-projects_opener-container_2VEwo:hover {\n    opacity: 1;\n}\n\n.featured-projects_opener-content_2nRNs {\n    background-color: var(--ui-modal-background);\n    padding: 4px;\n    border: 1px solid var(--ui-black-transparent);\n    box-shadow: 0 0 8px 0 var(--shadow);\n}\n\n.featured-projects_projects_3USxm {\n    position: relative;\n    height: 155px;\n}\n\n.featured-projects_projects_3USxm.featured-projects_transition_2s3rd {\n    transition: .2s height;\n}\n\n.featured-projects_projects_3USxm.featured-projects_opened_1ALXH {\n    height: 310px;\n}\n\n.featured-projects_footer_UQGNp {\n    \n}\n", ""]);
 
 // exports
 exports.locals = {
-	"container": "featured-projects_container_1--ew",
-	"opener-container": "featured-projects_opener-container_1c9_H",
-	"openerContainer": "featured-projects_opener-container_1c9_H",
-	"opener-content": "featured-projects_opener-content_1kqev",
-	"openerContent": "featured-projects_opener-content_1kqev",
-	"projects": "featured-projects_projects_1piAv",
-	"transition": "featured-projects_transition_3TsdC",
-	"opened": "featured-projects_opened_eLMQu",
-	"footer": "featured-projects_footer_2fw_5"
+	"container": "featured-projects_container_bte5t",
+	"opener-container": "featured-projects_opener-container_2VEwo",
+	"openerContainer": "featured-projects_opener-container_2VEwo",
+	"opener-content": "featured-projects_opener-content_2nRNs",
+	"openerContent": "featured-projects_opener-content_2nRNs",
+	"projects": "featured-projects_projects_3USxm",
+	"transition": "featured-projects_transition_2s3rd",
+	"opened": "featured-projects_opened_1ALXH",
+	"footer": "featured-projects_footer_UQGNp"
 };
 
 /***/ }),
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/tw-invalid-embed/invalid-embed.css":
 /*!******************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--5-1!./node_modules/postcss-loader/src??postcss!./src/components/tw-invalid-embed/invalid-embed.css ***!
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??postcss!./src/components/tw-invalid-embed/invalid-embed.css ***!
   \******************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -318,20 +318,20 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* don't use colors.css and friends as the theme system is not set up when this is used */\n\n.invalid-embed_container_335w5 {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    overflow: auto;\n\n    /* this is an error, so we want it to stand out and always be readable regardless of what the site */\n    /* embedding us looks like */\n    background-color: #ff4c4c;\n    color: white;\n\n    box-sizing: border-box;\n    padding: 8px;\n\n    display: flex;\n    flex-direction: column;\n    gap: 12px;\n}\n\n.invalid-embed_code_1tJw- {\n    font-family: monospace;\n}\n\n.invalid-embed_emphasis_G99Xb {\n    text-decoration: underline;\n    font-weight: bold;\n}\n", ""]);
+exports.push([module.i, "/* don't use colors.css and friends as the theme system is not set up when this is used */\n\n.invalid-embed_container_3-VXo {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    overflow: auto;\n\n    /* this is an error, so we want it to stand out and always be readable regardless of what the site */\n    /* embedding us looks like */\n    background-color: #ff4c4c;\n    color: white;\n\n    box-sizing: border-box;\n    padding: 8px;\n\n    display: flex;\n    flex-direction: column;\n    gap: 12px;\n}\n\n.invalid-embed_code_lq9SI {\n    font-family: monospace;\n}\n\n.invalid-embed_emphasis_3umem {\n    text-decoration: underline;\n    font-weight: bold;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"container": "invalid-embed_container_335w5",
-	"code": "invalid-embed_code_1tJw-",
-	"emphasis": "invalid-embed_emphasis_G99Xb"
+	"container": "invalid-embed_container_3-VXo",
+	"code": "invalid-embed_code_lq9SI",
+	"emphasis": "invalid-embed_emphasis_3umem"
 };
 
 /***/ }),
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/tw-project-input/project-input.css":
 /*!******************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--5-1!./node_modules/postcss-loader/src??postcss!./src/components/tw-project-input/project-input.css ***!
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??postcss!./src/components/tw-project-input/project-input.css ***!
   \******************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -341,19 +341,19 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.project-input_input_1E6Af {\n    border: none;\n    width: 100%;\n    font-size: 23px;\n    line-height: 32px;\n    opacity: 0.5;\n    background-color: transparent;\n    color: inherit;\n}\n\n.project-input_input_1E6Af:focus {\n    opacity: 1;\n}\n\n.project-input_input_1E6Af:disabled {\n    opacity: 0.8;\n}\n\n.project-input_tooltip_3_EoA {\n    opacity: 1 !important;\n    background-color: var(--extensions-primary) !important;\n    border: 1px solid var(--ui-black-transparent) !important;\n    box-shadow: 0 0 .5rem var(--shadow) !important;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif !important;\n    z-index: 491 !important;\n}\n\n.project-input_tooltip_3_EoA:after {\n    border-top-color: var(--extensions-primary) !important;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/*\n    Contains constants for the z-index values of elements that are part of the global stack context.\n    In other words, z-index values that are \"inside\" a component are not added here.\n    This prevents conflicts between identical z-index values in different components.\n*/\n\n/* Toolbox z-index: 40; set in scratch-blocks */\n\n/* tooltips should go over add buttons if they overlap */\n\n/* monitors go over add buttons */\n\n/* \"ask\" block text input goes above monitors */\n\n/* menu-bar should go over monitors, alerts and tutorials */\n\n/* behind menu-bar */\n\n/* Block drag z-index: 1000; default 50 is overriden in blocks.css */\n\n/* so it is draggable into other panes */\n\n/* behind modals */\n\n/* behind modals */\n\n/* in most interfaces, the context menu is always on top */\n\n.project-input_input_1gT4y {\n    border: none;\n    width: 100%;\n    font-size: 23px;\n    line-height: 32px;\n    opacity: 0.5;\n    background-color: transparent;\n    color: inherit;\n}\n\n.project-input_input_1gT4y:focus {\n    opacity: 1;\n}\n\n.project-input_input_1gT4y:disabled {\n    opacity: 0.8;\n}\n\n.project-input_tooltip_3y9t4 {\n    opacity: 1 !important;\n    background-color: var(--extensions-primary) !important;\n    border: 1px solid var(--ui-black-transparent) !important;\n    box-shadow: 0 0 .5rem var(--shadow) !important;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif !important;\n    z-index: 491 !important;\n}\n\n.project-input_tooltip_3y9t4:after {\n    border-top-color: var(--extensions-primary) !important;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"input": "project-input_input_1E6Af",
-	"tooltip": "project-input_tooltip_3_EoA"
+	"input": "project-input_input_1gT4y",
+	"tooltip": "project-input_tooltip_3y9t4"
 };
 
 /***/ }),
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/tw-studioview/studioview.css":
 /*!************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--5-1!./node_modules/postcss-loader/src??postcss!./src/components/tw-studioview/studioview.css ***!
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??postcss!./src/components/tw-studioview/studioview.css ***!
   \************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -363,38 +363,38 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/*\nImported from:\nhttps://github.com/forkphorus/forkphorus/tree/master/studioview\nWith changes to make it work properly in the scratch-gui environment.\n*/\n\n/* we wrap it in a <div> */\n\n.studioview_wrapper_1SFBd {\n  height: 100%;\n}\n\n/* fix some styles that can be messed up by scratch-gui */\n\n.studioview_studioview-root_1OP-i * {\n  box-sizing: content-box !important;\n}\n\n.studioview_studioview-root_1OP-i {\n  height: 100%;\n}\n\n.studioview_studioview-list_2hIxk {\n  width: 100%;\n  height: 100%;\n  overflow-y: scroll;\n  overflow-anchor: none;\n}\n\n.studioview_studioview-project_IDotv, .studioview_studioview-placeholder_KKHo9 {\n  display: inline-block;\n  width: 144px;\n  padding: 3px;\n  margin-bottom: 1px;\n  margin-right: 1px;\n}\n\n.studioview_studioview-root_1OP-i .studioview_studioview-project_IDotv {\n  color: inherit;\n  position: relative;\n  text-decoration: none;\n}\n\n.studioview_studioview-loaded_3UCil:hover::before, .studioview_studioview-loaded_3UCil:active::before {\n  content: '';\n  pointer-events: none;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: currentColor;\n  opacity: 0.1;\n}\n\n.studioview_studioview-root_1OP-i .studioview_studioview-loaded_3UCil:active::before {\n  opacity: 0.2;\n}\n\n.studioview_studioview-root_1OP-i .studioview_studioview-title_2ROWB,\n.studioview_studioview-root_1OP-i .studioview_studioview-author_2P0Hj {\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  overflow: hidden;\n  color: inherit;\n  text-decoration: none;\n}\n\n.studioview_studioview-title_2ROWB {\n  font-size: 0.8em;\n  font-weight: bold;\n}\n\n.studioview_studioview-author_2P0Hj {\n  font-size: 0.75em;\n}\n\n.studioview_studioview-error_3XWai {\n  width: 100%;\n}\n\n.studioview_studioview-thumbnail_1HYJO, .studioview_studioview-placeholder-thumbnail_TUdop {\n  position: relative;\n  width: 144px;\n  height: 108px;\n}\n\n.studioview_studioview-thumbnail_1HYJO::before {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: currentColor;\n  opacity: 0.1;\n}\n\n.studioview_studioview-thumbnail_1HYJO img {\n  width: 100%;\n  height: 100%;\n}\n\n.studioview_studioview-placeholder_KKHo9 .studioview_studioview-thumbnail_1HYJO,\n.studioview_studioview-placeholder_KKHo9 .studioview_studioview-title_2ROWB,\n.studioview_studioview-placeholder_KKHo9 .studioview_studioview-author_2P0Hj {\n  background-color: currentColor;\n  opacity: 0.1;\n}\n\n.studioview_studioview-title_2ROWB {\n  height: 20px;\n  margin-top: 2px;\n}\n\n.studioview_studioview-author_2P0Hj {\n  height: 18px;\n}\n\n.studioview_studioview-placeholder_KKHo9 .studioview_studioview-title_2ROWB {\n  border-radius: 2px 2px 2px 0;\n  width: 100%;\n}\n\n.studioview_studioview-placeholder_KKHo9 .studioview_studioview-author_2P0Hj {\n  border-radius: 0 0 2px 2px;\n  width: 50%;\n}\n", ""]);
+exports.push([module.i, "/*\nImported from:\nhttps://github.com/forkphorus/forkphorus/tree/master/studioview\nWith changes to make it work properly in the scratch-gui environment.\n*/\n\n/* we wrap it in a <div> */\n\n.studioview_wrapper_GWWqn {\n  height: 100%;\n}\n\n/* fix some styles that can be messed up by scratch-gui */\n\n.studioview_studioview-root_z_auP * {\n  box-sizing: content-box !important;\n}\n\n.studioview_studioview-root_z_auP {\n  height: 100%;\n}\n\n.studioview_studioview-list_1X1Hw {\n  width: 100%;\n  height: 100%;\n  overflow-y: scroll;\n  overflow-anchor: none;\n}\n\n.studioview_studioview-project_2kPXX, .studioview_studioview-placeholder__NrP7 {\n  display: inline-block;\n  width: 144px;\n  padding: 3px;\n  margin-bottom: 1px;\n  margin-right: 1px;\n}\n\n.studioview_studioview-root_z_auP .studioview_studioview-project_2kPXX {\n  color: inherit;\n  position: relative;\n  text-decoration: none;\n}\n\n.studioview_studioview-loaded_mx24q:hover::before, .studioview_studioview-loaded_mx24q:active::before {\n  content: '';\n  pointer-events: none;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: currentColor;\n  opacity: 0.1;\n}\n\n.studioview_studioview-root_z_auP .studioview_studioview-loaded_mx24q:active::before {\n  opacity: 0.2;\n}\n\n.studioview_studioview-root_z_auP .studioview_studioview-title_1eZiq,\n.studioview_studioview-root_z_auP .studioview_studioview-author_Bs0a5 {\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  overflow: hidden;\n  color: inherit;\n  text-decoration: none;\n}\n\n.studioview_studioview-title_1eZiq {\n  font-size: 0.8em;\n  font-weight: bold;\n}\n\n.studioview_studioview-author_Bs0a5 {\n  font-size: 0.75em;\n}\n\n.studioview_studioview-error_ZX8-M {\n  width: 100%;\n}\n\n.studioview_studioview-thumbnail_2nU6_, .studioview_studioview-placeholder-thumbnail_4Fi8w {\n  position: relative;\n  width: 144px;\n  height: 108px;\n}\n\n.studioview_studioview-thumbnail_2nU6_::before {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: currentColor;\n  opacity: 0.1;\n}\n\n.studioview_studioview-thumbnail_2nU6_ img {\n  width: 100%;\n  height: 100%;\n}\n\n.studioview_studioview-placeholder__NrP7 .studioview_studioview-thumbnail_2nU6_,\n.studioview_studioview-placeholder__NrP7 .studioview_studioview-title_1eZiq,\n.studioview_studioview-placeholder__NrP7 .studioview_studioview-author_Bs0a5 {\n  background-color: currentColor;\n  opacity: 0.1;\n}\n\n.studioview_studioview-title_1eZiq {\n  height: 20px;\n  margin-top: 2px;\n}\n\n.studioview_studioview-author_Bs0a5 {\n  height: 18px;\n}\n\n.studioview_studioview-placeholder__NrP7 .studioview_studioview-title_1eZiq {\n  border-radius: 2px 2px 2px 0;\n  width: 100%;\n}\n\n.studioview_studioview-placeholder__NrP7 .studioview_studioview-author_Bs0a5 {\n  border-radius: 0 0 2px 2px;\n  width: 50%;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"wrapper": "studioview_wrapper_1SFBd",
-	"studioview-root": "studioview_studioview-root_1OP-i",
-	"studioviewRoot": "studioview_studioview-root_1OP-i",
-	"studioview-list": "studioview_studioview-list_2hIxk",
-	"studioviewList": "studioview_studioview-list_2hIxk",
-	"studioview-project": "studioview_studioview-project_IDotv",
-	"studioviewProject": "studioview_studioview-project_IDotv",
-	"studioview-placeholder": "studioview_studioview-placeholder_KKHo9",
-	"studioviewPlaceholder": "studioview_studioview-placeholder_KKHo9",
-	"studioview-loaded": "studioview_studioview-loaded_3UCil",
-	"studioviewLoaded": "studioview_studioview-loaded_3UCil",
-	"studioview-title": "studioview_studioview-title_2ROWB",
-	"studioviewTitle": "studioview_studioview-title_2ROWB",
-	"studioview-author": "studioview_studioview-author_2P0Hj",
-	"studioviewAuthor": "studioview_studioview-author_2P0Hj",
-	"studioview-error": "studioview_studioview-error_3XWai",
-	"studioviewError": "studioview_studioview-error_3XWai",
-	"studioview-thumbnail": "studioview_studioview-thumbnail_1HYJO",
-	"studioviewThumbnail": "studioview_studioview-thumbnail_1HYJO",
-	"studioview-placeholder-thumbnail": "studioview_studioview-placeholder-thumbnail_TUdop",
-	"studioviewPlaceholderThumbnail": "studioview_studioview-placeholder-thumbnail_TUdop"
+	"wrapper": "studioview_wrapper_GWWqn",
+	"studioview-root": "studioview_studioview-root_z_auP",
+	"studioviewRoot": "studioview_studioview-root_z_auP",
+	"studioview-list": "studioview_studioview-list_1X1Hw",
+	"studioviewList": "studioview_studioview-list_1X1Hw",
+	"studioview-project": "studioview_studioview-project_2kPXX",
+	"studioviewProject": "studioview_studioview-project_2kPXX",
+	"studioview-placeholder": "studioview_studioview-placeholder__NrP7",
+	"studioviewPlaceholder": "studioview_studioview-placeholder__NrP7",
+	"studioview-loaded": "studioview_studioview-loaded_mx24q",
+	"studioviewLoaded": "studioview_studioview-loaded_mx24q",
+	"studioview-title": "studioview_studioview-title_1eZiq",
+	"studioviewTitle": "studioview_studioview-title_1eZiq",
+	"studioview-author": "studioview_studioview-author_Bs0a5",
+	"studioviewAuthor": "studioview_studioview-author_Bs0a5",
+	"studioview-error": "studioview_studioview-error_ZX8-M",
+	"studioviewError": "studioview_studioview-error_ZX8-M",
+	"studioview-thumbnail": "studioview_studioview-thumbnail_2nU6_",
+	"studioviewThumbnail": "studioview_studioview-thumbnail_2nU6_",
+	"studioview-placeholder-thumbnail": "studioview_studioview-placeholder-thumbnail_4Fi8w",
+	"studioviewPlaceholderThumbnail": "studioview_studioview-placeholder-thumbnail_4Fi8w"
 };
 
 /***/ }),
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/playground/interface.css":
 /*!*********************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--5-1!./node_modules/postcss-loader/src??postcss!./src/playground/interface.css ***!
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??postcss!./src/playground/interface.css ***!
   \*********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -404,29 +404,29 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* Base styles used by Scratch https://github.com/LLK/scratch-www/blob/develop/src/main.scss */\n\nh1,\nh2,\nh3,\nh4,\nh5,\np {\n    margin: 0;\n    padding: 0;\n    border: 0;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5 {\n    font-weight: bold;\n    line-height: 1.7em;\n}\n\nh1 {\n    font-weight: 2.5rem;\n}\n\nh2 {\n    font-weight: 2rem;\n}\n\nh3 {\n    font-size: 1.4rem;\n}\n\nh4 {\n    font-size: 1rem;\n}\n\na {\n    color: var(--link-color);\n    cursor: pointer;\n    text-decoration: underline;\n}\n\n.interface_container_2nBns {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    background-color: var(--page-background);\n}\n\n.interface_editor_3jGyG {\n    height: 100%;\n}\n\n.interface_editor_3jGyG .interface_center_2d9_b {\n    height: 100%;\n}\n\n.interface_player-only_38SyA .interface_center_2d9_b {\n    margin: auto;\n}\n\n.interface_menu_3K-Q2 {\n    margin-bottom: 8px;\n}\n\n.interface_section_3pFkT {\n    margin: 8px 0 8px 0;\n}\n\n.interface_footer_3JeCN {\n    padding: 10px 0;\n    margin-top: 10px;\n    border-top: 2px solid var(--ui-black-transparent);\n}\n\n.interface_footer_3JeCN a {\n    font-weight: bold;\n    text-decoration: none;\n}\n\n.interface_footer-content_1aIC- {\n    max-width: 600px;\n    margin: auto;\n}\n\n.interface_footer-text_IgwDU {\n    text-align: center;\n    margin: 5px 0 10px 0;\n}\n\n.interface_footer-columns_1SUSg {\n    display: flex;\n    justify-content: center;\n    justify-items: center;\n    flex-wrap: wrap;\n}\n\n.interface_footer-section_11lCO {\n    display: flex;\n    flex-direction: column;\n    width: 200px;\n    margin-bottom: 10px;\n}\n\n.interface_footer-section_11lCO > * {\n    margin-bottom: 10px;\n}\n\n.interface_infobox_1B2Hp {\n    line-height: 1.5em;\n    padding: 0.5rem;\n    margin: 5px 0 8px 0;\n    border-radius: 0.5rem;\n    border: 1px solid #b9d6ff;\n    background-color: #dbebff;\n}\n\n.interface_infobox_1B2Hp p {\n    margin: 4px 0;\n}\n\n.interface_infobox_1B2Hp a {\n    font-weight: bold;\n    text-decoration: none;\n}\n\n.interface_unshared-update_i7deb {\n    border-color: #ff52526e;\n    background-color: #ff525240;\n}\n", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* Base styles used by Scratch https://github.com/LLK/scratch-www/blob/develop/src/main.scss */\n\nh1,\nh2,\nh3,\nh4,\nh5,\np {\n    margin: 0;\n    padding: 0;\n    border: 0;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5 {\n    font-weight: bold;\n    line-height: 1.7em;\n}\n\nh1 {\n    font-weight: 2.5rem;\n}\n\nh2 {\n    font-weight: 2rem;\n}\n\nh3 {\n    font-size: 1.4rem;\n}\n\nh4 {\n    font-size: 1rem;\n}\n\na {\n    color: var(--link-color);\n    cursor: pointer;\n    text-decoration: underline;\n}\n\n.interface_container_1cGgE {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    background-color: var(--page-background);\n}\n\n.interface_editor_3WnQ8 {\n    height: 100%;\n}\n\n.interface_editor_3WnQ8 .interface_center_2vEJw {\n    height: 100%;\n}\n\n.interface_player-only_1YGqr .interface_center_2vEJw {\n    margin: auto;\n}\n\n.interface_menu_2TZCG {\n    margin-bottom: 8px;\n}\n\n.interface_section_3f_bi {\n    margin: 8px 0 8px 0;\n}\n\n.interface_footer_vF3nx {\n    padding: 10px 0;\n    margin-top: 10px;\n    border-top: 2px solid var(--ui-black-transparent);\n}\n\n.interface_footer_vF3nx a {\n    font-weight: bold;\n    text-decoration: none;\n}\n\n.interface_footer-content_2-VDh {\n    max-width: 600px;\n    margin: auto;\n}\n\n.interface_footer-text_2qZPP {\n    text-align: center;\n    margin: 5px 0 10px 0;\n}\n\n.interface_footer-columns_22Cpb {\n    display: flex;\n    justify-content: center;\n    justify-items: center;\n    flex-wrap: wrap;\n}\n\n.interface_footer-section_vgGzW {\n    display: flex;\n    flex-direction: column;\n    width: 200px;\n    margin-bottom: 10px;\n}\n\n.interface_footer-section_vgGzW > * {\n    margin-bottom: 10px;\n}\n\n.interface_infobox_KQp6d {\n    line-height: 1.5em;\n    padding: 0.5rem;\n    margin: 5px 0 8px 0;\n    border-radius: 0.5rem;\n    border: 1px solid #b9d6ff;\n    background-color: #dbebff;\n}\n\n.interface_infobox_KQp6d p {\n    margin: 4px 0;\n}\n\n.interface_infobox_KQp6d a {\n    font-weight: bold;\n    text-decoration: none;\n}\n\n.interface_unshared-update_zPoHa {\n    border-color: #ff52526e;\n    background-color: #ff525240;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"container": "interface_container_2nBns",
-	"editor": "interface_editor_3jGyG",
-	"center": "interface_center_2d9_b",
-	"player-only": "interface_player-only_38SyA",
-	"playerOnly": "interface_player-only_38SyA",
-	"menu": "interface_menu_3K-Q2",
-	"section": "interface_section_3pFkT",
-	"footer": "interface_footer_3JeCN",
-	"footer-content": "interface_footer-content_1aIC-",
-	"footerContent": "interface_footer-content_1aIC-",
-	"footer-text": "interface_footer-text_IgwDU",
-	"footerText": "interface_footer-text_IgwDU",
-	"footer-columns": "interface_footer-columns_1SUSg",
-	"footerColumns": "interface_footer-columns_1SUSg",
-	"footer-section": "interface_footer-section_11lCO",
-	"footerSection": "interface_footer-section_11lCO",
-	"infobox": "interface_infobox_1B2Hp",
-	"unshared-update": "interface_unshared-update_i7deb",
-	"unsharedUpdate": "interface_unshared-update_i7deb"
+	"container": "interface_container_1cGgE",
+	"editor": "interface_editor_3WnQ8",
+	"center": "interface_center_2vEJw",
+	"player-only": "interface_player-only_1YGqr",
+	"playerOnly": "interface_player-only_1YGqr",
+	"menu": "interface_menu_2TZCG",
+	"section": "interface_section_3f_bi",
+	"footer": "interface_footer_vF3nx",
+	"footer-content": "interface_footer-content_2-VDh",
+	"footerContent": "interface_footer-content_2-VDh",
+	"footer-text": "interface_footer-text_2qZPP",
+	"footerText": "interface_footer-text_2qZPP",
+	"footer-columns": "interface_footer-columns_22Cpb",
+	"footerColumns": "interface_footer-columns_22Cpb",
+	"footer-section": "interface_footer-section_vgGzW",
+	"footerSection": "interface_footer-section_vgGzW",
+	"infobox": "interface_infobox_KQp6d",
+	"unshared-update": "interface_unshared-update_zPoHa",
+	"unsharedUpdate": "interface_unshared-update_zPoHa"
 };
 
 /***/ }),
@@ -1436,7 +1436,7 @@ CloudServerButton.propTypes = {
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--5-1!../../../node_modules/postcss-loader/src??postcss!./cloud-variable-badge.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/tw-cloud-variable-badge/cloud-variable-badge.css");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/postcss-loader/src??postcss!./cloud-variable-badge.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/tw-cloud-variable-badge/cloud-variable-badge.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -1597,7 +1597,7 @@ module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGlu
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--5-1!../../../node_modules/postcss-loader/src??postcss!./description.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/tw-description/description.css");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/postcss-loader/src??postcss!./description.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/tw-description/description.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -1715,7 +1715,7 @@ Description.propTypes = {
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--5-1!../../../node_modules/postcss-loader/src??postcss!./featured-projects.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/tw-featured-projects/featured-projects.css");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/postcss-loader/src??postcss!./featured-projects.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/tw-featured-projects/featured-projects.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -1851,7 +1851,7 @@ const mapDispatchToProps = dispatch => ({
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--5-1!../../../node_modules/postcss-loader/src??postcss!./invalid-embed.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/tw-invalid-embed/invalid-embed.css");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/postcss-loader/src??postcss!./invalid-embed.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/tw-invalid-embed/invalid-embed.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -1925,7 +1925,7 @@ const InvalidEmbed = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___defau
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--5-1!../../../node_modules/postcss-loader/src??postcss!./project-input.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/tw-project-input/project-input.css");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/postcss-loader/src??postcss!./project-input.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/tw-project-input/project-input.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -2088,7 +2088,7 @@ const mapDispatchToProps = dispatch => ({
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--5-1!../../../node_modules/postcss-loader/src??postcss!./studioview.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/tw-studioview/studioview.css");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/postcss-loader/src??postcss!./studioview.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/tw-studioview/studioview.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -2767,7 +2767,7 @@ Object(_app_target__WEBPACK_IMPORTED_MODULE_3__["default"])(/*#__PURE__*/react__
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../node_modules/css-loader??ref--5-1!../../node_modules/postcss-loader/src??postcss!./interface.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/playground/interface.css");
+var content = __webpack_require__(/*! !../../node_modules/css-loader??ref--6-1!../../node_modules/postcss-loader/src??postcss!./interface.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/playground/interface.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 

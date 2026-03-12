@@ -440,6 +440,10 @@ const categories = [{
   settingId: "sounds-color",
   colorId: "sounds"
 }, {
+  categoryId: "assets",
+  settingId: "assets-color",
+  colorId: "assets"
+}, {
   categoryId: "events",
   settingId: "events-color",
   colorId: "event"

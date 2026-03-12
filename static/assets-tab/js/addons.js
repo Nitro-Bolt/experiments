@@ -21,7 +21,7 @@ exports.push([module.i, ".pause-btn {\n  width: 2rem;\n  height: 2rem;\n  paddin
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/addons/modal.css":
 /*!*************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--5-1!./node_modules/postcss-loader/src??postcss!./src/addons/modal.css ***!
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??postcss!./src/addons/modal.css ***!
   \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -31,12 +31,12 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, ".modal_modal-content_fN1pD {\n  background-color: var(--ui-modal-background);\n  color: var(--ui-modal-foreground);\n}\n", ""]);
+exports.push([module.i, ".modal_modal-content_vp9Mi {\n  background-color: var(--ui-modal-background);\n  color: var(--ui-modal-foreground);\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"modal-content": "modal_modal-content_fN1pD",
-	"modalContent": "modal_modal-content_fN1pD"
+	"modal-content": "modal_modal-content_vp9Mi",
+	"modalContent": "modal_modal-content_vp9Mi"
 };
 
 /***/ }),
@@ -2891,7 +2891,7 @@ function recolorFilter(hex) {
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../node_modules/css-loader??ref--5-1!../../node_modules/postcss-loader/src??postcss!./modal.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/addons/modal.css");
+var content = __webpack_require__(/*! !../../node_modules/css-loader??ref--6-1!../../node_modules/postcss-loader/src??postcss!./modal.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/addons/modal.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
