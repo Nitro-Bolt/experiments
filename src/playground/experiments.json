@@ -4,11 +4,5 @@
     "name": "Assets Tab",
     "description": "A new tab in the editor that allows you to upload arbitrary files and such into your project!",
     "status": "Final Testing"
-  },
-  {
-    "id": "global-procedures",
-    "name": "Global Procedures",
-    "description": "Toggle your custom blocks between local and global!",
-    "status": "Final Testing"
   }
 ]
