@@ -1,9 +1,9 @@
 (window["webpackJsonpGUI"] = window["webpackJsonpGUI"] || []).push([[17],{
 
-/***/ "./node_modules/monaco-editor/esm/vs/basic-languages/typescript/typescript.js":
-/*!************************************************************************************!*\
-  !*** ./node_modules/monaco-editor/esm/vs/basic-languages/typescript/typescript.js ***!
-  \************************************************************************************/
+/***/ "./node_modules/monaco-editor/esm/vs/basic-languages/css/css.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/monaco-editor/esm/vs/basic-languages/css/css.js ***!
+  \**********************************************************************/
 /*! exports provided: conf, language */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -11,16 +11,13 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "conf", function() { return conf; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "language", function() { return language; });
-/* harmony import */ var _fillers_monaco_editor_core_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../fillers/monaco-editor-core.js */ "./node_modules/monaco-editor/esm/vs/basic-languages/fillers/monaco-editor-core.js");
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-
 var conf = {
-    wordPattern: /(-?\d*\.\d\w*)|([^\`\~\!\@\#\%\^\&\*\(\)\-\=\+\[\{\]\}\\\|\;\:\'\"\,\.\<\>\/\?\s]+)/g,
+    wordPattern: /(#?-?\d*\.\d\w*%?)|((::|[@#.!:])?[\w-?]+%?)|::|[@#.!:]/g,
     comments: {
-        lineComment: '//',
         blockComment: ['/*', '*/']
     },
     brackets: [
@@ -28,322 +25,174 @@ var conf = {
         ['[', ']'],
         ['(', ')']
     ],
-    onEnterRules: [
-        {
-            // e.g. /** | */
-            beforeText: /^\s*\/\*\*(?!\/)([^\*]|\*(?!\/))*$/,
-            afterText: /^\s*\*\/$/,
-            action: {
-                indentAction: _fillers_monaco_editor_core_js__WEBPACK_IMPORTED_MODULE_0__["languages"].IndentAction.IndentOutdent,
-                appendText: ' * '
-            }
-        },
-        {
-            // e.g. /** ...|
-            beforeText: /^\s*\/\*\*(?!\/)([^\*]|\*(?!\/))*$/,
-            action: {
-                indentAction: _fillers_monaco_editor_core_js__WEBPACK_IMPORTED_MODULE_0__["languages"].IndentAction.None,
-                appendText: ' * '
-            }
-        },
-        {
-            // e.g.  * ...|
-            beforeText: /^(\t|(\ \ ))*\ \*(\ ([^\*]|\*(?!\/))*)?$/,
-            action: {
-                indentAction: _fillers_monaco_editor_core_js__WEBPACK_IMPORTED_MODULE_0__["languages"].IndentAction.None,
-                appendText: '* '
-            }
-        },
-        {
-            // e.g.  */|
-            beforeText: /^(\t|(\ \ ))*\ \*\/\s*$/,
-            action: {
-                indentAction: _fillers_monaco_editor_core_js__WEBPACK_IMPORTED_MODULE_0__["languages"].IndentAction.None,
-                removeText: 1
-            }
-        }
-    ],
     autoClosingPairs: [
+        { open: '{', close: '}', notIn: ['string', 'comment'] },
+        { open: '[', close: ']', notIn: ['string', 'comment'] },
+        { open: '(', close: ')', notIn: ['string', 'comment'] },
+        { open: '"', close: '"', notIn: ['string', 'comment'] },
+        { open: "'", close: "'", notIn: ['string', 'comment'] }
+    ],
+    surroundingPairs: [
         { open: '{', close: '}' },
         { open: '[', close: ']' },
         { open: '(', close: ')' },
-        { open: '"', close: '"', notIn: ['string'] },
-        { open: "'", close: "'", notIn: ['string', 'comment'] },
-        { open: '`', close: '`', notIn: ['string', 'comment'] },
-        { open: '/**', close: ' */', notIn: ['string'] }
+        { open: '"', close: '"' },
+        { open: "'", close: "'" }
     ],
     folding: {
         markers: {
-            start: new RegExp('^\\s*//\\s*#?region\\b'),
-            end: new RegExp('^\\s*//\\s*#?endregion\\b')
+            start: new RegExp('^\\s*\\/\\*\\s*#region\\b\\s*(.*?)\\s*\\*\\/'),
+            end: new RegExp('^\\s*\\/\\*\\s*#endregion\\b.*\\*\\/')
         }
     }
 };
 var language = {
-    // Set defaultToken to invalid to see what you do not tokenize yet
-    defaultToken: 'invalid',
-    tokenPostfix: '.ts',
-    keywords: [
-        // Should match the keys of textToKeywordObj in
-        // https://github.com/microsoft/TypeScript/blob/master/src/compiler/scanner.ts
-        'abstract',
-        'any',
-        'as',
-        'asserts',
-        'bigint',
-        'boolean',
-        'break',
-        'case',
-        'catch',
-        'class',
-        'continue',
-        'const',
-        'constructor',
-        'debugger',
-        'declare',
-        'default',
-        'delete',
-        'do',
-        'else',
-        'enum',
-        'export',
-        'extends',
-        'false',
-        'finally',
-        'for',
-        'from',
-        'function',
-        'get',
-        'if',
-        'implements',
-        'import',
-        'in',
-        'infer',
-        'instanceof',
-        'interface',
-        'is',
-        'keyof',
-        'let',
-        'module',
-        'namespace',
-        'never',
-        'new',
-        'null',
-        'number',
-        'object',
-        'package',
-        'private',
-        'protected',
-        'public',
-        'override',
-        'readonly',
-        'require',
-        'global',
-        'return',
-        'set',
-        'static',
-        'string',
-        'super',
-        'switch',
-        'symbol',
-        'this',
-        'throw',
-        'true',
-        'try',
-        'type',
-        'typeof',
-        'undefined',
-        'unique',
-        'unknown',
-        'var',
-        'void',
-        'while',
-        'with',
-        'yield',
-        'async',
-        'await',
-        'of'
+    defaultToken: '',
+    tokenPostfix: '.css',
+    ws: '[ \t\n\r\f]*',
+    identifier: '-?-?([a-zA-Z]|(\\\\(([0-9a-fA-F]{1,6}\\s?)|[^[0-9a-fA-F])))([\\w\\-]|(\\\\(([0-9a-fA-F]{1,6}\\s?)|[^[0-9a-fA-F])))*',
+    brackets: [
+        { open: '{', close: '}', token: 'delimiter.bracket' },
+        { open: '[', close: ']', token: 'delimiter.bracket' },
+        { open: '(', close: ')', token: 'delimiter.parenthesis' },
+        { open: '<', close: '>', token: 'delimiter.angle' }
     ],
-    operators: [
-        '<=',
-        '>=',
-        '==',
-        '!=',
-        '===',
-        '!==',
-        '=>',
-        '+',
-        '-',
-        '**',
-        '*',
-        '/',
-        '%',
-        '++',
-        '--',
-        '<<',
-        '</',
-        '>>',
-        '>>>',
-        '&',
-        '|',
-        '^',
-        '!',
-        '~',
-        '&&',
-        '||',
-        '??',
-        '?',
-        ':',
-        '=',
-        '+=',
-        '-=',
-        '*=',
-        '**=',
-        '/=',
-        '%=',
-        '<<=',
-        '>>=',
-        '>>>=',
-        '&=',
-        '|=',
-        '^=',
-        '@'
-    ],
-    // we include these common regular expressions
-    symbols: /[=><!~?:&|+\-*\/\^%]+/,
-    escapes: /\\(?:[abfnrtv\\"']|x[0-9A-Fa-f]{1,4}|u[0-9A-Fa-f]{4}|U[0-9A-Fa-f]{8})/,
-    digits: /\d+(_+\d+)*/,
-    octaldigits: /[0-7]+(_+[0-7]+)*/,
-    binarydigits: /[0-1]+(_+[0-1]+)*/,
-    hexdigits: /[[0-9a-fA-F]+(_+[0-9a-fA-F]+)*/,
-    regexpctl: /[(){}\[\]\$\^|\-*+?\.]/,
-    regexpesc: /\\(?:[bBdDfnrstvwWn0\\\/]|@regexpctl|c[A-Z]|x[0-9a-fA-F]{2}|u[0-9a-fA-F]{4})/,
-    // The main tokenizer for our languages
     tokenizer: {
-        root: [[/[{}]/, 'delimiter.bracket'], { include: 'common' }],
-        common: [
-            // identifiers and keywords
+        root: [{ include: '@selector' }],
+        selector: [
+            { include: '@comments' },
+            { include: '@import' },
+            { include: '@strings' },
             [
-                /[a-z_$][\w$]*/,
-                {
-                    cases: {
-                        '@keywords': 'keyword',
-                        '@default': 'identifier'
-                    }
-                }
+                '[@](keyframes|-webkit-keyframes|-moz-keyframes|-o-keyframes)',
+                { token: 'keyword', next: '@keyframedeclaration' }
             ],
-            [/[A-Z][\w\$]*/, 'type.identifier'],
-            // [/[A-Z][\w\$]*/, 'identifier'],
-            // whitespace
-            { include: '@whitespace' },
-            // regular expression: ensure it is terminated before beginning (otherwise it is an opeator)
+            ['[@](page|content|font-face|-moz-document)', { token: 'keyword' }],
+            ['[@](charset|namespace)', { token: 'keyword', next: '@declarationbody' }],
             [
-                /\/(?=([^\\\/]|\\.)+\/([dgimsuy]*)(\s*)(\.|;|,|\)|\]|\}|$))/,
-                { token: 'regexp', bracket: '@open', next: '@regexp' }
+                '(url-prefix)(\\()',
+                ['attribute.value', { token: 'delimiter.parenthesis', next: '@urldeclaration' }]
             ],
-            // delimiters and operators
-            [/[()\[\]]/, '@brackets'],
-            [/[<>](?!@symbols)/, '@brackets'],
-            [/!(?=([^=]|$))/, 'delimiter'],
             [
-                /@symbols/,
-                {
-                    cases: {
-                        '@operators': 'delimiter',
-                        '@default': ''
-                    }
-                }
+                '(url)(\\()',
+                ['attribute.value', { token: 'delimiter.parenthesis', next: '@urldeclaration' }]
             ],
-            // numbers
-            [/(@digits)[eE]([\-+]?(@digits))?/, 'number.float'],
-            [/(@digits)\.(@digits)([eE][\-+]?(@digits))?/, 'number.float'],
-            [/0[xX](@hexdigits)n?/, 'number.hex'],
-            [/0[oO]?(@octaldigits)n?/, 'number.octal'],
-            [/0[bB](@binarydigits)n?/, 'number.binary'],
-            [/(@digits)n?/, 'number'],
-            // delimiter: after number because of .\d floats
-            [/[;,.]/, 'delimiter'],
-            // strings
-            [/"([^"\\]|\\.)*$/, 'string.invalid'],
-            [/'([^'\\]|\\.)*$/, 'string.invalid'],
-            [/"/, 'string', '@string_double'],
-            [/'/, 'string', '@string_single'],
-            [/`/, 'string', '@string_backtick']
+            { include: '@selectorname' },
+            ['[\\*]', 'tag'],
+            ['[>\\+,]', 'delimiter'],
+            ['\\[', { token: 'delimiter.bracket', next: '@selectorattribute' }],
+            ['{', { token: 'delimiter.bracket', next: '@selectorbody' }]
         ],
-        whitespace: [
-            [/[ \t\r\n]+/, ''],
-            [/\/\*\*(?!\/)/, 'comment.doc', '@jsdoc'],
-            [/\/\*/, 'comment', '@comment'],
-            [/\/\/.*$/, 'comment']
+        selectorbody: [
+            { include: '@comments' },
+            ['[*_]?@identifier@ws:(?=(\\s|\\d|[^{;}]*[;}]))', 'attribute.name', '@rulevalue'],
+            ['}', { token: 'delimiter.bracket', next: '@pop' }]
+        ],
+        selectorname: [
+            ['(\\.|#(?=[^{])|%|(@identifier)|:)+', 'tag'] // selector (.foo, div, ...)
+        ],
+        selectorattribute: [
+            { include: '@term' },
+            [']', { token: 'delimiter.bracket', next: '@pop' }]
+        ],
+        term: [
+            { include: '@comments' },
+            [
+                '(url-prefix)(\\()',
+                ['attribute.value', { token: 'delimiter.parenthesis', next: '@urldeclaration' }]
+            ],
+            [
+                '(url)(\\()',
+                ['attribute.value', { token: 'delimiter.parenthesis', next: '@urldeclaration' }]
+            ],
+            { include: '@functioninvocation' },
+            { include: '@numbers' },
+            { include: '@name' },
+            { include: '@strings' },
+            ['([<>=\\+\\-\\*\\/\\^\\|\\~,])', 'delimiter'],
+            [',', 'delimiter']
+        ],
+        rulevalue: [
+            { include: '@comments' },
+            { include: '@strings' },
+            { include: '@term' },
+            ['!important', 'keyword'],
+            [';', 'delimiter', '@pop'],
+            ['(?=})', { token: '', next: '@pop' }] // missing semicolon
+        ],
+        warndebug: [['[@](warn|debug)', { token: 'keyword', next: '@declarationbody' }]],
+        import: [['[@](import)', { token: 'keyword', next: '@declarationbody' }]],
+        urldeclaration: [
+            { include: '@strings' },
+            ['[^)\r\n]+', 'string'],
+            ['\\)', { token: 'delimiter.parenthesis', next: '@pop' }]
+        ],
+        parenthizedterm: [
+            { include: '@term' },
+            ['\\)', { token: 'delimiter.parenthesis', next: '@pop' }]
+        ],
+        declarationbody: [
+            { include: '@term' },
+            [';', 'delimiter', '@pop'],
+            ['(?=})', { token: '', next: '@pop' }] // missing semicolon
+        ],
+        comments: [
+            ['\\/\\*', 'comment', '@comment'],
+            ['\\/\\/+.*', 'comment']
         ],
         comment: [
-            [/[^\/*]+/, 'comment'],
-            [/\*\//, 'comment', '@pop'],
-            [/[\/*]/, 'comment']
+            ['\\*\\/', 'comment', '@pop'],
+            [/[^*/]+/, 'comment'],
+            [/./, 'comment']
         ],
-        jsdoc: [
-            [/[^\/*]+/, 'comment.doc'],
-            [/\*\//, 'comment.doc', '@pop'],
-            [/[\/*]/, 'comment.doc']
+        name: [['@identifier', 'attribute.value']],
+        numbers: [
+            [
+                '-?(\\d*\\.)?\\d+([eE][\\-+]?\\d+)?',
+                { token: 'attribute.value.number', next: '@units' }
+            ],
+            ['#[0-9a-fA-F_]+(?!\\w)', 'attribute.value.hex']
         ],
-        // We match regular expression quite precisely
-        regexp: [
+        units: [
             [
-                /(\{)(\d+(?:,\d*)?)(\})/,
-                ['regexp.escape.control', 'regexp.escape.control', 'regexp.escape.control']
-            ],
-            [
-                /(\[)(\^?)(?=(?:[^\]\\\/]|\\.)+)/,
-                ['regexp.escape.control', { token: 'regexp.escape.control', next: '@regexrange' }]
-            ],
-            [/(\()(\?:|\?=|\?!)/, ['regexp.escape.control', 'regexp.escape.control']],
-            [/[()]/, 'regexp.escape.control'],
-            [/@regexpctl/, 'regexp.escape.control'],
-            [/[^\\\/]/, 'regexp'],
-            [/@regexpesc/, 'regexp.escape'],
-            [/\\\./, 'regexp.invalid'],
-            [
-                /(\/)([dgimsuy]*)/,
-                [{ token: 'regexp', bracket: '@close', next: '@pop' }, 'keyword.other']
+                '(em|ex|ch|rem|vmin|vmax|vw|vh|vm|cm|mm|in|px|pt|pc|deg|grad|rad|turn|s|ms|Hz|kHz|%)?',
+                'attribute.value.unit',
+                '@pop'
             ]
         ],
-        regexrange: [
-            [/-/, 'regexp.escape.control'],
-            [/\^/, 'regexp.invalid'],
-            [/@regexpesc/, 'regexp.escape'],
-            [/[^\]]/, 'regexp'],
-            [
-                /\]/,
-                {
-                    token: 'regexp.escape.control',
-                    next: '@pop',
-                    bracket: '@close'
-                }
-            ]
+        keyframedeclaration: [
+            ['@identifier', 'attribute.value'],
+            ['{', { token: 'delimiter.bracket', switchTo: '@keyframebody' }]
         ],
-        string_double: [
+        keyframebody: [
+            { include: '@term' },
+            ['{', { token: 'delimiter.bracket', next: '@selectorbody' }],
+            ['}', { token: 'delimiter.bracket', next: '@pop' }]
+        ],
+        functioninvocation: [
+            ['@identifier\\(', { token: 'attribute.value', next: '@functionarguments' }]
+        ],
+        functionarguments: [
+            ['\\$@identifier@ws:', 'attribute.name'],
+            ['[,]', 'delimiter'],
+            { include: '@term' },
+            ['\\)', { token: 'attribute.value', next: '@pop' }]
+        ],
+        strings: [
+            ['~?"', { token: 'string', next: '@stringenddoublequote' }],
+            ["~?'", { token: 'string', next: '@stringendquote' }]
+        ],
+        stringenddoublequote: [
+            ['\\\\.', 'string'],
+            ['"', { token: 'string', next: '@pop' }],
             [/[^\\"]+/, 'string'],
-            [/@escapes/, 'string.escape'],
-            [/\\./, 'string.escape.invalid'],
-            [/"/, 'string', '@pop']
+            ['.', 'string']
         ],
-        string_single: [
+        stringendquote: [
+            ['\\\\.', 'string'],
+            ["'", { token: 'string', next: '@pop' }],
             [/[^\\']+/, 'string'],
-            [/@escapes/, 'string.escape'],
-            [/\\./, 'string.escape.invalid'],
-            [/'/, 'string', '@pop']
-        ],
-        string_backtick: [
-            [/\$\{/, { token: 'delimiter.bracket', next: '@bracketCounting' }],
-            [/[^\\`$]+/, 'string'],
-            [/@escapes/, 'string.escape'],
-            [/\\./, 'string.escape.invalid'],
-            [/`/, 'string', '@pop']
-        ],
-        bracketCounting: [
-            [/\{/, 'delimiter.bracket', '@bracketCounting'],
-            [/\}/, 'delimiter.bracket', '@pop'],
-            { include: 'common' }
+            ['.', 'string']
         ]
     }
 };

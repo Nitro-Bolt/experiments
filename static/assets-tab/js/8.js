@@ -1,9 +1,9 @@
 (window["webpackJsonpGUI"] = window["webpackJsonpGUI"] || []).push([[8],{
 
-/***/ "./node_modules/monaco-editor/esm/vs/basic-languages/go/go.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/monaco-editor/esm/vs/basic-languages/go/go.js ***!
-  \********************************************************************/
+/***/ "./node_modules/monaco-editor/esm/vs/basic-languages/apex/apex.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/monaco-editor/esm/vs/basic-languages/apex/apex.js ***!
+  \************************************************************************/
 /*! exports provided: conf, language */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -16,6 +16,8 @@ __webpack_require__.r(__webpack_exports__);
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 var conf = {
+    // the default separators except `@$`
+    wordPattern: /(-?\d*\.\d\w*)|([^\`\~\!\#\%\^\&\*\(\)\-\=\+\[\{\]\}\\\|\;\:\'\"\,\.\<\>\/\?\s]+)/g,
     comments: {
         lineComment: '//',
         blockComment: ['/*', '*/']
@@ -29,129 +31,234 @@ var conf = {
         { open: '{', close: '}' },
         { open: '[', close: ']' },
         { open: '(', close: ')' },
-        { open: '`', close: '`', notIn: ['string'] },
-        { open: '"', close: '"', notIn: ['string'] },
-        { open: "'", close: "'", notIn: ['string', 'comment'] }
+        { open: '"', close: '"' },
+        { open: "'", close: "'" }
     ],
     surroundingPairs: [
         { open: '{', close: '}' },
         { open: '[', close: ']' },
         { open: '(', close: ')' },
-        { open: '`', close: '`' },
         { open: '"', close: '"' },
-        { open: "'", close: "'" }
-    ]
+        { open: "'", close: "'" },
+        { open: '<', close: '>' }
+    ],
+    folding: {
+        markers: {
+            start: new RegExp('^\\s*//\\s*(?:(?:#?region\\b)|(?:<editor-fold\\b))'),
+            end: new RegExp('^\\s*//\\s*(?:(?:#?endregion\\b)|(?:</editor-fold>))')
+        }
+    }
 };
+var keywords = [
+    'abstract',
+    'activate',
+    'and',
+    'any',
+    'array',
+    'as',
+    'asc',
+    'assert',
+    'autonomous',
+    'begin',
+    'bigdecimal',
+    'blob',
+    'boolean',
+    'break',
+    'bulk',
+    'by',
+    'case',
+    'cast',
+    'catch',
+    'char',
+    'class',
+    'collect',
+    'commit',
+    'const',
+    'continue',
+    'convertcurrency',
+    'decimal',
+    'default',
+    'delete',
+    'desc',
+    'do',
+    'double',
+    'else',
+    'end',
+    'enum',
+    'exception',
+    'exit',
+    'export',
+    'extends',
+    'false',
+    'final',
+    'finally',
+    'float',
+    'for',
+    'from',
+    'future',
+    'get',
+    'global',
+    'goto',
+    'group',
+    'having',
+    'hint',
+    'if',
+    'implements',
+    'import',
+    'in',
+    'inner',
+    'insert',
+    'instanceof',
+    'int',
+    'interface',
+    'into',
+    'join',
+    'last_90_days',
+    'last_month',
+    'last_n_days',
+    'last_week',
+    'like',
+    'limit',
+    'list',
+    'long',
+    'loop',
+    'map',
+    'merge',
+    'native',
+    'new',
+    'next_90_days',
+    'next_month',
+    'next_n_days',
+    'next_week',
+    'not',
+    'null',
+    'nulls',
+    'number',
+    'object',
+    'of',
+    'on',
+    'or',
+    'outer',
+    'override',
+    'package',
+    'parallel',
+    'pragma',
+    'private',
+    'protected',
+    'public',
+    'retrieve',
+    'return',
+    'returning',
+    'rollback',
+    'savepoint',
+    'search',
+    'select',
+    'set',
+    'short',
+    'sort',
+    'stat',
+    'static',
+    'strictfp',
+    'super',
+    'switch',
+    'synchronized',
+    'system',
+    'testmethod',
+    'then',
+    'this',
+    'this_month',
+    'this_week',
+    'throw',
+    'throws',
+    'today',
+    'tolabel',
+    'tomorrow',
+    'transaction',
+    'transient',
+    'trigger',
+    'true',
+    'try',
+    'type',
+    'undelete',
+    'update',
+    'upsert',
+    'using',
+    'virtual',
+    'void',
+    'volatile',
+    'webservice',
+    'when',
+    'where',
+    'while',
+    'yesterday'
+];
+// create case variations of the keywords - apex is case insensitive, but we can't make the highlighter case insensitive
+// because we use a heuristic to assume that identifiers starting with an upper case letter are types.
+var uppercaseFirstLetter = function (lowercase) {
+    return lowercase.charAt(0).toUpperCase() + lowercase.substr(1);
+};
+var keywordsWithCaseVariations = [];
+keywords.forEach(function (lowercase) {
+    keywordsWithCaseVariations.push(lowercase);
+    keywordsWithCaseVariations.push(lowercase.toUpperCase());
+    keywordsWithCaseVariations.push(uppercaseFirstLetter(lowercase));
+});
 var language = {
     defaultToken: '',
-    tokenPostfix: '.go',
-    keywords: [
-        'break',
-        'case',
-        'chan',
-        'const',
-        'continue',
-        'default',
-        'defer',
-        'else',
-        'fallthrough',
-        'for',
-        'func',
-        'go',
-        'goto',
-        'if',
-        'import',
-        'interface',
-        'map',
-        'package',
-        'range',
-        'return',
-        'select',
-        'struct',
-        'switch',
-        'type',
-        'var',
-        'bool',
-        'true',
-        'false',
-        'uint8',
-        'uint16',
-        'uint32',
-        'uint64',
-        'int8',
-        'int16',
-        'int32',
-        'int64',
-        'float32',
-        'float64',
-        'complex64',
-        'complex128',
-        'byte',
-        'rune',
-        'uint',
-        'int',
-        'uintptr',
-        'string',
-        'nil'
-    ],
+    tokenPostfix: '.apex',
+    keywords: keywordsWithCaseVariations,
     operators: [
+        '=',
+        '>',
+        '<',
+        '!',
+        '~',
+        '?',
+        ':',
+        '==',
+        '<=',
+        '>=',
+        '!=',
+        '&&',
+        '||',
+        '++',
+        '--',
         '+',
         '-',
         '*',
         '/',
-        '%',
         '&',
         '|',
         '^',
+        '%',
         '<<',
         '>>',
-        '&^',
+        '>>>',
         '+=',
         '-=',
         '*=',
         '/=',
-        '%=',
         '&=',
         '|=',
         '^=',
+        '%=',
         '<<=',
         '>>=',
-        '&^=',
-        '&&',
-        '||',
-        '<-',
-        '++',
-        '--',
-        '==',
-        '<',
-        '>',
-        '=',
-        '!',
-        '!=',
-        '<=',
-        '>=',
-        ':=',
-        '...',
-        '(',
-        ')',
-        '',
-        ']',
-        '{',
-        '}',
-        ',',
-        ';',
-        '.',
-        ':'
+        '>>>='
     ],
     // we include these common regular expressions
     symbols: /[=><!~?:&|+\-*\/\^%]+/,
     escapes: /\\(?:[abfnrtv\\"']|x[0-9A-Fa-f]{1,4}|u[0-9A-Fa-f]{4}|U[0-9A-Fa-f]{8})/,
+    digits: /\d+(_+\d+)*/,
+    octaldigits: /[0-7]+(_+[0-7]+)*/,
+    binarydigits: /[0-1]+(_+[0-1]+)*/,
+    hexdigits: /[[0-9a-fA-F]+(_+[0-9a-fA-F]+)*/,
     // The main tokenizer for our languages
     tokenizer: {
         root: [
             // identifiers and keywords
             [
-                /[a-zA-Z_]\w*/,
+                /[a-z_$][\w$]*/,
                 {
                     cases: {
                         '@keywords': { token: 'keyword.$0' },
@@ -159,12 +266,18 @@ var language = {
                     }
                 }
             ],
+            // assume that identifiers starting with an uppercase letter are types
+            [
+                /[A-Z][\w\$]*/,
+                {
+                    cases: {
+                        '@keywords': { token: 'keyword.$0' },
+                        '@default': 'type.identifier'
+                    }
+                }
+            ],
             // whitespace
             { include: '@whitespace' },
-            // [[ attributes ]].
-            [/\[\[.*\]\]/, 'annotation'],
-            // Preprocessor directive
-            [/^\s*#\w+/, 'keyword'],
             // delimiters and operators
             [/[{}()\[\]]/, '@brackets'],
             [/[<>](?!@symbols)/, '@brackets'],
@@ -177,20 +290,20 @@ var language = {
                     }
                 }
             ],
+            // @ annotations.
+            [/@\s*[a-zA-Z_\$][\w\$]*/, 'annotation'],
             // numbers
-            [/\d*\d+[eE]([\-+]?\d+)?/, 'number.float'],
-            [/\d*\.\d+([eE][\-+]?\d+)?/, 'number.float'],
-            [/0[xX][0-9a-fA-F']*[0-9a-fA-F]/, 'number.hex'],
-            [/0[0-7']*[0-7]/, 'number.octal'],
-            [/0[bB][0-1']*[0-1]/, 'number.binary'],
-            [/\d[\d']*/, 'number'],
-            [/\d/, 'number'],
+            [/(@digits)[eE]([\-+]?(@digits))?[fFdD]?/, 'number.float'],
+            [/(@digits)\.(@digits)([eE][\-+]?(@digits))?[fFdD]?/, 'number.float'],
+            [/(@digits)[fFdD]/, 'number.float'],
+            [/(@digits)[lL]?/, 'number'],
             // delimiter: after number because of .\d floats
             [/[;,.]/, 'delimiter'],
             // strings
             [/"([^"\\]|\\.)*$/, 'string.invalid'],
-            [/"/, 'string', '@string'],
-            [/`/, 'string', '@rawstring'],
+            [/'([^'\\]|\\.)*$/, 'string.invalid'],
+            [/"/, 'string', '@string."'],
+            [/'/, 'string', "@string.'"],
             // characters
             [/'[^\\']'/, 'string'],
             [/(')(@escapes)(')/, ['string', 'string.escape', 'string']],
@@ -198,7 +311,7 @@ var language = {
         ],
         whitespace: [
             [/[ \t\r\n]+/, ''],
-            [/\/\*\*(?!\/)/, 'comment.doc', '@doccomment'],
+            [/\/\*\*(?!\/)/, 'comment.doc', '@apexdoc'],
             [/\/\*/, 'comment', '@comment'],
             [/\/\/.*$/, 'comment']
         ],
@@ -210,22 +323,24 @@ var language = {
             [/[\/*]/, 'comment']
         ],
         //Identical copy of comment above, except for the addition of .doc
-        doccomment: [
+        apexdoc: [
             [/[^\/*]+/, 'comment.doc'],
-            // [/\/\*/, 'comment.doc', '@push' ],    // nested comment not allowed :-(
-            [/\/\*/, 'comment.doc.invalid'],
             [/\*\//, 'comment.doc', '@pop'],
             [/[\/*]/, 'comment.doc']
         ],
         string: [
-            [/[^\\"]+/, 'string'],
+            [/[^\\"']+/, 'string'],
             [/@escapes/, 'string.escape'],
             [/\\./, 'string.escape.invalid'],
-            [/"/, 'string', '@pop']
-        ],
-        rawstring: [
-            [/[^\`]/, 'string'],
-            [/`/, 'string', '@pop']
+            [
+                /["']/,
+                {
+                    cases: {
+                        '$#==$S2': { token: 'string', next: '@pop' },
+                        '@default': 'string'
+                    }
+                }
+            ]
         ]
     }
 };

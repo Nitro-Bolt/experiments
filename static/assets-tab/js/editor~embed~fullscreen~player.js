@@ -217,12 +217,14 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.asset-viewer_viewer-container_wUKv_ {\n    display: flex;\n    flex-direction: column;\n    flex-grow: 1;\n    padding: calc(2 * 0.5rem);\n    align-items: center;\n    justify-items: center\n}\n\n.asset-viewer_attribute_3PuR3 {\n    margin: 0.5rem;\n}\n\n.asset-viewer_attribute_3PuR3 span {\n    font-size: 0.75rem;\n}\n\n.asset-viewer_media-preview_2uA92 {\n    max-height: calc(50 * 0.5rem);\n    border-radius: 0.25rem;\n    margin: 1rem\n}\n\n.asset-viewer_editor-header-row_3t7x1 {\n    display: flex;\n    align-items: center;\n    width: 100%;\n}\n\n.asset-viewer_editor-surface_15kjf {\n    width: 100%;\n    height: 24rem;\n    margin-top: calc(2 * 0.5rem);\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 0.25rem;\n    overflow: hidden;\n}\n\n.asset-viewer_info-row_1FCSR {\n    margin-top: 0.5rem;\n    width: 100%;\n    display: flex;\n    justify-content: flex-start;\n}\n\n[dir=\"ltr\"] .asset-viewer_info-row_1FCSR .asset-viewer_attribute_3PuR3 + .asset-viewer_attribute_3PuR3 {\n    margin-left: calc(2 * 0.5rem);\n}\n\n[dir=\"rtl\"] .asset-viewer_info-row_1FCSR .asset-viewer_attribute_3PuR3 + .asset-viewer_attribute_3PuR3 {\n    margin-right: calc(2 * 0.5rem);\n}\n\n.asset-viewer_input-group_6Xllw {\n    display: flex;\n    align-items: center;\n}\n\n.asset-viewer_name-input_1eDXg {\n    min-width: 20rem;\n}\n\n[dir=\"ltr\"] .asset-viewer_button-group_1sBkP {\n    margin-left: 1rem;\n}\n\n[dir=\"rtl\"] .asset-viewer_button-group_1sBkP {\n    margin-right: 1rem;\n}\n\n.asset-viewer_button-group_1sBkP {\n    display: flex;\n}\n\n.asset-viewer_button_3xh7w {\n    height: 2rem;\n    padding: 0.35rem;\n    outline: none;\n    background: var(--ui-white);\n    border-radius: 0;\n    border: 1px solid var(--ui-black-transparent);\n    cursor: pointer;\n    font-size: 0.85rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    margin: 0;\n    position: relative;\n}\n\n.asset-viewer_button_3xh7w:not(:last-child) {\n    border-right: none;\n}\n\n[dir=\"rtl\"] .asset-viewer_button_3xh7w:not(:last-child) {\n    border-left: none;\n    border-right: 1px solid var(--ui-black-transparent);\n}\n\n.asset-viewer_button-group_1sBkP .asset-viewer_button_3xh7w:first-child,\n[dir=\"rtl\"] .asset-viewer_button-group_1sBkP .asset-viewer_button_3xh7w:last-child {\n    border-radius: calc(0.5rem / 2) 0 0 calc(0.5rem / 2);\n}\n\n.asset-viewer_button-group_1sBkP .asset-viewer_button_3xh7w:last-child,\n[dir=\"rtl\"] .asset-viewer_button-group_1sBkP .asset-viewer_button_3xh7w:first-child {\n    border-radius: 0 calc(0.5rem / 2) calc(0.5rem / 2) 0;\n}\n\n.asset-viewer_button_3xh7w:active {\n    background: var(--looks-transparent);\n}\n\n.asset-viewer_button_3xh7w:focus::before {\n    content: \"\";\n    position: absolute;\n    top: -1px;\n    right: -1px;\n    bottom: -1px;\n    left: -1px;\n    border: 1px solid var(--looks-secondary);\n    z-index: 1;\n}\n\n.asset-viewer_button_3xh7w > img {\n    flex-grow: 1;\n    max-width: 100%;\n    max-height: 100%;\n    min-width: 1.25rem;\n}\n\n[dir=\"rtl\"] .asset-viewer_undo-icon_2v9n8,\n[dir=\"rtl\"] .asset-viewer_redo-icon_316eH {\n    transform: scaleX(-1);\n}\n\n.asset-viewer_button_3xh7w:disabled > img {\n    opacity: 0.25;\n}", ""]);
+exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* make sure to keep these in sync with other constants,\ne.g. STAGE_DIMENSION_DEFAULTS in lib/screen-utils.js */\n\n/* layout contants from `layout-constants.js` */\n\n.asset-viewer_viewer-container_wUKv_ {\n    display: flex;\n    flex-direction: column;\n    flex-grow: 1;\n    padding: calc(2 * 0.5rem);\n    align-items: center;\n    justify-items: center\n}\n\n.asset-viewer_text-mode_mTqZ2 {\n    width: 100%;\n    min-height: 0;\n    align-items: stretch;\n}\n\n.asset-viewer_attribute_3PuR3 {\n    margin: 0.5rem;\n}\n\n.asset-viewer_attribute_3PuR3 span {\n    font-size: 0.75rem;\n}\n\n.asset-viewer_media-preview_2uA92 {\n    max-height: calc(50 * 0.5rem);\n    border-radius: 0.25rem;\n    margin: 1rem\n}\n\n.asset-viewer_editor-header-row_3t7x1 {\n    display: flex;\n    align-items: center;\n    width: 100%;\n}\n\n.asset-viewer_editor-surface_15kjf {\n    width: 100%;\n    min-height: 12rem;\n    flex: 1 1 auto;\n    margin-top: calc(2 * 0.5rem);\n    border: 1px solid var(--ui-black-transparent);\n    border-radius: 0.25rem;\n    overflow: hidden;\n}\n\n.asset-viewer_info-row_1FCSR {\n    margin-top: 0.5rem;\n    width: 100%;\n    display: flex;\n    justify-content: flex-start;\n}\n\n[dir=\"ltr\"] .asset-viewer_info-row_1FCSR .asset-viewer_attribute_3PuR3 + .asset-viewer_attribute_3PuR3 {\n    margin-left: calc(2 * 0.5rem);\n}\n\n[dir=\"rtl\"] .asset-viewer_info-row_1FCSR .asset-viewer_attribute_3PuR3 + .asset-viewer_attribute_3PuR3 {\n    margin-right: calc(2 * 0.5rem);\n}\n\n.asset-viewer_input-group_6Xllw {\n    display: flex;\n    align-items: center;\n}\n\n.asset-viewer_name-input_1eDXg {\n    min-width: 20rem;\n}\n\n[dir=\"ltr\"] .asset-viewer_button-group_1sBkP {\n    margin-left: 1rem;\n}\n\n[dir=\"rtl\"] .asset-viewer_button-group_1sBkP {\n    margin-right: 1rem;\n}\n\n.asset-viewer_button-group_1sBkP {\n    display: flex;\n}\n\n.asset-viewer_button_3xh7w {\n    height: 2rem;\n    padding: 0.35rem;\n    outline: none;\n    background: var(--ui-white);\n    border-radius: 0;\n    border: 1px solid var(--ui-black-transparent);\n    cursor: pointer;\n    font-size: 0.85rem;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    margin: 0;\n    position: relative;\n}\n\n.asset-viewer_button_3xh7w:not(:last-child) {\n    border-right: none;\n}\n\n[dir=\"rtl\"] .asset-viewer_button_3xh7w:not(:last-child) {\n    border-left: none;\n    border-right: 1px solid var(--ui-black-transparent);\n}\n\n.asset-viewer_button-group_1sBkP .asset-viewer_button_3xh7w:first-child,\n[dir=\"rtl\"] .asset-viewer_button-group_1sBkP .asset-viewer_button_3xh7w:last-child {\n    border-radius: calc(0.5rem / 2) 0 0 calc(0.5rem / 2);\n}\n\n.asset-viewer_button-group_1sBkP .asset-viewer_button_3xh7w:last-child,\n[dir=\"rtl\"] .asset-viewer_button-group_1sBkP .asset-viewer_button_3xh7w:first-child {\n    border-radius: 0 calc(0.5rem / 2) calc(0.5rem / 2) 0;\n}\n\n.asset-viewer_button_3xh7w:active {\n    background: var(--looks-transparent);\n}\n\n.asset-viewer_button_3xh7w:focus::before {\n    content: \"\";\n    position: absolute;\n    top: -1px;\n    right: -1px;\n    bottom: -1px;\n    left: -1px;\n    border: 1px solid var(--looks-secondary);\n    z-index: 1;\n}\n\n.asset-viewer_button_3xh7w > img {\n    flex-grow: 1;\n    max-width: 100%;\n    max-height: 100%;\n    min-width: 1.25rem;\n}\n\n[dir=\"rtl\"] .asset-viewer_undo-icon_2v9n8,\n[dir=\"rtl\"] .asset-viewer_redo-icon_316eH {\n    transform: scaleX(-1);\n}\n\n.asset-viewer_button_3xh7w:disabled > img {\n    opacity: 0.25;\n}", ""]);
 
 // exports
 exports.locals = {
 	"viewer-container": "asset-viewer_viewer-container_wUKv_",
 	"viewerContainer": "asset-viewer_viewer-container_wUKv_",
+	"text-mode": "asset-viewer_text-mode_mTqZ2",
+	"textMode": "asset-viewer_text-mode_mTqZ2",
 	"attribute": "asset-viewer_attribute_3PuR3",
 	"media-preview": "asset-viewer_media-preview_2uA92",
 	"mediaPreview": "asset-viewer_media-preview_2uA92",
@@ -4135,6 +4137,17 @@ module.exports = __webpack_require__.p + "static/assets/165746cd277a144ddefd62ac
 
 /***/ }),
 
+/***/ "./src/components/asset-panel/icon--add-new-txt-file.svg":
+/*!***************************************************************!*\
+  !*** ./src/components/asset-panel/icon--add-new-txt-file.svg ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PHN2ZyBjbGFzcz0ic3ZnLWljb24iIHN0eWxlPSJ3aWR0aDogMWVtOyBoZWlnaHQ6IDFlbTt2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO2ZpbGw6ICNmZmZmZmY7b3ZlcmZsb3c6IGhpZGRlbjsiIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNjUxLjA1OTIgMzIxLjUzNmg5OS40MzA0YzEyLjE4NTYgMCAxOC4zMjk2LTE0Ljk1MDQgOS42MjU2LTIzLjU1Mkw2NDMuMTc0NCAxODAuOTQwOGMtOC42MDE2LTguNjAxNi0yMy4yNDQ4LTIuNDU3Ni0yMy4yNDQ4IDkuODMwNHY5OS4yMjU2Yy0wLjEwMjQgMzAuMDAzMiAzMS4xMjk2IDMxLjUzOTIgMzEuMTI5NiAzMS41MzkyeiIgIC8+PHBhdGggZD0iTTc2NS4wMzA0IDM3My4wNDMySDY0NS40Mjcycy03Ni40OTI4LTUuOTM5Mi03Ni40OTI4LTc3LjMxMlYxNzQuMTgyNGMwLTEyLjQ5MjgtMTAuMDM1Mi0yMi41MjgtMjIuMzIzMi0yMi41MjhIMjYyLjE0NHMtMjUuNDk3NiAxLjc0MDgtMjUuNDk3NiAyNS44MDQ4djY2OS4xODRTMjM4LjM4NzIgODcyLjQ0OCAyNjIuMTQ0IDg3Mi40NDhoNDk5LjcxMnMyNS40OTc2IDAuMTAyNCAyNS40OTc2LTI1LjgwNDhWMzk1LjU3MTJjMC0xMi40OTI4LTEwLjAzNTItMjIuNTI4LTIyLjMyMzItMjIuNTI4ek02MzMuMDM2OCA3MjcuNTUySDM5MS45ODcyYy0xMi4yODggMC0yMi4zMjMyLTEwLjEzNzYtMjIuMzIzMi0yMi41MjhzMTAuMDM1Mi0yMi41MjggMjIuMzIzMi0yMi41MjhoMjQxLjA0OTZjMTIuMjg4IDAgMjIuMzIzMiAxMC4xMzc2IDIyLjMyMzIgMjIuNTI4cy0xMC4wMzUyIDIyLjUyOC0yMi4zMjMyIDIyLjUyOHogbTAtMTEzLjY2NEgzOTEuOTg3MmMtMTIuMjg4IDAtMjIuMzIzMi0xMC4xMzc2LTIyLjMyMzItMjIuNTI4czEwLjAzNTItMjIuNTI4IDIyLjMyMzItMjIuNTI4aDI0MS4wNDk2YzEyLjI4OCAwIDIyLjMyMzIgMTAuMTM3NiAyMi4zMjMyIDIyLjUyOHMtMTAuMDM1MiAyMi41MjgtMjIuMzIzMiAyMi41Mjh6IG0wLTExMy43NjY0SDM5MS45ODcyYy0xMi4yODggMC0yMi4zMjMyLTEwLjEzNzYtMjIuMzIzMi0yMi41MjhzMTAuMDM1Mi0yMi41MjggMjIuMzIzMi0yMi41MjhoMjQxLjA0OTZjMTIuMjg4IDAgMjIuMzIzMiAxMC4xMzc2IDIyLjMyMzIgMjIuNTI4cy0xMC4wMzUyIDIyLjUyOC0yMi4zMjMyIDIyLjUyOHoiICAvPjwvc3ZnPg=="
+
+/***/ }),
+
 /***/ "./src/components/asset-panel/icon--add-sound-lib.svg":
 /*!************************************************************!*\
   !*** ./src/components/asset-panel/icon--add-sound-lib.svg ***!
@@ -4502,7 +4515,7 @@ const messages = Object(react_intl__WEBPACK_IMPORTED_MODULE_2__["defineMessages"
   }
 });
 const AssetViewerComponent = props => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-  className: _asset_viewer_css__WEBPACK_IMPORTED_MODULE_10___default.a.viewerContainer
+  className: "".concat(_asset_viewer_css__WEBPACK_IMPORTED_MODULE_10___default.a.viewerContainer, " ").concat(props.isTextEditable ? _asset_viewer_css__WEBPACK_IMPORTED_MODULE_10___default.a.textMode : '')
 }, props.isTextEditable ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
   className: _asset_viewer_css__WEBPACK_IMPORTED_MODULE_10___default.a.editorHeaderRow
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -9729,7 +9742,7 @@ const GUIComponent = props => {
       key: i,
       ctrl: true
     }, () => {
-      if (i > 0 && i < 5) props.onActivateTab(parseInt(i, 10) - 1);
+      if (i > 0 && i <= 5) props.onActivateTab(parseInt(i, 10) - 1);
     });
   }
   Object(_lib_nb_keyboard_shortcut_js__WEBPACK_IMPORTED_MODULE_53__["registerKeyboardShortcut"])((_prefs$keybindOpenE = prefs['keybind-open-editor-settings']) !== null && _prefs$keybindOpenE !== void 0 ? _prefs$keybindOpenE : _lib_nb_keyboard_shortcut_js__WEBPACK_IMPORTED_MODULE_53__["defaultKeyboardShortcuts"]['open-editor-settings'], onEditorSettings);
@@ -25947,19 +25960,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _asset_viewer_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./asset-viewer.jsx */ "./src/containers/asset-viewer.jsx");
 /* harmony import */ var _components_action_menu_icon_file_upload_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/action-menu/icon--file-upload.svg */ "./src/components/action-menu/icon--file-upload.svg");
 /* harmony import */ var _components_action_menu_icon_file_upload_svg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_action_menu_icon_file_upload_svg__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _lib_drag_constants__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../lib/drag-constants */ "./src/lib/drag-constants.js");
-/* harmony import */ var _lib_file_uploader_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../lib/file-uploader.js */ "./src/lib/file-uploader.js");
-/* harmony import */ var _lib_download_blob__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../lib/download-blob */ "./src/lib/download-blob.js");
-/* harmony import */ var _lib_nb_asset_type_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../lib/nb-asset-type.js */ "./src/lib/nb-asset-type.js");
-/* harmony import */ var _reducers_alerts__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../reducers/alerts */ "./src/reducers/alerts.js");
-/* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-intl */ "./node_modules/react-intl/lib/index.es.js");
-/* harmony import */ var _lib_error_boundary_hoc_jsx__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../lib/error-boundary-hoc.jsx */ "./src/lib/error-boundary-hoc.jsx");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _components_asset_panel_icon_add_new_txt_file_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/asset-panel/icon--add-new-txt-file.svg */ "./src/components/asset-panel/icon--add-new-txt-file.svg");
+/* harmony import */ var _components_asset_panel_icon_add_new_txt_file_svg__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_asset_panel_icon_add_new_txt_file_svg__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _lib_drag_constants__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../lib/drag-constants */ "./src/lib/drag-constants.js");
+/* harmony import */ var _lib_file_uploader_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../lib/file-uploader.js */ "./src/lib/file-uploader.js");
+/* harmony import */ var _lib_download_blob__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../lib/download-blob */ "./src/lib/download-blob.js");
+/* harmony import */ var _lib_nb_asset_type_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../lib/nb-asset-type.js */ "./src/lib/nb-asset-type.js");
+/* harmony import */ var _reducers_alerts__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../reducers/alerts */ "./src/reducers/alerts.js");
+/* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react-intl */ "./node_modules/react-intl/lib/index.es.js");
+/* harmony import */ var _lib_error_boundary_hoc_jsx__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../lib/error-boundary-hoc.jsx */ "./src/lib/error-boundary-hoc.jsx");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
 function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
 function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : i + ""; }
 function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != typeof i) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+
 
 
 
@@ -25984,13 +26000,13 @@ const formatSize = bytes => {
 class AssetTab extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
   constructor(props) {
     super(props);
-    lodash_bindall__WEBPACK_IMPORTED_MODULE_2___default()(this, ['handleSelectAsset', 'handleDeleteAsset', 'handleDuplicateAsset', 'handleExportAsset', 'handleNewAsset', 'handleFileUploadClick', 'handleAssetUpload', 'handleDrop', 'setFileInput']);
+    lodash_bindall__WEBPACK_IMPORTED_MODULE_2___default()(this, ['handleSelectAsset', 'handleDeleteAsset', 'handleDuplicateAsset', 'handleExportAsset', 'handleNewAsset', 'handleCreateBlankTextAsset', 'handleFileUploadClick', 'handleAssetUpload', 'handleDrop', 'setFileInput']);
     this.state = {
       selectedAssetIndex: 0
     };
   }
   getAssetIcon(assetObject) {
-    const assetType = Object(_lib_nb_asset_type_js__WEBPACK_IMPORTED_MODULE_10__["default"])(assetObject);
+    const assetType = Object(_lib_nb_asset_type_js__WEBPACK_IMPORTED_MODULE_11__["default"])(assetObject);
     if (assetType.type === 'image') {
       return {
         asset: assetObject.asset
@@ -26016,6 +26032,31 @@ class AssetTab extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       selectedAssetIndex: Math.max(assets.length - 1, 0)
     });
   }
+  handleCreateBlankTextAsset() {
+    const {
+      vm,
+      intl
+    } = this.props;
+    if (!vm.editingTarget || !vm.runtime || !vm.runtime.storage) {
+      return;
+    }
+    const storage = vm.runtime.storage;
+    const targetId = vm.editingTarget.id;
+    const AssetType = structuredClone(storage.AssetType.Asset);
+    AssetType.contentType = 'text/plain';
+    const extension = 'txt';
+    const asset = storage.createAsset(AssetType, extension, new TextEncoder().encode(''), null, true);
+    const newAsset = {
+      name: intl.formatMessage(messages.newTextFileName),
+      dataFormat: extension,
+      contentType: 'text/plain',
+      lastModified: Date.now(),
+      asset,
+      md5: "".concat(asset.assetId, ".").concat(extension),
+      assetId: asset.assetId
+    };
+    vm.addAsset(newAsset, targetId).then(this.handleNewAsset);
+  }
   handleDeleteAsset(assetIndex) {
     this.props.vm.deleteAsset(assetIndex);
     if (assetIndex >= this.state.selectedAssetIndex) {
@@ -26028,8 +26069,8 @@ class AssetTab extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
     const storage = this.props.vm.runtime.storage;
     const targetId = this.props.vm.editingTarget.id;
     this.props.onShowImporting();
-    Object(_lib_file_uploader_js__WEBPACK_IMPORTED_MODULE_8__["handleFileUpload"])(e.target, (buffer, fileType, fileName, fileIndex, fileCount, fileExtension, lastModified) => {
-      Object(_lib_file_uploader_js__WEBPACK_IMPORTED_MODULE_8__["assetUpload"])(buffer, fileType, fileExtension || 'file', storage, newAsset => {
+    Object(_lib_file_uploader_js__WEBPACK_IMPORTED_MODULE_9__["handleFileUpload"])(e.target, (buffer, fileType, fileName, fileIndex, fileCount, fileExtension, lastModified) => {
+      Object(_lib_file_uploader_js__WEBPACK_IMPORTED_MODULE_9__["assetUpload"])(buffer, fileType, fileExtension || 'file', storage, newAsset => {
         newAsset.name = fileName;
         newAsset.contentType = newAsset.asset.assetType.contentType;
         newAsset.lastModified = lastModified;
@@ -26043,12 +26084,12 @@ class AssetTab extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
     }, this.props.onCloseImporting);
   }
   handleDrop(dropInfo) {
-    if (dropInfo.dragType === _lib_drag_constants__WEBPACK_IMPORTED_MODULE_7__["default"].ASSET) {
+    if (dropInfo.dragType === _lib_drag_constants__WEBPACK_IMPORTED_MODULE_8__["default"].ASSET) {
       this.props.vm.reorderAsset(this.props.vm.editingTarget.id, dropInfo.index, dropInfo.newIndex);
       this.setState({
         selectedAssetIndex: dropInfo.newIndex
       });
-    } else if (dropInfo.dragType === _lib_drag_constants__WEBPACK_IMPORTED_MODULE_7__["default"].BACKPACK_COSTUME) {
+    } else if (dropInfo.dragType === _lib_drag_constants__WEBPACK_IMPORTED_MODULE_8__["default"].BACKPACK_COSTUME) {
       this.props.vm.addAsset({
         md5: dropInfo.payload.body,
         lastModified: Date.now(),
@@ -26056,7 +26097,7 @@ class AssetTab extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         dataFormat: dropInfo.payload.dataFormat,
         name: dropInfo.payload.name
       }).then(this.handleNewAsset);
-    } else if (dropInfo.dragType === _lib_drag_constants__WEBPACK_IMPORTED_MODULE_7__["default"].BACKPACK_SOUND) {
+    } else if (dropInfo.dragType === _lib_drag_constants__WEBPACK_IMPORTED_MODULE_8__["default"].BACKPACK_SOUND) {
       this.props.vm.addAsset({
         md5: dropInfo.payload.body,
         lastModified: Date.now(),
@@ -26064,7 +26105,7 @@ class AssetTab extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
         dataFormat: dropInfo.payload.dataFormat,
         name: dropInfo.payload.name
       }).then(this.handleNewAsset);
-    } else if (dropInfo.dragType === _lib_drag_constants__WEBPACK_IMPORTED_MODULE_7__["default"].BACKPACK_ASSET) {
+    } else if (dropInfo.dragType === _lib_drag_constants__WEBPACK_IMPORTED_MODULE_8__["default"].BACKPACK_ASSET) {
       this.props.vm.addAsset({
         md5: dropInfo.payload.body,
         lastModified: dropInfo.payload.lastModified,
@@ -26086,7 +26127,7 @@ class AssetTab extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
     const blob = new Blob([item.asset.data], {
       type: item.asset.assetType.contentType
     });
-    Object(_lib_download_blob__WEBPACK_IMPORTED_MODULE_9__["default"])("".concat(item.name, ".").concat(item.dataFormat), blob);
+    Object(_lib_download_blob__WEBPACK_IMPORTED_MODULE_10__["default"])("".concat(item.name, ".").concat(item.dataFormat), blob);
   }
   setFileInput(input) {
     this.fileInput = input;
@@ -26109,20 +26150,18 @@ class AssetTab extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
       dragPayload: asset,
       details: formatSize(asset.asset.data.byteLength)
     }, this.getAssetIcon(asset))) : [];
-    const messages = Object(react_intl__WEBPACK_IMPORTED_MODULE_12__["defineMessages"])({
-      fileUploadAsset: {
-        "id": "gui.assetTab.fileUploadAsset",
-        "defaultMessage": "Upload Asset"
-      }
-    });
     const selectedAsset = sprite.assets[this.state.selectedAssetIndex];
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_asset_panel_asset_panel_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], {
       buttons: [{
         title: intl.formatMessage(messages.fileUploadAsset),
         img: _components_action_menu_icon_file_upload_svg__WEBPACK_IMPORTED_MODULE_6___default.a,
         onClick: this.handleFileUploadClick
+      }, {
+        title: intl.formatMessage(messages.newTextFile),
+        img: _components_asset_panel_icon_add_new_txt_file_svg__WEBPACK_IMPORTED_MODULE_7___default.a,
+        onClick: this.handleCreateBlankTextAsset
       }],
-      dragType: _lib_drag_constants__WEBPACK_IMPORTED_MODULE_7__["default"].ASSET,
+      dragType: _lib_drag_constants__WEBPACK_IMPORTED_MODULE_8__["default"].ASSET,
       isRtl: isRtl,
       items: assets,
       selectedItemIndex: this.state.selectedAssetIndex,
@@ -26145,10 +26184,24 @@ class AssetTab extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
     }));
   }
 }
+const messages = Object(react_intl__WEBPACK_IMPORTED_MODULE_13__["defineMessages"])({
+  fileUploadAsset: {
+    "id": "gui.assetTab.fileUploadAsset",
+    "defaultMessage": "Upload Asset"
+  },
+  newTextFile: {
+    "id": "gui.assetTab.newTextFile",
+    "defaultMessage": "New Text File"
+  },
+  newTextFileName: {
+    "id": "gui.assetTab.newTextFileName",
+    "defaultMessage": "file"
+  }
+});
 AssetTab.propTypes = {
   dispatchUpdateRestore: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func,
   editingTarget: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
-  intl: react_intl__WEBPACK_IMPORTED_MODULE_12__["intlShape"],
+  intl: react_intl__WEBPACK_IMPORTED_MODULE_13__["intlShape"],
   isRtl: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
   onCloseImporting: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func.isRequired,
   onShowImporting: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func.isRequired,
@@ -26173,10 +26226,10 @@ const mapStateToProps = state => ({
   stage: state.scratchGui.targets.stage
 });
 const mapDispatchToProps = dispatch => ({
-  onCloseImporting: () => dispatch(Object(_reducers_alerts__WEBPACK_IMPORTED_MODULE_11__["closeAlertWithId"])('importingAsset')),
-  onShowImporting: () => dispatch(Object(_reducers_alerts__WEBPACK_IMPORTED_MODULE_11__["showStandardAlert"])('importingAsset'))
+  onCloseImporting: () => dispatch(Object(_reducers_alerts__WEBPACK_IMPORTED_MODULE_12__["closeAlertWithId"])('importingAsset')),
+  onShowImporting: () => dispatch(Object(_reducers_alerts__WEBPACK_IMPORTED_MODULE_12__["showStandardAlert"])('importingAsset'))
 });
-/* harmony default export */ __webpack_exports__["default"] = (Object(_lib_error_boundary_hoc_jsx__WEBPACK_IMPORTED_MODULE_13__["default"])('Asset tab')(Object(react_intl__WEBPACK_IMPORTED_MODULE_12__["injectIntl"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_14__["connect"])(mapStateToProps, mapDispatchToProps)(AssetTab))));
+/* harmony default export */ __webpack_exports__["default"] = (Object(_lib_error_boundary_hoc_jsx__WEBPACK_IMPORTED_MODULE_14__["default"])('Asset tab')(Object(react_intl__WEBPACK_IMPORTED_MODULE_13__["injectIntl"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_15__["connect"])(mapStateToProps, mapDispatchToProps)(AssetTab))));
 
 /***/ }),
 
@@ -44642,78 +44695,57 @@ const isUndefined = a => typeof a === 'undefined';
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_asset_panel_icon_asset_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/asset-panel/icon--asset.svg */ "./src/components/asset-panel/icon--asset.svg");
-/* harmony import */ var _components_asset_panel_icon_asset_svg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_asset_panel_icon_asset_svg__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_asset_panel_icon_sound_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/asset-panel/icon--sound.svg */ "./src/components/asset-panel/icon--sound.svg");
-/* harmony import */ var _components_asset_panel_icon_sound_svg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_asset_panel_icon_sound_svg__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_asset_panel_icon_code_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/asset-panel/icon--code.svg */ "./src/components/asset-panel/icon--code.svg");
-/* harmony import */ var _components_asset_panel_icon_code_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_asset_panel_icon_code_svg__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _backpack_asset_thumbnail_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./backpack/asset-thumbnail.png */ "./src/lib/backpack/asset-thumbnail.png");
-/* harmony import */ var _backpack_asset_thumbnail_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_backpack_asset_thumbnail_png__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _backpack_sound_thumbnail_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./backpack/sound-thumbnail.png */ "./src/lib/backpack/sound-thumbnail.png");
-/* harmony import */ var _backpack_sound_thumbnail_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_backpack_sound_thumbnail_png__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _backpack_code_thumbnail_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./backpack/code-thumbnail.png */ "./src/lib/backpack/code-thumbnail.png");
-/* harmony import */ var _backpack_code_thumbnail_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_backpack_code_thumbnail_png__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var buffer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js");
+/* harmony import */ var buffer__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(buffer__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var istextorbinary_edition_es5__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! istextorbinary/edition-es5 */ "./node_modules/istextorbinary/edition-es5/index.js");
+/* harmony import */ var istextorbinary_edition_es5__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(istextorbinary_edition_es5__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_asset_panel_icon_asset_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/asset-panel/icon--asset.svg */ "./src/components/asset-panel/icon--asset.svg");
+/* harmony import */ var _components_asset_panel_icon_asset_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_asset_panel_icon_asset_svg__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_asset_panel_icon_sound_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/asset-panel/icon--sound.svg */ "./src/components/asset-panel/icon--sound.svg");
+/* harmony import */ var _components_asset_panel_icon_sound_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_asset_panel_icon_sound_svg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_asset_panel_icon_code_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/asset-panel/icon--code.svg */ "./src/components/asset-panel/icon--code.svg");
+/* harmony import */ var _components_asset_panel_icon_code_svg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_asset_panel_icon_code_svg__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _backpack_asset_thumbnail_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./backpack/asset-thumbnail.png */ "./src/lib/backpack/asset-thumbnail.png");
+/* harmony import */ var _backpack_asset_thumbnail_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_backpack_asset_thumbnail_png__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _backpack_sound_thumbnail_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./backpack/sound-thumbnail.png */ "./src/lib/backpack/sound-thumbnail.png");
+/* harmony import */ var _backpack_sound_thumbnail_png__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_backpack_sound_thumbnail_png__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _backpack_code_thumbnail_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./backpack/code-thumbnail.png */ "./src/lib/backpack/code-thumbnail.png");
+/* harmony import */ var _backpack_code_thumbnail_png__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_backpack_code_thumbnail_png__WEBPACK_IMPORTED_MODULE_7__);
 
 
 
 
 
 
-const textLanguages = {
+
+
+const languageAliases = {
   txt: 'plaintext',
   text: 'plaintext',
   md: 'markdown',
-  markdown: 'markdown',
-  json: 'json',
   js: 'javascript',
   mjs: 'javascript',
   cjs: 'javascript',
-  ts: 'typescript',
   jsx: 'javascript',
+  ts: 'typescript',
   tsx: 'typescript',
-  html: 'html',
-  htm: 'html',
-  css: 'css',
-  scss: 'scss',
-  less: 'less',
-  xml: 'xml',
-  yml: 'yaml',
-  yaml: 'yaml',
-  csv: 'plaintext',
-  tsv: 'plaintext',
   py: 'python',
-  java: 'java',
-  c: 'c',
-  h: 'cpp',
-  cpp: 'cpp',
-  cc: 'cpp',
-  cxx: 'cpp',
-  cs: 'csharp',
-  go: 'go',
-  rs: 'rust',
+  yml: 'yaml',
   sh: 'shell',
   bash: 'shell',
-  sql: 'sql',
-  ini: 'ini'
+  c: 'cpp',
+  h: 'cpp',
+  cc: 'cpp',
+  cxx: 'cpp',
+  cs: 'csharp'
 };
-const textContentTypes = new Set(['application/json', 'application/javascript', 'application/typescript', 'application/xml', 'application/yaml', 'application/x-yaml', 'application/x-sh', 'application/sql']);
 /* harmony default export */ __webpack_exports__["default"] = (function (asset) {
   let pngIcon = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
   const format = (asset.dataFormat || '').toLowerCase();
-  const contentType = (asset.contentType || '').toLowerCase();
-  const language = textLanguages[format] || 'plaintext';
-
-  // Temporary solution, maybe
-  if (textLanguages[format] || contentType.startsWith('text/') || textContentTypes.has(contentType)) {
-    return {
-      type: 'text',
-      displayable: true,
-      editable: true,
-      language,
-      icon: pngIcon ? _backpack_asset_thumbnail_png__WEBPACK_IMPORTED_MODULE_3___default.a : _components_asset_panel_icon_asset_svg__WEBPACK_IMPORTED_MODULE_0___default.a
-    };
-  }
+  const language = languageAliases[format] || format || 'plaintext';
+  const extension = format || 'file';
+  const assetName = "".concat(asset.name || 'asset', ".").concat(extension);
+  const assetData = asset.asset && asset.asset.data;
   switch (format) {
     case 'jpg':
     case 'jpeg':
@@ -44738,7 +44770,7 @@ const textContentTypes = new Set(['application/json', 'application/javascript', 
       return {
         type: 'video',
         displayable: true,
-        icon: pngIcon ? _backpack_asset_thumbnail_png__WEBPACK_IMPORTED_MODULE_3___default.a : _components_asset_panel_icon_asset_svg__WEBPACK_IMPORTED_MODULE_0___default.a
+        icon: pngIcon ? _backpack_asset_thumbnail_png__WEBPACK_IMPORTED_MODULE_5___default.a : _components_asset_panel_icon_asset_svg__WEBPACK_IMPORTED_MODULE_2___default.a
       };
     case 'mp3':
     case 'wav':
@@ -44749,7 +44781,7 @@ const textContentTypes = new Set(['application/json', 'application/javascript', 
       return {
         type: 'sound',
         displayable: true,
-        icon: pngIcon ? _backpack_sound_thumbnail_png__WEBPACK_IMPORTED_MODULE_4___default.a : _components_asset_panel_icon_sound_svg__WEBPACK_IMPORTED_MODULE_1___default.a
+        icon: pngIcon ? _backpack_sound_thumbnail_png__WEBPACK_IMPORTED_MODULE_6___default.a : _components_asset_panel_icon_sound_svg__WEBPACK_IMPORTED_MODULE_3___default.a
       };
     case 'sb3':
     case 'sprite3':
@@ -44765,15 +44797,34 @@ const textContentTypes = new Set(['application/json', 'application/javascript', 
       return {
         type: 'code',
         displayable: false,
-        icon: pngIcon ? _backpack_code_thumbnail_png__WEBPACK_IMPORTED_MODULE_5___default.a : _components_asset_panel_icon_code_svg__WEBPACK_IMPORTED_MODULE_2___default.a
+        icon: pngIcon ? _backpack_code_thumbnail_png__WEBPACK_IMPORTED_MODULE_7___default.a : _components_asset_panel_icon_code_svg__WEBPACK_IMPORTED_MODULE_4___default.a
       };
     default:
-      return {
-        type: null,
-        icon: pngIcon ? _backpack_asset_thumbnail_png__WEBPACK_IMPORTED_MODULE_3___default.a : _components_asset_panel_icon_asset_svg__WEBPACK_IMPORTED_MODULE_0___default.a,
-        displayable: false
-      };
+      break;
   }
+  let detectedTextAsset = false;
+  if (assetData) {
+    try {
+      const bufferAssetData = buffer__WEBPACK_IMPORTED_MODULE_0__["Buffer"].isBuffer(assetData) ? assetData : buffer__WEBPACK_IMPORTED_MODULE_0__["Buffer"].from(assetData);
+      detectedTextAsset = Object(istextorbinary_edition_es5__WEBPACK_IMPORTED_MODULE_1__["isText"])(assetName, bufferAssetData) === true;
+    } catch (e) {
+      detectedTextAsset = false;
+    }
+  }
+  if (detectedTextAsset) {
+    return {
+      type: 'text',
+      displayable: true,
+      editable: true,
+      language,
+      icon: pngIcon ? _backpack_asset_thumbnail_png__WEBPACK_IMPORTED_MODULE_5___default.a : _components_asset_panel_icon_asset_svg__WEBPACK_IMPORTED_MODULE_2___default.a
+    };
+  }
+  return {
+    type: null,
+    icon: pngIcon ? _backpack_asset_thumbnail_png__WEBPACK_IMPORTED_MODULE_5___default.a : _components_asset_panel_icon_asset_svg__WEBPACK_IMPORTED_MODULE_2___default.a,
+    displayable: false
+  };
 });
 
 /***/ }),
