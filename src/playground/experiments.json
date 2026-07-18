@@ -1,11 +1,5 @@
 [
   {
-    "id": "extendables",
-    "name": "Extendable Blocks",
-    "description": "No more chunky scripts 🥹",
-    "status": "Final Testing"
-  },
-  {
     "id": "global-procedures",
     "name": "Global Procedures",
     "description": "Use global custom blocks in your projects! (Round 2 babyyyy)",
