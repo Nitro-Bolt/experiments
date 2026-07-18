@@ -27086,6 +27086,7 @@ class Blocks extends react__WEBPACK_IMPORTED_MODULE_5___default.a.Component {
       }
     }, Blocks.defaultOptions);
     this.workspace = this.ScratchBlocks.inject(this.blocks, workspaceConfig);
+    this.workspace.vm = this.props.vm;
     _addons_hooks_js__WEBPACK_IMPORTED_MODULE_32__["default"].blocklyWorkspace = this.workspace;
 
     // Register buttons under new callback keys for creating variables,
