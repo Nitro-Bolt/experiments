@@ -5763,7 +5763,10 @@ const Box = props => {
       justifyContent: justifyContent,
       width: width,
       height: height
-    },  false ? undefined : {}, style)
+    },  true ? {
+      backgroundColor: getRandomColor(),
+      outline: "1px solid black"
+    } : undefined, style)
   }, componentProps), children);
 };
 Box.propTypes = {
@@ -29685,6 +29688,7 @@ class Blocks extends react__WEBPACK_IMPORTED_MODULE_5___default.a.Component {
     }, Blocks.defaultOptions);
     this.workspace = this.ScratchBlocks.inject(this.blocks, workspaceConfig);
     this.workspace.vm = this.props.vm;
+    this.workspace.vmTargetId = this.props.vm.editingTarget ? this.props.vm.editingTarget.id : null;
     _addons_hooks_js__WEBPACK_IMPORTED_MODULE_33__["default"].blocklyWorkspace = this.workspace;
 
     // Register buttons under new callback keys for creating variables,
@@ -29968,6 +29972,11 @@ class Blocks extends react__WEBPACK_IMPORTED_MODULE_5___default.a.Component {
     }
   }
   onWorkspaceUpdate(data) {
+    // Blockly events are dispatched asynchronously. Tag events with the
+    // target represented by this workspace so switching sprites before the
+    // event queue flushes cannot redirect the mutation.
+    this.workspace.vmTargetId = this.props.vm.editingTarget ? this.props.vm.editingTarget.id : null;
+
     // When we change sprites, update the toolbox to have the new sprite's blocks
     const toolboxXML = this.getToolboxXML();
     if (toolboxXML) {
@@ -35795,11 +35804,13 @@ SliderPrompt.defaultProps = {
 /*!*****************************************!*\
   !*** ./src/containers/sound-editor.jsx ***!
   \*****************************************/
-/*! exports provided: default */
+/*! exports provided: resolveSoundEditIndex, SoundEditor, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "resolveSoundEditIndex", function() { return resolveSoundEditIndex; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SoundEditor", function() { return SoundEditor; });
 /* harmony import */ var lodash_bindall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash.bindall */ "./node_modules/lodash.bindall/index.js");
 /* harmony import */ var lodash_bindall__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_bindall__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
@@ -35841,6 +35852,23 @@ function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = 
 
 const UNDO_STACK_SIZE = 99;
 const MAX_RMS = 1.2;
+
+/**
+ * Resolve the current index of the exact sound an asynchronous edit started
+ * from. Reordering preserves object identity, while project replacement,
+ * deletion, and replacement invalidate the edit.
+ * @param {object} runtime Scratch VM runtime
+ * @param {string} targetId original target ID
+ * @param {object} target original target object
+ * @param {object} sound original sound object
+ * @returns {number} current sound index, or -1 if the edit is stale
+ */
+const resolveSoundEditIndex = (runtime, targetId, target, sound) => {
+  if (!runtime || typeof runtime.getTargetById !== 'function' || !target || !sound || runtime.getTargetById(targetId) !== target || !target.sprite || !Array.isArray(target.sprite.sounds)) {
+    return -1;
+  }
+  return target.sprite.sounds.indexOf(sound);
+};
 class SoundEditor extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
   constructor(props) {
     super(props);
@@ -35959,6 +35987,9 @@ class SoundEditor extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component
     });
   }
   submitNewSamples(channel1Samples, channel2Samples, sampleRate, skipUndo) {
+    const targetId = this.props.targetId;
+    const target = this.props.vm.runtime.getTargetById(targetId);
+    const sound = target && target.sprite && target.sprite.sounds[this.props.soundIndex];
     this.props.showEncodingAlert();
     return Object(_lib_audio_audio_util_js__WEBPACK_IMPORTED_MODULE_5__["downsampleIfNeeded"])({
       channel1Samples,
@@ -35996,12 +36027,16 @@ class SoundEditor extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component
           bitRate: (_this$props$preferenc = this.props.preferences['encoding-bit-rate']) !== null && _this$props$preferenc !== void 0 ? _this$props$preferenc : 128
         });
       }).then(buffer => {
-        this.resetState(newChannel1Samples, newChannel2Samples, newSampleRate);
-        const target = this.props.vm.runtime.getTargetById(this.props.targetId);
-        if (!target) {
-          throw new Error('The edited sound target no longer exists');
+        const currentSoundIndex = resolveSoundEditIndex(this.props.vm.runtime, targetId, target, sound);
+        if (currentSoundIndex === -1) {
+          // A snapshot, deletion, or replacement invalidated this
+          // delayed encoder result. Reordering is safe because the
+          // same object is resolved at its new index.
+          this.props.closeEncodingAlert();
+          return false;
         }
-        this.props.vm.updateSoundBuffer(this.props.soundIndex, this.audioBufferPlayer.buffer, new Uint8Array(buffer), true, target);
+        this.resetState(newChannel1Samples, newChannel2Samples, newSampleRate);
+        this.props.vm.updateSoundBuffer(currentSoundIndex, this.audioBufferPlayer.buffer, new Uint8Array(buffer), true, target);
         this.props.closeEncodingAlert();
         return true;
       }).catch(e => {
@@ -36523,6 +36558,7 @@ const mapDispatchToProps = dispatch => ({
   showEncodingAlert: () => dispatch(Object(_reducers_alerts_js__WEBPACK_IMPORTED_MODULE_13__["showStandardAlert"])('nbEncodingAudio')),
   showEncodingErrorAlert: () => dispatch(Object(_reducers_alerts_js__WEBPACK_IMPORTED_MODULE_13__["showStandardAlert"])('nbEncodingAudioError'))
 });
+
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_4__["connect"])(mapStateToProps, mapDispatchToProps)(SoundEditor));
 
 /***/ }),
@@ -47996,11 +48032,12 @@ const languageAliases = {
 /*!******************************************!*\
   !*** ./src/lib/nb-connection-manager.js ***!
   \******************************************/
-/*! exports provided: default */
+/*! exports provided: NBConnectionManager, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NBConnectionManager", function() { return NBConnectionManager; });
 /* harmony import */ var peerjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! peerjs */ "./node_modules/peerjs/dist/bundler.mjs");
 /* harmony import */ var events__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! events */ "./node_modules/events/events.js");
 /* harmony import */ var events__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(events__WEBPACK_IMPORTED_MODULE_1__);
@@ -48013,6 +48050,9 @@ __webpack_require__.r(__webpack_exports__);
 
 const AUTHENTICATION_TIMEOUT = 25000;
 const JOIN_TIMEOUT = 30000;
+const COLLABORATION_CONNECTION_OPTIONS = Object.freeze({
+  reliable: true
+});
 
 /**
  * @typedef {DataConnection} CollaborationPeer
@@ -48289,7 +48329,7 @@ class NBConnectionManager extends events__WEBPACK_IMPORTED_MODULE_1__["EventEmit
     this._setConnectionLocked(true);
     let host;
     try {
-      host = this.peer.connect(normalizedRoomId);
+      host = this.peer.connect(normalizedRoomId, COLLABORATION_CONNECTION_OPTIONS);
     } catch (error) {
       console.warn('Unable to connect to collaboration host', error);
       this._setConnectionLocked(false);
@@ -48743,7 +48783,7 @@ class NBConnectionManager extends events__WEBPACK_IMPORTED_MODULE_1__["EventEmit
           const acceptedHost = this.host;
           for (const id of packet.clients) {
             if (typeof id !== 'string' || id === this.peerId || id === this.hostId) continue;
-            const conn = this.peer.connect(id);
+            const conn = this.peer.connect(id, COLLABORATION_CONNECTION_OPTIONS);
             conn.on('open', () => {
               // A mesh connection may finish opening after this client has
               // already left or switched rooms. Never authenticate that stale
@@ -48921,6 +48961,7 @@ class NBConnectionManager extends events__WEBPACK_IMPORTED_MODULE_1__["EventEmit
     window.history.replaceState({}, '', url.toString());
   }
 }
+
 /* harmony default export */ __webpack_exports__["default"] = (new NBConnectionManager());
 
 /***/ }),
@@ -49032,6 +49073,10 @@ const DERIVED_COMMENT_MOVE_REASONS = new Set(['block_move']);
 const GROUP_BLOCK_MOVE_REASON = 'group_move';
 const TRANSITION_DURATION_MS = 500;
 const TRANSITION_STYLE = "transform ".concat(TRANSITION_DURATION_MS, "ms");
+const SINGLE_EVENT_OPERATION = 'blockly.event';
+const BATCH_EVENT_OPERATION = 'blockly.events';
+const VARIABLE_EVENT_TYPES = new Set(['var_create', 'var_delete', 'var_rename']);
+const SUPPORTED_EVENT_TYPES = new Set(['create', 'change', 'move', 'delete', 'var_create', 'var_delete', 'var_rename', 'comment_create', 'comment_change', 'comment_move', 'comment_delete', 'group_change']);
 
 /**
  * Convert the target currently selected in the VM into a collaboration target
@@ -49080,16 +49125,25 @@ class BlocklyCollaborationAdapter {
     this.refreshToolbox = refreshToolbox;
     this.applyingRemote = 0;
     this.transitionTimers = new Map();
+    this.pendingLocalEvents = [];
+    this.localEventFlushScheduled = false;
+    this.document = typeof document === 'undefined' ? null : document;
     this.handleLocalEvent = this.handleLocalEvent.bind(this);
+    this.handleVisibilityChange = this.handleVisibilityChange.bind(this);
   }
   attach() {
     this.workspace.addChangeListener(this.handleLocalEvent);
+    if (this.document) {
+      this.document.addEventListener('visibilitychange', this.handleVisibilityChange);
+    }
   }
   detach() {
     this.workspace.removeChangeListener(this.handleLocalEvent);
-    for (const key of Array.from(this.transitionTimers.keys())) {
-      this._clearTransition(key);
+    if (this.document) {
+      this.document.removeEventListener('visibilitychange', this.handleVisibilityChange);
     }
+    this._flushLocalEvents();
+    this._clearAllTransitions();
   }
 
   /**
@@ -49102,17 +49156,15 @@ class BlocklyCollaborationAdapter {
     if (this.applyingRemote || !event || IGNORED_EVENT_TYPES.has(event.type)) {
       return;
     }
-    const targetId = getEditingTargetReference(this.vm, this.registry);
+    const targetId = event.targetId ? this.registry.getCanonicalRef(event.targetId) : getEditingTargetReference(this.vm, this.registry);
     if (!targetId || typeof event.toJson !== 'function') return;
     const json = event.toJson();
     const refreshToolbox = ((_event$xml = event.xml) === null || _event$xml === void 0 ? void 0 : _event$xml.getAttribute('type')) === 'procedures_definition' || ((_event$oldXml = event.oldXml) === null || _event$oldXml === void 0 ? void 0 : _event$oldXml.getAttribute('type')) === 'procedures_definition' || event.element === 'mutation';
-    this.submitOperation({
-      type: 'blockly.event',
+    this._queueLocalEvent({
       targetId,
-      payload: {
-        event: json,
-        refreshToolbox
-      }
+      json,
+      refreshToolbox,
+      groupId: typeof json.group === 'string' && json.group ? json.group : null
     });
   }
 
@@ -49121,52 +49173,519 @@ class BlocklyCollaborationAdapter {
    * @param {object} operation semantic collaboration operation
    */
   apply(operation) {
-    if (operation.type !== 'blockly.event') {
-      throw new Error("Unsupported Blockly collaboration operation: ".concat(operation.type));
+    this._flushPendingBlocklyEvents();
+    let target;
+    let payload;
+    let jsonEvents;
+    let events;
+    let isVisibleTarget;
+    try {
+      if (operation.type !== SINGLE_EVENT_OPERATION && operation.type !== BATCH_EVENT_OPERATION) {
+        throw new Error("Unsupported Blockly collaboration operation: ".concat(operation.type));
+      }
+      target = this.registry.resolveTarget(operation.targetId, this.vm.runtime);
+      if (!target) {
+        throw new Error("Collaboration target does not exist: ".concat(operation.targetId));
+      }
+      payload = operation.payload || {};
+      jsonEvents = operation.type === BATCH_EVENT_OPERATION ? payload.events : [payload.event];
+      if (!Array.isArray(jsonEvents) || jsonEvents.length === 0 || jsonEvents.some(json => !json || typeof json.type !== 'string' || !SUPPORTED_EVENT_TYPES.has(json.type))) {
+        throw new Error('Invalid Blockly collaboration event');
+      }
+      events = jsonEvents.map(json => {
+        const event = this.ScratchBlocks.Events.fromJson(json, this.workspace);
+        event.isCollaborationReplay = true;
+        return event;
+      });
+      const editingTarget = this.vm.editingTarget;
+      isVisibleTarget = Boolean(editingTarget && editingTarget.id === target.id);
+      this._assertEventsCanApply(target, events, isVisibleTarget);
+    } catch (error) {
+      if (error && typeof error === 'object') {
+        error.collaborationMutationStarted = false;
+      }
+      throw error;
     }
-    const target = this.registry.resolveTarget(operation.targetId, this.vm.runtime);
-    if (!target) {
-      throw new Error("Collaboration target does not exist: ".concat(operation.targetId));
-    }
-    const json = operation.payload && operation.payload.event;
-    if (!json || typeof json.type !== 'string') {
-      throw new Error('Invalid Blockly collaboration event');
-    }
-    const event = this.ScratchBlocks.Events.fromJson(json, this.workspace);
-    event.isCollaborationReplay = true;
-    const editingTarget = this.vm.editingTarget;
-    const isVisibleTarget = Boolean(editingTarget && editingTarget.id === target.id);
-    const isDerivedCommentMove = this._isDerivedCommentMove(event, json);
     this.applyingRemote++;
     try {
-      if (isVisibleTarget) {
-        this._clearPresentationForRemoval(event);
-        if (!isDerivedCommentMove) this._preparePresentation(event, json);
-
-        // An attached comment already moved when the preceding block event
-        // updated its anchor. Running its final absolute-position event
-        // would move the visible bubble twice. The target model still
-        // consumes the event below.
-        if (!isDerivedCommentMove) {
-          this.ScratchBlocks.Events.disable();
-          try {
-            event.run(true);
-          } finally {
-            this.ScratchBlocks.Events.enable();
-          }
-        }
-      }
-
-      // Always update the target resolved from the operation. Using
-      // vm.blockListener here would redirect through whichever sprite happens
-      // to be selected locally.
-      target.blocks.blocklyListen(event);
-      if (operation.payload.refreshToolbox && isVisibleTarget && this.refreshToolbox) {
+      events.forEach((event, index) => {
+        this._applyEvent(target, event, jsonEvents[index], isVisibleTarget);
+      });
+      if (payload.refreshToolbox && isVisibleTarget && this.refreshToolbox) {
         this.refreshToolbox();
       }
     } finally {
       this.applyingRemote--;
     }
+  }
+
+  /**
+   * Keep Blockly from emitting stale end-of-gesture events while a snapshot
+   * replaces its workspace. The returned callback keeps replay suppression in
+   * place until the VM and extension manifests have both finished loading.
+   * @returns {Function} cleanup callback
+   */
+  prepareForSnapshot() {
+    this.applyingRemote++;
+    // Snapshot replacement invalidates every queued event from the old
+    // workspace. Drain Scratch Blocks' delayed task and our microtask while
+    // replay suppression is active so a backgrounded tab cannot submit
+    // stale block, comment, or group IDs after the new project loads.
+    this._flushPendingBlocklyEvents();
+    this._clearAllTransitions();
+    const wasVisible = typeof this.workspace.isVisible === 'function' ? this.workspace.isVisible() : true;
+    try {
+      if (typeof this.workspace.cancelCurrentGesture === 'function') {
+        this.workspace.cancelCurrentGesture();
+      }
+      if (wasVisible && typeof this.workspace.setVisible === 'function') {
+        this.workspace.setVisible(false);
+      }
+    } catch (error) {
+      this.applyingRemote--;
+      throw error;
+    }
+    return () => {
+      try {
+        if (wasVisible && typeof this.workspace.setVisible === 'function') {
+          this.workspace.setVisible(true);
+        }
+      } finally {
+        this.applyingRemote = Math.max(0, this.applyingRemote - 1);
+      }
+    };
+  }
+  _queueLocalEvent(entry) {
+    this.pendingLocalEvents.push(entry);
+    if (this.localEventFlushScheduled) return;
+    this.localEventFlushScheduled = true;
+    Promise.resolve().then(() => this._flushLocalEvents());
+  }
+  _flushLocalEvents() {
+    const entries = this.pendingLocalEvents;
+    this.pendingLocalEvents = [];
+    this.localEventFlushScheduled = false;
+    let batch = null;
+    const submitBatch = () => {
+      if (!batch) return;
+      this.submitOperation({
+        type: BATCH_EVENT_OPERATION,
+        targetId: batch.targetId,
+        payload: {
+          events: batch.events,
+          refreshToolbox: batch.refreshToolbox
+        }
+      });
+      batch = null;
+    };
+    entries.forEach(entry => {
+      // Blockly uses one group ID for all events which make up a single
+      // user action. Keep only contiguous events together so batching
+      // cannot reorder unrelated activity which happens to reuse an ID.
+      if (entry.groupId) {
+        if (!batch || batch.targetId !== entry.targetId || batch.groupId !== entry.groupId) {
+          submitBatch();
+          batch = {
+            targetId: entry.targetId,
+            groupId: entry.groupId,
+            events: [],
+            refreshToolbox: false
+          };
+        }
+        batch.events.push(entry.json);
+        batch.refreshToolbox = batch.refreshToolbox || entry.refreshToolbox;
+        return;
+      }
+      submitBatch();
+      this.submitOperation({
+        type: SINGLE_EVENT_OPERATION,
+        targetId: entry.targetId,
+        payload: {
+          event: entry.json,
+          refreshToolbox: entry.refreshToolbox
+        }
+      });
+    });
+    submitBatch();
+  }
+  _flushPendingBlocklyEvents() {
+    const events = this.ScratchBlocks.Events;
+    if (events && Array.isArray(events.FIRE_QUEUE_) && events.FIRE_QUEUE_.length > 0 && typeof events.fireNow_ === 'function') {
+      events.fireNow_();
+    }
+    this._flushLocalEvents();
+  }
+
+  /**
+   * Background-tab timer throttling can leave a completed movement's CSS
+   * transition installed long after its logical position changed. Clear it
+   * both when hiding and restoring the tab so hit testing matches the model.
+   */
+  handleVisibilityChange() {
+    this._clearAllTransitions();
+  }
+  _applyEvent(target, event, json, isVisibleTarget) {
+    const isDerivedCommentMove = this._isDerivedCommentMove(event, json);
+    if (isVisibleTarget) {
+      this._clearPresentationForRemoval(event);
+      if (!isDerivedCommentMove) this._preparePresentation(event, json);
+
+      // An attached comment already moved when the preceding block event
+      // updated its anchor. Running its final absolute-position event
+      // would move the visible bubble twice. The target model still
+      // consumes the event below.
+      if (!isDerivedCommentMove) {
+        this.ScratchBlocks.Events.disable();
+        try {
+          event.run(true);
+        } finally {
+          this.ScratchBlocks.Events.enable();
+        }
+      }
+    }
+
+    // Always update the target resolved from the operation. Using
+    // vm.blockListener here would redirect through whichever sprite happens
+    // to be selected locally.
+    target.blocks.blocklyListen(event);
+  }
+  _assertEventsCanApply(target, events, isVisibleTarget) {
+    const createdBlocks = new Set();
+    const deletedBlocks = new Set();
+    const createdComments = new Set();
+    const deletedComments = new Set();
+    const createdGroups = new Set();
+    const deletedGroups = new Set();
+    const groupBlockIds = new Map();
+    const hasOwn = (object, id) => Boolean(object) && Object.prototype.hasOwnProperty.call(object, id);
+    const hasBlock = id => createdBlocks.has(id) || !deletedBlocks.has(id) && Boolean(target.blocks.getBlock(id));
+    const hasComment = id => createdComments.has(id) || !deletedComments.has(id) && hasOwn(target.comments, id);
+    const hasGroup = id => createdGroups.has(id) || !deletedGroups.has(id) && hasOwn(target.groups, id);
+    const assertVisible = (kind, id, created) => {
+      if (!isVisibleTarget || created.has(id)) return;
+      let entity = null;
+      if (kind === 'block' && typeof this.workspace.getBlockById === 'function') {
+        entity = this.workspace.getBlockById(id);
+      } else if (kind === 'comment' && typeof this.workspace.getCommentById === 'function') {
+        entity = this.workspace.getCommentById(id);
+      } else if (kind === 'group' && typeof this.workspace.getGroupById === 'function') {
+        entity = this.workspace.getGroupById(id);
+      }
+      if (!entity) {
+        throw new Error("Collaboration ".concat(kind, " is missing from the visible workspace: ").concat(id));
+      }
+    };
+    const assertVisibleAbsent = (kind, id) => {
+      if (!isVisibleTarget) return;
+      let entity = null;
+      if (kind === 'block' && typeof this.workspace.getBlockById === 'function') {
+        entity = this.workspace.getBlockById(id);
+      } else if (kind === 'comment' && typeof this.workspace.getCommentById === 'function') {
+        entity = this.workspace.getCommentById(id);
+      } else if (kind === 'group' && typeof this.workspace.getGroupById === 'function') {
+        entity = this.workspace.getGroupById(id);
+      }
+      if (entity) {
+        throw new Error("Collaboration ".concat(kind, " already exists in the visible workspace: ").concat(id));
+      }
+    };
+    const requireEntity = (kind, id, exists, created) => {
+      if (!id || !exists(id)) {
+        throw new Error("Collaboration ".concat(kind, " does not exist: ").concat(id || '(missing id)'));
+      }
+      assertVisible(kind, id, created);
+    };
+    const applyVariablePreflight = events.some(event => VARIABLE_EVENT_TYPES.has(event.type)) ? this._createVariablePreflight(target, isVisibleTarget) : null;
+    events.forEach(event => {
+      if (VARIABLE_EVENT_TYPES.has(event.type)) {
+        applyVariablePreflight(event);
+        return;
+      }
+      if (event.type === 'create') {
+        const ids = Array.isArray(event.ids) ? event.ids : event.blockId ? [event.blockId] : [];
+        ids.forEach(id => {
+          if (hasBlock(id)) {
+            throw new Error("Collaboration block already exists: ".concat(id));
+          }
+          assertVisibleAbsent('block', id);
+          createdBlocks.add(id);
+          deletedBlocks.delete(id);
+        });
+        if (event.xml && typeof event.xml.getElementsByTagName === 'function') {
+          Array.from(event.xml.getElementsByTagName('comment')).forEach(comment => {
+            const id = comment.getAttribute('id');
+            if (!id || hasComment(id)) {
+              throw new Error("Collaboration comment already exists: ".concat(id || '(missing id)'));
+            }
+            assertVisibleAbsent('comment', id);
+            createdComments.add(id);
+            deletedComments.delete(id);
+          });
+        }
+        return;
+      }
+      if (event.type === 'change' || event.type === 'move') {
+        requireEntity('block', event.blockId, hasBlock, createdBlocks);
+        if (event.type === 'move' && event.newParentId) {
+          requireEntity('block', event.newParentId, hasBlock, createdBlocks);
+        }
+        if (event.type === 'move' && event.newCoordinate && (!Number.isFinite(event.newCoordinate.x) || !Number.isFinite(event.newCoordinate.y))) {
+          throw new Error('Collaboration block move has an invalid coordinate');
+        }
+        return;
+      }
+      if (event.type === 'delete') {
+        const ids = Array.isArray(event.ids) ? event.ids : event.blockId ? [event.blockId] : [];
+        ids.forEach(id => {
+          deletedBlocks.add(id);
+          createdBlocks.delete(id);
+        });
+        return;
+      }
+      if (event.type === 'comment_create') {
+        if (!event.commentId || hasComment(event.commentId)) {
+          throw new Error("Collaboration comment already exists: ".concat(event.commentId || '(missing id)'));
+        }
+        assertVisibleAbsent('comment', event.commentId);
+        if (event.blockId) {
+          requireEntity('block', event.blockId, hasBlock, createdBlocks);
+        }
+        createdComments.add(event.commentId);
+        deletedComments.delete(event.commentId);
+        return;
+      }
+      if (event.type === 'comment_change' || event.type === 'comment_move') {
+        requireEntity('comment', event.commentId, hasComment, createdComments);
+        if (event.type === 'comment_change' && (!event.newContents_ || typeof event.newContents_ !== 'object' || Array.isArray(event.newContents_))) {
+          throw new Error('Collaboration comment change has invalid contents');
+        }
+        if (event.type === 'comment_move' && (!event.newCoordinate_ || !Number.isFinite(event.newCoordinate_.x) || !Number.isFinite(event.newCoordinate_.y))) {
+          throw new Error('Collaboration comment move has an invalid coordinate');
+        }
+        return;
+      }
+      if (event.type === 'comment_delete') {
+        if (event.commentId) {
+          deletedComments.add(event.commentId);
+          createdComments.delete(event.commentId);
+        }
+        return;
+      }
+      if (event.type === 'group_change') {
+        if (!event.groupId || typeof event.groupId !== 'string') {
+          throw new Error('Collaboration group has a missing ID');
+        }
+        if (event.newState) {
+          const blockIds = this._assertValidGroupState(event.groupId, event.newState);
+          const isCreation = !event.oldState;
+          if (!isCreation) {
+            requireEntity('group', event.groupId, hasGroup, createdGroups);
+          } else if (hasGroup(event.groupId)) {
+            throw new Error("Collaboration group already exists: ".concat(event.groupId));
+          } else {
+            assertVisibleAbsent('group', event.groupId);
+          }
+          let previousBlockIds = groupBlockIds.get(event.groupId);
+          if (!previousBlockIds && !isCreation) {
+            const existingGroup = target.groups[event.groupId];
+            previousBlockIds = new Set(existingGroup && Array.isArray(existingGroup.blocks) ? existingGroup.blocks : []);
+          }
+          if (!previousBlockIds) previousBlockIds = new Set();
+          blockIds.filter(id => !previousBlockIds.has(id)).forEach(id => requireEntity('block', id, hasBlock, createdBlocks));
+          groupBlockIds.set(event.groupId, new Set(blockIds));
+          if (isCreation) createdGroups.add(event.groupId);
+          deletedGroups.delete(event.groupId);
+        } else if (event.groupId) {
+          groupBlockIds.delete(event.groupId);
+          deletedGroups.add(event.groupId);
+          createdGroups.delete(event.groupId);
+        }
+      }
+    });
+  }
+  _createVariablePreflight(target, isVisibleTarget) {
+    const runtime = this.vm.runtime;
+    const stage = runtime && typeof runtime.getTargetForStage === 'function' ? runtime.getTargetForStage() : null;
+    if (!stage) {
+      throw new Error('Collaboration variable owner stage does not exist');
+    }
+    const ownerStates = new Map();
+    const stateFor = owner => {
+      if (!ownerStates.has(owner)) {
+        const state = new Map();
+        const variables = owner && owner.variables;
+        if (variables && typeof variables === 'object') {
+          Object.keys(variables).forEach(id => {
+            const variable = variables[id];
+            state.set(id, {
+              id,
+              name: variable && variable.name,
+              type: variable && variable.type,
+              isCloud: Boolean(variable && variable.isCloud),
+              owner
+            });
+          });
+        }
+        ownerStates.set(owner, state);
+      }
+      return ownerStates.get(owner);
+    };
+    const targetState = stateFor(target);
+    const stageState = stateFor(stage);
+    const originalTargets = Array.isArray(runtime.targets) ? runtime.targets.filter(candidate => candidate && candidate.isOriginal) : [];
+    [target, stage].forEach(owner => {
+      if (owner && originalTargets.indexOf(owner) === -1) {
+        originalTargets.push(owner);
+      }
+    });
+    const uniqueOwners = owners => owners.filter((owner, index) => owner && owners.indexOf(owner) === index);
+    const allOwners = uniqueOwners(originalTargets);
+    allOwners.forEach(stateFor);
+    const ownersInScope = owner => {
+      if (owner === stage) return allOwners;
+      return uniqueOwners([owner, stage]);
+    };
+    const findById = id => {
+      for (const owner of allOwners) {
+        const variable = stateFor(owner).get(id);
+        if (variable) return variable;
+      }
+      return null;
+    };
+    const resolveVariable = id => targetState.get(id) || (target === stage ? null : stageState.get(id)) || null;
+    const findNameConflict = (owner, name, type, excludedVariable) => {
+      for (const scopeOwner of ownersInScope(owner)) {
+        for (const variable of stateFor(scopeOwner).values()) {
+          if (variable !== excludedVariable && variable.name === name && variable.type === type) {
+            return variable;
+          }
+        }
+      }
+      return null;
+    };
+    const assertNonEmptyString = (value, field) => {
+      if (typeof value !== 'string' || !value.trim()) {
+        throw new Error("Collaboration variable has an invalid ".concat(field));
+      }
+    };
+    const assertBoolean = (value, field) => {
+      if (typeof value !== 'boolean') {
+        throw new Error("Collaboration variable has an invalid ".concat(field));
+      }
+    };
+    const modifiedVariableIds = new Set();
+    const assertVisibleExisting = variable => {
+      if (!isVisibleTarget || modifiedVariableIds.has(variable.id) || typeof this.workspace.getVariableById !== 'function') {
+        return;
+      }
+      const visibleVariable = this.workspace.getVariableById(variable.id);
+      const expectedLocal = variable.owner !== stage;
+      if (!visibleVariable || visibleVariable.name !== variable.name || visibleVariable.type !== variable.type || Boolean(visibleVariable.isLocal) !== expectedLocal || Boolean(visibleVariable.isCloud) !== variable.isCloud) {
+        throw new Error("Collaboration variable does not match the visible workspace: ".concat(variable.id));
+      }
+    };
+    const assertVisibleAbsent = id => {
+      if (!isVisibleTarget || modifiedVariableIds.has(id) || typeof this.workspace.getVariableById !== 'function') {
+        return;
+      }
+      if (this.workspace.getVariableById(id)) {
+        throw new Error("Collaboration variable already exists in the visible workspace: ".concat(id));
+      }
+    };
+    const assertVisibleNameAvailable = (name, type, excludedId) => {
+      if (!isVisibleTarget || typeof this.workspace.getVariable !== 'function') {
+        return;
+      }
+      const visibleVariable = this.workspace.getVariable(name, type);
+      if (!visibleVariable) return;
+      const visibleId = typeof visibleVariable.getId === 'function' ? visibleVariable.getId() : visibleVariable.id;
+      if (visibleId === excludedId || modifiedVariableIds.has(visibleId)) return;
+      throw new Error("Collaboration variable name already exists in the visible workspace: ".concat(name));
+    };
+    const requireVariable = event => {
+      assertNonEmptyString(event.varId, 'ID');
+      const variable = resolveVariable(event.varId);
+      if (!variable) {
+        throw new Error("Collaboration variable does not exist: ".concat(event.varId));
+      }
+      assertVisibleExisting(variable);
+      return variable;
+    };
+    const assertCreatePayload = event => {
+      assertNonEmptyString(event.varId, 'ID');
+      assertNonEmptyString(event.varName, 'name');
+      if (typeof event.varType !== 'string') {
+        throw new Error('Collaboration variable has an invalid type');
+      }
+      assertBoolean(event.isLocal, 'local flag');
+      assertBoolean(event.isCloud, 'cloud flag');
+      if (event.isLocal && event.isCloud || event.isLocal && target.isStage) {
+        throw new Error('Collaboration variable has an invalid scope');
+      }
+    };
+    const assertDeletePayload = (event, variable) => {
+      assertNonEmptyString(event.varName, 'name');
+      if (typeof event.varType !== 'string') {
+        throw new Error('Collaboration variable has an invalid type');
+      }
+      assertBoolean(event.isLocal, 'local flag');
+      assertBoolean(event.isCloud, 'cloud flag');
+      if (event.varName !== variable.name || event.varType !== variable.type || event.isLocal !== (variable.owner !== stage) || event.isCloud !== variable.isCloud) {
+        throw new Error("Collaboration variable state does not match: ".concat(event.varId));
+      }
+    };
+    return event => {
+      if (event.type === 'var_create') {
+        assertCreatePayload(event);
+        if (findById(event.varId)) {
+          throw new Error("Collaboration variable already exists: ".concat(event.varId));
+        }
+        const owner = event.isLocal ? target : stage;
+        const nameConflict = findNameConflict(owner, event.varName, event.varType, null);
+        if (nameConflict) {
+          throw new Error("Collaboration variable name already exists: ".concat(event.varName));
+        }
+        assertVisibleAbsent(event.varId);
+        assertVisibleNameAvailable(event.varName, event.varType, null);
+        stateFor(owner).set(event.varId, {
+          id: event.varId,
+          name: event.varName,
+          type: event.varType,
+          isCloud: event.isCloud,
+          owner
+        });
+        modifiedVariableIds.add(event.varId);
+        return;
+      }
+      const variable = requireVariable(event);
+      if (event.type === 'var_rename') {
+        assertNonEmptyString(event.oldName, 'old name');
+        assertNonEmptyString(event.newName, 'new name');
+        if (event.oldName !== variable.name) {
+          throw new Error("Collaboration variable state does not match: ".concat(event.varId));
+        }
+        if (findNameConflict(variable.owner, event.newName, variable.type, variable)) {
+          throw new Error("Collaboration variable name already exists: ".concat(event.newName));
+        }
+        assertVisibleNameAvailable(event.newName, variable.type, event.varId);
+        variable.name = event.newName;
+        modifiedVariableIds.add(event.varId);
+        return;
+      }
+      assertDeletePayload(event, variable);
+      stateFor(variable.owner).delete(event.varId);
+      modifiedVariableIds.add(event.varId);
+    };
+  }
+  _assertValidGroupState(groupId, state) {
+    if (!state || typeof state !== 'object' || Array.isArray(state) || state.id !== groupId || typeof state.title !== 'string' || !(state.colour === null || typeof state.colour === 'string') || typeof state.collapsed !== 'boolean' || !Array.isArray(state.blocks)) {
+      throw new Error("Collaboration group state is invalid: ".concat(groupId));
+    }
+    const numericFields = ['x', 'y', 'width', 'height', 'expandedWidth', 'expandedHeight'];
+    if (numericFields.some(field => !Number.isFinite(state[field])) || state.width < 160 || state.height < (state.collapsed ? 32 : 96) || state.expandedWidth < 160 || state.expandedHeight < 96 || state.blocks.some(id => typeof id !== 'string' || !id) || new Set(state.blocks).size !== state.blocks.length) {
+      throw new Error("Collaboration group state is invalid: ".concat(groupId));
+    }
+    return state.blocks;
   }
   _isDerivedCommentMove(event, json) {
     return event.type === 'comment_move' && (DERIVED_COMMENT_MOVE_REASONS.has(event.reason) || DERIVED_COMMENT_MOVE_REASONS.has(json.reason));
@@ -49293,6 +49812,11 @@ class BlocklyCollaborationAdapter {
     this._restoreTransition(record);
     this.transitionTimers.delete(key);
   }
+  _clearAllTransitions() {
+    for (const key of Array.from(this.transitionTimers.keys())) {
+      this._clearTransition(key);
+    }
+  }
   _clearPresentationForRemoval(event) {
     if (event.type === 'delete') {
       const block = this.workspace.getBlockById(event.blockId);
@@ -49395,7 +49919,8 @@ class CollaborationController {
       registry: this.registry,
       applyOperation: operation => this.applyOperation(operation),
       createExtensionManifest: () => this.extensionAdapter.createManifest(),
-      applyExtensionManifest: manifest => this.extensionAdapter.applyManifest(manifest)
+      applyExtensionManifest: manifest => this.extensionAdapter.applyManifest(manifest),
+      prepareForSnapshot: () => this.blocklyAdapter.prepareForSnapshot()
     });
     this.blocklyAdapter = new _blockly_adapter__WEBPACK_IMPORTED_MODULE_0__["default"]({
       vm,
@@ -49433,7 +49958,7 @@ class CollaborationController {
     }
   }
   applyOperation(operation) {
-    if (operation.type === 'blockly.event') {
+    if (operation.type === 'blockly.event' || operation.type === 'blockly.events') {
       return this.blocklyAdapter.apply(operation);
     }
     if (EXTENSION_TYPES.has(operation.type)) {
@@ -49445,7 +49970,10 @@ class CollaborationController {
     throw new Error("Unknown collaboration operation: ".concat(operation.type));
   }
   _handleVMMutation(mutation) {
-    if (!this.session.ready) return;
+    if (!this.session.ready) {
+      this.session.noteLocalMutationDuringSnapshot();
+      return;
+    }
     try {
       const operation = this.vmAdapter.captureMutation(mutation);
       if (operation) this.session.submit(operation);
@@ -49454,7 +49982,10 @@ class CollaborationController {
     }
   }
   _handleExtensionMutation(mutation) {
-    if (!this.session.ready) return;
+    if (!this.session.ready) {
+      this.session.noteLocalMutationDuringSnapshot();
+      return;
+    }
     try {
       const operation = this.extensionAdapter.captureMutation(mutation);
       if (operation) this.session.submit(operation);
@@ -50218,6 +50749,10 @@ const validatePayload = (kind, payload) => {
     case MESSAGE_KIND.SNAPSHOT:
       requireCondition(errors, isIdentifier(payload.snapshotId), 'snapshot.snapshotId must be a non-empty string');
       requireCondition(errors, isSequence(payload.baseSequence), 'snapshot.baseSequence must be a non-negative safe integer');
+      requireCondition(errors, isSequence(payload.catchUpSequence), 'snapshot.catchUpSequence must be a non-negative safe integer');
+      if (isSequence(payload.baseSequence) && isSequence(payload.catchUpSequence)) {
+        requireCondition(errors, payload.catchUpSequence >= payload.baseSequence, 'snapshot.catchUpSequence must not precede baseSequence');
+      }
       requireCondition(errors, isBinary(payload.projectData) && getByteLength(payload.projectData) > 0, 'snapshot.projectData must contain binary project data');
       requireCondition(errors, isPlainObject(payload.targetManifest), 'snapshot.targetManifest must be a plain object');
       requireCondition(errors, isPlainObject(payload.extensionManifest), 'snapshot.extensionManifest must be a plain object');
@@ -50233,6 +50768,9 @@ const validatePayload = (kind, payload) => {
       }
       if (Object.prototype.hasOwnProperty.call(payload, 'failedOperationId')) {
         requireCondition(errors, isIdentifier(payload.failedOperationId), 'snapshotRequest.failedOperationId must be a non-empty string');
+      }
+      if (Object.prototype.hasOwnProperty.call(payload, 'currentSnapshotId')) {
+        requireCondition(errors, isIdentifier(payload.currentSnapshotId), 'snapshotRequest.currentSnapshotId must be a non-empty string');
       }
       break;
     case MESSAGE_KIND.OPERATION_PROPOSAL:
@@ -50253,6 +50791,7 @@ const validatePayload = (kind, payload) => {
     case MESSAGE_KIND.OPERATION_REJECT:
       requireCondition(errors, isIdentifier(payload.operationId), 'reject.operationId must be a non-empty string');
       requireCondition(errors, typeof payload.reason === 'string' && payload.reason.length > 0 && payload.reason.length <= 1024, 'reject.reason must be a non-empty string');
+      requireCondition(errors, typeof payload.willResynchronize === 'boolean', 'reject.willResynchronize must be a boolean');
       if (Object.prototype.hasOwnProperty.call(payload, 'lastCommittedSequence')) {
         requireCondition(errors, isSequence(payload.lastCommittedSequence), 'reject.lastCommittedSequence must be a non-negative safe integer');
       }
@@ -50392,6 +50931,7 @@ const createHelloEnvelope = function createHelloEnvelope(hello) {
  * @param {object} snapshot Snapshot fields.
  * @param {string} snapshot.sessionId Collaboration session identifier.
  * @param {number} snapshot.baseSequence Sequence represented by the snapshot.
+ * @param {number} snapshot.catchUpSequence Fixed sequence sent after the snapshot before readiness.
  * @param {ArrayBuffer|ArrayBufferView} snapshot.projectData Serialized SB3 bytes.
  * @param {object} snapshot.targetManifest Canonical target manifest.
  * @param {object} snapshot.extensionManifest Ordered loaded-extension manifest.
@@ -50407,6 +50947,7 @@ const createSnapshotEnvelope = function createSnapshotEnvelope(snapshot) {
   const payload = {
     snapshotId: resolveId(snapshot.snapshotId, options.uuidFactory),
     baseSequence: snapshot.baseSequence,
+    catchUpSequence: snapshot.catchUpSequence,
     projectData: snapshot.projectData,
     targetManifest: snapshot.targetManifest,
     extensionManifest: snapshot.extensionManifest
@@ -50427,6 +50968,7 @@ const createSnapshotEnvelope = function createSnapshotEnvelope(snapshot) {
  * @param {string} request.reason Machine-stable recovery reason.
  * @param {number} [request.failedSequence] Sequence which could not be applied.
  * @param {string} [request.failedOperationId] Operation which could not be applied.
+ * @param {string} [request.currentSnapshotId] Snapshot currently loaded or being replaced.
  * @param {object} [options] Envelope creation options.
  * @returns {object} Valid snapshot request envelope.
  */
@@ -50441,6 +50983,9 @@ const createSnapshotRequestEnvelope = function createSnapshotRequestEnvelope(req
   }
   if (typeof request.failedOperationId !== 'undefined') {
     payload.failedOperationId = request.failedOperationId;
+  }
+  if (typeof request.currentSnapshotId !== 'undefined') {
+    payload.currentSnapshotId = request.currentSnapshotId;
   }
   return createEnvelope(MESSAGE_KIND.SNAPSHOT_REQUEST, payload, {
     sessionId: request.sessionId,
@@ -50499,6 +51044,7 @@ const createOperationCommitEnvelope = function createOperationCommitEnvelope(com
  * @param {string} rejection.sessionId Collaboration session identifier.
  * @param {string} rejection.operationId Rejected operation identifier.
  * @param {string} rejection.reason Human-readable or machine-stable rejection reason.
+ * @param {boolean} rejection.willResynchronize Whether the host will send an authoritative snapshot.
  * @param {number} [rejection.lastCommittedSequence] Host sequence at rejection time.
  * @param {object} [options] Envelope creation options.
  * @returns {object} Valid rejection envelope.
@@ -50507,7 +51053,8 @@ const createOperationRejectEnvelope = function createOperationRejectEnvelope(rej
   let options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
   const payload = {
     operationId: rejection.operationId,
-    reason: rejection.reason
+    reason: rejection.reason,
+    willResynchronize: rejection.willResynchronize
   };
   if (typeof rejection.lastCommittedSequence !== 'undefined') {
     payload.lastCommittedSequence = rejection.lastCommittedSequence;
@@ -50606,6 +51153,7 @@ class CollaborationSession extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmi
    * @param {Function} options.applyOperation apply a committed remote operation
    * @param {Function} options.createExtensionManifest capture the loaded extension set
    * @param {Function} options.applyExtensionManifest reconcile the loaded extension set
+   * @param {Function} [options.prepareForSnapshot] prepare local state for project replacement
    * @param {Function} [options.uuidFactory] injectable UUID factory
    */
   constructor(_ref) {
@@ -50616,11 +51164,15 @@ class CollaborationSession extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmi
       applyOperation,
       createExtensionManifest,
       applyExtensionManifest,
+      prepareForSnapshot = () => null,
       uuidFactory = _protocol__WEBPACK_IMPORTED_MODULE_1__["defaultUuidFactory"]
     } = _ref;
     super();
     if (typeof createExtensionManifest !== 'function' || typeof applyExtensionManifest !== 'function') {
       throw new TypeError('CollaborationSession requires extension manifest callbacks');
+    }
+    if (typeof prepareForSnapshot !== 'function') {
+      throw new TypeError('CollaborationSession prepareForSnapshot must be a function');
     }
     this.connectionManager = connectionManager;
     this.vm = vm;
@@ -50628,6 +51180,7 @@ class CollaborationSession extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmi
     this.applyOperation = applyOperation;
     this.createExtensionManifest = createExtensionManifest;
     this.applyExtensionManifest = applyExtensionManifest;
+    this.prepareForSnapshot = prepareForSnapshot;
     this.uuidFactory = uuidFactory;
     this.state = SESSION_STATE.IDLE;
     this.sessionId = null;
@@ -50647,9 +51200,13 @@ class CollaborationSession extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmi
     this.activeSnapshotRequests = new Map();
     this.snapshotRequestPending = null;
     this.snapshotApplyFailures = 0;
+    this.activeSnapshotApplication = null;
     this.replayRequestedFrom = null;
+    this.commitBufferGeneration = 0;
+    this.commitWaiters = new Set();
     this.incomingQueue = Promise.resolve();
     this.hostQueue = Promise.resolve();
+    this.lifecycleEpoch = 0;
     this.hostRemoteApplyCount = 0;
     this.hostResyncAfterRemote = false;
     this.started = false;
@@ -50660,6 +51217,20 @@ class CollaborationSession extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmi
   }
   get ready() {
     return this.state === SESSION_STATE.READY;
+  }
+
+  /**
+   * Record that an editor mutation completed while a replacement project was
+   * being installed. That snapshot must not be acknowledged because the
+   * mutation was not submitted and the resulting project is already dirty.
+   * @returns {boolean} true when an active snapshot was marked dirty
+   */
+  noteLocalMutationDuringSnapshot() {
+    if (this.state !== SESSION_STATE.SYNCHRONIZING || !this.activeSnapshotApplication) {
+      return false;
+    }
+    this.activeSnapshotApplication.dirty = true;
+    return true;
   }
   start() {
     if (this.started) return;
@@ -50694,6 +51265,8 @@ class CollaborationSession extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmi
    */
   submit(draft) {
     if (!this.ready || !draft || typeof draft.type !== 'string') return null;
+    const lifecycleEpoch = this.lifecycleEpoch;
+    const sessionId = this.sessionId;
     let operation;
     try {
       operation = Object(_protocol__WEBPACK_IMPORTED_MODULE_1__["createOperation"])(draft.type, typeof draft.targetId === 'undefined' ? null : draft.targetId, draft.payload || {}, {
@@ -50712,16 +51285,27 @@ class CollaborationSession extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmi
       if (this.hostRemoteApplyCount > 0) {
         this.hostResyncAfterRemote = true;
       }
-      this._commitOperation(operation, this.connectionManager.peerId, false).catch(error => this._handleQueueError('local host operation', error));
+      this._commitOperation(operation, this.connectionManager.peerId, false, lifecycleEpoch, sessionId).catch(error => this._handleQueueError('local host operation', error, lifecycleEpoch));
     } else {
       const envelope = Object(_protocol__WEBPACK_IMPORTED_MODULE_1__["createOperationProposalEnvelope"])({
-        sessionId: this.sessionId,
+        sessionId,
         baseSequence: this.lastAppliedSequence,
         operation
       }, {
         uuidFactory: this.uuidFactory
       });
-      this._sendToHost(envelope);
+      try {
+        this._sendToHost(envelope);
+      } catch (error) {
+        this._consumeOptimisticOperation(operation.operationId);
+        console.error('Unable to send collaboration operation', error);
+        if (!this._requestSnapshot('proposal-send-failed', {
+          failedOperationId: operation.operationId
+        })) {
+          this._setState(SESSION_STATE.ERROR);
+        }
+        return null;
+      }
     }
     return operation.operationId;
   }
@@ -50736,13 +51320,23 @@ class CollaborationSession extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmi
     this._reset();
     if (this.connectionManager.isHost) {
       this.sessionId = this.uuidFactory();
-      this.registry.createManifest(this.vm.runtime);
-      this._setState(SESSION_STATE.READY);
-      Object.values(this.connectionManager.connections || {}).filter(peer => peer && peer.open && peer.authenticated).forEach(peer => {
-        this._queueSnapshot(peer).catch(error => {
-          console.error('Failed to synchronize existing collaboration peer', error);
+      this._setState(SESSION_STATE.SYNCHRONIZING);
+      const lifecycleEpoch = this.lifecycleEpoch;
+      const sessionId = this.sessionId;
+      const lifecycleBarrier = Promise.all([this.incomingQueue, this.hostQueue]);
+      const initialize = lifecycleBarrier.then(() => {
+        if (!this._isCurrentLifecycle(lifecycleEpoch, sessionId)) return;
+        this.registry.createManifest(this.vm.runtime);
+        this._setState(SESSION_STATE.READY);
+        Object.values(this.connectionManager.connections || {}).filter(peer => peer && peer.open && peer.authenticated).forEach(peer => {
+          this._queueSnapshot(peer).catch(error => {
+            if (this._isCurrentLifecycle(lifecycleEpoch, sessionId)) {
+              console.error('Failed to synchronize existing collaboration peer', error);
+            }
+          });
         });
       });
+      this.hostQueue = initialize.catch(error => this._handleQueueError('collaboration room initialization', error, lifecycleEpoch));
     } else {
       this._setState(SESSION_STATE.SYNCHRONIZING);
       if (this.connectionManager.host && this.connectionManager.host.open) {
@@ -50780,7 +51374,21 @@ class CollaborationSession extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmi
       console.warn('Ignoring invalid collaboration packet', validation.errors);
       return;
     }
-    this.incomingQueue = this.incomingQueue.then(() => this._dispatchEnvelope(envelope, peer)).catch(error => this._handleQueueError('incoming collaboration packet', error));
+    const lifecycleEpoch = this.lifecycleEpoch;
+    if (envelope.kind === _protocol__WEBPACK_IMPORTED_MODULE_1__["MESSAGE_KIND"].OPERATION_COMMIT && !this.connectionManager.isHost) {
+      if (!this._bufferCommit(envelope, peer, lifecycleEpoch)) return;
+      this.incomingQueue = this.incomingQueue.then(() => {
+        if (!this._isCurrentLifecycle(lifecycleEpoch) || this.state !== SESSION_STATE.READY) {
+          return;
+        }
+        return this._drainCommits(lifecycleEpoch);
+      }).catch(error => this._handleQueueError('incoming collaboration commit', error, lifecycleEpoch));
+      return;
+    }
+    this.incomingQueue = this.incomingQueue.then(() => {
+      if (!this._isCurrentLifecycle(lifecycleEpoch)) return;
+      return this._dispatchEnvelope(envelope, peer);
+    }).catch(error => this._handleQueueError('incoming collaboration packet', error, lifecycleEpoch));
   }
   _dispatchEnvelope(envelope, peer) {
     switch (envelope.kind) {
@@ -50805,17 +51413,24 @@ class CollaborationSession extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmi
     }
   }
   _sendSnapshot(peer) {
+    let options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    let lifecycleEpoch = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : this.lifecycleEpoch;
     const peerId = peer && peer.peer;
-    if (!peerId || !peer.open) return Promise.resolve(null);
+    if (!this._isCurrentLifecycle(lifecycleEpoch) || !peerId || !peer.open) {
+      return Promise.resolve(null);
+    }
+    const retransmitPending = options.retransmitPending !== false;
     const inFlight = this.snapshotPromises.get(peerId);
     if (inFlight) return inFlight;
     const pending = this.pendingSnapshots.get(peerId);
     if (pending) {
-      this._sendToPeer(peer, pending.envelope);
+      if (retransmitPending) {
+        this._sendPendingSnapshot(peer, pending);
+      }
       return Promise.resolve(pending.snapshotId);
     }
     this.readyPeers.delete(peerId);
-    const snapshotPromise = this._createAndSendSnapshot(peer).finally(() => {
+    const snapshotPromise = this._createAndSendSnapshot(peer, lifecycleEpoch).finally(() => {
       if (this.snapshotPromises.get(peerId) === snapshotPromise) {
         this.snapshotPromises.delete(peerId);
       }
@@ -50828,7 +51443,9 @@ class CollaborationSession extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmi
       return;
     }
     this.readyPeers.delete(peer.peer);
-    return this._queueSnapshot(peer);
+    return this._queueSnapshot(peer, {
+      retransmitPending: false
+    });
   }
 
   /**
@@ -50837,16 +51454,24 @@ class CollaborationSession extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmi
    * _sendSnapshot directly from within hostQueue remains intentional for
    * recovery paths, avoiding a promise-chain self-deadlock.
    * @param {object} peer destination peer
+   * @param {object} [options] snapshot delivery options
    * @returns {Promise<?string>} queued snapshot result
    */
-  _queueSnapshot(peer) {
-    const queued = this.hostQueue.then(() => this._sendSnapshot(peer));
+  _queueSnapshot(peer, options) {
+    const lifecycleEpoch = this.lifecycleEpoch;
+    const queued = this.hostQueue.then(() => {
+      if (!this._isCurrentLifecycle(lifecycleEpoch)) return null;
+      return this._sendSnapshot(peer, options, lifecycleEpoch);
+    });
     this.hostQueue = queued.catch(error => {
-      console.error('Failed to process queued collaboration snapshot', error);
+      if (this._isCurrentLifecycle(lifecycleEpoch)) {
+        console.error('Failed to process queued collaboration snapshot', error);
+      }
     });
     return queued;
   }
   async _createAndSendSnapshot(peer) {
+    let lifecycleEpoch = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.lifecycleEpoch;
     // _saveProjectZip captures JSON and assets synchronously before the
     // returned compression promise continues, so this sequence and manifest
     // describe the same editor state.
@@ -50856,12 +51481,18 @@ class CollaborationSession extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmi
     const extensionManifest = this.createExtensionManifest();
     const projectPromise = this.vm.saveProjectSb3('uint8array');
     const projectData = await projectPromise;
-    if (!peer.open || !this.connectionManager.isHost || this.sessionId !== sessionId) {
+    if (!this._isCurrentLifecycle(lifecycleEpoch, sessionId) || !peer.open || !this.connectionManager.isHost) {
       return null;
     }
+
+    // Freeze the end of this snapshot's catch-up window before sending
+    // anything. Later commits are delivered normally, but READY is not
+    // accepted until the client has applied every sequence through here.
+    const catchUpSequence = this.sequence;
     const envelope = Object(_protocol__WEBPACK_IMPORTED_MODULE_1__["createSnapshotEnvelope"])({
       sessionId,
       baseSequence,
+      catchUpSequence,
       projectData,
       targetManifest,
       extensionManifest
@@ -50871,33 +51502,41 @@ class CollaborationSession extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmi
     this.pendingSnapshots.set(peer.peer, {
       snapshotId: envelope.payload.snapshotId,
       baseSequence,
+      catchUpSequence,
       envelope
     });
-    this._sendToPeer(peer, envelope);
+    this._sendPendingSnapshot(peer, this.pendingSnapshots.get(peer.peer));
+    return envelope.payload.snapshotId;
+  }
+  _sendPendingSnapshot(peer, pending) {
+    this._sendToPeer(peer, pending.envelope);
 
-    // Host-local edits can be sequenced while SB3 compression is awaiting.
-    // That peer was excluded from their live broadcast, so replay exactly
-    // the commits newer than the synchronously captured snapshot after the
-    // snapshot envelope on the same ordered data channel.
-    for (let sequence = baseSequence + 1; sequence <= this.sequence; sequence++) {
+    // The peer was excluded from live broadcasts while the SB3 was being
+    // captured. Replay the fixed range advertised by the envelope after it
+    // on the same ordered channel. Repeating that same range also makes a
+    // lost READY safe: duplicate commits are idempotently ignored.
+    for (let sequence = pending.baseSequence + 1; sequence <= pending.catchUpSequence; sequence++) {
       const commit = this.operationLog.get(sequence);
       if (!commit) {
         throw new Error("Snapshot delta ".concat(sequence, " is no longer available"));
       }
       this._sendToPeer(peer, commit);
     }
-    return envelope.payload.snapshotId;
   }
   async _receiveSnapshot(envelope, peer) {
     if (this.connectionManager.isHost || peer !== this.connectionManager.host) {
       console.warn('Ignoring collaboration snapshot from a non-host peer');
       return;
     }
+    const lifecycleEpoch = this.lifecycleEpoch;
+    const snapshotSessionId = envelope.sessionId;
+    const snapshotId = envelope.payload.snapshotId;
+    const catchUpSequence = envelope.payload.catchUpSequence;
     const snapshotKey = "".concat(envelope.sessionId, ":").concat(envelope.payload.snapshotId);
     if (this.appliedSnapshots.has(snapshotKey)) {
       // A duplicate can mean the host missed READY. A snapshot which
       // predates an active recovery request must not end that recovery.
-      if (!this.snapshotRequestPending && this.sessionId === envelope.sessionId) {
+      if (!this.snapshotRequestPending && this.sessionId === envelope.sessionId && this.lastAppliedSequence >= catchUpSequence) {
         this._sendReady(envelope.payload.snapshotId);
       }
       return;
@@ -50911,48 +51550,78 @@ class CollaborationSession extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmi
       this.replayRequestedFrom = null;
       this.snapshotRequestPending = null;
     }
+    const snapshotApplication = {
+      dirty: false,
+      key: snapshotKey
+    };
+    this.activeSnapshotApplication = snapshotApplication;
     this._setState(SESSION_STATE.SYNCHRONIZING);
     this.sessionId = envelope.sessionId;
     this.snapshotId = envelope.payload.snapshotId;
+    let finishSnapshot = null;
     try {
-      await this.vm.loadProject(envelope.payload.projectData);
-      this.registry.bindManifest(envelope.payload.targetManifest, this.vm.runtime);
-      await this.applyExtensionManifest(envelope.payload.extensionManifest);
-    } catch (error) {
-      console.error('Failed to apply collaboration snapshot', error);
-      this.snapshotRequestPending = null;
-      const permissionDenied = error && typeof error.message === 'string' && /permission|denied/i.test(error.message);
-      if (!permissionDenied && this.snapshotApplyFailures < MAX_SNAPSHOT_APPLY_RETRIES) {
-        this.snapshotApplyFailures++;
-        if (!this._requestSnapshot('snapshot-apply-failed')) {
+      try {
+        finishSnapshot = this.prepareForSnapshot();
+        await this.vm.loadProject(envelope.payload.projectData, false);
+        if (!this._isCurrentLifecycle(lifecycleEpoch, snapshotSessionId)) return;
+        this.registry.bindManifest(envelope.payload.targetManifest, this.vm.runtime);
+        await this.applyExtensionManifest(envelope.payload.extensionManifest);
+        if (!this._isCurrentLifecycle(lifecycleEpoch, snapshotSessionId)) return;
+      } catch (error) {
+        if (!this._isCurrentLifecycle(lifecycleEpoch, snapshotSessionId)) return;
+        console.error('Failed to apply collaboration snapshot', error);
+        this.snapshotRequestPending = null;
+        const permissionDenied = error && typeof error.message === 'string' && /permission|denied/i.test(error.message);
+        if (!permissionDenied && this.snapshotApplyFailures < MAX_SNAPSHOT_APPLY_RETRIES) {
+          this.snapshotApplyFailures++;
+          if (!this._requestSnapshot('snapshot-apply-failed')) {
+            this._setState(SESSION_STATE.ERROR);
+          }
+        } else {
           this._setState(SESSION_STATE.ERROR);
         }
-      } else {
-        this._setState(SESSION_STATE.ERROR);
+        return;
       }
-      return;
-    }
-    this.snapshotApplyFailures = 0;
-    this.lastAppliedSequence = envelope.payload.baseSequence;
-    this.optimisticOperations.clear();
-    this.optimisticOrder.length = 0;
-    this.seenOperations.clear();
+      this.snapshotApplyFailures = 0;
+      this.lastAppliedSequence = envelope.payload.baseSequence;
+      this.optimisticOperations.clear();
+      this.optimisticOrder.length = 0;
+      this.seenOperations.clear();
 
-    // Discard commits already represented by the snapshot, then apply every
-    // contiguous operation which arrived while project loading was in flight.
-    for (const [sequence, commit] of this.bufferedCommits) {
-      if (commit.sessionId !== this.sessionId || sequence <= this.lastAppliedSequence) {
-        this.bufferedCommits.delete(sequence);
+      // Discard commits already represented by the snapshot, then apply every
+      // contiguous operation which arrived while project loading was in flight.
+      for (const [sequence, commit] of this.bufferedCommits) {
+        if (commit.sessionId !== this.sessionId || sequence <= this.lastAppliedSequence) {
+          this.bufferedCommits.delete(sequence);
+        }
       }
+      this.snapshotRequestPending = null;
+      if (!(await this._drainCommits(lifecycleEpoch))) return;
+      while (this.lastAppliedSequence < catchUpSequence) {
+        const generation = this.commitBufferGeneration;
+        await this._waitForCommitChange(generation, lifecycleEpoch);
+        if (!this._isCurrentLifecycle(lifecycleEpoch, snapshotSessionId)) return;
+        if (!(await this._drainCommits(lifecycleEpoch))) return;
+      }
+      if (!this._isCurrentLifecycle(lifecycleEpoch, snapshotSessionId)) return;
+      this.appliedSnapshots.add(snapshotKey);
+      while (this.appliedSnapshots.size > 32) {
+        this.appliedSnapshots.delete(this.appliedSnapshots.values().next().value);
+      }
+      if (snapshotApplication.dirty) {
+        if (!this._requestSnapshot('local-mutation-during-snapshot')) {
+          this._setState(SESSION_STATE.ERROR);
+        }
+        return;
+      }
+      this._sendReady(snapshotId);
+      this._setState(SESSION_STATE.READY);
+    } finally {
+      if (this.activeSnapshotApplication === snapshotApplication) {
+        this.activeSnapshotApplication = null;
+      }
+      if (typeof finishSnapshot === 'function') finishSnapshot();
     }
-    this.snapshotRequestPending = null;
-    this.appliedSnapshots.add(snapshotKey);
-    while (this.appliedSnapshots.size > 32) {
-      this.appliedSnapshots.delete(this.appliedSnapshots.values().next().value);
-    }
-    if (!(await this._drainCommits())) return;
-    this._sendReady(this.snapshotId);
-    this._setState(SESSION_STATE.READY);
   }
   _sendReady(snapshotId) {
     this._sendToHost(Object(_protocol__WEBPACK_IMPORTED_MODULE_1__["createReadyEnvelope"])({
@@ -50965,17 +51634,20 @@ class CollaborationSession extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmi
   }
   _receiveProposal(envelope, peer) {
     if (!this.connectionManager.isHost || envelope.sessionId !== this.sessionId) return;
-    if (!peer || !this.readyPeers.has(peer.peer)) {
-      console.warn('Ignoring collaboration operation from a peer which is not synchronized');
+    if (!peer || !peer.open || !peer.authenticated) {
+      console.warn('Ignoring collaboration operation from an unauthenticated peer');
       return;
     }
     const operation = envelope.payload.operation;
     const validation = Object(_protocol__WEBPACK_IMPORTED_MODULE_1__["validateOperation"])(operation);
     if (!validation.valid) return;
     const baseSequence = envelope.payload.baseSequence;
+    const lifecycleEpoch = this.lifecycleEpoch;
+    const sessionId = this.sessionId;
     let commitStarted = false;
     this.hostQueue = this.hostQueue.then(async () => {
-      if (!peer.open || !this.readyPeers.has(peer.peer)) {
+      if (!this._isCurrentLifecycle(lifecycleEpoch, sessionId)) return;
+      if (!peer.open || !peer.authenticated || !this.readyPeers.has(peer.peer)) {
         throw new Error('Collaboration peer is no longer synchronized');
       }
       // A client can legitimately have several editor events in flight
@@ -50993,11 +51665,14 @@ class CollaborationSession extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmi
       commitStarted = true;
       this.hostRemoteApplyCount++;
       try {
-        await this._commitOperation(operation, peer.peer, true);
+        await this._commitOperation(operation, peer.peer, true, lifecycleEpoch, sessionId);
       } finally {
-        this.hostRemoteApplyCount--;
+        if (this._isCurrentLifecycle(lifecycleEpoch, sessionId)) {
+          this.hostRemoteApplyCount--;
+        }
       }
     }).catch(async error => {
+      if (!this._isCurrentLifecycle(lifecycleEpoch, sessionId)) return;
       console.error('Failed to apply proposed collaboration operation', error);
       if (peer.open) {
         try {
@@ -51006,6 +51681,7 @@ class CollaborationSession extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmi
             sessionId: this.sessionId,
             operationId: operation.operationId,
             reason: message.slice(0, 1024) || 'Operation failed',
+            willResynchronize: true,
             lastCommittedSequence: this.sequence
           }, {
             uuidFactory: this.uuidFactory
@@ -51014,25 +51690,32 @@ class CollaborationSession extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmi
           console.error('Failed to reject collaboration operation', sendError);
         }
       }
-      if (commitStarted) {
+      const mutationWasNotStarted = error && error.collaborationMutationStarted === false;
+      if (commitStarted && !mutationWasNotStarted) {
         // applyOperation may have mutated the host before rejecting.
         // Invalidate every ready peer and converge all of them on the
         // resulting authoritative host state, not just the author.
-        await this._resynchronizeReadyPeers(peer);
+        await this._resynchronizeReadyPeers(peer, lifecycleEpoch, sessionId);
         this.hostResyncAfterRemote = false;
       } else {
         // A proposal rejected before application only diverged on
         // its optimistic author.
-        await this._sendSnapshot(peer);
+        await this._sendSnapshot(peer, {
+          retransmitPending: false
+        }, lifecycleEpoch);
       }
     }).then(async () => {
+      if (!this._isCurrentLifecycle(lifecycleEpoch, sessionId)) return;
       if (this.hostRemoteApplyCount === 0 && this.hostResyncAfterRemote) {
         this.hostResyncAfterRemote = false;
-        await this._resynchronizeReadyPeers();
+        await this._resynchronizeReadyPeers(null, lifecycleEpoch, sessionId);
       }
     });
   }
   async _resynchronizeReadyPeers(fallbackPeer) {
+    let lifecycleEpoch = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.lifecycleEpoch;
+    let sessionId = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : this.sessionId;
+    if (!this._isCurrentLifecycle(lifecycleEpoch, sessionId)) return;
     const peerIds = Array.from(this.readyPeers);
     this.readyPeers.clear();
     const connections = this.connectionManager.connections || {};
@@ -51040,19 +51723,25 @@ class CollaborationSession extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmi
     if (fallbackPeer && fallbackPeer.open && !peers.includes(fallbackPeer)) {
       peers.push(fallbackPeer);
     }
-    await Promise.all(peers.map(peer => this._sendSnapshot(peer).catch(error => {
-      console.error("Failed to resynchronize collaboration peer ".concat(peer.peer), error);
+    await Promise.all(peers.map(peer => this._sendSnapshot(peer, {}, lifecycleEpoch).catch(error => {
+      if (this._isCurrentLifecycle(lifecycleEpoch, sessionId)) {
+        console.error("Failed to resynchronize collaboration peer ".concat(peer.peer), error);
+      }
     })));
   }
   async _commitOperation(operation, authorId, applyLocally) {
+    let lifecycleEpoch = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : this.lifecycleEpoch;
+    let sessionId = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : this.sessionId;
+    if (!this._isCurrentLifecycle(lifecycleEpoch, sessionId)) return;
     if (this.seenOperations.has(operation.operationId)) return;
     if (applyLocally) await this.applyOperation(operation);
+    if (!this._isCurrentLifecycle(lifecycleEpoch, sessionId)) return;
     this.seenOperations.add(operation.operationId);
     this._consumeOptimisticOperation(operation.operationId);
     this.sequence++;
     this.lastAppliedSequence = this.sequence;
     const envelope = Object(_protocol__WEBPACK_IMPORTED_MODULE_1__["createOperationCommitEnvelope"])({
-      sessionId: this.sessionId,
+      sessionId,
       sequence: this.sequence,
       authorId,
       operation
@@ -51075,16 +51764,27 @@ class CollaborationSession extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmi
     .filter(peerId => !this.snapshotPromises.has(peerId) || this.pendingSnapshots.has(peerId));
     this.connectionManager.sendToList(eligiblePeerIds, this._wrap(envelope));
   }
-  async _receiveCommit(envelope, peer) {
+  _receiveCommit(envelope, peer) {
+    const lifecycleEpoch = this.lifecycleEpoch;
+    if (!this._bufferCommit(envelope, peer, lifecycleEpoch)) return;
+    if (this.state !== SESSION_STATE.READY) return;
+    return this._drainCommits(lifecycleEpoch);
+  }
+  _bufferCommit(envelope, peer) {
+    let lifecycleEpoch = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : this.lifecycleEpoch;
+    if (!this._isCurrentLifecycle(lifecycleEpoch)) return false;
     if (this.connectionManager.isHost || peer !== this.connectionManager.host) return;
     if (this.sessionId && envelope.sessionId !== this.sessionId) return;
     const sequence = envelope.payload.sequence;
-    if (sequence <= this.lastAppliedSequence) return;
+    if (sequence <= this.lastAppliedSequence) return false;
     this.bufferedCommits.set(sequence, envelope);
-    if (this.state !== SESSION_STATE.READY) return;
-    await this._drainCommits();
+    this._notifyCommitWaiters();
+    return true;
   }
   async _drainCommits() {
+    let lifecycleEpoch = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.lifecycleEpoch;
+    const sessionId = this.sessionId;
+    if (!this._isCurrentLifecycle(lifecycleEpoch, sessionId)) return false;
     let nextSequence = this.lastAppliedSequence + 1;
     while (this.bufferedCommits.has(nextSequence)) {
       const envelope = this.bufferedCommits.get(nextSequence);
@@ -51112,6 +51812,7 @@ class CollaborationSession extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmi
         try {
           await this.applyOperation(operation);
         } catch (error) {
+          if (!this._isCurrentLifecycle(lifecycleEpoch, sessionId)) return false;
           console.error("Failed to apply collaboration commit ".concat(nextSequence, "; requesting a fresh snapshot"), error);
           this._requestSnapshot('commit-apply-failed', {
             failedSequence: nextSequence,
@@ -51119,6 +51820,7 @@ class CollaborationSession extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmi
           });
           return false;
         }
+        if (!this._isCurrentLifecycle(lifecycleEpoch, sessionId)) return false;
         if (this.optimisticOrder.length > 0) {
           // A genuine local edit can occur while an asynchronous
           // remote media/extension operation is awaiting. Its exact
@@ -51132,11 +51834,13 @@ class CollaborationSession extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmi
           return false;
         }
       }
+      if (!this._isCurrentLifecycle(lifecycleEpoch, sessionId)) return false;
       this.bufferedCommits.delete(nextSequence);
       this.seenOperations.add(operation.operationId);
       this.lastAppliedSequence = nextSequence;
       nextSequence++;
     }
+    if (!this._isCurrentLifecycle(lifecycleEpoch, sessionId)) return false;
     if (this.bufferedCommits.size > 0) {
       const firstBuffered = Math.min(...this.bufferedCommits.keys());
       const missing = this.lastAppliedSequence + 1;
@@ -51157,9 +51861,18 @@ class CollaborationSession extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmi
   }
   _receiveRejection(envelope, peer) {
     if (this.connectionManager.isHost || peer !== this.connectionManager.host) return;
+    if (this.sessionId && envelope.sessionId !== this.sessionId) return;
     const operationId = envelope.payload.operationId;
-    this._consumeOptimisticOperation(operationId);
+    // A snapshot can replace the local optimistic state before a delayed
+    // rejection reaches us. That operation is no longer present and the
+    // snapshot already converged it, so requesting another snapshot would
+    // only start a redundant recovery loop.
+    if (!this._consumeOptimisticOperation(operationId)) return;
     console.error("Collaboration operation was rejected: ".concat(envelope.payload.reason));
+    if (envelope.payload.willResynchronize) {
+      this._setState(SESSION_STATE.SYNCHRONIZING);
+      return;
+    }
     this._requestSnapshot('operation-rejected', {
       failedOperationId: operationId
     });
@@ -51170,13 +51883,15 @@ class CollaborationSession extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmi
       return false;
     }
     this._setState(SESSION_STATE.SYNCHRONIZING);
-    const envelope = Object(_protocol__WEBPACK_IMPORTED_MODULE_1__["createSnapshotRequestEnvelope"])({
+    const request = {
       sessionId: this.sessionId,
       lastAppliedSequence: this.lastAppliedSequence,
       reason,
       failedSequence: details.failedSequence,
       failedOperationId: details.failedOperationId
-    }, {
+    };
+    if (this.snapshotId) request.currentSnapshotId = this.snapshotId;
+    const envelope = Object(_protocol__WEBPACK_IMPORTED_MODULE_1__["createSnapshotRequestEnvelope"])(request, {
       uuidFactory: this.uuidFactory
     });
     this.snapshotRequestPending = envelope.messageId;
@@ -51200,19 +51915,29 @@ class CollaborationSession extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmi
       this.seenSnapshotRequests.delete(this.seenSnapshotRequests.values().next().value);
     }
 
-    // An in-flight snapshot is already fresh. A completed but
-    // unacknowledged snapshot is retransmitted by _sendSnapshot.
-    if (envelope.payload.reason === 'snapshot-apply-failed') {
+    // A request naming the currently pending snapshot proves that the
+    // client has already received it and is asking to replace it. Never
+    // answer that request by retransmitting the same snapshot.
+    const pending = this.pendingSnapshots.get(peer.peer);
+    let supersededSnapshotPromise = null;
+    if (pending && pending.snapshotId === envelope.payload.currentSnapshotId) {
+      supersededSnapshotPromise = this.snapshotPromises.get(peer.peer) || null;
       this.pendingSnapshots.delete(peer.peer);
-      // A client can reject more than one independently malformed
-      // snapshot. Its new request supersedes the active request which
-      // produced the snapshot it just failed to apply.
       this.activeSnapshotRequests.delete(peer.peer);
     }
     if (this.activeSnapshotRequests.has(peer.peer)) return;
     this.activeSnapshotRequests.set(peer.peer, envelope.messageId);
     this.readyPeers.delete(peer.peer);
-    this.hostQueue = this.hostQueue.then(() => this._sendSnapshot(peer)).catch(error => {
+    const lifecycleEpoch = this.lifecycleEpoch;
+    const sessionId = this.sessionId;
+    this.hostQueue = this.hostQueue.then(async () => {
+      if (supersededSnapshotPromise) {
+        await supersededSnapshotPromise.catch(() => null);
+      }
+      if (!this._isCurrentLifecycle(lifecycleEpoch, sessionId)) return;
+      return this._sendSnapshot(peer, {}, lifecycleEpoch);
+    }).catch(error => {
+      if (!this._isCurrentLifecycle(lifecycleEpoch, sessionId)) return;
       this.activeSnapshotRequests.delete(peer.peer);
       console.error('Failed to send requested collaboration snapshot', error);
     });
@@ -51234,7 +51959,7 @@ class CollaborationSession extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmi
     if (!this.connectionManager.isHost || envelope.sessionId !== this.sessionId || !peer) return;
     const pending = this.pendingSnapshots.get(peer.peer);
     if (!pending || pending.snapshotId !== envelope.payload.snapshotId) return;
-    if (envelope.payload.lastAppliedSequence < pending.baseSequence || envelope.payload.lastAppliedSequence > this.sequence) {
+    if (envelope.payload.lastAppliedSequence < pending.catchUpSequence || envelope.payload.lastAppliedSequence > this.sequence) {
       return;
     }
     this.pendingSnapshots.delete(peer.peer);
@@ -51284,16 +52009,37 @@ class CollaborationSession extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmi
     if (index !== -1) this.optimisticOrder.splice(index, 1);
     return true;
   }
+  _isCurrentLifecycle(lifecycleEpoch, sessionId) {
+    return lifecycleEpoch === this.lifecycleEpoch && (typeof sessionId === 'undefined' || sessionId === this.sessionId);
+  }
+  _notifyCommitWaiters() {
+    this.commitBufferGeneration++;
+    const waiters = Array.from(this.commitWaiters);
+    this.commitWaiters.clear();
+    waiters.forEach(resolve => resolve());
+  }
+  _waitForCommitChange(generation, lifecycleEpoch) {
+    if (!this._isCurrentLifecycle(lifecycleEpoch) || generation !== this.commitBufferGeneration) {
+      return Promise.resolve();
+    }
+    return new Promise(resolve => {
+      this.commitWaiters.add(resolve);
+    });
+  }
   _setState(state) {
     if (this.state === state) return;
     this.state = state;
     this.emit('state', state);
   }
   _handleQueueError(context, error) {
+    let lifecycleEpoch = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : this.lifecycleEpoch;
+    if (!this._isCurrentLifecycle(lifecycleEpoch)) return;
     console.error("Failed to process ".concat(context), error);
     this._setState(SESSION_STATE.ERROR);
   }
   _reset() {
+    this.lifecycleEpoch++;
+    this._notifyCommitWaiters();
     this.state = SESSION_STATE.IDLE;
     this.sessionId = null;
     this.sequence = 0;
@@ -51312,12 +52058,11 @@ class CollaborationSession extends events__WEBPACK_IMPORTED_MODULE_0__["EventEmi
     this.activeSnapshotRequests.clear();
     this.snapshotRequestPending = null;
     this.snapshotApplyFailures = 0;
+    this.activeSnapshotApplication = null;
     this.replayRequestedFrom = null;
     this.hostRemoteApplyCount = 0;
     this.hostResyncAfterRemote = false;
     this.registry.clear();
-    this.incomingQueue = Promise.resolve();
-    this.hostQueue = Promise.resolve();
   }
 }
 
