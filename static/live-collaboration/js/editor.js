@@ -50594,8 +50594,9 @@ class NBConnectionManager extends events__WEBPACK_IMPORTED_MODULE_1__["EventEmit
     this.username = typeof username === 'string' ? username.trim().slice(0, 64) || 'Anonymous' : 'Anonymous';
     this.peer = new peerjs__WEBPACK_IMPORTED_MODULE_0__["default"](connectionSettings !== null && connectionSettings !== void 0 ? connectionSettings : {
       host: 'api.nitrobolt.org',
-      port: 80,
+      port: 443,
       path: '/peerjs',
+      secure: true,
       debug: 3,
       config: {
         iceServers: [{
