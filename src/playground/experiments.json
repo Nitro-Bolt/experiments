@@ -4,5 +4,11 @@
     "name": "Live Collaboration",
     "description": "Collaborate on projects with friends!",
     "status": "Final Testing"
+  },
+  {
+    "id": "color-and-number-menu-inputs-in-procedures",
+    "name": "Color Inputs and Number Menu Inputs in Procedures",
+    "description": "Add color and number menu inputs directly into custom procedures.",
+    "status": "Final Testing"
   }
 ]
