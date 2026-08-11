@@ -1,6 +1,7 @@
 {
   "name": "experiments",
   "version": "1.0.0",
+  "packageManager": "pnpm@10.33.0",
   "description": "NitroBolt Experiments",
   "scripts": {
     "start": "rspack serve --config rspack.config.cjs",
@@ -26,5 +27,8 @@
     "@rspack/core": "^1.7.7",
     "@rspack/dev-server": "^1.2.1",
     "prettier": "^3.8.1"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": []
   }
 }
