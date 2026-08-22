@@ -86,45 +86,10 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/scratch-vm/src/extension-support/tw-iframe-extension-worker-entry.js":
-/*!***********************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--5!./node_modules/scratch-vm/src/extension-support/tw-iframe-extension-worker-entry.js ***!
-  \***********************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(global) {const context = __webpack_require__(/*! ./tw-extension-worker-context */ "./node_modules/scratch-vm/src/extension-support/tw-extension-worker-context.js");
-const jQuery = __webpack_require__(/*! ./tw-jquery-shim */ "./node_modules/scratch-vm/src/extension-support/tw-jquery-shim.js");
-global.$ = jQuery;
-global.jQuery = jQuery;
-const id = window.__WRAPPED_IFRAME_ID__;
-context.isWorker = false;
-context.centralDispatchService = {
-  postMessage(message, transfer) {
-    const data = {
-      vmIframeId: id,
-      message
-    };
-    if (transfer) {
-      window.parent.postMessage(data, '*', transfer);
-    } else {
-      window.parent.postMessage(data, '*');
-    }
-  }
-};
-__webpack_require__(/*! ./extension-worker */ "./node_modules/scratch-vm/src/extension-support/extension-worker.js");
-window.parent.postMessage({
-  vmIframeId: id,
-  ready: true
-}, '*');
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
-
-/***/ }),
-
-/***/ "./node_modules/scratch-vm/node_modules/@turbowarp/nanolog/index.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/scratch-vm/node_modules/@turbowarp/nanolog/index.js ***!
-  \**************************************************************************/
+/***/ "./node_modules/@turbowarp/nanolog/index.js":
+/*!**************************************************!*\
+  !*** ./node_modules/@turbowarp/nanolog/index.js ***!
+  \**************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -166,10 +131,45 @@ module.exports = createLog;
 
 /***/ }),
 
-/***/ "./node_modules/scratch-vm/node_modules/format-message-formats/index.js":
-/*!******************************************************************************!*\
-  !*** ./node_modules/scratch-vm/node_modules/format-message-formats/index.js ***!
-  \******************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/scratch-vm/src/extension-support/tw-iframe-extension-worker-entry.js":
+/*!***********************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4!./node_modules/scratch-vm/src/extension-support/tw-iframe-extension-worker-entry.js ***!
+  \***********************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {const context = __webpack_require__(/*! ./tw-extension-worker-context */ "./node_modules/scratch-vm/src/extension-support/tw-extension-worker-context.js");
+const jQuery = __webpack_require__(/*! ./tw-jquery-shim */ "./node_modules/scratch-vm/src/extension-support/tw-jquery-shim.js");
+global.$ = jQuery;
+global.jQuery = jQuery;
+const id = window.__WRAPPED_IFRAME_ID__;
+context.isWorker = false;
+context.centralDispatchService = {
+  postMessage(message, transfer) {
+    const data = {
+      vmIframeId: id,
+      message
+    };
+    if (transfer) {
+      window.parent.postMessage(data, '*', transfer);
+    } else {
+      window.parent.postMessage(data, '*');
+    }
+  }
+};
+__webpack_require__(/*! ./extension-worker */ "./node_modules/scratch-vm/src/extension-support/extension-worker.js");
+window.parent.postMessage({
+  vmIframeId: id,
+  ready: true
+}, '*');
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
+/***/ "./node_modules/format-message-formats/index.js":
+/*!******************************************************!*\
+  !*** ./node_modules/format-message-formats/index.js ***!
+  \******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -370,19 +370,19 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/scratch-vm/node_modules/format-message-interpret/index.js":
-/*!********************************************************************************!*\
-  !*** ./node_modules/scratch-vm/node_modules/format-message-interpret/index.js ***!
-  \********************************************************************************/
+/***/ "./node_modules/format-message-interpret/index.js":
+/*!********************************************************!*\
+  !*** ./node_modules/format-message-interpret/index.js ***!
+  \********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 // @flow
 
-var formats = __webpack_require__(/*! format-message-formats */ "./node_modules/scratch-vm/node_modules/format-message-formats/index.js")
-var lookupClosestLocale = __webpack_require__(/*! lookup-closest-locale */ "./node_modules/scratch-vm/node_modules/lookup-closest-locale/index.js")
-var plurals = __webpack_require__(/*! ./plurals */ "./node_modules/scratch-vm/node_modules/format-message-interpret/plurals.js")
+var formats = __webpack_require__(/*! format-message-formats */ "./node_modules/format-message-formats/index.js")
+var lookupClosestLocale = __webpack_require__(/*! lookup-closest-locale */ "./node_modules/lookup-closest-locale/index.js")
+var plurals = __webpack_require__(/*! ./plurals */ "./node_modules/format-message-interpret/plurals.js")
 
 /*::
 import type {
@@ -585,10 +585,10 @@ exports.types = defaults
 
 /***/ }),
 
-/***/ "./node_modules/scratch-vm/node_modules/format-message-interpret/plurals.js":
-/*!**********************************************************************************!*\
-  !*** ./node_modules/scratch-vm/node_modules/format-message-interpret/plurals.js ***!
-  \**********************************************************************************/
+/***/ "./node_modules/format-message-interpret/plurals.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/format-message-interpret/plurals.js ***!
+  \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1156,10 +1156,10 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/scratch-vm/node_modules/format-message-parse/index.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/scratch-vm/node_modules/format-message-parse/index.js ***!
-  \****************************************************************************/
+/***/ "./node_modules/format-message-parse/index.js":
+/*!****************************************************!*\
+  !*** ./node_modules/format-message-parse/index.js ***!
+  \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1612,21 +1612,21 @@ exports.SyntaxError = SyntaxError
 
 /***/ }),
 
-/***/ "./node_modules/scratch-vm/node_modules/format-message/index.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/scratch-vm/node_modules/format-message/index.js ***!
-  \**********************************************************************/
+/***/ "./node_modules/format-message/index.js":
+/*!**********************************************!*\
+  !*** ./node_modules/format-message/index.js ***!
+  \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 // @flow
 
-var parse = __webpack_require__(/*! format-message-parse */ "./node_modules/scratch-vm/node_modules/format-message-parse/index.js")
-var interpret = __webpack_require__(/*! format-message-interpret */ "./node_modules/scratch-vm/node_modules/format-message-interpret/index.js")
-var plurals = __webpack_require__(/*! format-message-interpret/plurals */ "./node_modules/scratch-vm/node_modules/format-message-interpret/plurals.js")
-var lookupClosestLocale = __webpack_require__(/*! lookup-closest-locale */ "./node_modules/scratch-vm/node_modules/lookup-closest-locale/index.js")
-var origFormats = __webpack_require__(/*! format-message-formats */ "./node_modules/scratch-vm/node_modules/format-message-formats/index.js")
+var parse = __webpack_require__(/*! format-message-parse */ "./node_modules/format-message-parse/index.js")
+var interpret = __webpack_require__(/*! format-message-interpret */ "./node_modules/format-message-interpret/index.js")
+var plurals = __webpack_require__(/*! format-message-interpret/plurals */ "./node_modules/format-message-interpret/plurals.js")
+var lookupClosestLocale = __webpack_require__(/*! lookup-closest-locale */ "./node_modules/lookup-closest-locale/index.js")
+var origFormats = __webpack_require__(/*! format-message-formats */ "./node_modules/format-message-formats/index.js")
 
 /*::
 import type { Types } from 'format-message-interpret'
@@ -1849,10 +1849,10 @@ module.exports = exports = namespace()
 
 /***/ }),
 
-/***/ "./node_modules/scratch-vm/node_modules/lookup-closest-locale/index.js":
-/*!*****************************************************************************!*\
-  !*** ./node_modules/scratch-vm/node_modules/lookup-closest-locale/index.js ***!
-  \*****************************************************************************/
+/***/ "./node_modules/lookup-closest-locale/index.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/lookup-closest-locale/index.js ***!
+  \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2270,44 +2270,6 @@ module.exports = new WorkerDispatch();
 
 /***/ }),
 
-/***/ "./node_modules/scratch-vm/src/engine/scratch-blocks-constants.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/scratch-vm/src/engine/scratch-blocks-constants.js ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/**
- * These constants are copied from scratch-blocks/core/constants.js
- * @TODO find a way to require() these straight from scratch-blocks... maybe make a scratch-blocks/dist/constants.js?
- * @readonly
- * @enum {int}
- */
-const ScratchBlocksConstants = {
-  /**
-   * ENUM for output shape: hexagonal (booleans/predicates).
-   * @const
-   */
-  OUTPUT_SHAPE_HEXAGONAL: 1,
-  /**
-   * ENUM for output shape: rounded (strings and numbers).
-   * @const
-   */
-  OUTPUT_SHAPE_ROUND: 2,
-  /**
-   * ENUM for output shape: squared (array).
-   * @const
-   */
-  OUTPUT_SHAPE_SQUARE: 3,
-  /**
-   * ENUM for output shape: object (object).
-   */
-  OUTPUT_SHAPE_OBJECT: 4
-};
-module.exports = ScratchBlocksConstants;
-
-/***/ }),
-
 /***/ "./node_modules/scratch-vm/src/extension-support/argument-type.js":
 /*!************************************************************************!*\
   !*** ./node_modules/scratch-vm/src/extension-support/argument-type.js ***!
@@ -2341,14 +2303,6 @@ const ArgumentType = {
    */
   STRING: 'string',
   /**
-   * Object value with object shaped placeholder.
-   */
-  OBJECT: 'Object',
-  /**
-   * Array value with array shaped placeholder.
-   */
-  ARRAY: 'Array',
-  /**
    * String value with matrix field
    */
   MATRIX: 'matrix',
@@ -2367,27 +2321,7 @@ const ArgumentType = {
   /**
    * Name of sound in the current target
    */
-  SOUND: 'sound',
-  /**
-   * Name of scalar variable in the current scope
-   */
-  VARIABLE: 'variable',
-  /**
-   * Name of list variable in the current scope
-   */
-  LIST: 'list',
-  /**
-   * Name of table variable in the current scope
-   */
-  TABLE: 'table',
-  /**
-   * Name of broadcast message in the current scope
-   */
-  BROADCAST: 'broadcast',
-  /**
-   * Name of extendable field
-  */
-  EXTENDABLE: 'extendable'
+  SOUND: 'sound'
 };
 module.exports = ArgumentType;
 
@@ -2444,14 +2378,6 @@ const BlockType = {
    * General reporter with numeric or string value
    */
   REPORTER: 'reporter',
-  /**
-   * Object Shaped Block that returns pure Objects
-   */
-  OBJECT: 'Object',
-  /**
-   * Array Shaped Block that returns pure Arrays.
-   */
-  ARRAY: 'Array',
   /**
    * Arbitrary scratch-blocks XML.
    */
@@ -2553,8 +2479,6 @@ Object.assign(global.Scratch, ScratchCommon, {
   canNotify: () => Promise.resolve(false),
   canGeolocate: () => Promise.resolve(false),
   canEmbed: () => Promise.resolve(false),
-  canDownload: () => Promise.resolve(false),
-  download: () => Promise.reject(new Error('Scratch.download not supported in sandboxed extensions')),
   translate
 });
 
@@ -2595,38 +2519,6 @@ module.exports = TargetType;
 
 /***/ }),
 
-/***/ "./node_modules/scratch-vm/src/extension-support/tw-block-shape.js":
-/*!*************************************************************************!*\
-  !*** ./node_modules/scratch-vm/src/extension-support/tw-block-shape.js ***!
-  \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Use the constants instead of manually redefining them again
-const ScratchBlocksConstants = __webpack_require__(/*! ../engine/scratch-blocks-constants */ "./node_modules/scratch-vm/src/engine/scratch-blocks-constants.js");
-
-/**
- * Types of block shapes
- * @enum {number}
- */
-const BlockShape = {
-  /**
-   * Output shape: hexagonal (booleans/predicates).
-   */
-  HEXAGONAL: ScratchBlocksConstants.OUTPUT_SHAPE_HEXAGONAL,
-  /**
-   * Output shape: rounded (numbers).
-   */
-  ROUND: ScratchBlocksConstants.OUTPUT_SHAPE_ROUND,
-  /**
-   * Output shape: squared (any/all values; strings).
-   */
-  SQUARE: ScratchBlocksConstants.OUTPUT_SHAPE_SQUARE
-};
-module.exports = BlockShape;
-
-/***/ }),
-
 /***/ "./node_modules/scratch-vm/src/extension-support/tw-extension-api-common.js":
 /*!**********************************************************************************!*\
   !*** ./node_modules/scratch-vm/src/extension-support/tw-extension-api-common.js ***!
@@ -2636,17 +2528,13 @@ module.exports = BlockShape;
 
 const ArgumentType = __webpack_require__(/*! ./argument-type */ "./node_modules/scratch-vm/src/extension-support/argument-type.js");
 const BlockType = __webpack_require__(/*! ./block-type */ "./node_modules/scratch-vm/src/extension-support/block-type.js");
-const BlockShape = __webpack_require__(/*! ./tw-block-shape */ "./node_modules/scratch-vm/src/extension-support/tw-block-shape.js");
 const TargetType = __webpack_require__(/*! ./target-type */ "./node_modules/scratch-vm/src/extension-support/target-type.js");
 const Cast = __webpack_require__(/*! ../util/cast */ "./node_modules/scratch-vm/src/util/cast.js");
-const external = __webpack_require__(/*! ./tw-external */ "./node_modules/scratch-vm/src/extension-support/tw-external.js");
 const Scratch = {
   ArgumentType,
   BlockType,
-  BlockShape,
   TargetType,
-  Cast,
-  external
+  Cast
 };
 module.exports = Scratch;
 
@@ -2664,96 +2552,6 @@ module.exports = {
   // centralDispatchService is the object to call postMessage() on to send a message to parent.
   centralDispatchService: self
 };
-
-/***/ }),
-
-/***/ "./node_modules/scratch-vm/src/extension-support/tw-external.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/scratch-vm/src/extension-support/tw-external.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/**
- * @param {string} url
- * @returns {void} if URL is supported
- * @throws if URL is unsupported
- */
-const checkURL = url => {
-  // URL might be a very long data: URL, so try to avoid fully parsing it if we can.
-  // The notable requirement here is that the URL must be an absolute URL, not something
-  // relative to where the extension is loaded from or where the extension is running.
-  // This ensures that the same extension file will always load resources from the same
-  // place, regardless of how it is running or packaged or whatever else.
-  if (!url.startsWith('http:') && !url.startsWith('https:') && !url.startsWith('data:') && !url.startsWith('blob:')) {
-    throw new Error("Unsupported URL: ".concat(url));
-  }
-};
-const external = {};
-
-/**
- * @param {string} url
- * @template T
- * @returns {Promise<T>}
- */
-external.importModule = url => {
-  checkURL(url);
-  // Need to specify webpackIgnore so that webpack compiles this directly to a call to import()
-  // instead of trying making it try to use the webpack import system.
-  return import(/* webpackIgnore: true */url);
-};
-
-/**
- * @param {string} url
- * @returns {Promise<Response>}
- */
-external.fetch = async url => {
-  checkURL(url);
-  const res = await fetch(url);
-  if (!res.ok) {
-    throw new Error("HTTP ".concat(res.status, " fetching ").concat(url));
-  }
-  return res;
-};
-
-/**
- * @param {string} url
- * @returns {Promise<string>}
- */
-external.dataURL = async url => {
-  const res = await external.fetch(url);
-  const blob = await res.blob();
-  return new Promise((resolve, reject) => {
-    const fr = new FileReader();
-    fr.onload = () => resolve(fr.result);
-    fr.onerror = () => reject(fr.error);
-    fr.readAsDataURL(blob);
-  });
-};
-
-/**
- * @param {string} url
- * @returns {Promise<Blob>}
- */
-external.blob = async url => {
-  const res = await external.fetch(url);
-  return res.blob();
-};
-
-/**
- * @param {string} url
- * @param {string} returnExpression
- * @template T
- * @returns {Promise<T>}
- */
-external.evalAndReturn = async (url, returnExpression) => {
-  const res = await external.fetch(url);
-  const text = await res.text();
-  const js = "".concat(text, "\nreturn ").concat(returnExpression, ";");
-  const fn = new Function(js);
-  return fn();
-};
-module.exports = external;
 
 /***/ }),
 
@@ -2874,7 +2672,7 @@ module.exports = jQuery;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-const formatMessage = __webpack_require__(/*! format-message */ "./node_modules/scratch-vm/node_modules/format-message/index.js");
+const formatMessage = __webpack_require__(/*! format-message */ "./node_modules/format-message/index.js");
 
 /**
  * @param {VM|null} vm
@@ -3280,55 +3078,7 @@ class Cast {
    * @return {string} The Scratch-casted string value.
    */
   static toString(value) {
-    if (typeof value === 'undefined' || value === null) {
-      return String();
-    } else if (typeof value === 'object') {
-      try {
-        return JSON.stringify(value);
-      } catch (e) {
-        // Think fast, chucklenuts!
-      }
-    }
     return String(value);
-  }
-
-  /**
-   * Scratch cast to object.
-   * @param {*} value Value to cast to object.
-   * @param {?boolean} [nullSafe] Is null allowed.
-   * @return {object} The Scratch-casted object value.
-   */
-  static toObject(value, nullSafe) {
-    if (typeof value === 'object') {
-      if (value === null) {
-        if (nullSafe) return null;
-        return new Object();
-      }
-      if (Array.isArray(value)) return new Object();
-      return value;
-    }
-    try {
-      return Cast.toObject(JSON.parse(value));
-    } catch (_unused) {
-      return new Object();
-    }
-  }
-
-  /**
-   * Scratch cast to array.
-   * @param {*} value Value to cast to array.
-   * @return {array} The Scratch-casted array value.
-   */
-  static toArray(value) {
-    if (Array.isArray(value)) return value;
-    try {
-      if (typeof value === 'string') {
-        return Cast.toArray(JSON.parse(value));
-      }
-      return Array.from(value);
-    } catch (_unused2) {
-      return new Array();
-    }
   }
 
   /**
@@ -3362,16 +3112,6 @@ class Cast {
       color = Color.decimalToRgb(Cast.toNumber(value));
     }
     return color;
-  }
-
-  /**
-   * Scratch cast to Float32Array.
-   * @param {*} value Value to cast to Float32Array.
-   * @return {Float32Array} The casted Float32Array value.
-   */
-  static toFloat32Array(value) {
-    if (value instanceof Float32Array) return value;
-    return new Float32Array(Cast.toArray(value));
   }
 
   /**
@@ -3480,79 +3220,6 @@ class Cast {
       return Cast.LIST_INVALID;
     }
     return index;
-  }
-
-  /**
-   * Compute a 0-based index into an array, based on a block argument.
-   * Returns Cast.LIST_INVALID if the index was invalid in any way.
-   * @param {*} index Arg, including 0-based numbers or special cases ("last", "random").
-   * @param {number} length Length of the array.
-   * @return {(number|string)} 0-based index for array, or LIST_INVALID.
-   */
-  static toArrayIndex(index, length) {
-    if (typeof index !== 'number') {
-      if (index === 'last') {
-        if (length > 0) {
-          return length - 1;
-        }
-        return Cast.LIST_INVALID;
-      } else if (index === 'random') {
-        if (length > 0) {
-          return Math.floor(Math.random() * length);
-        }
-        return Cast.LIST_INVALID;
-      }
-    }
-    index = Math.floor(Cast.toNumber(index));
-    if (index < 0 || index >= length) {
-      return Cast.LIST_INVALID;
-    }
-    return index;
-  }
-
-  /**
-   * Get the number of rows in a table.
-   * @param {Array} table The table value array.
-   * @return {number} Number of rows in the table.
-   */
-  static getTableRowCount(table) {
-    return Array.isArray(table) ? table.length : 0;
-  }
-
-  /**
-   * Get the number of columns in a table (from the first row).
-   * @param {Array} table The table value array.
-   * @return {number} Number of columns in the table.
-   */
-  static getTableColumnCount(table) {
-    if (!Array.isArray(table) || table.length === 0) {
-      return 0;
-    }
-    return Array.isArray(table[0]) ? table[0].length : 0;
-  }
-
-  /**
-   * Compute a 1-based row index into a table, based on a Scratch argument.
-   * @param {*} index Scratch arg, including 1-based numbers or special cases.
-   * @param {Array} table The table value array.
-   * @param {boolean} acceptAll Whether it should accept "all" or not.
-   * @return {(number|string)} 1-based index for table row, LIST_ALL, or LIST_INVALID.
-   */
-  static toTableRowIndex(index, table, acceptAll) {
-    const rowCount = Cast.getTableRowCount(table);
-    return Cast.toListIndex(index, rowCount, acceptAll);
-  }
-
-  /**
-   * Compute a 1-based column index into a table, based on a Scratch argument.
-   * @param {*} index Scratch arg, including 1-based numbers or special cases.
-   * @param {Array} table The table value array.
-   * @param {boolean} acceptAll Whether it should accept "all" or not.
-   * @return {(number|string)} 1-based index for table column, LIST_ALL, or LIST_INVALID.
-   */
-  static toTableColumnIndex(index, table, acceptAll) {
-    const columnCount = Cast.getTableColumnCount(table);
-    return Cast.toListIndex(index, columnCount, acceptAll);
   }
 }
 module.exports = Cast;
@@ -3805,7 +3472,7 @@ module.exports = Color;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-const nanolog = __webpack_require__(/*! @turbowarp/nanolog */ "./node_modules/scratch-vm/node_modules/@turbowarp/nanolog/index.js");
+const nanolog = __webpack_require__(/*! @turbowarp/nanolog */ "./node_modules/@turbowarp/nanolog/index.js");
 nanolog.enable();
 module.exports = nanolog('vm');
 

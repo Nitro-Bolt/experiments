@@ -32,7 +32,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "/* Imported by other addons */\n\n.sa-block-color {\n  --sa-block-colored-background: var(--sa-block-background-primary);\n  --sa-block-colored-background-secondary: var(--sa-block-field-background);\n  --sa-block-bright-background: var(--sa-block-background-primary);\n  --sa-block-text: var(--editorTheme3-blockText, white);\n  --sa-block-gray-text: white;\n  --sa-block-colored-text: var(--sa-block-background-primary);\n  --sa-block-text-on-bright-background: var(--editorTheme3-blockText, white);\n  --sa-block-input-color: var(--editorTheme3-inputColor, white);\n  --sa-block-input-text: var(--editorTheme3-inputColor-text, #575e75);\n}\n\n.sa-block-color-motion {\n  --sa-block-background-primary: var(--editorTheme3-motion-primary, #4c97ff);\n  --sa-block-background-secondary: var(--editorTheme3-motion-secondary, #4280d7);\n  --sa-block-background-tertiary: var(--editorTheme3-motion-tertiary, #3373cc);\n  --sa-block-field-background: var(--editorTheme3-motion-field, #3373cc);\n}\n\n.sa-block-color-looks {\n  --sa-block-background-primary: var(--editorTheme3-looks-primary, #9966ff);\n  --sa-block-background-secondary: var(--editorTheme3-looks-secondary, #855cd6);\n  --sa-block-background-tertiary: var(--editorTheme3-looks-tertiary, #774dcb);\n  --sa-block-field-background: var(--editorTheme3-looks-field, #774dcb);\n}\n\n.sa-block-color-sounds {\n  --sa-block-background-primary: var(--editorTheme3-sounds-primary, #cf63cf);\n  --sa-block-background-secondary: var(--editorTheme3-sounds-secondary, #c94fc9);\n  --sa-block-background-tertiary: var(--editorTheme3-sounds-tertiary, #bd42bd);\n  --sa-block-field-background: var(--editorTheme3-sounds-field, #bd42bd);\n}\n\n.sa-block-color-assets {\n  --sa-block-background-primary: var(--editorTheme3-assets-primary, #FCB103);\n  --sa-block-background-secondary: var(--editorTheme3-assets-secondary, #DB9A37);\n  --sa-block-background-tertiary: var(--editorTheme3-assets-tertiary, #DB8937);\n  --sa-block-field-background: var(--editorTheme3-assets-field, #DB8937);\n}\n\n.sa-block-color-events {\n  --sa-block-background-primary: var(--editorTheme3-event-primary, #ffbf00);\n  --sa-block-background-secondary: var(--editorTheme3-event-secondary, #e6ac00);\n  --sa-block-background-tertiary: var(--editorTheme3-event-tertiary, #cc9900);\n  --sa-block-field-background: var(--editorTheme3-event-field, #cc9900);\n}\n\n.sa-block-color-control {\n  --sa-block-background-primary: var(--editorTheme3-control-primary, #ffab19);\n  --sa-block-background-secondary: var(--editorTheme3-control-secondary, #ec9c13);\n  --sa-block-background-tertiary: var(--editorTheme3-control-tertiary, #cf8b17);\n  --sa-block-field-background: var(--editorTheme3-control-field, #cf8b17);\n}\n\n.sa-block-color-sensing {\n  --sa-block-background-primary: var(--editorTheme3-sensing-primary, #5cb1d6);\n  --sa-block-background-secondary: var(--editorTheme3-sensing-secondary, #47a8d1);\n  --sa-block-background-tertiary: var(--editorTheme3-sensing-tertiary, #2e8eb8);\n  --sa-block-field-background: var(--editorTheme3-sensing-field, #2e8eb8);\n}\n\n.sa-block-color-operators {\n  --sa-block-background-primary: var(--editorTheme3-operators-primary, #59c059);\n  --sa-block-background-secondary: var(--editorTheme3-operators-secondary, #46b946);\n  --sa-block-background-tertiary: var(--editorTheme3-operators-tertiary, #389438);\n  --sa-block-field-background: var(--editorTheme3-operators-field, #389438);\n}\n\n.sa-block-color-data {\n  --sa-block-background-primary: var(--editorTheme3-data-primary, #ff8c1a);\n  --sa-block-background-secondary: var(--editorTheme3-data-secondary, #ff8000);\n  --sa-block-background-tertiary: var(--editorTheme3-data-tertiary, #db6e00);\n  --sa-block-field-background: var(--editorTheme3-data-field, #db6e00);\n}\n\n.sa-block-color-data-lists,\n.sa-block-color-list {\n  --sa-block-background-primary: var(--editorTheme3-data_lists-primary, #ff661a);\n  --sa-block-background-secondary: var(--editorTheme3-data_lists-secondary, #ff5500);\n  --sa-block-background-tertiary: var(--editorTheme3-data_lists-tertiary, #e64d00);\n  --sa-block-field-background: var(--editorTheme3-data_lists-field, #e64d00);\n}\n\n.sa-block-color-more,\n.sa-block-color-null {\n  --sa-block-background-primary: var(--editorTheme3-more-primary, #ff6680);\n  --sa-block-background-secondary: var(--editorTheme3-more-secondary, #ff4d6a);\n  --sa-block-background-tertiary: var(--editorTheme3-more-tertiary, #ff3355);\n  --sa-block-field-background: var(--editorTheme3-more-field, #ff3355);\n}\n\n.sa-block-color-pen {\n  --sa-block-background-primary: var(--editorTheme3-pen-primary, #0fbd8c);\n  --sa-block-background-secondary: var(--editorTheme3-pen-secondary, #0da57a);\n  --sa-block-background-tertiary: var(--editorTheme3-pen-tertiary, #0b8e69);\n  --sa-block-field-background: var(--editorTheme3-pen-field, #0b8e69);\n}\n\n.sa-block-color-addon-custom-block {\n  --sa-block-background-primary: var(--editorTheme3-addons-primary, #29beb8);\n  --sa-block-background-secondary: var(--editorTheme3-addons-secondary, #3aa8a4);\n  --sa-block-background-tertiary: var(--editorTheme3-addons-tertiary, #3aa8a4);\n  --sa-block-field-background: var(--editorTheme3-addons-field, #3aa8a4);\n}\n", ""]);
+exports.push([module.i, "/* Imported by other addons */\n\n.sa-block-color {\n  --sa-block-colored-background: var(--sa-block-background-primary);\n  --sa-block-colored-background-secondary: var(--sa-block-field-background);\n  --sa-block-bright-background: var(--sa-block-background-primary);\n  --sa-block-text: var(--editorTheme3-blockText, white);\n  --sa-block-gray-text: white;\n  --sa-block-colored-text: var(--sa-block-background-primary);\n  --sa-block-text-on-bright-background: var(--editorTheme3-blockText, white);\n  --sa-block-input-color: var(--editorTheme3-inputColor, white);\n  --sa-block-input-text: var(--editorTheme3-inputColor-text, #575e75);\n}\n\n.sa-block-color-motion {\n  --sa-block-background-primary: var(--editorTheme3-motion-primary, #4c97ff);\n  --sa-block-background-secondary: var(--editorTheme3-motion-secondary, #4280d7);\n  --sa-block-background-tertiary: var(--editorTheme3-motion-tertiary, #3373cc);\n  --sa-block-field-background: var(--editorTheme3-motion-field, #3373cc);\n}\n\n.sa-block-color-looks {\n  --sa-block-background-primary: var(--editorTheme3-looks-primary, #9966ff);\n  --sa-block-background-secondary: var(--editorTheme3-looks-secondary, #855cd6);\n  --sa-block-background-tertiary: var(--editorTheme3-looks-tertiary, #774dcb);\n  --sa-block-field-background: var(--editorTheme3-looks-field, #774dcb);\n}\n\n.sa-block-color-sounds {\n  --sa-block-background-primary: var(--editorTheme3-sounds-primary, #cf63cf);\n  --sa-block-background-secondary: var(--editorTheme3-sounds-secondary, #c94fc9);\n  --sa-block-background-tertiary: var(--editorTheme3-sounds-tertiary, #bd42bd);\n  --sa-block-field-background: var(--editorTheme3-sounds-field, #bd42bd);\n}\n\n.sa-block-color-events {\n  --sa-block-background-primary: var(--editorTheme3-event-primary, #ffbf00);\n  --sa-block-background-secondary: var(--editorTheme3-event-secondary, #e6ac00);\n  --sa-block-background-tertiary: var(--editorTheme3-event-tertiary, #cc9900);\n  --sa-block-field-background: var(--editorTheme3-event-field, #cc9900);\n}\n\n.sa-block-color-control {\n  --sa-block-background-primary: var(--editorTheme3-control-primary, #ffab19);\n  --sa-block-background-secondary: var(--editorTheme3-control-secondary, #ec9c13);\n  --sa-block-background-tertiary: var(--editorTheme3-control-tertiary, #cf8b17);\n  --sa-block-field-background: var(--editorTheme3-control-field, #cf8b17);\n}\n\n.sa-block-color-sensing {\n  --sa-block-background-primary: var(--editorTheme3-sensing-primary, #5cb1d6);\n  --sa-block-background-secondary: var(--editorTheme3-sensing-secondary, #47a8d1);\n  --sa-block-background-tertiary: var(--editorTheme3-sensing-tertiary, #2e8eb8);\n  --sa-block-field-background: var(--editorTheme3-sensing-field, #2e8eb8);\n}\n\n.sa-block-color-operators {\n  --sa-block-background-primary: var(--editorTheme3-operators-primary, #59c059);\n  --sa-block-background-secondary: var(--editorTheme3-operators-secondary, #46b946);\n  --sa-block-background-tertiary: var(--editorTheme3-operators-tertiary, #389438);\n  --sa-block-field-background: var(--editorTheme3-operators-field, #389438);\n}\n\n.sa-block-color-data {\n  --sa-block-background-primary: var(--editorTheme3-data-primary, #ff8c1a);\n  --sa-block-background-secondary: var(--editorTheme3-data-secondary, #ff8000);\n  --sa-block-background-tertiary: var(--editorTheme3-data-tertiary, #db6e00);\n  --sa-block-field-background: var(--editorTheme3-data-field, #db6e00);\n}\n\n.sa-block-color-data-lists,\n.sa-block-color-list {\n  --sa-block-background-primary: var(--editorTheme3-data_lists-primary, #ff661a);\n  --sa-block-background-secondary: var(--editorTheme3-data_lists-secondary, #ff5500);\n  --sa-block-background-tertiary: var(--editorTheme3-data_lists-tertiary, #e64d00);\n  --sa-block-field-background: var(--editorTheme3-data_lists-field, #e64d00);\n}\n\n.sa-block-color-more,\n.sa-block-color-null {\n  --sa-block-background-primary: var(--editorTheme3-more-primary, #ff6680);\n  --sa-block-background-secondary: var(--editorTheme3-more-secondary, #ff4d6a);\n  --sa-block-background-tertiary: var(--editorTheme3-more-tertiary, #ff3355);\n  --sa-block-field-background: var(--editorTheme3-more-field, #ff3355);\n}\n\n.sa-block-color-pen {\n  --sa-block-background-primary: var(--editorTheme3-pen-primary, #0fbd8c);\n  --sa-block-background-secondary: var(--editorTheme3-pen-secondary, #0da57a);\n  --sa-block-background-tertiary: var(--editorTheme3-pen-tertiary, #0b8e69);\n  --sa-block-field-background: var(--editorTheme3-pen-field, #0b8e69);\n}\n\n.sa-block-color-addon-custom-block {\n  --sa-block-background-primary: var(--editorTheme3-addons-primary, #29beb8);\n  --sa-block-background-secondary: var(--editorTheme3-addons-secondary, #3aa8a4);\n  --sa-block-background-tertiary: var(--editorTheme3-addons-tertiary, #3aa8a4);\n  --sa-block-field-background: var(--editorTheme3-addons-field, #3aa8a4);\n}\n", ""]);
 
 // exports
 
@@ -1898,305 +1898,6 @@ class Highlighter {
   }
 }
 /* harmony default export */ __webpack_exports__["default"] = (Highlighter);
-
-/***/ }),
-
-/***/ "./src/addons/addons/find-bar/blockly/BlockFlasher.js":
-/*!************************************************************!*\
-  !*** ./src/addons/addons/find-bar/blockly/BlockFlasher.js ***!
-  \************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return BlockFlasher; });
-/**
- * Helper class to flash a Blockly scratch block in the users workspace
- */
-class BlockFlasher {
-  /**
-   * FLash a block 3 times
-   * @param block the block to flash
-   */
-  static flash(block) {
-    if (myFlash.timerID > 0) {
-      clearTimeout(myFlash.timerID);
-      if (myFlash.block.svgPath_) {
-        myFlash.block.svgPath_.style.fill = "";
-      }
-    }
-    let count = 4;
-    let flashOn = true;
-    myFlash.block = block;
-
-    /**
-     * Internal method to switch the colour of a block between light yellow and it's original colour
-     * @private
-     */
-    function _flash() {
-      if (myFlash.block.svgPath_) {
-        myFlash.block.svgPath_.style.fill = flashOn ? "#ffff80" : "";
-      }
-      flashOn = !flashOn;
-      count--;
-      if (count > 0) {
-        myFlash.timerID = setTimeout(_flash, 200);
-      } else {
-        myFlash.timerID = 0;
-        myFlash.block = null;
-      }
-    }
-    _flash();
-  }
-}
-const myFlash = {
-  block: null,
-  timerID: null
-};
-
-/***/ }),
-
-/***/ "./src/addons/addons/find-bar/blockly/BlockInstance.js":
-/*!*************************************************************!*\
-  !*** ./src/addons/addons/find-bar/blockly/BlockInstance.js ***!
-  \*************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return BlockInstance; });
-/**
- * Encapsulates a block (either in this sprite or another / Blockly, or native JSON block
- */
-class BlockInstance {
-  constructor(target, block) {
-    this.targetId = target.id;
-    this.id = block.id;
-  }
-}
-
-/***/ }),
-
-/***/ "./src/addons/addons/find-bar/blockly/Utils.js":
-/*!*****************************************************!*\
-  !*** ./src/addons/addons/find-bar/blockly/Utils.js ***!
-  \*****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Utils; });
-/* harmony import */ var _BlockInstance_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BlockInstance.js */ "./src/addons/addons/find-bar/blockly/BlockInstance.js");
-/* harmony import */ var _BlockFlasher_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BlockFlasher.js */ "./src/addons/addons/find-bar/blockly/BlockFlasher.js");
-
-
-
-// Make these global so that every addon uses the same arrays.
-let views = [];
-let forward = [];
-class Utils {
-  constructor(addon) {
-    this.addon = addon;
-    this.addon.tab.traps.getBlockly().then(blockly => {
-      this.blockly = blockly;
-    });
-    /**
-     * Scratch Virtual Machine
-     * @type {null|*}
-     */
-    this.vm = this.addon.tab.traps.vm;
-    // this._myFlash = { block: null, timerID: null, colour: null };
-    this.offsetX = 32;
-    this.offsetY = 32;
-    this.navigationHistory = new NavigationHistory();
-    /**
-     * The workspace
-     */
-    this._workspace = null;
-  }
-
-  /**
-   * Get the Scratch Editing Target
-   * @returns {?Target} the scratch editing target
-   */
-  getEditingTarget() {
-    return this.vm.runtime.getEditingTarget();
-  }
-
-  /**
-   * Set the current workspace (switches sprites)
-   * @param targetID {string}
-   */
-  setEditingTarget(targetID) {
-    if (this.getEditingTarget().id !== targetID) {
-      this.vm.setEditingTarget(targetID);
-    }
-  }
-
-  /**
-   * Returns the main workspace
-   * @returns !Blockly.Workspace
-   */
-  getWorkspace() {
-    const currentWorkspace = Blockly.getMainWorkspace();
-    if (currentWorkspace.getToolbox()) {
-      // Sadly get get workspace does not always return the 'real' workspace... Not sure how to get that at the moment,
-      //  but we can work out whether it's the right one by whether it has a toolbox.
-      this._workspace = currentWorkspace;
-    }
-    return this._workspace;
-  }
-
-  /**
-   * Based on wksp.centerOnBlock(li.data.labelID);
-   * @param blockOrId {Blockly.Block|{id}|BlockInstance} A Blockly Block, a block id, or a BlockInstance
-   */
-  scrollBlockIntoView(blockOrId) {
-    var _this$blockly;
-    let workspace = this.getWorkspace();
-    /** @type {Blockly.Block} */
-    let block; // or is it really a Blockly.BlockSvg?
-
-    if (blockOrId instanceof _BlockInstance_js__WEBPACK_IMPORTED_MODULE_0__["default"]) {
-      // Switch to sprite
-      this.setEditingTarget(blockOrId.targetId);
-      // Highlight the block!
-      block = workspace.getBlockById(blockOrId.id);
-    } else {
-      block = blockOrId && blockOrId.id ? blockOrId : workspace.getBlockById(blockOrId);
-    }
-    if (!block) {
-      return;
-    }
-
-    /**
-     * !Blockly.Block
-     */
-    let root = block.getRootBlock();
-    let base = this.getTopOfStackFor(block);
-    let ePos = base.getRelativeToSurfaceXY(),
-      // Align with the top of the block
-      rPos = root.getRelativeToSurfaceXY(),
-      // Align with the left of the block 'stack'
-      scale = workspace.scale,
-      x = rPos.x * scale,
-      y = ePos.y * scale,
-      xx = block.width + x,
-      // Turns out they have their x & y stored locally, and they are the actual size rather than scaled or including children...
-      yy = block.height + y,
-      s = workspace.getMetrics();
-    if (x < s.viewLeft + this.offsetX - 4 || xx > s.viewLeft + s.viewWidth || y < s.viewTop + this.offsetY - 4 || yy > s.viewTop + s.viewHeight) {
-      // sx = s.contentLeft + s.viewWidth / 2 - x,
-      let sx = x - s.contentLeft - this.offsetX,
-        // sy = s.contentTop - y + Math.max(Math.min(32, 32 * scale), (s.viewHeight - yh) / 2);
-        sy = y - s.contentTop - this.offsetY;
-      this.navigationHistory.storeView(this.navigationHistory.peek(), 64);
-
-      // workspace.hideChaff(),
-      workspace.scrollbar.set(sx, sy);
-      this.navigationHistory.storeView({
-        left: sx,
-        top: sy
-      }, 64);
-    }
-    (_this$blockly = this.blockly) === null || _this$blockly === void 0 ? void 0 : _this$blockly.hideChaff();
-    _BlockFlasher_js__WEBPACK_IMPORTED_MODULE_1__["default"].flash(block);
-  }
-
-  /**
-   * Find the top stack block of a  stack
-   * @param block a block in a stack
-   * @returns {*} a block that is the top of the stack of blocks
-   */
-  getTopOfStackFor(block) {
-    let base = block;
-    while (base.getOutputShape() && base.getSurroundParent()) {
-      base = base.getSurroundParent();
-    }
-    return base;
-  }
-}
-class NavigationHistory {
-  /**
-   * Keep a record of the scroll and zoom position
-   */
-  storeView(next, dist) {
-    forward = [];
-    let workspace = Blockly.getMainWorkspace(),
-      s = workspace.getMetrics();
-    let pos = {
-      left: s.viewLeft,
-      top: s.viewTop
-    };
-    if (!next || distance(pos, next) > dist) {
-      views.push(pos);
-    }
-  }
-  peek() {
-    return views.length > 0 ? views[views.length - 1] : null;
-  }
-  goBack() {
-    const workspace = Blockly.getMainWorkspace(),
-      s = workspace.getMetrics();
-    let pos = {
-      left: s.viewLeft,
-      top: s.viewTop
-    };
-    let view = this.peek();
-    if (!view) {
-      return;
-    }
-    if (distance(pos, view) < 64) {
-      // Go back to current if we are already far away from it
-      if (views.length > 1) {
-        views.pop();
-        forward.push(view);
-      }
-    }
-    view = this.peek();
-    if (!view) {
-      return;
-    }
-    let sx = view.left - s.contentLeft,
-      sy = view.top - s.contentTop;
-
-    // transform.setTranslate(-600,0);
-
-    workspace.scrollbar.set(sx, sy);
-
-    /*
-              let blocklySvg = document.getElementsByClassName('blocklySvg')[0];
-              let blocklyBlockCanvas = blocklySvg.getElementsByClassName('blocklyBlockCanvas')[0];
-              let transform = blocklyBlockCanvas.transform.baseVal.getItem(0);
-              let scale = blocklyBlockCanvas.transform.baseVal.getItem(1);
-               let transformMatrix = transform.matrix;
-              let scaleMatrix = scale.matrix;
-               console.log('Transform - getMetrics', s);
-              console.log('sx, sy: ', sx, sy);
-              console.log('left, top: ', view.left, view.top);
-              console.log('contentLeft, right:', s.contentLeft, s.contentTop);
-              console.log('transform, scale matrix: ', transformMatrix, scaleMatrix);
-    */
-  }
-  goForward() {
-    let view = forward.pop();
-    if (!view) {
-      return;
-    }
-    views.push(view);
-    let workspace = Blockly.getMainWorkspace(),
-      s = workspace.getMetrics();
-    let sx = view.left - s.contentLeft,
-      sy = view.top - s.contentTop;
-    workspace.scrollbar.set(sx, sy);
-  }
-}
-function distance(pos, next) {
-  return Math.sqrt(Math.pow(pos.left - next.left, 2) + Math.pow(pos.top - next.top, 2));
-}
 
 /***/ }),
 
@@ -4678,13 +4379,13 @@ function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = 
           const e = function (t) {
               const e = [];
               let i, s, n, o, a, r;
-              for (i = 0, s = (t || []).length; i < s; ++i) n = t[i], {
+              for (i = 0, s = (t || []).length; i < s; ++i) n = t[i], ({
                 position: o,
                 options: {
                   stack: a,
                   stackWeight: r = 1
                 }
-              } = n, e.push({
+              } = n), e.push({
                 index: i,
                 box: n,
                 pos: o,
@@ -6810,26 +6511,26 @@ function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = 
       return this._get(t, this.scales, "scale");
     }
     removeControllers() {
-      for (var _len0 = arguments.length, t = new Array(_len0), _key0 = 0; _key0 < _len0; _key0++) {
-        t[_key0] = arguments[_key0];
+      for (var _len10 = arguments.length, t = new Array(_len10), _key10 = 0; _key10 < _len10; _key10++) {
+        t[_key10] = arguments[_key10];
       }
       this._each("unregister", t, this.controllers);
     }
     removeElements() {
-      for (var _len1 = arguments.length, t = new Array(_len1), _key1 = 0; _key1 < _len1; _key1++) {
-        t[_key1] = arguments[_key1];
+      for (var _len11 = arguments.length, t = new Array(_len11), _key11 = 0; _key11 < _len11; _key11++) {
+        t[_key11] = arguments[_key11];
       }
       this._each("unregister", t, this.elements);
     }
     removePlugins() {
-      for (var _len10 = arguments.length, t = new Array(_len10), _key10 = 0; _key10 < _len10; _key10++) {
-        t[_key10] = arguments[_key10];
+      for (var _len12 = arguments.length, t = new Array(_len12), _key12 = 0; _key12 < _len12; _key12++) {
+        t[_key12] = arguments[_key12];
       }
       this._each("unregister", t, this.plugins);
     }
     removeScales() {
-      for (var _len11 = arguments.length, t = new Array(_len11), _key11 = 0; _key11 < _len11; _key11++) {
-        t[_key11] = arguments[_key11];
+      for (var _len13 = arguments.length, t = new Array(_len13), _key13 = 0; _key13 < _len13; _key13++) {
+        t[_key13] = arguments[_key13];
       }
       this._each("unregister", t, this.scales);
     }
@@ -12304,22 +12005,22 @@ function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = 
     i ? (e >= t[r].pos && e <= t[l].pos && ({
       lo: r,
       hi: l
-    } = et(t, "pos", e)), {
+    } = et(t, "pos", e)), ({
       pos: s,
       time: o
-    } = t[r], {
+    } = t[r]), ({
       pos: n,
       time: a
-    } = t[l]) : (e >= t[r].time && e <= t[l].time && ({
+    } = t[l])) : (e >= t[r].time && e <= t[l].time && ({
       lo: r,
       hi: l
-    } = et(t, "time", e)), {
+    } = et(t, "time", e)), ({
       time: s,
       pos: o
-    } = t[r], {
+    } = t[r]), ({
       time: n,
       pos: a
-    } = t[l]);
+    } = t[l]));
     const h = n - s;
     return h ? o + (a - o) * (e - s) / h : o;
   }

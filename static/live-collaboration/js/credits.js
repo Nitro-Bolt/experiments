@@ -158,7 +158,7 @@ var GUI =
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/lib/themes/global-styles.css":
 /*!*************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??postcss!./src/lib/themes/global-styles.css ***!
+  !*** ./node_modules/css-loader??ref--5-1!./node_modules/postcss-loader/src??postcss!./src/lib/themes/global-styles.css ***!
   \*************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -177,7 +177,7 @@ exports.push([module.i, "/* overridden by src/lib/themes/guiHelpers.js */\n\n/* 
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/playground/credits/credits.css":
 /*!***************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??postcss!./src/playground/credits/credits.css ***!
+  !*** ./node_modules/css-loader??ref--5-1!./node_modules/postcss-loader/src??postcss!./src/playground/credits/credits.css ***!
   \***************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -235,28 +235,7 @@ const AddonHooks = {
 // Legacy export format because this is used by some build-time scripts stuck in the past.
 // eslint-disable-next-line import/no-commonjs
 module.exports = {
-  APP_NAME: 'NitroBolt'
-};
-
-/***/ }),
-
-/***/ "./src/lib/nb-gradient-to-css.js":
-/*!***************************************!*\
-  !*** ./src/lib/nb-gradient-to-css.js ***!
-  \***************************************/
-/*! exports provided: gradientDataToCSS */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "gradientDataToCSS", function() { return gradientDataToCSS; });
-const gradientDataToCSS = (colors, direction) => {
-  let buffer = "linear-gradient(".concat(direction, "deg");
-  for (const color of colors) {
-    buffer += ", ".concat(color.color, " ").concat(color.position, "%");
-  }
-  buffer += ')';
-  return buffer;
+  APP_NAME: 'TurboWarp'
 };
 
 /***/ }),
@@ -279,75 +258,6 @@ const guiColors = {
   'looks-secondary-dark': 'hsla(215, 60%, 50%, 1)'
 };
 const blockColors = {};
-
-
-/***/ }),
-
-/***/ "./src/lib/themes/accent/custom.js":
-/*!*****************************************!*\
-  !*** ./src/lib/themes/accent/custom.js ***!
-  \*****************************************/
-/*! exports provided: getGuiColors, getBlockColors */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getGuiColors", function() { return getGuiColors; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getBlockColors", function() { return getBlockColors; });
-/* harmony import */ var _lib_nb_gradient_to_css_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../lib/nb-gradient-to-css.js */ "./src/lib/nb-gradient-to-css.js");
-
-const getGuiColors = (primaryColor, secondaryColor, tertiaryColor, gradient) => ({
-  'motion-primary': "".concat(primaryColor),
-  'motion-primary-transparent': "".concat(primaryColor, "e6"),
-  'motion-tertiary': "".concat(secondaryColor),
-  'looks-secondary': "".concat(primaryColor),
-  'looks-transparent': "".concat(primaryColor, "59"),
-  'looks-light-transparent': "".concat(primaryColor, "26"),
-  'looks-secondary-dark': "".concat(secondaryColor),
-  'extensions-primary': "".concat(tertiaryColor),
-  'extensions-tertiary': "".concat(tertiaryColor),
-  'extensions-transparent': "".concat(tertiaryColor, "6e"),
-  'extensions-light': 'hsla(10, 57%, 85%, 1)',
-  'drop-highlight': "".concat(primaryColor),
-  'menu-bar-background-image': "".concat(gradient ? Object(_lib_nb_gradient_to_css_js__WEBPACK_IMPORTED_MODULE_0__["gradientDataToCSS"])(gradient.colors, gradient.direction) : 'none')
-});
-const getBlockColors = (primaryColor, secondaryColor) => ({
-  checkboxActiveBackground: primaryColor,
-  checkboxActiveBorder: secondaryColor
-});
-
-
-/***/ }),
-
-/***/ "./src/lib/themes/accent/orange.js":
-/*!*****************************************!*\
-  !*** ./src/lib/themes/accent/orange.js ***!
-  \*****************************************/
-/*! exports provided: guiColors, blockColors */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "guiColors", function() { return guiColors; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "blockColors", function() { return blockColors; });
-const guiColors = {
-  'motion-primary': '#ff5726',
-  'motion-primary-transparent': '#ff5726e6',
-  'motion-tertiary': '#e63e0d',
-  'looks-secondary': '#ff5726',
-  'looks-transparent': '#ff5d4d59',
-  'looks-light-transparent': '#ff5d4d26',
-  'looks-secondary-dark': 'hsla(14, 68%, 57%, 1)',
-  'extensions-primary': 'hsla(10, 85%, 65%, 1)',
-  'extensions-tertiary': 'hsla(10, 85%, 57%, 1)',
-  'extensions-transparent': 'hsla(10, 85%, 65%, 0.43)',
-  'extensions-light': 'hsla(10, 57%, 85%, 1)',
-  'drop-highlight': '#ff9d8a'
-};
-const blockColors = {
-  checkboxActiveBackground: '#ff5726',
-  checkboxActiveBorder: '#fc3900'
-};
 
 
 /***/ }),
@@ -389,24 +299,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "guiColors", function() { return guiColors; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "blockColors", function() { return blockColors; });
 const guiColors = {
-  'motion-primary': '#ff5726',
-  'motion-primary-transparent': '#ff5726e6',
-  'motion-tertiary': '#e63e0d',
-  'looks-secondary': '#ff5726',
-  'looks-transparent': '#ff5d4d59',
-  'looks-light-transparent': '#ff5d4d26',
-  'looks-secondary-dark': 'hsla(14, 68%, 57%, 1)',
+  'motion-primary': '#ff4c4c',
+  'motion-primary-transparent': '#ff4c4ce6',
+  'motion-tertiary': '#cc3333',
+  'looks-secondary': '#ff4c4c',
+  'looks-transparent': '#ff4d4d59',
+  'looks-light-transparent': '#ff4d4d26',
+  'looks-secondary-dark': 'hsla(0, 42%, 51%, 1)',
   'extensions-primary': 'hsla(10, 85%, 65%, 1)',
-  'extensions-tertiary': 'hsla(10, 85%, 57%, 1)',
-  'extensions-transparent': 'hsla(10, 85%, 65%, 0.43)',
+  'extensions-tertiary': 'hsla(10, 85%, 40%, 1)',
+  'extensions-transparent': 'hsla(10, 85%, 65%, 0.35)',
   'extensions-light': 'hsla(10, 57%, 85%, 1)',
-  'drop-highlight': '#ff9d8a',
-  // eslint-disable-next-line max-len
+  'drop-highlight': '#ff8c8c',
   'menu-bar-background-image': 'linear-gradient(90deg, rgba(255, 0, 0, 0.75) 0%, rgba(255, 154, 0, 0.75) 10%, rgba(208, 222, 33, 0.75) 20%, rgba(79, 220, 74, 0.75) 30%, rgba(63, 218, 216, 0.75) 40%, rgba(47, 201, 226, 0.75) 50%, rgba(28, 127, 238, 0.75) 60%, rgba(95, 21, 242, 0.75) 70%, rgba(186, 12, 248, 0.75) 80%, rgba(251, 7, 217, 0.75) 90%, rgba(255, 0, 0, 0.75) 100%)'
 };
 const blockColors = {
-  checkboxActiveBackground: '#ff5726',
-  checkboxActiveBorder: '#fc3900'
+  checkboxActiveBackground: '#ff4c4c',
+  checkboxActiveBorder: '#cc3333'
 };
 
 
@@ -478,12 +387,6 @@ const blockColors = {
     tertiary: '#CF63CF',
     quaternary: '#CF63CF'
   },
-  assets: {
-    primary: '#493300',
-    secondary: '#4C4C4C',
-    tertiary: '#FCB103',
-    quaternary: '#FCB103'
-  },
   control: {
     primary: '#332205',
     secondary: '#4C4C4C',
@@ -525,18 +428,6 @@ const blockColors = {
     secondary: '#4C4C4C',
     tertiary: '#FF661A',
     quaternary: '#FF661A'
-  },
-  data_tables: {
-    primary: '#1B3318',
-    secondary: '#4C4C4C',
-    tertiary: '#66BD5C',
-    quaternary: '#66BD5C'
-  },
-  json: {
-    primary: '#141433',
-    secondary: '#4C4C4C',
-    tertiary: '#5755D4',
-    quaternary: '#5755D4'
   },
   more: {
     primary: '#331419',
@@ -675,12 +566,6 @@ const blockColors = {
     tertiary: '#BD42BD',
     quaternary: '#FFCCFF'
   },
-  assets: {
-    primary: '#FFD87F',
-    secondary: '#C98D02',
-    tertiary: '#C98D02',
-    quaternary: '#C98D02'
-  },
   control: {
     primary: '#FFBE4C',
     secondary: '#FFDA99',
@@ -725,19 +610,6 @@ const blockColors = {
     // I don't think this is used, b/c we don't have any droppable fields in list blocks
     tertiary: '#E64D00',
     quaternary: '#FFDDCC'
-  },
-  // Same reasoning as data_lists, but this is to differentiate tables
-  data_tables: {
-    primary: '#ACF0A4',
-    secondary: '#4A8A43',
-    tertiary: '#4A8A43',
-    quaternary: '#4A8A43'
-  },
-  json: {
-    primary: '#9A99FF',
-    secondary: '#4240A1',
-    tertiary: '#4240A1',
-    quaternary: '#4240A1'
   },
   more: {
     primary: '#FF99AA',
@@ -844,12 +716,6 @@ const blockColors = {
     tertiary: '#BD42BD',
     quaternary: '#BD42BD'
   },
-  assets: {
-    primary: '#FCB103',
-    secondary: '#DB9A37',
-    tertiary: '#DB8937',
-    quaternary: '#DB8937'
-  },
   control: {
     primary: '#FFAB19',
     secondary: '#EC9C13',
@@ -893,19 +759,6 @@ const blockColors = {
     secondary: '#FF5500',
     tertiary: '#E64D00',
     quaternary: '#E64D00'
-  },
-  // Same reasoning as data_lists, but this is to differentiate tables
-  data_tables: {
-    primary: '#66BD5C',
-    secondary: '#5CAA53',
-    tertiary: '#52974A',
-    quaternary: '#52974A'
-  },
-  json: {
-    primary: '#5755D4',
-    secondary: '#4644AA',
-    tertiary: '#4644AA',
-    quaternary: '#4644AA'
   },
   more: {
     primary: '#FF6680',
@@ -952,9 +805,6 @@ const blockColors = {
   valueReportBackground: '#FFFFFF',
   valueReportBorder: '#AAAAAA',
   valueReportForeground: '#000000',
-  errorReportBackground: '#FFEEEE',
-  errorReportBorder: '#FF4444',
-  errorReportForeground: '#441111',
   menuHover: 'rgba(0, 0, 0, 0.2)',
   contextMenuBackground: '#ffffff',
   contextMenuBorder: '#cccccc',
@@ -986,7 +836,7 @@ const extensions = {};
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/postcss-loader/src??postcss!./global-styles.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/lib/themes/global-styles.css");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--5-1!../../../node_modules/postcss-loader/src??postcss!./global-styles.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/lib/themes/global-styles.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -1061,9 +911,6 @@ const blockColors = {
   valueReportBackground: '#1e1e1e',
   valueReportBorder: '#333333',
   valueReportForeground: '#eeeeee',
-  errorReportBackground: '#2e1818',
-  errorReportBorder: '#552222',
-  errorReportForeground: '#eecccc',
   contextMenuBackground: '#111111',
   contextMenuBorder: '#ffffff26',
   contextMenuForeground: '#eeeeee',
@@ -1236,7 +1083,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const BLOCK_COLOR_NAMES = [
 // Corresponds to the name of the object in blockColors
-'motion', 'looks', 'sounds', 'assets', 'control', 'event', 'sensing', 'pen', 'operators', 'data', 'data_lists', 'data_tables', 'json', 'more', 'addons'];
+'motion', 'looks', 'sounds', 'control', 'event', 'sensing', 'pen', 'operators', 'data', 'data_lists', 'more', 'addons'];
 
 /**
  * @param {string} css CSS color or var(--...)
@@ -1298,19 +1145,17 @@ const applyGuiColors = theme => {
 /*!*********************************!*\
   !*** ./src/lib/themes/index.js ***!
   \*********************************/
-/*! exports provided: Theme, defaultBlockColors, ACCENT_ORANGE, ACCENT_RED, ACCENT_PURPLE, ACCENT_BLUE, ACCENT_RAINBOW, ACCENT_CUSTOM, ACCENT_MAP, GUI_LIGHT, GUI_DARK, GUI_MAP, BLOCKS_THREE, BLOCKS_DARK, BLOCKS_HIGH_CONTRAST, BLOCKS_CUSTOM, BLOCKS_MAP */
+/*! exports provided: Theme, defaultBlockColors, ACCENT_RED, ACCENT_PURPLE, ACCENT_BLUE, ACCENT_RAINBOW, ACCENT_MAP, GUI_LIGHT, GUI_DARK, GUI_MAP, BLOCKS_THREE, BLOCKS_DARK, BLOCKS_HIGH_CONTRAST, BLOCKS_CUSTOM, BLOCKS_MAP */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Theme", function() { return Theme; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "defaultBlockColors", function() { return defaultBlockColors; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ACCENT_ORANGE", function() { return ACCENT_ORANGE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ACCENT_RED", function() { return ACCENT_RED; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ACCENT_PURPLE", function() { return ACCENT_PURPLE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ACCENT_BLUE", function() { return ACCENT_BLUE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ACCENT_RAINBOW", function() { return ACCENT_RAINBOW; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ACCENT_CUSTOM", function() { return ACCENT_CUSTOM; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ACCENT_MAP", function() { return ACCENT_MAP; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GUI_LIGHT", function() { return GUI_LIGHT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GUI_DARK", function() { return GUI_DARK; });
@@ -1325,14 +1170,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _accent_purple__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./accent/purple */ "./src/lib/themes/accent/purple.js");
 /* harmony import */ var _accent_blue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./accent/blue */ "./src/lib/themes/accent/blue.js");
 /* harmony import */ var _accent_red__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./accent/red */ "./src/lib/themes/accent/red.js");
-/* harmony import */ var _accent_orange__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./accent/orange */ "./src/lib/themes/accent/orange.js");
-/* harmony import */ var _accent_rainbow__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./accent/rainbow */ "./src/lib/themes/accent/rainbow.js");
-/* harmony import */ var _accent_custom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./accent/custom */ "./src/lib/themes/accent/custom.js");
-/* harmony import */ var _gui_light__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./gui/light */ "./src/lib/themes/gui/light.js");
-/* harmony import */ var _gui_dark__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./gui/dark */ "./src/lib/themes/gui/dark.js");
-/* harmony import */ var _blocks_three__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./blocks/three */ "./src/lib/themes/blocks/three.js");
-/* harmony import */ var _blocks_high_contrast__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./blocks/high-contrast */ "./src/lib/themes/blocks/high-contrast.js");
-/* harmony import */ var _blocks_dark__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./blocks/dark */ "./src/lib/themes/blocks/dark.js");
+/* harmony import */ var _accent_rainbow__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./accent/rainbow */ "./src/lib/themes/accent/rainbow.js");
+/* harmony import */ var _gui_light__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./gui/light */ "./src/lib/themes/gui/light.js");
+/* harmony import */ var _gui_dark__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./gui/dark */ "./src/lib/themes/gui/dark.js");
+/* harmony import */ var _blocks_three__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./blocks/three */ "./src/lib/themes/blocks/three.js");
+/* harmony import */ var _blocks_high_contrast__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./blocks/high-contrast */ "./src/lib/themes/blocks/high-contrast.js");
+/* harmony import */ var _blocks_dark__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./blocks/dark */ "./src/lib/themes/blocks/dark.js");
 var _Theme;
 function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : i + ""; }
@@ -1347,28 +1190,22 @@ function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = 
 
 
 
-
-
 const ACCENT_PURPLE = 'purple';
 const ACCENT_BLUE = 'blue';
 const ACCENT_RED = 'red';
-const ACCENT_ORANGE = 'orange';
 const ACCENT_RAINBOW = 'rainbow';
-const ACCENT_CUSTOM = 'custom';
 const ACCENT_MAP = {
   [ACCENT_PURPLE]: _accent_purple__WEBPACK_IMPORTED_MODULE_1__,
   [ACCENT_BLUE]: _accent_blue__WEBPACK_IMPORTED_MODULE_2__,
   [ACCENT_RED]: _accent_red__WEBPACK_IMPORTED_MODULE_3__,
-  [ACCENT_ORANGE]: _accent_orange__WEBPACK_IMPORTED_MODULE_4__,
-  [ACCENT_RAINBOW]: _accent_rainbow__WEBPACK_IMPORTED_MODULE_5__,
-  [ACCENT_CUSTOM]: _accent_custom__WEBPACK_IMPORTED_MODULE_6__
+  [ACCENT_RAINBOW]: _accent_rainbow__WEBPACK_IMPORTED_MODULE_4__
 };
-const ACCENT_DEFAULT = ACCENT_ORANGE;
+const ACCENT_DEFAULT = ACCENT_RED;
 const GUI_LIGHT = 'light';
 const GUI_DARK = 'dark';
 const GUI_MAP = {
-  [GUI_LIGHT]: _gui_light__WEBPACK_IMPORTED_MODULE_7__,
-  [GUI_DARK]: _gui_dark__WEBPACK_IMPORTED_MODULE_8__
+  [GUI_LIGHT]: _gui_light__WEBPACK_IMPORTED_MODULE_5__,
+  [GUI_DARK]: _gui_dark__WEBPACK_IMPORTED_MODULE_6__
 };
 const GUI_DEFAULT = GUI_LIGHT;
 const BLOCKS_THREE = 'three';
@@ -1376,36 +1213,36 @@ const BLOCKS_DARK = 'dark';
 const BLOCKS_HIGH_CONTRAST = 'high-contrast';
 const BLOCKS_CUSTOM = 'custom';
 const BLOCKS_DEFAULT = BLOCKS_THREE;
-const defaultBlockColors = _blocks_three__WEBPACK_IMPORTED_MODULE_9__["blockColors"];
+const defaultBlockColors = _blocks_three__WEBPACK_IMPORTED_MODULE_7__["blockColors"];
 const BLOCKS_MAP = {
   [BLOCKS_THREE]: {
     blocksMediaFolder: 'blocks-media/default',
-    colors: _blocks_three__WEBPACK_IMPORTED_MODULE_9__["blockColors"],
-    extensions: _blocks_three__WEBPACK_IMPORTED_MODULE_9__["extensions"],
+    colors: _blocks_three__WEBPACK_IMPORTED_MODULE_7__["blockColors"],
+    extensions: _blocks_three__WEBPACK_IMPORTED_MODULE_7__["extensions"],
     customExtensionColors: {},
     useForStage: true
   },
   [BLOCKS_HIGH_CONTRAST]: {
     blocksMediaFolder: 'blocks-media/high-contrast',
-    colors: lodash_defaultsdeep__WEBPACK_IMPORTED_MODULE_0___default()({}, _blocks_high_contrast__WEBPACK_IMPORTED_MODULE_10__["blockColors"], defaultBlockColors),
-    extensions: _blocks_high_contrast__WEBPACK_IMPORTED_MODULE_10__["extensions"],
-    customExtensionColors: _blocks_high_contrast__WEBPACK_IMPORTED_MODULE_10__["customExtensionColors"],
+    colors: lodash_defaultsdeep__WEBPACK_IMPORTED_MODULE_0___default()({}, _blocks_high_contrast__WEBPACK_IMPORTED_MODULE_8__["blockColors"], defaultBlockColors),
+    extensions: _blocks_high_contrast__WEBPACK_IMPORTED_MODULE_8__["extensions"],
+    customExtensionColors: _blocks_high_contrast__WEBPACK_IMPORTED_MODULE_8__["customExtensionColors"],
     useForStage: true
   },
   [BLOCKS_DARK]: {
     blocksMediaFolder: 'blocks-media/default',
-    colors: lodash_defaultsdeep__WEBPACK_IMPORTED_MODULE_0___default()({}, _blocks_dark__WEBPACK_IMPORTED_MODULE_11__["blockColors"], defaultBlockColors),
-    extensions: _blocks_dark__WEBPACK_IMPORTED_MODULE_11__["extensions"],
-    customExtensionColors: _blocks_dark__WEBPACK_IMPORTED_MODULE_11__["customExtensionColors"],
+    colors: lodash_defaultsdeep__WEBPACK_IMPORTED_MODULE_0___default()({}, _blocks_dark__WEBPACK_IMPORTED_MODULE_9__["blockColors"], defaultBlockColors),
+    extensions: _blocks_dark__WEBPACK_IMPORTED_MODULE_9__["extensions"],
+    customExtensionColors: _blocks_dark__WEBPACK_IMPORTED_MODULE_9__["customExtensionColors"],
     useForStage: false
   },
   [BLOCKS_CUSTOM]: {
     // to be filled by editor-theme3 addon
     blocksMediaFolder: 'blocks-media/default',
-    colors: _blocks_three__WEBPACK_IMPORTED_MODULE_9__["blockColors"],
+    colors: _blocks_three__WEBPACK_IMPORTED_MODULE_7__["blockColors"],
     extensions: {},
     customExtensionColors: {},
-    useForStage: true
+    useForStage: false
   }
 };
 let themeObjectsCreated = 0;
@@ -1415,7 +1252,7 @@ class Theme {
     /** @readonly */
     this.id = ++themeObjectsCreated;
     /** @readonly */
-    this.accent = Object.prototype.hasOwnProperty.call(ACCENT_MAP, accent) || Object.prototype.hasOwnProperty.call(accent, 'primaryColor') ? accent : ACCENT_DEFAULT;
+    this.accent = Object.prototype.hasOwnProperty.call(ACCENT_MAP, accent) ? accent : ACCENT_DEFAULT;
     /** @readonly */
     this.gui = Object.prototype.hasOwnProperty.call(GUI_MAP, gui) ? gui : GUI_DEFAULT;
     /** @readonly */
@@ -1435,10 +1272,10 @@ class Theme {
     return BLOCKS_MAP[this.blocks].blocksMediaFolder;
   }
   getGuiColors() {
-    return lodash_defaultsdeep__WEBPACK_IMPORTED_MODULE_0___default()({}, Object.hasOwn(this.accent, 'primaryColor') ? ACCENT_MAP[ACCENT_CUSTOM].getGuiColors(this.accent.primaryColor, this.accent.secondaryColor, this.accent.tertiaryColor, this.accent.gradient) : ACCENT_MAP[this.accent].guiColors, GUI_MAP[this.gui].guiColors, _gui_light__WEBPACK_IMPORTED_MODULE_7__["guiColors"]);
+    return lodash_defaultsdeep__WEBPACK_IMPORTED_MODULE_0___default()({}, ACCENT_MAP[this.accent].guiColors, GUI_MAP[this.gui].guiColors, _gui_light__WEBPACK_IMPORTED_MODULE_5__["guiColors"]);
   }
   getBlockColors() {
-    return lodash_defaultsdeep__WEBPACK_IMPORTED_MODULE_0___default()({}, Object.hasOwn(this.accent, 'primaryColor') ? ACCENT_MAP[ACCENT_CUSTOM].getBlockColors(this.accent.primaryColor, this.accent.secondaryColor) : ACCENT_MAP[this.accent].blockColors, GUI_MAP[this.gui].blockColors, BLOCKS_MAP[this.blocks].colors);
+    return lodash_defaultsdeep__WEBPACK_IMPORTED_MODULE_0___default()({}, ACCENT_MAP[this.accent].blockColors, GUI_MAP[this.gui].blockColors, BLOCKS_MAP[this.blocks].colors);
   }
   getExtensions() {
     return BLOCKS_MAP[this.blocks].extensions;
@@ -1550,7 +1387,8 @@ const persistTheme = theme => {
   if (theme.gui !== systemPreferences.gui) {
     nonDefaultSettings.gui = theme.gui;
   }
-  if (theme.blocks !== systemPreferences.blocks) {
+  // custom blocks are managed by addon at runtime, don't save here
+  if (theme.blocks !== systemPreferences.blocks && theme.blocks !== ___WEBPACK_IMPORTED_MODULE_0__["BLOCKS_CUSTOM"]) {
     nonDefaultSettings.blocks = theme.blocks;
   }
   if (Object.keys(nonDefaultSettings).length === 0) {
@@ -1741,7 +1579,7 @@ const render = children => {
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/postcss-loader/src??postcss!./credits.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/playground/credits/credits.css");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--5-1!../../../node_modules/postcss-loader/src??postcss!./credits.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/playground/credits/credits.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -1843,22 +1681,16 @@ const Credits = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.
   className: _credits_css__WEBPACK_IMPORTED_MODULE_3___default.a.headerContainer
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
   className: _credits_css__WEBPACK_IMPORTED_MODULE_3___default.a.headerText
-}, _lib_brand__WEBPACK_IMPORTED_MODULE_4__["APP_NAME"], " Credits")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "The ", _lib_brand__WEBPACK_IMPORTED_MODULE_4__["APP_NAME"], " project is made possible by the work of many volunteers.")), _lib_brand__WEBPACK_IMPORTED_MODULE_4__["APP_NAME"] !== 'NitroBolt' &&
+}, _lib_brand__WEBPACK_IMPORTED_MODULE_4__["APP_NAME"], " Credits")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "The ", _lib_brand__WEBPACK_IMPORTED_MODULE_4__["APP_NAME"], " project is made possible by the work of many volunteers.")), _lib_brand__WEBPACK_IMPORTED_MODULE_4__["APP_NAME"] !== 'TurboWarp' &&
 /*#__PURE__*/
 // Be kind and considerate. Don't remove this :)
-react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "NitroBolt"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, _lib_brand__WEBPACK_IMPORTED_MODULE_4__["APP_NAME"], " is based on ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-  href: "https://github.com/Nitro-Bolt"
-}, "NitroBolt"), ".")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "TurboWarp"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "NitroBolt is based on ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "TurboWarp"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, _lib_brand__WEBPACK_IMPORTED_MODULE_4__["APP_NAME"], " is based on ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
   href: "https://turbowarp.org/"
-}, "TurboWarp"), "."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-  href: "https://github.com/sponsors/GarboMuffin"
-}, "Donate to support TurboWarp"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Scratch"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "TurboWarp is based on the work of the ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+}, "TurboWarp"), ".")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Scratch"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, _lib_brand__WEBPACK_IMPORTED_MODULE_4__["APP_NAME"], " is based on the work of the ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
   href: "https://scratch.mit.edu/credits"
 }, "Scratch contributors"), " but is not endorsed by Scratch in any way."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
   href: "https://scratch.mit.edu/donate"
-}, "Donate to support Scratch"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "NitroBolt Team"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(UserList, {
-  users: _users__WEBPACK_IMPORTED_MODULE_7__["default"].team
-})), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Turbowarp Contributors"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(UserList, {
+}, "Donate to support Scratch."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Contributors"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(UserList, {
   users: _users__WEBPACK_IMPORTED_MODULE_7__["default"].contributors
 })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Addons"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(UserList, {
   users: _users__WEBPACK_IMPORTED_MODULE_7__["default"].addonDevelopers
@@ -1867,7 +1699,7 @@ react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, /*#_
 })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Documentation"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(UserList, {
   users: _users__WEBPACK_IMPORTED_MODULE_7__["default"].docs
 })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Translators"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "More than 100 people have helped translate ", _lib_brand__WEBPACK_IMPORTED_MODULE_4__["APP_NAME"], " and its addons into many languages \u2014 far more than we could hope to list here.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", null, "Individual contributors are listed in no particular order. The order is randomized each visit."))));
-Object(_app_target__WEBPACK_IMPORTED_MODULE_2__["default"])(/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Credits, null));
+Object(_app_target__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Credits, null));
 
 /***/ }),
 
@@ -1891,56 +1723,21 @@ const shuffle = list => {
 };
 const fromHardcoded = _ref => {
   let {
-    github,
     userID = '0',
     username
   } = _ref;
   const result = {
-    image: github ? "https://avatars.githubusercontent.com/u/".concat(userID) : "https://trampoline.turbowarp.org/avatars/".concat(userID),
+    image: "https://trampoline.turbowarp.org/avatars/".concat(userID),
     text: username
   };
   if (username && userID !== '0') {
-    result.href = github ? "https://github.com/".concat(username, "/") : "https://scratch.mit.edu/users/".concat(username, "/");
+    result.href = "https://scratch.mit.edu/users/".concat(username, "/");
   }
   return result;
 };
 
 // The lists below are in no particular order.
 
-const team = [{
-  userID: '41219524',
-  username: 'CubesterYT'
-}, {
-  userID: '64691048',
-  username: 'CST1229'
-}, {
-  userID: '128887584',
-  username: 'FurryR'
-}, {
-  userID: '161761456',
-  username: 'lordcat__'
-}, {
-  userID: '138703180',
-  username: 'ddededodediamante'
-}, {
-  userID: '150145748',
-  username: 'Penthusiast'
-}, {
-  userID: '54392956',
-  username: 'fath11'
-}, {
-  userID: '55189061',
-  username: 'insanetaco2000'
-}, {
-  userID: '139575624',
-  username: 'breakfast_for_dinner'
-}, {
-  userID: '60627927',
-  username: 'jwklongYT'
-}, {
-  userID: '53190566',
-  username: 'Code_Magician'
-}].map(fromHardcoded);
 const contributors = [{
   userID: '41219524',
   username: 'CubesterYT'
@@ -1948,7 +1745,6 @@ const contributors = [{
   userID: '64691048',
   username: 'CST1229'
 }, {
-  userID: '128887584',
   username: 'FurryR'
 }, {
   userID: '17340565',
@@ -1963,7 +1759,6 @@ const contributors = [{
   userID: '9636514',
   username: 'Tacodiva7729'
 }, {
-  userID: '141930175',
   username: 'SimonShiki'
 }, {
   userID: '34824813',
@@ -2061,12 +1856,9 @@ const extensionDevelopers = [{
   userID: '17235330',
   username: 'aleb2005'
 }, {
-  userID: '129742989',
-  username: 'BludIsAnLemon'
-}, {
   username: 'BlueDome77'
 }, {
-  username: 'clay-rip'
+  username: 'ClaytonTDM'
 }, {
   userID: '37070511',
   username: 'cs2627883'
@@ -2080,13 +1872,7 @@ const extensionDevelopers = [{
   userID: '33988895',
   username: 'D-ScratchNinja'
 }, {
-  userID: '20632822',
-  username: 'dogeiscut'
-}, {
   username: 'DT'
-}, {
-  userID: '54392956',
-  username: 'Fath11'
 }, {
   userID: '1882674',
   username: 'griffpatch'
@@ -2097,35 +1883,18 @@ const extensionDevelopers = [{
   userID: '12498592',
   username: 'LilyMakesThings'
 }, {
-  userID: '29571977',
-  username: 'man-o-valor'
-}, {
   username: 'MikeDEV'
-}, {
-  userID: '74246431',
-  username: '0znzw'
-}, {
-  userID: '62325737',
-  username: 'mybearworld'
 }, {
   userID: '62950341',
   username: 'NamelessCat'
-}, {
-  username: 'NishiOwO'
 }, {
   username: 'NOname-awa'
 }, {
   userID: '26959223',
   username: 'pinksheep2917'
 }, {
-  username: 'Pen-Group'
-}, {
   username: 'pumpkinhasapatch'
 }, {
-  userID: '126715567',
-  username: 'PwLDev'
-}, {
-  userID: '139929771',
   username: 'qxsck'
 }, {
   userID: '29118689',
@@ -2143,14 +1912,10 @@ const extensionDevelopers = [{
   userID: '103496265',
   username: 'shreder95ua'
 }, {
-  userID: '72467731',
   username: 'Skyhigh173'
 }, {
   userID: '52066199',
   username: 'softed'
-}, {
-  userID: '166646203',
-  username: 'Staevski_G'
 }, {
   username: 'TheShovel'
 }, {
@@ -2167,9 +1932,6 @@ const extensionDevelopers = [{
 }, {
   userID: '3318598',
   username: 'plant2014'
-}, {
-  userID: '128778351',
-  username: 'XmerOriginals'
 }, {
   username: 'ZXMushroom63'
 }].map(fromHardcoded);
@@ -2201,7 +1963,6 @@ const docs = [{
   username: 'Naleksuh'
 }].map(fromHardcoded);
 /* harmony default export */ __webpack_exports__["default"] = ({
-  team: shuffle(team),
   contributors: shuffle(contributors),
   addonDevelopers: shuffle(addonDevelopers),
   extensionDevelopers: shuffle(extensionDevelopers),
