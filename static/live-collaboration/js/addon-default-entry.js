@@ -69,7 +69,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "/* Imported by other addons */\n\n.sa-block-color {\n  --sa-block-colored-background: var(--sa-block-background-primary);\n  --sa-block-colored-background-secondary: var(--sa-block-field-background);\n  --sa-block-bright-background: var(--sa-block-background-primary);\n  --sa-block-text: var(--editorTheme3-blockText, white);\n  --sa-block-gray-text: white;\n  --sa-block-colored-text: var(--sa-block-background-primary);\n  --sa-block-text-on-bright-background: var(--editorTheme3-blockText, white);\n  --sa-block-input-color: var(--editorTheme3-inputColor, white);\n  --sa-block-input-text: var(--editorTheme3-inputColor-text, #575e75);\n}\n\n.sa-block-color-motion {\n  --sa-block-background-primary: var(--editorTheme3-motion-primary, #4c97ff);\n  --sa-block-background-secondary: var(--editorTheme3-motion-secondary, #4280d7);\n  --sa-block-background-tertiary: var(--editorTheme3-motion-tertiary, #3373cc);\n  --sa-block-field-background: var(--editorTheme3-motion-field, #3373cc);\n}\n\n.sa-block-color-looks {\n  --sa-block-background-primary: var(--editorTheme3-looks-primary, #9966ff);\n  --sa-block-background-secondary: var(--editorTheme3-looks-secondary, #855cd6);\n  --sa-block-background-tertiary: var(--editorTheme3-looks-tertiary, #774dcb);\n  --sa-block-field-background: var(--editorTheme3-looks-field, #774dcb);\n}\n\n.sa-block-color-sounds {\n  --sa-block-background-primary: var(--editorTheme3-sounds-primary, #cf63cf);\n  --sa-block-background-secondary: var(--editorTheme3-sounds-secondary, #c94fc9);\n  --sa-block-background-tertiary: var(--editorTheme3-sounds-tertiary, #bd42bd);\n  --sa-block-field-background: var(--editorTheme3-sounds-field, #bd42bd);\n}\n\n.sa-block-color-events {\n  --sa-block-background-primary: var(--editorTheme3-event-primary, #ffbf00);\n  --sa-block-background-secondary: var(--editorTheme3-event-secondary, #e6ac00);\n  --sa-block-background-tertiary: var(--editorTheme3-event-tertiary, #cc9900);\n  --sa-block-field-background: var(--editorTheme3-event-field, #cc9900);\n}\n\n.sa-block-color-control {\n  --sa-block-background-primary: var(--editorTheme3-control-primary, #ffab19);\n  --sa-block-background-secondary: var(--editorTheme3-control-secondary, #ec9c13);\n  --sa-block-background-tertiary: var(--editorTheme3-control-tertiary, #cf8b17);\n  --sa-block-field-background: var(--editorTheme3-control-field, #cf8b17);\n}\n\n.sa-block-color-sensing {\n  --sa-block-background-primary: var(--editorTheme3-sensing-primary, #5cb1d6);\n  --sa-block-background-secondary: var(--editorTheme3-sensing-secondary, #47a8d1);\n  --sa-block-background-tertiary: var(--editorTheme3-sensing-tertiary, #2e8eb8);\n  --sa-block-field-background: var(--editorTheme3-sensing-field, #2e8eb8);\n}\n\n.sa-block-color-operators {\n  --sa-block-background-primary: var(--editorTheme3-operators-primary, #59c059);\n  --sa-block-background-secondary: var(--editorTheme3-operators-secondary, #46b946);\n  --sa-block-background-tertiary: var(--editorTheme3-operators-tertiary, #389438);\n  --sa-block-field-background: var(--editorTheme3-operators-field, #389438);\n}\n\n.sa-block-color-data {\n  --sa-block-background-primary: var(--editorTheme3-data-primary, #ff8c1a);\n  --sa-block-background-secondary: var(--editorTheme3-data-secondary, #ff8000);\n  --sa-block-background-tertiary: var(--editorTheme3-data-tertiary, #db6e00);\n  --sa-block-field-background: var(--editorTheme3-data-field, #db6e00);\n}\n\n.sa-block-color-data-lists,\n.sa-block-color-list {\n  --sa-block-background-primary: var(--editorTheme3-data_lists-primary, #ff661a);\n  --sa-block-background-secondary: var(--editorTheme3-data_lists-secondary, #ff5500);\n  --sa-block-background-tertiary: var(--editorTheme3-data_lists-tertiary, #e64d00);\n  --sa-block-field-background: var(--editorTheme3-data_lists-field, #e64d00);\n}\n\n.sa-block-color-more,\n.sa-block-color-null {\n  --sa-block-background-primary: var(--editorTheme3-more-primary, #ff6680);\n  --sa-block-background-secondary: var(--editorTheme3-more-secondary, #ff4d6a);\n  --sa-block-background-tertiary: var(--editorTheme3-more-tertiary, #ff3355);\n  --sa-block-field-background: var(--editorTheme3-more-field, #ff3355);\n}\n\n.sa-block-color-pen {\n  --sa-block-background-primary: var(--editorTheme3-pen-primary, #0fbd8c);\n  --sa-block-background-secondary: var(--editorTheme3-pen-secondary, #0da57a);\n  --sa-block-background-tertiary: var(--editorTheme3-pen-tertiary, #0b8e69);\n  --sa-block-field-background: var(--editorTheme3-pen-field, #0b8e69);\n}\n\n.sa-block-color-addon-custom-block {\n  --sa-block-background-primary: var(--editorTheme3-addons-primary, #29beb8);\n  --sa-block-background-secondary: var(--editorTheme3-addons-secondary, #3aa8a4);\n  --sa-block-background-tertiary: var(--editorTheme3-addons-tertiary, #3aa8a4);\n  --sa-block-field-background: var(--editorTheme3-addons-field, #3aa8a4);\n}\n", ""]);
+exports.push([module.i, "/* Imported by other addons */\n\n.sa-block-color {\n  --sa-block-colored-background: var(--sa-block-background-primary);\n  --sa-block-colored-background-secondary: var(--sa-block-field-background);\n  --sa-block-bright-background: var(--sa-block-background-primary);\n  --sa-block-text: var(--editorTheme3-blockText, white);\n  --sa-block-gray-text: white;\n  --sa-block-colored-text: var(--sa-block-background-primary);\n  --sa-block-text-on-bright-background: var(--editorTheme3-blockText, white);\n  --sa-block-input-color: var(--editorTheme3-inputColor, white);\n  --sa-block-input-text: var(--editorTheme3-inputColor-text, #575e75);\n}\n\n.sa-block-color-motion {\n  --sa-block-background-primary: var(--editorTheme3-motion-primary, #4c97ff);\n  --sa-block-background-secondary: var(--editorTheme3-motion-secondary, #4280d7);\n  --sa-block-background-tertiary: var(--editorTheme3-motion-tertiary, #3373cc);\n  --sa-block-field-background: var(--editorTheme3-motion-field, #3373cc);\n}\n\n.sa-block-color-looks {\n  --sa-block-background-primary: var(--editorTheme3-looks-primary, #9966ff);\n  --sa-block-background-secondary: var(--editorTheme3-looks-secondary, #855cd6);\n  --sa-block-background-tertiary: var(--editorTheme3-looks-tertiary, #774dcb);\n  --sa-block-field-background: var(--editorTheme3-looks-field, #774dcb);\n}\n\n.sa-block-color-sounds {\n  --sa-block-background-primary: var(--editorTheme3-sounds-primary, #cf63cf);\n  --sa-block-background-secondary: var(--editorTheme3-sounds-secondary, #c94fc9);\n  --sa-block-background-tertiary: var(--editorTheme3-sounds-tertiary, #bd42bd);\n  --sa-block-field-background: var(--editorTheme3-sounds-field, #bd42bd);\n}\n\n.sa-block-color-assets {\n  --sa-block-background-primary: var(--editorTheme3-assets-primary, #FCB103);\n  --sa-block-background-secondary: var(--editorTheme3-assets-secondary, #DB9A37);\n  --sa-block-background-tertiary: var(--editorTheme3-assets-tertiary, #DB8937);\n  --sa-block-field-background: var(--editorTheme3-assets-field, #DB8937);\n}\n\n.sa-block-color-events {\n  --sa-block-background-primary: var(--editorTheme3-event-primary, #ffbf00);\n  --sa-block-background-secondary: var(--editorTheme3-event-secondary, #e6ac00);\n  --sa-block-background-tertiary: var(--editorTheme3-event-tertiary, #cc9900);\n  --sa-block-field-background: var(--editorTheme3-event-field, #cc9900);\n}\n\n.sa-block-color-control {\n  --sa-block-background-primary: var(--editorTheme3-control-primary, #ffab19);\n  --sa-block-background-secondary: var(--editorTheme3-control-secondary, #ec9c13);\n  --sa-block-background-tertiary: var(--editorTheme3-control-tertiary, #cf8b17);\n  --sa-block-field-background: var(--editorTheme3-control-field, #cf8b17);\n}\n\n.sa-block-color-sensing {\n  --sa-block-background-primary: var(--editorTheme3-sensing-primary, #5cb1d6);\n  --sa-block-background-secondary: var(--editorTheme3-sensing-secondary, #47a8d1);\n  --sa-block-background-tertiary: var(--editorTheme3-sensing-tertiary, #2e8eb8);\n  --sa-block-field-background: var(--editorTheme3-sensing-field, #2e8eb8);\n}\n\n.sa-block-color-operators {\n  --sa-block-background-primary: var(--editorTheme3-operators-primary, #59c059);\n  --sa-block-background-secondary: var(--editorTheme3-operators-secondary, #46b946);\n  --sa-block-background-tertiary: var(--editorTheme3-operators-tertiary, #389438);\n  --sa-block-field-background: var(--editorTheme3-operators-field, #389438);\n}\n\n.sa-block-color-data {\n  --sa-block-background-primary: var(--editorTheme3-data-primary, #ff8c1a);\n  --sa-block-background-secondary: var(--editorTheme3-data-secondary, #ff8000);\n  --sa-block-background-tertiary: var(--editorTheme3-data-tertiary, #db6e00);\n  --sa-block-field-background: var(--editorTheme3-data-field, #db6e00);\n}\n\n.sa-block-color-data-lists,\n.sa-block-color-list {\n  --sa-block-background-primary: var(--editorTheme3-data_lists-primary, #ff661a);\n  --sa-block-background-secondary: var(--editorTheme3-data_lists-secondary, #ff5500);\n  --sa-block-background-tertiary: var(--editorTheme3-data_lists-tertiary, #e64d00);\n  --sa-block-field-background: var(--editorTheme3-data_lists-field, #e64d00);\n}\n\n.sa-block-color-more,\n.sa-block-color-null {\n  --sa-block-background-primary: var(--editorTheme3-more-primary, #ff6680);\n  --sa-block-background-secondary: var(--editorTheme3-more-secondary, #ff4d6a);\n  --sa-block-background-tertiary: var(--editorTheme3-more-tertiary, #ff3355);\n  --sa-block-field-background: var(--editorTheme3-more-field, #ff3355);\n}\n\n.sa-block-color-pen {\n  --sa-block-background-primary: var(--editorTheme3-pen-primary, #0fbd8c);\n  --sa-block-background-secondary: var(--editorTheme3-pen-secondary, #0da57a);\n  --sa-block-background-tertiary: var(--editorTheme3-pen-tertiary, #0b8e69);\n  --sa-block-field-background: var(--editorTheme3-pen-field, #0b8e69);\n}\n\n.sa-block-color-addon-custom-block {\n  --sa-block-background-primary: var(--editorTheme3-addons-primary, #29beb8);\n  --sa-block-background-secondary: var(--editorTheme3-addons-secondary, #3aa8a4);\n  --sa-block-background-tertiary: var(--editorTheme3-addons-tertiary, #3aa8a4);\n  --sa-block-field-background: var(--editorTheme3-addons-field, #3aa8a4);\n}\n", ""]);
 
 // exports
 
@@ -168,38 +168,6 @@ exports.push([module.i, ".sa-stage-color-picker-picking [class^=\"stage_color-pi
 
 // exports
 
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./src/addons/addons/reorder-custom-inputs/arrows.css":
-/*!**************************************************************************************!*\
-  !*** ./node_modules/css-loader!./src/addons/addons/reorder-custom-inputs/arrows.css ***!
-  \**************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".blocklyTextShiftArrow {\n  position: absolute;\n  top: -50px;\n  left: 50%;\n  margin-left: -12.5px;\n  cursor: pointer;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/editor-devtools/icon--close.svg":
-/*!*************************************************************************************************!*\
-  !*** ./node_modules/url-loader/dist/cjs.js!./src/addons/addons/editor-devtools/icon--close.svg ***!
-  \*************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3LjQ4IDcuNDgiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6MnB4O308L3N0eWxlPjwvZGVmcz48dGl0bGU+aWNvbi0tYWRkPC90aXRsZT48bGluZSBjbGFzcz0iY2xzLTEiIHgxPSIzLjc0IiB5MT0iNi40OCIgeDI9IjMuNzQiIHkyPSIxIi8+PGxpbmUgY2xhc3M9ImNscy0xIiB4MT0iMSIgeTE9IjMuNzQiIHgyPSI2LjQ4IiB5Mj0iMy43NCIvPjwvc3ZnPg==");
 
 /***/ }),
 
@@ -512,816 +480,6 @@ __webpack_require__.r(__webpack_exports__);
   addon.self.addEventListener("reenabled", update);
   update();
   _module_js__WEBPACK_IMPORTED_MODULE_0__["load"](addon);
-});
-
-/***/ }),
-
-/***/ "./src/addons/addons/block-switching/_runtime_entry.js":
-/*!*************************************************************!*\
-  !*** ./src/addons/addons/block-switching/_runtime_entry.js ***!
-  \*************************************************************/
-/*! exports provided: resources */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "resources", function() { return resources; });
-/* harmony import */ var _userscript_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./userscript.js */ "./src/addons/addons/block-switching/userscript.js");
-/* generated by pull.js */
-
-const resources = {
-  "userscript.js": _userscript_js__WEBPACK_IMPORTED_MODULE_0__["default"]
-};
-
-/***/ }),
-
-/***/ "./src/addons/addons/block-switching/userscript.js":
-/*!*********************************************************!*\
-  !*** ./src/addons/addons/block-switching/userscript.js ***!
-  \*********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
-  let {
-    addon,
-    console,
-    msg
-  } = _ref;
-  const ScratchBlocks = await addon.tab.traps.getBlockly();
-  const vm = addon.tab.traps.vm;
-  let blockSwitches = {};
-  let procedureSwitches = {};
-  const noopSwitch = {
-    isNoop: true
-  };
-  const randomColor = () => {
-    const num = Math.floor(Math.random() * 256 * 256 * 256);
-    return "#".concat(num.toString(16).padStart(6, "0"));
-  };
-  const buildSwitches = () => {
-    blockSwitches = {};
-    procedureSwitches = {};
-    if (addon.settings.get("motion")) {
-      blockSwitches["motion_turnright"] = [noopSwitch, {
-        opcode: "motion_turnleft"
-      }];
-      blockSwitches["motion_turnleft"] = [{
-        opcode: "motion_turnright"
-      }, noopSwitch];
-      blockSwitches["motion_setx"] = [noopSwitch, {
-        opcode: "motion_changexby",
-        remapInputName: {
-          X: "DX"
-        }
-      }, {
-        opcode: "motion_sety",
-        remapInputName: {
-          X: "Y"
-        }
-      }, {
-        opcode: "motion_changeyby",
-        remapInputName: {
-          X: "DY"
-        }
-      }];
-      blockSwitches["motion_changexby"] = [{
-        opcode: "motion_setx",
-        remapInputName: {
-          DX: "X"
-        }
-      }, noopSwitch, {
-        opcode: "motion_sety",
-        remapInputName: {
-          DX: "Y"
-        }
-      }, {
-        opcode: "motion_changeyby",
-        remapInputName: {
-          DX: "DY"
-        }
-      }];
-      blockSwitches["motion_sety"] = [{
-        opcode: "motion_setx",
-        remapInputName: {
-          Y: "X"
-        }
-      }, {
-        opcode: "motion_changexby",
-        remapInputName: {
-          Y: "DX"
-        }
-      }, noopSwitch, {
-        opcode: "motion_changeyby",
-        remapInputName: {
-          Y: "DY"
-        }
-      }];
-      blockSwitches["motion_changeyby"] = [{
-        opcode: "motion_setx",
-        remapInputName: {
-          DY: "X"
-        }
-      }, {
-        opcode: "motion_changexby",
-        remapInputName: {
-          DY: "DX"
-        }
-      }, {
-        opcode: "motion_sety",
-        remapInputName: {
-          DY: "Y"
-        }
-      }, noopSwitch];
-      blockSwitches["motion_xposition"] = [noopSwitch, {
-        opcode: "motion_yposition"
-      }];
-      blockSwitches["motion_yposition"] = [{
-        opcode: "motion_xposition"
-      }, noopSwitch];
-    }
-    if (addon.settings.get("looks")) {
-      blockSwitches["looks_seteffectto"] = [noopSwitch, {
-        opcode: "looks_changeeffectby",
-        remapInputName: {
-          VALUE: "CHANGE"
-        }
-      }];
-      blockSwitches["looks_changeeffectby"] = [{
-        opcode: "looks_seteffectto",
-        remapInputName: {
-          CHANGE: "VALUE"
-        }
-      }, noopSwitch];
-      blockSwitches["looks_setsizeto"] = [noopSwitch, {
-        opcode: "looks_changesizeby",
-        remapInputName: {
-          SIZE: "CHANGE"
-        }
-      }];
-      blockSwitches["looks_changesizeby"] = [{
-        opcode: "looks_setsizeto",
-        remapInputName: {
-          CHANGE: "SIZE"
-        }
-      }, noopSwitch];
-      blockSwitches["looks_costumenumbername"] = [noopSwitch, {
-        opcode: "looks_backdropnumbername"
-      }];
-      blockSwitches["looks_backdropnumbername"] = [{
-        opcode: "looks_costumenumbername"
-      }, noopSwitch];
-      blockSwitches["looks_show"] = [noopSwitch, {
-        opcode: "looks_hide"
-      }];
-      blockSwitches["looks_hide"] = [{
-        opcode: "looks_show"
-      }, noopSwitch];
-      blockSwitches["looks_nextcostume"] = [noopSwitch, {
-        opcode: "looks_nextbackdrop"
-      }];
-      blockSwitches["looks_nextbackdrop"] = [{
-        opcode: "looks_nextcostume"
-      }, noopSwitch];
-      blockSwitches["looks_say"] = [noopSwitch, {
-        opcode: "looks_sayforsecs",
-        createInputs: {
-          SECS: {
-            shadowType: "math_number",
-            value: "2"
-          }
-        }
-      }, {
-        opcode: "looks_think"
-      }, {
-        opcode: "looks_thinkforsecs",
-        createInputs: {
-          SECS: {
-            shadowType: "math_number",
-            value: "2"
-          }
-        }
-      }];
-      blockSwitches["looks_think"] = [{
-        opcode: "looks_say"
-      }, {
-        opcode: "looks_sayforsecs",
-        createInputs: {
-          SECS: {
-            shadowType: "math_number",
-            value: "2"
-          }
-        }
-      }, noopSwitch, {
-        opcode: "looks_thinkforsecs",
-        createInputs: {
-          SECS: {
-            shadowType: "math_number",
-            value: "2"
-          }
-        }
-      }];
-      blockSwitches["looks_sayforsecs"] = [{
-        opcode: "looks_say",
-        splitInputs: ["SECS"]
-      }, {
-        opcode: "looks_think",
-        splitInputs: ["SECS"]
-      }, noopSwitch, {
-        opcode: "looks_thinkforsecs"
-      }];
-      blockSwitches["looks_thinkforsecs"] = [{
-        opcode: "looks_say",
-        splitInputs: ["SECS"]
-      }, {
-        opcode: "looks_think",
-        splitInputs: ["SECS"]
-      }, {
-        opcode: "looks_sayforsecs"
-      }, noopSwitch];
-      blockSwitches["looks_switchbackdropto"] = [noopSwitch, {
-        opcode: "looks_switchbackdroptoandwait"
-      }];
-      blockSwitches["looks_switchbackdroptoandwait"] = [{
-        opcode: "looks_switchbackdropto"
-      }, noopSwitch];
-      blockSwitches["looks_gotofrontback"] = [noopSwitch, {
-        opcode: "looks_goforwardbackwardlayers",
-        remapInputName: {
-          FRONT_BACK: "FORWARD_BACKWARD"
-        },
-        mapFieldValues: {
-          FRONT_BACK: {
-            front: "forward",
-            back: "backward"
-          }
-        },
-        createInputs: {
-          NUM: {
-            shadowType: "math_integer",
-            value: "1"
-          }
-        }
-      }];
-      blockSwitches["looks_goforwardbackwardlayers"] = [{
-        opcode: "looks_gotofrontback",
-        splitInputs: ["NUM"],
-        remapInputName: {
-          FORWARD_BACKWARD: "FRONT_BACK"
-        },
-        mapFieldValues: {
-          FORWARD_BACKWARD: {
-            forward: "front",
-            backward: "back"
-          }
-        }
-      }, noopSwitch];
-    }
-    if (addon.settings.get("sound")) {
-      blockSwitches["sound_play"] = [noopSwitch, {
-        opcode: "sound_playuntildone"
-      }];
-      blockSwitches["sound_playuntildone"] = [{
-        opcode: "sound_play"
-      }, noopSwitch];
-      blockSwitches["sound_seteffectto"] = [noopSwitch, {
-        opcode: "sound_changeeffectby"
-      }];
-      blockSwitches["sound_changeeffectby"] = [{
-        opcode: "sound_seteffectto"
-      }, noopSwitch];
-      blockSwitches["sound_setvolumeto"] = [noopSwitch, {
-        opcode: "sound_changevolumeby"
-      }];
-      blockSwitches["sound_changevolumeby"] = [{
-        opcode: "sound_setvolumeto"
-      }, noopSwitch];
-    }
-    if (addon.settings.get("event")) {
-      blockSwitches["event_broadcast"] = [noopSwitch, {
-        opcode: "event_broadcastandwait"
-      }];
-      blockSwitches["event_broadcastandwait"] = [{
-        opcode: "event_broadcast"
-      }, noopSwitch];
-    }
-    if (addon.settings.get("control")) {
-      blockSwitches["control_if"] = [noopSwitch, {
-        opcode: "control_if_else"
-      }];
-      blockSwitches["control_if_else"] = [{
-        opcode: "control_if",
-        splitInputs: ["SUBSTACK2"]
-      }, noopSwitch];
-      blockSwitches["control_repeat_until"] = [noopSwitch, {
-        opcode: "control_wait_until",
-        splitInputs: ["SUBSTACK"]
-      }, {
-        opcode: "control_forever",
-        splitInputs: ["CONDITION"]
-      }];
-      blockSwitches["control_forever"] = [{
-        opcode: "control_repeat_until"
-      }, noopSwitch];
-      blockSwitches["control_wait_until"] = [{
-        opcode: "control_repeat_until"
-      }, noopSwitch];
-    }
-    if (addon.settings.get("operator")) {
-      blockSwitches["operator_equals"] = [{
-        opcode: "operator_gt"
-      }, noopSwitch, {
-        opcode: "operator_lt"
-      }];
-      blockSwitches["operator_gt"] = [noopSwitch, {
-        opcode: "operator_equals"
-      }, {
-        opcode: "operator_lt"
-      }];
-      blockSwitches["operator_lt"] = [{
-        opcode: "operator_gt"
-      }, {
-        opcode: "operator_equals"
-      }, noopSwitch];
-      blockSwitches["operator_add"] = [noopSwitch, {
-        opcode: "operator_subtract"
-      }, {
-        opcode: "operator_multiply"
-      }, {
-        opcode: "operator_divide"
-      }, {
-        opcode: "operator_mod"
-      }];
-      blockSwitches["operator_subtract"] = [{
-        opcode: "operator_add"
-      }, noopSwitch, {
-        opcode: "operator_multiply"
-      }, {
-        opcode: "operator_divide"
-      }, {
-        opcode: "operator_mod"
-      }];
-      blockSwitches["operator_multiply"] = [{
-        opcode: "operator_add"
-      }, {
-        opcode: "operator_subtract"
-      }, noopSwitch, {
-        opcode: "operator_divide"
-      }, {
-        opcode: "operator_mod"
-      }];
-      blockSwitches["operator_divide"] = [{
-        opcode: "operator_add"
-      }, {
-        opcode: "operator_subtract"
-      }, {
-        opcode: "operator_multiply"
-      }, noopSwitch, {
-        opcode: "operator_mod"
-      }];
-      blockSwitches["operator_mod"] = [{
-        opcode: "operator_add"
-      }, {
-        opcode: "operator_subtract"
-      }, {
-        opcode: "operator_multiply"
-      }, {
-        opcode: "operator_divide"
-      }, noopSwitch];
-      blockSwitches["operator_and"] = [noopSwitch, {
-        opcode: "operator_or"
-      }];
-      blockSwitches["operator_or"] = [{
-        opcode: "operator_and"
-      }, noopSwitch];
-    }
-    if (addon.settings.get("sensing")) {
-      blockSwitches["sensing_mousex"] = [noopSwitch, {
-        opcode: "sensing_mousey"
-      }];
-      blockSwitches["sensing_mousey"] = [{
-        opcode: "sensing_mousex"
-      }, noopSwitch];
-      blockSwitches["sensing_touchingcolor"] = [noopSwitch, {
-        opcode: "sensing_coloristouchingcolor",
-        createInputs: {
-          COLOR2: {
-            shadowType: "colour_picker",
-            value: randomColor
-          }
-        }
-      }];
-      blockSwitches["sensing_coloristouchingcolor"] = [{
-        opcode: "sensing_touchingcolor",
-        splitInputs: ["COLOR2"]
-      }, noopSwitch];
-    }
-    if (addon.settings.get("data")) {
-      blockSwitches["data_setvariableto"] = [noopSwitch, {
-        opcode: "data_changevariableby",
-        remapShadowType: {
-          VALUE: "math_number"
-        }
-      }];
-      blockSwitches["data_changevariableby"] = [{
-        opcode: "data_setvariableto",
-        remapShadowType: {
-          VALUE: "text"
-        }
-      }, noopSwitch];
-      blockSwitches["data_showvariable"] = [noopSwitch, {
-        opcode: "data_hidevariable"
-      }];
-      blockSwitches["data_hidevariable"] = [{
-        opcode: "data_showvariable"
-      }, noopSwitch];
-      blockSwitches["data_showlist"] = [noopSwitch, {
-        opcode: "data_hidelist"
-      }];
-      blockSwitches["data_hidelist"] = [{
-        opcode: "data_showlist"
-      }, noopSwitch];
-      blockSwitches["data_replaceitemoflist"] = [noopSwitch, {
-        opcode: "data_insertatlist"
-      }];
-      blockSwitches["data_insertatlist"] = [{
-        opcode: "data_replaceitemoflist"
-      }, noopSwitch];
-      blockSwitches["data_deleteoflist"] = [noopSwitch, {
-        opcode: "data_deletealloflist",
-        splitInputs: ["INDEX"]
-      }];
-      blockSwitches["data_deletealloflist"] = [{
-        opcode: "data_deleteoflist",
-        createInputs: {
-          INDEX: {
-            shadowType: "math_integer",
-            value: "1"
-          }
-        }
-      }, noopSwitch];
-    }
-    if (addon.settings.get("extension")) {
-      blockSwitches["pen_penDown"] = [noopSwitch, {
-        opcode: "pen_penUp"
-      }];
-      blockSwitches["pen_penUp"] = [{
-        opcode: "pen_penDown"
-      }, noopSwitch];
-      blockSwitches["pen_setPenColorParamTo"] = [noopSwitch, {
-        opcode: "pen_changePenColorParamBy"
-      }];
-      blockSwitches["pen_changePenColorParamBy"] = [{
-        opcode: "pen_setPenColorParamTo"
-      }, noopSwitch];
-      blockSwitches["pen_setPenHueToNumber"] = [noopSwitch, {
-        opcode: "pen_changePenHueBy"
-      }];
-      blockSwitches["pen_changePenHueBy"] = [{
-        opcode: "pen_setPenHueToNumber"
-      }, noopSwitch];
-      blockSwitches["pen_setPenShadeToNumber"] = [noopSwitch, {
-        opcode: "pen_changePenShadeBy"
-      }];
-      blockSwitches["pen_changePenShadeBy"] = [{
-        opcode: "pen_setPenShadeToNumber"
-      }, noopSwitch];
-      blockSwitches["pen_setPenSizeTo"] = [noopSwitch, {
-        opcode: "pen_changePenSizeBy"
-      }];
-      blockSwitches["pen_changePenSizeBy"] = [{
-        opcode: "pen_setPenSizeTo"
-      }, noopSwitch];
-      blockSwitches["music_setTempo"] = [noopSwitch, {
-        opcode: "music_changeTempo"
-      }];
-      blockSwitches["music_changeTempo"] = [{
-        opcode: "music_setTempo"
-      }, noopSwitch];
-    }
-    if (addon.settings.get("sa")) {
-      const logProc = "\u200B\u200Blog\u200B\u200B %s";
-      const warnProc = "\u200B\u200Bwarn\u200B\u200B %s";
-      const errorProc = "\u200B\u200Berror\u200B\u200B %s";
-      const logMessage = msg("debugger_log");
-      const warnMessage = msg("debugger_warn");
-      const errorMessage = msg("debugger_error");
-      const logSwitch = {
-        mutate: {
-          proccode: logProc
-        },
-        msg: logMessage
-      };
-      const warnSwitch = {
-        mutate: {
-          proccode: warnProc
-        },
-        msg: warnMessage
-      };
-      const errorSwitch = {
-        mutate: {
-          proccode: errorProc
-        },
-        msg: errorMessage
-      };
-      procedureSwitches[logProc] = [{
-        msg: logMessage,
-        isNoop: true
-      }, warnSwitch, errorSwitch];
-      procedureSwitches[warnProc] = [logSwitch, {
-        msg: warnMessage,
-        isNoop: true
-      }, errorSwitch];
-      procedureSwitches[errorProc] = [logSwitch, warnSwitch, {
-        msg: errorMessage,
-        isNoop: true
-      }];
-    }
-
-    // Switching for these is implemented by Scratch. We only define them here to optionally add a border.
-    // Because we don't implement the switching ourselves, this is not controlled by the data category option.
-    blockSwitches["data_variable"] = [];
-    blockSwitches["data_listcontents"] = [];
-  };
-  buildSwitches();
-  addon.settings.addEventListener("change", buildSwitches);
-
-  /**
-   * @param {*} workspace
-   * @param {Element} xmlBlock
-   */
-  const pasteBlockXML = (workspace, xmlBlock) => {
-    // Similar to https://github.com/scratchfoundation/scratch-blocks/blob/7575c9a0f2c267676569c4b102b76d77f35d9fd6/core/workspace_svg.js#L1020
-    // but without the collision checking.
-    const block = ScratchBlocks.Xml.domToBlock(xmlBlock, workspace);
-    const x = +xmlBlock.getAttribute("x");
-    const y = +xmlBlock.getAttribute("y");
-    // Don't need to handle RTL here
-    block.moveBy(x, y);
-    return block;
-  };
-
-  /**
-   * @param {string} shadowType The type of shadow eg. "math_number"
-   * @returns {string} The name of the shadow's inner field that contains the user-visible value
-   */
-  const getShadowFieldName = shadowType => {
-    // This is non-comprehensive.
-    if (shadowType === "text") {
-      return "TEXT";
-    }
-    if (shadowType === "colour_picker") {
-      return "COLOUR";
-    }
-    return "NUM";
-  };
-
-  /**
-   * @template T
-   * @param {T|()=>T} value
-   * @returns {T}
-   */
-  const callIfFunction = value => {
-    if (typeof value === "function") {
-      return value();
-    }
-    return value;
-  };
-  const menuCallbackFactory = (block, opcodeData) => () => {
-    if (opcodeData.isNoop) {
-      return;
-    }
-    if (opcodeData.fieldValue) {
-      block.setFieldValue(opcodeData.fieldValue, "VALUE");
-      return;
-    }
-    try {
-      ScratchBlocks.Events.setGroup(true);
-      const workspace = block.workspace;
-      const blocksToBringToForeground = [];
-      // Split inputs before we clone the block.
-      if (opcodeData.splitInputs) {
-        for (const inputName of opcodeData.splitInputs) {
-          const input = block.getInput(inputName);
-          if (!input) {
-            continue;
-          }
-          const connection = input.connection;
-          if (!connection) {
-            continue;
-          }
-          if (connection.isConnected()) {
-            const targetBlock = connection.targetBlock();
-            if (targetBlock.isShadow()) {
-              // Deleting shadows is handled later.
-            } else {
-              connection.disconnect();
-              blocksToBringToForeground.push(targetBlock);
-            }
-          }
-        }
-      }
-
-      // Make a copy of the block with the proper type set.
-      // It doesn't seem to be possible to change a Block's type after it's created, so we'll just make a new block instead.
-      const xml = ScratchBlocks.Xml.blockToDom(block);
-      // blockToDomWithXY's handling of RTL is strange, so we encode the position ourselves.
-      const position = block.getRelativeToSurfaceXY();
-      xml.setAttribute("x", position.x);
-      xml.setAttribute("y", position.y);
-      if (opcodeData.opcode) {
-        xml.setAttribute("type", opcodeData.opcode);
-      }
-      const parentBlock = block.getParent();
-      let parentConnection;
-      let blockConnectionType;
-      if (parentBlock) {
-        // If the block has a parent, find the parent -> child connection that will be reattached later.
-        const parentConnections = parentBlock.getConnections_();
-        parentConnection = parentConnections.find(c => c.targetConnection && c.targetConnection.sourceBlock_ === block);
-        // There's two types of connections from child -> parent. We need to figure out which one is used.
-        const blockConnections = block.getConnections_();
-        const blockToParentConnection = blockConnections.find(c => c.targetConnection && c.targetConnection.sourceBlock_ === parentBlock);
-        blockConnectionType = blockToParentConnection.type;
-      }
-
-      // Array.from creates a clone of the children list. This is important as we may remove
-      // children as we iterate.
-      for (const child of Array.from(xml.children)) {
-        const oldName = child.getAttribute("name");
-
-        // Any inputs that were supposed to be split that were not should be removed.
-        // (eg. shadow inputs)
-        if (opcodeData.splitInputs && opcodeData.splitInputs.includes(oldName)) {
-          xml.removeChild(child);
-          continue;
-        }
-        const newName = opcodeData.remapInputName && opcodeData.remapInputName[oldName];
-        if (newName) {
-          child.setAttribute("name", newName);
-        }
-        const newShadowType = opcodeData.remapShadowType && opcodeData.remapShadowType[oldName];
-        if (newShadowType) {
-          const valueNode = child.firstChild;
-          const fieldNode = valueNode.firstChild;
-          valueNode.setAttribute("type", newShadowType);
-          fieldNode.setAttribute("name", getShadowFieldName(newShadowType));
-        }
-        const fieldValueMap = opcodeData.mapFieldValues && opcodeData.mapFieldValues[oldName];
-        if (fieldValueMap && child.tagName === "FIELD") {
-          const oldValue = child.innerText;
-          const newValue = fieldValueMap[oldValue];
-          if (typeof newValue === "string") {
-            child.innerText = newValue;
-          }
-        }
-      }
-      if (opcodeData.mutate) {
-        const mutation = xml.querySelector("mutation");
-        for (const [key, value] of Object.entries(opcodeData.mutate)) {
-          mutation.setAttribute(key, value);
-        }
-      }
-      if (opcodeData.createInputs) {
-        for (const [inputName, inputData] of Object.entries(opcodeData.createInputs)) {
-          const valueElement = document.createElement("value");
-          valueElement.setAttribute("name", inputName);
-          const shadowElement = document.createElement("shadow");
-          shadowElement.setAttribute("type", inputData.shadowType);
-          const shadowFieldElement = document.createElement("field");
-          shadowFieldElement.setAttribute("name", getShadowFieldName(inputData.shadowType));
-          shadowFieldElement.innerText = callIfFunction(inputData.value);
-          shadowElement.appendChild(shadowFieldElement);
-          valueElement.appendChild(shadowElement);
-          xml.appendChild(valueElement);
-        }
-      }
-
-      // Remove the old block and insert the new one.
-      block.dispose();
-      const newBlock = pasteBlockXML(workspace, xml);
-      if (parentConnection) {
-        // Search for the same type of connection on the new block as on the old block.
-        const newBlockConnections = newBlock.getConnections_();
-        const newBlockConnection = newBlockConnections.find(c => c.type === blockConnectionType);
-        newBlockConnection.connect(parentConnection);
-      }
-      for (const otherBlock of blocksToBringToForeground) {
-        // By re-appending the element, we move it to the end, which will make it display
-        // on top.
-        const svgRoot = otherBlock.getSvgRoot();
-        svgRoot.parentNode.appendChild(svgRoot);
-      }
-    } finally {
-      ScratchBlocks.Events.setGroup(false);
-    }
-  };
-  const uniques = array => [...new Set(array)];
-  addon.tab.createBlockContextMenu((items, block) => {
-    if (!addon.self.disabled) {
-      const type = block.type;
-      let switches = blockSwitches[block.type] || [];
-      const customArgsMode = addon.settings.get("customargs") ? addon.settings.get("customargsmode") : "off";
-      if (customArgsMode !== "off" && ["argument_reporter_boolean", "argument_reporter_string_number"].includes(type) &&
-      // if the arg is a shadow, it's in a procedures_prototype so we don't want it to be switchable
-      !block.isShadow()) {
-        const customBlocks = getCustomBlocks();
-        if (customArgsMode === "all") {
-          switch (type) {
-            case "argument_reporter_string_number":
-              switches = Object.values(customBlocks).map(cb => cb.stringArgs).flat(1);
-              break;
-            case "argument_reporter_boolean":
-              switches = Object.values(customBlocks).map(cb => cb.boolArgs).flat(1);
-              break;
-          }
-        } else if (customArgsMode === "defOnly") {
-          const root = block.getRootBlock();
-          if (root.type !== "procedures_definition") return items;
-          const customBlockObj = customBlocks[root.getChildren(true)[0].getProcCode()];
-          switch (type) {
-            case "argument_reporter_string_number":
-              switches = customBlockObj.stringArgs;
-              break;
-            case "argument_reporter_boolean":
-              switches = customBlockObj.boolArgs;
-              break;
-          }
-        }
-        const currentValue = block.getFieldValue("VALUE");
-        switches = uniques(switches).map(i => ({
-          isNoop: i === currentValue,
-          fieldValue: i,
-          msg: i
-        }));
-      }
-      if (block.type === "procedures_call") {
-        const proccode = block.getProcCode();
-        if (procedureSwitches[proccode]) {
-          switches = procedureSwitches[proccode];
-        }
-      }
-      if (!addon.settings.get("noop")) {
-        switches = switches.filter(i => !i.isNoop);
-      }
-      switches.forEach((opcodeData, i) => {
-        const makeSpaceItemIndex = items.findIndex(obj => obj._isDevtoolsFirstItem);
-        const insertBeforeIndex = makeSpaceItemIndex !== -1 ?
-        // If "make space" button exists, add own items before it
-        makeSpaceItemIndex :
-        // If there's no such button, insert at end
-        items.length;
-        const text = opcodeData.msg ? opcodeData.msg : opcodeData.opcode ? msg(opcodeData.opcode) : msg(block.type);
-        items.splice(insertBeforeIndex, 0, {
-          enabled: true,
-          text,
-          callback: menuCallbackFactory(block, opcodeData),
-          separator: i === 0
-        });
-      });
-      if (block.type === "data_variable" || block.type === "data_listcontents") {
-        // Add top border to first variable (if it exists)
-        const delBlockIndex = items.findIndex(item => item.text === ScratchBlocks.Msg.DELETE_BLOCK);
-        // firstVariableItem might be undefined, a variable to switch to,
-        // or an item added by editor-devtools (or any addon before this one)
-        const firstVariableItem = items[delBlockIndex + 1];
-        if (firstVariableItem) firstVariableItem.separator = true;
-      }
-    }
-    return items;
-  }, {
-    blocks: true
-  });
-
-  // https://github.com/scratchfoundation/scratch-blocks/blob/abbfe93136fef57fdfb9a077198b0bc64726f012/blocks_vertical/procedures.js#L207-L215
-  // Returns a list like ["%s", "%d"]
-  const parseArguments = code => code.split(/(?=[^\\]%[nbs])/g).map(i => i.trim()).filter(i => i.charAt(0) === "%").map(i => i.substring(0, 2));
-  const getCustomBlocks = () => {
-    const customBlocks = {};
-    const target = vm.editingTarget;
-    Object.values(target.blocks._blocks).filter(block => block.opcode === "procedures_prototype").forEach(block => {
-      const procCode = block.mutation.proccode;
-      const argumentNames = JSON.parse(block.mutation.argumentnames);
-      // argumentdefaults is unreliable, so we have to parse the procedure code to determine argument types
-      const parsedArguments = parseArguments(procCode);
-      const stringArgs = [];
-      const boolArgs = [];
-      for (let i = 0; i < argumentNames.length; i++) {
-        if (parsedArguments[i] === "%b") {
-          boolArgs.push(argumentNames[i]);
-        } else {
-          stringArgs.push(argumentNames[i]);
-        }
-      }
-      customBlocks[procCode] = {
-        stringArgs,
-        boolArgs
-      };
-    });
-    return customBlocks;
-  };
 });
 
 /***/ }),
@@ -1656,947 +814,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/addons/addons/editor-devtools/DevTools.js":
-/*!*******************************************************!*\
-  !*** ./src/addons/addons/editor-devtools/DevTools.js ***!
-  \*******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return DevTools; });
-/* harmony import */ var _DomHelpers_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DomHelpers.js */ "./src/addons/addons/editor-devtools/DomHelpers.js");
-/* harmony import */ var _UndoGroup_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./UndoGroup.js */ "./src/addons/addons/editor-devtools/UndoGroup.js");
-// import ShowBroadcast from "./show-broadcast.js";
-
-
-class DevTools {
-  constructor(addon, msg, m) {
-    this.addon = addon;
-    this.msg = msg;
-    this.m = m;
-    /**
-     * @type {VirtualMachine}
-     */
-    this.domHelpers = new _DomHelpers_js__WEBPACK_IMPORTED_MODULE_0__["default"](addon);
-    this.codeTab = null;
-    this.costTab = null;
-    this.costTabBody = null;
-    this.selVarID = null;
-    this.canShare = false;
-    this.mouseXY = {
-      x: 0,
-      y: 0
-    };
-  }
-  async init() {
-    this.addContextMenus();
-    while (true) {
-      const root = await this.addon.tab.waitForElement("ul[class*=gui_tab-list_]", {
-        markAsSeen: true,
-        reduxEvents: ["scratch-gui/mode/SET_PLAYER", "fontsLoaded/SET_FONTS_LOADED", "scratch-gui/locales/SELECT_LOCALE"],
-        reduxCondition: state => !state.scratchGui.mode.isPlayerOnly
-      });
-      this.initInner(root);
-    }
-  }
-  async addContextMenus() {
-    const blockly = await this.addon.tab.traps.getBlockly();
-    const oldCleanUpFunc = blockly.WorkspaceSvg.prototype.cleanUp;
-    const self = this;
-    blockly.WorkspaceSvg.prototype.cleanUp = function () {
-      if (self.addon.settings.get("enableCleanUpPlus")) {
-        self.doCleanUp();
-      } else {
-        oldCleanUpFunc.call(this);
-      }
-    };
-    let originalMsg = blockly.Msg.CLEAN_UP;
-    if (this.addon.settings.get("enableCleanUpPlus")) blockly.Msg.CLEAN_UP = this.m("clean-plus");
-    this.addon.settings.addEventListener("change", () => {
-      if (this.addon.settings.get("enableCleanUpPlus")) blockly.Msg.CLEAN_UP = this.m("clean-plus");else blockly.Msg.CLEAN_UP = originalMsg;
-    });
-    this.addon.tab.createBlockContextMenu((items, block) => {
-      items.push({
-        enabled: blockly.clipboardXml_,
-        text: this.m("paste"),
-        separator: true,
-        _isDevtoolsFirstItem: true,
-        callback: () => {
-          let ids = this.getTopBlockIDs();
-          document.dispatchEvent(new KeyboardEvent("keydown", {
-            keyCode: 86,
-            ctrlKey: true,
-            griff: true
-          }));
-          setTimeout(() => {
-            this.beginDragOfNewBlocksNotInIDs(ids);
-          }, 10);
-        }
-      });
-      return items;
-    }, {
-      workspace: true
-    });
-    this.addon.tab.createBlockContextMenu((items, block) => {
-      items.push({
-        enabled: true,
-        text: this.m("make-space"),
-        _isDevtoolsFirstItem: true,
-        callback: () => {
-          this.doCleanUp(block);
-        },
-        separator: true
-      }, {
-        enabled: true,
-        text: this.m("copy-all"),
-        callback: () => {
-          this.eventCopyClick(block);
-        },
-        separator: true
-      }, {
-        enabled: true,
-        text: this.m("copy-block"),
-        callback: () => {
-          this.eventCopyClick(block, 1);
-        }
-      }, {
-        enabled: true,
-        text: this.m("cut-block"),
-        callback: () => {
-          this.eventCopyClick(block, 2);
-        }
-      });
-      // const BROADCAST_BLOCKS = ["event_whenbroadcastreceived", "event_broadcast", "event_broadcastandwait"];
-      // if (BROADCAST_BLOCKS.includes(block.type)) {
-      //   // Show Broadcast
-      //   const broadcastId = this.showBroadcastSingleton.getAssociatedBroadcastId(block.id);
-      //   if (broadcastId) {
-      //     ["Senders", "Receivers"].forEach((showKey, i) => {
-      //       items.push({
-      //         enabled: true,
-      //         text: this.msg(`show-${showKey}`.toLowerCase()),
-      //         callback: () => {
-      //           this.showBroadcastSingleton[`show${showKey}`](broadcastId);
-      //         },
-      //         separator: i == 0,
-      //       });
-      //     });
-      //   }
-      // }
-      return items;
-    }, {
-      blocks: true
-    });
-    this.addon.tab.createBlockContextMenu((items, block) => {
-      if (block.getCategory() === "data" || block.getCategory() === "data-lists") {
-        this.selVarID = block.getVars()[0];
-        items.push({
-          enabled: true,
-          text: this.m("swap", {
-            var: block.getCategory() === "data" ? this.m("variables") : this.m("lists")
-          }),
-          callback: async () => {
-            let wksp = this.getWorkspace();
-            let v = wksp.getVariableById(this.selVarID);
-            // prompt() returns Promise in desktop app
-            let varName = await window.prompt(this.msg("replace", {
-              name: v.name
-            }));
-            if (varName) {
-              this.doReplaceVariable(this.selVarID, varName, v.type);
-            }
-          },
-          separator: true
-        });
-      }
-      return items;
-    }, {
-      blocks: true,
-      flyout: true
-    });
-  }
-  getWorkspace() {
-    return Blockly.getMainWorkspace();
-  }
-  isCostumeEditor() {
-    return this.costTab.className.indexOf("gui_is-selected") >= 0;
-  }
-
-  /**
-   * A nicely ordered version of the top blocks
-   * @returns {[Blockly.Block]}
-   */
-  getTopBlocks() {
-    let result = this.getOrderedTopBlockColumns();
-    let columns = result.cols;
-    /**
-     * @type {[[Blockly.Block]]}
-     */
-    let topBlocks = [];
-    for (const col of columns) {
-      topBlocks = topBlocks.concat(col.blocks);
-    }
-    return topBlocks;
-  }
-
-  /**
-   * A much nicer way of laying out the blocks into columns
-   */
-  doCleanUp(block) {
-    let workspace = this.getWorkspace();
-    let makeSpaceForBlock = block && block.getRootBlock();
-    _UndoGroup_js__WEBPACK_IMPORTED_MODULE_1__["default"].startUndoGroup(workspace);
-    let result = this.getOrderedTopBlockColumns(true);
-    let columns = result.cols;
-    let orphanCount = result.orphans.blocks.length;
-    if (orphanCount > 0 && !block) {
-      let message = this.msg("orphaned", {
-        count: orphanCount
-      });
-      if (confirm(message)) {
-        for (const block of result.orphans.blocks) {
-          block.dispose();
-        }
-      } else {
-        columns.unshift(result.orphans);
-      }
-    }
-    let cursorX = 48;
-    let maxWidths = result.maxWidths;
-    for (const column of columns) {
-      let cursorY = 64;
-      let maxWidth = 0;
-      for (const block of column.blocks) {
-        let extraWidth = block === makeSpaceForBlock ? 380 : 0;
-        let extraHeight = block === makeSpaceForBlock ? 480 : 72;
-        let xy = block.getRelativeToSurfaceXY();
-        if (cursorX - xy.x !== 0 || cursorY - xy.y !== 0) {
-          block.moveBy(cursorX - xy.x, cursorY - xy.y);
-        }
-        let heightWidth = block.getHeightWidth();
-        cursorY += heightWidth.height + extraHeight;
-        let maxWidthWithComments = maxWidths[block.id] || 0;
-        maxWidth = Math.max(maxWidth, Math.max(heightWidth.width + extraWidth, maxWidthWithComments));
-      }
-      cursorX += maxWidth + 96;
-    }
-    let topComments = workspace.getTopComments();
-    for (const comment of topComments) {
-      if (comment.setVisible) {
-        comment.setVisible(false);
-        comment.needsAutoPositioning_ = true;
-        comment.setVisible(true);
-      }
-    }
-    setTimeout(() => {
-      // Locate unused local variables...
-      let workspace = this.getWorkspace();
-      let map = workspace.getVariableMap();
-      let vars = map.getVariablesOfType("");
-      let unusedLocals = [];
-      for (const row of vars) {
-        if (row.isLocal) {
-          let usages = map.getVariableUsesById(row.getId());
-          if (!usages || usages.length === 0) {
-            unusedLocals.push(row);
-          }
-        }
-      }
-      if (unusedLocals.length > 0) {
-        const unusedCount = unusedLocals.length;
-        let message = this.msg("unused-var", {
-          count: unusedCount
-        });
-        for (let i = 0; i < unusedLocals.length; i++) {
-          let orphan = unusedLocals[i];
-          if (i > 0) {
-            message += ", ";
-          }
-          message += orphan.name;
-        }
-        if (confirm(message)) {
-          for (const orphan of unusedLocals) {
-            workspace.deleteVariableById(orphan.getId());
-          }
-        }
-      }
-
-      // Locate unused local lists...
-      let lists = map.getVariablesOfType("list");
-      let unusedLists = [];
-      for (const row of lists) {
-        if (row.isLocal) {
-          let usages = map.getVariableUsesById(row.getId());
-          if (!usages || usages.length === 0) {
-            unusedLists.push(row);
-          }
-        }
-      }
-      if (unusedLists.length > 0) {
-        const unusedCount = unusedLists.length;
-        let message = this.msg("unused-list", {
-          count: unusedCount
-        });
-        for (let i = 0; i < unusedLists.length; i++) {
-          let orphan = unusedLists[i];
-          if (i > 0) {
-            message += ", ";
-          }
-          message += orphan.name;
-        }
-        if (confirm(message)) {
-          for (const orphan of unusedLists) {
-            workspace.deleteVariableById(orphan.getId());
-          }
-        }
-      }
-      _UndoGroup_js__WEBPACK_IMPORTED_MODULE_1__["default"].endUndoGroup(workspace);
-    }, 100);
-  }
-
-  /**
-   * Badly Orphaned - might want to delete these!
-   * @param topBlock
-   * @returns {boolean}
-   */
-  isBlockAnOrphan(topBlock) {
-    return !!topBlock.outputConnection;
-  }
-
-  /**
-   * Split the top blocks into ordered columns
-   * @param separateOrphans true to keep all orphans separate
-   * @returns {{orphans: {blocks: [Block], x: number, count: number}, cols: [Col]}}
-   */
-  getOrderedTopBlockColumns(separateOrphans) {
-    let w = this.getWorkspace();
-    let topBlocks = w.getTopBlocks();
-    let maxWidths = {};
-    if (separateOrphans) {
-      let topComments = w.getTopComments();
-
-      // todo: tie comments to blocks... find widths and width of block stack row...
-      for (const comment of topComments) {
-        // comment.autoPosition_();
-        // Hiding and showing repositions the comment right next to it's block - nice!
-        if (comment.setVisible) {
-          comment.setVisible(false);
-          comment.needsAutoPositioning_ = true;
-          comment.setVisible(true);
-
-          // let bb = comment.block_.svgPath_.getBBox();
-          let right = comment.getBoundingRectangle().bottomRight.x;
-
-          // Get top block for stack...
-          let root = comment.block_.getRootBlock();
-          let left = root.getBoundingRectangle().topLeft.x;
-          maxWidths[root.id] = Math.max(right - left, maxWidths[root.id] || 0);
-        }
-      }
-    }
-
-    // Default scratch ordering is horrid... Lets try something more clever.
-
-    /**
-     * @type {Col[]}
-     */
-    let cols = [];
-    const TOLERANCE = 256;
-    let orphans = {
-      x: -999999,
-      count: 0,
-      blocks: []
-    };
-    for (const topBlock of topBlocks) {
-      // let r = b.getBoundingRectangle();
-      let position = topBlock.getRelativeToSurfaceXY();
-      /**
-       * @type {Col}
-       */
-      let bestCol = null;
-      let bestError = TOLERANCE;
-      if (separateOrphans && this.isBlockAnOrphan(topBlock)) {
-        orphans.blocks.push(topBlock);
-        continue;
-      }
-
-      // Find best columns
-      for (const col of cols) {
-        let err = Math.abs(position.x - col.x);
-        if (err < bestError) {
-          bestError = err;
-          bestCol = col;
-        }
-      }
-      if (bestCol) {
-        // We found a column that we fitted into
-        bestCol.x = (bestCol.x * bestCol.count + position.x) / ++bestCol.count; // re-average the columns as more items get added...
-        bestCol.blocks.push(topBlock);
-      } else {
-        // Create a new column
-        cols.push(new Col(position.x, 1, [topBlock]));
-      }
-    }
-
-    // if (orphans.blocks.length > 0) {
-    //     cols.push(orphans);
-    // }
-
-    // Sort columns, then blocks inside the columns
-    cols.sort((a, b) => a.x - b.x);
-    for (const col of cols) {
-      col.blocks.sort((a, b) => a.getRelativeToSurfaceXY().y - b.getRelativeToSurfaceXY().y);
-    }
-    return {
-      cols: cols,
-      orphans: orphans,
-      maxWidths: maxWidths
-    };
-  }
-
-  /**
-   * Find all the uses of a named variable.
-   * @param {string} id ID of the variable to find.
-   * @return {!Array.<!Blockly.Block>} Array of block usages.
-   */
-  getVariableUsesById(id) {
-    let uses = [];
-    let topBlocks = this.getTopBlocks(true); // todo: Confirm this was the right getTopBlocks?
-    for (const topBlock of topBlocks) {
-      /** @type {!Array<!Blockly.Block>} */
-      let kids = topBlock.getDescendants();
-      for (const block of kids) {
-        /** @type {!Array<!Blockly.VariableModel>} */
-        let blockVariables = block.getVarModels();
-        if (blockVariables) {
-          for (const blockVar of blockVariables) {
-            if (blockVar.getId() === id) {
-              uses.push(block);
-            }
-          }
-        }
-      }
-    }
-    return uses;
-  }
-
-  /**
-   * Quick and dirty replace all instances of one variable / list with another variable / list
-   * @param varId original variable name
-   * @param newVarName new variable name
-   * @param type type of variable ("" = variable, anything else is a list?
-   */
-  doReplaceVariable(varId, newVarName, type) {
-    let wksp = this.getWorkspace();
-    let v = wksp.getVariable(newVarName, type);
-    if (!v) {
-      alert(this.msg("var-not-exist"));
-      return;
-    }
-    let newVId = v.getId();
-    _UndoGroup_js__WEBPACK_IMPORTED_MODULE_1__["default"].startUndoGroup(wksp);
-    let blocks = this.getVariableUsesById(varId);
-    for (const block of blocks) {
-      try {
-        if (type === "") {
-          block.getField("VARIABLE").setValue(newVId);
-        } else {
-          block.getField("LIST").setValue(newVId);
-        }
-      } catch (e) {
-        // ignore
-      }
-    }
-    _UndoGroup_js__WEBPACK_IMPORTED_MODULE_1__["default"].endUndoGroup(wksp);
-  }
-
-  /*
-    function doInjectScripts(codeString) {
-      let w = getWorkspace();
-      let xml = new XML(); // document.implementation.createDocument(null, "xml");
-      let x = xml.xmlDoc.firstChild;
-       let tree = math.parse(codeString);
-      console.log(tree);
-       const binaryOperatorTypes = {
-        add: "operator_add",
-        subtract: "operator_subtract",
-        this.multiply: "operator_multiply",
-        divide: "operator_divide",
-      };
-       const BLOCK_TYPE = {
-        number: "math_number",
-        text: "text",
-      };
-       function translateMathToXml(x, tree, shadowType) {
-        let xShadowField = null;
-        if (shadowType) {
-          let xShadow = xml.newXml(x, "shadow", { type: shadowType });
-          if (shadowType === BLOCK_TYPE.number) {
-            xShadowField = xml.newXml(xShadow, "field", { name: "NUM" });
-          } else if (shadowType === BLOCK_TYPE.text) {
-            xShadowField = xml.newXml(xShadow, "field", { name: "TEXT" });
-          }
-        }
-         if (!tree || !tree.type) {
-          return;
-        }
-         if (tree.type === "OperatorNode") {
-          let operatorType = binaryOperatorTypes[tree.fn];
-          if (operatorType) {
-            let xOp = newXml(x, "block", { type: operatorType });
-            translateMathToXml(xml.newXml(xOp, "value", { name: "NUM1" }), tree.args[0], BLOCK_TYPE.number);
-            translateMathToXml(xml.newXml(xOp, "value", { name: "NUM2" }), tree.args[1], BLOCK_TYPE.number);
-            return;
-          }
-           return;
-        }
-         if (tree.type === "ConstantNode") {
-          // number or text in quotes
-          if (xShadowField) {
-            xml.setAttr(xShadowField, { text: tree.value });
-          }
-          return;
-        }
-         if (tree.type === "SymbolNode") {
-          // variable
-          let xVar = xml.newXml(x, "block", { type: "data_variable" });
-          xml.newXml(xVar, "field", { name: "VARIABLE", text: tree.name });
-          return;
-        }
-         if (tree.type === "FunctionNode") {
-          // Method Call
-          if (tree.fn.name === "join") {
-            let xOp = newXml(x, "block", { type: "operator_join" });
-            translateMathToXml(xml.newXml(xOp, "value", { name: "STRING1" }), tree.args[0], BLOCK_TYPE.text);
-            translateMathToXml(xml.newXml(xOp, "value", { name: "STRING2" }), tree.args[1], BLOCK_TYPE.text);
-            return;
-          }
-        }
-      }
-       translateMathToXml(x, tree);
-      console.log(x);
-       let ids = Blockly.Xml.domToWorkspace(x, w);
-      console.log(ids);
-    }
-     */
-  /*
-    function clickInject(e) {
-      let codeString = window.prompt("Griffpatch: Enter an expression (i.e. a+2*3)");
-      if (codeString) {
-        doInjectScripts(codeString);
-      }
-      e.preventDefault();
-      return false;
-    }
-    */
-
-  /**
-   * Returns a Set of the top blocks in this workspace / sprite
-   * @returns {Set<any>} Set of top blocks
-   */
-  getTopBlockIDs() {
-    let wksp = this.getWorkspace();
-    let topBlocks = wksp.getTopBlocks();
-    let ids = new Set();
-    for (const block of topBlocks) {
-      ids.add(block.id);
-    }
-    return ids;
-  }
-
-  /**
-   * Initiates a drag event for all block stacks except those in the set of ids.
-   * But why? - Because we know all the ids of the existing stacks before we paste / duplicate - so we can find the
-   * new stack by excluding all the known ones.
-   * @param ids Set of previously known ids
-   */
-  beginDragOfNewBlocksNotInIDs(ids) {
-    if (!this.addon.settings.get("enablePasteBlocksAtMouse")) {
-      return;
-    }
-    let wksp = this.getWorkspace();
-    let topBlocks = wksp.getTopBlocks();
-    for (const block of topBlocks) {
-      if (!ids.has(block.id)) {
-        // console.log("I found a new block!!! - " + block.id);
-        // todo: move the block to the mouse pointer?
-        let mouseXYClone = {
-          x: this.mouseXY.x,
-          y: this.mouseXY.y
-        };
-        block.setIntersects(true); // fixes offscreen block pasting in TurboWarp
-        this.domHelpers.triggerDragAndDrop(block.svgPath_, null, mouseXYClone);
-      }
-    }
-  }
-  updateMousePosition(e) {
-    this.mouseXY.x = e.clientX;
-    this.mouseXY.y = e.clientY;
-  }
-  eventMouseMove(e) {
-    this.updateMousePosition(e);
-  }
-  eventKeyDown(e) {
-    const switchCostume = up => {
-      // todo: select previous costume
-      let selected = this.costTabBody.querySelector("div[class*='sprite-selector-item_is-selected']");
-      let node = up ? selected.parentNode.previousSibling : selected.parentNode.nextSibling;
-      if (node) {
-        let wrapper = node.closest("div[class*=gui_flex-wrapper]");
-        node.querySelector("div[class^='sprite-selector-item_sprite-name']").click();
-        node.scrollIntoView({
-          behavior: "auto",
-          block: "center",
-          inline: "start"
-        });
-        wrapper.scrollTop = 0;
-      }
-    };
-    if (document.URL.indexOf("editor") <= 0) {
-      return;
-    }
-    let ctrlKey = e.ctrlKey || e.metaKey;
-    if (e.key === "ArrowLeft" && ctrlKey) {
-      // Ctrl + Left Arrow Key
-      if (document.activeElement.tagName === "INPUT") {
-        return;
-      }
-      if (this.isCostumeEditor()) {
-        switchCostume(true);
-        e.cancelBubble = true;
-        e.preventDefault();
-        return true;
-      }
-    }
-    if (e.key === "ArrowRight" && ctrlKey) {
-      // Ctrl + Right Arrow Key
-      if (document.activeElement.tagName === "INPUT") {
-        return;
-      }
-      if (this.isCostumeEditor()) {
-        switchCostume(false);
-        e.cancelBubble = true;
-        e.preventDefault();
-        return true;
-      }
-    }
-    if (e.keyCode === 86 && ctrlKey && !e.griff) {
-      // Ctrl + V
-      // Set a timeout so we can take control of the paste after the event
-      let ids = this.getTopBlockIDs();
-      setTimeout(() => {
-        this.beginDragOfNewBlocksNotInIDs(ids);
-      }, 10);
-    }
-
-    // if (e.keyCode === 220 && (!document.activeElement || document.activeElement.tagName === 'INPUT')) {
-    //
-    // }
-  }
-  eventCopyClick(block, blockOnly) {
-    let wksp = this.getWorkspace();
-    if (block) {
-      block.select();
-      let next = blockOnly ? block.getNextBlock() : null;
-      if (next) {
-        next.unplug(false); // setParent(null);
-      }
-
-      // separate child temporarily
-      document.dispatchEvent(new KeyboardEvent("keydown", {
-        keyCode: 67,
-        ctrlKey: true
-      }));
-      if (next || blockOnly === 2) {
-        setTimeout(() => {
-          if (next) {
-            wksp.undo(); // undo the unplug above...
-          }
-          if (blockOnly === 2) {
-            _UndoGroup_js__WEBPACK_IMPORTED_MODULE_1__["default"].startUndoGroup(wksp);
-            block.dispose(true);
-            _UndoGroup_js__WEBPACK_IMPORTED_MODULE_1__["default"].endUndoGroup(wksp);
-          }
-        }, 0);
-      }
-    }
-  }
-  eventMouseDown(e) {
-    this.updateMousePosition(e);
-  }
-  eventMouseUp(e) {
-    this.updateMousePosition(e);
-  }
-  initInner(root) {
-    var _this = this;
-    let guiTabs = root.childNodes;
-    if (this.codeTab && guiTabs[0] !== this.codeTab) {
-      // We have been CHANGED!!! - Happens when going to project page, and then back inside again!!!
-      this.domHelpers.unbindAllEvents();
-    }
-    this.codeTab = guiTabs[0];
-    this.costTab = guiTabs[1];
-    this.costTabBody = document.querySelector("div[aria-labelledby=" + this.costTab.id + "]");
-    this.domHelpers.bindOnce(document, "keydown", function () {
-      return _this.eventKeyDown(...arguments);
-    }, true);
-    this.domHelpers.bindOnce(document, "mousemove", function () {
-      return _this.eventMouseMove(...arguments);
-    }, true);
-    this.domHelpers.bindOnce(document, "mousedown", function () {
-      return _this.eventMouseDown(...arguments);
-    }, true); // true to capture all mouse downs 'before' the dom events handle them
-    this.domHelpers.bindOnce(document, "mouseup", function () {
-      return _this.eventMouseUp(...arguments);
-    }, true);
-  }
-}
-class Col {
-  /**
-   * @param x {Number} x position (for ordering)
-   * @param count {Number}
-   * @param blocks {[Block]}
-   */
-  constructor(x, count, blocks) {
-    /**
-     * x position (for ordering)
-     * @type {Number}
-     */
-    this.x = x;
-    /**
-     * @type {Number}
-     */
-    this.count = count;
-    /**
-     * @type {[Blockly.Block]}
-     */
-    this.blocks = blocks;
-  }
-}
-
-/***/ }),
-
-/***/ "./src/addons/addons/editor-devtools/DomHelpers.js":
-/*!*********************************************************!*\
-  !*** ./src/addons/addons/editor-devtools/DomHelpers.js ***!
-  \*********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return DomHelpers; });
-class DomHelpers {
-  constructor(addon) {
-    this.addon = addon;
-    this.vm = addon.tab.traps.vm;
-    /**
-     * @type {eventDetails[]}
-     */
-    this.events = [];
-  }
-
-  /**
-   * Simulate a drag and drop programmatically through javascript
-   * @param selectorDrag
-   * @param selectorDrop
-   * @param mouseXY
-   * @param [shiftKey=false]
-   * @returns {boolean}
-   */
-  triggerDragAndDrop(selectorDrag, selectorDrop, mouseXY, shiftKey) {
-    // function for triggering mouse events
-    shiftKey = shiftKey || false;
-    let fireMouseEvent = function fireMouseEvent(type, elem, centerX, centerY) {
-      let evt = document.createEvent("MouseEvents");
-      evt.initMouseEvent(type, true, true, window, 1, 1, 1, centerX, centerY, shiftKey, false, false, false, 0, elem);
-      elem.dispatchEvent(evt);
-    };
-
-    // fetch target elements
-    let elemDrag = selectorDrag; // document.querySelector(selectorDrag);
-    let elemDrop = selectorDrop; // document.querySelector(selectorDrop);
-    if (!elemDrag /* || !elemDrop*/) {
-      return false;
-    }
-
-    // calculate positions
-    let pos = elemDrag.getBoundingClientRect();
-    let center1X = Math.floor((pos.left + pos.right) / 2);
-    let center1Y = Math.floor((pos.top + pos.bottom) / 2);
-
-    // mouse over dragged element and mousedown
-    fireMouseEvent("mouseover", elemDrag, center1X, center1Y);
-    fireMouseEvent("mousedown", elemDrag, center1X, center1Y);
-
-    // start dragging process over to drop target
-    fireMouseEvent("dragstart", elemDrag, center1X, center1Y);
-    fireMouseEvent("drag", elemDrag, center1X, center1Y);
-    fireMouseEvent("mousemove", elemDrag, center1X, center1Y);
-    if (!elemDrop) {
-      if (mouseXY) {
-        // console.log(mouseXY);
-        let center2X = mouseXY.x;
-        let center2Y = mouseXY.y;
-        fireMouseEvent("drag", elemDrag, center2X, center2Y);
-        fireMouseEvent("mousemove", elemDrag, center2X, center2Y);
-      }
-      return false;
-    }
-    pos = elemDrop.getBoundingClientRect();
-    let center2X = Math.floor((pos.left + pos.right) / 2);
-    let center2Y = Math.floor((pos.top + pos.bottom) / 2);
-    fireMouseEvent("drag", elemDrag, center2X, center2Y);
-    fireMouseEvent("mousemove", elemDrop, center2X, center2Y);
-
-    // trigger dragging process on top of drop target
-    fireMouseEvent("mouseenter", elemDrop, center2X, center2Y);
-    fireMouseEvent("dragenter", elemDrop, center2X, center2Y);
-    fireMouseEvent("mouseover", elemDrop, center2X, center2Y);
-    fireMouseEvent("dragover", elemDrop, center2X, center2Y);
-
-    // release dragged element on top of drop target
-    fireMouseEvent("drop", elemDrop, center2X, center2Y);
-    fireMouseEvent("dragend", elemDrag, center2X, center2Y);
-    fireMouseEvent("mouseup", elemDrag, center2X, center2Y);
-    return true;
-  }
-  bindOnce(dom, event, func, capture) {
-    capture = !!capture;
-    dom.removeEventListener(event, func, capture);
-    dom.addEventListener(event, func, capture);
-    this.events.push(new eventDetails(dom, event, func, capture));
-  }
-  unbindAllEvents() {
-    for (const event of this.events) {
-      event.dom.removeEventListener(event.event, event.func, event.capture);
-    }
-    this.events = [];
-  }
-}
-
-/**
- * A record of an event
- */
-class eventDetails {
-  constructor(dom, event, func, capture) {
-    this.dom = dom;
-    this.event = event;
-    this.func = func;
-    this.capture = capture;
-  }
-}
-
-/***/ }),
-
-/***/ "./src/addons/addons/editor-devtools/UndoGroup.js":
-/*!********************************************************!*\
-  !*** ./src/addons/addons/editor-devtools/UndoGroup.js ***!
-  \********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return UndoGroup; });
-/**
- * This class is dedicated to maintaining the Undo stack of Blockly
- * It allows us to initiate an undo group such that all subsequent operations are recorded as a single
- * undoable transaction.
- */
-class UndoGroup {
-  /**
-   * Start an Undo group - begin recording
-   * @param workspace the workspace
-   */
-  static startUndoGroup(workspace) {
-    const undoStack = workspace.undoStack_;
-    if (undoStack.length) {
-      undoStack[undoStack.length - 1]._devtoolsLastUndo = true;
-    }
-  }
-
-  /**
-   * End an Undo group - stops recording
-   * @param workspace the workspace
-   */
-  static endUndoGroup(workspace) {
-    const undoStack = workspace.undoStack_;
-    // Events (responsible for undoStack updates) are delayed with a setTimeout(f, 0)
-    // https://github.com/scratchfoundation/scratch-blocks/blob/f159a1779e5391b502d374fb2fdd0cb5ca43d6a2/core/events.js#L182
-    setTimeout(() => {
-      const group = generateUID();
-      for (let i = undoStack.length - 1; i >= 0 && !undoStack[i]._devtoolsLastUndo; i--) {
-        undoStack[i].group = group;
-      }
-    }, 0);
-  }
-}
-
-/**
- * https://github.com/scratchfoundation/scratch-blocks/blob/f159a1779e5391b502d374fb2fdd0cb5ca43d6a2/core/events.js#L182
- * @returns {string}
- * @private
- */
-function generateUID() {
-  const CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%()*+,-./:;=?@[]^_`{|}~";
-  let result = "";
-  for (let i = 0; i < 20; i++) {
-    result += CHARACTERS[Math.floor(Math.random() * CHARACTERS.length)];
-  }
-  return result;
-}
-
-/***/ }),
-
-/***/ "./src/addons/addons/editor-devtools/_runtime_entry.js":
-/*!*************************************************************!*\
-  !*** ./src/addons/addons/editor-devtools/_runtime_entry.js ***!
-  \*************************************************************/
-/*! exports provided: resources */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "resources", function() { return resources; });
-/* harmony import */ var _userscript_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./userscript.js */ "./src/addons/addons/editor-devtools/userscript.js");
-/* harmony import */ var _url_loader_icon_close_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! url-loader!./icon--close.svg */ "./node_modules/url-loader/dist/cjs.js!./src/addons/addons/editor-devtools/icon--close.svg");
-/* generated by pull.js */
-
-
-const resources = {
-  "userscript.js": _userscript_js__WEBPACK_IMPORTED_MODULE_0__["default"],
-  "icon--close.svg": _url_loader_icon_close_svg__WEBPACK_IMPORTED_MODULE_1__["default"]
-};
-
-/***/ }),
-
-/***/ "./src/addons/addons/editor-devtools/userscript.js":
-/*!*********************************************************!*\
-  !*** ./src/addons/addons/editor-devtools/userscript.js ***!
-  \*********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _DevTools_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DevTools.js */ "./src/addons/addons/editor-devtools/DevTools.js");
-
-/* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
-  let {
-    addon,
-    console,
-    msg,
-    safeMsg: m
-  } = _ref;
-  const devTools = new _DevTools_js__WEBPACK_IMPORTED_MODULE_0__["default"](addon, msg, m);
-  devTools.init();
-});
-
-/***/ }),
-
 /***/ "./src/addons/addons/editor-searchable-dropdowns/_runtime_entry.js":
 /*!*************************************************************************!*\
   !*** ./src/addons/addons/editor-searchable-dropdowns/_runtime_entry.js ***!
@@ -2679,10 +896,16 @@ __webpack_require__.r(__webpack_exports__);
   let resultOfLastGetOptions = [];
   const oldDropDownDivShow = Blockly.DropDownDiv.show;
   Blockly.DropDownDiv.show = function () {
-    blocklyDropdownMenu = document.querySelector(".blocklyDropdownMenu");
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
+    // This is an editor for constructing a dropdown, not a dropdown whose
+    // values should be searched. Its menu also contains an "Add Option" row
+    // which deliberately has no matching entry in getOptions().
+    if (Blockly.FieldDropdownEditor && args[0] instanceof Blockly.FieldDropdownEditor) {
+      return oldDropDownDivShow.call(this, ...args);
+    }
+    blocklyDropdownMenu = document.querySelector(".blocklyDropdownMenu");
     if (!blocklyDropdownMenu) {
       return oldDropDownDivShow.call(this, ...args);
     }
@@ -2748,6 +971,13 @@ __webpack_require__.r(__webpack_exports__);
     resultOfLastGetOptions = options;
     return options;
   };
+  const oldFieldTextDropdownGetOptions = Blockly.FieldTextDropdown.prototype.getOptions;
+  Blockly.FieldTextDropdown.prototype.getOptions = function () {
+    const options = oldFieldTextDropdownGetOptions.call(this);
+    // Options aren't normally stored anywhere, so we'll store them ourselves.
+    resultOfLastGetOptions = options;
+    return options;
+  };
   const oldFieldVariableOnItemSelected = Blockly.FieldVariable.prototype.onItemSelected;
   Blockly.FieldVariable.prototype.onItemSelected = function (menu, menuItem) {
     const sourceBlock = this.sourceBlock_;
@@ -2795,6 +1025,9 @@ __webpack_require__.r(__webpack_exports__);
       // Negative number will hide
       // Higher numbers will appear first
       const option = currentDropdownOptions[index];
+      if (!option) {
+        return 0;
+      }
       const optionId = option[1];
       if (SCRATCH_ITEMS_TO_HIDE.includes(optionId)) {
         return query ? -1 : 0;
@@ -2963,6 +1196,84 @@ const resources = {
 
 /***/ }),
 
+/***/ "./src/addons/addons/find-bar/blockly/BlockFlasher.js":
+/*!************************************************************!*\
+  !*** ./src/addons/addons/find-bar/blockly/BlockFlasher.js ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return BlockFlasher; });
+/**
+ * Helper class to flash a Blockly scratch block in the users workspace
+ */
+class BlockFlasher {
+  /**
+   * FLash a block 3 times
+   * @param block the block to flash
+   */
+  static flash(block) {
+    if (myFlash.timerID > 0) {
+      clearTimeout(myFlash.timerID);
+      if (myFlash.block.svgPath_) {
+        myFlash.block.svgPath_.style.fill = "";
+      }
+    }
+    let count = 4;
+    let flashOn = true;
+    myFlash.block = block;
+
+    /**
+     * Internal method to switch the colour of a block between light yellow and it's original colour
+     * @private
+     */
+    function _flash() {
+      if (myFlash.block.svgPath_) {
+        myFlash.block.svgPath_.style.fill = flashOn ? "#ffff80" : "";
+      }
+      flashOn = !flashOn;
+      count--;
+      if (count > 0) {
+        myFlash.timerID = setTimeout(_flash, 200);
+      } else {
+        myFlash.timerID = 0;
+        myFlash.block = null;
+      }
+    }
+    _flash();
+  }
+}
+const myFlash = {
+  block: null,
+  timerID: null
+};
+
+/***/ }),
+
+/***/ "./src/addons/addons/find-bar/blockly/BlockInstance.js":
+/*!*************************************************************!*\
+  !*** ./src/addons/addons/find-bar/blockly/BlockInstance.js ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return BlockInstance; });
+/**
+ * Encapsulates a block (either in this sprite or another / Blockly, or native JSON block
+ */
+class BlockInstance {
+  constructor(target, block) {
+    this.targetId = target.id;
+    this.id = block.id;
+  }
+}
+
+/***/ }),
+
 /***/ "./src/addons/addons/find-bar/blockly/BlockItem.js":
 /*!*********************************************************!*\
   !*** ./src/addons/addons/find-bar/blockly/BlockItem.js ***!
@@ -3006,6 +1317,227 @@ class BlockItem {
     }
     return false;
   }
+}
+
+/***/ }),
+
+/***/ "./src/addons/addons/find-bar/blockly/Utils.js":
+/*!*****************************************************!*\
+  !*** ./src/addons/addons/find-bar/blockly/Utils.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Utils; });
+/* harmony import */ var _BlockInstance_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BlockInstance.js */ "./src/addons/addons/find-bar/blockly/BlockInstance.js");
+/* harmony import */ var _BlockFlasher_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BlockFlasher.js */ "./src/addons/addons/find-bar/blockly/BlockFlasher.js");
+
+
+
+// Make these global so that every addon uses the same arrays.
+let views = [];
+let forward = [];
+class Utils {
+  constructor(addon) {
+    this.addon = addon;
+    this.addon.tab.traps.getBlockly().then(blockly => {
+      this.blockly = blockly;
+    });
+    /**
+     * Scratch Virtual Machine
+     * @type {null|*}
+     */
+    this.vm = this.addon.tab.traps.vm;
+    // this._myFlash = { block: null, timerID: null, colour: null };
+    this.offsetX = 32;
+    this.offsetY = 32;
+    this.navigationHistory = new NavigationHistory();
+    /**
+     * The workspace
+     */
+    this._workspace = null;
+  }
+
+  /**
+   * Get the Scratch Editing Target
+   * @returns {?Target} the scratch editing target
+   */
+  getEditingTarget() {
+    return this.vm.runtime.getEditingTarget();
+  }
+
+  /**
+   * Set the current workspace (switches sprites)
+   * @param targetID {string}
+   */
+  setEditingTarget(targetID) {
+    if (this.getEditingTarget().id !== targetID) {
+      this.vm.setEditingTarget(targetID);
+    }
+  }
+
+  /**
+   * Returns the main workspace
+   * @returns !Blockly.Workspace
+   */
+  getWorkspace() {
+    const currentWorkspace = Blockly.getMainWorkspace();
+    if (currentWorkspace.getToolbox()) {
+      // Sadly get get workspace does not always return the 'real' workspace... Not sure how to get that at the moment,
+      //  but we can work out whether it's the right one by whether it has a toolbox.
+      this._workspace = currentWorkspace;
+    }
+    return this._workspace;
+  }
+
+  /**
+   * Based on wksp.centerOnBlock(li.data.labelID);
+   * @param blockOrId {Blockly.Block|{id}|BlockInstance} A Blockly Block, a block id, or a BlockInstance
+   */
+  scrollBlockIntoView(blockOrId) {
+    var _this$blockly;
+    let workspace = this.getWorkspace();
+    /** @type {Blockly.Block} */
+    let block; // or is it really a Blockly.BlockSvg?
+
+    if (blockOrId instanceof _BlockInstance_js__WEBPACK_IMPORTED_MODULE_0__["default"]) {
+      // Switch to sprite
+      this.setEditingTarget(blockOrId.targetId);
+      // Highlight the block!
+      block = workspace.getBlockById(blockOrId.id);
+    } else {
+      block = blockOrId && blockOrId.id ? blockOrId : workspace.getBlockById(blockOrId);
+    }
+    if (!block) {
+      return;
+    }
+
+    /**
+     * !Blockly.Block
+     */
+    let root = block.getRootBlock();
+    let base = this.getTopOfStackFor(block);
+    let ePos = base.getRelativeToSurfaceXY(),
+      // Align with the top of the block
+      rPos = root.getRelativeToSurfaceXY(),
+      // Align with the left of the block 'stack'
+      scale = workspace.scale,
+      x = rPos.x * scale,
+      y = ePos.y * scale,
+      xx = block.width + x,
+      // Turns out they have their x & y stored locally, and they are the actual size rather than scaled or including children...
+      yy = block.height + y,
+      s = workspace.getMetrics();
+    if (x < s.viewLeft + this.offsetX - 4 || xx > s.viewLeft + s.viewWidth || y < s.viewTop + this.offsetY - 4 || yy > s.viewTop + s.viewHeight) {
+      // sx = s.contentLeft + s.viewWidth / 2 - x,
+      let sx = x - s.contentLeft - this.offsetX,
+        // sy = s.contentTop - y + Math.max(Math.min(32, 32 * scale), (s.viewHeight - yh) / 2);
+        sy = y - s.contentTop - this.offsetY;
+      this.navigationHistory.storeView(this.navigationHistory.peek(), 64);
+
+      // workspace.hideChaff(),
+      workspace.scrollbar.set(sx, sy);
+      this.navigationHistory.storeView({
+        left: sx,
+        top: sy
+      }, 64);
+    }
+    (_this$blockly = this.blockly) === null || _this$blockly === void 0 ? void 0 : _this$blockly.hideChaff();
+    _BlockFlasher_js__WEBPACK_IMPORTED_MODULE_1__["default"].flash(block);
+  }
+
+  /**
+   * Find the top stack block of a  stack
+   * @param block a block in a stack
+   * @returns {*} a block that is the top of the stack of blocks
+   */
+  getTopOfStackFor(block) {
+    let base = block;
+    while (base.getOutputShape() && base.getSurroundParent()) {
+      base = base.getSurroundParent();
+    }
+    return base;
+  }
+}
+class NavigationHistory {
+  /**
+   * Keep a record of the scroll and zoom position
+   */
+  storeView(next, dist) {
+    forward = [];
+    let workspace = Blockly.getMainWorkspace(),
+      s = workspace.getMetrics();
+    let pos = {
+      left: s.viewLeft,
+      top: s.viewTop
+    };
+    if (!next || distance(pos, next) > dist) {
+      views.push(pos);
+    }
+  }
+  peek() {
+    return views.length > 0 ? views[views.length - 1] : null;
+  }
+  goBack() {
+    const workspace = Blockly.getMainWorkspace(),
+      s = workspace.getMetrics();
+    let pos = {
+      left: s.viewLeft,
+      top: s.viewTop
+    };
+    let view = this.peek();
+    if (!view) {
+      return;
+    }
+    if (distance(pos, view) < 64) {
+      // Go back to current if we are already far away from it
+      if (views.length > 1) {
+        views.pop();
+        forward.push(view);
+      }
+    }
+    view = this.peek();
+    if (!view) {
+      return;
+    }
+    let sx = view.left - s.contentLeft,
+      sy = view.top - s.contentTop;
+
+    // transform.setTranslate(-600,0);
+
+    workspace.scrollbar.set(sx, sy);
+
+    /*
+              let blocklySvg = document.getElementsByClassName('blocklySvg')[0];
+              let blocklyBlockCanvas = blocklySvg.getElementsByClassName('blocklyBlockCanvas')[0];
+              let transform = blocklyBlockCanvas.transform.baseVal.getItem(0);
+              let scale = blocklyBlockCanvas.transform.baseVal.getItem(1);
+               let transformMatrix = transform.matrix;
+              let scaleMatrix = scale.matrix;
+               console.log('Transform - getMetrics', s);
+              console.log('sx, sy: ', sx, sy);
+              console.log('left, top: ', view.left, view.top);
+              console.log('contentLeft, right:', s.contentLeft, s.contentTop);
+              console.log('transform, scale matrix: ', transformMatrix, scaleMatrix);
+    */
+  }
+  goForward() {
+    let view = forward.pop();
+    if (!view) {
+      return;
+    }
+    views.push(view);
+    let workspace = Blockly.getMainWorkspace(),
+      s = workspace.getMetrics();
+    let sx = view.left - s.contentLeft,
+      sy = view.top - s.contentTop;
+    workspace.scrollbar.set(sx, sy);
+  }
+}
+function distance(pos, next) {
+  return Math.sqrt(Math.pow(pos.left - next.left, 2) + Math.pow(pos.top - next.top, 2));
 }
 
 /***/ }),
@@ -3081,7 +1613,7 @@ __webpack_require__.r(__webpack_exports__);
         return;
       }
       const tab = addon.tab.redux.state.scratchGui.editorTab.activeTabIndex;
-      const visible = tab === 0 || tab === 1 || tab === 2;
+      const visible = tab === 0 || tab === 1 || tab === 2 || tab === 3;
       this.findBarOuter.hidden = !visible;
     }
     inputChange() {
@@ -3186,7 +1718,7 @@ __webpack_require__.r(__webpack_exports__);
       this.prevValue = focusID ? "" : null; // Clear the previous value of the input search
 
       this.dropdownOut.classList.add("visible");
-      let scratchBlocks = this.selectedTab === 0 ? this.getScratchBlocks() : this.selectedTab === 1 ? this.getScratchCostumes() : this.selectedTab === 2 ? this.getScratchSounds() : [];
+      let scratchBlocks = this.selectedTab === 0 ? this.getScratchBlocks() : this.selectedTab === 1 ? this.getScratchCostumes() : this.selectedTab === 2 ? this.getScratchSounds() : this.selectedTab === 3 ? this.getScratchAssets() : [];
       this.dropdown.empty();
       for (const proc of scratchBlocks) {
         let item = this.dropdown.addItem(proc);
@@ -3354,6 +1886,17 @@ __webpack_require__.r(__webpack_exports__);
       }
       return items;
     }
+    getScratchAssets() {
+      let assets = this.utils.getEditingTarget().getAssets();
+      let items = [];
+      let i = 0;
+      for (const asset of assets) {
+        let item = new _blockly_BlockItem_js__WEBPACK_IMPORTED_MODULE_0__["default"]("asset", asset.name, asset.assetId, i);
+        items.push(item);
+        i++;
+      }
+      return items;
+    }
     getCallsToEvents() {
       const uses = [];
       const alreadyFound = new Set();
@@ -3455,7 +1998,8 @@ __webpack_require__.r(__webpack_exports__);
         list: "data-lists",
         LIST: "data-lists",
         costume: "looks",
-        sound: "sounds"
+        sound: "sounds",
+        asset: "assets"
       };
       if (proc.cls === "flag") {
         item.className = "sa-find-flag";
@@ -3483,7 +2027,7 @@ __webpack_require__.r(__webpack_exports__);
         this.selected = item;
       }
       let cls = item.data.cls;
-      if (cls === "costume" || cls === "sound") {
+      if (cls === "costume" || cls === "sound" || cls === "asset") {
         // Viewing costumes/sounds - jump to selected costume/sound
         const assetPanel = document.querySelector("[class^=asset-panel_wrapper]");
         if (assetPanel) {
@@ -3946,10 +2490,6 @@ const addDefaultAssetFolderIfMissing = asset => {
       return addon.self.getResource("/folder.svg") /* rewritten by pull.js */;
     }
   };
-
-  // https://github.com/scratchfoundation/scratch-gui/blob/develop/src/components/asset-panel/icon--sound.svg
-  const imageIconSource = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<svg width=\"100px\" height=\"100px\" viewBox=\"0 0 20 20\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n    <g id=\"Sound\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n        <path d=\"M12.4785058,12.6666667 C12.3144947,12.6666667 12.1458852,12.6272044 11.9926038,12.5440517 C11.537358,12.2960031 11.3856094,11.7562156 11.6553847,11.3376335 C12.1688774,10.5371131 12.1688774,9.54491867 11.6553847,8.74580756 C11.3856094,8.32581618 11.537358,7.78602861 11.9926038,7.53798001 C12.452448,7.29275014 13.0379829,7.43086811 13.3046926,7.84804076 C14.1737981,9.20103311 14.1737981,10.8809986 13.3046926,12.233991 C13.1268862,12.5130457 12.806528,12.6666667 12.4785058,12.6666667 Z M15.3806784,13.8333333 C15.2408902,13.8333333 15.0958763,13.796281 14.9665396,13.7182064 C14.5785295,13.485306 14.4491928,12.9784829 14.6791247,12.5854634 C15.5949331,11.0160321 15.5949331,9.065491 14.6791247,7.49738299 C14.4491928,7.10436352 14.5785295,6.59621712 14.9665396,6.36331669 C15.3558562,6.13438616 15.8549129,6.26274605 16.0848448,6.65444223 C17.3050517,8.74260632 17.3050517,11.3389168 16.0848448,13.4270809 C15.9319924,13.6890939 15.6602547,13.8333333 15.3806784,13.8333333 Z M10.3043478,5.62501557 L10.3043478,13.873675 C10.3043478,14.850934 9.10969849,15.3625101 8.36478311,14.7038052 L6.7566013,13.2797607 C6.18712394,12.7762834 5.44499329,12.4968737 4.67362297,12.4968737 L4.3923652,12.4968737 C3.62377961,12.4968737 3,11.8935108 3,11.1470686 L3,8.36646989 C3,7.62137743 3.62377961,7.01666471 4.3923652,7.01666471 L4.65830695,7.01666471 C5.42967727,7.01666471 6.17180792,6.73725504 6.74128529,6.23377771 L8.36478311,4.79623519 C9.10969849,4.13753026 10.3043478,4.64910643 10.3043478,5.62501557 Z\" id=\"Combined-Shape\" fill=\"#575E75\"></path>\n    </g>\n</svg>";
-  const soundIconHref = "data:image/svg+xml;base64,".concat(btoa(imageIconSource));
   let folderColorStylesheet = null;
   const folderColors = Object.create(null);
   const getFolderColorClass = folderName => {
@@ -4059,6 +2599,17 @@ const addDefaultAssetFolderIfMissing = asset => {
       vm.emitTargetsUpdate();
     }
   };
+  const fixAssetOrder = function fixAssetOrder() {
+    let target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : vm.editingTarget;
+    const {
+      items,
+      changed
+    } = fixOrderOfItemsInFolders(target.sprite.assets);
+    if (changed) {
+      target.sprite.assets = items;
+      vm.emitTargetsUpdate();
+    }
+  };
   const verifySortableHOC = sortableHOCInstance => {
     const SortableHOC = sortableHOCInstance.constructor;
     if (Array.isArray(sortableHOCInstance.props.items) && (typeof sortableHOCInstance.props.selectedId === "string" || typeof sortableHOCInstance.props.selectedItemIndex === "number") && typeof sortableHOCInstance.containerBox !== "undefined" && typeof SortableHOC.prototype.componentDidMount === "undefined" && typeof SortableHOC.prototype.componentDidUpdate === "undefined" && typeof SortableHOC.prototype.handleAddSortable === "function" && typeof SortableHOC.prototype.handleRemoveSortable === "function" && typeof SortableHOC.prototype.setRef === "function") return;
@@ -4071,7 +2622,7 @@ const addDefaultAssetFolderIfMissing = asset => {
   };
   const verifyVM = vm => {
     const target = vm.runtime.targets[0];
-    if (typeof vm.installTargets === "function" && typeof vm.reorderTarget === "function" && typeof target.reorderCostume === "function" && typeof target.reorderSound === "function" && typeof target.addCostume === "function" && typeof target.addSound === "function") return;
+    if (typeof vm.installTargets === "function" && typeof vm.reorderTarget === "function" && typeof target.reorderCostume === "function" && typeof target.reorderSound === "function" && typeof target.addCostume === "function" && typeof target.addSound === "function" && typeof target.addAsset === "function") return;
     throw new Error("Can not comprehend VM");
   };
   const verifyBackpack = backpackInstance => {
@@ -4138,7 +2689,7 @@ const addDefaultAssetFolderIfMissing = asset => {
         } else if (item.costume && item.costume.asset) {
           src = item.costume.asset.encodeDataURI();
         } else if (item.url) {
-          src = soundIconHref;
+          src = item.url;
         }
         if (src) {
           result += "<image width=\"".concat(width, "\" height=\"").concat(height, "\" x=\"").concat(x, "\" y=\"").concat(y, "\" href=\"").concat(src, "\"/>");
@@ -4292,6 +2843,7 @@ const addDefaultAssetFolderIfMissing = asset => {
             folderItem.asset = folderAsset;
             if (!folderItem.dragPayload) folderItem.dragPayload = {};
             folderItem.dragPayload.sa_folder_items = folderItems;
+            folderItem.dragPayload.sa_folder_type = props.dragType;
           }
           items.push(folderItem);
           if (isOpen) {
@@ -4428,7 +2980,7 @@ const addDefaultAssetFolderIfMissing = asset => {
   };
   await addon.tab.scratchClassReady();
   addon.tab.createEditorContextMenu((ctxType, ctx) => {
-    if (ctxType !== "sprite" && ctxType !== "costume" && ctxType !== "sound") return;
+    if (ctxType !== "sprite" && ctxType !== "costume" && ctxType !== "sound" && ctxType !== "asset") return;
     const component = ctx.target[addon.tab.traps.getInternalKey(ctx.target)].return.return.return.stateNode;
     const data = getItemData(component.props);
     if (!data) return;
@@ -4466,6 +3018,14 @@ const addDefaultAssetFolderIfMissing = asset => {
             }
           }
           fixSoundOrder();
+        } else if (component.props.dragType === "ASSET") {
+          for (let i = 0; i < vm.editingTarget.sprite.assets.length; i++) {
+            const asset = vm.editingTarget.sprite.assets[i];
+            if (getFolderFromName(asset.name) === data.folder) {
+              vm.renameAsset(i, setFolderOfName(asset.name, newName), asset.dataFormat);
+            }
+          }
+          fixAssetOrder();
         }
       };
       const renameFolder = async () => {
@@ -4522,6 +3082,12 @@ const addDefaultAssetFolderIfMissing = asset => {
           const asset = vm.editingTarget.sprite.sounds[index];
           vm.renameSound(vm.editingTarget.sprite.sounds.indexOf(asset), setFolderOfName(asset.name, folder));
           fixSoundOrder();
+        } else if (component.props.dragType === "ASSET") {
+          const data = getItemData(component.props);
+          const index = data.realIndex;
+          const asset = vm.editingTarget.sprite.assets[index];
+          vm.renameAsset(vm.editingTarget.sprite.assets.indexOf(asset), setFolderOfName(asset.name, folder), asset.dataFormat);
+          fixAssetOrder();
         }
       };
       const createFolder = async () => {
@@ -4727,6 +3293,16 @@ const addDefaultAssetFolderIfMissing = asset => {
       fixSoundOrder(this);
       return r;
     };
+    const originalAddAsset = RenderedTarget.prototype.addAsset;
+    RenderedTarget.prototype.addAsset = function () {
+      for (var _len8 = arguments.length, args = new Array(_len8), _key8 = 0; _key8 < _len8; _key8++) {
+        args[_key8] = arguments[_key8];
+      }
+      addDefaultAssetFolderIfMissing(args[0]);
+      const r = originalAddAsset.call(this, ...args);
+      fixAssetOrder(this);
+      return r;
+    };
     const abstractReorder = (_ref2, itemIndex, newIndex) => {
       let {
         guiItems,
@@ -4901,12 +3477,31 @@ const addDefaultAssetFolderIfMissing = asset => {
         zeroIndexed: true
       }, soundIndex, newIndex);
     };
+    RenderedTarget.prototype.reorderAsset = function (assetIndex, newIndex) {
+      return abstractReorder({
+        getAll: () => {
+          return this.sprite.assets;
+        },
+        set: assets => {
+          this.sprite.assets = assets;
+        },
+        rename: (item, name) => {
+          this.renameAsset(this.sprite.assets.indexOf(item), name, item.dataFormat);
+        },
+        getVMItemFromGUIItem: (item, assets) => {
+          const itemData = getItemData(item);
+          return assets.find(c => c.name === itemData.realName);
+        },
+        guiItems: currentAssetItems,
+        zeroIndexed: true
+      }, assetIndex, newIndex);
+    };
 
     // Temporal bug fix for #5762
     const originalShareSoundToTarget = vm.shareSoundToTarget;
     vm.shareSoundToTarget = function () {
-      for (var _len8 = arguments.length, args = new Array(_len8), _key8 = 0; _key8 < _len8; _key8++) {
-        args[_key8] = arguments[_key8];
+      for (var _len9 = arguments.length, args = new Array(_len9), _key9 = 0; _key9 < _len9; _key9++) {
+        args[_key9] = arguments[_key9];
       }
       const target = this.runtime.getTargetById(args[1]);
       if (!target) {
@@ -4927,11 +3522,7 @@ const addDefaultAssetFolderIfMissing = asset => {
         let payload;
         let type;
         if (item.dragPayload) {
-          if (item.url) {
-            type = "SOUND";
-          } else {
-            type = "COSTUME";
-          }
+          type = this.sa_queuedType || (item.url ? "SOUND" : "COSTUME");
           payload = item.dragPayload;
         } else if (item.id) {
           type = "SPRITE";
@@ -4952,18 +3543,20 @@ const addDefaultAssetFolderIfMissing = asset => {
     };
     const originalHandleDrop = Backpack.prototype.handleDrop;
     Backpack.prototype.handleDrop = function () {
-      for (var _len9 = arguments.length, args = new Array(_len9), _key9 = 0; _key9 < _len9; _key9++) {
-        args[_key9] = arguments[_key9];
+      for (var _len0 = arguments.length, args = new Array(_len0), _key0 = 0; _key0 < _len0; _key0++) {
+        args[_key0] = arguments[_key0];
       }
       // When a folder is dropped into the backpack, upload all the items in the folder.
       const dragInfo = args[0];
       const folderItems = dragInfo && dragInfo.payload && dragInfo.payload.sa_folder_items;
+      const folderType = dragInfo && dragInfo.payload && dragInfo.payload.sa_folder_type;
       if (Array.isArray(folderItems)) {
         addon.tab.confirm("", msg("confirm-backpack-folder"), {
           useEditorClasses: true
         }).then(result => {
           if (!result) return;
           this.sa_queuedItems = folderItems;
+          this.sa_queuedType = folderType;
           this.sa_loadNextItem();
         });
         return;
@@ -5521,7 +4114,7 @@ class BlockInputEnum extends BlockInput {
       if (typeof options[i][1] === "string" && BlockInputEnum.INVALID_VALUES.indexOf(options[i][1]) === -1) {
         this.values.push({
           value: options[i][1],
-          string: options[i][0].replaceAll(String.fromCharCode(160), " ")
+          string: options[i][0].replace(/\u00a0/g, " ")
         });
       }
     }
@@ -5718,12 +4311,12 @@ class BlockTypeInfo {
         }
       } else {
         if (!field.argType_) {
-          if (field.getText().trim().length !== 0) parts.push(field.getText());
+          if (field.getText().trim().length !== 0) parts.push(field.getText().replace("≥", ">=").replace("≤", "<="));
         } else if (field.argType_[0] === "colour") {
           addInput(new BlockInputColour(inputIdx, fieldIdx));
         } else if (field.argType_[1] === "number") {
           addInput(new BlockInputNumber(inputIdx, fieldIdx, field.text_));
-        } else {
+        } else if (field.argType_[0] !== "extendable") {
           addInput(new BlockInputString(inputIdx, fieldIdx, field.text_));
         }
       }
@@ -6426,7 +5019,7 @@ class TokenTypeStringLiteral extends TokenType {
  * This token type also supports numbers in formats scratch doesn't let you type,
  * but accepts like '0xFF', 'Infinity' or '1e3'.
  */
-_defineProperty(TokenTypeStringLiteral, "TERMINATORS", [undefined, " ", "+", "-", "*", "/", "=", "<", ">", ")"]);
+_defineProperty(TokenTypeStringLiteral, "TERMINATORS", [undefined, " ", "+", "-", "*", "/", "^", "<=", ">=", "=", "<", ">", ")"]);
 class TokenTypeNumberLiteral extends TokenType {
   static isValidNumber(str) {
     return !isNaN(+str) || !isNaN(parseFloat(+str));
@@ -6593,6 +5186,7 @@ class TokenTypeBlock extends TokenType {
           strings.push(...blockPart.toLowerCase().split(" "));
         } else if (blockPart.type === _BlockTypeInfo_js__WEBPACK_IMPORTED_MODULE_0__["BlockInputType"].ENUM) {
           for (const enumValue of blockPart.values) {
+            if (_this.stringForms.length >= WorkspaceQuerier.MAX_RESULTS) return;
             _enumerateStringForms(partIdx + 1, [...strings, ...enumValue.string.toLowerCase().split(" ")], [...inputs, enumValue], length + enumValue.string.length);
           }
           return;
@@ -6607,6 +5201,10 @@ class TokenTypeBlock extends TokenType {
       });
     };
     _enumerateStringForms();
+    if (this.stringForms.length >= WorkspaceQuerier.MAX_STRING_FORMS) {
+      console.warn("Warning: Block '" + this.block.id + "' has too many string forms. Search results may not be very good.");
+      this.stringForms.length = 0;
+    }
   }
 
   /**
@@ -6904,7 +5502,7 @@ class QueryInfo {
     /** @type {WorkspaceQuerier} */
     this.querier = querier;
     /** @type {string} The query */
-    this.str = query.replaceAll(String.fromCharCode(160), " ");
+    this.str = query.replace(/\u00a0/g, " ");
     /** @type {string} A lowercase version of the query. Used for case insensitive comparisons. */
     this.lowercase = this.str.toLowerCase();
     /** @type {number} A unique identifier for this query */
@@ -7013,11 +5611,11 @@ class WorkspaceQuerier {
       }
       ++query.resultCount;
       if (!limited && query.resultCount >= WorkspaceQuerier.MAX_RESULTS) {
-        console.log("Warning: Workspace query exceeded maximum result count.");
+        console.warn("Warning: Workspace query exceeded maximum result count.");
         limited = true;
       }
       if (!query.canCreateMoreTokens()) {
-        console.log("Warning: Workspace query exceeded maximum token count.");
+        console.warn("Warning: Workspace query exceeded maximum token count.");
         limited = true;
         break;
       }
@@ -7195,7 +5793,7 @@ class WorkspaceQuerier {
 }
 _defineProperty(WorkspaceQuerier, "ORDER_OF_OPERATIONS", [null,
 // brackets
-"operator_join", "operator_round", "operator_mathop", "operator_mod", "operator_divide", "operator_multiply", "operator_subtract", "operator_add", "operator_equals", "operator_lt", "operator_gt", "operator_or", "operator_and", "operator_not"]);
+"operator_join", "operator_round", "operator_mathop", "operator_power", "operator_mod", "operator_divide", "operator_multiply", "operator_subtract", "operator_add", "operator_equals", "operator_lte", "operator_lt", "operator_gte", "operator_gt", "operator_or", "operator_xor", "operator_and", "operator_not"]);
 /**
  * The maximum number of results to find before we give up searching sub-blocks.
  */
@@ -7203,7 +5801,11 @@ _defineProperty(WorkspaceQuerier, "MAX_RESULTS", 2000);
 /**
  * The maximum number of tokens to find before giving up.
  */
-_defineProperty(WorkspaceQuerier, "MAX_TOKENS", 10000);
+_defineProperty(WorkspaceQuerier, "MAX_TOKENS", 100000);
+/**
+ * The maximum number of string forms a block can have before we give up.
+ */
+_defineProperty(WorkspaceQuerier, "MAX_STRING_FORMS", 500);
 
 /***/ }),
 
@@ -7695,83 +6297,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/addons/addons/move-to-top-bottom/_runtime_entry.js":
-/*!****************************************************************!*\
-  !*** ./src/addons/addons/move-to-top-bottom/_runtime_entry.js ***!
-  \****************************************************************/
-/*! exports provided: resources */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "resources", function() { return resources; });
-/* harmony import */ var _userscript_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./userscript.js */ "./src/addons/addons/move-to-top-bottom/userscript.js");
-/* generated by pull.js */
-
-const resources = {
-  "userscript.js": _userscript_js__WEBPACK_IMPORTED_MODULE_0__["default"]
-};
-
-/***/ }),
-
-/***/ "./src/addons/addons/move-to-top-bottom/userscript.js":
-/*!************************************************************!*\
-  !*** ./src/addons/addons/move-to-top-bottom/userscript.js ***!
-  \************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (async _ref => {
-  let {
-    addon,
-    console,
-    msg
-  } = _ref;
-  const types = ["sound", "costume"];
-  addon.tab.createEditorContextMenu(ctx => {
-    const target = addon.tab.traps.vm.editingTarget;
-    if (ctx.type === "sound") {
-      target.reorderSound(ctx.index, 0);
-    } else {
-      target.reorderCostume(ctx.index, 0);
-    }
-    queueMicrotask(() => {
-      addon.tab.traps.vm.emitTargetsUpdate();
-      addon.tab.traps.vm.runtime.emitProjectChanged();
-      ctx.target.click();
-    });
-  }, {
-    types,
-    position: "assetContextMenuAfterExport",
-    order: 1,
-    label: msg("top"),
-    condition: ctx => ctx.index !== 0
-  });
-  addon.tab.createEditorContextMenu(ctx => {
-    const target = addon.tab.traps.vm.editingTarget;
-    if (ctx.type === "sound") {
-      target.reorderSound(ctx.index, Infinity);
-    } else {
-      target.reorderCostume(ctx.index, Infinity);
-    }
-    queueMicrotask(() => {
-      addon.tab.traps.vm.emitTargetsUpdate();
-      addon.tab.traps.vm.runtime.emitProjectChanged();
-      ctx.target.click();
-    });
-  }, {
-    types,
-    position: "assetContextMenuAfterExport",
-    order: 2,
-    label: msg("bottom"),
-    condition: ctx => ctx.index !== ctx.target.parentNode.parentNode.childElementCount - 1
-  });
-});
-
-/***/ }),
-
 /***/ "./src/addons/addons/onion-skinning/_runtime_entry.js":
 /*!************************************************************!*\
   !*** ./src/addons/addons/onion-skinning/_runtime_entry.js ***!
@@ -7816,6 +6341,9 @@ const resources = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _turbowarp_scratch_svg_renderer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @turbowarp/scratch-svg-renderer */ "./node_modules/@turbowarp/scratch-svg-renderer/src/index.js");
+/* harmony import */ var _turbowarp_scratch_svg_renderer__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_turbowarp_scratch_svg_renderer__WEBPACK_IMPORTED_MODULE_0__);
+
 /* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
   let {
     addon,
@@ -8102,6 +6630,7 @@ __webpack_require__.r(__webpack_exports__);
     return raster;
   };
   const makeVectorOnion = (opacity, costume, asset, isBefore) => new Promise((resolve, reject) => {
+    asset = _turbowarp_scratch_svg_renderer__WEBPACK_IMPORTED_MODULE_0__["sanitizeSvg"].sanitizeSvgText(asset);
     const {
       rotationCenterX,
       rotationCenterY
@@ -8586,188 +7115,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/addons/addons/paint-skew/_runtime_entry.js":
-/*!********************************************************!*\
-  !*** ./src/addons/addons/paint-skew/_runtime_entry.js ***!
-  \********************************************************/
-/*! exports provided: resources */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "resources", function() { return resources; });
-/* harmony import */ var _userscript_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./userscript.js */ "./src/addons/addons/paint-skew/userscript.js");
-/* generated by pull.js */
-
-const resources = {
-  "userscript.js": _userscript_js__WEBPACK_IMPORTED_MODULE_0__["default"]
-};
-
-/***/ }),
-
-/***/ "./src/addons/addons/paint-skew/userscript.js":
-/*!****************************************************!*\
-  !*** ./src/addons/addons/paint-skew/userscript.js ***!
-  \****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _paint_snap_compatibility_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../paint-snap/compatibility.js */ "./src/addons/addons/paint-snap/compatibility.js");
-
-/* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
-  let {
-    addon
-  } = _ref;
-  const paper = await addon.tab.traps.getPaper();
-  const addSkew = function addSkew() {
-    var _paper$tool$boundingB, _paper$tool$boundingB2;
-    if (!paper.tool || !paper.tool.boundingBoxTool) return;
-    // ScaleTool
-    const ST = (_paper$tool$boundingB = paper.tool.boundingBoxTool._modeMap) === null || _paper$tool$boundingB === void 0 ? void 0 : (_paper$tool$boundingB2 = _paper$tool$boundingB.SCALE) === null || _paper$tool$boundingB2 === void 0 ? void 0 : _paper$tool$boundingB2.constructor;
-    if (!ST || ST.hasSkew) {
-      return;
-    }
-    ST.hasSkew = true;
-    const ogMouseDown = ST.prototype.onMouseDown;
-    ST.prototype.onMouseDown = function (hitResult, boundsPath, selectedItems) {
-      if (this.active) return;
-      this.index = hitResult.item.data.index;
-      ogMouseDown.call(this, hitResult, boundsPath, selectedItems);
-      this.skewCenter = false;
-      this.lastSkx = 0;
-      this.lastSky = 0;
-      this.skewBounds = this.itemGroup.bounds.clone();
-    };
-    _paint_snap_compatibility_js__WEBPACK_IMPORTED_MODULE_0__["addons"].paintSkew = function (event, original) {
-      if (!this.active) return;
-      if (addon.self.disabled) return original();
-      const bounds = this.skewBounds;
-      const doShear = (skx, sky) => {
-        if (skx === 0 && sky === 0) return;
-        let offcenterPosition;
-        if (!this.skewCenter) {
-          switch (this._getRectCornerNameByIndex(this.index)) {
-            case "topCenter":
-            case "leftCenter":
-              offcenterPosition = this.itemGroup.position.add(new paper.Point(bounds.width / 2, bounds.height / 2));
-              break;
-            case "bottomCenter":
-            case "rightCenter":
-              offcenterPosition = this.itemGroup.position.subtract(new paper.Point(bounds.width / 2, bounds.height / 2));
-              break;
-          }
-        }
-        const position = this.skewCenter ? this.itemGroup.position : offcenterPosition;
-        const shearMult = this.skewCenter ? 2 : 1;
-        // swap width and height because apparently
-        // shearing is based on the dimension perpendicular
-        // to the one that is being skewed
-        const shearX = skx / bounds.height * shearMult;
-        const shearY = sky / bounds.width * shearMult;
-        this.itemGroup.shear(shearX, shearY, position);
-        if (this.selectionAnchor) {
-          this.selectionAnchor.shear(-shearX, -shearY);
-        }
-      };
-
-      // Revert skew
-      doShear(-this.lastSkx, -this.lastSky);
-      this.skewCenter = event.modifiers.alt;
-      let skx = 0;
-      let sky = 0;
-      this.lastSkx = 0;
-      this.lastSky = 0;
-      if ((event.modifiers.control || event.modifiers.command) && !this.isCorner) {
-        // Skew
-        // Reset position
-        this.centered = false;
-        this.itemGroup.scale(1 / this.lastSx, 1 / this.lastSy, this.pivot);
-        if (this.selectionAnchor) {
-          this.selectionAnchor.scale(this.lastSx, this.lastSy);
-        }
-        this.lastSx = 1;
-        this.lastSy = 1;
-        const delta = event.point.subtract(this.pivot);
-        switch (this._getRectCornerNameByIndex(this.index)) {
-          case "topCenter":
-            delta.x *= -1;
-            delta.y = 0;
-            break;
-          case "bottomCenter":
-            delta.y = 0;
-            break;
-          case "leftCenter":
-            delta.y *= -1;
-            delta.x = 0;
-            break;
-          case "rightCenter":
-            delta.x = 0;
-            break;
-          default:
-            delta.x = 0;
-            delta.y = 0;
-        }
-        skx = delta.x;
-        sky = delta.y;
-        doShear(skx, sky);
-      } else {
-        // Scale
-        original();
-      }
-      this.lastSkx = skx;
-      this.lastSky = sky;
-    };
-    Object(_paint_snap_compatibility_js__WEBPACK_IMPORTED_MODULE_0__["initialize"])(paper, ST);
-  };
-  addon.tab.redux.initialize();
-  addon.tab.redux.addEventListener("statechanged", e => {
-    const action = e.detail.action;
-    if (action.type === "scratch-paint/modes/CHANGE_MODE" && (action.mode === "BIT_SELECT" || action.mode === "SELECT")) {
-      addSkew();
-    }
-  });
-  addSkew();
-});
-
-/***/ }),
-
-/***/ "./src/addons/addons/paint-snap/compatibility.js":
-/*!*******************************************************!*\
-  !*** ./src/addons/addons/paint-snap/compatibility.js ***!
-  \*******************************************************/
-/*! exports provided: addons, initialize */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addons", function() { return addons; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initialize", function() { return initialize; });
-let overridden = false;
-const addons = {
-  paintSkew: null,
-  paintSnap: null
-};
-function initialize(paper, ScaleTool) {
-  if (overridden) return;
-  overridden = true;
-  const ogMouseDrag = ScaleTool.prototype.onMouseDrag;
-  ScaleTool.prototype.onMouseDrag = function (event) {
-    if (!this.active) return;
-    const callSnap = () => {
-      if (addons.paintSnap) addons.paintSnap.call(this, event);else ogMouseDrag.call(this, event);
-    };
-    if (addons.paintSkew) {
-      addons.paintSkew.call(this, event, callSnap);
-    } else {
-      callSnap();
-    }
-  };
-}
-
-/***/ }),
-
 /***/ "./src/addons/addons/pick-colors-from-stage/_runtime_entry.js":
 /*!********************************************************************!*\
   !*** ./src/addons/addons/pick-colors-from-stage/_runtime_entry.js ***!
@@ -9081,299 +7428,6 @@ __webpack_require__.r(__webpack_exports__);
     }
   };
   updateExistingMenuGenerators();
-});
-
-/***/ }),
-
-/***/ "./src/addons/addons/reorder-custom-inputs/_runtime_entry.js":
-/*!*******************************************************************!*\
-  !*** ./src/addons/addons/reorder-custom-inputs/_runtime_entry.js ***!
-  \*******************************************************************/
-/*! exports provided: resources */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "resources", function() { return resources; });
-/* harmony import */ var _userscript_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./userscript.js */ "./src/addons/addons/reorder-custom-inputs/userscript.js");
-/* harmony import */ var _css_loader_arrows_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! css-loader!./arrows.css */ "./node_modules/css-loader/index.js!./src/addons/addons/reorder-custom-inputs/arrows.css");
-/* harmony import */ var _css_loader_arrows_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_loader_arrows_css__WEBPACK_IMPORTED_MODULE_1__);
-/* generated by pull.js */
-
-
-const resources = {
-  "userscript.js": _userscript_js__WEBPACK_IMPORTED_MODULE_0__["default"],
-  "arrows.css": _css_loader_arrows_css__WEBPACK_IMPORTED_MODULE_1___default.a
-};
-
-/***/ }),
-
-/***/ "./src/addons/addons/reorder-custom-inputs/modified-funcs.js":
-/*!*******************************************************************!*\
-  !*** ./src/addons/addons/reorder-custom-inputs/modified-funcs.js ***!
-  \*******************************************************************/
-/*! exports provided: modifiedCreateAllInputs, modifiedUpdateDeclarationProcCode */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "modifiedCreateAllInputs", function() { return modifiedCreateAllInputs; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "modifiedUpdateDeclarationProcCode", function() { return modifiedUpdateDeclarationProcCode; });
-// https://github.com/scratchfoundation/scratch-blocks/blob/f210e042988b91bcdc2abeca7a2d85e178edadb2/blocks_vertical/procedures.js#L205
-function modifiedCreateAllInputs(connectionMap) {
-  // Split the proc into components, by %n, %b, %s and %l (ignoring escaped).
-  var procComponents = this.procCode_.split(/(?=[^\\]%[nbsl])/);
-  procComponents = procComponents.map(function (c) {
-    return c.trim(); // Strip whitespace.
-  });
-
-  // Create arguments and labels as appropriate.
-  var argumentCount = 0;
-  for (var i = 0, component; component = procComponents[i]; i++) {
-    var labelText;
-    // Don't treat %l as an argument
-    if (component.substring(0, 1) == "%" && component.substring(1, 2) !== "l") {
-      var argumentType = component.substring(1, 2);
-      if (!(argumentType == "n" || argumentType == "b" || argumentType == "s")) {
-        throw new Error("Found an custom procedure with an invalid type: " + argumentType);
-      }
-      labelText = component.substring(2).trim();
-      var id = this.argumentIds_[argumentCount];
-      var input = this.appendValueInput(id);
-      if (argumentType == "b") {
-        input.setCheck("Boolean");
-      }
-      this.populateArgument_(argumentType, argumentCount, connectionMap, id, input);
-      argumentCount++;
-    } else {
-      labelText = component == "%l" ? " " : component.replace("%l", "").trim();
-    }
-    this.addProcedureLabel_(labelText.replace(/\\%/, "%"));
-  }
-
-  // remove all traces of %l at the earliest possible time
-  this.procCode_ = this.procCode_.replaceAll("%l ", "");
-}
-
-//https://github.com/scratchfoundation/scratch-blocks/blob/f210e042988b91bcdc2abeca7a2d85e178edadb2/blocks_vertical/procedures.js#L565
-function modifiedUpdateDeclarationProcCode() {
-  let prefixLabels = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
-  this.procCode_ = "";
-  this.displayNames_ = [];
-  this.argumentIds_ = [];
-  for (var i = 0; i < this.inputList.length; i++) {
-    if (i != 0) {
-      this.procCode_ += " ";
-    }
-    var input = this.inputList[i];
-    if (input.type == 5) {
-      // replaced Blocky.DUMMY_VALUE with 5
-      this.procCode_ += (prefixLabels ? "%l " : "") + input.fieldRow[0].getValue(); // modified to prepend %l delimiter, which prevents label merging
-    } else if (input.type == 1) {
-      // replaced Blocky.INPUT_VALUE with 1
-      // Inspect the argument editor.
-      var target = input.connection.targetBlock();
-      this.displayNames_.push(target.getFieldValue("TEXT"));
-      this.argumentIds_.push(input.name);
-      if (target.type == "argument_editor_boolean") {
-        this.procCode_ += "%b";
-      } else {
-        this.procCode_ += "%s";
-      }
-    } else {
-      throw new Error("Unexpected input type on a procedure mutator root: " + input.type);
-    }
-  }
-}
-
-/***/ }),
-
-/***/ "./src/addons/addons/reorder-custom-inputs/userscript.js":
-/*!***************************************************************!*\
-  !*** ./src/addons/addons/reorder-custom-inputs/userscript.js ***!
-  \***************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modified_funcs_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modified-funcs.js */ "./src/addons/addons/reorder-custom-inputs/modified-funcs.js");
-
-/* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
-  let {
-    addon,
-    console
-  } = _ref;
-  function createArrow(direction, callback) {
-    const path = direction === "left" ? "M 17 13 L 9 21 L 17 30" : "M 9 13 L 17 21 L 9 30";
-    Blockly.WidgetDiv.DIV.insertAdjacentHTML("beforeend", "\n            <svg width=\"20px\" height=\"40px\" \n                 style=\"left: ".concat(direction === "left" ? "calc(50% - 20px)" : "calc(50% + 20px)", "\" \n                 class=\"blocklyTextShiftArrow\">\n                <path d=\"").concat(path, "\" fill=\"none\" stroke=\"#FF661A\" stroke-width=\"2\"></path>\n            </svg>"));
-    Blockly.WidgetDiv.DIV.lastChild.addEventListener("click", callback);
-  }
-
-  //https://github.com/scratchfoundation/scratch-blocks/blob/f210e042988b91bcdc2abeca7a2d85e178edadb2/blocks_vertical/procedures.js#L674
-  function modifiedRemoveFieldCallback(field) {
-    // Do not delete if there is only one input
-    if (this.inputList.length === 1) {
-      return;
-    }
-    var inputNameToRemove = null;
-    for (var n = 0; n < this.inputList.length; n++) {
-      var input = this.inputList[n];
-      if (input.connection) {
-        var target = input.connection.targetBlock();
-        if (target.getField(field.name) == field) {
-          inputNameToRemove = input.name;
-        }
-      } else {
-        for (var j = 0; j < input.fieldRow.length; j++) {
-          if (input.fieldRow[j] == field) {
-            inputNameToRemove = input.name;
-          }
-        }
-      }
-    }
-    if (inputNameToRemove) {
-      Blockly.WidgetDiv.hide(true);
-      this.removeInput(inputNameToRemove);
-      this.onChangeFn(true); // this is the only part we changed. We added this boolean input, which lets us switch on the merging.
-      this.updateDisplay_();
-    }
-  }
-  function addInputAfter(addInputFn, fnName) {
-    return function () {
-      var _selectedField;
-      const sourceBlock = (_selectedField = selectedField) === null || _selectedField === void 0 ? void 0 : _selectedField.sourceBlock_;
-      const proc = sourceBlock ? sourceBlock.parentBlock_ ? sourceBlock.parentBlock_ : sourceBlock : this;
-
-      // if a label is added, scratch's code will directly append the label text to the procCode
-      // We account for this with a hacky method of adding the delimiter at the end of the last label input
-      if (fnName === "addLabelExternal") {
-        const lastInput = proc.inputList[proc.inputList.length - 1];
-        if (lastInput.type === Blockly.DUMMY_INPUT) {
-          lastInput.fieldRow[0].setValue(lastInput.fieldRow[0].getValue() + " %l");
-        }
-      }
-      proc.onChangeFn(true);
-      if (sourceBlock === null || sourceBlock === undefined || !addon.settings.get("InsertInputsAfter")) return addInputFn.call(this, ...arguments);
-      let newPosition = getFieldInputNameAndIndex(selectedField, proc.inputList).index + 1;
-      addInputFn.call(proc, ...arguments);
-      const lastInputName = proc.inputList[proc.inputList.length - 1].name;
-      shiftInput(proc, lastInputName, newPosition);
-    };
-  }
-  function getFieldInputNameAndIndex(field, inputList) {
-    for (const [i, input] of inputList.entries()) {
-      var _input$connection$tar;
-      const isTargetField = input.connection ? ((_input$connection$tar = input.connection.targetBlock()) === null || _input$connection$tar === void 0 ? void 0 : _input$connection$tar.getField(field.name)) === field : input.fieldRow.includes(field);
-      if (isTargetField) {
-        return {
-          name: input.name,
-          index: i
-        };
-      }
-    }
-  }
-  function shiftInput(procedureBlock, inputNameToShift, newPosition) {
-    const initialInputListLength = procedureBlock.inputList.length;
-
-    // return if inputNameToShift and newPosition are not valid
-    if (!(inputNameToShift && newPosition >= 0 && newPosition <= initialInputListLength)) {
-      return false;
-    }
-    const originalPosition = procedureBlock.inputList.findIndex(input => input.name === inputNameToShift);
-    const itemToMove = procedureBlock.inputList.splice(originalPosition, 1)[0];
-    procedureBlock.inputList.splice(newPosition, 0, itemToMove);
-    Blockly.Events.disable();
-    try {
-      procedureBlock.onChangeFn(true);
-      procedureBlock.updateDisplay_();
-    } finally {
-      Blockly.Events.enable();
-    }
-    focusOnInput(procedureBlock.inputList[newPosition]);
-  }
-  function focusOnInput(input) {
-    if (!input) return;
-    if (input.type === Blockly.DUMMY_INPUT) {
-      input.fieldRow[0].showEditor_();
-    } else if (input.type === Blockly.INPUT_VALUE) {
-      const target = input.connection.targetBlock();
-      target.getField("TEXT").showEditor_();
-    }
-  }
-  function shiftFieldCallback(sourceBlock, field, direction) {
-    const proc = sourceBlock.parentBlock_ ? sourceBlock.parentBlock_ : sourceBlock;
-
-    // if inputList length is 1 there's nowhere to shift the input so we can simply return
-    if (proc.inputList.length <= 1) return;
-    const {
-      name,
-      index
-    } = getFieldInputNameAndIndex(field, proc.inputList);
-    const newPosition = direction === "left" ? index - 1 : index + 1;
-    shiftInput(proc, name, newPosition);
-  }
-  function polluteProcedureDeclaration(procedureDeclaration) {
-    let save_original = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-    procedureDeclaration.createAllInputs_ = _modified_funcs_js__WEBPACK_IMPORTED_MODULE_0__["modifiedCreateAllInputs"];
-    procedureDeclaration.onChangeFn = _modified_funcs_js__WEBPACK_IMPORTED_MODULE_0__["modifiedUpdateDeclarationProcCode"];
-    procedureDeclaration.removeFieldCallback = modifiedRemoveFieldCallback;
-    for (const inputFn of ["addLabelExternal", "addBooleanExternal", "addStringNumberExternal"]) {
-      if (save_original) {
-        originalAddFns[inputFn] = procedureDeclaration[inputFn];
-      }
-      procedureDeclaration[inputFn] = addInputAfter(procedureDeclaration[inputFn], inputFn);
-    }
-  }
-  function depolluteProcedureDeclaration(procedureDeclaration) {
-    procedureDeclaration.createAllInputs_ = originalCreateAllInputs;
-    procedureDeclaration.onChangeFn = originalUpdateDeclarationProcCode;
-    procedureDeclaration.removeFieldCallback = originalRemoveFieldCallback;
-    for (const [inputFnName, originalFn] of Object.entries(originalAddFns)) {
-      procedureDeclaration[inputFnName] = originalFn;
-    }
-  }
-  function getExistingProceduresDeclarationBlock() {
-    // Blockly.getMainWorkspace is required for this to work.
-    // for future reference "upgrading" to addon.tab.traps.getWorkspace() will cause bugs.
-    return Blockly.getMainWorkspace().getAllBlocks().find(block => block.type === "procedures_declaration");
-  }
-  function enableAddon() {
-    // pollute the procedures_declaration prototype with a modified version that prevents merging, and allows inserting after
-    polluteProcedureDeclaration(Blockly.Blocks["procedures_declaration"]);
-
-    // if custom procedures modal is already open we also directly pollute the existing procedures_declaration block
-    if (addon.tab.redux.state.scratchGui.customProcedures.active) {
-      polluteProcedureDeclaration(getExistingProceduresDeclarationBlock(), false);
-    }
-    Blockly.FieldTextInputRemovable.prototype.showEditor_ = function () {
-      originalShowEditor.call(this);
-      createArrow("left", () => shiftFieldCallback(this.sourceBlock_, this, "left"));
-      createArrow("right", () => shiftFieldCallback(this.sourceBlock_, this, "right"));
-      selectedField = this;
-    };
-  }
-  function disableAddon() {
-    // depollute the procedures_declaration prototype
-    depolluteProcedureDeclaration(Blockly.Blocks["procedures_declaration"]);
-
-    // if custom procedures modal is already open we also directly depollute the existing procedures_declaration block
-    if (addon.tab.redux.state.scratchGui.customProcedures.active) {
-      depolluteProcedureDeclaration(getExistingProceduresDeclarationBlock());
-    }
-    Blockly.FieldTextInputRemovable.prototype.showEditor_ = originalShowEditor;
-    Blockly.WidgetDiv.DIV.querySelectorAll(".blocklyTextShiftArrow").forEach(e => e.remove());
-  }
-  const Blockly = await addon.tab.traps.getBlockly();
-  const originalCreateAllInputs = Blockly.Blocks["procedures_declaration"].createAllInputs_;
-  const originalUpdateDeclarationProcCode = Blockly.Blocks["procedures_declaration"].onChangeFn;
-  const originalRemoveFieldCallback = Blockly.Blocks["procedures_declaration"].removeFieldCallback;
-  const originalShowEditor = Blockly.FieldTextInputRemovable.prototype.showEditor_;
-  let originalAddFns = {};
-  let selectedField = null;
-  addon.self.addEventListener("disabled", disableAddon);
-  addon.self.addEventListener("reenabled", enableAddon);
-  enableAddon();
 });
 
 /***/ }),

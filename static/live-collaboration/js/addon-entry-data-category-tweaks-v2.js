@@ -42,18 +42,24 @@ __webpack_require__.r(__webpack_exports__);
 
   // Used in setting change handler. Updated in getBlocksXML.
   // (Yes this is weird but it's how it was originally and I'm too scared to change it)
-  let hasSeparateListCategory = false;
+  let hasSeparateListAndTableCategories = false;
   const separateVariablesByType = toolboxXML => {
     const listButtonIndex = toolboxXML.findIndex(i => i.getAttribute("callbackkey") === "CREATE_LIST" || i.getAttribute("type") === "data_addtolist");
+    const tableButtonIndex = toolboxXML.findIndex(i => i.getAttribute("callbackkey") === "CREATE_TABLE" || i.getAttribute("type") === "data_addtotable");
+    const indexes = [listButtonIndex, tableButtonIndex].filter(i => i !== -1);
+    const variablesEndIndex = indexes.length ? Math.min(...indexes) : toolboxXML.length;
+    const listsEndIndex = tableButtonIndex !== -1 ? tableButtonIndex : toolboxXML.length;
     return {
-      variables: toolboxXML.slice(0, listButtonIndex),
-      lists: toolboxXML.slice(listButtonIndex, toolboxXML.length)
+      variables: toolboxXML.slice(0, variablesEndIndex),
+      lists: listButtonIndex === -1 ? [] : toolboxXML.slice(listButtonIndex, listsEndIndex),
+      tables: tableButtonIndex === -1 ? [] : toolboxXML.slice(tableButtonIndex, toolboxXML.length)
     };
   };
   const separateLocalVariables = (workspace, toolboxXML) => {
     const {
       variables,
-      lists
+      lists,
+      tables
     } = separateVariablesByType(toolboxXML);
     const makeLabel = l10n => {
       const label = document.createElement("label");
@@ -101,12 +107,13 @@ __webpack_require__.r(__webpack_exports__);
       }
       return result.concat(after);
     };
-    return separateVariablesByScope(variables).concat(separateVariablesByScope(lists));
+    return separateVariablesByScope(variables).concat(separateVariablesByScope(lists)).concat(separateVariablesByScope(tables));
   };
   const moveReportersDown = toolboxXML => {
     const {
       variables,
-      lists
+      lists,
+      tables
     } = separateVariablesByType(toolboxXML);
     const moveReportersToEnd = xml => {
       const reporters = [];
@@ -125,11 +132,12 @@ __webpack_require__.r(__webpack_exports__);
       }
       return everythingElse.concat(reporters);
     };
-    return moveReportersToEnd(variables).concat(moveReportersToEnd(lists));
+    return moveReportersToEnd(variables).concat(moveReportersToEnd(lists)).concat(moveReportersToEnd(tables));
   };
   const DataCategory = ScratchBlocks.DataCategory;
   let variableCategory;
   let listCategory;
+  let tableCategory;
   const variableCategoryCallback = workspace => {
     let result = DataCategory(workspace);
     if (!addon.self.disabled && addon.settings.get("moveReportersDown")) {
@@ -138,20 +146,26 @@ __webpack_require__.r(__webpack_exports__);
     if (!addon.self.disabled && addon.settings.get("separateLocalVariables")) {
       result = separateLocalVariables(workspace, result);
     }
-    if (addon.self.disabled || !hasSeparateListCategory) {
+    if (addon.self.disabled || !hasSeparateListAndTableCategories) {
       return result;
     }
     const {
       variables,
-      lists
+      lists,
+      tables
     } = separateVariablesByType(result);
     variableCategory = variables;
     listCategory = lists;
+    tableCategory = tables;
     return variableCategory;
   };
   const listCategoryCallback = () => {
     // Computed in variable category callback, which should be called before this method.
     return listCategory;
+  };
+  const tableCategoryCallback = () => {
+    // Computed in variable category callback, which should be called before this method.
+    return tableCategory;
   };
 
   // Each time a new workspace is made, these callbacks are reset, so re-register whenever a flyout is shown.
@@ -160,6 +174,7 @@ __webpack_require__.r(__webpack_exports__);
   ScratchBlocks.Flyout.prototype.show = function (xmlList) {
     this.workspace_.registerToolboxCategoryCallback("VARIABLE", variableCategoryCallback);
     this.workspace_.registerToolboxCategoryCallback("LIST", listCategoryCallback);
+    this.workspace_.registerToolboxCategoryCallback("TABLE", tableCategoryCallback);
     return oldShow.call(this, xmlList);
   };
 
@@ -170,11 +185,11 @@ __webpack_require__.r(__webpack_exports__);
   const originalGetBlocksXML = vm.runtime.getBlocksXML;
   vm.runtime.getBlocksXML = function (target) {
     const result = originalGetBlocksXML.call(this, target);
-    hasSeparateListCategory = addon.settings.get("separateListCategory");
-    if (!addon.self.disabled && hasSeparateListCategory) {
+    hasSeparateListAndTableCategories = addon.settings.get("separateListAndTableCategories");
+    if (!addon.self.disabled && hasSeparateListAndTableCategories) {
       result.push({
         id: "data",
-        xml: "\n        <category\n          name=\"%{BKY_CATEGORY_VARIABLES}\"\n          id=\"variables\"\n          colour=\"".concat(ScratchBlocks.Colours.data.primary, "\"\n          secondaryColour=\"").concat(ScratchBlocks.Colours.data.tertiary, "\"\n          custom=\"VARIABLE\">\n        </category>\n        <category\n          name=\"").concat(safeMsg("list-category"), "\"\n          id=\"lists\"\n          colour=\"").concat(ScratchBlocks.Colours.data_lists.primary, "\"\n          secondaryColour=\"").concat(ScratchBlocks.Colours.data_lists.tertiary, "\"\n          custom=\"LIST\">\n        </category>")
+        xml: "\n        <category\n          name=\"%{BKY_CATEGORY_VARIABLES}\"\n          id=\"variables\"\n          colour=\"".concat(ScratchBlocks.Colours.data.primary, "\"\n          secondaryColour=\"").concat(ScratchBlocks.Colours.data.tertiary, "\"\n          custom=\"VARIABLE\">\n        </category>\n        <category\n          name=\"").concat(safeMsg("list-category"), "\"\n          id=\"lists\"\n          colour=\"").concat(ScratchBlocks.Colours.data_lists.primary, "\"\n          secondaryColour=\"").concat(ScratchBlocks.Colours.data_lists.tertiary, "\"\n          custom=\"LIST\">\n        </category>\n        <category\n          name=\"").concat(safeMsg("table-category"), "\"\n          id=\"tables\"\n          colour=\"").concat(ScratchBlocks.Colours.data_tables.primary, "\"\n          secondaryColour=\"").concat(ScratchBlocks.Colours.data_tables.tertiary, "\"\n          custom=\"TABLE\">\n        </category>")
       });
       result.map = callback => {
         // Prevent Scratch from trying to change the color of the added category in high contrast mode.
@@ -196,7 +211,7 @@ __webpack_require__.r(__webpack_exports__);
     // When the separate list category option changes, we need to do a workspace update.
     // For all other options, just refresh the toolbox.
     // Always doing both of these in response to a settings change causes many issues.
-    if (addon.settings.get("separateListCategory") !== hasSeparateListCategory) {
+    if (addon.settings.get("separateListAndTableCategories") !== hasSeparateListAndTableCategories) {
       if (vm.editingTarget) {
         vm.emitWorkspaceUpdate();
       }
@@ -211,7 +226,7 @@ __webpack_require__.r(__webpack_exports__);
     // Enabling/disabling is similar to changing settings.
     // If separate list category is enabled, a workspace update is needed.
     // If any other setting is enabled, refresh the toolbox.
-    if (addon.settings.get("separateListCategory")) {
+    if (addon.settings.get("separateListAndTableCategories")) {
       if (vm.editingTarget) {
         vm.emitWorkspaceUpdate();
       }
