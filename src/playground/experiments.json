@@ -4,5 +4,11 @@
     "name": "Live Collaboration",
     "description": "Collaborate on projects with friends!",
     "status": "Final Testing"
+  },
+  {
+    "id": "oh-snap",
+    "name": "Oh Snap",
+    "description": "Use array blocks in certain extendables as a replacement for dynamic usage",
+    "status": "Final Testing"
   }
 ]
