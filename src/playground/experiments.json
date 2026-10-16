@@ -4,5 +4,11 @@
     "name": "Live Collaboration",
     "description": "Collaborate on projects with friends!",
     "status": "Final Testing"
+  },
+  {
+    "id": "the-chosen-one",
+    "name": "Multi Selection for Workspace",
+    "description": "Use shift or ctrl drag/click to select blocks in the workspace!",
+    "status": "Final Testing"
   }
 ]
