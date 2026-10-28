@@ -4,5 +4,11 @@
     "name": "Live Collaboration",
     "description": "Collaborate on projects with friends!",
     "status": "Final Testing"
+  },
+  {
+    "id": "pen-tiling-v2",
+    "name": "Pen Tiling V2",
+    "description": "The second coming of Pen Tiling",
+    "status": "Almost Ready"
   }
 ]
