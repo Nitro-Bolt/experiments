@@ -195130,7 +195130,7 @@ function load() {
 
   // If debug isn't set in LS, and we're in Electron, try to load $DEBUG
   if (!r && typeof process !== 'undefined' && 'env' in process) {
-    r = true;
+    r = false;
   }
 
   return r;
@@ -340440,7 +340440,7 @@ function load() {
 
   // If debug isn't set in LS, and we're in Electron, try to load $DEBUG
   if (!r && typeof process !== 'undefined' && 'env' in process) {
-    r = true;
+    r = false;
   }
 
   return r;
@@ -346849,11 +346849,7 @@ const Box = props => {
       justifyContent: justifyContent,
       width: width,
       height: height
-    },  true ? {
-      // eslint-disable-line no-undef
-      backgroundColor: getRandomColor(),
-      outline: "1px solid black"
-    } : undefined, style)
+    },  false ? undefined : {}, style)
   }, componentProps), children);
 };
 Box.propTypes = {

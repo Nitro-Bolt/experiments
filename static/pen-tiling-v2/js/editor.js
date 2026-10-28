@@ -7721,10 +7721,7 @@ const Box = props => {
       justifyContent: justifyContent,
       width: width,
       height: height
-    },  true ? {
-      backgroundColor: getRandomColor(),
-      outline: "1px solid black"
-    } : undefined, style)
+    },  false ? undefined : {}, style)
   }, componentProps), children);
 };
 Box.propTypes = {
